@@ -1,0 +1,24 @@
+2026-09-14T18:55:41+08:00
+$ ls /proc/sys
+abi
+debug
+dev
+fs
+kernel
+net
+user
+vm
+
+$ sysctl kernel.hostname kernel.osrelease vm.swappiness
+kernel.hostname = LAPTOP-KI0GT6AJ
+kernel.osrelease = 6.18.33.2-microsoft-standard-WSL2
+vm.swappiness = 60
+
+$ cat /proc/sys/kernel/hostname
+LAPTOP-KI0GT6AJ
+
+$ cat /proc/sys/kernel/osrelease
+6.18.33.2-microsoft-standard-WSL2
+
+$ cat /proc/sys/vm/swappiness
+60

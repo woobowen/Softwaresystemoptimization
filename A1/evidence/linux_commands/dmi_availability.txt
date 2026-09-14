@@ -1,0 +1,10 @@
+2026-09-14T19:00:03+08:00
+$ ls -l /dev/mem /sys/firmware/dmi/tables /sys/class/dmi/id
+ls: cannot access '/dev/mem': No such file or directory
+ls: cannot access '/sys/firmware/dmi/tables': No such file or directory
+ls: cannot access '/sys/class/dmi/id': No such file or directory
+exit_code=2
+
+$ ls /sys/firmware
+acpi
+memmap

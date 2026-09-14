@@ -1,0 +1,24 @@
+Script started on 2026-09-14 18:56:11+08:00 [COMMAND="top" TERM="xterm" TTY="/dev/console" COLUMNS="80" LINES="24"]
+[?1h=[?25l[H[2J(B[mtop - 18:56:11 up  1:38,  1 user,  load average: 0.14, 0.08, 0.02(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m   3 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m   2 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  1.8 (B[m[39;49mus,(B[m[39;49m[1m  4.8 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 93.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.4 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15794.2 (B[m[39;49mtotal,(B[m[39;49m[1m  13236.2 (B[m[39;49mfree,(B[m[39;49m[1m   1782.8 (B[m[39;49mused,(B[m[39;49m[1m    997.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   4096.0 (B[m[39;49mtotal,(B[m[39;49m[1m   4096.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m  14011.3 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 addaswsw  20   0  261296  18008  12440 S   0.0   0.1   0:00.01 codex    (B[m[39;49m[K
+(B[m      2 addaswsw  20   0    3156   2144   2004 S   0.0   0.0   0:00.00 script   (B[m[39;49m[K
+(B[m[1m      3 addaswsw  20   0    9364   5484   3304 R   0.0   0.0   0:00.00 top      (B[m[39;49m[K
+[J[H(B[mtop - 18:56:14 up  1:38,  1 user,  load average: 0.13, 0.08, 0.02(B[m[39;49m(B[m[39;49m[K
+
+%Cpu(s):(B[m[39;49m[1m  0.2 (B[m[39;49mus,(B[m[39;49m[1m  0.2 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 99.6 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m  15794.2 (B[m[39;49mtotal,(B[m[39;49m[1m  13232.7 (B[m[39;49mfree,(B[m[39;49m[1m   1785.3 (B[m[39;49mused,(B[m[39;49m[1m    998.0 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   4096.0 (B[m[39;49mtotal,(B[m[39;49m[1m   4096.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m  14008.8 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+
+
+
+(B[m[1m      3 addaswsw  20   0    9364   5744   3560 R   0.0   0.0   0:00.00 top      (B[m[39;49m[K
+[J[?1l>[25;1H
+[?12l[?25h[K
+Script done on 2026-09-14 18:56:15+08:00 [COMMAND_EXIT_CODE="0"]

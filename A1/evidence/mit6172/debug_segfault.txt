@@ -1,0 +1,23 @@
+$ make DEBUG=1
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+clang -g -DDEBUG -O0 -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -g -DDEBUG -O0 -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+exit_code=0
+
+$ gdb -nx --batch -ex run -ex bt -ex "p A->cols" -ex "p B->rows" -ex "p k" --args ./matrix_multiply
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setup
+Running matrix_multiply_run()...
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555529f in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:90
+90	        C->values[i][j] += A->values[i][k] * B->values[k][j];
+#0  0x000055555555529f in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:90
+#1  0x0000555555554ec7 in main (argc=1, argv=0x7fffffffccb8) at testbed.c:134
+$1 = 5
+$2 = 4
+$3 = 4
+gdb_exit_code=0

@@ -1,0 +1,65 @@
+$ make pointer (original starter)
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+clang -Wall -O1 -DNDEBUG  -c pointer.c
+pointer.c:30:8: error: read-only variable is not assignable
+   30 |   *pcc = '7';  // invalid?
+      |   ~~~~ ^
+pointer.c:36:6: error: cannot assign to variable 'cp' with const-qualified type 'char *const'
+   36 |   cp = *pcp;  // invalid?
+      |   ~~ ^
+pointer.c:34:16: note: variable 'cp' declared const here
+   34 |   char * const cp = c;  // cp is a const pointer to char
+      |   ~~~~~~~~~~~~~^~~~~~
+pointer.c:37:6: error: cannot assign to variable 'cp' with const-qualified type 'char *const'
+   37 |   cp = *argv;  // invalid?
+      |   ~~ ^
+pointer.c:34:16: note: variable 'cp' declared const here
+   34 |   char * const cp = c;  // cp is a const pointer to char
+      |   ~~~~~~~~~~~~~^~~~~~
+pointer.c:42:7: error: cannot assign to variable 'cpc' with const-qualified type 'const char *const'
+   42 |   cpc = *pcp;  // invalid?
+      |   ~~~ ^
+pointer.c:40:22: note: variable 'cpc' declared const here
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~
+pointer.c:43:7: error: cannot assign to variable 'cpc' with const-qualified type 'const char *const'
+   43 |   cpc = argv[0];  // invalid?
+      |   ~~~ ^
+pointer.c:40:22: note: variable 'cpc' declared const here
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~
+pointer.c:44:8: error: read-only variable is not assignable
+   44 |   *cpc = '@';  // invalid?
+      |   ~~~~ ^
+6 errors generated.
+make: *** [Makefile:20: pointer.o] Error 1
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+exit_code=2
+
+$ make sizes swap (original starter)
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+clang -Wall -O1 -DNDEBUG  -c sizes.c
+sizes.c:37:7: warning: unused variable 'x' [-Wunused-variable]
+   37 |   int x[5];
+      |       ^
+1 warning generated.
+clang -o sizes sizes.o -lrt -flto -fuse-ld=gold
+clang -Wall -O1 -DNDEBUG  -c swap.c
+clang -o swap swap.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+exit_code=0
+
+$ python3 verifier.py (original starter)
+  File "/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer/verifier.py", line 5
+    print error
+    ^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+exit_code=1
+
+$ make (original matrix starter)
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+clang -O1 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O1 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+exit_code=0

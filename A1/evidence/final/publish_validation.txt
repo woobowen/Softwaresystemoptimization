@@ -1,0 +1,302 @@
+A1-PUBLISH-001 validation (new execution, original experiments retained)
+
+$ make -B -C A1/mit6172/c-primer
+CWD: .
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+clang -Wall -O1 -DNDEBUG  -c sizes.c
+clang -o sizes sizes.o -lrt -flto -fuse-ld=gold
+clang -Wall -O1 -DNDEBUG  -c pointer.c
+pointer.c:13:7: warning: unused variable 'j' [-Wunused-variable]
+   13 |   int j = *pi;
+      |       ^
+pointer.c:26:16: warning: variable 'pcc' set but not used [-Wunused-but-set-variable]
+   26 |   const char * pcc = c;  // pcc is a pointer to char constant
+      |                ^
+pointer.c:27:16: warning: unused variable 'pcc2' [-Wunused-variable]
+   27 |   char const * pcc2 = c;  // What is the type of pcc2?
+      |                ^~~~
+pointer.c:40:22: warning: unused variable 'cpc' [-Wunused-variable]
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |                      ^~~
+4 warnings generated.
+clang -o pointer pointer.o -lrt -flto -fuse-ld=gold
+clang -Wall -O1 -DNDEBUG  -c swap.c
+clang -o swap swap.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+
+EXIT_CODE=0
+
+$ python3 -B verifier.py
+CWD: A1/mit6172/c-primer
+Running verifying script ... 
+
+Checking that the Makefile exists ... 
+Good!
+
+Running make sizes ... 
+Ok!
+
+Checking that sizes was built ... 
+Ok!
+Checking output of sizes ... 
+size of int : 4 bytes
+size of short : 2 bytes
+size of long : 8 bytes
+size of char : 1 bytes
+size of float : 4 bytes
+size of double : 8 bytes
+size of unsigned int : 4 bytes
+size of long long : 8 bytes
+size of uint8_t : 1 bytes
+size of uint16_t : 2 bytes
+size of uint32_t : 4 bytes
+size of uint64_t : 8 bytes
+size of uint_fast8_t : 1 bytes
+size of uint_fast16_t : 8 bytes
+size of uintmax_t : 8 bytes
+size of intmax_t : 8 bytes
+size of __int128 : 16 bytes
+size of uint32_t : 4 bytes
+size of uint64_t : 8 bytes
+size of student : 8 bytes
+size of x : 20 bytes
+size of int* : 8 bytes
+size of short* : 8 bytes
+size of long* : 8 bytes
+size of char* : 8 bytes
+size of float* : 8 bytes
+size of double* : 8 bytes
+size of unsigned int* : 8 bytes
+size of long long* : 8 bytes
+size of uint8_t* : 8 bytes
+size of uint16_t* : 8 bytes
+size of uint32_t* : 8 bytes
+size of uint64_t* : 8 bytes
+size of uint_fast8_t* : 8 bytes
+size of uint_fast16_t* : 8 bytes
+size of uintmax_t* : 8 bytes
+size of intmax_t* : 8 bytes
+size of __int128* : 8 bytes
+size of uint32_t* : 8 bytes
+size of uint64_t* : 8 bytes
+size of student* : 8 bytes
+size of &x : 8 bytes
+Ok!
+
+Running make pointer ... 
+Ok!
+
+Checking that pointer was built ... 
+Ok!
+
+Running make swap ... 
+Ok!
+
+Checking that swap was built ... 
+Ok!
+Checking output of swap ... 
+Ok!
+LGTM
+
+EXIT_CODE=0
+
+$ make -B -C A1/mit6172/matrix-multiply
+CWD: .
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+
+EXIT_CODE=0
+
+$ python3 -B A1/scripts/check_matrix.py
+CWD: .
+$ ./matrix_multiply -p (trial 1, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+   47     55    122    130  
+   79     83    138    164  
+   74     40     75    114  
+  130     95     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+$ ./matrix_multiply -p (trial 2, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+   47     55    122    130  
+   79     83    138    164  
+   74     40     75    114  
+  130     95     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+$ ./matrix_multiply -p (trial 3, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+   47     55    122    130  
+   79     83    138    164  
+   74     40     75    114  
+  130     95     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+$ ./matrix_multiply -pz (trial 1, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+$ ./matrix_multiply -pz (trial 2, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+$ ./matrix_multiply -pz (trial 3, exit 0)
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+CORRECTNESS=PASS
+
+6 runs passed; timings were not used to claim a speedup.
+
+EXIT_CODE=0
+
+Source / Makefile / script / A1 README hashes unchanged by validation: PASS
+
+Publication file selection: 85 files
+Markdown local links: PASS (85 links; A1 README 40; all targets included)
+Requirement matrix: PASS=33 PARTIAL=0 BLOCKED=0 NOT_REQUIRED=7
+Later-course artifacts: NONE
+Files over 10 MiB: NONE
+Binary/archive/coverage intermediates: NONE
+Sensitive scan: PASS; no matches for private keys, GitHub/cloud tokens, credential assignments, authorization/cookie headers, credential URLs, JWTs or Windows user paths. Values are never printed by scanner.
+A1 README, source, scripts and Makefiles unchanged: PASS

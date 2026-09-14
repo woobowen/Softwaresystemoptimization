@@ -1,0 +1,6 @@
+2026-09-14T18:55:41+08:00
+$ dmidecode
+# dmidecode 3.5
+Scanning /dev/mem for entry point.
+Can't read memory from /dev/mem
+exit_code=1

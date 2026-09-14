@@ -1,0 +1,15 @@
+Script started on 2026-09-14 18:56:11+08:00 [COMMAND="pidstat 1" TERM="xterm" TTY="/dev/console" COLUMNS="80" LINES="24"]
+Linux 6.18.33.2-microsoft-standard-WSL2 (LAPTOP-KI0GT6AJ) 	09/14/26 	_x86_64_	(22 CPU)
+
+18:56:11      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+18:56:12      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+18:56:13      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+18:56:14      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+^C
+
+Average:      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+Script done on 2026-09-14 18:56:15+08:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,64 @@
+$ make DEBUG=1 (dimensions fixed; matrix values still uninitialized)
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+clang -g -DDEBUG -O0 -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply'
+exit_code=0
+
+$ ./matrix_multiply -p
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+  -95728991    23046    122    130  
+  -95729055    23074    138    164  
+  -95729028    23031     75    114  
+  -1666814124    100     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+exit_code=0
+
+$ ./matrix_multiply -pz
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+  -651015535    23752      0      0  
+  -651015439    23752      0      0  
+  -651015471    23752      0      0  
+  -858694095      5      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+exit_code=0

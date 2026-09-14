@@ -1,0 +1,47 @@
+$ ./sizes (original baseline)
+size of int : 4 bytes 
+size of student : 8 bytes 
+exit_code=0
+
+$ ./swap (original baseline)
+k = 1, m = 2
+exit_code=0
+
+$ ./matrix_multiply (original baseline, core dump disabled)
+Setup
+Running matrix_multiply_run()...
+/bin/bash: line 11:    16 Segmentation fault      (core dumped) ./matrix_multiply
+exit_code=139
+
+$ clang -E preprocess.c
+# 1 "preprocess.c"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 389 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "preprocess.c" 2
+# 12 "preprocess.c"
+int c = 1, d = 1 + 5;
+int e = ((c) < (d) ? (c) : (d));
+
+
+
+
+
+
+  if (something) {}
+exit_code=0
+
+$ clang -E -DNDEBUG preprocess.c
+# 1 "preprocess.c"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 389 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "preprocess.c" 2
+# 12 "preprocess.c"
+int c = 1, d = 1 + 5;
+int e = ((c) < (d) ? (c) : (d));
+exit_code=0

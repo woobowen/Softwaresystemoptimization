@@ -1,0 +1,48 @@
+--- a/matrix-multiply/Makefile
++++ b/matrix-multiply/Makefile
+@@ -31,7 +31,7 @@
+ # In the release version, we ask for many optimizations; -O3 sets the
+ # optimization level to three.  -DNDEBUG defines the NDEBUG macro,
+ # which disables assertion checks.
+-CFLAGS_RELEASE := -O1 -DNDEBUG
++CFLAGS_RELEASE := -O3 -DNDEBUG
+ 
+ # These flags are used to invoke Clang's address sanitizer.
+ CFLAGS_ASAN := -O1 -g -fsanitize=address
+--- a/matrix-multiply/matrix_multiply.c
++++ b/matrix-multiply/matrix_multiply.c
+@@ -32,7 +32,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-// #include "./tbassert.h"
++#include "./tbassert.h"
+ 
+ // Allocates a row-by-cols matrix and returns it
+ matrix* make_matrix(int rows, int cols) {
+@@ -75,14 +75,12 @@
+ 
+ // Multiply matrix A*B, store result in C.
+ int matrix_multiply_run(const matrix* A, const matrix* B, matrix* C) {
+-  /*
+   tbassert(A->cols == B->rows,
+            "A->cols = %d, B->rows = %d\n", A->cols, B->rows);
+   tbassert(A->rows == C->rows,
+            "A->rows = %d, C->rows = %d\n", A->rows, C->rows);
+   tbassert(B->cols == C->cols,
+            "B->cols = %d, C->cols = %d\n", B->cols, C->cols);
+-  */
+ 
+   for (int i = 0; i < A->rows; i++) {
+     for (int j = 0; j < B->cols; j++) {
+--- a/matrix-multiply/testbed.c
++++ b/matrix-multiply/testbed.c
+@@ -92,7 +92,7 @@
+ 
+   fprintf(stderr, "Setup\n");
+ 
+-  A = make_matrix(kMatrixSize, kMatrixSize+1);
++  A = make_matrix(kMatrixSize, kMatrixSize);
+   B = make_matrix(kMatrixSize, kMatrixSize);
+   C = make_matrix(kMatrixSize, kMatrixSize);
+ 

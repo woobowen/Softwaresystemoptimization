@@ -1,0 +1,23 @@
+Markdown links/fences PASS: A1/README.md
+Markdown links/fences PASS: A1/evidence/A1_REQUIREMENT_MATRIX.md
+Markdown links/fences PASS: A1/evidence/mit6172/SCOPE_CHECKLIST.md
+Markdown links/fences PASS: A1/evidence/mit6172/REPRODUCTION.md
+Markdown links/fences PASS: A1/evidence/final/EXTERNAL_REFERENCES.md
+Markdown links/fences PASS: A1/evidence/final/SELF_CHECK.md
+Local Markdown targets checked: 80; seven required Write-up sections: PASS
+Requirement matrix: PASS=33, NOT_REQUIRED=7, PARTIAL=0, BLOCKED=0
+Interactive top and all five interval commands have completed terminal transcripts: PASS
+All noninteractive command outputs contain actual exit codes: PASS
+Required verifier, matrix correctness and Valgrind conclusions supported: PASS
+Final release is uninstrumented; matrix remains 4x4: PASS
+patching file matrix-multiply/matrix_multiply.c
+patching file matrix-multiply/Makefile
+patching file matrix-multiply/testbed.c
+patching file c-primer/pointer.c
+patching file c-primer/sizes.c
+patching file c-primer/swap.c
+patching file c-primer/verifier.py
+patch_exit_code=0
+Official ZIP + final diff reconstruct all 12 source/build files exactly: PASS
+Python syntax checks: PASS
+VALIDATION_STATUS=PASS

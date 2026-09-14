@@ -1,0 +1,53 @@
+2026-09-14T18:56:43+08:00
+Official ZIP source: https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/7775d22df8bc896b87c593f24f7366eb_MIT6_172F18_hw1.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 19136  100 19136    0     0  20243      0 --:--:-- --:--:-- --:--:-- 20228
+download_exit_code=0
+Archive:  A1/mit6172/materials/MIT6_172F18_hw1.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2019-08-29 00:10   matrix-multiply/
+     2889  2019-05-08 09:37   matrix-multiply/matrix_multiply.c
+        0  2019-08-29 00:10   __MACOSX/
+        0  2019-08-29 00:10   __MACOSX/matrix-multiply/
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._matrix_multiply.c
+     6148  2019-08-29 00:10   matrix-multiply/.DS_Store
+      120  2019-08-29 00:10   __MACOSX/matrix-multiply/._.DS_Store
+     4387  2019-05-08 09:37   matrix-multiply/Makefile
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._Makefile
+     4014  2019-05-08 09:37   matrix-multiply/testbed.c
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._testbed.c
+     2054  2019-05-08 09:37   matrix-multiply/matrix_multiply.h
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._matrix_multiply.h
+     3131  2019-05-08 09:37   matrix-multiply/fasttime.h
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._fasttime.h
+     3090  2019-05-08 09:37   matrix-multiply/tbassert.h
+      212  2019-05-08 09:37   __MACOSX/matrix-multiply/._tbassert.h
+      212  2019-08-29 00:10   __MACOSX/._matrix-multiply
+        0  2019-08-29 00:10   c-primer/
+      554  2019-05-08 09:37   c-primer/Makefile
+        0  2019-08-29 00:10   __MACOSX/c-primer/
+      212  2019-05-08 09:37   __MACOSX/c-primer/._Makefile
+     1432  2019-05-08 09:37   c-primer/pointer.c
+      212  2019-05-08 09:37   __MACOSX/c-primer/._pointer.c
+      623  2019-05-08 09:37   c-primer/preprocess.c
+      212  2019-05-08 09:37   __MACOSX/c-primer/._preprocess.c
+     1189  2019-05-08 09:37   c-primer/sizes.c
+      212  2019-05-08 09:37   __MACOSX/c-primer/._sizes.c
+      307  2019-05-08 09:37   c-primer/swap.c
+      212  2019-05-08 09:37   __MACOSX/c-primer/._swap.c
+     3021  2019-05-08 09:37   c-primer/verifier.py
+      212  2019-05-08 09:37   __MACOSX/c-primer/._verifier.py
+      212  2019-08-29 00:10   __MACOSX/._c-primer
+---------                     -------
+    35927                     33 files
+035076cda3971e7ff0faa4c9fed1003170a62b510bdf81aab44b06661a7c0d02  A1/mit6172/materials/MIT6_172F18_hw1.zip
+
+Official PDF: https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/2724d8594cb413754669fc4e9c6ce7db_MIT6_172F18hw1.pdf
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  325k  100  325k    0     0   227k      0  0:00:01  0:00:01 --:--:--  227k
+download_exit_code=0
+c1f4b3cf5cdb259f28bad82461ae21fac8881f6758d8dddd2361be93aead12bf  A1/mit6172/materials/MIT6_172F18hw1.pdf
+Teacher PDF resource page returned HTTP 404; official course assignments page links the same HW1 through resources/homework-1-getting-started/.

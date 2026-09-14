@@ -1,0 +1,10 @@
+2026-09-14T18:55:41+08:00
+$ numactl -H
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+node 0 size: 15794 MB
+node 0 free: 13319 MB
+node distances:
+node   0 
+  0:  10 
+exit_code=0
