@@ -1,0 +1,49 @@
+2026-09-16T10:18:04.935131+08:00
+
+$ perf stat -e task-clock:u,page-faults:u -- ls A1
+README.md
+evidence
+mit6172
+notes
+scripts
+
+ Performance counter stats for 'ls A1':
+
+              0.91 msec task-clock:u                     #    0.546 CPUs utilized             
+                97      page-faults:u                    #  106.475 K/sec                     
+
+       0.001669266 seconds time elapsed
+
+       0.001558000 seconds user
+       0.000000000 seconds sys
+
+
+
+exit_code=0
+
+$ perf stat -e cycles:u,instructions:u -- sleep 1
+
+ Performance counter stats for 'sleep 1':
+
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+
+       1.007736860 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001282000 seconds sys
+
+
+
+exit_code=0
+
+$ ls /sys/bus/event_source/devices
+breakpoint
+kprobe
+msr
+power
+software
+tracepoint
+uprobe
+
+exit_code=0

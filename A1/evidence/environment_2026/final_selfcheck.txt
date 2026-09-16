@@ -1,0 +1,53 @@
+Final checks on 2026-09-16; existing experiment logs retained.
+Correctness checker rerun after final screenshot build: 6 / 6 runs passed (normal / zero).
+NO COURSE COMMIT / NO PUSH performed during this task. HEAD comparison is supporting evidence, not proof of remote operation history.
+PASS | Assignment title / student identity
+PASS | DOCX headings exactly 1 through 18
+PASS | MIT formal headings W2-W8 only
+PASS | No additional formal MIT headings
+PASS | System information only OS CPU Memory
+PASS | No TODO or internal/template wording
+PASS | Environment compatibility disclosed
+PASS | README.md relative links | 82 links; missing=[]
+PASS | A1_REQUIREMENT_MATRIX.md relative links | 57 links; missing=[]
+PASS | Screenshot 01-system.png
+PASS | Screenshot 02-sysctl.png
+PASS | Screenshot 03-lscpu.png
+PASS | Screenshot 04-dmidecode-numa.png
+PASS | Screenshot 05-ps-uptime.png
+PASS | Screenshot 06a-vmstat-mpstat.png
+PASS | Screenshot 06b-pidstat-iostat.png
+PASS | Screenshot 07-sar.png
+PASS | Screenshot 08-interrupts.png
+PASS | Screenshot 09-topology.png
+PASS | Screenshot 10-git.png
+PASS | Screenshot htop-live.png
+PASS | Screenshot top-live.png
+PASS | Screenshot writeup2-pointer.png
+PASS | Screenshot writeup3-sizes.png
+PASS | Screenshot writeup4-swap.png
+PASS | Screenshot writeup5-build.png
+PASS | Screenshot writeup5-gdb.png
+PASS | Screenshot writeup6-asan.png
+PASS | Screenshot writeup7-result.png
+PASS | Screenshot writeup8-valgrind.png
+PASS | 21 current terminal screenshots
+PASS | assets/topo.svg SVG validity
+PASS | images/topo.svg SVG validity
+PASS | Topology image identical to generated SVG
+PASS | Release O3 no coverage instrumentation flags
+PASS | 4x4 source configuration
+PASS | Course HEAD unchanged | 2d0289aa392abfa1bfac062f60e8a030ea3f9c9f
+PASS | Course branch unchanged
+PASS | Git diff whitespace
+PASS | Existing tracked evidence not deleted
+PASS | Environment script shell syntax
+PASS | No tracked ELF binaries | []
+PASS | Change scope only A1 and gitignore
+PASS | Final zero matrix Valgrind clean
+PASS | Final normal matrix Valgrind clean
+PASS | ASan system runtime evidence
+PASS | Requirement status totals | {'PASS': 53, 'PARTIAL': 1, 'BLOCKED': 1, 'NOT_REQUIRED': 0, 'UNVERIFIED': 2}
+PASS | Matrix formal MIT only W2-W8
+Checks passed: 48/48
+Assignment overall: PARTIAL. OpenCilk remains BLOCKED; DMI PARTIAL and host frequency/topology UNVERIFIED.

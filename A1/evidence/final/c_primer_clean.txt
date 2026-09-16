@@ -1,0 +1,5 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer
+$ make clean
+rm -f sizes pointer swap *.o *.gcda *.gcno *.gcov perf.data */perf.data cachegrind.out.*
+
+exit_code=0

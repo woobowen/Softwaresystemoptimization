@@ -1,0 +1,24 @@
+
+$ htop --version
+htop 3.3.0
+
+exit_code=0
+
+$ lstopo --version
+lstopo 2.10.0
+
+exit_code=0
+
+$ llvm-cov-18 --version
+Ubuntu LLVM version 18.1.3
+  Optimized build.
+
+exit_code=0
+
+$ clang --version
+Ubuntu clang version 18.1.3 (1ubuntu1)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+exit_code=0

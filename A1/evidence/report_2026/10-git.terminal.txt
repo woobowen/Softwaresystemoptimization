@@ -1,0 +1,45 @@
+Script started on 2026-09-16 11:24:52+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py 10-git" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | 10-git
+
+$ git -C /tmp/a1-git-exercise.ktyqj3et log --oneline --graph --all
+* [33m56395cf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m chore: stop tracking sample image
+* [33mfba7a39[m test: add sample image
+* [33m59483d2[m docs: add exercise note
+[exit 0]
+
+$ git -C /tmp/a1-git-exercise.ktyqj3et status --short --ignored
+[31m!![m test.png
+[exit 0]
+
+$ git -C /tmp/a1-git-exercise.ktyqj3et ls-files
+.gitignore
+hello.txt
+[exit 0]
+
+$ git -C /tmp/a1-git-exercise.ktyqj3et check-ignore -v test.png
+.gitignore:1:test.png	test.png
+[exit 0]
+
+$ bash -c 'sed -n '"'"'30,48p'"'"' A1/evidence/git_exercise_2026/git_transcript.txt'
+master
+
+exit_code=0
+
+$ git config user.name woobowen
+
+exit_code=0
+
+$ git config user.email woobowen@gmail.com
+
+exit_code=0
+
+$ git commit -m 'chore: initial empty attempt'
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+[exit 0]
+
+Script done on 2026-09-16 11:24:55+08:00 [COMMAND_EXIT_CODE="0"]

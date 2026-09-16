@@ -1,0 +1,51 @@
+Script started on 2026-09-16 11:24:47+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py 08-interrupts" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | 08-interrupts
+Viewing recorded evidence from this A1 run; commands below show the source.
+
+$ cat A1/evidence/linux_commands_2026/irq_summary.txt
+Method: sum decimal per-CPU counters after each row label; snapshot interval approximately 3 seconds.
+Raw /proc files stored verbatim.
+interrupts:
+CAL: cumulative=1099564, delta=2304
+HVS: cumulative=703003, delta=1920
+HYP: cumulative=217301, delta=553
+RES: cumulative=16113, delta=44
+25: cumulative=8236, delta=0
+MCP: cumulative=110, delta=0
+9: cumulative=19, delta=0
+28: cumulative=10, delta=0
+24: cumulative=1, delta=0
+26: cumulative=1, delta=0
+27: cumulative=1, delta=0
+IWI: cumulative=1, delta=0
+8: cumulative=0, delta=0
+NMI: cumulative=0, delta=0
+LOC: cumulative=0, delta=0
+SPU: cumulative=0, delta=0
+PMI: cumulative=0, delta=0
+RTR: cumulative=0, delta=0
+TLB: cumulative=0, delta=0
+TRM: cumulative=0, delta=0
+THR: cumulative=0, delta=0
+DFR: cumulative=0, delta=0
+MCE: cumulative=0, delta=0
+HRE: cumulative=0, delta=0
+ERR: cumulative=0, delta=0
+MIS: cumulative=0, delta=0
+PIN: cumulative=0, delta=0
+NPI: cumulative=0, delta=0
+PIW: cumulative=0, delta=0
+softirqs:
+SCHED: cumulative=523180, delta=1548
+RCU: cumulative=292807, delta=899
+TASKLET: cumulative=142309, delta=113
+TIMER: cumulative=123309, delta=347
+NET_RX: cumulative=91265, delta=447
+NET_TX: cumulative=15, delta=0
+HI: cumulative=0, delta=0
+BLOCK: cumulative=0, delta=0
+IRQ_POLL: cumulative=0, delta=0
+HRTIMER: cumulative=0, delta=0
+[exit 0]
+
+Script done on 2026-09-16 11:24:50+08:00 [COMMAND_EXIT_CODE="0"]

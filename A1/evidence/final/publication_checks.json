@@ -1,0 +1,239 @@
+[
+  {
+    "check": "Header and student",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "DOCX 1-18 order",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "MIT W2-W8 only",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "System table OS CPU Memory",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "No internal terminology in formal text",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "README.md links",
+    "pass": true,
+    "detail": {
+      "count": 25,
+      "missing": []
+    }
+  },
+  {
+    "check": "A1_REQUIREMENT_MATRIX.md links",
+    "pass": true,
+    "detail": {
+      "count": 57,
+      "missing": []
+    }
+  },
+  {
+    "check": "README.md links",
+    "pass": true,
+    "detail": {
+      "count": 8,
+      "missing": []
+    }
+  },
+  {
+    "check": "A1_2026_FINAL_VALIDATION.md links",
+    "pass": true,
+    "detail": {
+      "count": 16,
+      "missing": []
+    }
+  },
+  {
+    "check": "Image 05-ps-uptime.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 06b-pidstat-iostat.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 10-git.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup5-gdb.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 09-topology.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup2-pointer.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 07-sar.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image opencilk-smoke.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 01-system.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup4-swap.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 03-lscpu.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup6-asan.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 04-dmidecode-numa.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 08-interrupts.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image htop-live.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup8-valgrind.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image top-live.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup5-build.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup7-result.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image writeup3-sizes.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 02-sysctl.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Image 06a-vmstat-mpstat.png",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "SVG root/references",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Requirement counts",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "valgrind_normal.txt clean",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "valgrind_zero.txt clean",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Verifier LGTM",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Checker 6 passes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "ASan system experiment retained",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "OpenCilk real compiler/run/runtime",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "Git isolated evidence",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "MIT source matches reviewed screenshots",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "check": "Large-file scan",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "check": "Publication file hygiene",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "check": "Secret pattern scan",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "check": "No later assignments",
+    "pass": true,
+    "detail": ""
+  }
+]

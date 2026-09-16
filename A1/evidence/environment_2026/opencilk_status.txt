@@ -1,0 +1,13 @@
+2026-09-16T10:38:16.670872+08:00
+OpenCilk status: BLOCKED; not installed.
+Official archive required bytes: 1406208994
+Attempt 1: ordinary curl transfer exit 92 HTTP/2 PROTOCOL_ERROR, incomplete.
+Attempt 2: outside-sandbox range probe exit 35 SSL_ERROR_SYSCALL. HEAD probe succeeded but does not verify download or installation.
+Attempt 3: range downloads failed; details in opencilk_transfer.jsonl.
+Complete chunks: 3 / 168; no archive assembled, extracted, or executed.
+
+$ clang -fopencilk /home/addaswsw/lab/Software_system_optimization/A1/evidence/environment_2026/opencilk_smoke.c -o /tmp/a1-opencilk-smoke
+clang: error: unknown argument: '-fopencilk'
+exit_code=1
+System Clang does not establish OpenCilk availability.
+Actual OpenCilk compilation/runtime result: UNVERIFIED (missing toolchain).

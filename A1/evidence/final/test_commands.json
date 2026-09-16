@@ -1,0 +1,67 @@
+[
+  {
+    "command": "make clean",
+    "exit": 0,
+    "log": "c_primer_clean.txt"
+  },
+  {
+    "command": "make",
+    "exit": 0,
+    "log": "c_primer_build.txt"
+  },
+  {
+    "command": "python3 -B verifier.py",
+    "exit": 0,
+    "log": "verifier.txt"
+  },
+  {
+    "command": "make clean",
+    "exit": 0,
+    "log": "matrix_clean.txt"
+  },
+  {
+    "command": "make",
+    "exit": 0,
+    "log": "matrix_build.txt"
+  },
+  {
+    "command": "./matrix_multiply",
+    "exit": 0,
+    "log": "matrix_normal.txt"
+  },
+  {
+    "command": "./matrix_multiply -p",
+    "exit": 0,
+    "log": "matrix_print.txt"
+  },
+  {
+    "command": "./matrix_multiply -pz",
+    "exit": 0,
+    "log": "matrix_zero.txt"
+  },
+  {
+    "command": "python3 -B A1/scripts/check_matrix.py",
+    "exit": 0,
+    "log": "matrix_correctness.txt"
+  },
+  {
+    "command": "valgrind --leak-check=full --show-leak-kinds=all --errors-for-leak-kinds=all --error-exitcode=99 ./matrix_multiply",
+    "exit": 0,
+    "log": "valgrind_normal.txt"
+  },
+  {
+    "command": "valgrind --leak-check=full --show-leak-kinds=all --errors-for-leak-kinds=all --error-exitcode=99 ./matrix_multiply -pz",
+    "exit": 0,
+    "log": "valgrind_zero.txt"
+  },
+  {
+    "command": "bash A1/scripts/check_environment.sh --versions",
+    "exit": 0,
+    "log": "environment_versions.txt"
+  },
+  {
+    "command": "bash A1/scripts/check_environment.sh --commands",
+    "exit": 0,
+    "log": "environment_commands.txt"
+  }
+]

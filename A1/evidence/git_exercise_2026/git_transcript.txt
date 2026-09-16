@@ -1,0 +1,140 @@
+2026-09-16T10:13:25.476883+08:00
+Demo repo: /tmp/a1-git-exercise.ktyqj3et
+
+$ git config --global --get user.name
+woobowen
+
+exit_code=0
+
+$ git config --global --get user.email
+woobowen@gmail.com
+
+exit_code=0
+
+$ git init
+Initialized empty Git repository in /tmp/a1-git-exercise.ktyqj3et/.git/
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+
+exit_code=0
+
+$ git symbolic-ref --short HEAD
+master
+
+exit_code=0
+
+$ git config user.name woobowen
+
+exit_code=0
+
+$ git config user.email woobowen@gmail.com
+
+exit_code=0
+
+$ git commit -m 'chore: initial empty attempt'
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+exit_code=1
+
+Created hello.txt with text A1 Git exercise.
+
+$ git add hello.txt
+
+exit_code=0
+
+$ git commit -m 'docs: add exercise note'
+[master (root-commit) 59483d2] docs: add exercise note
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+exit_code=0
+
+Created public test fixture test.png, 1x1 PNG; no personal photo.
+
+$ git add test.png
+
+exit_code=0
+
+$ git commit -m 'test: add sample image'
+[master fba7a39] test: add sample image
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.png
+
+exit_code=0
+
+$ printf "test.png\n" > .gitignore
+
+$ git status --short
+?? .gitignore
+
+exit_code=0
+
+$ git ls-files test.png
+test.png
+
+exit_code=0
+
+$ git rm --cached test.png
+rm 'test.png'
+
+exit_code=0
+
+$ git add .gitignore
+
+exit_code=0
+
+$ git commit -m 'chore: stop tracking sample image'
+[master 56395cf] chore: stop tracking sample image
+ 2 files changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ delete mode 100644 test.png
+
+exit_code=0
+
+$ git status --short --ignored
+!! test.png
+
+exit_code=0
+
+$ git ls-files
+.gitignore
+hello.txt
+
+exit_code=0
+
+$ git check-ignore -v test.png
+.gitignore:1:test.png	test.png
+
+exit_code=0
+
+$ git log --oneline --graph --all
+* 56395cf chore: stop tracking sample image
+* fba7a39 test: add sample image
+* 59483d2 docs: add exercise note
+
+exit_code=0
+
+$ git remote -v
+
+exit_code=0
+
+$ git ls-files test.png
+
+exit_code=0
+
+IMAGE_EXISTS=yes
+IMAGE_TRACKED=no
+COURSE_REPO_COMMIT=no
+COURSE_REPO_PUSH=no

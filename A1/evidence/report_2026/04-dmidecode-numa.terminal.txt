@@ -1,0 +1,30 @@
+Script started on 2026-09-16 11:24:29+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py 04-dmidecode-numa" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | 04-dmidecode-numa
+
+$ dmidecode
+# dmidecode 3.5
+Scanning /dev/mem for entry point.
+Can't read memory from /dev/mem
+[exit 1]
+
+$ numactl -H
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+node 0 size: 15794 MB
+node 0 free: 13184 MB
+node distances:
+node   0 
+  0:  10 
+[exit 0]
+
+$ numactl --show
+policy: default
+preferred node: current
+physcpubind: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
+cpubind: 0 
+nodebind: 0 
+membind: 0 
+preferred: 
+[exit 0]
+
+Script done on 2026-09-16 11:24:32+08:00 [COMMAND_EXIT_CODE="0"]

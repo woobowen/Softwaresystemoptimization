@@ -1,0 +1,12 @@
+matrix-multiply/matrix_multiply.c: IDENTICAL
+matrix-multiply/Makefile: IDENTICAL
+matrix-multiply/testbed.c: IDENTICAL
+matrix-multiply/matrix_multiply.h: IDENTICAL
+matrix-multiply/fasttime.h: IDENTICAL
+matrix-multiply/tbassert.h: IDENTICAL
+c-primer/Makefile: IDENTICAL
+c-primer/pointer.c: IDENTICAL
+c-primer/preprocess.c: IDENTICAL
+c-primer/sizes.c: IDENTICAL
+c-primer/swap.c: IDENTICAL
+c-primer/verifier.py: IDENTICAL

@@ -1,0 +1,206 @@
+[
+  {
+    "file": ".gitignore",
+    "line": 18
+  },
+  {
+    "file": ".gitignore",
+    "line": 19
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/final/SELF_CHECK.md",
+    "line": 22
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/final/environment_final_check.txt",
+    "line": 67
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/final/publish_validation.txt",
+    "line": 301
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 22
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 50
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 78
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 106
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 134
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 162
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 190
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 218
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 246
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 274
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 302
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 330
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 358
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 386
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 414
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 442
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 470
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 498
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 526
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 554
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 582
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/cpuinfo.txt",
+    "line": 610
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/lscpu.txt",
+    "line": 18
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/sysctl_a.txt",
+    "line": 1425
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/sysctl_a.txt",
+    "line": 3111
+  },
+  {
+    "file": "A1/evidence/archive/previous_a1/linux_commands/sysctl_a.txt",
+    "line": 3112
+  },
+  {
+    "file": "A1/evidence/environment_2026/apt_install.log",
+    "line": 1
+  },
+  {
+    "file": "A1/evidence/environment_2026/apt_install.log",
+    "line": 2
+  },
+  {
+    "file": "A1/evidence/environment_2026/packages_after.tsv",
+    "line": 448
+  },
+  {
+    "file": "A1/evidence/environment_2026/packages_after.tsv",
+    "line": 749
+  },
+  {
+    "file": "A1/evidence/environment_2026/packages_before.tsv",
+    "line": 441
+  },
+  {
+    "file": "A1/evidence/environment_2026/packages_before.tsv",
+    "line": 737
+  },
+  {
+    "file": "A1/evidence/environment_2026/versions_final.txt",
+    "line": 67
+  },
+  {
+    "file": "A1/evidence/final/A1_2026_FINAL_VALIDATION.md",
+    "line": 69
+  },
+  {
+    "file": "A1/evidence/final/A1_2026_FINAL_VALIDATION.md",
+    "line": 83
+  },
+  {
+    "file": "A1/evidence/final/environment_versions.txt",
+    "line": 69
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/lscpu.txt",
+    "line": 19
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/manuals.txt",
+    "line": 10984
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/ps.txt",
+    "line": 5
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/ps.txt",
+    "line": 6
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/sysctl.txt",
+    "line": 1426
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/sysctl.txt",
+    "line": 3112
+  },
+  {
+    "file": "A1/evidence/linux_commands_2026/sysctl.txt",
+    "line": 3113
+  },
+  {
+    "file": "A1/evidence/report_2026/03-lscpu.terminal.txt",
+    "line": 20
+  },
+  {
+    "file": "AGENTS.md",
+    "line": 424
+  },
+  {
+    "file": "AGENTS.md",
+    "line": 552
+  }
+]

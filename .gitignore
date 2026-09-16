@@ -10,6 +10,7 @@ core.*
 __pycache__/
 *.pyc
 .DS_Store
+/A1/.tools/
 build/
 tmp/
 temp/
@@ -19,21 +20,14 @@ temp/
 
 # Local handouts, archives, environment history and installation diagnostics.
 /*.pdf
+/*.docx
+/*.zip
 /*:Zone.Identifier
 /.agents/
 /.codex/
 /A1/notes/
 /A1/mit6172/materials/
 /A1/evidence/environment/
-/A1/evidence/final/*
-!/A1/evidence/final/environment_final_check.txt
-!/A1/evidence/final/submission_validation.txt
-!/A1/evidence/final/EXTERNAL_REFERENCES.md
-!/A1/evidence/final/SELF_CHECK.md
-!/A1/evidence/final/PUBLISH_NOTES.md
-!/A1/evidence/final/publish_validation.txt
-!/A1/evidence/final/PUBLISHED_FILES.txt
-
 # Generated executables and duplicate intermediate evidence.
 /A1/mit6172/c-primer/sizes
 /A1/mit6172/c-primer/pointer
@@ -42,3 +36,7 @@ temp/
 /A1/evidence/mit6172/Makefile_before_coverage
 /A1/evidence/linux_commands/*_plain.txt
 !/A1/evidence/linux_commands/top_plain.txt
+
+# Input document text is kept locally; source hashes identify the handouts.
+/A1/evidence/environment_2026/official_docx.txt
+/A1/evidence/mit6172_2026/official_pdf.txt

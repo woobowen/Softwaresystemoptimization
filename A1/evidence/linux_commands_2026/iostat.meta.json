@@ -1,0 +1,12 @@
+{
+  "command": [
+    "iostat",
+    "-xz",
+    "1"
+  ],
+  "duration_seconds": 5.005,
+  "exit_code": 0,
+  "sent_key": "ctrl_c",
+  "pty_size": "160x36",
+  "pid": 13
+}

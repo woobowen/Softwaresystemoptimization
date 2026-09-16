@@ -1,0 +1,16 @@
+$ bash -c 'command -v clang'
+/usr/bin/clang
+exit_code=0
+
+$ clang -print-resource-dir
+/usr/lib/llvm-18/lib/clang/18
+exit_code=0
+
+$ clang -print-file-name=libclang_rt.asan-x86_64.a
+/usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan-x86_64.a
+exit_code=0
+
+$ dpkg -S /usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan-x86_64.a
+libclang-rt-18-dev:amd64: /usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan-x86_64.a
+exit_code=0
+

@@ -1,0 +1,151 @@
+A1 environment audit — 2026-09-16T11:06:22+08:00
+MODE=--versions
+
+$ pwd
+/home/addaswsw/lab/Software_system_optimization
+exit_code=0
+
+$ whoami
+addaswsw
+exit_code=0
+
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+exit_code=0
+CHECK	OS	Required=Ubuntu >=20.04 LTS	Detected=Ubuntu 24.04.2 LTS	Status=PASS
+
+$ uname -a
+Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+exit_code=0
+
+$ uname -r
+6.18.33.2-microsoft-standard-WSL2
+exit_code=0
+
+$ uname -m
+x86_64
+exit_code=0
+CHECK	Kernel	Required=>=5.4	Detected=6.18.33.2-microsoft-standard-WSL2	Status=PASS
+
+$ cat /proc/version
+Linux version 6.18.33.2-microsoft-standard-WSL2 (root@f1bbfb02316b) (gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41) #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026
+exit_code=0
+
+$ cat /proc/sys/kernel/osrelease
+6.18.33.2-microsoft-standard-WSL2
+exit_code=0
+WSL_DETECTED=yes
+
+$ lscpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  22
+On-line CPU(s) list:                     0-21
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) Ultra 9 185H
+CPU family:                              6
+Model:                                   170
+Thread(s) per core:                      2
+Core(s) per socket:                      11
+Socket(s):                               1
+Stepping:                                4
+BogoMIPS:                                6144.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               528 KiB (11 instances)
+L1i cache:                               704 KiB (11 instances)
+L2 cache:                                22 MiB (11 instances)
+L3 cache:                                24 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-21
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+exit_code=0
+/usr/bin/gcc
+
+$ gcc --version
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+exit_code=0
+CHECK	gcc	Required=9.3	Detected=13.3.0	Status=PASS
+/usr/bin/clang
+
+$ clang --version
+Ubuntu clang version 18.1.3 (1ubuntu1)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+exit_code=0
+CHECK	clang	Required=10.0	Detected=18.1.3	Status=PASS
+/usr/bin/python3
+
+$ python3 --version
+Python 3.12.3
+exit_code=0
+CHECK	python3	Required=3.8	Detected=3.12.3	Status=PASS
+/usr/bin/java
+
+$ java -version
+openjdk version "21.0.12" 2026-07-21
+OpenJDK Runtime Environment (build 21.0.12+8-1-24.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.12+8-1-24.04-Ubuntu, mixed mode, sharing)
+exit_code=0
+CHECK	java	Required=11	Detected=21.0.12	Status=PASS
+/usr/bin/javac
+
+$ javac -version
+javac 21.0.12
+exit_code=0
+CHECK	javac	Required=11	Detected=21.0.12	Status=PASS
+/usr/bin/valgrind
+
+$ valgrind --version
+valgrind-3.22.0
+exit_code=0
+CHECK	valgrind	Required=3.17	Detected=3.22.0	Status=PASS
+/home/addaswsw/.local/bin/perf
+
+$ perf --version
+perf version 6.8.12
+exit_code=0
+CHECK	perf	Required=5.4	Detected=6.8.12	Status=PASS
+CHECK	OpenCilk	Required=>=1.0 and compiled runtime smoke test	Detected=absent	Status=MISSING
+
+SUMMARY: PASS=9 MISSING=1 VERSION_TOO_OLD=0 UNVERIFIED=0
+ENVIRONMENT_AUDIT_STATUS=UNVERIFIED (partial audit mode)
+AUDIT_COMPLETED=yes; exit 0 means the audit ran, not that every requirement passed.

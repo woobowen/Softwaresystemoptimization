@@ -1,0 +1,18 @@
+Script started on 2026-09-16 11:24:25+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py 02-sysctl" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | 02-sysctl
+
+$ sysctl kernel.ostype kernel.osrelease vm.swappiness kernel.perf_event_paranoid kernel.perf_event_max_sample_rate
+kernel.ostype = Linux
+kernel.osrelease = 6.18.33.2-microsoft-standard-WSL2
+vm.swappiness = 60
+kernel.perf_event_paranoid = 2
+kernel.perf_event_max_sample_rate = 100000
+[exit 0]
+
+$ cat /proc/sys/kernel/ostype /proc/sys/kernel/osrelease /proc/sys/vm/swappiness
+Linux
+6.18.33.2-microsoft-standard-WSL2
+60
+[exit 0]
+
+Script done on 2026-09-16 11:24:27+08:00 [COMMAND_EXIT_CODE="0"]

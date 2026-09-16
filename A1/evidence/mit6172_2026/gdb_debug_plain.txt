@@ -1,0 +1,27 @@
+cwd=/tmp/a1-2026-work.scawvpmy/matrix-multiply
+
+$ gdb -nx -q -batch -ex run -ex bt -ex 'info locals' -ex 'p *A' -ex 'p *B' -ex 'p *C' --args ./matrix_multiply
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setup
+Running matrix_multiply_run()...
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555529f in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:90
+90	        C->values[i][j] += A->values[i][k] * B->values[k][j];
+#0  0x000055555555529f in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:90
+#1  0x0000555555554ec7 in main (argc=1, argv=0x7fffffffcd58) at testbed.c:134
+k = 4
+j = 0
+i = 0
+$1 = {rows = 4, cols = 5, values = 0x555555558520}
+$2 = {rows = 4, cols = 4, values = 0x555555558550}
+$3 = {rows = 4, cols = 4, values = 0x555555558580}
+
+exit_code=0

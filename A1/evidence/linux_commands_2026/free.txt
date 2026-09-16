@@ -1,0 +1,8 @@
+2026-09-16T10:11:12.225314+08:00
+
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.6Gi        12Gi       4.0Mi       1.0Gi        13Gi
+Swap:          4.0Gi          0B       4.0Gi
+
+exit_code=0

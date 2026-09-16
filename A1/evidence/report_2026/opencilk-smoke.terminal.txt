@@ -1,0 +1,37 @@
+Script started on 2026-09-16 12:39:31+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py opencilk-smoke" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="140" LINES="48"]
+A1 2026 | opencilk-smoke
+
+$ /home/addaswsw/.local/opt/opencilk-3.0/bin/clang --version
+clang version 19.1.7 (https://github.com/OpenCilk/opencilk-project cd8ccfc1fd8293654dde7bf26657f08f89c7e54b)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/addaswsw/.local/opt/opencilk-3.0/bin
+Build config: +assertions
+[exit 0]
+
+$ cat A1/evidence/environment_2026/opencilk_smoke.c
+#include <cilk/cilk.h>
+#include <stdio.h>
+
+int main(void) {
+  int values[64];
+  cilk_for (int i = 0; i < 64; ++i) {
+    values[i] = i * i;
+  }
+  int sum = 0;
+  for (int i = 0; i < 64; ++i) {
+    sum += values[i];
+  }
+  printf("sum = %d\n", sum);
+  return sum != 85344;
+}
+[exit 0]
+
+$ /home/addaswsw/.local/opt/opencilk-3.0/bin/clang -O0 -fopencilk A1/evidence/environment_2026/opencilk_smoke.c -o /tmp/a1-opencilk-smoke
+[exit 0]
+
+$ /tmp/a1-opencilk-smoke
+sum = 85344
+[exit 0]
+
+Script done on 2026-09-16 12:39:34+08:00 [COMMAND_EXIT_CODE="0"]

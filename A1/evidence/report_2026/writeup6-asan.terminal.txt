@@ -1,0 +1,35 @@
+Script started on 2026-09-16 11:25:20+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py writeup6-asan" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | writeup6-asan
+Viewing recorded evidence from this A1 run; commands below show the source.
+
+$ bash -c 'tail -n 27 A1/evidence/mit6172_2026/writeup6_asan_system.txt'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_extra_spill_area'
+
+exit_code=0
+
+$ ./matrix_multiply
+Setup
+Running matrix_multiply_run()...
+
+=================================================================
+==17==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 32 byte(s) in 2 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf7159 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:39:24
+
+Indirect leak of 128 byte(s) in 8 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf71e7 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:48:35
+
+Indirect leak of 64 byte(s) in 2 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf71a2 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:46:31
+
+SUMMARY: AddressSanitizer: 224 byte(s) leaked in 12 allocation(s).
+
+exit_code=1
+[exit 0]
+
+Script done on 2026-09-16 11:25:22+08:00 [COMMAND_EXIT_CODE="0"]

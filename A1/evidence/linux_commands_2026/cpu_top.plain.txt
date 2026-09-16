@@ -1,0 +1,49 @@
+top - 10:27:06 up 35 min,  1 user,  load average: 0.13, 0.17, 0.18
+Tasks:   1 total,   1 running,   0 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  5.8 us,  1.3 sy,  0.0 ni, 92.4 id,  0.0 wa,  0.0 hi,  0.4 si,  0.0 st 
+MiB Mem :  15794.2 total,  12842.9 free,   1970.0 used,   1205.0 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  13824.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:00.73 python3                                                                                  
+top - 10:27:07 up 35 min,  1 user,  load average: 0.13, 0.17, 0.18
+
+%Cpu(s):  4.9 us,  0.4 sy,  0.0 ni, 94.5 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st 
+
+
+
+
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:01.73 python3                                                                                  
+top - 10:27:08 up 35 min,  1 user,  load average: 0.20, 0.18, 0.18
+
+%Cpu(s):  5.0 us,  0.3 sy,  0.0 ni, 94.5 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st 
+
+
+
+
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:02.73 python3                                                                                  
+top - 10:27:09 up 35 min,  1 user,  load average: 0.20, 0.18, 0.18
+
+%Cpu(s):  4.8 us,  0.2 sy,  0.0 ni, 94.5 id,  0.0 wa,  0.0 hi,  0.5 si,  0.0 st 
+MiB Mem :  15794.2 total,  12843.2 free,   1968.5 used,   1206.2 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  13825.7 avail Mem 
+
+
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:03.73 python3                                                                                  
+top - 10:27:10 up 35 min,  1 user,  load average: 0.20, 0.18, 0.18
+
+%Cpu(s):  4.8 us,  0.3 sy,  0.0 ni, 94.6 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st 
+
+
+
+
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:04.73 python3                                                                                  
+top - 10:27:11 up 36 min,  1 user,  load average: 0.20, 0.18, 0.18
+
+%Cpu(s):  4.6 us,  0.1 sy,  0.0 ni, 95.1 id,  0.0 wa,  0.0 hi,  0.1 si,  0.0 st 
+
+
+
+
+      4 addaswsw  20   0   15076  10248   6376 R 100.0   0.1   0:05.74 python3                                                                                  
+

@@ -1,0 +1,23 @@
+2026-09-16T10:27:02.382181+08:00
+Workload PID=4
+Workload: python3 sleeps 3 seconds, then one CPU-bound loop for 8 seconds; exits normally.
+
+$ ps -p 4 -o pid,etimes,time,pcpu,comm
+    PID ELAPSED     TIME %CPU COMMAND
+      4       3 00:00:00 14.0 python3
+
+$ ps -p 4 -o pid,etimes,time,pcpu,comm
+    PID ELAPSED     TIME %CPU COMMAND
+      4       5 00:00:02 45.3 python3
+
+$ ps -p 4 -o pid,etimes,time,pcpu,comm
+    PID ELAPSED     TIME %CPU COMMAND
+      4       7 00:00:04 59.9 python3
+
+$ ps -p 4 -o pid,etimes,time,pcpu,comm
+    PID ELAPSED     TIME %CPU COMMAND
+      4       9 00:00:06 68.3 python3
+
+Workload exit_code=0; reaped=yes
+    PID COMMAND
+exit_code=1; expected 1: process absent

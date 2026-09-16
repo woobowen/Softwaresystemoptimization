@@ -1,0 +1,19 @@
+Script started on 2026-09-16 11:24:32+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py 05-ps-uptime" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | 05-ps-uptime
+
+$ bash -c 'ps -aux | head -n 8 | cut -c1-130'
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  21924 13340 ?        Ss   09:51   0:01 /sbin/init
+root           2  0.0  0.0   3180  2204 hvc0     Sl+  09:51   0:00 /init
+root           7  0.0  0.0   3228  2164 hvc0     Sl+  09:51   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 
+root          58  0.0  0.1  50376 16944 ?        S<s  09:51   0:00 /usr/lib/systemd/systemd-journald
+root         111  0.0  0.0  26272  7552 ?        Ss   09:51   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     144  0.0  0.0  21352 13172 ?        Ss   09:51   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     147  0.0  0.0  91068  8068 ?        Ssl  09:51   0:00 /usr/lib/systemd/systemd-timesyncd
+[exit 0]
+
+$ uptime
+ 11:24:32 up  1:33,  1 user,  load average: 0.17, 0.08, 0.09
+[exit 0]
+
+Script done on 2026-09-16 11:24:34+08:00 [COMMAND_EXIT_CODE="0"]

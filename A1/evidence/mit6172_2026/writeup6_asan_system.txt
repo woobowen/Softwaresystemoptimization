@@ -1,0 +1,180 @@
+cwd=/tmp/a1-2026-asan.w3h1j6f7
+
+$ make clean
+rm -f testbed.o matrix_multiply.o matrix_multiply .buildmode \
+        testbed.gcda matrix_multiply.gcda \
+        testbed.gcno matrix_multiply.gcno \
+        testbed.c.gcov matrix_multiply.c.gcov fasttime.h.gcov
+
+exit_code=0
+
+$ make ASAN=1
+clang -O1 -g -fsanitize=address -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O1 -g -fsanitize=address -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold -fsanitize=address
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_load1_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_load2_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_load4_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_load8_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_load16_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_store1_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_store2_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_store4_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_store8_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_report_store16_asm'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RAX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RBX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RCX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RDX'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RSI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RDI'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_RBP'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R8'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R9'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R12'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R13'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R14'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_1_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_1_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_2_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_2_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_4_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_4_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_8_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_8_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_load_add_16_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_check_store_add_16_R15'
+/usr/bin/ld.gold: warning: Cannot export local symbol '__asan_extra_spill_area'
+
+exit_code=0
+
+$ ./matrix_multiply
+Setup
+Running matrix_multiply_run()...
+
+=================================================================
+==17==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 32 byte(s) in 2 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf7159 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:39:24
+
+Indirect leak of 128 byte(s) in 8 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf71e7 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:48:35
+
+Indirect leak of 64 byte(s) in 2 object(s) allocated from:
+    #0 0x61e996cb7fc3 in malloc (/tmp/a1-2026-asan.w3h1j6f7/matrix_multiply+0xcafc3) (BuildId: 5c448f1a539645787f513e93437be41ab381edde)
+    #1 0x61e996cf71a2 in make_matrix /tmp/a1-2026-asan.w3h1j6f7/matrix_multiply.c:46:31
+
+SUMMARY: AddressSanitizer: 224 byte(s) leaked in 12 allocation(s).
+
+exit_code=1

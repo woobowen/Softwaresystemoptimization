@@ -1,0 +1,7 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply
+$ make
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+
+exit_code=0

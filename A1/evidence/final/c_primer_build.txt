@@ -1,0 +1,23 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer
+$ make
+clang -Wall -O1 -DNDEBUG  -c sizes.c
+clang -o sizes sizes.o -lrt -flto -fuse-ld=gold
+clang -Wall -O1 -DNDEBUG  -c pointer.c
+clang -o pointer pointer.o -lrt -flto -fuse-ld=gold
+clang -Wall -O1 -DNDEBUG  -c swap.c
+clang -o swap swap.o -lrt -flto -fuse-ld=gold
+pointer.c:13:7: warning: unused variable 'j' [-Wunused-variable]
+   13 |   int j = *pi;
+      |       ^
+pointer.c:26:16: warning: variable 'pcc' set but not used [-Wunused-but-set-variable]
+   26 |   const char * pcc = c;  // pcc is a pointer to char constant
+      |                ^
+pointer.c:27:16: warning: unused variable 'pcc2' [-Wunused-variable]
+   27 |   char const * pcc2 = c;  // What is the type of pcc2?
+      |                ^~~~
+pointer.c:40:22: warning: unused variable 'cpc' [-Wunused-variable]
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |                      ^~~
+4 warnings generated.
+
+exit_code=0

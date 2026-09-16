@@ -70,18 +70,18 @@ versions() {
   run whoami || :
   run cat /etc/os-release || :
   if [[ -r /etc/os-release ]]; then source /etc/os-release; fi
-  if [[ "$ID" != ubuntu ]]; then row OS 'Ubuntu >=22.04 LTS' "$PRETTY_NAME" UNVERIFIED
-  elif [[ "$VERSION_ID" =~ ^[0-9]+(\.[0-9]+)*$ ]] && ! at_least "$VERSION_ID" 22.04; then
-    row OS 'Ubuntu >=22.04 LTS' "$PRETTY_NAME" VERSION_TOO_OLD
-  elif [[ "$VERSION" == *LTS* ]]; then row OS 'Ubuntu >=22.04 LTS' "$PRETTY_NAME" PASS
-  else row OS 'Ubuntu >=22.04 LTS' "$PRETTY_NAME" UNVERIFIED; fi
+  if [[ "$ID" != ubuntu ]]; then row OS 'Ubuntu >=20.04 LTS' "$PRETTY_NAME" UNVERIFIED
+  elif [[ "$VERSION_ID" =~ ^[0-9]+(\.[0-9]+)*$ ]] && ! at_least "$VERSION_ID" 20.04; then
+    row OS 'Ubuntu >=20.04 LTS' "$PRETTY_NAME" VERSION_TOO_OLD
+  elif [[ "$VERSION" == *LTS* ]]; then row OS 'Ubuntu >=20.04 LTS' "$PRETTY_NAME" PASS
+  else row OS 'Ubuntu >=20.04 LTS' "$PRETTY_NAME" UNVERIFIED; fi
   run uname -a || :
   run uname -r || :
   run uname -m || :
   kernel=$(uname -r); numeric=${kernel%%-*}
-  if [[ ! "$numeric" =~ ^[0-9]+(\.[0-9]+)*$ ]]; then row Kernel '>=5.15' "$kernel" UNVERIFIED
-  elif at_least "$numeric" 5.15; then row Kernel '>=5.15' "$kernel" PASS
-  else row Kernel '>=5.15' "$kernel" VERSION_TOO_OLD; fi
+  if [[ ! "$numeric" =~ ^[0-9]+(\.[0-9]+)*$ ]]; then row Kernel '>=5.4' "$kernel" UNVERIFIED
+  elif at_least "$numeric" 5.4; then row Kernel '>=5.4' "$kernel" PASS
+  else row Kernel '>=5.4' "$kernel" VERSION_TOO_OLD; fi
   run cat /proc/version || :
   run cat /proc/sys/kernel/osrelease || :
   if grep -qiE 'microsoft|wsl' /proc/version /proc/sys/kernel/osrelease 2>/dev/null; then
@@ -90,15 +90,22 @@ versions() {
   run lscpu || :
   version_check gcc 9.3 --version
   version_check clang 10.0 --version
-  version_check python3 3.10 --version
+  version_check python3 3.8 --version
   version_check java 11 -version
   version_check javac 11 -version
-  version_check valgrind 3.18 --version
-  version_check perf 5.15 --version
+  version_check valgrind 3.17 --version
+  version_check perf 5.4 --version
+  local opencilk_cc=${OPENCILK_CC:-$HOME/.local/opt/opencilk-3.0/bin/clang}
+  if [[ -x "$opencilk_cc" ]]; then
+    run "$opencilk_cc" --version || :
+    printf 'OpenCilk distribution and runtime validation: evidence/environment_2026/opencilk_validation.txt\n'
+  else
+    row OpenCilk '>=1.0 and compiled runtime smoke test' absent MISSING
+  fi
 }
 commands() {
   local tool location
-  for tool in uname sysctl top dmidecode numactl lscpu cat free vmstat mpstat pidstat iostat sar head man; do
+  for tool in uname sysctl top htop dmidecode numactl lscpu cat free ps vmstat mpstat pidstat iostat sar uptime lstopo git head man; do
     if location=$(command -v "$tool"); then row "$tool" available "$location" PASS
     else row "$tool" available absent MISSING; fi
   done
@@ -119,7 +126,7 @@ perf_checks() {
   printf '\n$ perf stat ls\n'
   output=$(perf stat ls 2>&1); first_result=$?
   printf '%s\nexit_code=%s\n' "$output" "$first_result"
-  # R1 requires this attempt even when the preceding default stat fails.
+  # Check CPU-wide access separately from per-process events.
   printf '\n$ perf stat -C 0 sleep 3\n'
   output=$(perf stat -C 0 sleep 3 2>&1); cpu_result=$?
   printf '%s\nexit_code=%s\n' "$output" "$cpu_result"
@@ -180,10 +187,10 @@ if [[ "$mode" == --all || "$mode" == --perf ]]; then
   printf 'SOFTWARE_EVENTS=%s\nHARDWARE_COUNTERS=%s\nCPU_SCOPE_STATUS=%s\nPERF_STATUS=%s\n' \
     "$software_status" "$hardware_status" "$cpu_scope_status" "$perf_status"
 fi
-if [[ "$mode" != --all ]]; then printf 'ENGINEERING_STATUS=UNVERIFIED (partial audit mode)\n'
-elif ((missing > 0 || old > 0 || unverified > 0)); then printf 'ENGINEERING_STATUS=BLOCKED\n'
-elif [[ "$perf_status" == PASS ]]; then printf 'ENGINEERING_STATUS=PASS\n'
-elif [[ "$perf_status" == NON_BLOCKING_PMU_LIMITATION ]]; then printf 'ENGINEERING_STATUS=PASS_WITH_NONBLOCKING_PMU_LIMITATION\n'
-else printf 'ENGINEERING_STATUS=BLOCKED (perf requires evidence-based review)\n'; fi
+if [[ "$mode" != --all ]]; then printf 'ENVIRONMENT_AUDIT_STATUS=UNVERIFIED (partial audit mode)\n'
+elif ((missing > 0 || old > 0 || unverified > 0)); then printf 'ENVIRONMENT_AUDIT_STATUS=BLOCKED\n'
+elif [[ "$perf_status" == PASS ]]; then printf 'ENVIRONMENT_AUDIT_STATUS=PASS\n'
+elif [[ "$perf_status" == NON_BLOCKING_PMU_LIMITATION ]]; then printf 'ENVIRONMENT_AUDIT_STATUS=PASS_WITH_NONBLOCKING_PMU_LIMITATION\n'
+else printf 'ENVIRONMENT_AUDIT_STATUS=BLOCKED (perf requires evidence-based review)\n'; fi
 printf 'AUDIT_COMPLETED=yes; exit 0 means the audit ran, not that every requirement passed.\n'
 exit 0

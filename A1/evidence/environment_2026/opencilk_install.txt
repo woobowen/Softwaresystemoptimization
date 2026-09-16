@@ -1,0 +1,8 @@
+Official archive already passed size and gzip checks before extraction.
+$ mkdir -p /home/addaswsw/.local/opt/opencilk-3.0
+exit_code=0
+$ tar -xzf /tmp/a1-opencilk-3.0.tar.gz --strip-components=1 -C /home/addaswsw/.local/opt/opencilk-3.0
+stdout/stderr: empty
+exit_code=0
+Compiler and runtime subsequently validated in opencilk_validation.txt.
+System default compiler, alternatives and shell rc: unchanged.

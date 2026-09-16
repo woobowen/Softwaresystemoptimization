@@ -1,0 +1,33 @@
+cwd=/tmp/a1-2026-work.scawvpmy/matrix-multiply
+
+$ gdb -nx -q -batch -ex run -ex bt -ex 'frame 5' -ex 'p A->cols' -ex 'p B->rows' -ex 'p *A' -ex 'p *B' --args ./matrix_multiply
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setup
+Running matrix_multiply_run()...
+matrix_multiply.c:79 (int matrix_multiply_run(const matrix *, const matrix *, matrix *)) Assertion A->cols == B->rows failed: A->cols = 5, B->rows = 4
+
+Program received signal SIGABRT, Aborted.
+__pthread_kill_implementation (no_tid=0, signo=6, threadid=<optimized out>) at ./nptl/pthread_kill.c:44
+warning: 44	./nptl/pthread_kill.c: No such file or directory
+#0  __pthread_kill_implementation (no_tid=0, signo=6, threadid=<optimized out>) at ./nptl/pthread_kill.c:44
+#1  __pthread_kill_internal (signo=6, threadid=<optimized out>) at ./nptl/pthread_kill.c:78
+#2  __GI___pthread_kill (threadid=<optimized out>, signo=signo@entry=6) at ./nptl/pthread_kill.c:89
+#3  0x00007ffff7c4527e in __GI_raise (sig=sig@entry=6) at ../sysdeps/posix/raise.c:26
+#4  0x00007ffff7c288ff in __GI_abort () at ./stdlib/abort.c:79
+#5  0x00005555555552dc in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:78
+#6  0x0000555555554f07 in main (argc=1, argv=0x7fffffffcd58) at testbed.c:134
+#5  0x00005555555552dc in matrix_multiply_run (A=0x555555558360, B=0x5555555582c0, C=0x555555558460) at matrix_multiply.c:78
+78	  tbassert(A->cols == B->rows,
+$1 = 5
+$2 = 4
+$3 = {rows = 4, cols = 5, values = 0x555555558520}
+$4 = {rows = 4, cols = 4, values = 0x555555558550}
+
+exit_code=0

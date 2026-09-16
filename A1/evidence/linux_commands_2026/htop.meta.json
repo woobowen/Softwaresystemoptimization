@@ -1,0 +1,10 @@
+{
+  "command": [
+    "A1/.tools/ubuntu/usr/bin/htop"
+  ],
+  "duration_seconds": 5.092,
+  "exit_code": 0,
+  "sent_key": "q",
+  "pty_size": "160x36",
+  "pid": 7
+}

@@ -1,0 +1,12 @@
+Linux 6.18.33.2-microsoft-standard-WSL2 (LAPTOP-KI0GT6AJ) 	09/16/26 	_x86_64_	(22 CPU)
+
+10:16:15      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+10:16:16      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+10:16:17      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+
+10:16:18      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+^C
+
+Average:      UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command

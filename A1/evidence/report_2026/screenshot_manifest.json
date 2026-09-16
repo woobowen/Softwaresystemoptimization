@@ -1,0 +1,134 @@
+[
+  {
+    "image": "images/01-system.png",
+    "sha256": "ebcdbb718e635693ec7600b8ec0c5a4ce6d44f4f6c15c720e9f14e115d55b20e",
+    "terminal": "evidence/report_2026/01-system.terminal.txt",
+    "terminal_sha256": "80a998c95e855307cb26f252c7a52e31c2888cff5ad1370142b46ae8ed380d39"
+  },
+  {
+    "image": "images/02-sysctl.png",
+    "sha256": "2681acce4d5aec7494d797e87239bc5d442492034ccd3591e54c2dbdcc892c0f",
+    "terminal": "evidence/report_2026/02-sysctl.terminal.txt",
+    "terminal_sha256": "fd655515b289947c5a727205560fc8785d5e50b722975d53fcd03b2be9a0a98e"
+  },
+  {
+    "image": "images/03-lscpu.png",
+    "sha256": "036bdc70ec889ff4d0b4077645d195da56462b1987c901b5b6d51c1f1704c203",
+    "terminal": "evidence/report_2026/03-lscpu.terminal.txt",
+    "terminal_sha256": "d2b669796a4549149526fc2ed7e101c5c5ca387d961c5d4f4fcc66b18dc3e05c"
+  },
+  {
+    "image": "images/04-dmidecode-numa.png",
+    "sha256": "e6ac689f8a404ac73fda9b74a431cf1370b78ca3059d5ab77b567f1a94dc1a36",
+    "terminal": "evidence/report_2026/04-dmidecode-numa.terminal.txt",
+    "terminal_sha256": "8f1f315770104a1d523df0d08546f7f096a5d47015b0fbb1e6b5e6c007792ba1"
+  },
+  {
+    "image": "images/05-ps-uptime.png",
+    "sha256": "2f5c1dbdd63357b6652435ef752d3e64b3915ab49b5571256f3ea3e0b7387210",
+    "terminal": "evidence/report_2026/05-ps-uptime.terminal.txt",
+    "terminal_sha256": "7cbb8e92956fb679cb29fa1270751aaa5d1539aaa0cd6fa25d67fdb5f05d5f9a"
+  },
+  {
+    "image": "images/06a-vmstat-mpstat.png",
+    "sha256": "7281519698dc0fa8aaa505ff4fa6ac818d38fb016fc7b6f2a8757d536c7cd3c3",
+    "terminal": "evidence/report_2026/06a-vmstat-mpstat.terminal.txt",
+    "terminal_sha256": "77956414be4c61bde34b0e9817b01ccad8bd5c9d9026702b28046caeb638c251"
+  },
+  {
+    "image": "images/06b-pidstat-iostat.png",
+    "sha256": "6128457c198254d9a66e5e0f299362317ba16a5f4c60f138c40ecb1934f4152d",
+    "terminal": "evidence/report_2026/06b-pidstat-iostat.terminal.txt",
+    "terminal_sha256": "86a05402c7ced92775d9d20390757a1c65553fa6b26df667a77ccb60781e5527"
+  },
+  {
+    "image": "images/07-sar.png",
+    "sha256": "c3fd27342ba99b50f8c2d8915533e9eba87d97f6caa67f5c2f48f9a4701fa6fa",
+    "terminal": "evidence/report_2026/07-sar.terminal.txt",
+    "terminal_sha256": "8321fd43a7e7c4626635ee7677030fa178b919f65fb456a4391a2ea881b63761"
+  },
+  {
+    "image": "images/08-interrupts.png",
+    "sha256": "d0748836c33f23bb5be8743432a0e2db76eb1f531555920d639cba80524c9087",
+    "terminal": "evidence/report_2026/08-interrupts.terminal.txt",
+    "terminal_sha256": "95e17e75b04dca856ce6c1cb20daa639625b4a96895b35b52daf03eaf0196f95"
+  },
+  {
+    "image": "images/09-topology.png",
+    "sha256": "5d67572ccc7b8e8c07c59cc03a74cdb91c7d60190ede39894e4477cc46f3f9d5",
+    "terminal": "evidence/report_2026/09-topology.terminal.txt",
+    "terminal_sha256": "2599025050059551a570cbc5b80e15f0b462fb9c44100eed71a85825509fd453"
+  },
+  {
+    "image": "images/10-git.png",
+    "sha256": "5215b9e65c864cb81af049c89b29e6850985f1fdddbcea530bfeb61f2b2e664b",
+    "terminal": "evidence/report_2026/10-git.terminal.txt",
+    "terminal_sha256": "3a39e7dfdbcc969d0cb64b34614d9f3634e1052f65b42beb3226b5039d8c0793"
+  },
+  {
+    "image": "images/htop-live.png",
+    "sha256": "7e3b0a1839d2f0b9ce887c7cfcfcd3a5a867684655e3f09347737c292f062307",
+    "terminal": "evidence/report_2026/htop-live.terminal.txt",
+    "terminal_sha256": "54f100afb5a1cc6964c28ed55318abba6fd31efa324efb096f09389ca98bd261"
+  },
+  {
+    "image": "images/opencilk-smoke.png",
+    "sha256": "9e06ee60c5d3402a86ed7c264f890a8a20d3040aab97e51f3028f09bfd7c2366",
+    "terminal": "evidence/report_2026/opencilk-smoke.terminal.txt",
+    "terminal_sha256": "0af4ed788da2468fa01039134a5265a2fd93f1a6d57db6f82f82ab3b5bca6e39"
+  },
+  {
+    "image": "images/top-live.png",
+    "sha256": "455627ba848139e82f2de6943d02142d2d6b13081cb2f4320781001d36e7d8cd",
+    "terminal": "evidence/report_2026/top-live.terminal.txt",
+    "terminal_sha256": "2098b6e9a6889d1ec477d21a248ddd94e5b0f11cb1ff6b6c00d29052d0dda186"
+  },
+  {
+    "image": "images/writeup2-pointer.png",
+    "sha256": "a22109a23b44cd7efc38e46aab794a5e31ef53641c64ea351481824249700497",
+    "terminal": "evidence/report_2026/writeup2-pointer.terminal.txt",
+    "terminal_sha256": "6c6a445008c31b8b9444cc643c8201ea2e50757dde3823ec99b51a12f87991ee"
+  },
+  {
+    "image": "images/writeup3-sizes.png",
+    "sha256": "71c51423a29f70d3bec32881e2700f7efa158c51f23e46d41fc12565f6f50fd9",
+    "terminal": "evidence/report_2026/writeup3-sizes.terminal.txt",
+    "terminal_sha256": "a7c6c74cc1067c74388d8c95146339dd4b5a05f141541154f9015a688519b9a7"
+  },
+  {
+    "image": "images/writeup4-swap.png",
+    "sha256": "1e0968963f3472b256a57f828d316ecab96e13af8d4adaf76d6736757f9e4643",
+    "terminal": "evidence/report_2026/writeup4-swap.terminal.txt",
+    "terminal_sha256": "ad5a9d10e96f7391bd58436a7a0a9280c0a6a48be4d38251d049e050a18a9168"
+  },
+  {
+    "image": "images/writeup5-build.png",
+    "sha256": "5642fe06e3943e93f9eb2d14ec3f4d07af3f0da55c4349ff7c48ea6a2284b586",
+    "terminal": "evidence/report_2026/writeup5-build.terminal.txt",
+    "terminal_sha256": "816f1de5b20b60795adce9a12080033f1ca0fe25ee2076beafd102b073501ea2"
+  },
+  {
+    "image": "images/writeup5-gdb.png",
+    "sha256": "ee203cf87e6228cd003946a1c57b62db51a205c64de47ee0d52a11e7a4ca2098",
+    "terminal": "evidence/report_2026/writeup5-gdb.terminal.txt",
+    "terminal_sha256": "ab4dcf5626d95ad21ca0a77c055cd2be14760c334a1214efe2a519753b69a46f"
+  },
+  {
+    "image": "images/writeup6-asan.png",
+    "sha256": "d565983133fc6427bbc6238bb2cf18ce26e72412209b3b460eca4dc27cd71bee",
+    "terminal": "evidence/report_2026/writeup6-asan.terminal.txt",
+    "terminal_sha256": "8611d0b96cc3a7273349e8468fb6257b5bef53215da7ec3cf77b8cde488a253a"
+  },
+  {
+    "image": "images/writeup7-result.png",
+    "sha256": "5fdaf20436e0c5da494f3eeb6ff658905061cca0761b94ac4836ba3032ad3fc6",
+    "terminal": "evidence/report_2026/writeup7-result.terminal.txt",
+    "terminal_sha256": "cfedcca51fdf629740178b42876960aee41fb8c8a62528556462c0ad0bcc5a91"
+  },
+  {
+    "image": "images/writeup8-valgrind.png",
+    "sha256": "3f7bf8a16682b11f1a34ee910e698ddfce3a40358ee9f8cd0d8f2996e3814574",
+    "terminal": "evidence/report_2026/writeup8-valgrind.terminal.txt",
+    "terminal_sha256": "d392b5205b75387d65f9e8fadbe3b2d0a7e28b58f95c41786cdf91097a4f0526"
+  }
+]

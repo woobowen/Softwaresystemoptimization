@@ -1,0 +1,10 @@
+{
+  "command": [
+    "top"
+  ],
+  "duration_seconds": 7.025,
+  "exit_code": 0,
+  "sent_key": "q",
+  "pty_size": "160x36",
+  "pid": 5
+}

@@ -1,0 +1,48 @@
+Script started on 2026-09-16 11:25:11+08:00 [COMMAND="python3 /tmp/a1-screenshot-runner.py writeup4-swap" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="140" LINES="48"]
+A1 2026 | writeup4-swap
+
+$ cat A1/mit6172/c-primer/swap.c
+// Copyright (c) 2012 MIT License by 6.172 Staff
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+void swap(int* i, int* j) {
+  int temp = *i;
+  *i = *j;
+  *j = temp;
+}
+
+int main() {
+  int k = 1;
+  int m = 2;
+  swap(&k, &m);
+  // What does this print?
+  printf("k = %d, m = %d\n", k, m);
+
+  return 0;
+}
+[exit 0]
+
+$ make -C A1/mit6172/c-primer swap
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+make: 'swap' is up to date.
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/A1/mit6172/c-primer'
+[exit 0]
+
+$ A1/mit6172/c-primer/swap
+k = 2, m = 1
+[exit 0]
+
+$ bash -c 'cd A1/mit6172/c-primer && python3 -B verifier.py | tail -n 7'
+Ok!
+
+Checking that swap was built ... 
+Ok!
+Checking output of swap ... 
+Ok!
+LGTM
+[exit 0]
+
+Script done on 2026-09-16 11:25:13+08:00 [COMMAND_EXIT_CODE="0"]

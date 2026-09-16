@@ -1,50 +1,80 @@
-# A1 requirement matrix
+# A1 2026 当前正式 requirement matrix
 
-Task: A1-FULL-001。依据当前两份老师 PDF；环境冲突以新版环境文档为准。
+最终依据：A1 DOCX 全部题目 + 老师最新补充“MIT 正式仅 Write-up 2～8”。PDF 只用于七项 Write-up；ZIP 只作为 starter code，不增加任务。
 
-PASS 表示题目要求的操作与回答已完成，不表示受限硬件信息已成功取得。dmidecode 的真实失败与接口缺失、sysctl 部分受保护参数、PID namespace、PMU 限制均在 README 披露。
+PASS 需有本轮真实证据。GDB、断言和内存定位作为 W5–W8 的过程证据，不单列独立正式任务。先前做过的 preprocessing、coverage 等证据保留，但不计入本表或正式报告要求，也不继续完善。
 
-| ID | 老师要求 | 状态 | README位置 | Evidence |
+| ID | 老师要求 / 检查项 | 状态 | README 位置 | 当前 Evidence |
 |---|---|---|---|---|
-| ENV | 新版环境要求及快速复查 | PASS | §1 | [environment_final_check.txt](final/environment_final_check.txt) |
-| UNAME | uname -a 输出组成、kernel 与 ISA | PASS | §2.1 | [uname_a.txt](linux_commands/uname_a.txt) |
-| SYSCTL | sysctl -a、参数与 /proc/sys 对应 | PASS | §2.2 | [proc_sys_mapping.txt](linux_commands/proc_sys_mapping.txt) |
-| TOP | 实际交互运行、q 退出及字段解释 | PASS | §2.3 | [top.txt](linux_commands/top.txt) |
-| DMIDECODE | 实际执行并说明内存观察及 DMI 缺失 | PASS | §2.4 | [dmidecode.txt](linux_commands/dmidecode.txt) |
-| NUMACTL | numactl -H、用途与节点数量 | PASS | §2.5 | [numactl_H.txt](linux_commands/numactl_H.txt) |
-| LSCPU | 型号、guest 核数/线程、拓扑限制 | PASS | §2.6 | [lscpu.txt](linux_commands/lscpu.txt) |
-| CPUINFO | 实际读取并与 lscpu 比较 | PASS | §2.6 | [cpuinfo.txt](linux_commands/cpuinfo.txt) |
-| FREE | 两行含义、各列及默认 KiB 单位 | PASS | §2.7 | [free.txt](linux_commands/free.txt) |
-| VMSTAT | vmstat 1、Ctrl+C、首份与后续区间 | PASS | §3 | [vmstat.txt](linux_commands/vmstat.txt) |
-| MPSTAT | mpstat -P ALL 1、Ctrl+C、CPU 统计 | PASS | §3 | [mpstat.txt](linux_commands/mpstat.txt) |
-| PIDSTAT | pidstat 1、Ctrl+C、活动任务筛选 | PASS | §3 | [pidstat.txt](linux_commands/pidstat.txt) |
-| IOSTAT | iostat -xz 1、Ctrl+C、扩展/无活动筛选 | PASS | §3 | [iostat.txt](linux_commands/iostat.txt) |
-| SAR | sar -n DEV 1、间隔与网络指标 | PASS | §4 | [sar_network.txt](linux_commands/sar_network.txt) |
-| MAN | 查阅所有指定工具的本机 man 文档 | PASS | §2–4 | [man_vmstat.txt](linux_commands/man_vmstat.txt) |
-| MIT-SOURCE | 使用官方 Fall 2018 HW1 PDF 与 starter ZIP | PASS | §5 引言 | [download_source.txt](mit6172/download_source.txt) |
-| MIT-S1 | 阅读第 1 节软件工程建议 | PASS | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-S2 | 公开 PDF 未提供第 2 节正文，不猜测补做 | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-S3 | 公开 PDF 未提供第 3 节正文，不猜测补做 | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-S4 | 第 4 节预处理、类型、指针、参数传递 | PASS | Write-up 2–4 | [c_primer_validation.txt](mit6172/c_primer_validation.txt) |
-| MIT-S5 | 第 5 节构建、GDB、断言、内存及覆盖率 | PASS | Write-up 5–8 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-S6 | 整个第 6 节跳过 | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-S7 | 阅读第 7 节风格建议并沿用 starter 结构 | PASS | §5 引言 | [final_from_official.patch](mit6172/final_from_official.patch) |
-| MIT-LINT | clint.py 官方明确建议但不强制 | NOT_REQUIRED | 不作为提交项 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-AWS | 忽略 AWSRUN | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-GIT | 忽略 Git；无 clone/commit/push | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-W9-W10 | 属于跳过的第 6 节，不完成 Write-up 9/10 | NOT_REQUIRED | §5 引言 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-EXERCISES | 必要 Exercise 实际练习，完整答案不作为正式提交 | PASS | §5 各 Write-up 的支撑结果 | [SCOPE_CHECKLIST.md](mit6172/SCOPE_CHECKLIST.md) |
-| MIT-COVERAGE | 第 5 节 gcov 实际执行并撤销插桩 | PASS | §6 注明已撤销；细节仅内部 | [coverage_run.txt](mit6172/coverage_run.txt) |
-| W2 | const/指针问题及修复后运行 | PASS | Write-up 2 | [writeup2_evidence.txt](mit6172/writeup2_evidence.txt) |
-| W3 | 全部指定类型及指针大小输出 | PASS | Write-up 3 | [writeup3_evidence.txt](mit6172/writeup3_evidence.txt) |
-| W4 | 指针 swap、修改代码及官方 verifier | PASS | Write-up 4 | [c_primer_validation.txt](mit6172/c_primer_validation.txt) |
-| W5 | O3 clean/rebuild 真实输出 | PASS | Write-up 5 | [writeup5_evidence.txt](mit6172/writeup5_evidence.txt) |
-| W6 | 实际 ASan/LeakSanitizer 输出 | PASS | Write-up 6 | [writeup6_evidence.txt](mit6172/writeup6_evidence.txt) |
-| W7 | 初始化修复后的正确矩阵输出 | PASS | Write-up 7 | [writeup7_evidence.txt](mit6172/writeup7_evidence.txt) |
-| W8 | 释放后 Valgrind 无错误、无泄漏 | PASS | Write-up 8 | [writeup8_evidence.txt](mit6172/writeup8_evidence.txt) |
-| CODE-CHECK | 代码编译运行、独立数学核对和重复性 | PASS | Write-up 4、7、8 | [matrix_correctness.txt](mit6172/matrix_correctness.txt) |
-| README | 正式 A1/README.md 包含全部指定答案 | PASS | 全文 | [README.md](../README.md) |
-| LINKS | README 相对链接真实存在 | PASS | 全文 | [submission_validation.txt](final/submission_validation.txt) |
-| SCOPE | 没有开始 A2–A5 或 P1–P3，无远程提交 | PASS | §5–6 | [SELF_CHECK.md](final/SELF_CHECK.md) |
+| ENV-OS | DOCX 环境：Ubuntu 20.04 LTS 及以上 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-KERNEL | Kernel >=5.4 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-GCC | GCC >=9.3 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-CLANG | Clang >=10 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-PYTHON | Python >=3.8 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-JAVA | Java / javac >=11 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-VALGRIND | Valgrind >=3.17 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-PERF | perf >=5.4，版本与软件事件实测 | PASS | §1 | [environment_versions.txt](final/environment_versions.txt) |
+| ENV-OPENCILK | OpenCilk >=1.0 且实际编译/runtime smoke test | PASS | §1 | [opencilk_validation.txt](environment_2026/opencilk_validation.txt) |
+| CMD-UNAME | (1)a–b 全部字段、kernel release、ISA | PASS | §2 / (1) | [uname.txt](linux_commands_2026/uname.txt) |
+| CMD-OS-RELEASE | (2) 本次发行版字段 | PASS | §2 / (2) | [os_release.txt](linux_commands_2026/os_release.txt) |
+| CMD-SYSCTL | (3)a 功能、-a、真实列表 | PASS | §2 / (3) | [sysctl.txt](linux_commands_2026/sysctl.txt) |
+| CMD-SYSCTL-MAPPING | (3)b–c /proc/sys 映射、kernel 与 distro 区分 | PASS | §2 / (3) | [proc_mapping.txt](linux_commands_2026/proc_mapping.txt) |
+| CMD-SYSCTL-PARAMS | (3)d 实际存在的两个 perf 参数及手册 | PASS | §2 / (3) | [manuals.txt](linux_commands_2026/manuals.txt) |
+| CMD-LSCPU | (4)a 型号、guest 核/线程及各级缓存 | PASS | §2 / (4) | [lscpu.txt](linux_commands_2026/lscpu.txt) |
+| CMD-ENDIAN | (4)b 当前大小端与相反字节序应用 | PASS | §2 / (4) | [lscpu.txt](linux_commands_2026/lscpu.txt) |
+| CMD-ADDRESS | (4)c physical/virtual 宽度与 64-bit ISA 区别 | PASS | §2 / (4) | [lscpu.txt](linux_commands_2026/lscpu.txt) |
+| CMD-NUMACTL-H | (6)a–c -H、节点数、distance 及应用 | PASS | §2 / (6) | [numactl_H.txt](linux_commands_2026/numactl_H.txt) |
+| CMD-NUMACTL-SHOW | (6)d --show 作用、每个输出字段、与 -H 区别 | PASS | §2 / (6) | [numactl_show.txt](linux_commands_2026/numactl_show.txt) |
+| CMD-FREE | (7)a Mem/Swap 行与主要列 | PASS | §2 / (7) | [free.txt](linux_commands_2026/free.txt) |
+| CMD-GIB-GB | (7)b GiB 与 GB 及 -h | PASS | §2 / (7) | [free.txt](linux_commands_2026/free.txt) |
+| CMD-PS | (8) ps -aux 实际表头全部列 | PASS | §2 / (8) | [ps.txt](linux_commands_2026/ps.txt) |
+| CMD-TOP | (9)a 交互运行、摘要/列含义、q 退出 | PASS | §2 / (9) | [top.raw.txt](linux_commands_2026/top.raw.txt) |
+| CMD-HTOP | (9)b htop 交互运行、比较、q 退出 | PASS | §2 / (9) | [htop.raw.txt](linux_commands_2026/htop.raw.txt) |
+| CMD-VMSTAT | (10) vmstat 1 实际采样、Ctrl+C、首份口径 | PASS | §2 / (10) | [vmstat.raw.txt](linux_commands_2026/vmstat.raw.txt) |
+| CMD-MPSTAT | (11) mpstat -P ALL 1、interval、各 CPU | PASS | §2 / (11) | [mpstat.raw.txt](linux_commands_2026/mpstat.raw.txt) |
+| CMD-PIDSTAT | (12) pidstat 1、interval、活动进程统计 | PASS | §2 / (12) | [pidstat.raw.txt](linux_commands_2026/pidstat.raw.txt) |
+| CMD-IOSTAT | (13) iostat -xz 1、interval、扩展设备统计 | PASS | §2 / (13) | [iostat.raw.txt](linux_commands_2026/iostat.raw.txt) |
+| CMD-CPU-COMPARE | (10–13) ps/pidstat/top/htop 对比及负载清理 | PASS | §2 / (13) | [cpu_comparison.txt](linux_commands_2026/cpu_comparison.txt) |
+| CMD-SAR | (14)a–b 1 秒、-n DEV 当前全部列 | PASS | §2 / (14) | [sar.raw.txt](linux_commands_2026/sar.raw.txt) |
+| CMD-UPTIME | (15)a–b 字段、1/5/15 分钟 load、R/D 含义 | PASS | §2 / (15) | [uptime.txt](linux_commands_2026/uptime.txt) |
+| CMD-INTERRUPTS | (16)a–b 真实硬中断/核间中断，最高项与有限解释 | PASS | §2 / (16) | [interrupts_2.txt](linux_commands_2026/interrupts_2.txt) |
+| CMD-SOFTIRQS | (16)a–b 两次快照、逐 CPU 求和和增量 | PASS | §2 / (16) | [irq_summary.txt](linux_commands_2026/irq_summary.txt) |
+| CMD-LSTOPO | (17) SVG 生成、有效性与当前拓扑分析 | PASS | §2 / (17) | [lstopo.txt](linux_commands_2026/lstopo.txt) |
+| CMD-MAN | 题面要求：查阅当前系统手册 | PASS | §2 | [manuals.txt](linux_commands_2026/manuals.txt) |
+| CMD-DMIDECODE | (5)a–b 命令执行和字段问题已回答；具体 DIMM 信息 UNVERIFIED due WSL | PASS | §2 / (5) | [dmidecode.txt](linux_commands_2026/dmidecode.txt) |
+| HW-FREQUENCY | (4)a 频率问题已回答；具体 base/max/min UNVERIFIED due WSL | PASS | §2 / (4) | [proc_mapping.txt](linux_commands_2026/proc_mapping.txt) |
+| HW-HOST-TOPOLOGY | (4)a guest 核/线程已回答；宿主物理布局 UNVERIFIED due WSL | PASS | §2 / (4) | [lscpu.txt](linux_commands_2026/lscpu.txt) |
+| GIT-CONFIG | (18)1 检查全局、仅 local identity | PASS | §2 / (18) | [git_transcript.txt](git_exercise_2026/git_transcript.txt) |
+| GIT-INIT | (18)2 实测初始分支及两种改名说明 | PASS | §2 / (18) | [git_transcript.txt](git_exercise_2026/git_transcript.txt) |
+| GIT-COMMIT | (18)3 空暂存区失败与正常成功提交 | PASS | §2 / (18) | [git_transcript.txt](git_exercise_2026/git_transcript.txt) |
+| GIT-IGNORE | (18)4 提交图片→ignore→rm --cached→文件保留 | PASS | §2 / (18) | [git_transcript.txt](git_exercise_2026/git_transcript.txt) |
+| GIT-CONVENTIONAL | (18)5 阅读指定官方链接并简述 | PASS | §2 / (18) | [EXTERNAL_REFERENCES.md](environment_2026/EXTERNAL_REFERENCES.md) |
+| GIT-MERGE-REBASE | (18)6 历史结构、适用场景、共享历史风险 | PASS | §2 / (18) | [git_transcript.txt](git_exercise_2026/git_transcript.txt) |
+| W2 | pointer baseline 六处 const 错误、问题逐项回答、注释后运行 | PASS | §3 / Write-up 2 | [c_primer_fixed.txt](mit6172_2026/c_primer_fixed.txt) |
+| W3 | 全部指定类型及指针大小，数组/结构体取地址 | PASS | §3 / Write-up 3 | [c_primer_fixed.txt](mit6172_2026/c_primer_fixed.txt) |
+| W4 | swap baseline 与指针修复、完整代码、verifier 通过 | PASS | §3 / Write-up 4 | [c_primer_fixed.txt](mit6172_2026/c_primer_fixed.txt) |
+| W5 | 本轮 ZIP O1→O3、clean/make 输出、baseline SIGSEGV | PASS | §3 / Write-up 5 | [writeup5_baseline.txt](mit6172_2026/writeup5_baseline.txt) |
+| W6 | 当前阶段 ASan 实际泄漏输出，使用系统 Clang 18 runtime | PASS | §3 / Write-up 6 | [writeup6_asan_system.txt](mit6172_2026/writeup6_asan_system.txt) |
+| W7 | 实际正确矩阵输出、独立普通与零矩阵核对 | PASS | §3 / Write-up 7 | [matrix_correctness_final.txt](mit6172_2026/matrix_correctness_final.txt) |
+| W8 | 先观察泄漏，再 free A/B/C、严格 Valgrind 全部 clean | PASS | §3 / Write-up 8 | [post_coverage_final.txt](mit6172_2026/post_coverage_final.txt) |
+| README | 全部正式解答汇入当前 Markdown，环境限制明确披露 | PASS | 全文 | [README.md](../README.md) |
+| LINKS | README 相对链接有效、SVG XML/引用有效 | PASS | 全文 | [A1_2026_FINAL_VALIDATION.md](final/A1_2026_FINAL_VALIDATION.md) |
+| SCOPE | 仅 A1；GitHub main 发布获授权，水杉与后续作业未开始 | PASS | 全文 | [A1_2026_FINAL_VALIDATION.md](final/A1_2026_FINAL_VALIDATION.md) |
+| STUDENT-INFO | 报告标题、真实学号 10245102410、姓名 吴博闻 | PASS | 报告开头 | [README.md](../README.md) |
+| REPORT-ORDER | 系统信息仅 OS/CPU/Memory；DOCX 顺序；MIT 仅 W2–8 | PASS | 全文 | [README.md](../README.md) |
+| REPORT-SCREENSHOTS | 当前真实终端截图，与文本证据和最终代码对应 | PASS | 全文 | [截图目录](../images/) |
 
-PASS: 33; PARTIAL: 0; BLOCKED: 0; NOT_REQUIRED: 7.
+PASS: 57; PARTIAL: 0; BLOCKED: 0; NOT_REQUIRED: 0; UNVERIFIED: 0.
+
+## 具体硬件事实的限制
+
+以上状态表示题目操作与回答是否完成，不表示取得了所有宿主硬件事实。
+
+- DMI：已执行命令，guest 缺少 /dev/mem 和 DMI 表；DIMM 信息 UNVERIFIED。
+- 频率：已读取 lscpu 并检查 cpufreq；base/min/max 具体数值 UNVERIFIED。
+- 宿主拓扑：11 core / 22 PU 为 guest 实测；Windows 宿主物理核与 P/E 布局 UNVERIFIED。
+- PMU：软件事件可用；硬件 cycles/instructions 不支持，不阻塞当前作业。
+
+这些环境限制均已在 README 对应问题回答。OpenCilk 则已完成真实安装和 compile/run 验证。
+
+Section 6、W9、W10、MIT Git、AWSRUN 未执行，不列为正式 requirement。DOCX 第 (18) 项 Git 已独立完成。

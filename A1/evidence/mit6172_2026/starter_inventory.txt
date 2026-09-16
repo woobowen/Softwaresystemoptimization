@@ -1,0 +1,16 @@
+SOURCE: A1 代码材料.zip
+Clean baseline: /tmp/a1-2026-starter.10uaonna
+Work: /tmp/a1-2026-work.scawvpmy
+Metadata excluded: __MACOSX, .DS_Store
+matrix-multiply/matrix_multiply.c	2889 bytes	SHA256 068b3984b2339c6ef4b780d57df31e6084b3136750c27eb4d97432f592aa648e
+matrix-multiply/Makefile	4387 bytes	SHA256 3d2525d77cab03673b781bf4d2a49a41071eccba44ff08b4b23f952027b135f5
+matrix-multiply/testbed.c	4014 bytes	SHA256 ea52708c80d4dcd33cfee597f9f462ccba99eccc61f551558d5896009fe43452
+matrix-multiply/matrix_multiply.h	2054 bytes	SHA256 6f61bf1a1a74ba98f0eac1faec67d43277b7b1a15397fe7e8e835fbdc17e59ad
+matrix-multiply/fasttime.h	3131 bytes	SHA256 939b5636d87eb7e3fa2100341f8df19e9d6a1e68c7717b7b0d741d91d0b1ccc3
+matrix-multiply/tbassert.h	3090 bytes	SHA256 e1a191a49206638cca1d230476fa29b5c551d22176935f9c16b3c3a5eac7f215
+c-primer/Makefile	554 bytes	SHA256 f9b6ded4b9dbc37b7d2ecf2d3ac50cf3c6bf530abf84e1481cf1a4b6e2ce24a5
+c-primer/pointer.c	1432 bytes	SHA256 7f166e5ca32fe3c4965a7d85c97d25fa66f5f547cec750899fc03c855920d398
+c-primer/preprocess.c	623 bytes	SHA256 9065b1c6af517a8b646ca0040da2cac9c9344cf0a560d58e393df7d5b4e1f13f
+c-primer/sizes.c	1189 bytes	SHA256 be438a6b22aa6ad7a37b9fad78d5fe117fc9d327d18e17fbebc3befb4e7560a5
+c-primer/swap.c	307 bytes	SHA256 b8d076ed67dac5d7de4b17c9541ba8f33df049ad6888468506ca48306e470e3b
+c-primer/verifier.py	3021 bytes	SHA256 6a887da911744060ba5f1867bee01b199fa8e9d7447345dd163b21581acae858

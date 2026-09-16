@@ -1,0 +1,109 @@
+2026-09-16T10:12:14.062644+08:00
+cwd=/tmp/a1-2026-work.scawvpmy/c-primer
+
+$ clang -E preprocess.c
+# 1 "preprocess.c"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 389 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "preprocess.c" 2
+# 12 "preprocess.c"
+int c = 1, d = 1 + 5;
+int e = ((c) < (d) ? (c) : (d));
+
+
+
+
+
+
+  if (something) {}
+
+exit_code=0
+
+$ clang -E -DNDEBUG preprocess.c
+# 1 "preprocess.c"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 389 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "preprocess.c" 2
+# 12 "preprocess.c"
+int c = 1, d = 1 + 5;
+int e = ((c) < (d) ? (c) : (d));
+
+exit_code=0
+
+$ make pointer
+clang -Wall -O1 -DNDEBUG  -c pointer.c
+pointer.c:30:8: error: read-only variable is not assignable
+   30 |   *pcc = '7';  // invalid?
+      |   ~~~~ ^
+pointer.c:36:6: error: cannot assign to variable 'cp' with const-qualified type 'char *const'
+   36 |   cp = *pcp;  // invalid?
+      |   ~~ ^
+pointer.c:34:16: note: variable 'cp' declared const here
+   34 |   char * const cp = c;  // cp is a const pointer to char
+      |   ~~~~~~~~~~~~~^~~~~~
+pointer.c:37:6: error: cannot assign to variable 'cp' with const-qualified type 'char *const'
+   37 |   cp = *argv;  // invalid?
+      |   ~~ ^
+pointer.c:34:16: note: variable 'cp' declared const here
+   34 |   char * const cp = c;  // cp is a const pointer to char
+      |   ~~~~~~~~~~~~~^~~~~~
+pointer.c:42:7: error: cannot assign to variable 'cpc' with const-qualified type 'const char *const'
+   42 |   cpc = *pcp;  // invalid?
+      |   ~~~ ^
+pointer.c:40:22: note: variable 'cpc' declared const here
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~
+pointer.c:43:7: error: cannot assign to variable 'cpc' with const-qualified type 'const char *const'
+   43 |   cpc = argv[0];  // invalid?
+      |   ~~~ ^
+pointer.c:40:22: note: variable 'cpc' declared const here
+   40 |   const char * const cpc = c;  // cpc is a const pointer to char const
+      |   ~~~~~~~~~~~~~~~~~~~^~~~~~~
+pointer.c:44:8: error: read-only variable is not assignable
+   44 |   *cpc = '@';  // invalid?
+      |   ~~~~ ^
+6 errors generated.
+make: *** [Makefile:20: pointer.o] Error 1
+
+exit_code=2
+
+$ make sizes
+clang -Wall -O1 -DNDEBUG  -c sizes.c
+sizes.c:37:7: warning: unused variable 'x' [-Wunused-variable]
+   37 |   int x[5];
+      |       ^
+1 warning generated.
+clang -o sizes sizes.o -lrt -flto -fuse-ld=gold
+
+exit_code=0
+
+$ ./sizes
+size of int : 4 bytes 
+size of student : 8 bytes 
+
+exit_code=0
+
+$ make swap
+clang -Wall -O1 -DNDEBUG  -c swap.c
+clang -o swap swap.o -lrt -flto -fuse-ld=gold
+
+exit_code=0
+
+$ ./swap
+k = 1, m = 2
+
+exit_code=0
+
+$ python3 verifier.py
+  File "/tmp/a1-2026-work.scawvpmy/c-primer/verifier.py", line 5
+    print error
+    ^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+
+exit_code=1

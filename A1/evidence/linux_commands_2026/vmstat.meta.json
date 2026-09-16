@@ -1,0 +1,11 @@
+{
+  "command": [
+    "vmstat",
+    "1"
+  ],
+  "duration_seconds": 4.008,
+  "exit_code": -2,
+  "sent_key": "ctrl_c",
+  "pty_size": "160x36",
+  "pid": 7
+}

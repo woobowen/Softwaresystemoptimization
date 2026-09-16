@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/addaswsw/lab/Software_system_optimization/A1/.tools/ubuntu/usr/bin/htop",
+    "-d",
+    "10",
+    "-p",
+    "4"
+  ],
+  "duration_seconds": 6.095,
+  "exit_code": 0,
+  "sent_key": "q",
+  "pty_size": "160x36",
+  "pid": 10
+}

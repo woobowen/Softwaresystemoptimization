@@ -1,0 +1,171 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply
+
+$ make clean
+rm -f testbed.o matrix_multiply.o matrix_multiply .buildmode \
+        testbed.gcda matrix_multiply.gcda \
+        testbed.gcno matrix_multiply.gcno \
+        testbed.c.gcov matrix_multiply.c.gcov fasttime.h.gcov
+
+exit_code=0
+
+$ make
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O3 -DNDEBUG -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold
+
+exit_code=0
+
+$ ./matrix_multiply
+Setup
+Running matrix_multiply_run()...
+Elapsed execution time: 0.000000 sec
+
+exit_code=0
+
+$ ./matrix_multiply -p
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+   47     55    122    130  
+   79     83    138    164  
+   74     40     75    114  
+  130     95     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+
+exit_code=0
+
+$ ./matrix_multiply -pz
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000000 sec
+
+exit_code=0
+
+$ valgrind --leak-check=full --show-leak-kinds=all --errors-for-leak-kinds=all --error-exitcode=99 ./matrix_multiply -p
+==51== Memcheck, a memory error detector
+==51== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==51== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==51== Command: ./matrix_multiply -p
+==51== 
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    3      7      8      1  
+    7      9      8      3  
+    1      2      6      7  
+    9      8      1      9  
+------------
+Matrix B: 
+------------
+    1      3      0      1  
+    5      5      7      8  
+    0      1      9      8  
+    9      3      1      7  
+------------
+---- RESULTS ----
+Result: 
+------------
+   47     55    122    130  
+   79     83    138    164  
+   74     40     75    114  
+  130     95     74    144  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000581 sec
+==51== 
+==51== HEAP SUMMARY:
+==51==     in use at exit: 0 bytes in 0 blocks
+==51==   total heap usage: 19 allocs, 19 frees, 4,432 bytes allocated
+==51== 
+==51== All heap blocks were freed -- no leaks are possible
+==51== 
+==51== For lists of detected and suppressed errors, rerun with: -s
+==51== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+exit_code=0
+
+$ valgrind --leak-check=full --show-leak-kinds=all --errors-for-leak-kinds=all --error-exitcode=99 ./matrix_multiply -pz
+==52== Memcheck, a memory error detector
+==52== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==52== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==52== Command: ./matrix_multiply -pz
+==52== 
+Setup
+Running matrix_multiply_run()...
+Matrix A: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+Matrix B: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- RESULTS ----
+Result: 
+------------
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+    0      0      0      0  
+------------
+---- END RESULTS ----
+Elapsed execution time: 0.000537 sec
+==52== 
+==52== HEAP SUMMARY:
+==52==     in use at exit: 0 bytes in 0 blocks
+==52==   total heap usage: 19 allocs, 19 frees, 4,432 bytes allocated
+==52== 
+==52== All heap blocks were freed -- no leaks are possible
+==52== 
+==52== For lists of detected and suppressed errors, rerun with: -s
+==52== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+exit_code=0

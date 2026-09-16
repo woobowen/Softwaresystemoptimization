@@ -1,0 +1,11 @@
+
+    0[|         5.7%]   3[          0.0%]  6[|         1.0%]  9[          0.0%]  11[|         1.0%]  14[||        8.9%]  17[          0.0%] 20[          0.0%]
+    1[          0.0%]   4[          0.0%]  7[          0.0%] 10[||        4.0%]  12[          0.0%]  15[|||||||||92.0%]  18[          0.0%] 21[          0.0%]
+    2[|         1.0%]   5[          0.0%]  8[|         1.0%]                     13[          0.0%]  16[|         1.0%]  19[          0.0%]
+  Mem[||||||||||||||||                                             1.70G/15.4G] Tasks: 5, 0 thr, 0 kthr; 3 running
+  Swp[                                                                0K/4.00G] Load average: 0.20 0.18 0.18
+                                                                                Uptime: 00:36:01
+
+  [Main] [I/O]
+    PID USER       PRI  NI  VIRT   RES   SHR S  CPU%▽MEM%   TIME+  Command
+      4 addaswsw    20   0 15076 10248  6376 R  99.9  0.1  0:06.62 python3 -c import time; time.sleep(3); end=time.monotonic()+8 while time.monotonic()<end: pas

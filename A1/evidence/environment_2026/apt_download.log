@@ -1,0 +1,23 @@
+Get:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 htop amd64 3.3.0-4build1 [171 kB]
+Get:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/universe amd64 hwloc amd64 2.10.0-1build1 [242 kB]
+Get:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/universe amd64 libhwloc15 amd64 2.10.0-1build1 [172 kB]
+Get:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1 [27.5 MB]
+Ign:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1
+Ign:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 libclang-rt-18-dev amd64 1:18.1.3-1ubuntu1
+Ign:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 llvm-18 amd64 1:18.1.3-1ubuntu1
+Ign:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1
+Ign:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 libclang-rt-18-dev amd64 1:18.1.3-1ubuntu1
+Ign:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 llvm-18 amd64 1:18.1.3-1ubuntu1
+Ign:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1
+Ign:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 libclang-rt-18-dev amd64 1:18.1.3-1ubuntu1
+Ign:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 llvm-18 amd64 1:18.1.3-1ubuntu1
+Err:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1
+  Error reading from server - read (104: Connection reset by peer) [IP: 127.0.0.1 17890]
+Err:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 libclang-rt-18-dev amd64 1:18.1.3-1ubuntu1
+  Could not connect to 127.0.0.1:17890 (127.0.0.1). - connect (111: Connection refused) [IP: 127.0.0.1 17890]
+Err:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64 llvm-18 amd64 1:18.1.3-1ubuntu1
+  Unable to connect to 127.0.0.1:17890: [IP: 127.0.0.1 17890]
+Fetched 585 kB in 6min 43s (1450 B/s)
+E: Failed to fetch http://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/main/l/llvm-toolchain-18/libllvm18_18.1.3-1ubuntu1_amd64.deb  Error reading from server - read (104: Connection reset by peer) [IP: 127.0.0.1 17890]
+E: Failed to fetch http://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/l/llvm-toolchain-18/libclang-rt-18-dev_18.1.3-1ubuntu1_amd64.deb  Could not connect to 127.0.0.1:17890 (127.0.0.1). - connect (111: Connection refused) [IP: 127.0.0.1 17890]
+E: Failed to fetch http://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/l/llvm-toolchain-18/llvm-18_18.1.3-1ubuntu1_amd64.deb  Unable to connect to 127.0.0.1:17890: [IP: 127.0.0.1 17890]

@@ -1,0 +1,7 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply
+$ ./matrix_multiply
+Elapsed execution time: 0.000000 sec
+Setup
+Running matrix_multiply_run()...
+
+exit_code=0

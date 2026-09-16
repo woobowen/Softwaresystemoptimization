@@ -1,0 +1,26 @@
+A1 environment audit — 2026-09-16T11:06:23+08:00
+MODE=--commands
+CHECK	uname	Required=available	Detected=/usr/bin/uname	Status=PASS
+CHECK	sysctl	Required=available	Detected=/usr/sbin/sysctl	Status=PASS
+CHECK	top	Required=available	Detected=/usr/bin/top	Status=PASS
+CHECK	htop	Required=available	Detected=/usr/bin/htop	Status=PASS
+CHECK	dmidecode	Required=available	Detected=/usr/sbin/dmidecode	Status=PASS
+CHECK	numactl	Required=available	Detected=/usr/bin/numactl	Status=PASS
+CHECK	lscpu	Required=available	Detected=/usr/bin/lscpu	Status=PASS
+CHECK	cat	Required=available	Detected=/usr/bin/cat	Status=PASS
+CHECK	free	Required=available	Detected=/usr/bin/free	Status=PASS
+CHECK	ps	Required=available	Detected=/usr/bin/ps	Status=PASS
+CHECK	vmstat	Required=available	Detected=/usr/bin/vmstat	Status=PASS
+CHECK	mpstat	Required=available	Detected=/usr/bin/mpstat	Status=PASS
+CHECK	pidstat	Required=available	Detected=/usr/bin/pidstat	Status=PASS
+CHECK	iostat	Required=available	Detected=/usr/bin/iostat	Status=PASS
+CHECK	sar	Required=available	Detected=/usr/bin/sar	Status=PASS
+CHECK	uptime	Required=available	Detected=/usr/bin/uptime	Status=PASS
+CHECK	lstopo	Required=available	Detected=/usr/bin/lstopo	Status=PASS
+CHECK	git	Required=available	Detected=/usr/bin/git	Status=PASS
+CHECK	head	Required=available	Detected=/usr/bin/head	Status=PASS
+CHECK	man	Required=available	Detected=/usr/bin/man	Status=PASS
+
+SUMMARY: PASS=20 MISSING=0 VERSION_TOO_OLD=0 UNVERIFIED=0
+ENVIRONMENT_AUDIT_STATUS=UNVERIFIED (partial audit mode)
+AUDIT_COMPLETED=yes; exit 0 means the audit ran, not that every requirement passed.

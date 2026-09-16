@@ -1,0 +1,43 @@
+cwd=/tmp/a1-2026-work.scawvpmy/matrix-multiply
+
+$ make clean
+rm -f testbed.o matrix_multiply.o matrix_multiply .buildmode \
+        testbed.gcda matrix_multiply.gcda \
+        testbed.gcno matrix_multiply.gcno \
+        testbed.c.gcov matrix_multiply.c.gcov fasttime.h.gcov
+
+exit_code=0
+
+$ make ASAN=1
+clang -O1 -g -fsanitize=address -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c testbed.c -o testbed.o
+clang -O1 -g -fsanitize=address -Wall -std=c99 -D_POSIX_C_SOURCE=200809L -c matrix_multiply.c -o matrix_multiply.o
+clang -o matrix_multiply testbed.o matrix_multiply.o -lrt -flto -fuse-ld=gold -fsanitize=address
+/usr/bin/ld.gold: error: cannot open /usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan_static-x86_64.a: No such file or directory
+/usr/bin/ld.gold: error: cannot open /usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan-x86_64.a: No such file or directory
+testbed.o:testbed.c:function main:(.text+0x24): error: undefined reference to '__asan_option_detect_stack_use_after_return'
+testbed.o:testbed.c:function main:(.text+0x33): error: undefined reference to '__asan_stack_malloc_1'
+testbed.o:testbed.c:function main:(.text+0x170): error: undefined reference to '__asan_memset'
+testbed.o:testbed.c:function main:(.text+0x1e8): error: undefined reference to '__asan_report_load4'
+testbed.o:testbed.c:function main:(.text+0x46b): error: undefined reference to '__asan_report_load4'
+testbed.o:testbed.c:function main:(.text+0x5ad): error: undefined reference to '__asan_report_load4'
+testbed.o:testbed.c:function main:(.text+0x6fc): error: undefined reference to '__asan_report_load4'
+testbed.o:testbed.c:function main:(.text+0xaab): error: undefined reference to '__asan_handle_no_return'
+testbed.o:testbed.c:function main:(.text+0xad3): error: undefined reference to '__asan_report_load8'
+testbed.o:testbed.c:function main:(.text+0xad8): error: undefined reference to '__asan_report_load8'
+testbed.o:testbed.c:function main:(.text+0xae1): error: undefined reference to '__asan_report_load8'
+testbed.o:testbed.c:function main:(.text+0xae6): error: undefined reference to '__asan_report_load8'
+testbed.o:testbed.c:function main:(.text+0xaee): error: undefined reference to '__asan_report_store4'
+testbed.o:testbed.c:function main:(.text+0xaf8): error: undefined reference to '__asan_report_store4'
+testbed.o:testbed.c:function main:(.text+0xb06): error: undefined reference to '__asan_report_store4'
+testbed.o:testbed.c:function main:(.text+0xb17): error: undefined reference to '__asan_report_store4'
+testbed.o:testbed.c:function asan.module_ctor:(.text.asan.module_ctor+0x2): error: undefined reference to '__asan_init'
+testbed.o:testbed.c:function asan.module_ctor:(.text.asan.module_ctor+0x7): error: undefined reference to '__asan_version_mismatch_check_v8'
+testbed.o:testbed.c:function asan.module_ctor:(.text.asan.module_ctor+0x21): error: undefined reference to '__asan_register_elf_globals'
+testbed.o:testbed.c:function asan.module_dtor:(.text.asan.module_dtor+0x17): error: undefined reference to '__asan_unregister_elf_globals'
+matrix_multiply.o:matrix_multiply.c:function make_matrix:(.text+0x106): error: undefined reference to '__asan_report_store8'
+matrix_multiply.o:matrix_multiply.c:function make_matrix:(.text+0x10e): error: undefined reference to '__asan_report_store8'
+matrix_multiply.o:matrix_multiply.c:function matrix_multiply_run:(.text+0x9a2): error: undefined reference to '__asan_handle_no_return'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:105: matrix_multiply] Error 1
+
+exit_code=2

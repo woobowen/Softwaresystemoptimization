@@ -1,0 +1,8 @@
+cwd=/home/addaswsw/lab/Software_system_optimization/A1/mit6172/matrix-multiply
+$ make clean
+rm -f testbed.o matrix_multiply.o matrix_multiply .buildmode \
+        testbed.gcda matrix_multiply.gcda \
+        testbed.gcno matrix_multiply.gcno \
+        testbed.c.gcov matrix_multiply.c.gcov fasttime.h.gcov
+
+exit_code=0

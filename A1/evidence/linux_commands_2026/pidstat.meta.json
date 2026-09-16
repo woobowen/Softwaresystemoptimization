@@ -1,0 +1,11 @@
+{
+  "command": [
+    "pidstat",
+    "1"
+  ],
+  "duration_seconds": 4.006,
+  "exit_code": 0,
+  "sent_key": "ctrl_c",
+  "pty_size": "160x36",
+  "pid": 11
+}

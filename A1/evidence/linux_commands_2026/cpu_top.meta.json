@@ -1,0 +1,14 @@
+{
+  "command": [
+    "top",
+    "-d",
+    "1",
+    "-p",
+    "4"
+  ],
+  "duration_seconds": 6.016,
+  "exit_code": 0,
+  "sent_key": "q",
+  "pty_size": "160x36",
+  "pid": 9
+}
