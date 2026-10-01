@@ -1,0 +1,286 @@
+{
+  "at": "2026-10-01T18:48:46.045141+08:00",
+  "campaign_id": "a2-formal-20261001T071902Z",
+  "parser_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/A2/scripts/summarize-spec.py",
+    "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat",
+    "--compare",
+    "/home/addaswsw/lab/Software_system_optimization/A2/results/parameter"
+  ],
+  "all_checks_pass": true,
+  "runs": [
+    {
+      "slot": "base-1",
+      "run_id": "SPECjvm2008.015",
+      "pid": 210526,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "--base"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "--base"
+      ],
+      "start": "2026-10-01T15:51:17.296+08:00",
+      "end": "2026-10-01T18:04:00.929+08:00",
+      "gap_from_previous_runner_seconds": null,
+      "host_elapsed": 7964.0881937,
+      "runner_wall": 7963.599621,
+      "runner_monotonic": 7963.599677,
+      "host_minus_runner": 0.4885167000002184,
+      "host_minus_launcher": 0.17171418700218055,
+      "monitor_wall_minus_monotonic": -9.200084605254233e-08,
+      "max_step": 0.000294551,
+      "timing": "PASS",
+      "native_status": "Run is compliant",
+      "violations": [],
+      "file_count": 84,
+      "resource_links": 77
+    },
+    {
+      "slot": "repeat-1",
+      "run_id": "SPECjvm2008.016",
+      "pid": 254956,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:05:05.139+08:00",
+      "end": "2026-10-01T18:11:24.810+08:00",
+      "gap_from_previous_runner_seconds": 64.21,
+      "host_elapsed": 379.9951405,
+      "runner_wall": 379.64873,
+      "runner_monotonic": 379.648732,
+      "host_minus_runner": 0.34640849999999546,
+      "host_minus_launcher": 0.15574255000393578,
+      "monitor_wall_minus_monotonic": -7.900001719463035e-08,
+      "max_step": 1.428e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    },
+    {
+      "slot": "repeat-2",
+      "run_id": "SPECjvm2008.017",
+      "pid": 257053,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:12:27.152+08:00",
+      "end": "2026-10-01T18:18:46.521+08:00",
+      "gap_from_previous_runner_seconds": 62.342,
+      "host_elapsed": 379.6912819,
+      "runner_wall": 379.356556,
+      "runner_monotonic": 379.356557,
+      "host_minus_runner": 0.33472489999996924,
+      "host_minus_launcher": 0.1360838830015041,
+      "monitor_wall_minus_monotonic": -2.9799997491863905e-07,
+      "max_step": 1.375e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    },
+    {
+      "slot": "repeat-3",
+      "run_id": "SPECjvm2008.018",
+      "pid": 259264,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:19:48.413+08:00",
+      "end": "2026-10-01T18:26:06.041+08:00",
+      "gap_from_previous_runner_seconds": 61.892,
+      "host_elapsed": 377.8901156,
+      "runner_wall": 377.617052,
+      "runner_monotonic": 377.617053,
+      "host_minus_runner": 0.27306260000000293,
+      "host_minus_launcher": 0.11079287299872931,
+      "monitor_wall_minus_monotonic": 1.3599998283098103e-07,
+      "max_step": 1.109e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    },
+    {
+      "slot": "parameter-1",
+      "run_id": "SPECjvm2008.019",
+      "pid": 261218,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:27:07.824+08:00",
+      "end": "2026-10-01T18:33:25.486+08:00",
+      "gap_from_previous_runner_seconds": 61.783,
+      "host_elapsed": 377.9288166,
+      "runner_wall": 377.651879,
+      "runner_monotonic": 377.65188,
+      "host_minus_runner": 0.2769365999999991,
+      "host_minus_launcher": 0.11021528400613079,
+      "monitor_wall_minus_monotonic": 6.099998017816688e-08,
+      "max_step": 1.859e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    },
+    {
+      "slot": "parameter-2",
+      "run_id": "SPECjvm2008.020",
+      "pid": 263255,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:34:27.321+08:00",
+      "end": "2026-10-01T18:40:43.664+08:00",
+      "gap_from_previous_runner_seconds": 61.835,
+      "host_elapsed": 376.5976208,
+      "runner_wall": 376.333214,
+      "runner_monotonic": 376.333215,
+      "host_minus_runner": 0.26440580000002,
+      "host_minus_launcher": 0.0989255620013978,
+      "monitor_wall_minus_monotonic": 3.810000066550856e-07,
+      "max_step": 1.019e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    },
+    {
+      "slot": "parameter-3",
+      "run_id": "SPECjvm2008.021",
+      "pid": 265097,
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "proc_cmdline": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-jar",
+        "SPECjvm2008.jar",
+        "compress"
+      ],
+      "start": "2026-10-01T18:41:45.479+08:00",
+      "end": "2026-10-01T18:48:01.711+08:00",
+      "gap_from_previous_runner_seconds": 61.815,
+      "host_elapsed": 376.4916921,
+      "runner_wall": 376.221012,
+      "runner_monotonic": 376.221014,
+      "host_minus_runner": 0.2706780999999978,
+      "host_minus_launcher": 0.10028234299863925,
+      "monitor_wall_minus_monotonic": -1.540000198474445e-07,
+      "max_step": 1.416e-06,
+      "timing": "PASS",
+      "native_status": "Run is valid, but not compliant",
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "file_count": 10,
+      "resource_links": 3
+    }
+  ],
+  "base_vs_standalone": {
+    "base_compress": 792.541566625533,
+    "standalone_mean": 680.8274868359013,
+    "standalone_vs_base_percent": -14.095674535442438,
+    "same_compress_configuration": true,
+    "explanation": "Same parser, JDK, environment and compress configuration. Base executes compress after other workloads in the same JVM; standalone runs use fresh JVMs. The measured context difference is retained without assigning an unmeasured cause or rerunning for score."
+  },
+  "configuration": {
+    "name": "compress",
+    "category": "null",
+    "args": "",
+    "minIter": "1",
+    "maxIter": "1",
+    "numberBmThreads": "22",
+    "warmupTime": "120000",
+    "iterationTime": "240s",
+    "bmType": "multi",
+    "runMode": "2"
+  },
+  "fresh_jvm_pids": [
+    210526,
+    254956,
+    257053,
+    259264,
+    261218,
+    263255,
+    265097
+  ],
+  "gc_flags_evidence": "gc-flags/summary.json: separate diagnostic JVMs; formal argv above"
+}

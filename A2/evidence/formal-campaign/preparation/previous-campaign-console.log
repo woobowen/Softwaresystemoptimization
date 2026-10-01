@@ -1,0 +1,227 @@
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.440ms (max: 5s)
+       Offset: +2.431650s
+        Delay: 188.281ms
+       Jitter: 787.164ms
+ Packet count: 25
+    Frequency: -0.177ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.440ms (max: 5s)
+       Offset: +2.431650s
+        Delay: 188.281ms
+       Jitter: 787.164ms
+ Packet count: 25
+    Frequency: -0.177ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.501ms (max: 5s)
+       Offset: +2.206417s
+        Delay: 203.033ms
+       Jitter: 816.388ms
+ Packet count: 26
+    Frequency: -2.807ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.501ms (max: 5s)
+       Offset: +2.206417s
+        Delay: 203.033ms
+       Jitter: 816.388ms
+ Packet count: 26
+    Frequency: -2.807ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.417ms (max: 5s)
+       Offset: +2.524399s
+        Delay: 215.205ms
+       Jitter: 636.258ms
+ Packet count: 27
+    Frequency: +40.284ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.417ms (max: 5s)
+       Offset: +2.524399s
+        Delay: 215.205ms
+       Jitter: 636.258ms
+ Packet count: 27
+    Frequency: +40.284ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.417ms (max: 5s)
+       Offset: +2.524399s
+        Delay: 215.205ms
+       Jitter: 636.258ms
+ Packet count: 27
+    Frequency: +40.284ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.432ms (max: 5s)
+       Offset: +2.672139s
+        Delay: 245.674ms
+       Jitter: 629.849ms
+ Packet count: 28
+    Frequency: +31.573ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.432ms (max: 5s)
+       Offset: +2.672139s
+        Delay: 245.674ms
+       Jitter: 629.849ms
+ Packet count: 28
+    Frequency: +31.573ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.432ms (max: 5s)
+       Offset: +2.672139s
+        Delay: 245.674ms
+       Jitter: 629.849ms
+ Packet count: 28
+    Frequency: +31.573ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.478ms (max: 5s)
+       Offset: +1.512429s
+        Delay: 188.306ms
+       Jitter: 705.670ms
+ Packet count: 29
+    Frequency: -33.440ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.478ms (max: 5s)
+       Offset: +1.512429s
+        Delay: 188.306ms
+       Jitter: 705.670ms
+ Packet count: 29
+    Frequency: -33.440ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.508ms (max: 5s)
+       Offset: +2.712999s
+        Delay: 215.770ms
+       Jitter: 592.673ms
+ Packet count: 30
+    Frequency: -0.116ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.508ms (max: 5s)
+       Offset: +2.712999s
+        Delay: 215.770ms
+       Jitter: 592.673ms
+ Packet count: 30
+    Frequency: -0.116ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.569ms (max: 5s)
+       Offset: +2.421102s
+        Delay: 211.529ms
+       Jitter: 582.260ms
+ Packet count: 31
+    Frequency: +46.546ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.569ms (max: 5s)
+       Offset: +2.421102s
+        Delay: 211.529ms
+       Jitter: 582.260ms
+ Packet count: 31
+    Frequency: +46.546ppm
+Waiting for synchronized small offset Server: 185.125.190.58 (ntp.ubuntu.com)
+Poll interval: 32s (min: 32s; max 34min 8s)
+         Leap: normal
+      Version: 4
+      Stratum: 2
+    Reference: 1D586304
+    Precision: 1us (-25)
+Root distance: 3.569ms (max: 5s)
+       Offset: +2.421102s
+        Delay: 211.529ms
+       Jitter: 582.260ms
+ Packet count: 31
+    Frequency: +46.546ppm
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/run-formal-campaign.py", line 118, in <module>
+    time.sleep(15)
+  File "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/run-formal-campaign.py", line 87, in interrupt
+    raise InterruptedError(signal.Signals(signum).name)
+InterruptedError: SIGTERM

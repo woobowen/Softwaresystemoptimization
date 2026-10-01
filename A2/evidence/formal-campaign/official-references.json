@@ -1,0 +1,50 @@
+[
+  {
+    "name": "UserGuide",
+    "url": "https://www.spec.org/jvm2008/docs/UserGuide.html",
+    "status": 200,
+    "bytes": 53228,
+    "sha256": "1f6d1038d353a713562c872eba337c0c929f67134659330172b0f4e0d9c21757",
+    "at": "2026-10-01T14:06:33.993948+08:00"
+  },
+  {
+    "name": "RunRules",
+    "url": "https://www.spec.org/jvm2008/docs/RunRules.html",
+    "status": 200,
+    "bytes": 27072,
+    "sha256": "5fcaaf25ea1843bb257c5b50eb562687031526f085f74926037afd1e7e6cf7e4",
+    "at": "2026-10-01T14:06:35.277212+08:00"
+  },
+  {
+    "name": "KnownIssues",
+    "url": "https://www.spec.org/jvm2008/docs/KnownIssues.html",
+    "status": 200,
+    "bytes": 13794,
+    "sha256": "475de0b12e287d624639023123fdafd17bafc38ea3cea7d20257b57aecceca39",
+    "at": "2026-10-01T14:06:36.587653+08:00"
+  },
+  {
+    "name": "FAQ",
+    "url": "https://www.spec.org/jvm2008/docs/FAQ.html",
+    "status": 200,
+    "bytes": 26287,
+    "sha256": "8d5359eb3b99412f4c6375bb57d492aeb434f639d11e52956f7495e0903defa4",
+    "at": "2026-10-01T14:06:37.779394+08:00"
+  },
+  {
+    "name": "official-summary",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "status": 200,
+    "bytes": 2202,
+    "sha256": "81d53945c97e5082c7b75b2b39c0a8ea99400592341073d9b497dd60e9701a98",
+    "at": "2026-10-01T14:06:39.082880+08:00"
+  },
+  {
+    "name": "official-base",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+    "status": 200,
+    "bytes": 52404,
+    "sha256": "8472daef33df919535faf0b21b02b7ecc3a8c72b92bd8f49002e56d4faf016b3",
+    "at": "2026-10-01T14:06:40.367014+08:00"
+  }
+]

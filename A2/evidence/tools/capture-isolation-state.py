@@ -20,6 +20,7 @@ def capture(argv):
 
 
 def snapshot():
+    initial_service = capture(["systemctl", "is-active", "systemd-timesyncd.service"])
     paths = [Path("/etc/systemd/timesyncd.conf"), Path("/etc/wsl.conf")]
     for folder in ("/etc/systemd/timesyncd.conf.d", "/run/systemd/timesyncd.conf.d",
                    "/usr/lib/systemd/timesyncd.conf.d", "/etc/systemd/system/systemd-timesyncd.service.d",
@@ -46,7 +47,12 @@ def snapshot():
                          "boottime": time.clock_gettime(time.CLOCK_BOOTTIME)},
               "config_sha256": {str(p): hashlib.sha256(p.read_bytes()).hexdigest()
                                 if p.exists() else None for p in paths},
-              "commands": [capture(c) for c in commands]}
+              "commands": [
+                  {"argv": c, "exit_code": None, "stdout": "", "stderr": "",
+                   "skipped": "Querying the timesync1 D-Bus API would activate the stopped service"}
+                  if c[:2] in (["timedatectl", "timesync-status"], ["timedatectl", "show-timesync"])
+                     and initial_service["stdout"].strip() != "active"
+                  else capture(c) for c in commands]}
     result["service_state"] = result["commands"][7]["stdout"].strip()
     result["service_enable_state"] = result["commands"][8]["stdout"].strip()
     source = Path(__file__).with_name("read-adjtimex.c")

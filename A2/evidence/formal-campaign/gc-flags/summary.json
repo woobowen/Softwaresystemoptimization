@@ -1,0 +1,42 @@
+{
+  "role": "Separate diagnostic JVMs, not live flags read from a formal benchmark process",
+  "records": [
+    {
+      "kind": "default",
+      "argv": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+PrintFlagsFinal",
+        "-version"
+      ],
+      "exit_code": 0,
+      "at": "2026-10-01T15:15:11.473570+08:00",
+      "selected_flags": [
+        "bool UseConcMarkSweepGC                        = false           {product}",
+        "bool UseG1GC                                   = false           {product}",
+        "bool UseParallelGC                            := true            {product}",
+        "bool UseParallelOldGC                          = true            {product}",
+        "bool UseSerialGC                               = false           {product}"
+      ],
+      "stdout_sha256": "99bc6864a61f1f0c75e5e2b9324a4c0137f9900dc2d329dcda3dea551fa432f8"
+    },
+    {
+      "kind": "serial",
+      "argv": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-XX:+UseSerialGC",
+        "-XX:+PrintFlagsFinal",
+        "-version"
+      ],
+      "exit_code": 0,
+      "at": "2026-10-01T15:15:11.501556+08:00",
+      "selected_flags": [
+        "bool UseConcMarkSweepGC                        = false           {product}",
+        "bool UseG1GC                                   = false           {product}",
+        "bool UseParallelGC                             = false           {product}",
+        "bool UseParallelOldGC                          = false           {product}",
+        "bool UseSerialGC                              := true            {product}"
+      ],
+      "stdout_sha256": "7ca2cca187f6518f0f398f3fb61d75a20f5672e10e696c206d9b21eb7524ae31"
+    }
+  ]
+}

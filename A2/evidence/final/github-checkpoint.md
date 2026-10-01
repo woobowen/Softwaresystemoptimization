@@ -1,4 +1,6 @@
-# GitHub timing investigation checkpoint
+# GitHub timing investigation checkpoint（历史记录）
+
+以下保存早期诊断检查点的状态，不代表最终实验状态。最新候选见 [final-review.md](final-review.md)和 [运行索引](../run-index.md)。
 
 A2 Engineering：**BLOCKED_ENVIRONMENT_TIMING**。本提交供 ChatGPT 直接读取 GitHub 实际文件进行诊断，不表示 A2 完成或 Engineering = PASS。Submission：**NOT_READY**；未操作水杉。
 

@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-01T15:12:48.270569+08:00",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "stdout": " M A2/evidence/requirement-matrix.md\n M A2/evidence/run-index.md\n M A2/evidence/tools/README.md\n M A2/evidence/tools/clock-monitor.py\n M A2/evidence/tools/test-runner.py\n M A2/scripts/run-spec.py\n?? A2/evidence/formal-campaign/\n?? A2/evidence/tools/compare-host-current-time.ps1\n?? A2/evidence/tools/measure-formal-run.py\n?? A2/evidence/tools/review-formal-timing.py\n?? A2/evidence/tools/run-formal-campaign.py\n?? A2/evidence/tools/run-host-formal.ps1\n?? A2/evidence/tools/test-formal-timing.py\n?? A2/scripts/run-formal.sh\n",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "stdout": "main\n",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "stdout": "764cc9055782463cb8f15495cdebb2af55ac5229\n",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "stdout": "764cc9055782463cb8f15495cdebb2af55ac5229\n",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--",
+        "A1",
+        "AGENTS.md",
+        "materials"
+      ],
+      "stdout": "",
+      "exit_code": 0
+    }
+  ],
+  "existing_changes": "A2 formal preparation from the pending-decision checkpoint; retained and extended",
+  "packages_installed_this_execution": []
+}

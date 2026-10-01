@@ -1,0 +1,22 @@
+[
+  {
+    "path": "A2/evidence/tools/host-reference-probe.py",
+    "sha256": "da0f322a2f8269d28907e8a68d1105ba9a8149409546692af14d910fc6203bc1",
+    "unchanged_from_starting_commit": true
+  },
+  {
+    "path": "A2/evidence/tools/HostReferenceClock.java",
+    "sha256": "dbb8f83895076b013cb4f36fc107ca604b0776bbc6d4a0b51febcf11175a2823",
+    "unchanged_from_starting_commit": true
+  },
+  {
+    "path": "A2/evidence/tools/run-host-reference-gate.ps1",
+    "sha256": "ef22a6698b7f19eb5840f6dc05dea8d01d057b0a18186c47528841b89a1f10eb",
+    "unchanged_from_starting_commit": true
+  },
+  {
+    "path": "A2/evidence/tools/recalculate-host-reference.py",
+    "sha256": "b6a510bf7e01fc1da7600b223e99a4c8cc0db42d215189294fc2684940c60acd",
+    "unchanged_from_starting_commit": true
+  }
+]

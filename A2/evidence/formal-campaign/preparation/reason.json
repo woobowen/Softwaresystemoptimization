@@ -1,0 +1,5 @@
+{
+  "reason": "Preparation-only observer stopped while timesyncd active; cleanup handling was improved before any service stop or benchmark",
+  "gate_started": false,
+  "benchmark_started": false
+}

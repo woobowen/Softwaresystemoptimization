@@ -1,0 +1,132 @@
+[
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.493ms (max: 5s)\n       Offset: +2.735982s\n        Delay: 193.637ms\n       Jitter: 1.236316s\n Packet count: 10\n    Frequency: -33.441ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:03:36.860589+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.554ms (max: 5s)\n       Offset: +2.638836s\n        Delay: 194.502ms\n       Jitter: 484.635ms\n Packet count: 11\n    Frequency: -33.441ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:03:54.504498+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.554ms (max: 5s)\n       Offset: +2.638836s\n        Delay: 194.502ms\n       Jitter: 484.635ms\n Packet count: 11\n    Frequency: -33.441ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:04:09.519992+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.554ms (max: 5s)\n       Offset: +2.638836s\n        Delay: 194.502ms\n       Jitter: 484.635ms\n Packet count: 11\n    Frequency: -33.441ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:04:24.524375+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.554ms (max: 5s)\n       Offset: +2.638836s\n        Delay: 194.502ms\n       Jitter: 484.635ms\n Packet count: 11\n    Frequency: -33.441ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:04:39.530288+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.585ms (max: 5s)\n       Offset: +2.428631s\n        Delay: 199.710ms\n       Jitter: 496.274ms\n Packet count: 12\n    Frequency: +33.142ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:04:56.964921+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.585ms (max: 5s)\n       Offset: +2.428631s\n        Delay: 199.710ms\n       Jitter: 496.274ms\n Packet count: 12\n    Frequency: +33.142ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:05:11.969198+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.646ms (max: 5s)\n       Offset: +1.623714s\n        Delay: 189.896ms\n       Jitter: 518.348ms\n Packet count: 13\n    Frequency: -33.495ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:05:28.597513+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.646ms (max: 5s)\n       Offset: +1.623714s\n        Delay: 189.896ms\n       Jitter: 518.348ms\n Packet count: 13\n    Frequency: -33.495ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:05:43.602314+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.646ms (max: 5s)\n       Offset: +2.328504s\n        Delay: 193.506ms\n       Jitter: 361.031ms\n Packet count: 14\n    Frequency: +3.013ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:06:00.935668+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.646ms (max: 5s)\n       Offset: +2.328504s\n        Delay: 193.506ms\n       Jitter: 361.031ms\n Packet count: 14\n    Frequency: +3.013ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:06:15.940223+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.524ms (max: 5s)\n       Offset: +2.373313s\n        Delay: 194.410ms\n       Jitter: 358.159ms\n Packet count: 15\n    Frequency: -40.042ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:06:33.318249+08:00"
+  },
+  {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.524ms (max: 5s)\n       Offset: +2.373313s\n        Delay: 194.410ms\n       Jitter: 358.159ms\n Packet count: 15\n    Frequency: -40.042ppm\n",
+    "stderr": "",
+    "observed_at": "2026-10-01T14:06:48.324090+08:00"
+  }
+]

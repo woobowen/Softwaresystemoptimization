@@ -56,7 +56,7 @@ wsl.exe --distribution Ubuntu-24.04 --user root --exec sh -c 'echo hyperv_clocks
 
 当前图片仅为：
 
-- [04-environment.png](../../images/04-environment.png)：实际 Zutty/Xvfb 截图，JDK/变量/恢复后的 tsc；已打开。
+- [04-environment.png](../formal-campaign/preparation/04-environment.png)：实际 Zutty/Xvfb 截图，JDK/变量/恢复后的 tsc；已打开。
 - [07-official-result.png](../../images/07-official-result.png)：官方 Summary，在线内容哈希未变；已打开。
 
 没有生成不存在的新 Base 或 3+3 截图。当前不存在 `A2/results/`，没有放入任何不可信“正式结果”；所有旧原生目录均已完整归档。

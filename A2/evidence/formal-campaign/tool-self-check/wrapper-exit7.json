@@ -1,0 +1,53 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-formal.ps1",
+    "-Kind",
+    "repeat",
+    "-GuestOutput",
+    "/tmp/a2-wrapper-test-49jvg5wv",
+    "-CampaignId",
+    "wrapper-self-test",
+    "-Repository",
+    "/tmp/a2-wrapper-test-49jvg5wv"
+  ],
+  "exit_code": 7,
+  "host": {
+    "host_start_utc": "2026-10-01T06:01:33.7445684Z",
+    "host_end_utc": "2026-10-01T06:01:35.9112028Z",
+    "host_wall_seconds": 2.1666344,
+    "host_stopwatch_seconds": 2.1651195,
+    "stopwatch_elapsed_ticks": 21651195,
+    "stopwatch_frequency": 10000000,
+    "stopwatch_is_high_resolution": true,
+    "enclosing_counter_start": 777861718431,
+    "enclosing_counter_end": 777883380162,
+    "wsl_exit_code": 7,
+    "wrapper_error": null,
+    "kind": "repeat",
+    "campaign_id": "wrapper-self-test",
+    "powershell_pid": 50776,
+    "powershell_version": "5.1.22621.6133",
+    "wsl_argv": [
+      "--distribution",
+      "Ubuntu-24.04",
+      "--user",
+      "addaswsw",
+      "--exec",
+      "/usr/bin/python3",
+      "-B",
+      "/tmp/a2-wrapper-test-49jvg5wv/A2/evidence/tools/measure-formal-run.py",
+      "/tmp/a2-wrapper-test-49jvg5wv",
+      "repeat",
+      "wrapper-self-test"
+    ],
+    "temporary_awake_set_return": 2147483648,
+    "temporary_awake_clear_return": 2147483649
+  },
+  "stderr": ""
+}

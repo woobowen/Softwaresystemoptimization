@@ -1,0 +1,189 @@
+{
+  "captured_utc": "2026-10-01T07:17:06.507703+00:00",
+  "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "uptime_proc": "51064.48 886044.77",
+  "kernel_cmdline": "initrd=\\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=22 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1",
+  "kernel_release": "6.18.33.2-microsoft-standard-WSL2",
+  "current_clocksource": "tsc",
+  "available_clocksource": "tsc hyperv_clocksource_tsc_page hyperv_clocksource_msr acpi_pm",
+  "clocks": {
+    "realtime": 1790839026.5081487,
+    "monotonic": 51064.483678945,
+    "raw": 54949.919208539,
+    "boottime": 51064.483680934
+  },
+  "config_sha256": {
+    "/etc/systemd/timesyncd.conf": "e6734751f8aaf19fddfff891ad246387f5f59bd9ff1a5f0cac2c34bc81941c62",
+    "/etc/wsl.conf": "c6c38b8b4db5e54e951192c642cb79e31e2ef0947d7a20ea0163da1b52c0907f",
+    "/usr/lib/systemd/system/systemd-timesyncd.service.d/wsl.conf": "39adb1108fa7eb579fde48980ec5af63e20d9a41290b5909cf70d370007e75a6"
+  },
+  "commands": [
+    {
+      "argv": [
+        "date",
+        "--iso-8601=ns"
+      ],
+      "exit_code": 0,
+      "stdout": "2026-10-01T15:17:06,509164741+08:00\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uptime"
+      ],
+      "exit_code": 0,
+      "stdout": " 15:17:06 up 14:11,  2 users,  load average: 0.00, 0.04, 0.00\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uname",
+        "-a"
+      ],
+      "exit_code": 0,
+      "stdout": "Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "wsl.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "WSL \u7248\u672c: 2.7.12.0\r\n\u5185\u6838\u7248\u672c: 6.18.33.2-2\r\nWSLg \u7248\u672c: 1.0.73.2\r\nMSRDC \u7248\u672c: 1.2.7214\r\nDirect3D \u7248\u672c: 1.611.1-81528511\r\nDXCore \u7248\u672c: 10.0.26100.1-240331-1435.ge-release\r\nWindows: 10.0.22631.6199\r\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "timedatectl",
+        "status"
+      ],
+      "exit_code": 0,
+      "stdout": "               Local time: Thu 2026-10-01 15:17:06 CST\n           Universal time: Thu 2026-10-01 07:17:06 UTC\n                 RTC time: Thu 2026-10-01 07:17:06\n                Time zone: Asia/Shanghai (CST, +0800)\nSystem clock synchronized: yes\n              NTP service: inactive\n          RTC in local TZ: no\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "timedatectl",
+        "timesync-status"
+      ],
+      "exit_code": 0,
+      "stdout": "       Server: n/a (ntp.ubuntu.com)\nPoll interval: 0 (min: 32s; max 34min 8s)\n Packet count: 0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "timedatectl",
+        "show-timesync",
+        "--all"
+      ],
+      "exit_code": 0,
+      "stdout": "LinkNTPServers=\nSystemNTPServers=\nRuntimeNTPServers=\nFallbackNTPServers=ntp.ubuntu.com\nServerName=ntp.ubuntu.com\nServerAddress=\nRootDistanceMaxUSec=5s\nPollIntervalMinUSec=32s\nPollIntervalMaxUSec=34min 8s\nPollIntervalUSec=0\nFrequency=0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd.service"
+      ],
+      "exit_code": 0,
+      "stdout": "active\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "is-enabled",
+        "systemd-timesyncd.service"
+      ],
+      "exit_code": 0,
+      "stdout": "enabled\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "show",
+        "systemd-timesyncd.service",
+        "-p",
+        "ActiveState",
+        "-p",
+        "SubState",
+        "-p",
+        "UnitFileState",
+        "-p",
+        "FragmentPath",
+        "-p",
+        "DropInPaths"
+      ],
+      "exit_code": 0,
+      "stdout": "ActiveState=active\nSubState=running\nFragmentPath=/usr/lib/systemd/system/systemd-timesyncd.service\nDropInPaths=/usr/lib/systemd/system/systemd-timesyncd.service.d/wsl.conf\nUnitFileState=enabled\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"1.7.0_75\"\nOpenJDK Runtime Environment (build 1.7.0_75-b13)\nOpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)\n"
+    }
+  ],
+  "service_state": "active",
+  "service_enable_state": "enabled",
+  "adjtimex": {
+    "read_only_modes": 0,
+    "compile": {
+      "argv": [
+        "cc",
+        "-Wall",
+        "-Wextra",
+        "-o",
+        "/tmp/a2-adjtimex-read-yhhwqydb/read-adjtimex",
+        "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/read-adjtimex.c"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "source_sha256": "04a044a5d1f3192b1fef14fd9c437970ead3a856c7cd7638ce5813365f6ce099",
+    "query": {
+      "argv": [
+        "/tmp/a2-adjtimex-read-yhhwqydb/read-adjtimex"
+      ],
+      "exit_code": 0,
+      "stdout": "state=0 status=0 tick=10000 freq_scaled_ppm=-4708861 offset=767 tolerance=32768000 constant=2 precision=1\n",
+      "stderr": ""
+    }
+  },
+  "windows_capture": {
+    "argv": [
+      "powershell.exe",
+      "-NoProfile",
+      "-NonInteractive",
+      "-EncodedCommand",
+      "<UTF-16LE base64 of query>"
+    ],
+    "exit_code": 0,
+    "stdout": "{\r\n    \"date\":  \"2026-10-01T15:17:07.6565095+08:00\",\r\n    \"utc\":  \"2026-10-01T07:17:07.6585182Z\",\r\n    \"stopwatch_frequency\":  10000000,\r\n    \"stopwatch_high_resolution\":  true,\r\n    \"powershell_version\":  \"5.1.22621.6133\",\r\n    \"active_power_scheme\":  \"\u7535\u6e90\u65b9\u6848 GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (\u5e73\u8861)\",\r\n    \"power_line_status\":  \"Online\",\r\n    \"wslconfig_exists\":  true,\r\n    \"wslconfig_sha256\":  \"881F3E47AF3DF81594B45480EED4C3BB1E043E6ED05C3D0675E6393A918749A5\",\r\n    \"windows_time_service\":  {\r\n                                 \"state\":  \"Stopped\",\r\n                                 \"start_mode\":  \"Manual\"\r\n                             }\r\n}\r\n",
+    "stderr": "",
+    "query": "\n$ErrorActionPreference = 'Stop'\n$ProgressPreference = 'SilentlyContinue'\n[Console]::OutputEncoding = New-Object Text.UTF8Encoding($false)\nAdd-Type -AssemblyName System.Windows.Forms\n$config = Join-Path $env:USERPROFILE '.wslconfig'\n$configHash = if (Test-Path $config) { (Get-FileHash -Algorithm SHA256 $config).Hash } else { $null }\n$service = Get-CimInstance Win32_Service -Filter \"Name='W32Time'\"\n[ordered]@{\n    date = (Get-Date).ToString('o')\n    utc = [DateTime]::UtcNow.ToString('o')\n    stopwatch_frequency = [Diagnostics.Stopwatch]::Frequency\n    stopwatch_high_resolution = [Diagnostics.Stopwatch]::IsHighResolution\n    powershell_version = $PSVersionTable.PSVersion.ToString()\n    active_power_scheme = (powercfg /getactivescheme | Out-String).Trim()\n    power_line_status = [Windows.Forms.SystemInformation]::PowerStatus.PowerLineStatus.ToString()\n    wslconfig_exists = (Test-Path $config)\n    wslconfig_sha256 = $configHash\n    windows_time_service = @{state=$service.State; start_mode=$service.StartMode}\n} | ConvertTo-Json -Depth 4\n"
+  },
+  "windows": {
+    "date": "2026-10-01T15:17:07.6565095+08:00",
+    "utc": "2026-10-01T07:17:07.6585182Z",
+    "stopwatch_frequency": 10000000,
+    "stopwatch_high_resolution": true,
+    "powershell_version": "5.1.22621.6133",
+    "active_power_scheme": "\u7535\u6e90\u65b9\u6848 GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (\u5e73\u8861)",
+    "power_line_status": "Online",
+    "wslconfig_exists": true,
+    "wslconfig_sha256": "881F3E47AF3DF81594B45480EED4C3BB1E043E6ED05C3D0675E6393A918749A5",
+    "windows_time_service": {
+      "state": "Stopped",
+      "start_mode": "Manual"
+    }
+  }
+}

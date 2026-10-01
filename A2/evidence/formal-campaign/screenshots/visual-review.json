@@ -1,0 +1,63 @@
+[
+  {
+    "image": "A2/images/04-final-environment.png",
+    "sha256": "92a9131d6512ce7253468d6d1321edf14ee32d38034d59129d886e784d4407ec",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525298+08:00",
+    "capture_record": "screenshots/04-final-environment.capture.json",
+    "source": "Actual Zutty terminal; environment commands or show-final-results.py invoking the formal raw/TXT parser; no pixel editing."
+  },
+  {
+    "image": "A2/images/05-final-base-summary.png",
+    "sha256": "d43a8607d7a668e6d523b93a1d37a773a9b4b3b025386d5e8d6be139031e847d",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525363+08:00",
+    "capture_record": "screenshots/05-final-base-summary.capture.json",
+    "source": "Actual Zutty terminal; environment commands or show-final-results.py invoking the formal raw/TXT parser; no pixel editing."
+  },
+  {
+    "image": "A2/images/06-final-workloads.png",
+    "sha256": "b8041096dc6f3df352a3e7dc9dbf1a3f1813375c866e8f584d53538e3f2cff93",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525397+08:00",
+    "capture_record": "screenshots/06-final-workloads.capture.json",
+    "source": "Actual Zutty terminal; environment commands or show-final-results.py invoking the formal raw/TXT parser; no pixel editing."
+  },
+  {
+    "image": "A2/images/07-official-result.png",
+    "sha256": "572f3820f6cdebdbd811c37f9c8f30f94bd3e55e3e494a80a6800a2d87a4cbaa",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525459+08:00",
+    "source": "SPEC official Summary Report, unchanged screenshot; re-fetched official content checked in official-source-resumed-check.json",
+    "score": "853.15",
+    "reused": true
+  },
+  {
+    "image": "A2/images/08-final-repeat.png",
+    "sha256": "29f9913ed2ea449cff78a4a23e61ffa28845ea327a6706a7963ba5a4f4a17be2",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525489+08:00",
+    "capture_record": "screenshots/08-final-repeat.capture.json",
+    "source": "Actual Zutty terminal; environment commands or show-final-results.py invoking the formal raw/TXT parser; no pixel editing."
+  },
+  {
+    "image": "A2/images/09-final-parameter.png",
+    "sha256": "41262c46ec00ed7e5e284e444606107d179f853dad172de7c5099807da90cd90",
+    "opened_and_visually_checked": true,
+    "readable": true,
+    "sensitive_values_observed": false,
+    "reviewed_at": "2026-10-01T18:51:31.525555+08:00",
+    "capture_record": "screenshots/09-final-parameter.capture.json",
+    "source": "Actual Zutty terminal; environment commands or show-final-results.py invoking the formal raw/TXT parser; no pixel editing."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "reason": "active preflight offset +2.639917s; one authorized normal service restart",
+  "time": "2026-10-01T13:57:17.745033+08:00",
+  "argv": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--user",
+    "root",
+    "--exec",
+    "systemctl",
+    "restart",
+    "systemd-timesyncd.service"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-01T18:57:34.575293+08:00",
+  "all_checks_pass": true,
+  "files": 1225,
+  "over_10_MiB": [
+    {
+      "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+      "bytes": 12660504,
+      "MiB": 12.073997497558594,
+      "reason": "Required unchanged native Base raw; old copy is invalidated evidence, new copy is the final complete result."
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.raw",
+      "bytes": 13005027,
+      "MiB": 12.402560234069824,
+      "reason": "Required unchanged native Base raw; old copy is invalidated evidence, new copy is the final complete result."
+    }
+  ],
+  "over_50_MiB": [],
+  "over_100_MiB": [],
+  "forbidden_artifacts": [],
+  "empty_directories": [],
+  "secret_scan_patterns": [
+    "private_key",
+    "github_token",
+    "aws_access_key",
+    "api_key",
+    "url_credentials"
+  ],
+  "secret_findings": [],
+  "markdown_local_links_checked": 311,
+  "broken_links": [],
+  "final_native_files": 144,
+  "final_native_jpegs": 109,
+  "final_native_local_links": 95,
+  "readme_numeric_display_mismatches": 0,
+  "readme_sha256": "3a50cadc5ae48796e2daf88ddab6fc39a47b30c1816cb022c865a5b6facdf03a",
+  "historical_compressed_log": "evidence/compatibility/jdk8-preflight/console.log.gz is an existing diagnostic log, retained as evidence; not an installer/cache.",
+  "git_checks": {
+    "A1_materials_AGENTS_unchanged": true,
+    "invalidated_native_unchanged": true
+  }
+}

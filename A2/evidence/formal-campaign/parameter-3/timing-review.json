@@ -1,0 +1,40 @@
+{
+  "run": "parameter-3",
+  "host_seconds": 376.4916921,
+  "guest_monotonic_seconds": 376.3914097570014,
+  "guest_raw_seconds": 376.3914604890015,
+  "host_minus_guest_seconds": 0.10028234299863925,
+  "wall_minus_monotonic_seconds": -1.540000198474445e-07,
+  "largest_step_seconds": 1.416e-06,
+  "guest_preparation_cleanup_seconds": 0.17039575700135856,
+  "clocksource": [
+    "tsc"
+  ],
+  "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "timesyncd": "inactive",
+  "checks": {
+    "host_ticks_consistent": true,
+    "host_exit_zero": true,
+    "host_awake_requested_and_cleared": true,
+    "no_host_sleep_events": true,
+    "no_timesyncd_activity_during_interval": true,
+    "monitor_exit_zero": true,
+    "no_periodic_corrections_over_50ms": true,
+    "runner_boot_unchanged": true,
+    "sample_indices_contiguous": true,
+    "sample_intervals_complete": true,
+    "monitor_encloses_benchmark": true,
+    "runner_clock_drift_small": true,
+    "service_inactive": true,
+    "runner_clocks_tsc": true,
+    "no_suspend_gap": true,
+    "host_guest_elapsed_agree": true,
+    "host_raw_elapsed_agree": true,
+    "wall_mono_drift_small": true,
+    "no_discrete_steps": true,
+    "clocksource_tsc": true,
+    "boot_id_unchanged": true
+  },
+  "status": "PASS",
+  "thresholds_are_internal_not_spec_rules": true
+}

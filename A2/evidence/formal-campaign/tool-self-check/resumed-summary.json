@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-01T15:16:23.432802+08:00",
+  "files_sha256": {
+    "A2/scripts/run-spec.py": "37b7b7c3cb61de09104b07b2e92e1a7a52dc97a66e9abb73067b5f2dd00ddd4e",
+    "A2/scripts/run-formal.sh": "1f77aec81126c9b1b56fea053984dc678d783f4e9175e78cbf582285b4ba4b85",
+    "A2/evidence/tools/run-formal-campaign.py": "31b3dcf259cae716aa2481ac367b2998cc5e32a45848fee659c1541a9619ff75",
+    "A2/evidence/tools/run-host-formal.ps1": "ad333343225a95043482e194574973b0806be3646e22beb596df623203963812",
+    "A2/evidence/tools/review-formal-timing.py": "9d5c0052bfa8acf725c80391ffdc2abc5393e466e8612a5f49f9c1894b2a2b4c",
+    "A2/evidence/tools/compare-host-current-time.ps1": "f8ae84e176a917267aa2572141c0c0af566b4dfd1b2261683c07b8abd83822bc",
+    "A2/evidence/tools/capture-isolation-state.py": "7ceea51f3252388a4ded01cc0b3421b2dddbc5e1db9163b36f0d694dcd13bf70"
+  },
+  "runner_tests": "runner-tests-final.json",
+  "timing_fault_tests": "tool-self-check/timing-fault-tests.json",
+  "powershell_parse": "tool-self-check/resumed-powershell-syntax.json",
+  "changes": [
+    "Record runner boot IDs alongside service state and campaign ID",
+    "Direct UTC midpoint comparison with host Stopwatch RTT and explicit uncertainty",
+    "Finite observation replaces NTP-offset refusal",
+    "Service journal reads guest epoch bounds",
+    "Formal wrapper records host power before/after",
+    "Skip timesync1 D-Bus reads while timesyncd is inactive; these reads can start its service"
+  ],
+  "test_capture_issue": "Initial PowerShell parser check returned progress CLIXML in Windows encoding; repeated read with explicit error-tolerant decoding showed no syntax errors. No benchmark or clock setting was involved.",
+  "snapshot_fix_evidence": "../preparation/service-query-activation/cause-and-fix.json"
+}

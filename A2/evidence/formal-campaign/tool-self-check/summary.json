@@ -1,0 +1,9 @@
+{
+  "syntax": true,
+  "historical_gate_recalculation": true,
+  "monitor_signal_cleanup": true,
+  "monitor_cpu_seconds": 0.0006440379999999996,
+  "wrapper_exit7": true,
+  "initial_query_error": "stray plus in PowerShell string; fixed and rerun",
+  "new_packages": []
+}

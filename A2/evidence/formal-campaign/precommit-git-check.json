@@ -1,0 +1,62 @@
+[
+  {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": " M A2/README.md\n M A2/evidence/final/final-value-map.md\n M A2/evidence/final/github-checkpoint.md\n M A2/evidence/final/script-review.md\n M A2/evidence/final/stage5-review.md\n M A2/evidence/requirement-matrix.md\n M A2/evidence/run-index.md\n M A2/evidence/tools/README.md\n M A2/evidence/tools/capture-isolation-state.py\n M A2/evidence/tools/clock-monitor.py\n M A2/evidence/tools/test-runner.py\n D A2/images/04-environment.png\n M A2/scripts/run-spec.py\n?? A2/evidence/final/final-review.md\n?? A2/evidence/formal-campaign/\n?? A2/evidence/tools/audit-final-campaign.py\n?? A2/evidence/tools/compare-host-current-time.ps1\n?? A2/evidence/tools/measure-formal-run.py\n?? A2/evidence/tools/review-formal-timing.py\n?? A2/evidence/tools/run-formal-campaign.py\n?? A2/evidence/tools/run-host-formal.ps1\n?? A2/evidence/tools/show-final-results.py\n?? A2/evidence/tools/test-formal-timing.py\n?? A2/images/04-final-environment.png\n?? A2/images/05-final-base-summary.png\n?? A2/images/06-final-workloads.png\n?? A2/images/08-final-repeat.png\n?? A2/images/09-final-parameter.png\n?? A2/results/\n?? A2/scripts/run-formal.sh\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "exit_code": 0,
+    "stdout": "main\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "764cc9055782463cb8f15495cdebb2af55ac5229\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit_code": 0,
+    "stdout": "764cc9055782463cb8f15495cdebb2af55ac5229\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--stat"
+    ],
+    "exit_code": 0,
+    "stdout": " A2/README.md                                 |  74 +++++++++++++++++++--------\n A2/evidence/final/final-value-map.md         |  48 ++++++++++-------\n A2/evidence/final/github-checkpoint.md       |   4 +-\n A2/evidence/final/script-review.md           |  16 +++---\n A2/evidence/final/stage5-review.md           |   2 +-\n A2/evidence/requirement-matrix.md            |  36 +++++++------\n A2/evidence/run-index.md                     |  30 ++++++-----\n A2/evidence/tools/README.md                  |  26 +++++++---\n A2/evidence/tools/capture-isolation-state.py |   8 ++-\n A2/evidence/tools/clock-monitor.py           |  19 +++++--\n A2/evidence/tools/test-runner.py             |   5 +-\n A2/images/04-environment.png                 | Bin 61255 -> 0 bytes\n A2/scripts/run-spec.py                       |  15 ++++++\n 13 files changed, 189 insertions(+), 94 deletions(-)\n",
+    "stderr": ""
+  }
+]

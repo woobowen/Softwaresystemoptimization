@@ -1,0 +1,11 @@
+Direct alignment 1 0.37104129791259766 3.884106159210205
+Direct alignment 2 -1.337101697921753 2.534221649169922
+Direct alignment 3 -0.451962947845459 2.1145589351654053
+Direct alignment 4 -0.21124684810638428 0.82785964012146
+Direct alignment 5 0.016328811645507812 0.19696378707885742
+TIMESYNCD_RESTORED {"active": true, "enable_state": true, "clocksource": true, "boot_id": true, "kernel": true, "linux_configs": true, "windows_config": true, "windows_time_service": true, "power_plan": true}
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/run-formal-campaign.py", line 154, in <module>
+    assert after_stop["service_state"] == "inactive"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

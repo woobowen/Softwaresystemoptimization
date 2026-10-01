@@ -1,0 +1,48 @@
+{
+  "campaign_id": "a2-formal-20261001T071902Z",
+  "status": "MEASUREMENTS_COMPLETE",
+  "completed_runs": [
+    {
+      "slot": "base-1",
+      "run_id": "SPECjvm2008.015",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "repeat-1",
+      "run_id": "SPECjvm2008.016",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "repeat-2",
+      "run_id": "SPECjvm2008.017",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "repeat-3",
+      "run_id": "SPECjvm2008.018",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "parameter-1",
+      "run_id": "SPECjvm2008.019",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "parameter-2",
+      "run_id": "SPECjvm2008.020",
+      "timing": "PASS",
+      "correctness": "PASS"
+    },
+    {
+      "slot": "parameter-3",
+      "run_id": "SPECjvm2008.021",
+      "timing": "PASS",
+      "correctness": "PASS"
+    }
+  ]
+}

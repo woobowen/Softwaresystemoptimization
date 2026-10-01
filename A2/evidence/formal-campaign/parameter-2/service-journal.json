@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "journalctl",
+    "-u",
+    "systemd-timesyncd.service",
+    "--since",
+    "@1790850867.179537",
+    "--until",
+    "@1790851243.678233",
+    "--no-pager",
+    "--output=json",
+    "--quiet"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "entries": []
+}

@@ -1,0 +1,41 @@
+{
+  "campaign_id": "a2-formal-20261001T071902Z",
+  "kind": "repeat",
+  "start": {
+    "realtime": 1790849104.985373,
+    "monotonic": 61142.960903471,
+    "raw": 65028.396650976,
+    "boottime": 61142.960905701,
+    "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+    "clocksource": "tsc",
+    "timesyncd": "inactive"
+  },
+  "argv": [
+    "bash",
+    "/home/addaswsw/lab/Software_system_optimization/A2/scripts/run-formal.sh",
+    "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/repeat-1/benchmark",
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "monitor_interval_seconds": 15,
+  "pid": 254949,
+  "runner_pid": 254952,
+  "runner_exit_code": 0,
+  "monitor_exit_code": 0,
+  "end": {
+    "realtime": 1790849484.82477,
+    "monotonic": 61522.800301421,
+    "raw": 65408.236109514,
+    "boottime": 61522.800304707,
+    "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+    "clocksource": "tsc",
+    "timesyncd": "inactive"
+  },
+  "elapsed": {
+    "realtime": 379.83939695358276,
+    "monotonic": 379.83939794999606,
+    "raw": 379.83945853800105,
+    "boottime": 379.83939900599944
+  }
+}

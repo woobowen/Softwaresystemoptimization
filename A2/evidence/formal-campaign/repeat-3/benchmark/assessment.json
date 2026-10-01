@@ -1,0 +1,34 @@
+{
+  "mode": "single",
+  "workload_count": 1,
+  "workloads": [
+    "compress"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "711.79"
+    ],
+    ".html": [
+      "711.79",
+      "711.79"
+    ],
+    ".summary": [
+      "711.79"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Base",
+  "violations": [
+    "Not a compliant sequence of benchmarks for publication."
+  ],
+  "score": 711.793800775323,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 377.628,
+  "monotonic_seconds": 377.617053,
+  "stdout_bytes": 1438,
+  "native_images_verified": 5,
+  "stderr_bytes": 0
+}

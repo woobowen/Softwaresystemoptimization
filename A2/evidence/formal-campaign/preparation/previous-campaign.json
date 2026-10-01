@@ -1,0 +1,6 @@
+{
+  "campaign_id": "a2-formal-20261001T061221Z",
+  "status": "STOPPED_FOR_INSPECTION",
+  "completed_runs": [],
+  "error": "InterruptedError: SIGTERM"
+}

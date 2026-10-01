@@ -1,0 +1,2 @@
+2026-10-01T18:27:07.824+08:00 /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -XX:+UseSerialGC -jar SPECjvm2008.jar compress
+2026-10-01T18:33:25.486+08:00 exit=0

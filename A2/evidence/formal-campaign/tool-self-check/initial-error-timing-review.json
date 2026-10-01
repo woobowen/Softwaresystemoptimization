@@ -1,0 +1,33 @@
+{
+  "run": "gate-2",
+  "host_seconds": 600.4229866,
+  "guest_monotonic_seconds": 600.0001931430015,
+  "guest_raw_seconds": 600.000273564001,
+  "host_minus_guest_seconds": 0.42279345699841997,
+  "wall_minus_monotonic_seconds": -2.3952452465891838e-08,
+  "largest_step_seconds": 0.000850629,
+  "guest_preparation_cleanup_seconds": 0.30584053799975663,
+  "clocksource": [
+    "tsc"
+  ],
+  "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "timesyncd": "inactive",
+  "checks": {
+    "host_ticks_consistent": true,
+    "host_exit_zero": true,
+    "host_awake_requested_and_cleared": true,
+    "no_host_sleep_events": false,
+    "raw_recalculation": true,
+    "guest_integrity": true,
+    "no_steps_over_50ms": true,
+    "service_inactive": true,
+    "host_guest_elapsed_agree": true,
+    "host_raw_elapsed_agree": true,
+    "wall_mono_drift_small": true,
+    "no_discrete_steps": true,
+    "clocksource_tsc": true,
+    "boot_id_unchanged": true
+  },
+  "status": "REVIEW_REQUIRED",
+  "thresholds_are_internal_not_spec_rules": true
+}

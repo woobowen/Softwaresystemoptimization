@@ -1,22 +1,24 @@
 # A2 逐题要求表
 
-依据：老师 A2 PDF 三页、第 1–7 题及 GitHub Engineering Checkpoint Publish 要求。A2 状态仍为 **BLOCKED_ENVIRONMENT_TIMING**。tsc 探针及两次 Hyper-V clocksource 探针均出现严重时间跳变；原 clocksource 已恢复。GitHub 本次只发布诊断检查点，下一步环境方案尚未决定。下表的工具和文件检查不构成最终工程验收。
+依据：老师 A2 PDF 第 1–7 题及最终执行要求。30 分钟 Gate、完整 Base 与 3+3 单项均通过计时检查，服务已恢复。本表的 PASS 表示具体要求已有可检查的交付物，不代替独立最终工程验收。
 
-| 要求 | 状态 | README | 实际依据与缺项 |
+| 要求 | 状态 | README | 对应文件与依据 |
 |---|---|---|---|
-| Q1：用途、主要 workload、特点、Base/Peak、四份官方文档 | PASS | 1 | 四份 SPEC 官方文档已重新访问；报告回答保留 |
-| Q2：安装、环境变量、完整 Base/results | BLOCKED | 2 | 安装/JDK/FreeType 资料与新环境截图齐全；两次 timing gate 失败，无 replacement Base 或正式 results |
-| Q3：总体结果和至少三个分项成绩及分析 | BLOCKED | 3 | 仅保留 compress/derby/crypto.aes 特点，缺可信新分数与基于新成绩的比较 |
-| Q4：官方结果与本机比较 | PARTIAL | 4 | 官方 853.15 与软硬件配置已重新获取，内容 SHA256 与历史一致；缺本机新 Base |
-| Q5：同配置三个独立 JVM、原始值、均值、范围 | BLOCKED | 5 | 新三次未启动；旧结果全部归档作废，不给出正式统计 |
-| Q6：体会、问题与处理 | PARTIAL | 6 | 保留实际 JDK 兼容、FreeType 和计时问题经历，尚非完整实验总结 |
-| Q7：固定一个 JVM 参数并比较 | BLOCKED | 7 | 参数仍为 -XX:+UseSerialGC；新 3+3 未执行，不能给出变化率与性能结论 |
-| 旧文件保全 | PASS（文件完整性） | 不引用旧性能图 | invalidated-results/integrity.json：8 目录、154 文件、114 JPEG、98 HTML 本地资源链接，副本等于源目录 |
-| 脚本行为 | PASS（工具测试） | scripts/ | runner：输出/退出/信号/互斥/防覆盖/启动失败；parser：15 用例及直接字段/统计复算，明确使用 invalidated fixtures；新结果测试 NOT_RUN |
-| 时钟探针与 monitor | PASS（工具运行）；Timing FAIL | 2 | Java 源未变，两轮各 601 样本，整数纳秒复算一致；monitor CPU <0.001 s/短自检，SIGTERM 收尾成功 |
-| 文档与图片整理 | 完成失败状态整理 | 1–7 | 旧性能值已移除，无 TODO；两张当前图片均实际打开。没有生成不存在的新成绩截图 |
-| Final Value Map | 完成失败状态映射 | 全文 | final/final-value-map.md 仅映射当前报告保留的配置和官方数值，正式性能字段为空缺而非旧值 |
-| GitHub 发布 | 仅诊断检查点 | — | 本提交保全真实工程供远端文件级诊断；见 final/github-checkpoint.md。推送后的 SHA 对照及远端读取结果在发布回执中记录 |
-| 水杉 | NOT_READY / 禁止 | — | 未访问、打包或提交 |
+| Q1：用途、workload、特点、Base/Peak、四份官方文档 | PASS | 1、2 | 官网、FAQ、User's Guide、Run Rules、Known Issues 及 workload 原站说明；[资料检查](formal-campaign/official-references.json) |
+| Q2：安装、环境变量、完整 Base/results | PASS | 2 | `.015`，604.34 ops/m，38 workload；[正确性](formal-campaign/base-1/benchmark/assessment.json)、[完整原生目录](../results/base/SPECjvm2008.015/) |
+| Q3：总体和至少三个分项、特点比较 | PASS | 3 | 同一个 Base：compress 792.54、derby 1148.35、crypto.aes 397.00；[提取记录](formal-campaign/base-q3-q4.json) |
+| Q4：官方结果与本机比较 | PASS | 4 | 官方 853.15；CPU/内存/JVM/OS 与本机表格比较；[原站重新获取](formal-campaign/official-source-resumed-check.json) |
+| Q5：同配置三个新 JVM、均值、范围 | PASS | 5 | `.016–.018`；均值 680.83，极差 48.34，相对极差 7.10%；[统计](formal-campaign/final-statistics.json) |
+| Q6：运行体会、问题处理 | PASS | 6 | JDK 兼容、FreeType、计时可靠性和重复测量；两段直接说明 |
+| Q7：只改变一个 JVM 参数、三次比较 | PASS | 7 | `.019–.021`，仅 -XX:+UseSerialGC；均值 721.80，变化 +6.02%，相对极差 5.42%；保留区间重叠的限制 |
+| 计时完整性 | PASS | 2 简述条件 | [八个计时条目](formal-campaign/final-timing-audit.md)、[Gate 独立复算](formal-campaign/final-gate/independent-calculation.json) |
+| 配置与文件完整性 | PASS | results/ | [最终数据检查](formal-campaign/final-data-audit.json)：七个新 JVM、相同环境和 compress 配置、exact argv；144 文件、109 JPEG、95 HTML 本地资源链接；逐文件 SHA256 等于安装目录原件 |
+| 环境恢复 | PASS | 2 | [restore.json](formal-campaign/restore.json)：active/enabled，boot/kernel/clocksource/config/Windows 时间服务/电源方案均恢复或保持 |
+| 正式图片 | PASS | 2、3、4、5、7 | 六张均打开检查；[来源、SHA256 与视觉检查](formal-campaign/screenshots/visual-review.json) |
+| README 与数值来源 | PASS | 全文 | [四轮检查](formal-campaign/readme-review.json)、[数值映射](final/final-value-map.md)；无旧性能值、TODO 或内部工作流用语 |
+| 正式脚本与测试 | PASS | scripts/ | runner 六场景、最终 raw 十五个 parser 用例、计时十场景、源码语法；[源码检查](final/script-review.md) |
+| 旧结果保全 | PASS（文件保全） | 不采用旧分数 | [invalidated-results](timing/invalidated-results/manifest.md) 保留原始内容；不混入新 results/ |
+| 独立最终工程验收 | PENDING | — | 需独立读取 GitHub 实际文件；本地自查不授予 Engineering = PASS |
+| 水杉 | NOT_READY / 禁止 | — | 未准备提交包，未访问或提交 homework02 |
 
-[时钟失败结论](timing/recovery-conclusion.md)；[当前运行索引](run-index.md)；[旧数据清单](timing/invalidated-results/manifest.md)。
+[运行索引](run-index.md) · [最终候选检查记录](final/final-review.md)

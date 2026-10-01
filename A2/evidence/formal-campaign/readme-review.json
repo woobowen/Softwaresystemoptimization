@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T18:53:24.646098+08:00",
+  "readme_sha256": "3a50cadc5ae48796e2daf88ddab6fc39a47b30c1816cb022c865a5b6facdf03a",
+  "method": "Continuous Q1–Q7 reading in four passes, then reread after the edits",
+  "passes": {
+    "A_direct_answers": "Q1–Q7 answer the teacher in original order; Q2 and Q3 both retain Base overall as explicitly requested.",
+    "B_remove_redundancy": "Removed repeated timing procedure from Q6, repeated mean-higher statement from Q7 and the word fixed before parameter choice; retained required comparison tables.",
+    "C_style": "Checked complete prose for student-style explanation, unnecessary process narration and internal workflow language. Final writing quality remains subject to independent review.",
+    "D_accuracy": "Matched all versions, paths, commands, scores, ranges and percentages to final-value-map; opened all six actual images; confirmed native IDs .015 through .021 and correct Q3 source."
+  },
+  "changes": "Clarified Base timing wording and percentage formula; added complete repeat/parameter result links; no measured value or required answer removed.",
+  "does_not_assign_final_engineering_acceptance": true
+}

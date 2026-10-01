@@ -1,0 +1,67 @@
+{
+  "command": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "shell_command": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar compress",
+  "cwd": "/home/addaswsw/.local/opt/specjvm2008",
+  "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+  "runner_sha256": "37b7b7c3cb61de09104b07b2e92e1a7a52dc97a66e9abb73067b5f2dd00ddd4e",
+  "campaign_id": "a2-formal-20261001T071902Z",
+  "environment": {
+    "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+    "CLASSPATH": null,
+    "JAVA_TOOL_OPTIONS": null,
+    "_JAVA_OPTIONS": null,
+    "JDK_JAVA_OPTIONS": null,
+    "PATH": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin:/home/addaswsw/.local/opt/java-se-7u75-ri/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/caozuoxitong/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/d/MySQL/MySQL Server 8.0/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/dotnet/:/mnt/d/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/code2video/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/Program Files/nodejs/:/mnt/d/installation/cursor/resources/app/bin:/mnt/d/installation/gamescreencast/:/mnt/d/installation/MongoDB/bin/:/mnt/d/installation/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/d/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/lenovo/AppData/Local/Microsoft/WindowsApps:/mnt/d/installation/Microsoft VS Code/bin:/mnt/c/Program Files/mingw64/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Users/lenovo/.dotnet/tools:/mnt/c/Program Files:/mnt/d/installation/miktex/miktex/bin/x64/:/mnt/c/Users/lenovo/AppData/Roaming/npm:/mnt/d/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/texlive/2025/bin/windows:/mnt/d/installation/MongoDB/bin/",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TZ": null,
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6",
+    "LD_LIBRARY_PATH": null,
+    "DISPLAY": ":0",
+    "FONTCONFIG_PATH": null
+  },
+  "java_on_path": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "/usr/bin/java",
+    "/bin/java"
+  ],
+  "start": "2026-10-01T18:05:05.139+08:00",
+  "end": "2026-10-01T18:11:24.810+08:00",
+  "exit_code": 0,
+  "stdout_path": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/repeat-1/benchmark/stdout.log",
+  "stderr_path": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/repeat-1/benchmark/stderr.log",
+  "results_root": "/home/addaswsw/.local/opt/specjvm2008/results",
+  "clocksource_start": "tsc",
+  "timesyncd_state_start": "inactive",
+  "boot_id_start": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "clock_start": {
+    "realtime": 1790849105.1453567,
+    "monotonic": 61143.120886929
+  },
+  "pid": 254956,
+  "proc_cmdline": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "clock_end": {
+    "realtime": 1790849484.7940867,
+    "monotonic": 61522.769618647
+  },
+  "clocksource_end": "tsc",
+  "timesyncd_state_end": "inactive",
+  "boot_id_end": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "wall_clock_seconds": 379.64873,
+  "monotonic_seconds": 379.648732,
+  "wall_seconds": 379.648732,
+  "result_paths": [
+    "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.016"
+  ]
+}

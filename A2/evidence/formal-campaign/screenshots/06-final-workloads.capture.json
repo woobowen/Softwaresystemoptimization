@@ -1,0 +1,9 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/06-final-workloads.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/screenshots/06-final-workloads.sh",
+  "command_exit_code": 0,
+  "commands_sha256": "94f45bf0827d1410e3b2eaef21d753c299519783cd88752262457900cede1eeb",
+  "captured_at": "2026-10-01T18:49:55.658843+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "b8041096dc6f3df352a3e7dc9dbf1a3f1813375c866e8f584d53538e3f2cff93"
+}

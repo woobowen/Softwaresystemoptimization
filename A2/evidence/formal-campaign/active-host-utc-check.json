@@ -1,0 +1,9 @@
+{
+  "guest_wall_before": 1790834661.836003,
+  "guest_wall_after": 1790834662.159773,
+  "guest_monotonic_roundtrip": 0.32377061100123683,
+  "host_utc": "2026-10-01T06:04:22.4470037Z",
+  "exit_code": 0,
+  "host_minus_guest_midpoint_seconds": 0.4491147994995117,
+  "midpoint_uncertainty_seconds": 0.16188502311706543
+}

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "python_time": true,
+    "python_monotonic": true,
+    "python_monotonic_raw": true,
+    "python_boottime": true,
+    "java_currentTimeMillis": true,
+    "java_nanoTime": true,
+    "boottime_minus_monotonic_under_half_second": true,
+    "max_sample_gap_under_2s": true,
+    "wrapper_exit_zero": true
+  },
+  "host_minus_guest_seconds": {
+    "python_time": 0.5127084,
+    "python_monotonic": 0.51270785,
+    "python_monotonic_raw": 0.512484623,
+    "python_boottime": 0.512705637,
+    "java_currentTimeMillis": 0.5119217,
+    "java_nanoTime": 0.512553978
+  },
+  "status": "PASS"
+}

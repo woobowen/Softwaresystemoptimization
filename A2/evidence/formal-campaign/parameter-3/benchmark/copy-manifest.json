@@ -1,0 +1,20 @@
+[
+  {
+    "source": "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.021",
+    "copy": "/home/addaswsw/lab/Software_system_optimization/A2/results/parameter/SPECjvm2008.021",
+    "file_count": 10,
+    "relative_links_checked": 3,
+    "sha256": {
+      "SPECjvm2008.021.html": "d42707f2278e17b3c1332505cdcc8b0dfeae1614a2bf97917c0a7d3804f43cbc",
+      "SPECjvm2008.021.raw": "ac387b87f98eca800ed0b93fa3e28ada4b9219afd511ffc2d03c4658fc7c6db1",
+      "SPECjvm2008.021.sub": "9a7798ec9f01359c06ef7d24795228496f5779caee881a79ad2c5d97db8abeb8",
+      "SPECjvm2008.021.summary": "f32bc5e73512e3f8276109628a5c6d5fc1eef3d1021bfe48d993172751398c10",
+      "SPECjvm2008.021.txt": "aba601be101b59a2192f65a83b421062e4139025274e446b5c5d8fffcb518c76",
+      "images/all.jpg": "0c0937b17f5570fa7c79746b419470da6b84bbad9c6ca00302b329fe30f92e5c",
+      "images/check.jpg": "63c6473f82d0b2d7d3be8a6abcef61d83bb4afa9517b2ba2d969212b862fe5aa",
+      "images/check_results.jpg": "0310f0659db17801dd638056efc67a54626a42500452b5a5c22b576fc8777487",
+      "images/compress.jpg": "46bfaf5ee61a2b03c68c872a69280629ebaa7cf4f9574d5f330b416b66adca98",
+      "images/compress_results.jpg": "af56f2ff6140994cebba0044048d6b76dc84d584120e79969ab9ca8e64e1d3e4"
+    }
+  }
+]

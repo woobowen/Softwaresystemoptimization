@@ -1,0 +1,33 @@
+{
+  "system_packages_added": [],
+  "language_packages_added": [],
+  "toolchains_added": [],
+  "persistent_configuration_changes": [],
+  "runtime_service_actions": [
+    "one normal restart of systemd-timesyncd for initial synchronization",
+    "Preparation: stop followed by unintended D-Bus query activation; fixed snapshot to skip timesync1 queries while inactive; cleanup start succeeded.",
+    "Final sequence: systemctl stop, 75 s settling, 30 min gate, Base + 3 default + 3 Serial, systemctl start; restore.json confirms active/enabled and no persistent changes."
+  ],
+  "notes": [
+    "Reused JDK 7u75 RI, SPECjvm2008 1.01, Python standard library and existing Pillow.",
+    "Python playwright import was unavailable; no package was installed, and the existing official screenshot remains unchanged."
+  ],
+  "resumed_execution": {
+    "system_packages_added": [],
+    "language_packages_added": [],
+    "toolchains_added": [],
+    "persistent_configuration_changes": [],
+    "reused": [
+      "OpenJDK 7u75 RI",
+      "SPECjvm2008 1.01",
+      "Python standard library",
+      "Pillow",
+      "Xvfb",
+      "Zutty",
+      "PowerShell",
+      "Existing cached Node Playwright and Chromium, located for remote README rendering"
+    ],
+    "completed_at": "2026-10-01T18:49:23.471402+08:00",
+    "restoration": "restore.json: all checks true"
+  }
+}

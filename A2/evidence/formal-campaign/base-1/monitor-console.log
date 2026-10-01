@@ -1,0 +1,23 @@
+{
+  "ended_at": "2026-10-01T18:04:00.968755+08:00",
+  "sample_count": 532,
+  "interval_seconds": 15.0,
+  "wall_seconds": 7963.817501544952,
+  "monotonic_seconds": 7963.8175016919995,
+  "raw_seconds": 7963.818592674004,
+  "boottime_seconds": 7963.817500961995,
+  "boot_id_values": [
+    "7af866bf-70f0-4652-bc4c-4d28a4eccfc6"
+  ],
+  "cumulative_difference_seconds": -1.4704710338264704e-07,
+  "min_interval_difference_seconds": -0.00029427133267745376,
+  "max_interval_difference_seconds": 0.00029442913364619017,
+  "forward_adjustments_over_50ms": 0,
+  "backward_adjustments_over_50ms": 0,
+  "backward_wall_intervals": 0,
+  "clocksource_values": [
+    "tsc"
+  ],
+  "process_cpu_seconds": 0.481657789,
+  "timing_healthy": true
+}

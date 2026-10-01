@@ -1,0 +1,9 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/09-final-parameter.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/screenshots/09-final-parameter.sh",
+  "command_exit_code": 0,
+  "commands_sha256": "31910400bfe68bf99a4c964f9785919d45a73bc109f0c410d335d6b1b686a657",
+  "captured_at": "2026-10-01T18:50:02.518891+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "41262c46ec00ed7e5e284e444606107d179f853dad172de7c5099807da90cd90"
+}

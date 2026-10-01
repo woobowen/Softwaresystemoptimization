@@ -30,6 +30,12 @@ def clocksource():
     return path.read_text().strip() if path.exists() else None
 
 
+def timesyncd_state():
+    return subprocess.run(
+        ["systemctl", "is-active", "systemd-timesyncd.service"],
+        capture_output=True, text=True, timeout=10).stdout.strip()
+
+
 def main():
     if len(sys.argv) < 3:
         sys.exit(__doc__)
@@ -51,6 +57,7 @@ def main():
             "cwd": str(spec),
             "java_path": command[0],
             "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "campaign_id": env.get("A2_CAMPAIGN_ID"),
             "environment": {key: env.get(key) for key in (
                 "JAVA_HOME", "CLASSPATH", "JAVA_TOOL_OPTIONS", "_JAVA_OPTIONS",
                 "JDK_JAVA_OPTIONS", "PATH", "LANG", "LC_ALL", "TZ",
@@ -71,6 +78,8 @@ def main():
         with (output / "stdout.log").open("wb") as stdout, \
                 (output / "stderr.log").open("wb") as stderr:
             record["clocksource_start"] = clocksource()
+            record["timesyncd_state_start"] = timesyncd_state()
+            record["boot_id_start"] = Path("/proc/sys/kernel/random/boot_id").read_text().strip()
             record["clock_start"] = clocks()
             try:
                 process = subprocess.Popen(command, cwd=spec, env=env,
@@ -81,6 +90,10 @@ def main():
                 record["exit_code"] = 127
             else:
                 record["pid"] = process.pid
+                try:
+                    record["proc_cmdline"] = Path(f"/proc/{process.pid}/cmdline").read_bytes().decode().rstrip("\0").split("\0")
+                except FileNotFoundError:
+                    record["proc_cmdline"] = None
                 metadata.write_text(json.dumps(record, indent=2) + "\n")
 
                 def forward_signal(signum, frame):
@@ -96,6 +109,8 @@ def main():
                 record["exit_code"] = process.wait()
             record["clock_end"] = clocks()
             record["clocksource_end"] = clocksource()
+            record["timesyncd_state_end"] = timesyncd_state()
+            record["boot_id_end"] = Path("/proc/sys/kernel/random/boot_id").read_text().strip()
         record["end"] = now()
         for clock, field in (("realtime", "wall_clock_seconds"),
                              ("monotonic", "monotonic_seconds")):

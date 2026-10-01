@@ -1,21 +1,23 @@
 # A2 运行索引
 
-当前状态：**BLOCKED_ENVIRONMENT_TIMING**。两次 Hyper-V clocksource 探针失败，原 clocksource 已恢复为 `tsc`。本次只整理和发布 [GitHub 诊断检查点](final/github-checkpoint.md)，没有新的 SPEC run ID 或 timing probe。当前没有正式 Base、repeat 或 parameter 结果目录。
+最终计时检查与七次测量均通过；timesyncd 已恢复 active/enabled。全部运行属于 `a2-formal-20261001T071902Z`，采用 tsc、同一 boot ID、相同 JDK 和环境。独立最终工程验收仍待进行。
 
-| 探针 | 样本 | Python wall (s) | Python monotonic (s) | Python 差值 (s) | Java 差值 (s) | 前跳 / 后跳 | 门控 |
-|---|---:|---:|---:|---:|---:|---:|---|
-| 1 | 601 | 639.180424 | 600.521209 | 38.659215 | 38.659787 | 16 / 0 | FAIL |
-| 2 | 601 | 646.435680 | 600.148702 | 46.286978 | 46.287295 | 18 / 0 | FAIL |
+| slot | native ID | ops/m | PID | Timing / correctness |
+|---|---|---:|---:|---|
+| base-1 | SPECjvm2008.015 | 604.34 | 210526 | PASS / PASS |
+| repeat-1 | SPECjvm2008.016 | 667.24 | 254956 | PASS / PASS |
+| repeat-2 | SPECjvm2008.017 | 663.45 | 257053 | PASS / PASS |
+| repeat-3 | SPECjvm2008.018 | 711.79 | 259264 | PASS / PASS |
+| parameter-1 | SPECjvm2008.019 | 698.80 | 261218 | PASS / PASS |
+| parameter-2 | SPECjvm2008.020 | 728.66 | 263255 | PASS / PASS |
+| parameter-3 | SPECjvm2008.021 | 737.95 | 265097 | PASS / PASS |
 
-第一轮和第二轮分别见 [gate-1](timing/gate-1/summary.json)、[gate-2](timing/gate-2/summary.json)。完整操作、诊断与恢复见 [恢复试验结论](timing/recovery-conclusion.md)。
+Base 为 Run is compliant、38 workload、violations 为空。六次单项为 Run is valid, but not compliant，唯一 violation 为未执行完整可发布序列；这些原生字段没有修改。每次均保存 stdout/stderr、runner wall/monotonic、Host Stopwatch、15 秒 monitor、进程 argv、完整原生目录与 SHA256。
 
-旧实验索引保留在 [历史索引](timing/invalidated-derived/run-index.md)，其中的正式/完成用语仅描述旧阶段，所有性能分数均已作废。旧 .006、.007–.009、.011–.014 已移入 [归档目录](timing/invalidated-results/manifest.md)，旧 metadata 保持原样，路径变动由 manifest 追踪。
+[八次计时检查](formal-campaign/final-timing-audit.md) · [最终统计](formal-campaign/final-statistics.json) · [配置与副本检查](formal-campaign/final-data-audit.json) · [服务恢复](formal-campaign/restore.json)
 
-| 本阶段计划中的 SPEC 实验 | 执行状态 | 原因 |
-|---|---|---|
-| compress timing diagnostic | NOT_RUN | 两次时钟门控失败 |
-| replacement Base | NOT_RUN | 不在已知异常环境继续计分 |
-| FINAL-REPEAT-1/2/3 | NOT_RUN | 没有通过的 Base 和稳定环境 |
-| FINAL-SERIAL-1/2/3 | NOT_RUN | 同上；参数仍固定为 -XX:+UseSerialGC |
+Base compress 为 792.54，单项默认均值为 680.83（低 14.10%）。parser、JDK、环境与 compress 配置一致；全套中此前已运行其他 workload，而单项每次新建 JVM。保留这个上下文差异，没有根据分数补跑或断言具体机制。
 
-[Runner 测试](final/runner-tests-stage5.json)、[parser 历史 fixture 测试](final/parser-tests-invalidated-fixtures-stage5.json)、[monitor 信号测试](final/monitor-signal-check.json)验证工具行为，不构成性能可信度通过。
+准备阶段一次快照查询触发 timesync1 D-Bus 自动启动；修复 inactive 时跳过该查询后重新开始，未计为 Gate 或 benchmark 尝试。见 [原因与修复](formal-campaign/preparation/service-query-activation/cause-and-fix.json)。最终 Gate 和七个性能 slot 均一次通过。
+
+历史隔离前计时问题和旧成绩仍保留在 [恢复结论](timing/recovery-conclusion.md)、[旧运行索引](timing/invalidated-derived/run-index.md)和 [invalidated-results](timing/invalidated-results/manifest.md)。这些旧结果不参与当前统计。

@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-01T18:04:40.606087+08:00",
+  "base_raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.raw",
+  "base_overall_ops_m": 604.3409299339644,
+  "selected_workloads_ops_m": {
+    "compress": 792.541566625533,
+    "derby": 1148.3477284471596,
+    "crypto.aes": 397.0042943643131
+  },
+  "workload_count": 38,
+  "native_status": "Run is compliant",
+  "violations": [],
+  "official_reference": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+  "official_overall_ops_m": 853.15,
+  "official_configuration": {
+    "OS name": "Red Hat Enterprise Linux 6.5",
+    "JVM name": "OpenJDK 64-Bit Server VM",
+    "JVM version": "24.45-b08 mixed mode",
+    "Java Specification": "1.7",
+    "JVM boot class path": "/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/resources.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/rt.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/sunrsasign.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/jsse.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/jce.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/charsets.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/netx.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/plugin.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/rhino.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/lib/jfr.jar: /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.45.x86_64/jre/classes",
+    "HW model": "Sugon I620-G20(Intel Xeon E5-2660 v3)",
+    "CPU name": "Intel Xeon E5-2660 v3(Intel Turbo Boost Technology up to 3.30 GHz)",
+    "CPU frequency": "2600",
+    "# of logical cpus": "40",
+    "# of chips": "2",
+    "# of cores": "20",
+    "Threads per core": "2",
+    "Memory size": "256 GB",
+    "Memory details": "16 x 16 GB 2Rx4 PC4-2133P-R",
+    "Test date:": "Thu Dec 25 19:18:18 CST 2014"
+  },
+  "comparison_note": "Different CPU/core/logical-CPU context, memory, OS and JVM jointly affect the comparison; no normalization or single-factor attribution. Workload operations differ, so their throughput ratios are not speedups."
+}

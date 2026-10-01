@@ -1,0 +1,19 @@
+Direct alignment 1 0.018009424209594727 0.003880023956298828
+Starting final-gate 2026-10-01T15:21:12.531428+08:00
+FINAL_TIMING_GATE_PASS {"run": "final-gate", "host_seconds": 1800.5129217, "guest_monotonic_seconds": 1800.0002138499985, "guest_raw_seconds": 1800.0004370770039, "host_minus_guest_seconds": 0.5127078500015614, "wall_minus_monotonic_seconds": -4.653702490031719e-07, "largest_step_seconds": 0.000992341, "guest_preparation_cleanup_seconds": 0.4026125110030989, "clocksource": ["tsc"], "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6", "timesyncd": "inactive", "checks": {"host_ticks_consistent": true, "host_exit_zero": true, "host_awake_requested_and_cleared": true, "no_host_sleep_events": true, "no_timesyncd_activity_during_interval": true, "raw_recalculation": true, "guest_integrity": true, "no_steps_over_50ms": true, "service_inactive": true, "host_guest_elapsed_agree": true, "host_raw_elapsed_agree": true, "wall_mono_drift_small": true, "no_discrete_steps": true, "clocksource_tsc": true, "boot_id_unchanged": true}, "status": "PASS", "thresholds_are_internal_not_spec_rules": true}
+Starting base-1 2026-10-01T15:51:16.520324+08:00
+Accepted base-1 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.015']
+Starting repeat-1 2026-10-01T18:05:04.112254+08:00
+Accepted repeat-1 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.016']
+Starting repeat-2 2026-10-01T18:12:26.302205+08:00
+Accepted repeat-2 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.017']
+Starting repeat-3 2026-10-01T18:19:47.673281+08:00
+Accepted repeat-3 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.018']
+Starting parameter-1 2026-10-01T18:27:07.076108+08:00
+Accepted parameter-1 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.019']
+Starting parameter-2 2026-10-01T18:34:26.585031+08:00
+Accepted parameter-2 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.020']
+Starting parameter-3 2026-10-01T18:41:44.750803+08:00
+Accepted parameter-3 ['/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.021']
+TIMESYNCD_RESTORED {"active": true, "enable_state": true, "clocksource": true, "boot_id": true, "kernel": true, "linux_configs": true, "windows_config": true, "windows_time_service": true, "power_plan": true}
+{"campaign_id": "a2-formal-20261001T071902Z", "status": "MEASUREMENTS_COMPLETE", "completed_runs": [{"slot": "base-1", "run_id": "SPECjvm2008.015", "timing": "PASS", "correctness": "PASS"}, {"slot": "repeat-1", "run_id": "SPECjvm2008.016", "timing": "PASS", "correctness": "PASS"}, {"slot": "repeat-2", "run_id": "SPECjvm2008.017", "timing": "PASS", "correctness": "PASS"}, {"slot": "repeat-3", "run_id": "SPECjvm2008.018", "timing": "PASS", "correctness": "PASS"}, {"slot": "parameter-1", "run_id": "SPECjvm2008.019", "timing": "PASS", "correctness": "PASS"}, {"slot": "parameter-2", "run_id": "SPECjvm2008.020", "timing": "PASS", "correctness": "PASS"}, {"slot": "parameter-3", "run_id": "SPECjvm2008.021", "timing": "PASS", "correctness": "PASS"}]}

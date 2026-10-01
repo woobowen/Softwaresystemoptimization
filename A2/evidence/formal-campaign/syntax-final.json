@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-01T18:53:24.645903+08:00",
+  "python_ast": [
+    "A2/evidence/runner/frozen-run-spec.py",
+    "A2/evidence/timing/probe-10min/clock-probe.py",
+    "A2/evidence/tools/audit-final-campaign.py",
+    "A2/evidence/tools/capture-isolation-state.py",
+    "A2/evidence/tools/capture-terminal.py",
+    "A2/evidence/tools/check-invalidated-experiments.py",
+    "A2/evidence/tools/check-run.py",
+    "A2/evidence/tools/clock-monitor.py",
+    "A2/evidence/tools/clock-probe.py",
+    "A2/evidence/tools/collect-timing-diagnostics.py",
+    "A2/evidence/tools/historical-run-three.py",
+    "A2/evidence/tools/host-reference-probe.py",
+    "A2/evidence/tools/measure-formal-run.py",
+    "A2/evidence/tools/monitor-run.py",
+    "A2/evidence/tools/preserve-results.py",
+    "A2/evidence/tools/recalculate-host-reference.py",
+    "A2/evidence/tools/review-formal-timing.py",
+    "A2/evidence/tools/run-formal-campaign.py",
+    "A2/evidence/tools/show-final-results.py",
+    "A2/evidence/tools/test-compress-regression.py",
+    "A2/evidence/tools/test-formal-timing.py",
+    "A2/evidence/tools/test-runner.py",
+    "A2/evidence/tools/test-summarizer.py",
+    "A2/scripts/run-spec.py",
+    "A2/scripts/summarize-spec.py"
+  ],
+  "bash_n": [
+    "A2/scripts/run-formal.sh",
+    "A2/evidence/formal-campaign/screenshots/04-final-environment.sh",
+    "A2/evidence/formal-campaign/screenshots/05-final-base-summary.sh",
+    "A2/evidence/formal-campaign/screenshots/06-final-workloads.sh",
+    "A2/evidence/formal-campaign/screenshots/08-final-repeat.sh",
+    "A2/evidence/formal-campaign/screenshots/09-final-parameter.sh"
+  ],
+  "passed": true
+}

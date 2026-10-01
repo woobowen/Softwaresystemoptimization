@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-01T16:01:39.094990+08:00",
+  "method": "Complete sequential source reading after the final runner additions",
+  "files": [
+    {
+      "path": "A2/scripts/run-spec.py",
+      "sha256": "37b7b7c3cb61de09104b07b2e92e1a7a52dc97a66e9abb73067b5f2dd00ddd4e",
+      "lines": 129
+    },
+    {
+      "path": "A2/scripts/summarize-spec.py",
+      "sha256": "40fb2c62cd5536cd5e022fc1cb6c135a83685cef4c3973862537c096a97e88e8",
+      "lines": 140
+    },
+    {
+      "path": "A2/scripts/run-formal.sh",
+      "sha256": "1f77aec81126c9b1b56fea053984dc678d783f4e9175e78cbf582285b4ba4b85",
+      "lines": 10
+    }
+  ],
+  "findings": [
+    "Runner retains direct JVM invocation, disk stdout/stderr, flock exclusion and process-group signal forwarding. Campaign, service and boot metadata are the only new execution fields, with argv provenance retained.",
+    "Parser derives scores from raw operations and elapsed milliseconds, excludes check and warmup from scores, separates startup, reconstructs native groups and verifies composite against TXT. It contains no final measured constants.",
+    "Shell launcher only sets the existing JDK, SPEC, locale and FreeType environment and clears Java option variables before exec.",
+    "Formal directory contains these three scripts; host wrappers, probes, monitors and tests remain in evidence/tools."
+  ],
+  "changes_after_reading": [],
+  "verification": "Runner tests passed before measurement. New final-result parser regression must wait for the seven accepted measurements.",
+  "acceptance_note": "This source review does not assign final engineering acceptance."
+}

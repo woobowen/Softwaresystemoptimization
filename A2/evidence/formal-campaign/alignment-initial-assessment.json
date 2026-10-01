@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-01T15:16:23.354953+08:00",
+  "role": "Initial direct alignment, prior to bounded observation",
+  "samples": 6,
+  "min_seconds": -0.3954651355743408,
+  "max_seconds": 2.038313150405884,
+  "max_uncertainty_seconds": 0.07312965,
+  "assessment": "Active correction; not a fixed absolute offset",
+  "next_action": "Bounded observation followed by timesyncd-off 1800-second host-referenced gate"
+}

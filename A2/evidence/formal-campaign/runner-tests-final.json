@@ -1,0 +1,46 @@
+{
+  "runner_sha256": "37b7b7c3cb61de09104b07b2e92e1a7a52dc97a66e9abb73067b5f2dd00ddd4e",
+  "tests": [
+    {
+      "case": "flood",
+      "runner_exit": 0,
+      "java_exit": 0,
+      "stdout": {
+        "bytes": 307212,
+        "sha256": "74ad7150e2383bad41718f7a1ffb5091a61bb446be4c25a047c547e9d84f9353",
+        "tail_complete": true
+      },
+      "stderr": {
+        "bytes": 307212,
+        "sha256": "8236fde1aefeb0833a2913bdf197d7338dd57286d6f98033782cd711a0a06da0",
+        "tail_complete": true
+      }
+    },
+    {
+      "case": "exit7",
+      "runner_exit": 7,
+      "java_exit": 7
+    },
+    {
+      "case": "sigint",
+      "runner_exit": 130,
+      "java_exit": -2,
+      "concurrent_run_rejected": true
+    },
+    {
+      "case": "sigterm",
+      "runner_exit": 143,
+      "java_exit": -15,
+      "concurrent_run_rejected": true
+    },
+    {
+      "case": "existing_output",
+      "overwrite_rejected": true
+    },
+    {
+      "case": "missing_java",
+      "runner_exit": 127,
+      "metadata_saved": true
+    }
+  ]
+}

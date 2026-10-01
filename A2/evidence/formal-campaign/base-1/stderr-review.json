@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-10-01T18:06:06.186698+08:00",
+  "line_count": 68414,
+  "distinct_lines": {
+    "Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.": 34207,
+    "Note: Recompile with -Xlint:unchecked for details.": 34207
+  },
+  "classification": "Repeated javac unchecked-operation notes from compiler.sunflow; no exception or report-generation error",
+  "preservation": "Full unedited stderr retained in benchmark/stderr.log",
+  "runner_wall_seconds": 7963.599621,
+  "runner_monotonic_seconds": 7963.599677
+}

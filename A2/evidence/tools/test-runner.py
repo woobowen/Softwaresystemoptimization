@@ -53,6 +53,8 @@ else:
             assert abs(record[field] - elapsed) < 0.000001
         assert record["wall_seconds"] == record["monotonic_seconds"]
         assert record["clocksource_start"] and record["clocksource_end"]
+        assert record["boot_id_start"] == record["boot_id_end"]
+        assert record["timesyncd_state_start"] and record["timesyncd_state_end"]
         case = {"case": mode, "runner_exit": process.returncode, "java_exit": record["exit_code"]}
         if mode == "flood":
             for stream, byte in (("stdout", b"O"), ("stderr", b"E")):
@@ -91,6 +93,7 @@ else:
     results.append({"case": "missing_java", "runner_exit": 127, "metadata_saved": True})
 
 output = {"runner_sha256": hashlib.sha256(runner.read_bytes()).hexdigest(), "tests": results}
-(runner.parents[1] / "evidence/final/runner-tests-stage5.json").write_text(
+output_path = Path(sys.argv[1]) if len(sys.argv) > 1 else runner.parents[1] / "evidence/final/runner-tests-stage5.json"
+output_path.write_text(
     json.dumps(output, indent=2) + "\n")
 print(json.dumps(output, indent=2))

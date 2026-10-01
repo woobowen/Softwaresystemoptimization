@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-01T15:19:02.877373+08:00",
+  "issue": "Snapshot queried timesync-status and show-timesync after stopping timesyncd; the timesync1 D-Bus API activated its service",
+  "formal_gate_started": false,
+  "formal_benchmark_started": false,
+  "counts_as_timing_attempt": false,
+  "service_restored": true,
+  "fix": "When the service is inactive, skip both timesync1 D-Bus queries; retain systemctl state/config and all clock reads",
+  "journal_command": [
+    "journalctl",
+    "--since",
+    "2026-10-01 15:17:06",
+    "--until",
+    "2026-10-01 15:17:08",
+    "--no-pager",
+    "--output=short-precise"
+  ],
+  "journal_exit": 0,
+  "journal": "Oct 01 15:17:06.453211 LAPTOP-KI0GT6AJ systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...\nOct 01 15:17:06.486294 LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\nOct 01 15:17:06.486573 LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\nOct 01 15:17:06.591625 LAPTOP-KI0GT6AJ dbus-daemon[228]: [system] Activating via systemd: service name='org.freedesktop.timesync1' unit='dbus-org.freedesktop.timesync1.service' requested by ':1.184' (uid=1000 pid=201265 comm=\"timedatectl timesync-status\" label=\"kernel\")\nOct 01 15:17:06.636918 LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\nOct 01 15:17:06.661201 LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\nOct 01 15:17:06.661971 LAPTOP-KI0GT6AJ dbus-daemon[228]: [system] Successfully activated service 'org.freedesktop.timesync1'\nOct 01 15:17:06.939135 LAPTOP-KI0GT6AJ systemd-timesyncd[201266]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\nOct 01 15:17:06.939243 LAPTOP-KI0GT6AJ systemd-timesyncd[201266]: Initial clock synchronization to Thu 2026-10-01 15:17:06.942523 CST.\n",
+  "dbus_service_file": "#  SPDX-License-Identifier: LGPL-2.1-or-later\n#\n#  This file is part of systemd.\n#\n#  systemd is free software; you can redistribute it and/or modify it\n#  under the terms of the GNU Lesser General Public License as published by\n#  the Free Software Foundation; either version 2.1 of the License, or\n#  (at your option) any later version.\n\n[D-BUS Service]\nName=org.freedesktop.timesync1\nExec=/bin/false\nUser=root\nSystemdService=dbus-org.freedesktop.timesync1.service\n"
+}

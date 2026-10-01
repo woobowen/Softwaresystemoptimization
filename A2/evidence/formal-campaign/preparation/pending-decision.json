@@ -1,0 +1,18 @@
+{
+  "status": "AWAITING_PRE_SYNC_CLARIFICATION",
+  "at": "2026-10-01T14:16:43.519212+08:00",
+  "reason": "Successful NTP packets continue to report seconds-level offsets after one normal restart. No authorization received to replace the requested pre-stop criterion.",
+  "formal_gate_started": false,
+  "base_started": false,
+  "repeat_started": false,
+  "serial_started": false,
+  "timesyncd_state": "active",
+  "timesyncd_enable_state": "enabled",
+  "clocksource": "tsc",
+  "initial_restart_record": "initial-sync-restart.json",
+  "latest_state": "preparation/final-active-state.json",
+  "observer_stopped": true,
+  "github_committed_or_pushed": false,
+  "shuishan_accessed": false,
+  "new_packages": []
+}

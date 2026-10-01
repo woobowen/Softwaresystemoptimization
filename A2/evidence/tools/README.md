@@ -1,12 +1,22 @@
 # 内部工具与历史探针入口
 
-这些工具用于内部计时诊断和追溯已有实验。最新阶段仅运行 [Windows Host Stopwatch 联合探针](../timing/timesyncd-isolation/README.md)，没有运行 SPEC benchmark。历史 probe 和 raw 保留原样。
+这些工具用于内部计时诊断、正式测量的外围证据记录和追溯已有实验。历史 probe 和 raw 保留原样。本次准备工作与实际执行状态见 [formal-campaign](../formal-campaign/)。
+
+## 本次正式测量入口
+
+- [run-formal-campaign.py](run-formal-campaign.py)：检查同步前置条件，临时停止 timesyncd，settling 75 秒，复用 1800 秒 Host-reference Gate；通过后依次调用 Base、compress 三次及 Serial GC 三次。每次先检查计时，再检查 SPEC 正确性、复制完整原生结果。`finally` 恢复 timesyncd，保存配置对照；遇到错误停止驱动，供检查后决定是否按授权上限重试。
+- [compare-host-current-time.ps1](compare-host-current-time.ps1)：六次直接比较 Windows UTC 与 Linux CLOCK_REALTIME，同时记录 Host Stopwatch 调用时间、midpoint 偏差和调用不确定性。NTP offset 只作背景；是否继续由直接对齐观察及后续停止 timesyncd 的 elapsed-time Gate 决定。
+- [run-host-formal.ps1](run-host-formal.ps1)：复用已测 wrapper 的 Stopwatch 和临时防休眠方式，包围单次 Linux launcher。它属于证据层，未将 Windows 逻辑加入 runner。
+- [measure-formal-run.py](measure-formal-run.py)：启动 15 秒采样 monitor，调用正式 shell launcher，再结束 monitor。信号和异常均有清理路径。
+- [review-formal-timing.py](review-formal-timing.py)：读取实际 host ticks、guest raw samples，检查 elapsed、step、clocksource、boot ID、服务状态及 Windows sleep/resume 事件。`REVIEW_REQUIRED` 表示需要检查边界或异常，不自动把临界差值判为真实时间故障。
+
+正式环境入口为 [run-formal.sh](../../scripts/run-formal.sh)，仅设置 JDK、SPEC、locale 和 FreeType，并清除 Java option 环境变量后调用 runner。运行前需要完整同步/停止/计时门控条件；直接执行 launcher 不代表计时可靠。
 
 ## Windows Host Stopwatch 联合探针
 
 - [run-host-reference-gate.ps1](run-host-reference-gate.ps1)：在 Windows 上用 Stopwatch 完整包围一次 WSL 调用，输出 host JSON；也支持 sleep、空调用和退出码边界检查。
 - [host-reference-probe.py](host-reference-probe.py)、[HostReferenceClock.java](HostReferenceClock.java)：约 1 Hz 读取四种 Linux clocks 和 Java 7 两种 clocks，以 monotonic 控制采样时长。
-- [capture-isolation-state.py](capture-isolation-state.py)：只读环境、服务状态、配置 SHA256 和 `adjtimex(modes=0)`。
+- [capture-isolation-state.py](capture-isolation-state.py)：读取环境、服务状态、配置 SHA256 和 `adjtimex(modes=0)`。服务 inactive 时跳过 `timedatectl timesync-status/show-timesync`，避免 D-Bus 查询重新启动服务；该准备阶段问题与修复保存在 [cause-and-fix.json](../formal-campaign/preparation/service-query-activation/cause-and-fix.json)。
 - [recalculate-host-reference.py](recalculate-host-reference.py)：从 raw samples 和 host ticks 独立复算，不启动 probe 或修改服务。
 
 测量边界、运行记录及结果均见 [timesyncd-isolation](../timing/timesyncd-isolation/README.md)。这些工具不自动停止或恢复 timesyncd；对应操作保存在该目录的 `stop.json`、`start-control.json` 和 `restore.json`。
@@ -30,15 +40,17 @@ Python 调用 `javac -d <temporary-directory> ClockProbe.java`，再调用 `java
 
 Java 每秒输出 `currentTimeMillis nanoTime`；Python 收到一行后读取 `time.time()`、`time.monotonic()` 和 boottime。相邻增量差和首末累计差单位均为秒。两种时钟并非原子采样，接收缓冲、调度、float 精度及边界顺序需要结合 raw 审查，不能单凭进程退出 0 判断 timing gate 通过。Hyper-V 版 `clocksource_consistent` 只接受 `hyperv_clocksource_tsc_page`，在其他源上不能直接作为通用 gate。
 
-[clock-monitor.py](clock-monitor.py)是旧的 15 秒轻量监视器，默认直到 SIGTERM 才写 summary；其 `timing_healthy` 同样限制 Hyper-V clocksource。本次不运行它。[collect-timing-diagnostics.py](collect-timing-diagnostics.py)保留受限 guest 日志和 host 事件元数据查询逻辑；已有输出不是 Windows event 全量导出。
+[clock-monitor.py](clock-monitor.py)沿用 15 秒轻量监视器，增加 raw、boottime、boot ID 和样本序号；默认期待 `tsc`，支持显式指定历史 clocksource。SIGTERM 会追加末尾样本并写 summary。[collect-timing-diagnostics.py](collect-timing-diagnostics.py)保留受限 guest 日志和 host 事件元数据查询逻辑；已有输出不是 Windows event 全量导出。
 
 ## 其他工具
 
-- [test-runner.py](test-runner.py)：临时假 Java 程序测试双日志、退出码、信号、互斥、防覆盖和启动失败，不运行 SPEC。默认会写历史 `runner-tests-stage5.json`，需要保留旧证据时应在临时副本中执行。
-- [test-summarizer.py](test-summarizer.py)：通过 `--results A2/evidence/timing/invalidated-results --output <new-json>` 使用历史 timing-invalidated fixture。预期数值从 raw 字段重算，测试成功不恢复旧成绩的测量资格。
+- [test-runner.py](test-runner.py)：临时假 Java 程序测试双日志、退出码、信号、互斥、防覆盖和启动失败，不运行 SPEC。可将新输出 JSON 路径作为第一个参数，避免覆盖历史测试。
+- [test-summarizer.py](test-summarizer.py)：通过 `--results A2/results --output <new-json>` 检查最终结果，覆盖 38 个 workload、group/startup 分离、报告一致性和 3+3 统计。也可显式指定历史 fixture；历史测试成功不恢复旧成绩的测量资格。
+- [audit-final-campaign.py](audit-final-campaign.py)：仅在七次测量完成且服务恢复后运行，交叉检查新 JVM、配置、argv、运行间隔、完整副本及计时边界，生成最终统计和八行计时表。
+- [show-final-results.py](show-final-results.py)：调用正式 parser，再将选定字段显示于真实终端，供截图；不含固定成绩。
 - [test-compress-regression.py](test-compress-regression.py)、[check-invalidated-experiments.py](check-invalidated-experiments.py)：历史数据回归检查；硬编码字段仅标识已 invalidated 的原始 fixture。
-- [preserve-results.py](preserve-results.py)、[check-run.py](check-run.py)、[monitor-run.py](monitor-run.py)：历史结果复制、结构检查和进程观测。
+- [preserve-results.py](preserve-results.py)、[check-run.py](check-run.py)：完整原生结果复制、逐文件 SHA256、HTML 资源、正确性和默认运行配置检查；[monitor-run.py](monitor-run.py)保留历史进程观测入口。
 - [FontProbe.java](FontProbe.java)、[read-adjtimex.c](read-adjtimex.c)、[capture-terminal.py](capture-terminal.py)：字体排错、只读时钟查询和终端截图辅助源码。
 - [historical-run-three.py](historical-run-three.py)：旧实验驱动器，依赖历史冻结配置与当时 runner 哈希，仅供追溯，不作为本次或下一环境的执行入口。
 
-旧 metadata 中的绝对路径和临时路径是当时记录；结果迁移参见 [manifest](../timing/invalidated-results/manifest.md)，工具迁移参见 [stage5-tool-moves.json](../final/stage5-tool-moves.json)。当前正式脚本目录只有 runner 和 parser。
+旧 metadata 中的绝对路径和临时路径是当时记录；结果迁移参见 [manifest](../timing/invalidated-results/manifest.md)，工具迁移参见 [stage5-tool-moves.json](../final/stage5-tool-moves.json)。正式脚本目录为 runner、parser 和简单 shell launcher。

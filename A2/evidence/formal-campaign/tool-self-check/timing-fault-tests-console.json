@@ -1,0 +1,76 @@
+{
+  "role": "synthetic tool tests, not timing evidence",
+  "cases": [
+    {
+      "case": "healthy",
+      "status": "PASS",
+      "failed_checks": []
+    },
+    {
+      "case": "wall_step",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "wall_mono_drift_small",
+        "no_discrete_steps"
+      ]
+    },
+    {
+      "case": "missing_sample",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "sample_indices_contiguous",
+        "sample_intervals_complete"
+      ]
+    },
+    {
+      "case": "active_service",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "service_inactive"
+      ]
+    },
+    {
+      "case": "changed_clocksource",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "clocksource_tsc"
+      ]
+    },
+    {
+      "case": "changed_boot",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "boot_id_unchanged"
+      ]
+    },
+    {
+      "case": "host_elapsed_loss",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "host_guest_elapsed_agree",
+        "host_raw_elapsed_agree"
+      ]
+    },
+    {
+      "case": "suspend_gap",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "no_suspend_gap"
+      ]
+    },
+    {
+      "case": "monitor_misses_end",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "monitor_encloses_benchmark"
+      ]
+    },
+    {
+      "case": "host_sleep",
+      "status": "REVIEW_REQUIRED",
+      "failed_checks": [
+        "no_host_sleep_events"
+      ]
+    }
+  ]
+}

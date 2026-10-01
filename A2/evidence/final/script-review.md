@@ -1,11 +1,11 @@
-# 第五阶段脚本检查
+# 最终正式脚本检查
 
-连续阅读了最终 `scripts/run-spec.py` 与 `scripts/summarize-spec.py`。
+完整连续阅读了 [run-spec.py](../../scripts/run-spec.py)、[summarize-spec.py](../../scripts/summarize-spec.py)和 [run-formal.sh](../../scripts/run-formal.sh)。源码 SHA256、逐文件说明及读取时间见 [script-review.json](../formal-campaign/script-review.json)。
 
-- runner 只新增读取 Linux clocksource 的小函数，在 Popen 前和 wait 后记录 start/end；现有双时钟、argv、白名单环境、PID、退出码、结果路径、日志文件、互斥及防覆盖逻辑保留。六个执行场景覆盖正常输出、非零退出、SIGINT/SIGTERM、并发拒绝、防覆盖及启动失败；见 [runner-tests-stage5.json](runner-tests-stage5.json)。
-- parser 未修改生产代码。使用真实但 timing-invalidated 的原生 fixture 运行 15 个用例，检查独立 raw/目录、全套 38 项、group/child/startup、重复输入/重复 workload、correctness、缺字段、非正分数、warmup 排除、单位、TXT 缺字段，以及两组均值、极差、百分比的直接 XML 复算。见 [测试记录](parser-tests-invalidated-fixtures-stage5.json)。这只证明解析行为；没有新正式 raw，不能声称完成了新结果验证。
-- clock probe 的 Java 源与旧阶段逐字节一致。Python 保留接收同一 Java 1 秒样本时采集 wall/monotonic 的方式，补充 clocksource、interval、累计量和内部阈值。两组独立整数纳秒复算与汇总一致。
-- clock monitor 每 15 秒只读取两种时间与 clocksource，SIGTERM 写最后一条样本后正常退出；短自检 CPU 时间分别约 0.000981 与 0.000705 s，未运行中采集其他指标。没有正式 benchmark，不能把自检当成运行期间 timing health。
-- 内部工具集中到 `evidence/tools/`，历史三次驱动器和配置检查器的名称明确标识旧实验，正式 `scripts/` 仍只有两个 Python 文件。旧 parser fixture 的硬编码原始字段仅用于标明已作废的历史回归。
+- runner 直接调用 JVM，stdout/stderr 写入独立文件，保留退出码、信号转发、互斥与防覆盖；新增 campaign、boot ID、服务状态等观测字段，实际进程 cmdline 与 argv 一致。六个假进程场景通过，见 [runner-tests-final.json](../formal-campaign/runner-tests-final.json)。
+- parser 未引入任何最终成绩常量，从 raw 的 operations 和 elapsed 计算 workload/group/composite，并核对原生 TXT。最终新 raw 的十五个用例及直接 XML 数学复算通过，覆盖 38 workload、group/child/startup 区分、统计和异常输入；见 [parser-tests-final.json](../formal-campaign/parser-tests-final.json)。
+- shell launcher 仅设置 JDK、SPEC、locale、FreeType，清除 Java option 环境变量后 exec runner；没有额外 JVM 调优。
+- Host wrapper、监视器、截图和内部检查均在 evidence/tools。计时检查十个合成异常场景通过，见 [timing-fault-tests.json](../formal-campaign/tool-self-check/timing-fault-tests.json)；新运行的实际检查见 [final-data-audit.json](../formal-campaign/final-data-audit.json)。
+- 25 个 Python 文件的 AST、正式 launcher 与五个截图命令的 bash -n 通过，见 [syntax-final.json](../formal-campaign/syntax-final.json)。Gate 的 Java 源在正式探针中编译并运行通过，四个既有探针文件保持原样。
 
-保留了直白的控制流，没有新增正式实验框架，也没有为了提高分数调整 Java 或 SPEC 参数。以上为本地代码检查记录，不是最终工程验收。
+正式 scripts/ 保持三个文件。以上是本地源码和执行检查记录，最终代码质量与工程验收仍由独立审阅决定。

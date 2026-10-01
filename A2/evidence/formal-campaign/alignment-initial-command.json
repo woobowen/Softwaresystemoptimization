@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\compare-host-current-time.ps1"
+  ],
+  "exit_code": 0
+}

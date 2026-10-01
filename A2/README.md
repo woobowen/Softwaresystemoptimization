@@ -31,15 +31,15 @@ SPEC（Standard Performance Evaluation Corporation）制定标准化性能基准
 
 各项的具体定义见[官方 workload 说明](https://www.spec.org/jvm2008/docs/benchmarks/index.html)。
 
-Base 各项采用统一的默认 JVM 配置，不允许手工调整 JVM 或规定运行时间；Peak 允许按测试项调优 JVM，并可延长运行时间。[User's Guide](https://www.spec.org/jvm2008/docs/UserGuide.html)、[Run and Reporting Rules](https://www.spec.org/jvm2008/docs/RunRules.html)
+Base 各项采用统一的默认 JVM 配置，不允许手工调优 JVM 或更改默认运行时间；Peak 允许按测试项调优 JVM，并可延长运行时间。[User's Guide](https://www.spec.org/jvm2008/docs/UserGuide.html)、[Run and Reporting Rules](https://www.spec.org/jvm2008/docs/RunRules.html)
 
 ## 2. 安装、环境配置与完整 Base
 
-SPECjvm2008 1.01（20090519）从[官方网站](https://www.spec.org/jvm2008/)下载，使用 JDK 8 安装到 `~/.local/opt/specjvm2008/`。实验选用[官方 OpenJDK 7u75 RI](https://jdk.java.net/java-se-ri/7)，位于 `~/.local/opt/java-se-7u75-ri/`。Java 21 的功能检查出现模块访问错误，JDK 8 的 compiler 启动测试也遇到兼容问题；相关限制见 [FAQ Q4.8](https://www.spec.org/jvm2008/docs/FAQ.html#Q4.8)和 [Known Issues](https://www.spec.org/jvm2008/docs/KnownIssues.html)。
+SPECjvm2008 1.01（20090519）从[官方网站](https://www.spec.org/jvm2008/)下载，使用 JDK 8 运行安装器的 `-i console` 模式，安装到 `~/.local/opt/specjvm2008/`。实验选用[官方 OpenJDK 7u75 RI](https://jdk.java.net/java-se-ri/7)，位于 `~/.local/opt/java-se-7u75-ri/`。Java 21 的功能检查出现模块访问错误，JDK 8 的 compiler 启动测试也遇到兼容问题；相关限制见 [FAQ Q4.8](https://www.spec.org/jvm2008/docs/FAQ.html#Q4.8)和 [Known Issues](https://www.spec.org/jvm2008/docs/KnownIssues.html)。
 
 `JAVA_HOME` 指向该 JDK，`PATH` 将其 `bin` 放在首位；`CLASSPATH`、`JAVA_TOOL_OPTIONS`、`_JAVA_OPTIONS` 和 `JDK_JAVA_OPTIONS` 均不设置。JDK 7 自带 FreeType 与系统 fontconfig 不兼容，运行时通过 `LD_PRELOAD` 使用系统库，使报告图像正常生成。
 
-![JDK 与实验环境](images/04-environment.png)
+![JDK 与实验环境](images/04-final-environment.png)
 
 ```bash
 export JAVA_HOME="$HOME/.local/opt/java-se-7u75-ri"
@@ -53,19 +53,25 @@ java -jar SPECjvm2008.jar --base
 
 Base 使用默认 JVM 配置，properties 未修改。普通吞吐项目预热 120 秒、测量 240 秒。
 
-环境搭建已完成，但 WSL2 出现计时异常，已有 Base 成绩不能用于正式性能分析。完整 Base 将在计时环境稳定后重新测量。
+![Base 原生结果汇总](images/05-final-base-summary.png)
+
+Base 总体成绩为 **604.34 ops/m**，包含 38 个计分 workload。完整原生结果保存在 [results/base/SPECjvm2008.015/](results/base/SPECjvm2008.015/)，包含 raw、TXT、HTML、summary、sub 和报告图片。
+
+WSL2 前期出现过离散时间校正，因此这次测量使用 `tsc`，暂时停止 `systemd-timesyncd`，并以 Windows 主机计时对照 Linux 单调时钟。全部测量结束后已恢复服务。
 
 ## 3. 总体结果与测试项分析
 
-尚未得到可靠的总体成绩和分项成绩，不能进行数值比较。计划分析以下三个具体测试项：
+总体成绩为 **604.34 ops/m**。从同一次完整 Base 中选取三个具体测试项：
 
-| Workload | 主要特点 |
-|---|---|
-| compress | 对真实文件数据进行 LZW 压缩和解压，涉及字符串匹配、整数运算和数组访问 |
-| derby | Java 数据库逻辑、锁与 BigDecimal 高精度计算 |
-| crypto.aes | 使用 JRE 实现的 AES、DES 加解密，包含不同输入大小和加密模式 |
+![Base 中的三个测试项](images/06-final-workloads.png)
 
-各项操作的定义不同，ops/m 的比例不能直接解释为同一任务的加速比。[compress](https://www.spec.org/jvm2008/docs/benchmarks/compress.html)、[derby](https://www.spec.org/jvm2008/docs/benchmarks/derby.html)、[crypto](https://www.spec.org/jvm2008/docs/benchmarks/crypto.html)
+| Workload | 成绩（ops/m） |
+|---|---:|
+| compress | 792.54 |
+| derby | 1148.35 |
+| crypto.aes | 397.00 |
+
+这三项中 derby 的 ops/m 最高，crypto.aes 最低。compress 主要进行 LZW 压缩、解压和数组访问；derby 结合数据库逻辑、锁与 BigDecimal 运算；crypto.aes 使用 JRE 的 AES、DES 实现，运算路径和每次操作的数据量不同。这些差异会影响每分钟完成的操作数，不能将不同 workload 的分数比直接解释为加速比。[compress](https://www.spec.org/jvm2008/docs/benchmarks/compress.html)、[derby](https://www.spec.org/jvm2008/docs/benchmarks/derby.html)、[crypto](https://www.spec.org/jvm2008/docs/benchmarks/crypto.html)
 
 ## 4. 与官方结果比较
 
@@ -79,34 +85,62 @@ Base 使用默认 JVM 配置，properties 未修改。普通吞吐项目预热 1
 | CPU | 2 × Xeon E5-2660 v3，20 核、40 逻辑处理器，2.60 GHz | Core Ultra 9 185H，WSL2 中 22 个逻辑处理器 |
 | 内存 | 256 GB，16 × 16 GB DDR4-2133 | WSL2 中 15.42 GiB |
 | JDK/JVM | Red Hat OpenJDK 1.7.0_45，64-Bit Server VM 24.45-b08 | OpenJDK 1.7.0_75 RI，64-Bit Server VM 24.75-b04 |
-| Base 总体结果 | 853.15 ops/m | 尚无可靠成绩 |
+| Base 总体结果 | 853.15 ops/m | 604.34 ops/m |
 
-两台机器的处理器、内存、JVM 和操作系统均不同，后续比较应考虑软硬件的共同影响。目前不能计算本机与官方结果的性能差距。
+本机总体成绩低于这条官方记录。官方机器使用双路服务器处理器、更多逻辑处理器和更大内存，本机则在 WSL2 中运行；两者的操作系统和 JVM 版本也不同。这些软硬件差异会共同影响结果，不能把差距全部归因于某一项配置。
 
 ## 5. 单项三次独立运行
 
-选择 compress，保持 JDK、环境变量、线程数和预热/测量时间一致，每次新建 JVM：
+选择 compress，保持 JDK 和环境变量一致，使用 22 个线程、120 秒预热和 240 秒测量。每次新建 JVM，两次之间间隔约 1 分钟：
 
 ```bash
 java -jar SPECjvm2008.jar compress
 ```
 
-旧三次结果受时钟异常影响，不能用于计算正式均值和波动范围；三次测量将在计时环境稳定后重新完成。即使计时正常，JIT 编译、垃圾回收、操作系统调度和缓存状态也可能造成运行间差异，WSL2 还与宿主共享资源。
+三次完整结果见 [results/repeat/](results/repeat/)。
+
+![compress 三次独立运行](images/08-final-repeat.png)
+
+| 次数 | compress（ops/m） |
+|---|---:|
+| 1 | 667.24 |
+| 2 | 663.45 |
+| 3 | 711.79 |
+| 均值 | **680.83** |
+| 最小值～最大值 | 663.45～711.79 |
+| 极差 | 48.34 |
+| 相对极差 | 7.10% |
+
+相对极差为“极差 / 均值 × 100%”。JIT 编译、垃圾回收、操作系统调度和缓存状态都可能造成运行间差异，WSL2 还与宿主共享资源，因此需要结合多次结果比较性能。
 
 ## 6. 运行体会与问题处理
 
-全套短测先暴露了兼容问题。JDK 8 的 startup.compiler.sunflow 因套件未读取子进程的大量 stderr 而阻塞，改用 Java 7 后启动测试正常；报告字体库冲突则通过预加载系统 FreeType 解决。只看退出码容易漏掉报告错误，因为字体故障时 Java 进程仍返回了 0。
+套件较旧，需要先检查 JDK 兼容性。JDK 8 的 startup.compiler.sunflow 因套件未读取子进程的大量 stderr 而阻塞，改用 Java 7 后启动测试正常；报告字体库冲突则通过预加载系统 FreeType 解决。字体故障时 Java 进程仍返回 0，因此还需要检查原生报告和图片。
 
-时钟问题说明，计算结果正确并不代表性能计时可靠。更换运行时 clocksource 后异常仍未消除，需要先在稳定环境中重新测量，再比较重复运行的波动和参数变化；单次小幅变化不足以证明优化有效。
+时钟问题也说明，计算结果正确不代表性能计时可靠。比较 JVM 参数时，既要看多次运行的均值，也要看波动范围，不能仅凭一次分数升高就判断优化有效。
 
 ## 7. 修改一个 JVM 参数
 
-固定选择 **`-XX:+UseSerialGC`**，比较默认收集器与 Serial GC，其他实验条件保持一致：
+选择 **`-XX:+UseSerialGC`**，比较默认收集器与 Serial GC，其他实验条件保持一致：
 
 ```bash
 java -XX:+UseSerialGC -jar SPECjvm2008.jar compress
 ```
 
-Serial GC 改变垃圾回收的并行程度和线程协调开销，可能影响创建对象和数组的 compress 工作负载。[Java 7 GC Ergonomics](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/gc-ergonomics.html)
+三次完整结果见 [results/parameter/](results/parameter/)。
 
-两组三次测量将在计时环境稳定后重新完成。旧数据不用于正式性能结论，因此目前不能给出均值变化百分比，也不能判断该参数是否改善性能。
+![默认配置与 Serial GC 比较](images/09-final-parameter.png)
+
+| 次数 / 统计 | 默认配置（ops/m） | Serial GC（ops/m） |
+|---|---:|---:|
+| 1 | 667.24 | 698.80 |
+| 2 | 663.45 | 728.66 |
+| 3 | 711.79 | 737.95 |
+| 均值 | **680.83** | **721.80** |
+| 最小值～最大值 | 663.45～711.79 | 698.80～737.95 |
+| 极差 | 48.34 | 39.15 |
+| 相对极差 | 7.10% | 5.42% |
+
+均值变化按“（Serial 均值 / 默认均值 − 1）× 100%”计算，为 **+6.02%**。两组区间重叠，且变化幅度与运行间波动接近，三次测量不足以确认稳定提升。
+
+Serial GC 改变垃圾回收的并行程度和线程协调开销，可能影响创建对象和数组的 compress 工作负载。[Java 7 GC Ergonomics](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/gc-ergonomics.html)

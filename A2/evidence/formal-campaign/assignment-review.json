@@ -1,0 +1,16 @@
+{
+  "source": "materials/A2/A2 SPECjvm2008\u57fa\u51c6\u8bc4\u6d4b.pdf",
+  "sha256": "082f314ba649486afbff73b3af458b6b02d9b9e41ea9b7a64ecccf7fd0bce4dd",
+  "questions_present": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true
+  },
+  "requires_complete_native_results": true,
+  "teacher_branch": "homework02",
+  "submission_authorized": false
+}

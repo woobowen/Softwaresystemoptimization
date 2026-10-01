@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-01T15:10:05.908512+08:00",
+  "previous_full_check": "installed-kit-recheck.json",
+  "files_stat_checked": 777,
+  "files_newer_than_full_check": [],
+  "version": "\n            Benchmark=     SPECjvm2008\n            Kit_version=   1.01\n            Build_user=    dagastin\n            Build_date=    20090519\n        ",
+  "reuse_verified_hashes": true
+}

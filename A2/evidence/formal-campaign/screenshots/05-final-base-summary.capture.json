@@ -1,0 +1,9 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/05-final-base-summary.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/formal-campaign/screenshots/05-final-base-summary.sh",
+  "command_exit_code": 0,
+  "commands_sha256": "23d40fc59f97d698750a2591edb03da062ebc88b31dc6f2efa6511197f329988",
+  "captured_at": "2026-10-01T18:49:52.051130+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "d43a8607d7a668e6d523b93a1d37a773a9b4b3b025386d5e8d6be139031e847d"
+}

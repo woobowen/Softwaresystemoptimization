@@ -1,0 +1,10 @@
+{
+  "status": "RESOLVED_PRE_SYNC_ALIGNED",
+  "previous_record": "preparation/pending-decision.json",
+  "authorized_decision": "Do not block on NTP server offset; use bounded direct alignment observation and the final timesyncd-off host-referenced gate",
+  "campaign": "campaign.json",
+  "direct_alignment": "alignment-observations.json",
+  "shuishan_authorized": false,
+  "resolution": "pre-sync-decision.json",
+  "old_read_query_issue": "preparation/service-query-activation/cause-and-fix.json"
+}
