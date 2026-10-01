@@ -10,13 +10,15 @@
   "no_teacher_submission": true,
   "independent_final_engineering_review": "PENDING",
   "followup_scope": "Record verification receipts and their internal tools; no README/results/images/formal script changes. Final receipt-commit SHA is verified again after push and reported in the final response.",
-  "browser_capture_note": "GitHub uses a nested scrolling container; initial window scrolling did not reach the intended positions. Re-captured the actual article; no pixel editing.",
+  "browser_capture_note": "Screenshots show the actual Q7 parameter comparison and concluding table/prose, named for those views. GitHub uses nested scrolling, so window scrolling did not establish a top-of-document screenshot; no top screenshot is claimed. Full Q1\u2013Q7 structure and all six loaded images were checked from the rendered article DOM. No pixel editing.",
   "screenshot_sha256": {
-    "readme-bottom.png": "9738cbd55b74a5914498c3688ad489b33fbe2a6c739c487f51b16091091b247c",
-    "readme-top.png": "154bce173f701d7f918379ff6b9725cb600d6db8d0a122e3bad727e4277b0c95"
+    "readme-parameter.png": "154bce173f701d7f918379ff6b9725cb600d6db8d0a122e3bad727e4277b0c95",
+    "readme-conclusion.png": "9738cbd55b74a5914498c3688ad489b33fbe2a6c739c487f51b16091091b247c"
   },
-  "verification_tool_sha256": {
-    "verify-github-readme.cjs": "b721c9add0f8d4284ccf9ac5bc2f86c0b2c2821b46ae3d8a7c658eed46177546",
+  "published_verification_tool_sha256": {
+    "verify-github-readme.cjs": "48dca5358ac39ded7d7b2b93eb436b855ca57d375ff44c558630b78b189cd041",
     "verify-github-files.py": "e4f49487b8e7344b7e04d3a63c7216d8bd512e8a101eb634ef3641fbaaafdd97"
-  }
+  },
+  "capture_tool_source_commit": "8cef9bd4258ea44d7c94c7eef8388f391652ab95",
+  "updated_at": "2026-10-01T19:13:25.357387+08:00"
 }
