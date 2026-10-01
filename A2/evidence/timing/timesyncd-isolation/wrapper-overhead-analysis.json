@@ -1,0 +1,11 @@
+{
+  "noop_host_seconds": 0.1658154,
+  "sleep_requested_seconds": 5,
+  "sleep_host_seconds": 5.5291333,
+  "sleep_excess_seconds": 0.5291332999999998,
+  "self_test_host_minus_monotonic_seconds": 1.8463653289975568,
+  "self_test_host_minus_raw_seconds": 0.4827169989978515,
+  "self_test_guest_preparation_seconds": 0.343451032997109,
+  "self_test_guest_teardown_until_summary_seconds": 0.0079017850002856,
+  "interpretation": "Noop estimates a single WSL invocation. Sleep excess also includes guest sleep/timekeeping and scheduler behavior. Do not subtract the entire sleep excess as a known constant from Gates. Self-test was timesyncd active and is not a stability Gate."
+}

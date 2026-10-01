@@ -1,0 +1,76 @@
+{
+  "before": {
+    "argv": [
+      "systemctl",
+      "is-active",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 3,
+    "stdout": "inactive\n",
+    "stderr": ""
+  },
+  "clocksource": "tsc",
+  "adjtimex_compile": {
+    "argv": [
+      "cc",
+      "-o",
+      "/tmp/a2-before-restore-87692stu/adjtimex-read",
+      "A2/evidence/tools/read-adjtimex.c"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "adjtimex_read_only_before_start": {
+    "argv": [
+      "/tmp/a2-before-restore-87692stu/adjtimex-read"
+    ],
+    "exit_code": 0,
+    "stdout": "state=0 status=8192 tick=10000 freq_scaled_ppm=-9551 offset=0 tolerance=32768000 constant=1 precision=1\n",
+    "stderr": ""
+  },
+  "start": {
+    "argv": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--user",
+      "root",
+      "--exec",
+      "systemctl",
+      "start",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "after": {
+    "argv": [
+      "systemctl",
+      "is-active",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 0,
+    "stdout": "active\n",
+    "stderr": ""
+  },
+  "timedatectl_status": {
+    "argv": [
+      "timedatectl",
+      "status"
+    ],
+    "exit_code": 0,
+    "stdout": "               Local time: Thu 2026-10-01 12:45:07 CST\n           Universal time: Thu 2026-10-01 04:45:07 UTC\n                 RTC time: Thu 2026-10-01 04:45:07\n                Time zone: Asia/Shanghai (CST, +0800)\nSystem clock synchronized: yes\n              NTP service: active\n          RTC in local TZ: no\n",
+    "stderr": ""
+  },
+  "timesync_status": {
+    "argv": [
+      "timedatectl",
+      "timesync-status"
+    ],
+    "exit_code": 0,
+    "stdout": "       Server: 185.125.190.58 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n Packet count: 0\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+    "-Mode",
+    "Noop"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "\ufffd\u07b7\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u013c\ufffd \\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-ref\r\nerence-gate.ps1\ufffd\ufffd\u03b4\ufffd\ufffd\ufffd\u013c\ufffd \\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\\r\nrun-host-reference-gate.ps1 \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u01e9\ufffd\ufffd\ufffd\ufffd\ufffd\u07b7\ufffd\ufffd\u06b5\ufffd\u01f0\u03f5\u0373\ufffd\ufffd\ufffd\ufffd\ufffd\u0438\u00fd\u0171\ufffd\ufffd\ufffd\ufffd\u0439\ufffd\ufffd\ufffd\ufffd\u043d\u0171\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u05b4\ufffd\u0432\ufffd\ufffd\u0535\ufffd\ufffd\ufffd\u03f8\ufffd\ufffd\u03e2\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd https:\r\n/go.microsoft.com/fwlink/?LinkID=135170 \ufffd\u0435\ufffd about_Execution_Policies\ufffd\ufffd\r\n    + CategoryInfo          : SecurityError: (:) []\ufffd\ufffdParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : UnauthorizedAccess\r\n",
+  "stderr_decoding_note": "Initial Windows error was decoded with UTF-8 replacement; UnauthorizedAccess and unsigned-script failure were visible. No probe started.",
+  "resolution": "Use -ExecutionPolicy Bypass only for the child PowerShell process; no Set-ExecutionPolicy command."
+}

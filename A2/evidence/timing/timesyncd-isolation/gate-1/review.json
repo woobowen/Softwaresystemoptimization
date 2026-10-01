@@ -1,0 +1,10 @@
+{
+  "probe_sources_match": true,
+  "raw_recalculation_pass": true,
+  "both_clock_step_counts_zero": true,
+  "host_difference_below_two_seconds": true,
+  "unaccounted_after_guest_preparation_and_teardown_seconds": 0.09910644800047286,
+  "wrapper_synchronous_invocation_review": "Stopwatch starts before wsl.exe and stops in finally after synchronous native invocation returns. Exit status is copied immediately. Independent enclosing host counters agree within milliseconds.",
+  "internal_gate_result": "PASS",
+  "not_a_spec_rule": true
+}

@@ -1,0 +1,90 @@
+{
+  "directory": "gate-2",
+  "method": "Decimal raw endpoint and interval subtraction; host ElapsedTicks/Frequency",
+  "samples_sha256": "f4dd025c5524e8fdbb892cf2f996f464c55f40f92a544afe4d21c5de63b3f0bc",
+  "sample_count": 601,
+  "host_stopwatch_seconds": 600.4229866,
+  "host_wall_seconds": 600.426095,
+  "enclosing_counter_seconds": 600.424012,
+  "elapsed_seconds": {
+    "python_time": 600.0001932,
+    "python_monotonic": 600.000193143,
+    "python_monotonic_raw": 600.000273564,
+    "python_boottime": 600.000194152,
+    "java_currentTimeMillis": 600.0,
+    "java_nanoTime": 600.000329258
+  },
+  "host_minus_guest_seconds": {
+    "python_time": 0.4227934,
+    "python_monotonic": 0.422793457,
+    "python_monotonic_raw": 0.422713036,
+    "python_boottime": 0.422792448,
+    "java_currentTimeMillis": 0.4229866,
+    "java_nanoTime": 0.422657342
+  },
+  "wall_minus_monotonic_seconds": 5.7e-08,
+  "java_wall_minus_nano_seconds": -0.000329258,
+  "intervals": {
+    "python": {
+      "counts": {
+        "0.05": {
+          "forward": 0,
+          "backward": 0
+        },
+        "0.5": {
+          "forward": 0,
+          "backward": 0
+        },
+        "1.0": {
+          "forward": 0,
+          "backward": 0
+        }
+      },
+      "min_difference_seconds": -1.276e-06,
+      "max_difference_seconds": 9.26e-07,
+      "backward_wall_intervals": 0,
+      "max_monotonic_interval_seconds": 1.000420746
+    },
+    "java": {
+      "counts": {
+        "0.05": {
+          "forward": 0,
+          "backward": 0
+        },
+        "0.5": {
+          "forward": 0,
+          "backward": 0
+        },
+        "1.0": {
+          "forward": 0,
+          "backward": 0
+        }
+      },
+      "min_difference_seconds": -0.000850629,
+      "max_difference_seconds": 0.000847758,
+      "backward_wall_intervals": 0,
+      "max_monotonic_interval_seconds": 1.000447525
+    }
+  },
+  "checks": {
+    "sample_indices_contiguous": true,
+    "sample_count_matches": true,
+    "summary_elapsed_matches": true,
+    "host_ticks_match_seconds": true,
+    "host_dates_match_wall_seconds": true,
+    "clocksource_all_tsc": true,
+    "monotonic_target_reached": true,
+    "processes_succeeded": true,
+    "boot_id_unchanged": true,
+    "guest_integrity_reported": true,
+    "python_intervals_match": true,
+    "python_jump_counts_match": true,
+    "python_elapsed_positive": true,
+    "python_jump_events_match": true,
+    "java_intervals_match": true,
+    "java_jump_counts_match": true,
+    "java_elapsed_positive": true,
+    "java_jump_events_match": true
+  },
+  "all_checks_pass": true
+}

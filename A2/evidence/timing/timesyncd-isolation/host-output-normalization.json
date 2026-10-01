@@ -1,0 +1,23 @@
+[
+  {
+    "file": "gate-1/host-summary.json",
+    "original_sha256": "0e20cc23abd8b15d446478359cc68537c41642f584f3bf109cf3173116b1c267",
+    "saved_sha256": "1a9f96b8fb849fde26c640246addfd75c707a5643a97f2f7b969e8b25b0630c6",
+    "original_crlf_count": 33,
+    "only_change": "CRLF to LF; JSON tokens and measured values unchanged"
+  },
+  {
+    "file": "gate-2/host-summary.json",
+    "original_sha256": "f7867c70fa3b531da751c0968fb68c82bf08aefc9954e48d0c7d988132f48e1a",
+    "saved_sha256": "d48de1f000d8299f70875a357003d44b2e35c46a398bfb08c7e405e28c1b73be",
+    "original_crlf_count": 33,
+    "only_change": "CRLF to LF; JSON tokens and measured values unchanged"
+  },
+  {
+    "file": "active-control/host-summary.json",
+    "original_sha256": "d7e4575efafae6cca1711d4561a6d7859722b599663f48ed86a859709e767d8d",
+    "saved_sha256": "85838d9992310580b313bf4172bd3695eb382c5265dd17cad16b78046a757fcc",
+    "original_crlf_count": 33,
+    "only_change": "CRLF to LF; JSON tokens and measured values unchanged"
+  }
+]

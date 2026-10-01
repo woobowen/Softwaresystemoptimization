@@ -1,14 +1,15 @@
 # A2 工程证据索引
 
-当前状态为 **BLOCKED_ENVIRONMENT_TIMING**。此次 GitHub 提交是供诊断的 checkpoint；[当前说明](final/github-checkpoint.md)与[要求表](requirement-matrix.md)列明未完成项。没有可信 replacement Base、final 3+3 或水杉提交。
+最新 timing 判别状态为 **WSL_TIMING_ISOLATION_PASS**：两轮 timesyncd-off Host Stopwatch 联合探针通过，恢复 active 后的 180 秒 control 未复现多秒 step，见 [隔离实验结论](timing/timesyncd-isolation/conclusion.md)。这不代表 A2 完成；仍没有可信 replacement Base、final 3+3 或水杉提交。[此前诊断 checkpoint](final/github-checkpoint.md)保留当时失败证据，[要求表](requirement-matrix.md)中的正式实验缺项仍未完成。
 
 | 内容 | 入口 |
 |---|---|
+| Host Stopwatch 联合计时、timesyncd 隔离与恢复 | [方法与自测](timing/timesyncd-isolation/README.md)、[结论](timing/timesyncd-isolation/conclusion.md)、[独立复算](timing/timesyncd-isolation/independent-calculation.json) |
 | 三次长探针、原始样本与恢复记录 | [timing 调查](timing/conclusion.md)、[恢复结论](timing/recovery-conclusion.md) |
 | 旧 Base、repeat、Serial GC、timing diagnostic | [invalidated manifest](timing/invalidated-results/manifest.md) |
 | 源码、依赖和历史调用方式 | [tools](tools/README.md) |
 | runner / parser 当前检查 | [runner 测试](final/runner-tests-checkpoint.json)、[parser 历史 fixture 测试](final/parser-tests-checkpoint.json)、[语法/编译](final/checkpoint-syntax-checks.json) |
-| 本次保全、链接、文件卫生检查 | [本地验证记录](final/checkpoint-local-validation.json) |
+| 此前 checkpoint 的保全、链接、文件卫生检查 | [历史本地验证记录](final/checkpoint-local-validation.json) |
 | JDK / 字体兼容性 | [决策经历](compatibility/decision.md) |
 | 环境与历史安装记录 | [安装日志](environment/installation-log.md) |
 

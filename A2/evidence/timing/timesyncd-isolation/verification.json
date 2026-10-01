@@ -1,0 +1,24 @@
+{
+  "previous_sha": "1cf6011ff531a75ff09868185c4d6e92cd76df8b",
+  "python_syntax_ok": true,
+  "java_compilation_and_execution": "Passed in all four probes; command.json records each javac exit 0; Java exit 0",
+  "all_json_parse": true,
+  "all_raw_recalculations_pass": true,
+  "required_gate_files_present": true,
+  "probe_source_hashes_match": true,
+  "java_and_wrapper_stderr_empty": true,
+  "all_sleep_requests_cleared": true,
+  "links_checked": 97,
+  "missing_links": [],
+  "preserved_files_hashes_match": true,
+  "tracked_changes_before_staging": [
+    "A2/evidence/README.md",
+    "A2/evidence/tools/README.md"
+  ],
+  "new_files_over_2MiB": [],
+  "secret_pattern_findings": [],
+  "restore_checks_pass": true,
+  "scope": "A2 evidence only; no SPEC run, formal report edit, A1 edit, VM setup, or Shuishan action",
+  "new_packages_or_toolchains": [],
+  "persistent_config_changes": []
+}

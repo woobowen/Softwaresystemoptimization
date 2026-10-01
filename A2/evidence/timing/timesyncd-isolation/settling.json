@@ -1,0 +1,126 @@
+{
+  "target_seconds": 60,
+  "termination_clock": "CLOCK_MONOTONIC",
+  "samples": [
+    {
+      "index": 0,
+      "linux_before": {
+        "python_time": 1790828555.3362684,
+        "python_monotonic": 41159.190996706
+      },
+      "windows": {
+        "argv": [
+          "powershell.exe",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "[Console]::OutputEncoding=New-Object Text.UTF8Encoding($false); [DateTime]::UtcNow.ToString('o')"
+        ],
+        "exit_code": 0,
+        "stdout": "2026-10-01T04:22:35.5569805Z\r\n",
+        "stderr": ""
+      },
+      "linux_after": {
+        "python_time": 1790828555.6286128,
+        "python_monotonic": 41159.483341031
+      },
+      "clocksource": "tsc"
+    },
+    {
+      "index": 1,
+      "linux_before": {
+        "python_time": 1790828570.336248,
+        "python_monotonic": 41174.190977106
+      },
+      "windows": {
+        "argv": [
+          "powershell.exe",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "[Console]::OutputEncoding=New-Object Text.UTF8Encoding($false); [DateTime]::UtcNow.ToString('o')"
+        ],
+        "exit_code": 0,
+        "stdout": "2026-10-01T04:22:51.4719427Z\r\n",
+        "stderr": ""
+      },
+      "linux_after": {
+        "python_time": 1790828570.6331916,
+        "python_monotonic": 41174.487919996
+      },
+      "clocksource": "tsc"
+    },
+    {
+      "index": 2,
+      "linux_before": {
+        "python_time": 1790828585.336355,
+        "python_monotonic": 41189.191084179
+      },
+      "windows": {
+        "argv": [
+          "powershell.exe",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "[Console]::OutputEncoding=New-Object Text.UTF8Encoding($false); [DateTime]::UtcNow.ToString('o')"
+        ],
+        "exit_code": 0,
+        "stdout": "2026-10-01T04:23:05.6029263Z\r\n",
+        "stderr": ""
+      },
+      "linux_after": {
+        "python_time": 1790828585.6331322,
+        "python_monotonic": 41189.487860453
+      },
+      "clocksource": "tsc"
+    },
+    {
+      "index": 3,
+      "linux_before": {
+        "python_time": 1790828600.3363845,
+        "python_monotonic": 41204.191113753
+      },
+      "windows": {
+        "argv": [
+          "powershell.exe",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "[Console]::OutputEncoding=New-Object Text.UTF8Encoding($false); [DateTime]::UtcNow.ToString('o')"
+        ],
+        "exit_code": 0,
+        "stdout": "2026-10-01T04:23:20.5946545Z\r\n",
+        "stderr": ""
+      },
+      "linux_after": {
+        "python_time": 1790828600.621703,
+        "python_monotonic": 41204.476431127
+      },
+      "clocksource": "tsc"
+    },
+    {
+      "index": 4,
+      "linux_before": {
+        "python_time": 1790828615.3364015,
+        "python_monotonic": 41219.191131217
+      },
+      "windows": {
+        "argv": [
+          "powershell.exe",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "[Console]::OutputEncoding=New-Object Text.UTF8Encoding($false); [DateTime]::UtcNow.ToString('o')"
+        ],
+        "exit_code": 0,
+        "stdout": "2026-10-01T04:23:35.6106288Z\r\n",
+        "stderr": ""
+      },
+      "linux_after": {
+        "python_time": 1790828615.6341963,
+        "python_monotonic": 41219.488924298
+      },
+      "clocksource": "tsc"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "host_start_utc": "2026-10-01T04:20:51.1648324Z",
+  "host_end_utc": "2026-10-01T04:20:56.6957630Z",
+  "host_wall_seconds": 5.5309306,
+  "host_stopwatch_seconds": 5.5291333,
+  "stopwatch_elapsed_ticks": 55291333,
+  "stopwatch_frequency": 10000000,
+  "stopwatch_is_high_resolution": true,
+  "enclosing_counter_start": 717435920058,
+  "enclosing_counter_end": 717491222924,
+  "wsl_exit_code": 0,
+  "wrapper_error": null,
+  "mode": "Sleep",
+  "requested_seconds": 5,
+  "powershell_pid": 32472,
+  "powershell_version": "5.1.22621.6133",
+  "wsl_argv": [
+    "--distribution",
+    "Ubuntu-24.04",
+    "--user",
+    "addaswsw",
+    "--exec",
+    "/usr/bin/sleep",
+    "5"
+  ],
+  "temporary_awake_set_return": 2147483648,
+  "temporary_awake_clear_return": 2147483649
+}

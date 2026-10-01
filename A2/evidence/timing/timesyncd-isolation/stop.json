@@ -1,0 +1,48 @@
+{
+  "before": {
+    "argv": [
+      "systemctl",
+      "is-active",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 0,
+    "stdout": "active\n",
+    "stderr": ""
+  },
+  "clocksource": "tsc",
+  "stop": {
+    "argv": [
+      "wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--user",
+      "root",
+      "--exec",
+      "systemctl",
+      "stop",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "after": {
+    "argv": [
+      "systemctl",
+      "is-active",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 3,
+    "stdout": "inactive\n",
+    "stderr": ""
+  },
+  "timedatectl_status": {
+    "argv": [
+      "timedatectl",
+      "status"
+    ],
+    "exit_code": 0,
+    "stdout": "               Local time: Thu 2026-10-01 12:22:35 CST\n           Universal time: Thu 2026-10-01 04:22:35 UTC\n                 RTC time: Thu 2026-10-01 04:22:37\n                Time zone: Asia/Shanghai (CST, +0800)\nSystem clock synchronized: yes\n              NTP service: inactive\n          RTC in local TZ: no\n",
+    "stderr": ""
+  }
+}

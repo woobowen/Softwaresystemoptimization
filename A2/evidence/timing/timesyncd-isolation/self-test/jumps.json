@@ -1,0 +1,50 @@
+{
+  "python": {
+    "min_difference_seconds": -3.100649337284267e-07,
+    "max_difference_seconds": 1.6669994024850894,
+    "counts": {
+      "0.05": {
+        "forward": 1,
+        "backward": 0
+      },
+      "0.5": {
+        "forward": 1,
+        "backward": 0
+      },
+      "1.0": {
+        "forward": 1,
+        "backward": 0
+      }
+    },
+    "events_over_50ms": [
+      {
+        "sample_index": 1,
+        "difference_seconds": 1.6669994024850894
+      }
+    ]
+  },
+  "java": {
+    "min_difference_seconds": -7.382599999994355e-05,
+    "max_difference_seconds": 1.666830138,
+    "counts": {
+      "0.05": {
+        "forward": 1,
+        "backward": 0
+      },
+      "0.5": {
+        "forward": 1,
+        "backward": 0
+      },
+      "1.0": {
+        "forward": 1,
+        "backward": 0
+      }
+    },
+    "events_over_50ms": [
+      {
+        "sample_index": 1,
+        "difference_seconds": 1.666830138
+      }
+    ]
+  }
+}

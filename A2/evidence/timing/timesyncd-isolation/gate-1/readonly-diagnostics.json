@@ -1,0 +1,83 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd.service"
+      ],
+      "exit_code": 3,
+      "stdout": "inactive\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "show",
+        "systemd-timesyncd.service",
+        "-p",
+        "ActiveState",
+        "-p",
+        "SubState",
+        "-p",
+        "UnitFileState"
+      ],
+      "exit_code": 0,
+      "stdout": "ActiveState=inactive\nSubState=dead\nUnitFileState=enabled\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "journalctl",
+        "-k",
+        "-b",
+        "--no-pager",
+        "-o",
+        "short-monotonic",
+        "-n",
+        "100"
+      ],
+      "exit_code": 0,
+      "stdout": "[41943.131579] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[41973.839389] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[41973.897415] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[41979.423407] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[41979.471196] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42212.685219] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42212.727397] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42258.958656] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42259.035136] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42263.822356] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42263.894927] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42278.823709] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42278.886472] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42363.252706] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[42378.356962] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42378.451463] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42383.939322] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42383.998871] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42418.828375] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42418.973858] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42543.837013] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42543.893063] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42648.179593] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42648.258191] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42688.834326] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42688.899557] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[42720.126870] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[43074.107414] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[43083.833803] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43083.913673] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43223.829281] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43223.869281] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43230.638702] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43230.721516] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43256.443514] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43256.590269] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43299.161918] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[43308.256132] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43308.377756] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43344.023607] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43344.189739] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43354.963748] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43355.062105] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43378.833882] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43378.922164] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43391.865047] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43391.988753] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43423.041008] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43423.102935] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43428.614743] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43428.696697] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43438.831503] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43438.910222] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43456.266513] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[43468.842405] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43468.905886] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43557.822341] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43557.899989] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43638.939087] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43639.020859] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43748.825782] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43748.895904] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43762.017928] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43762.097262] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43762.112484] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43768.875963] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43768.936738] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43768.953547] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43783.850660] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43783.918799] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43783.926641] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43828.938980] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43829.169064] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43829.239475] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43883.331198] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43883.388425] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43883.404868] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43898.814992] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43898.862352] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43898.867401] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: connect() failed: 101\n[43913.877813] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43913.969165] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43928.845367] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43928.930776] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43945.380415] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[43945.484005] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44068.287757] LAPTOP-KI0GT6AJ kernel: mini_init (212): drop_caches: 1\n[44411.720491] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44411.800241] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44598.718752] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44598.808445] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44696.806888] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44696.890716] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44748.309633] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44748.361564] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44973.857555] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[44973.932466] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[45110.189878] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[45110.233932] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n[45115.764452] LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd.service",
+        "-b",
+        "--no-pager",
+        "-o",
+        "short-monotonic",
+        "-n",
+        "25"
+      ],
+      "exit_code": 0,
+      "stdout": "[    4.795353] LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\n[    4.854449] LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\n[    5.242813] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\n[    5.243068] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Initial clock synchronization to Thu 2026-10-01 00:01:21.200676 CST.\n[ 1238.840591] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).\n[ 4518.342590] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).\n[ 6458.813137] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).\n[ 6459.014793] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\n[37188.518233] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\n[41159.050584] LAPTOP-KI0GT6AJ systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...\n[41159.106000] LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\n[41159.106338] LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\n[41159.106805] LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Consumed 6.021s CPU time, 5.5M memory peak, 0B memory swap peak.\n",
+      "stderr": ""
+    }
+  ],
+  "adjtimex_read_only_modes": 0,
+  "adjtimex_compile": {
+    "argv": [
+      "cc",
+      "-o",
+      "/tmp/a2-gate-readonly-hvkrspyg/adjtimex-read",
+      "A2/evidence/tools/read-adjtimex.c"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "adjtimex_query": {
+    "argv": [
+      "/tmp/a2-gate-readonly-hvkrspyg/adjtimex-read"
+    ],
+    "exit_code": 0,
+    "stdout": "state=0 status=8192 tick=10000 freq_scaled_ppm=-8898 offset=0 tolerance=32768000 constant=1 precision=1\n",
+    "stderr": ""
+  },
+  "clocksource": "tsc",
+  "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6"
+}

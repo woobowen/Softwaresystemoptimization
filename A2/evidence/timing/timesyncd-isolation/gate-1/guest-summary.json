@@ -1,0 +1,31 @@
+{
+  "sample_count": 601,
+  "requested_seconds": 600,
+  "elapsed_seconds": {
+    "python_time": 600.0001766681671,
+    "python_monotonic": 600.000176763002,
+    "python_monotonic_raw": 600.0002656020006,
+    "python_boottime": 600.0001776849967,
+    "java_currentTimeMillis": 600.0,
+    "java_nanoTime": 600.000288471
+  },
+  "java_exit_code": 0,
+  "python_pid": 161828,
+  "java_pid": 161856,
+  "boot_id_before": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "boot_id_after": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "clocksource_values": [
+    "tsc"
+  ],
+  "service_before": "inactive",
+  "service_after": "inactive",
+  "first_timestamp": "2026-10-01T04:23:52.807631+00:00",
+  "last_timestamp": "2026-10-01T04:33:52.807807+00:00",
+  "entry_to_first_sample_seconds": 0.3287819929973921,
+  "last_sample_to_summary_seconds": 0.008690196002135053,
+  "max_request_roundtrip_seconds": 0.0008099980041151866,
+  "max_monotonic_interval_seconds": 1.0003948300000047,
+  "python_wall_minus_monotonic_seconds": -9.483483154326677e-08,
+  "java_wall_minus_nano_seconds": -0.00028847099997619807,
+  "probe_integrity_ok": true
+}

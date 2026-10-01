@@ -1,0 +1,31 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd.service",
+        "-b",
+        "--no-pager",
+        "-o",
+        "short-monotonic",
+        "-n",
+        "12"
+      ],
+      "exit_code": 0,
+      "stdout": "[ 4518.342590] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).\n[ 6458.813137] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).\n[ 6459.014793] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\n[37188.518233] LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\n[41159.050584] LAPTOP-KI0GT6AJ systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...\n[41159.106000] LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\n[41159.106338] LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\n[41159.106805] LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Consumed 6.021s CPU time, 5.5M memory peak, 0B memory swap peak.\n[42511.272597] LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\n[42511.303397] LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\n[42511.544056] LAPTOP-KI0GT6AJ systemd-timesyncd[168850]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\n[42511.544435] LAPTOP-KI0GT6AJ systemd-timesyncd[168850]: Initial clock synchronization to Thu 2026-10-01 12:45:09.802765 CST.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd.service"
+      ],
+      "exit_code": 0,
+      "stdout": "active\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Post-control service journal; timing conclusions use Stopwatch and raw intervals"
+}

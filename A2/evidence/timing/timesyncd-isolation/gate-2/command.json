@@ -1,0 +1,45 @@
+{
+  "python_argv": [
+    "/usr/bin/python3",
+    "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/host-reference-probe.py",
+    "/home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/timesyncd-isolation/gate-2",
+    "--seconds",
+    "600",
+    "--expected-service",
+    "inactive"
+  ],
+  "python_pid": 165290,
+  "jdk": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+  "expected_service": "inactive",
+  "target_seconds": 600,
+  "termination_clock": "CLOCK_MONOTONIC",
+  "sampling_seconds": 1,
+  "source_sha256": {
+    "host-reference-probe.py": "da0f322a2f8269d28907e8a68d1105ba9a8149409546692af14d910fc6203bc1",
+    "HostReferenceClock.java": "dbb8f83895076b013cb4f36fc107ca604b0776bbc6d4a0b51febcf11175a2823",
+    "run-host-reference-gate.ps1": "ef22a6698b7f19eb5840f6dc05dea8d01d057b0a18186c47528841b89a1f10eb"
+  },
+  "java_option_environment": {
+    "JAVA_TOOL_OPTIONS": null,
+    "_JAVA_OPTIONS": null,
+    "JDK_JAVA_OPTIONS": null
+  },
+  "compile": {
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/javac",
+      "-d",
+      "/tmp/a2-host-clock-6_gyict8",
+      "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/HostReferenceClock.java"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "java_argv": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-cp",
+    "/tmp/a2-host-clock-6_gyict8",
+    "HostReferenceClock"
+  ],
+  "java_pid": 165324
+}

@@ -1,0 +1,17 @@
+{
+  "powershell_pids": [
+    42632,
+    35712
+  ],
+  "python_pids": [
+    161828,
+    165290
+  ],
+  "java_pids": [
+    161856,
+    165324
+  ],
+  "independent_output_directories": true,
+  "source_hashes_match": true,
+  "both_internal_gates_pass": true
+}

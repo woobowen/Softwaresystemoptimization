@@ -1,0 +1,10 @@
+{
+  "probe_sources_match": true,
+  "raw_recalculation_pass": true,
+  "all_step_counts_over_50ms_zero": true,
+  "host_difference_below_two_seconds": true,
+  "unaccounted_after_guest_preparation_and_teardown_seconds": 0.11695291900024335,
+  "role": "600-second isolation gate",
+  "internal_result": "PASS",
+  "not_a_spec_rule": true
+}

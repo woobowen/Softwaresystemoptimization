@@ -1,0 +1,84 @@
+{
+  "syntax_ok": true,
+  "checks": [
+    {
+      "mode": "Noop",
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+        "-Mode",
+        "Noop",
+        "-Seconds",
+        "1"
+      ],
+      "process_exit_code": 0,
+      "host_seconds": 0.1658154
+    },
+    {
+      "mode": "Sleep",
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+        "-Mode",
+        "Sleep",
+        "-Seconds",
+        "5"
+      ],
+      "process_exit_code": 0,
+      "host_seconds": 5.5291333
+    },
+    {
+      "mode": "ExitCheck",
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+        "-Mode",
+        "ExitCheck",
+        "-Seconds",
+        "1"
+      ],
+      "process_exit_code": 7,
+      "host_seconds": 0.12466899999999999
+    },
+    {
+      "mode": "Probe",
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+        "-Mode",
+        "Probe",
+        "-Seconds",
+        "15",
+        "-GuestOutput",
+        "/home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/timesyncd-isolation/self-test",
+        "-ExpectedService",
+        "active"
+      ],
+      "process_exit_code": 0,
+      "host_seconds": 16.8464643
+    }
+  ],
+  "sample_count": 16,
+  "guest_integrity_ok": true,
+  "sources_present": true
+}

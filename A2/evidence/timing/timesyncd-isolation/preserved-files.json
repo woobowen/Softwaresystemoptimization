@@ -1,0 +1,27 @@
+[
+  {
+    "file": "A2/evidence/tools/clock-probe.py",
+    "sha256": "f6f91e16d0105043649279da95e087cded10b4152a1f9f3728fa3b30f775e6b6",
+    "unchanged_from_checkpoint": true
+  },
+  {
+    "file": "A2/evidence/tools/ClockProbe.java",
+    "sha256": "2bcdbe8be4aba82599d71c4b9752028e56e93f4d5cfedda25cad2ad2cd96544d",
+    "unchanged_from_checkpoint": true
+  },
+  {
+    "file": "A2/README.md",
+    "sha256": "0a7f872163d4364fd958547b2e5c5b571867e981840d0c4fee567ec0329e8fab",
+    "unchanged_from_checkpoint": true
+  },
+  {
+    "file": "AGENTS.md",
+    "sha256": "df8077416ee09a16485e20b00918809e34e09ee08458c33985fe2ee641e2d0e6",
+    "unchanged_from_checkpoint": true
+  },
+  {
+    "file": ".gitignore",
+    "sha256": "e8ee610c6badc98b0df4aade529b95768fed7ae092f2c13cb70088ca10679a09",
+    "unchanged_from_checkpoint": true
+  }
+]

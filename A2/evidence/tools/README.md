@@ -1,6 +1,15 @@
 # 内部工具与历史探针入口
 
-这些工具用于追溯已有实验和检查脚本。当前发布阶段不执行 clock probe、clock monitor、SPEC 或系统诊断；下一步环境方案待 GitHub 文件级检查后决定。
+这些工具用于内部计时诊断和追溯已有实验。最新阶段仅运行 [Windows Host Stopwatch 联合探针](../timing/timesyncd-isolation/README.md)，没有运行 SPEC benchmark。历史 probe 和 raw 保留原样。
+
+## Windows Host Stopwatch 联合探针
+
+- [run-host-reference-gate.ps1](run-host-reference-gate.ps1)：在 Windows 上用 Stopwatch 完整包围一次 WSL 调用，输出 host JSON；也支持 sleep、空调用和退出码边界检查。
+- [host-reference-probe.py](host-reference-probe.py)、[HostReferenceClock.java](HostReferenceClock.java)：约 1 Hz 读取四种 Linux clocks 和 Java 7 两种 clocks，以 monotonic 控制采样时长。
+- [capture-isolation-state.py](capture-isolation-state.py)：只读环境、服务状态、配置 SHA256 和 `adjtimex(modes=0)`。
+- [recalculate-host-reference.py](recalculate-host-reference.py)：从 raw samples 和 host ticks 独立复算，不启动 probe 或修改服务。
+
+测量边界、运行记录及结果均见 [timesyncd-isolation](../timing/timesyncd-isolation/README.md)。这些工具不自动停止或恢复 timesyncd；对应操作保存在该目录的 `stop.json`、`start-control.json` 和 `restore.json`。
 
 ## Python / Java timing probe
 

@@ -1,0 +1,34 @@
+{
+  "compile": {
+    "argv": [
+      "cc",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/tmp/a2-off-adjtimex-53z9815x/read-adjtimex",
+      "A2/evidence/tools/read-adjtimex.c"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "read_only_modes": 0,
+  "query": {
+    "argv": [
+      "/tmp/a2-off-adjtimex-53z9815x/read-adjtimex"
+    ],
+    "exit_code": 0,
+    "stdout": "state=0 status=8192 tick=10000 freq_scaled_ppm=106848 offset=0 tolerance=32768000 constant=1 precision=1\n",
+    "stderr": ""
+  },
+  "service": {
+    "argv": [
+      "systemctl",
+      "is-active",
+      "systemd-timesyncd.service"
+    ],
+    "exit_code": 3,
+    "stdout": "inactive\n",
+    "stderr": ""
+  }
+}

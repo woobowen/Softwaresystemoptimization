@@ -1,0 +1,33 @@
+{
+    "host_start_utc":  "2026-10-01T04:23:52.3924179Z",
+    "host_end_utc":  "2026-10-01T04:33:52.8309767Z",
+    "host_wall_seconds":  600.4385588,
+    "host_stopwatch_seconds":  600.43675539999992,
+    "stopwatch_elapsed_ticks":  6004367554,
+    "stopwatch_frequency":  10000000,
+    "stopwatch_is_high_resolution":  true,
+    "enclosing_counter_start":  719248192789,
+    "enclosing_counter_end":  725252573537,
+    "wsl_exit_code":  0,
+    "wrapper_error":  null,
+    "mode":  "Probe",
+    "requested_seconds":  600,
+    "powershell_pid":  42632,
+    "powershell_version":  "5.1.22621.6133",
+    "wsl_argv":  [
+                     "--distribution",
+                     "Ubuntu-24.04",
+                     "--user",
+                     "addaswsw",
+                     "--exec",
+                     "/usr/bin/python3",
+                     "/home/addaswsw/lab/Software_system_optimization/A2/evidence/tools/host-reference-probe.py",
+                     "/home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/timesyncd-isolation/gate-1",
+                     "--seconds",
+                     "600",
+                     "--expected-service",
+                     "inactive"
+                 ],
+    "temporary_awake_set_return":  2147483648,
+    "temporary_awake_clear_return":  2147483649
+}

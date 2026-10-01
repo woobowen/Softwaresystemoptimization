@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "\\\\wsl.localhost\\Ubuntu-24.04\\home\\addaswsw\\lab\\Software_system_optimization\\A2\\evidence\\tools\\run-host-reference-gate.ps1",
+    "-Mode",
+    "Probe",
+    "-Seconds",
+    "600",
+    "-GuestOutput",
+    "/home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/timesyncd-isolation/gate-2",
+    "-ExpectedService",
+    "inactive"
+  ],
+  "process_exit_code": 0
+}
