@@ -1,0 +1,352 @@
+Independent review: GCC O3 kernel assembly, no timed workload
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+SOURCE P1/src/matrix_multiplication.original.c
+source_sha256=188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15
+command=['gcc', '-std=c11', '-Wall', '-Wextra', '-O3', '-S', '/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.original.c', '-o', '/tmp/p1-asm-review-h2i9xk4i/matrix_multiplication.original.c.s']
+exit=0 stderr=''
+assembly_sha256=738abc3533dd821b271a5636661dcff621558549183728012f8bcd16ba85bffd
+gettimeofday calls at assembly lines 117, 248
+ 112 	movq	24(%rsp), %r10
+ 113 	leaq	96(%rsp), %rdi
+ 114 	xorl	%esi, %esi
+ 115 	movl	16(%rsp), %ebx
+ 116 	movq	%r10, 8(%rsp)
+ 117 	call	gettimeofday@PLT
+ 118 	movslq	%r15d, %rdi
+ 119 	movq	8(%rsp), %r10
+ 120 	xorl	%edx, %edx
+ 121 	movq	%rdi, %r8
+ 122 	movq	%rdi, %r14
+ 123 	leaq	0(,%rdi,8), %r13
+ 124 	movl	$4096, %r15d
+ 125 	salq	$15, %r8
+ 126 	movq	%r13, %rdi
+ 127 .L10:
+ 128 	movl	%edx, 52(%rsp)
+ 129 	xorl	%ecx, %ecx
+ 130 	movq	%rdi, %rax
+ 131 	movl	$4096, %esi
+ 132 	xorl	%r12d, %r12d
+ 133 	movq	%rcx, %r11
+ 134 	movq	%rbp, %rdi
+ 135 .L23:
+ 136 	movq	%r11, 56(%rsp)
+ 137 	movq	%rdi, %r13
+ 138 	movl	$4096, %ebp
+ 139 	xorl	%r9d, %r9d
+ 140 	leaq	0(,%r11,8), %rdx
+ 141 	movl	%r12d, 64(%rsp)
+ 142 	movq	%r8, %r12
+ 143 	movq	%r10, %r8
+ 144 	movq	$0, 24(%rsp)
+ 145 	leaq	(%rdx,%r10), %rcx
+ 146 	movq	%rcx, 40(%rsp)
+ 147 	leaq	B(%rip), %rcx
+ 148 	addq	%rdx, %rcx
+ 149 	movq	%rcx, 32(%rsp)
+ 150 .L21:
+ 151 	movq	24(%rsp), %r11
+ 152 	movq	32(%rsp), %rcx
+ 153 	movq	%r13, 72(%rsp)
+ 154 	xorl	%edx, %edx
+ 155 	movq	%rax, 80(%rsp)
+ 156 	movq	40(%rsp), %r10
+ 157 	salq	$15, %r11
+ 158 	movl	%r9d, 68(%rsp)
+ 159 	movq	%r14, %r9
+ 160 	movq	%rdi, 88(%rsp)
+ 161 	addq	%rcx, %r11
+ 162 	movq	%r12, %rdi
+ 163 	movq	%r13, %rcx
+ 164 	.p2align 4,,10
+ 165 	.p2align 3
+ 166 .L19:
+ 167 	movl	%edx, 8(%rsp)
+ 168 	movq	%r11, %r14
+ 169 	movq	%rcx, %r13
+ 170 	xorl	%r12d, %r12d
+ 171 	movq	%rcx, 16(%rsp)
+ 172 	.p2align 4,,10
+ 173 	.p2align 3
+ 174 .L17:
+ 175 	movsd	0(%r13), %xmm1
+ 176 	movq	%r14, %rcx
+ 177 	movq	%r10, %rdx
+ 178 	xorl	%eax, %eax
+ 179 	jmp	.L14
+ 180 	.p2align 4,,10
+ 181 	.p2align 3
+ 182 .L11:
+ 183 	addq	$8, %rdx
+ 184 	addq	$8, %rcx
+ 185 	cmpl	%esi, %eax
+ 186 	je	.L15
+ 187 .L14:
+ 188 	movsd	(%rcx), %xmm0
+ 189 	addl	$1, %eax
+ 190 	mulsd	%xmm1, %xmm0
+ 191 	addsd	(%rdx), %xmm0
+ 192 	movsd	%xmm0, (%rdx)
+ 193 	cmpl	%ebx, %eax
+ 194 	jl	.L11
+ 195 .L15:
+ 196 	addl	$1, %r12d
+ 197 	cmpl	%ebx, %r12d
+ 198 	jge	.L27
+ 199 	addq	$8, %r13
+ 200 	addq	$32768, %r14
+ 201 	cmpl	%ebp, %r12d
+ 202 	jne	.L17
+ 203 .L27:
+ 204 	movl	8(%rsp), %edx
+ 205 	movq	16(%rsp), %rcx
+ 206 	addl	$1, %edx
+ 207 	cmpl	%ebx, %edx
+ 208 	jge	.L16
+ 209 	addq	$32768, %r10
+ 210 	addq	$32768, %rcx
+ 211 	cmpl	%r15d, %edx
+ 212 	jne	.L19
+ 213 .L16:
+ 214 	movq	%r9, %r14
+ 215 	movl	68(%rsp), %r9d
+ 216 	movq	72(%rsp), %r13
+ 217 	movq	%rdi, %r12
+ 218 	movq	80(%rsp), %rax
+ 219 	movl	48(%rsp), %ecx
+ 220 	addl	%ebx, %r9d
+ 221 	addq	%r14, 24(%rsp)
+ 222 	movq	88(%rsp), %rdi
+ 223 	subl	%ecx, %ebp
+ 224 	addq	%rax, %r13
+ 225 	cmpl	$4095, %r9d
+ 226 	jle	.L21
+ 227 	movq	%r8, %r10
+ 228 	movq	%r12, %r8
+ 229 	movl	64(%rsp), %r12d
+ 230 	movq	56(%rsp), %r11
+ 231 	subl	%ecx, %esi
+ 232 	addl	%ebx, %r12d
+ 233 	addq	%r14, %r11
+ 234 	cmpl	$4095, %r12d
+ 235 	jle	.L23
+ 236 	movl	52(%rsp), %edx
+ 237 	movq	%rdi, %rbp
+ 238 	movq	%rax, %rdi
+ 239 	movl	48(%rsp), %eax
+ 240 	addq	%r8, %rbp
+ 241 	addq	%r8, %r10
+ 242 	addl	%ebx, %edx
+ 243 	subl	%eax, %r15d
+ 244 	cmpl	$4095, %edx
+ 245 	jle	.L10
+ 246 	leaq	112(%rsp), %rdi
+ 247 	xorl	%esi, %esi
+ 248 	call	gettimeofday@PLT
+ 249 	movq	120(%rsp), %rax
+ 250 	pxor	%xmm0, %xmm0
+ 251 	subq	104(%rsp), %rax
+ 252 	cvtsi2sdq	%rax, %xmm0
+ 253 	pxor	%xmm1, %xmm1
+Matrix storage declarations:
+ 314 	.size	C, 134217728
+ 320 	.size	B, 134217728
+ 326 	.size	A, 134217728
+
+SOURCE P1/src/matrix_multiplication.c
+source_sha256=e321025e6097c9c8124c7e8624a6ae4132e2a54d426e135ae07d595a401be0b0
+command=['gcc', '-std=c11', '-Wall', '-Wextra', '-O3', '-S', '/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c', '-o', '/tmp/p1-asm-review-h2i9xk4i/matrix_multiplication.c.s']
+exit=0 stderr=''
+assembly_sha256=88d02777e0d1ddc425b1dce642017fcedb84825c11b0ac88771f3b76ff5516d4
+gettimeofday calls at assembly lines 150, 278
+ 145 	movq	%r15, (%rsp)
+ 146 	movl	8(%rsp), %ebx
+ 147 	leaq	0(,%r14,8), %r13
+ 148 	leaq	C(%rip), %rbp
+ 149 	movl	$4096, %r15d
+ 150 	call	gettimeofday@PLT
+ 151 	movq	%r14, %r8
+ 152 	movq	(%rsp), %r10
+ 153 	xorl	%edx, %edx
+ 154 	salq	$15, %r8
+ 155 	movq	%r13, %r12
+ 156 	movq	%r14, %rdi
+ 157 .L11:
+ 158 	movl	%edx, 60(%rsp)
+ 159 	movq	%rdi, %rax
+ 160 	xorl	%ecx, %ecx
+ 161 	movl	$4096, %esi
+ 162 	xorl	%r13d, %r13d
+ 163 	movq	%r12, %r9
+ 164 	movq	%rbp, %rdi
+ 165 .L24:
+ 166 	leaq	0(,%rcx,8), %rdx
+ 167 	movq	%r10, 16(%rsp)
+ 168 	movq	%r8, %r12
+ 169 	movl	$4096, %ebp
+ 170 	leaq	(%rdx,%rdi), %r11
+ 171 	movl	$0, 56(%rsp)
+ 172 	movq	%rdi, %r8
+ 173 	movq	%r11, 48(%rsp)
+ 174 	leaq	B(%rip), %r11
+ 175 	addq	%r11, %rdx
+ 176 	movq	%rcx, 64(%rsp)
+ 177 	movq	%rdx, 40(%rsp)
+ 178 	movq	$0, 24(%rsp)
+ 179 	movl	%r13d, 88(%rsp)
+ 180 	movq	%r10, %r13
+ 181 .L22:
+ 182 	movq	24(%rsp), %r11
+ 183 	movq	40(%rsp), %rdi
+ 184 	movq	%rax, 72(%rsp)
+ 185 	xorl	%edx, %edx
+ 186 	movq	16(%rsp), %rcx
+ 187 	movq	48(%rsp), %r10
+ 188 	movl	%r14d, 92(%rsp)
+ 189 	salq	$15, %r11
+ 190 	movq	%r9, 80(%rsp)
+ 191 	movq	%r13, %r9
+ 192 	addq	%rdi, %r11
+ 193 	movq	%r12, %rdi
+ 194 	.p2align 4,,10
+ 195 	.p2align 3
+ 196 .L20:
+ 197 	movl	%edx, (%rsp)
+ 198 	movq	%r11, %r14
+ 199 	movq	%rcx, %r13
+ 200 	xorl	%r12d, %r12d
+ 201 	movq	%rcx, 8(%rsp)
+ 202 	.p2align 4,,10
+ 203 	.p2align 3
+ 204 .L18:
+ 205 	movsd	0(%r13), %xmm1
+ 206 	movq	%r14, %rcx
+ 207 	movq	%r10, %rdx
+ 208 	xorl	%eax, %eax
+ 209 	jmp	.L15
+ 210 	.p2align 4,,10
+ 211 	.p2align 3
+ 212 .L12:
+ 213 	addq	$8, %rdx
+ 214 	addq	$8, %rcx
+ 215 	cmpl	%esi, %eax
+ 216 	je	.L16
+ 217 .L15:
+ 218 	movsd	(%rcx), %xmm0
+ 219 	addl	$1, %eax
+ 220 	mulsd	%xmm1, %xmm0
+ 221 	addsd	(%rdx), %xmm0
+ 222 	movsd	%xmm0, (%rdx)
+ 223 	cmpl	%eax, %ebx
+ 224 	jg	.L12
+ 225 .L16:
+ 226 	addl	$1, %r12d
+ 227 	cmpl	%r12d, %ebx
+ 228 	jle	.L32
+ 229 	addq	$8, %r13
+ 230 	addq	$32768, %r14
+ 231 	cmpl	%ebp, %r12d
+ 232 	jne	.L18
+ 233 .L32:
+ 234 	movl	(%rsp), %edx
+ 235 	movq	8(%rsp), %rcx
+ 236 	addl	$1, %edx
+ 237 	cmpl	%edx, %ebx
+ 238 	jle	.L17
+ 239 	addq	$32768, %r10
+ 240 	addq	$32768, %rcx
+ 241 	cmpl	%r15d, %edx
+ 242 	jne	.L20
+ 243 .L17:
+ 244 	addl	%ebx, 56(%rsp)
+ 245 	movl	92(%rsp), %r14d
+ 246 	movq	%rdi, %r12
+ 247 	movq	%r9, %r13
+ 248 	movl	56(%rsp), %edi
+ 249 	movq	72(%rsp), %rax
+ 250 	movq	80(%rsp), %r9
+ 251 	addq	%rax, 24(%rsp)
+ 252 	subl	%r14d, %ebp
+ 253 	addq	%r9, 16(%rsp)
+ 254 	cmpl	$4095, %edi
+ 255 	jle	.L22
+ 256 	movq	%r13, %r10
+ 257 	movl	88(%rsp), %r13d
+ 258 	movq	64(%rsp), %rcx
+ 259 	movq	%r8, %rdi
+ 260 	subl	%r14d, %esi
+ 261 	movq	%r12, %r8
+ 262 	addl	%ebx, %r13d
+ 263 	addq	%rax, %rcx
+ 264 	cmpl	$4095, %r13d
+ 265 	jle	.L24
+ 266 	movl	60(%rsp), %edx
+ 267 	movq	%rdi, %rbp
+ 268 	movq	%r9, %r12
+ 269 	movq	%rax, %rdi
+ 270 	subl	%r14d, %r15d
+ 271 	addq	%r8, %r10
+ 272 	addq	%r8, %rbp
+ 273 	addl	%ebx, %edx
+ 274 	cmpl	$4095, %edx
+ 275 	jle	.L11
+ 276 	leaq	128(%rsp), %rdi
+ 277 	xorl	%esi, %esi
+ 278 	call	gettimeofday@PLT
+ 279 	pxor	%xmm0, %xmm0
+ 280 	pxor	%xmm1, %xmm1
+ 281 	movq	136(%rsp), %rax
+ 282 	subq	120(%rsp), %rax
+ 283 	leaq	.LC5(%rip), %rsi
+After end timing:
+ 284 	movl	$2, %edi
+ 285 	cvtsi2sdq	%rax, %xmm0
+ 286 	movq	128(%rsp), %rax
+ 287 	mulsd	.LC0(%rip), %xmm0
+ 288 	subq	112(%rsp), %rax
+ 289 	cvtsi2sdq	%rax, %xmm1
+ 290 	movl	$1, %eax
+ 291 	addsd	%xmm1, %xmm0
+ 292 	cvtsd2ss	%xmm0, %xmm0
+ 293 	cvtss2sd	%xmm0, %xmm0
+ 294 	call	__printf_chk@PLT
+ 295 	movq	32(%rsp), %rsi
+ 296 	leaq	32768+C(%rip), %rdx
+ 297 	pxor	%xmm0, %xmm0
+ 298 	leaq	134250496(%rsi), %rcx
+ 299 .L25:
+ 300 	movq	%rsi, %rax
+ 301 	.p2align 4,,10
+ 302 	.p2align 3
+ 303 .L26:
+ 304 	addsd	(%rax), %xmm0
+ 305 	addq	$16, %rax
+ 306 	addsd	-8(%rax), %xmm0
+ 307 	cmpq	%rax, %rdx
+ 308 	jne	.L26
+ 309 	addq	$32768, %rdx
+ 310 	addq	$32768, %rsi
+ 311 	cmpq	%rdx, %rcx
+ 312 	jne	.L25
+ 313 	leaq	.LC6(%rip), %rsi
+ 314 	movl	$2, %edi
+ 315 	movl	$1, %eax
+ 316 	call	__printf_chk@PLT
+ 317 	xorl	%eax, %eax
+ 318 	jmp	.L3
+ 319 .L6:
+ 320 	leaq	.LC3(%rip), %rsi
+ 321 	movl	$2, %edi
+ 322 	xorl	%eax, %eax
+ 323 	call	__printf_chk@PLT
+ 324 	orl	$-1, %eax
+ 325 	jmp	.L3
+ 326 .L34:
+ 327 	call	__stack_chk_fail@PLT
+Matrix storage declarations:
+ 335 	.size	C, 134217728
+ 341 	.size	B, 134217728
+ 347 	.size	A, 134217728
+
+Conclusion: inspect the actual multiply/add/store instructions and loop backedges between the timing calls; checksum code is after the second call. This is an assembly audit, not timing data.

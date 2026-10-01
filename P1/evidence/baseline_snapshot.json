@@ -1,0 +1,12 @@
+{
+  "stage": "reviewed-basic-v1-before-two-candidates",
+  "files": {
+    "P1/src/autotuner.py": "e2e0baa908eb8d32771544b5102bca5ad8e358d2cc6aff9aafab6b4a7634fb27",
+    "P1/src/matrix_multiplication.c": "e321025e6097c9c8124c7e8624a6ae4132e2a54d426e135ae07d595a401be0b0",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "P1/scripts/validate_target.py": "6030c68e05c67894bbe75f4932c8384728aaa087c33bbc9519e5042b8f4cd34a",
+    "P1/tests/test_autotuner.py": "c14e68b69dde7c60bedfec98fe0fe577f4ff8b47866674ce9cc8a5aad8231458"
+  },
+  "conditions": "4096 double original timed kernel, std=c11 Wall Wextra O0..O3",
+  "review": "reviews/code_review.md"
+}

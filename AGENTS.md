@@ -137,6 +137,32 @@ baseline\
 
 Correctness comes before optimization.
 
+For sustained tasks, use a short rolling plan: freeze hard requirements,
+interface boundaries and the next round, then update the plan from actual
+results. Record the reliable version, hypotheses, completed work, next actions
+and real blockers. Do not prewrite experimental conclusions.
+
+When the current task explicitly requests multi-agent work, use available
+native subagents and assign inputs, outputs, file ownership, dependencies and
+acceptance criteria. Keep implementation and independent review separate.
+Shared files have one owner. Only one owner schedules formal performance runs;
+other agents must not compile or run heavy tests during measurement. Record
+actual agent roles and review artifacts; disclose unavailable capabilities.
+
+Freeze a comparable measurement protocol before formal comparisons. Choose
+versions from measured quality, real run count, end-to-end time and stability,
+not expectations or a single good run. Test enhancements one at a time against
+the same reviewed baseline before any authorized combinations. Review each
+round, fix issues and rerun affected checks before starting the next round.
+
+Preserve failures, reproduce and diagnose their causes, make the smallest
+reasonable fix, then rerun and regress. Normally try at most three materially
+different repair/diagnostic paths for the same issue without new evidence.
+If still blocked, record the attempted paths and dependent requirements;
+continue work that does not depend on the blocker. A resource limit or a
+skipped requirement is not completion. Permission, credentials, destructive
+conflicts and scope changes cannot be bypassed as automatic repairs.
+
 ---
 
 ## 4. Code quality and naturalness
@@ -263,7 +289,8 @@ Do not create empty folder structures mechanically.
 
 Rules:
 
-- put the formal `README.md` at the assignment root;
+- use the teacher-required formal report filename at the assignment root;
+  use `README.md` only when the teacher does not specify a filename;
 - put formal screenshots under `<task>/images/`;
 - preserve teacher-provided starter-code structure when moving files would
   unnecessarily alter or break it;
@@ -352,7 +379,7 @@ Maintain a requirement matrix when useful:
 
 teacher requirement\
 → status\
-→ README location\
+→ formal report location\
 → evidence
 
 Evidence must remain organized and searchable even though it is internal.
@@ -367,7 +394,7 @@ Teacher-facing material and internal engineering evidence must remain separate.
 
 Teacher-facing material should normally contain only:
 
-- formal `README.md` / Markdown report;
+- formal Markdown report with the teacher-required filename;
 - required source code;
 - necessary scripts;
 - useful screenshots;
@@ -400,7 +427,7 @@ Statements whose only purpose is to prove that something was:
 - audited;
 - independently verified;
 
-normally belong in `evidence/`, not in the teacher-facing README, unless the
+normally belong in `evidence/`, not in the teacher-facing report, unless the
 teacher explicitly asks about that process. Do not turn the report into an
 engineering acceptance log.
 
@@ -423,7 +450,11 @@ teacher question\
 
 ## 9. Formal report identity and structure
 
-The formal README/Markdown report is a primary deliverable and must receive the
+Report filenames follow the teacher's explicit requirement; `README.md` is the
+default only if none is specified. An optional README may link to the report
+and explain reproduction without duplicating it.
+
+The formal Markdown report is a primary deliverable and must receive the
 same level of care as the code.
 
 Use:
@@ -590,7 +621,7 @@ Natural writing must remain technically correct and professional.
 
 ## 11. Formal-report forbidden internal terminology
 
-The teacher-facing README must not mention internal workflow terms such as:
+The teacher-facing report must not mention internal workflow terms such as:
 
 - Codex;
 - ChatGPT;
@@ -617,9 +648,9 @@ is not a final quality judgment.
 
 ---
 
-## 12. Final README human-style review
+## 12. Final formal-report human-style review
 
-Before publication, read the complete README continuously from beginning to end.
+Before publication, read the complete formal report continuously from beginning to end.
 
 Do not merely search for several forbidden phrases.
 
@@ -648,7 +679,7 @@ to make the report seem more natural.
 
 Do not claim final naturalness based only on Codex self-review.
 
-The independent reviewer must inspect the actual GitHub README.
+The independent reviewer must inspect the actual GitHub formal report.
 
 ---
 
@@ -771,8 +802,8 @@ Final engineering review must inspect the actual GitHub:
 - assignment completeness;
 - source code correctness;
 - code simplicity/naturalness;
-- README completeness;
-- README writing quality/naturalness;
+- formal report completeness;
+- formal report writing quality/naturalness;
 - screenshots and final-version consistency;
 - scripts;
 - necessary evidence;
@@ -812,7 +843,7 @@ Do not mirror the entire engineering repository into Shuishan.
 Create a clean Teacher Submission Package containing only what the teacher
 needs, normally:
 
-- `README.md`;
+- teacher-required formal report (default `README.md`);
 - `images/`;
 - required source code;
 - required scripts;
@@ -850,7 +881,8 @@ Before submission:
 
 1. fetch the remote;
 2. inspect remote branches;
-3. verify the teacher-specified branch exists;
+3. verify the teacher-specified branch exists, or create it only when the
+   latest teacher instruction explicitly requires creating it;
 4. inspect files/templates already present on that branch;
 5. preserve teacher-provided content unless explicitly told otherwise;
 6. prepare the clean Teacher Submission Package;
@@ -865,7 +897,7 @@ Before submission:
 Do not:
 
 - guess a branch name;
-- create a missing teacher branch without authorization;
+- create a missing teacher branch without explicit teacher/task authorization;
 - push to `master` or `main` unless explicitly requested;
 - force push;
 - overwrite teacher history;

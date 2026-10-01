@@ -59,3 +59,8 @@ temp/
 /A2/**/SPECjvm2008*.jar
 /A2/**/SPECjvm2008*.zip
 /A2/**/*.class
+
+# P1 local builds, downloaded references and isolated reproduction environments.
+/P1/.cache/
+/P1/.venv/
+/P1/.local/
