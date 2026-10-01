@@ -1,0 +1,112 @@
+{
+  "scope": "Syntax/compilation only; no probe, font or adjtimex program executed; build output temporary",
+  "checks": [
+    {
+      "source": "A2/evidence/runner/frozen-run-spec.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/timing/probe-10min/clock-probe.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/capture-terminal.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/check-invalidated-experiments.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/check-run.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/clock-monitor.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/clock-probe.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/collect-timing-diagnostics.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/historical-run-three.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/monitor-run.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/preserve-results.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/test-compress-regression.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/test-runner.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/evidence/tools/test-summarizer.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/scripts/run-spec.py",
+      "syntax": "ok"
+    },
+    {
+      "source": "A2/scripts/summarize-spec.py",
+      "syntax": "ok"
+    },
+    {
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/javac",
+        "-d",
+        "/tmp/a2-checkpoint-compile-fydsqkfx",
+        "A2/evidence/tools/ClockProbe.java"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/javac",
+        "-d",
+        "/tmp/a2-checkpoint-compile-fydsqkfx",
+        "A2/evidence/tools/FontProbe.java"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/javac",
+        "-d",
+        "/tmp/a2-checkpoint-compile-fydsqkfx",
+        "A2/evidence/timing/probe-10min/ClockProbe.java"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cc",
+        "-fsyntax-only",
+        "A2/evidence/tools/read-adjtimex.c"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

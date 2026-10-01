@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+    "-jar",
+    "SPECjvm2008.jar",
+    "-wt",
+    "5s",
+    "-it",
+    "5s",
+    "-bt",
+    "2",
+    "compiler.compiler",
+    "compiler.sunflow",
+    "xml.transform",
+    "xml.validation"
+  ],
+  "shell_command": "/usr/lib/jvm/java-21-openjdk-amd64/bin/java -jar SPECjvm2008.jar -wt 5s -it 5s -bt 2 compiler.compiler compiler.sunflow xml.transform xml.validation",
+  "cwd": "/home/addaswsw/.local/opt/specjvm2008",
+  "environment": {
+    "JAVA_HOME": "/usr/lib/jvm/java-21-openjdk-amd64",
+    "CLASSPATH": null,
+    "JAVA_TOOL_OPTIONS": null,
+    "_JAVA_OPTIONS": null,
+    "JDK_JAVA_OPTIONS": null,
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "TZ": null
+  },
+  "java_on_path": [
+    "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+    "/usr/bin/java",
+    "/bin/java"
+  ],
+  "start": "2026-09-30T15:47:27+08:00",
+  "end": "2026-09-30T15:47:36+08:00",
+  "exit_code": 0,
+  "pid": 10691,
+  "result_paths": [
+    "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.001"
+  ]
+}

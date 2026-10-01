@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-10-01T03:30:27.344514+08:00",
+  "pid": 62879,
+  "exe": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+  "cmdline": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-XX:+UseSerialGC",
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "environment_matches_run_record": true,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "freetype_paths": [
+    "/usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1"
+  ]
+}

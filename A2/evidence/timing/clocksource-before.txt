@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-10-01T10:52:22.662441+08:00",
+  "current_clocksource": "tsc",
+  "available_clocksource": [
+    "tsc",
+    "hyperv_clocksource_tsc_page",
+    "hyperv_clocksource_msr",
+    "acpi_pm"
+  ]
+}

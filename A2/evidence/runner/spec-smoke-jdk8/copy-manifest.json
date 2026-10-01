@@ -1,0 +1,20 @@
+[
+  {
+    "source": "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.003",
+    "copy": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003",
+    "file_count": 10,
+    "relative_links_checked": 3,
+    "sha256": {
+      "SPECjvm2008.003.html": "d559d74d23e18c6d72a8f479ee95ea2378c8cfe85d5ff7a24a148f3f49c2922b",
+      "SPECjvm2008.003.raw": "7718b5106f9257ee300e8a80105535b229d7ca64b6f0aab896d48bada2a12194",
+      "SPECjvm2008.003.sub": "73ccf269bace6ffd23b168690328dd471116e19c5dde40d204652babc5ad7fd0",
+      "SPECjvm2008.003.summary": "cec41b407601000df408d4e42b3442f79a380e4dfef64047b97cdea5eaf77114",
+      "SPECjvm2008.003.txt": "d77dd9f1bc71a9a468708518bd3689d89be0bdd62c0a7e22f78cda29c3dddd70",
+      "images/all.jpg": "66367aacf58d70dec7fbbba015904df2243d4175ed790d30915c84a4330ea5cd",
+      "images/check.jpg": "6cc5357e9bda30cb38340ff189ef0491de613f3fdf2c159dc5a6009ebedca009",
+      "images/check_results.jpg": "67d410fb99d2141d87701bb924753ce8ce256da434d95a1c1859c44f90369469",
+      "images/compress.jpg": "3089df3b97032174f0bb3d1c013e547467dbf9238c76fbe9d6d566a059e0da75",
+      "images/compress_results.jpg": "289a03a0d5fb49d07988ce0f88ac860fbc2421b7c6a3c293eb44d40a15bc10d9"
+    }
+  }
+]

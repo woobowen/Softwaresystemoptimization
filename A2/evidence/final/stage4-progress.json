@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-01T10:23:23.754128+08:00",
+  "status": "BLOCKED_PENDING_USER_APPROVAL",
+  "reason": "Reproducible clock steps enter SPEC timing; runtime clocksource trial requires approval under prompt section 32.",
+  "approval_requested": {
+    "runtime_clocksource_from": "tsc",
+    "runtime_clocksource_to": "hyperv_clocksource_tsc_page",
+    "on_failure": "restore tsc and stop this recovery route",
+    "on_success": "one replacement Base and 3+3 after stable 10-minute probe"
+  },
+  "approval_received": false,
+  "replacement_base_runs": 0,
+  "new_compress_diagnostics": [
+    "SPECjvm2008.014"
+  ],
+  "formal_results_changed": false,
+  "system_configuration_changes": [],
+  "new_packages": [],
+  "staged": false,
+  "committed": false,
+  "pushed": false,
+  "shuishan_actions": false,
+  "next_read": [
+    "A2/evidence/timing/conclusion.md",
+    "A2/evidence/timing/recovery-options.md",
+    "A2/evidence/final/stage4-review.md"
+  ]
+}

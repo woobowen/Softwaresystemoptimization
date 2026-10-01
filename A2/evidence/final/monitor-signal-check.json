@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "samples": 2,
+  "signal": "SIGTERM",
+  "final_sample_and_summary_written": true,
+  "process_cpu_seconds": 0.0007052989999999995
+}

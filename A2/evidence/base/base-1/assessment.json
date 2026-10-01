@@ -1,0 +1,69 @@
+{
+  "mode": "base",
+  "workload_count": 38,
+  "workloads": [
+    "startup.helloworld",
+    "startup.compiler.compiler",
+    "startup.compiler.sunflow",
+    "startup.compress",
+    "startup.crypto.aes",
+    "startup.crypto.rsa",
+    "startup.crypto.signverify",
+    "startup.mpegaudio",
+    "startup.scimark.fft",
+    "startup.scimark.lu",
+    "startup.scimark.monte_carlo",
+    "startup.scimark.sor",
+    "startup.scimark.sparse",
+    "startup.serial",
+    "startup.sunflow",
+    "startup.xml.transform",
+    "startup.xml.validation",
+    "compiler.compiler",
+    "compiler.sunflow",
+    "compress",
+    "crypto.aes",
+    "crypto.rsa",
+    "crypto.signverify",
+    "derby",
+    "mpegaudio",
+    "scimark.fft.large",
+    "scimark.lu.large",
+    "scimark.sor.large",
+    "scimark.sparse.large",
+    "scimark.fft.small",
+    "scimark.lu.small",
+    "scimark.sor.small",
+    "scimark.sparse.small",
+    "scimark.monte_carlo",
+    "serial",
+    "sunflow",
+    "xml.transform",
+    "xml.validation"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "482.49"
+    ],
+    ".html": [
+      "482.49",
+      "482.49"
+    ],
+    ".summary": [
+      "482.49"
+    ]
+  },
+  "native_status": "Run is compliant",
+  "category": "SPECjvm2008 Base",
+  "violations": [],
+  "score": 482.4931319457377,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 8404.0,
+  "monotonic_seconds": 7933.371,
+  "stdout_bytes": 19653,
+  "native_images_verified": 79,
+  "stderr_bytes": 5060865
+}

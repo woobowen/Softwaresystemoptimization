@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-10-01T11:32:57.414666+08:00",
+  "status": "BLOCKED_ENVIRONMENT_TIMING; checks below cover cleanup and evidence only",
+  "checks": {
+    "question_order": true,
+    "student_identity": true,
+    "no_invalidated_performance_values_in_readme": true,
+    "no_internal_workflow_terms_or_todo_in_readme": true,
+    "markdown_local_links": true,
+    "python_syntax": true,
+    "screenshot_shell_syntax": true,
+    "two_current_images": true,
+    "screenshot_matches_capture_record": true,
+    "all_invalidated_native_bytes_preserved": true,
+    "a1_unchanged": true,
+    "teacher_pdf_unchanged": true,
+    "no_formal_performance_results": true,
+    "no_false_frozen_final_environment": true,
+    "clocksource_restored": true,
+    "gate-1_completed_and_failed": true,
+    "gate-2_completed_and_failed": true,
+    "no_high_confidence_secret_pattern_matches": true,
+    "no_compiled_or_cache_files": true,
+    "git_diff_check": true,
+    "nothing_staged": true
+  },
+  "all_cleanup_checks_passed": true,
+  "markdown_links_checked": 121,
+  "broken_links": [],
+  "python_files_parsed": [
+    "A2/scripts/run-spec.py",
+    "A2/scripts/summarize-spec.py",
+    "A2/evidence/tools/capture-terminal.py",
+    "A2/evidence/tools/check-invalidated-experiments.py",
+    "A2/evidence/tools/check-run.py",
+    "A2/evidence/tools/clock-monitor.py",
+    "A2/evidence/tools/clock-probe.py",
+    "A2/evidence/tools/collect-timing-diagnostics.py",
+    "A2/evidence/tools/historical-run-three.py",
+    "A2/evidence/tools/monitor-run.py",
+    "A2/evidence/tools/preserve-results.py",
+    "A2/evidence/tools/test-compress-regression.py",
+    "A2/evidence/tools/test-runner.py",
+    "A2/evidence/tools/test-summarizer.py"
+  ],
+  "images": [
+    {
+      "path": "A2/images/04-environment.png",
+      "dimensions": [
+        1440,
+        720
+      ],
+      "sha256": "b4365d042bed4c658d5d9fcbb1a1de00153e3ad11158dc57df9a097716fe8b67",
+      "visually_opened": true
+    },
+    {
+      "path": "A2/images/07-official-result.png",
+      "dimensions": [
+        1770,
+        615
+      ],
+      "sha256": "572f3820f6cdebdbd811c37f9c8f30f94bd3e55e3e494a80a6800a2d87a4cbaa",
+      "visually_opened": true
+    }
+  ],
+  "invalidated_files": 154,
+  "secret_pattern_match_filenames": [],
+  "compiled_files": [],
+  "new_spec_runs": 0,
+  "performance_acceptance": false,
+  "publication": false,
+  "final_document_links_checked_at": "2026-10-01T11:36:36.917242+08:00",
+  "readme_sha256": "db82ebae5cfbecee77075b4ae2a744155cb4c2f72d36b8c19fafe9b9ae15ea99",
+  "final_readme_continuous_read_at": "2026-10-01T11:37:43.023469+08:00",
+  "active_spec_or_probe_jvms": []
+}

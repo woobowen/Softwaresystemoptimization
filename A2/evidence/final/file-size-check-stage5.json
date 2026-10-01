@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-01T11:15:11.239947+08:00",
+  "over_10MiB": [
+    {
+      "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+      "bytes": 12660504,
+      "reason": "Preserved native measurement data"
+    }
+  ],
+  "compiled_or_cache_files": []
+}

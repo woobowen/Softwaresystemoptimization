@@ -1,0 +1,1546 @@
+Full byte-for-byte console is in console.log.gz. Removed 50600 repetitive compiler warning lines from this readable excerpt. This run received a diagnostic stderr drain and is excluded from formal measurements.
+
+
+SPECjvm2008 Peak
+  Properties file:   none
+  Benchmarks:        startup.helloworld startup.compiler.compiler startup.compiler.sunflow startup.compress startup.crypto.aes startup.crypto.rsa startup.crypto.signverify startup.mpegaudio startup.scimark.fft startup.scimark.lu startup.scimark.monte_carlo startup.scimark.sor startup.scimark.sparse startup.serial startup.sunflow startup.xml.transform startup.xml.validation compiler.compiler compiler.sunflow compress crypto.aes crypto.rsa crypto.signverify derby mpegaudio scimark.fft.large scimark.lu.large scimark.sor.large scimark.sparse.large scimark.fft.small scimark.lu.small scimark.sor.small scimark.sparse.small scimark.monte_carlo serial sunflow xml.transform xml.validation
+
+  WARNING: Run will not be compliant.
+  Property specjvm.iteration.time must be at least 240 seconds for publication.
+
+  Kit signature and checksum is validated.
+  This can take several minutes.
+  Use argument '-ikv' to skip this.
+  ....................................passed.
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   check
+  Run mode:    static run
+  Test type:   functional
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:48:43 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:48:43 CST 2026
+Iteration 1 (1 operation) result: PASSED
+
+Valid run!
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.helloworld
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:48:43 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:48:44 CST 2026
+Iteration 1 (1 operation) result: 370.37 ops/m
+
+Valid run!
+Score on startup.helloworld: 370.37 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.compiler.compiler
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:48:44 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:48:46 CST 2026
+Iteration 1 (1 operation) result: 24.86 ops/m
+
+Valid run!
+Score on startup.compiler.compiler: 24.86 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.compiler.sunflow
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:48:46 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:30 CST 2026
+Iteration 1 (1 operation) result: 0.57 ops/m
+
+Valid run!
+Score on startup.compiler.sunflow: 0.57 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.compress
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:30 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:31 CST 2026
+Iteration 1 (1 operation) result: 70.75 ops/m
+
+Valid run!
+Score on startup.compress: 70.75 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.crypto.aes
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:31 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:33 CST 2026
+Iteration 1 (1 operation) result: 39.60 ops/m
+
+Valid run!
+Score on startup.crypto.aes: 39.60 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.crypto.rsa
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:33 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:33 CST 2026
+Iteration 1 (1 operation) result: 101.52 ops/m
+
+Valid run!
+Score on startup.crypto.rsa: 101.52 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.crypto.signverify
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:33 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:34 CST 2026
+Iteration 1 (1 operation) result: 97.56 ops/m
+
+Valid run!
+Score on startup.crypto.signverify: 97.56 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.mpegaudio
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:34 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:35 CST 2026
+Iteration 1 (1 operation) result: 51.19 ops/m
+
+Valid run!
+Score on startup.mpegaudio: 51.19 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.scimark.fft
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:35 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:36 CST 2026
+Iteration 1 (1 operation) result: 133.04 ops/m
+
+Valid run!
+Score on startup.scimark.fft: 133.04 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.scimark.lu
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:36 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:36 CST 2026
+Iteration 1 (1 operation) result: 172.91 ops/m
+
+Valid run!
+Score on startup.scimark.lu: 172.91 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.scimark.monte_carlo
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:36 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:37 CST 2026
+Iteration 1 (1 operation) result: 59.52 ops/m
+
+Valid run!
+Score on startup.scimark.monte_carlo: 59.52 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.scimark.sor
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:37 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:38 CST 2026
+Iteration 1 (1 operation) result: 82.76 ops/m
+
+Valid run!
+Score on startup.scimark.sor: 82.76 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.scimark.sparse
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:38 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:38 CST 2026
+Iteration 1 (1 operation) result: 91.05 ops/m
+
+Valid run!
+Score on startup.scimark.sparse: 91.05 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.serial
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:38 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:40 CST 2026
+Iteration 1 (1 operation) result: 49.50 ops/m
+
+Valid run!
+Score on startup.serial: 49.50 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.sunflow
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:40 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:40 CST 2026
+Iteration 1 (1 operation) result: 62.89 ops/m
+
+Valid run!
+Score on startup.sunflow: 62.89 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.xml.transform
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:40 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:46 CST 2026
+Iteration 1 (1 operation) result: 10.53 ops/m
+
+Valid run!
+Score on startup.xml.transform: 10.53 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   startup.xml.validation
+  Run mode:    static run
+  Test type:   single
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:50:46 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:50:47 CST 2026
+Iteration 1 (1 operation) result: 62.31 ops/m
+
+Valid run!
+Score on startup.xml.validation: 62.31 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   compiler.compiler
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:50:49 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:50:54 CST 2026
+Warmup (5s) result: 387.94 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:50:54 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:50:59 CST 2026
+Iteration 1 (5s) result: 598.99 ops/m
+
+Valid run!
+Score on compiler.compiler: 598.99 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   compiler.sunflow
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+
+Warmup (5s) begins: Wed Sep 30 15:51:00 CST 2026
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Warmup (5s) ends:   Wed Sep 30 15:51:05 CST 2026
+Warmup (5s) result: 229.27 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:51:05 CST 2026
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+Iteration 1 (5s) ends:   Wed Sep 30 15:51:11 CST 2026
+Iteration 1 (5s) result: 230.39 ops/m
+
+Valid run!
+Score on compiler.sunflow: 230.39 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   compress
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:51:11 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:51:17 CST 2026
+Warmup (5s) result: 164.30 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:51:17 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:51:23 CST 2026
+Iteration 1 (5s) result: 161.48 ops/m
+
+Valid run!
+Score on compress: 161.48 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   crypto.aes
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:51:23 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:51:30 CST 2026
+Warmup (5s) result: 79.22 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:51:30 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:51:37 CST 2026
+Iteration 1 (5s) result: 80.37 ops/m
+
+Valid run!
+Score on crypto.aes: 80.37 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   crypto.rsa
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:51:37 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:51:43 CST 2026
+Warmup (5s) result: 283.83 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:51:43 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:51:49 CST 2026
+Iteration 1 (5s) result: 291.32 ops/m
+
+Valid run!
+Score on crypto.rsa: 291.32 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   crypto.signverify
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:51:49 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:51:54 CST 2026
+Warmup (5s) result: 307.58 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:51:54 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:51:59 CST 2026
+Iteration 1 (5s) result: 333.40 ops/m
+
+Valid run!
+Score on crypto.signverify: 333.40 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   derby
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:52:11 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:52:17 CST 2026
+Warmup (5s) result: 404.55 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:52:17 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:52:22 CST 2026
+Iteration 1 (5s) result: 462.32 ops/m
+
+Valid run!
+Score on derby: 462.32 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   mpegaudio
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:52:22 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:52:28 CST 2026
+Warmup (5s) result: 150.37 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:52:28 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:52:35 CST 2026
+Iteration 1 (5s) result: 150.59 ops/m
+
+Valid run!
+Score on mpegaudio: 150.59 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.fft.large
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:52:35 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:52:42 CST 2026
+Warmup (5s) result: 64.86 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:52:42 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:52:49 CST 2026
+Iteration 1 (5s) result: 83.69 ops/m
+
+Valid run!
+Score on scimark.fft.large: 83.69 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.lu.large
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:52:49 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:52:59 CST 2026
+Warmup (5s) result: 31.48 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:52:59 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:53:10 CST 2026
+Iteration 1 (5s) result: 29.63 ops/m
+
+Valid run!
+Score on scimark.lu.large: 29.63 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.sor.large
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:53:10 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:53:20 CST 2026
+Warmup (5s) result: 37.93 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:53:20 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:53:29 CST 2026
+Iteration 1 (5s) result: 37.97 ops/m
+
+Valid run!
+Score on scimark.sor.large: 37.97 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.sparse.large
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:53:29 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:53:37 CST 2026
+Warmup (5s) result: 58.58 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:53:37 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:53:45 CST 2026
+Iteration 1 (5s) result: 61.18 ops/m
+
+Valid run!
+Score on scimark.sparse.large: 61.18 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.fft.small
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:53:45 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:53:50 CST 2026
+Warmup (5s) result: 341.96 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:53:50 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:53:55 CST 2026
+Iteration 1 (5s) result: 381.28 ops/m
+
+Valid run!
+Score on scimark.fft.small: 381.28 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.lu.small
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:53:55 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:01 CST 2026
+Warmup (5s) result: 710.40 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:01 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:54:06 CST 2026
+Iteration 1 (5s) result: 689.80 ops/m
+
+Valid run!
+Score on scimark.lu.small: 689.80 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.sor.small
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:54:06 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:12 CST 2026
+Warmup (5s) result: 167.37 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:12 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:54:18 CST 2026
+Iteration 1 (5s) result: 180.00 ops/m
+
+Valid run!
+Score on scimark.sor.small: 180.00 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.sparse.small
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:54:18 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:23 CST 2026
+Warmup (5s) result: 181.50 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:23 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:54:29 CST 2026
+Iteration 1 (5s) result: 186.51 ops/m
+
+Valid run!
+Score on scimark.sparse.small: 186.51 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   scimark.monte_carlo
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:54:29 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:35 CST 2026
+Warmup (5s) result: 184.04 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:35 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:54:41 CST 2026
+Iteration 1 (5s) result: 193.94 ops/m
+
+Valid run!
+Score on scimark.monte_carlo: 193.94 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   serial
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:54:41 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:47 CST 2026
+Warmup (5s) result: 143.62 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:47 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:54:53 CST 2026
+Iteration 1 (5s) result: 158.00 ops/m
+
+Valid run!
+Score on serial: 158.00 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   sunflow
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:54:53 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:54:59 CST 2026
+Warmup (5s) result: 194.15 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:54:59 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:55:05 CST 2026
+Iteration 1 (5s) result: 218.04 ops/m
+
+Valid run!
+Score on sunflow: 218.04 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   xml.transform
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:55:12 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:55:17 CST 2026
+Warmup (5s) result: 260.38 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:55:17 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:55:22 CST 2026
+Iteration 1 (5s) result: 329.53 ops/m
+
+Valid run!
+Score on xml.transform: 329.53 ops/m
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   xml.validation
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     2
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Wed Sep 30 15:55:23 CST 2026
+Warmup (5s) ends:   Wed Sep 30 15:55:28 CST 2026
+Warmup (5s) result: 647.19 ops/m
+
+Iteration 1 (5s) begins: Wed Sep 30 15:55:28 CST 2026
+Iteration 1 (5s) ends:   Wed Sep 30 15:55:33 CST 2026
+Iteration 1 (5s) result: 725.15 ops/m
+
+Valid run!
+Score on xml.validation: 725.15 ops/m
+
+Results are stored in: 
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.002/SPECjvm2008.002.raw
+Generating reports in:
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.002
+
+Noncompliant composite result: 192.09 ops/m

@@ -1,0 +1,77 @@
+[
+  {
+    "old_path": "A2/evidence/final/monitor-run.py",
+    "new_path": "A2/evidence/tools/monitor-run.py",
+    "sha256_at_move": "c33d190cf9fe0e6394ccdf37cf214bb3d22a6c27b1b25eec322e838c51215a07"
+  },
+  {
+    "old_path": "A2/evidence/final/test-compress-regression.py",
+    "new_path": "A2/evidence/tools/test-compress-regression.py",
+    "sha256_at_move": "e753598324582431ee85e88bcc08e7a9fe350427f65d17cb9027a0e5bbfa6193"
+  },
+  {
+    "old_path": "A2/evidence/final/check-run.py",
+    "new_path": "A2/evidence/tools/check-run.py",
+    "sha256_at_move": "724bdadd1a00e9b547347baf7b09a689df4921c786332f1a39ddbed6e431d8b6"
+  },
+  {
+    "old_path": "A2/evidence/final/test-summarizer.py",
+    "new_path": "A2/evidence/tools/test-summarizer.py",
+    "sha256_at_move": "32cfe17f50316a1a2bb33245c3a20ac15e6e78fca48edc78797ccc4ddae1e578"
+  },
+  {
+    "old_path": "A2/evidence/final/preserve-results.py",
+    "new_path": "A2/evidence/tools/preserve-results.py",
+    "sha256_at_move": "5ffd53370e8470f923aa161dcc4641b0e4f9119241d081365d302dc46fca7201"
+  },
+  {
+    "old_path": "A2/evidence/final/capture-terminal.py",
+    "new_path": "A2/evidence/tools/capture-terminal.py",
+    "sha256_at_move": "e6fe3c727c106a1ce6c9a8b56c7c09b252256b69440c873f9a01b6c065f87445"
+  },
+  {
+    "old_path": "A2/evidence/final/run-three.py",
+    "new_path": "A2/evidence/tools/run-three.py",
+    "sha256_at_move": "77ea9490aedf0255ded8826ec88e2f40facce43d3dacf2f87e0d1f8590ffc542"
+  },
+  {
+    "old_path": "A2/evidence/final/check-experiments.py",
+    "new_path": "A2/evidence/tools/check-experiments.py",
+    "sha256_at_move": "542c989b4bd6b00c11d795b1c22980a8b3e67ba3d9457b82df10d546e5fbe24a"
+  },
+  {
+    "old_path": "A2/evidence/runner/test-runner.py",
+    "new_path": "A2/evidence/tools/test-runner.py",
+    "sha256_at_move": "43b3fbdc9547da60227361ea60592b6eef2dc43a0a7dfb8e5a77084df909e0ec"
+  },
+  {
+    "old_path": "A2/evidence/timing/clock-probe.py",
+    "new_path": "A2/evidence/tools/clock-probe.py",
+    "sha256_at_move": "46a982ffdd6e656e72dc1faa970a8d274b01812503a2cd9cdc8a3f71fb06497b"
+  },
+  {
+    "old_path": "A2/evidence/timing/ClockProbe.java",
+    "new_path": "A2/evidence/tools/ClockProbe.java",
+    "sha256_at_move": "2bcdbe8be4aba82599d71c4b9752028e56e93f4d5cfedda25cad2ad2cd96544d"
+  },
+  {
+    "old_path": "A2/evidence/compatibility/font-probe/FontProbe.java",
+    "new_path": "A2/evidence/tools/FontProbe.java",
+    "sha256_at_move": "a6b3c5fc063be72e2841389c18a84a032a0d4da59a439816cc0b43cba8a12d12"
+  },
+  {
+    "old_path": "A2/evidence/timing/read-adjtimex.c",
+    "new_path": "A2/evidence/tools/read-adjtimex.c",
+    "sha256_at_move": "04a044a5d1f3192b1fef14fd9c437970ead3a856c7cd7638ce5813365f6ce099"
+  },
+  {
+    "old_path": "A2/evidence/tools/check-experiments.py",
+    "new_path": "A2/evidence/tools/check-invalidated-experiments.py",
+    "sha256_at_move": "542c989b4bd6b00c11d795b1c22980a8b3e67ba3d9457b82df10d546e5fbe24a"
+  },
+  {
+    "old_path": "A2/evidence/tools/run-three.py",
+    "new_path": "A2/evidence/tools/historical-run-three.py",
+    "sha256_at_move": "eb5045024a2efd443d87efc428a3a66aa49a0cf0dea84f16dac04a35b4729798"
+  }
+]

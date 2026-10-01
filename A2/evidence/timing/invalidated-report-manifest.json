@@ -1,0 +1,7 @@
+{
+  "original_path": "A2/README.md",
+  "archived_path": "A2/evidence/timing/invalidated-report.md",
+  "original_sha256": "ba050d80e24cd37be5d5f0185840b22410d17e0405b838655f13a257e1d4ad76",
+  "archive_sha256": "41a1bdb78d284c1fc3316ead3a314ea1b6cdc6b447cdbb75e84c53fe92b570aa",
+  "changes": "Added archival status and remapped local link destinations only; old measurements remain excluded."
+}

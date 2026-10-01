@@ -1,0 +1,29 @@
+{
+  "selected_at": "2026-10-01T02:56:22.029999+08:00",
+  "REPEAT_WORKLOAD": "compress",
+  "basis": "Completed formal Base; compress and derby each used 120 s warmup + 240 s measurement, with about 6.5 minutes from native log start to finish. Choose the simpler LZW workload for the same-workload JVM comparison, not for a favorable score.",
+  "base_raw": "A2/results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+  "base_candidates": {
+    "compress": {
+      "ops_m": 361.2724691161162,
+      "native_log_start": "2026-10-01T00:48:10+08:00",
+      "native_log_end": "2026-10-01T00:54:41+08:00"
+    },
+    "derby": {
+      "ops_m": 362.70189164065545,
+      "native_log_start": "2026-10-01T01:14:43+08:00",
+      "native_log_end": "2026-10-01T01:21:12+08:00"
+    }
+  },
+  "spec_arguments": [
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "jvm_arguments": [],
+  "threads": 22,
+  "warmup_seconds": 120,
+  "measurement_seconds": 240,
+  "independent_runs": 3,
+  "parameter_selection": "After the three original runs and inspection of the actual JDK 7 defaults"
+}

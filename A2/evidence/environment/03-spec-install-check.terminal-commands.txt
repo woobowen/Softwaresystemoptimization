@@ -1,0 +1,14 @@
+set +x
+export JAVA_HOME=/home/addaswsw/.local/opt/java-se-8u41-ri
+export PATH="$JAVA_HOME/bin:$PATH"
+cd /home/addaswsw/.local/opt/specjvm2008
+clear
+PS4='$ '
+set -x
+pwd
+command -v java
+java -version
+javac -version
+java -jar SPECjvm2008.jar --version
+ls -ld SPECjvm2008.jar run-specjvm.sh lib resources props
+sha256sum SPECjvm2008.jar

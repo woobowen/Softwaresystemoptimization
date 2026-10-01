@@ -1,0 +1,258 @@
+[
+  {
+    "sample_index": 5,
+    "python_interval": {
+      "wall_delta_seconds": 4.172380447387695,
+      "monotonic_delta_seconds": 1.0002599799991003,
+      "difference_seconds": 3.172120467388595,
+      "cumulative_difference_seconds": 3.1721203873312334
+    },
+    "java_interval": {
+      "wall_delta_seconds": 4.172,
+      "monotonic_delta_seconds": 1.000229524,
+      "difference_seconds": 3.171770476,
+      "cumulative_difference_seconds": 3.172021105
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 53,
+    "python_interval": {
+      "wall_delta_seconds": 4.391711950302124,
+      "monotonic_delta_seconds": 1.062472172001435,
+      "difference_seconds": 3.329239778300689,
+      "cumulative_difference_seconds": 6.501360101035971
+    },
+    "java_interval": {
+      "wall_delta_seconds": 4.392,
+      "monotonic_delta_seconds": 1.06248008,
+      "difference_seconds": 3.32951992,
+      "cumulative_difference_seconds": 6.501797553000003
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 117,
+    "python_interval": {
+      "wall_delta_seconds": 4.018628358840942,
+      "monotonic_delta_seconds": 1.050239356001839,
+      "difference_seconds": 2.9683890028391033,
+      "cumulative_difference_seconds": 9.469749336822133
+    },
+    "java_interval": {
+      "wall_delta_seconds": 4.019,
+      "monotonic_delta_seconds": 1.050321328,
+      "difference_seconds": 2.9686786720000002,
+      "cumulative_difference_seconds": 9.469809992000009
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 149,
+    "python_interval": {
+      "wall_delta_seconds": 2.1613783836364746,
+      "monotonic_delta_seconds": 1.000189608996152,
+      "difference_seconds": 1.1611887746403227,
+      "cumulative_difference_seconds": 10.630938491529378
+    },
+    "java_interval": {
+      "wall_delta_seconds": 2.161,
+      "monotonic_delta_seconds": 1.000190893,
+      "difference_seconds": 1.160809107,
+      "cumulative_difference_seconds": 10.630662682000008
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 181,
+    "python_interval": {
+      "wall_delta_seconds": 3.575754404067993,
+      "monotonic_delta_seconds": 1.0002444670026307,
+      "difference_seconds": 2.5755099370653625,
+      "cumulative_difference_seconds": 13.206448028257
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.576,
+      "monotonic_delta_seconds": 1.000213254,
+      "difference_seconds": 2.5757867460000003,
+      "cumulative_difference_seconds": 13.206429870999983
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 214,
+    "python_interval": {
+      "wall_delta_seconds": 3.3516743183135986,
+      "monotonic_delta_seconds": 1.0002862170003937,
+      "difference_seconds": 2.351388101313205,
+      "cumulative_difference_seconds": 15.55783605173201
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.351,
+      "monotonic_delta_seconds": 1.000226769,
+      "difference_seconds": 2.350773231,
+      "cumulative_difference_seconds": 15.557448964000002
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 246,
+    "python_interval": {
+      "wall_delta_seconds": 3.414900064468384,
+      "monotonic_delta_seconds": 1.0003896799971699,
+      "difference_seconds": 2.414510384471214,
+      "cumulative_difference_seconds": 17.972347059599997
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.415,
+      "monotonic_delta_seconds": 1.000189728,
+      "difference_seconds": 2.414810272,
+      "cumulative_difference_seconds": 17.97253458900002
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 278,
+    "python_interval": {
+      "wall_delta_seconds": 3.387044668197632,
+      "monotonic_delta_seconds": 1.0002661100006662,
+      "difference_seconds": 2.3867785581969656,
+      "cumulative_difference_seconds": 20.35913506446377
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.388,
+      "monotonic_delta_seconds": 1.000304025,
+      "difference_seconds": 2.3876959749999997,
+      "cumulative_difference_seconds": 20.359706738
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 310,
+    "python_interval": {
+      "wall_delta_seconds": 3.4439151287078857,
+      "monotonic_delta_seconds": 1.0001762620013324,
+      "difference_seconds": 2.4437388667065534,
+      "cumulative_difference_seconds": 22.802873912543873
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.444,
+      "monotonic_delta_seconds": 1.000219868,
+      "difference_seconds": 2.4437801319999997,
+      "cumulative_difference_seconds": 22.803353614000002
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 342,
+    "python_interval": {
+      "wall_delta_seconds": 3.473888397216797,
+      "monotonic_delta_seconds": 1.000182367999514,
+      "difference_seconds": 2.4737060292172828,
+      "cumulative_difference_seconds": 25.276579578974633
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.474,
+      "monotonic_delta_seconds": 1.00019566,
+      "difference_seconds": 2.47380434,
+      "cumulative_difference_seconds": 25.277083282999968
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 375,
+    "python_interval": {
+      "wall_delta_seconds": 3.4076907634735107,
+      "monotonic_delta_seconds": 1.0001914419990499,
+      "difference_seconds": 2.407499321474461,
+      "cumulative_difference_seconds": 27.684079224272864
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.407,
+      "monotonic_delta_seconds": 1.000193276,
+      "difference_seconds": 2.406806724,
+      "cumulative_difference_seconds": 27.683767952999972
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 422,
+    "python_interval": {
+      "wall_delta_seconds": 3.2969281673431396,
+      "monotonic_delta_seconds": 1.0008121320061036,
+      "difference_seconds": 2.296116035337036,
+      "cumulative_difference_seconds": 29.98019539805682
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.297,
+      "monotonic_delta_seconds": 1.000743448,
+      "difference_seconds": 2.296256552,
+      "cumulative_difference_seconds": 29.980138011000008
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 454,
+    "python_interval": {
+      "wall_delta_seconds": 3.1530661582946777,
+      "monotonic_delta_seconds": 1.0001382530026603,
+      "difference_seconds": 2.1529279052920174,
+      "cumulative_difference_seconds": 32.133123474130116
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.153,
+      "monotonic_delta_seconds": 1.000147826,
+      "difference_seconds": 2.152852174,
+      "cumulative_difference_seconds": 32.13304040899999
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 487,
+    "python_interval": {
+      "wall_delta_seconds": 3.226160764694214,
+      "monotonic_delta_seconds": 1.0002051640040008,
+      "difference_seconds": 2.225955600690213,
+      "cumulative_difference_seconds": 34.3590792719624
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.226,
+      "monotonic_delta_seconds": 1.000213129,
+      "difference_seconds": 2.225786871,
+      "cumulative_difference_seconds": 34.359104395999964
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 519,
+    "python_interval": {
+      "wall_delta_seconds": 3.2717034816741943,
+      "monotonic_delta_seconds": 1.000269289004791,
+      "difference_seconds": 2.2714341926694033,
+      "cumulative_difference_seconds": 36.630513535259524
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.272,
+      "monotonic_delta_seconds": 1.000232554,
+      "difference_seconds": 2.2717674459999997,
+      "cumulative_difference_seconds": 36.63053959699994
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  },
+  {
+    "sample_index": 583,
+    "python_interval": {
+      "wall_delta_seconds": 3.0299322605133057,
+      "monotonic_delta_seconds": 1.0012309039957472,
+      "difference_seconds": 2.0287013565175585,
+      "cumulative_difference_seconds": 38.659214578765386
+    },
+    "java_interval": {
+      "wall_delta_seconds": 3.03,
+      "monotonic_delta_seconds": 1.001232824,
+      "difference_seconds": 2.0287671759999997,
+      "cumulative_difference_seconds": 38.65958512999998
+    },
+    "clocksource": "hyperv_clocksource_tsc_page"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "java_integer_nanosecond_recalculation": 38.659786672,
+  "intervals_sum_matches_endpoints": true,
+  "jump_counts_match": true,
+  "monotonic_samples_increase": true,
+  "java_source_identical_to_prior_stage": true,
+  "source_sha256": {
+    "A2/evidence/tools/clock-probe.py": "f6f91e16d0105043649279da95e087cded10b4152a1f9f3728fa3b30f775e6b6",
+    "A2/evidence/tools/ClockProbe.java": "2bcdbe8be4aba82599d71c4b9752028e56e93f4d5cfedda25cad2ad2cd96544d"
+  },
+  "sampling_logic_review": "Java prints currentTimeMillis/nanoTime once per second; Python timestamps each received line, unchanged from prior stage. Both independently exhibit the same multi-second steps."
+}

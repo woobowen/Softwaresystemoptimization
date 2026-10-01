@@ -1,0 +1,2 @@
+{"wall": 1790824113.6592362, "monotonic": 37014.948926128, "clocksource": "hyperv_clocksource_tsc_page"}
+{"wall": 1790824113.8839376, "monotonic": 37015.173628416, "clocksource": "hyperv_clocksource_tsc_page", "wall_delta": 0.2247014045715332, "monotonic_delta": 0.22470228799647884, "interval_difference": -8.83424945641309e-07, "cumulative_difference": -8.83424945641309e-07}

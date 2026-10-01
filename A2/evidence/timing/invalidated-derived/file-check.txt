@@ -1,0 +1,17 @@
+Files inspected:
+A2/README.md
+A2/evidence/environment/01-initial-java-environment.terminal.txt
+A2/evidence/environment/initial-environment.txt
+A2/evidence/environment/installation-log.md
+A2/evidence/environment/materials.md
+A2/evidence/environment/official-screenshot-local.log
+A2/evidence/environment/official-screenshot.log
+A2/evidence/final/preflight-check.json
+A2/evidence/references.md
+A2/evidence/requirement-matrix.md
+A2/evidence/run-index.md
+A2/images/01-initial-java-environment.png
+
+Credential-pattern scan flagged files: []
+No A2 deliverables ignored by Git.
+A1 and index unchanged. Temporary screenshot browser profiles removed.

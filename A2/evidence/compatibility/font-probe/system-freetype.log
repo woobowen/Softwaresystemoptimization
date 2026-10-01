@@ -1,0 +1,677 @@
+Oct 01, 2026 12:21:47 AM sun.awt.X11FontManager registerFontDir
+INFO: ParseFontDir /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/fonts
+Oct 01, 2026 12:21:47 AM sun.awt.FontConfiguration <init>
+INFO: Creating standard Font Configuration
+Oct 01, 2026 12:21:47 AM sun.awt.FontConfiguration <init>
+INFO: Creating standard Font Configuration
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Time spent accessing fontconfig=11ms.
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font sans:regular:roman maps to family DejaVu Sans in file /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Regular Fullname=Liberation Serif File=/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Regular Fullname=Ubuntu Mono Regular File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font sans:bold:roman maps to family DejaVu Sans in file /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Fullname=FreeSans Bold File=/usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Fullname=FreeMono Bold File=/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Fullname=DejaVu Sans Mono Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Mono Style=Bold Fullname=Liberation Mono Bold File=/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Fullname=Liberation Serif Bold File=/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Fullname=Ubuntu Mono Bold File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font sans:regular:italic maps to family DejaVu Sans in file /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Oblique Fullname=FreeSans Oblique File=/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Oblique Fullname=FreeSans Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Mono Style=Italic Fullname=Liberation Mono Italic File=/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Italic Fullname=Ubuntu Mono Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Italic Fullname=FreeSerif Bold Italic File=/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Oblique Fullname=FreeMono Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font sans:bold:italic maps to family DejaVu Sans in file /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Oblique Fullname=FreeSans Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Oblique Fullname=FreeSans Oblique File=/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Fullname=FreeSans Bold File=/usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Italic Fullname=FreeSerif Bold Italic File=/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Mono Style=Bold Italic Fullname=Liberation Mono Bold Italic File=/usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Italic Fullname=Liberation Serif Bold Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Italic Fullname=Ubuntu Mono Bold Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Oblique Fullname=FreeMono Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Oblique Fullname=DejaVu Sans Mono Bold Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Oblique Fullname=FreeMono Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Fullname=FreeMono Bold File=/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font serif:regular:roman maps to family DejaVu Serif in file /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Standard Symbols PS Style=Regular Fullname=Standard Symbols PS Regular File=/usr/share/fonts/X11/Type1/StandardSymbolsPS.pfb
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Regular Fullname=Liberation Serif File=/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Regular Fullname=Ubuntu Mono Regular File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font serif:bold:roman maps to family DejaVu Serif in file /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Standard Symbols PS Style=Regular Fullname=Standard Symbols PS Regular File=/usr/share/fonts/X11/Type1/StandardSymbolsPS.pfb
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Fullname=Liberation Serif Bold File=/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Fullname=Ubuntu Mono Bold File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Fullname=FreeSans Bold File=/usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font serif:regular:italic maps to family DejaVu Serif in file /usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Standard Symbols PS Style=Regular Fullname=Standard Symbols PS Regular File=/usr/share/fonts/X11/Type1/StandardSymbolsPS.pfb
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Italic Fullname=FreeSerif Bold Italic File=/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Italic Fullname=Ubuntu Mono Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Oblique Fullname=FreeSans Oblique File=/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font serif:bold:italic maps to family DejaVu Serif in file /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Standard Symbols PS Style=Regular Fullname=Standard Symbols PS Regular File=/usr/share/fonts/X11/Type1/StandardSymbolsPS.pfb
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Style=Regular Fullname=WenQuanYi Zen Hei File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Italic Fullname=FreeSerif Bold Italic File=/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Italic Fullname=Liberation Serif Bold Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Italic Fullname=Ubuntu Mono Bold Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Oblique Fullname=DejaVu Sans Mono Bold Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Oblique Fullname=FreeSans Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font monospace:regular:roman maps to family DejaVu Sans Mono in file /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Book Fullname=DejaVu Sans Mono File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Fullname=DejaVu Sans Mono Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Mono Style=Regular Fullname=Noto Mono File=/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Regular Fullname=Liberation Serif File=/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Regular Fullname=Ubuntu Mono Regular File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font monospace:bold:roman maps to family DejaVu Sans Mono in file /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Fullname=DejaVu Sans Mono Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Book Fullname=DejaVu Sans Mono File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Mono Style=Regular Fullname=Noto Mono File=/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Fullname=FreeMono Bold File=/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Fullname=Liberation Serif Bold File=/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Fullname=Ubuntu Mono Bold File=/usr/share/fonts/truetype/ubuntu/UbuntuMono[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Fullname=FreeSans Bold File=/usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font monospace:regular:italic maps to family DejaVu Sans Mono in file /usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Oblique Fullname=DejaVu Sans Mono Bold Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Book Fullname=DejaVu Sans Mono File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Fullname=DejaVu Sans Mono Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Mono Style=Regular Fullname=Noto Mono File=/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Regular Fullname=Noto Sans Mono Regular File=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Oblique Fullname=FreeMono Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Mono Style=Italic Fullname=Liberation Mono Italic File=/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Italic Fullname=Ubuntu Mono Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Oblique Fullname=FreeSans Oblique File=/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Book Fullname=DejaVu Serif File=/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: FC font monospace:bold:italic maps to family DejaVu Sans Mono in file /usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Oblique Fullname=DejaVu Sans Mono Bold Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Oblique Fullname=DejaVu Sans Mono Oblique File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Bold Fullname=DejaVu Sans Mono Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Mono Style=Book Fullname=DejaVu Sans Mono File=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Mono Style=Regular Fullname=Noto Mono File=/usr/share/fonts/truetype/noto/NotoMono-Regular.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Sans Mono Style=Bold Fullname=Noto Sans Mono Bold File=/usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=WenQuanYi Zen Hei Mono Style=Regular Fullname=WenQuanYi Zen Hei Mono File=/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=IPAGothic Style=Regular Fullname=IPAGothic File=/usr/share/fonts/truetype/fonts-japanese-gothic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Oblique Fullname=FreeMono Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Oblique Fullname=FreeMono Oblique File=/usr/share/fonts/truetype/freefont/FreeMonoOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Bold Fullname=FreeMono Bold File=/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeMono Style=Regular Fullname=FreeMono File=/usr/share/fonts/truetype/freefont/FreeMono.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Italic Fullname=FreeSerif Bold Italic File=/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Mono Style=Bold Italic Fullname=Liberation Mono Bold Italic File=/usr/share/fonts/truetype/liberation/LiberationMono-BoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Bold Italic Fullname=Liberation Serif Bold Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Ubuntu Mono Style=Bold Italic Fullname=Ubuntu Mono Bold Italic File=/usr/share/fonts/truetype/ubuntu/UbuntuMono-Italic[wght].ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Italic Fullname=FreeSerif Italic File=/usr/share/fonts/truetype/freefont/FreeSerifItalic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Liberation Serif Style=Italic Fullname=Liberation Serif Italic File=/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Oblique Fullname=FreeSans Bold Oblique File=/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Bold Fullname=FreeSerif Bold File=/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Bold Fullname=DejaVu Sans Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Serif Style=Bold Fullname=DejaVu Serif Bold File=/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Bold Fullname=FreeSans Bold File=/usr/share/fonts/truetype/freefont/FreeSansBold.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSerif Style=Regular Fullname=FreeSerif File=/usr/share/fonts/truetype/freefont/FreeSerif.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=FreeSans Style=Regular Fullname=FreeSans File=/usr/share/fonts/truetype/freefont/FreeSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=OpenSymbol Style=Regular Fullname=OpenSymbol File=/usr/share/fonts/truetype/libreoffice/opens___.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=DejaVu Sans Style=Book Fullname=DejaVu Sans File=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=wasy10 Style=LyX Fullname=wasy10 File=/usr/share/fonts/truetype/lyx/wasy10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=esint10 Style=LyX Fullname=esint10 File=/usr/share/fonts/truetype/lyx/esint10.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Droid Sans Fallback Style=Regular Fullname=Droid Sans Fallback File=/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf
+Oct 01, 2026 12:21:47 AM sun.font.FontConfigManager initFontConfigFonts
+INFO: Family=Noto Color Emoji Style=Regular Fullname=Noto Color Emoji File=/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager$2 run
+INFO: JRE font directory: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/fonts
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager$2 run
+INFO: Extra font path: null
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager$2 run
+INFO: Debug font path: null
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: Initialising composite fonts
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Serif, Font Serif.plain rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Serif.plain
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Serif, Font Serif.bold rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Serif.bold
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Serif, Font Serif.italic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Serif.italic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Serif, Font Serif.bolditalic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Serif.bolditalic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family SansSerif, Font SansSerif.plain rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered SansSerif.plain
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family SansSerif, Font SansSerif.bold rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered SansSerif.bold
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family SansSerif, Font SansSerif.italic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered SansSerif.italic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family SansSerif, Font SansSerif.bolditalic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered SansSerif.bolditalic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Monospaced, Font Monospaced.plain rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Monospaced.plain
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Monospaced, Font Monospaced.bold rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Monospaced.bold
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Monospaced, Font Monospaced.italic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Monospaced.italic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Monospaced, Font Monospaced.bolditalic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Monospaced.bolditalic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Dialog, Font Dialog.plain rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Dialog.plain
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Dialog, Font Dialog.bold rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Dialog.bold
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Dialog, Font Dialog.italic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Dialog.italic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family Dialog, Font Dialog.bolditalic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered Dialog.bolditalic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family DialogInput, Font DialogInput.plain rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered DialogInput.plain
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family DialogInput, Font DialogInput.bold rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered DialogInput.bold
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family DialogInput, Font DialogInput.italic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered DialogInput.italic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addCompositeToFontList
+INFO: Add to Family DialogInput, Font DialogInput.bolditalic rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initCompositeFonts
+INFO: registered DialogInput.bolditalic
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager findFont2D
+INFO: Search for font: SansSerif
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager initialiseDeferredFont
+INFO: Opening deferred font file /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.TrueTypeFont open
+INFO: open TTF: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager addToFontList
+INFO: Add to Family DejaVu Sans, Font DejaVu Sans rank=2
+Oct 01, 2026 12:21:47 AM sun.font.SunFontManager registerFontFile
+INFO: Registered file /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf as font ** TrueType Font: Family=DejaVu Sans Name=DejaVu Sans style=0 fileName=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf rank=2
+Font rendering completed

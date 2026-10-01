@@ -1,0 +1,77 @@
+[
+  {
+    "original_path": "A2/evidence/final/experiment-comparison.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/experiment-comparison.json",
+    "sha256_at_move": "4f61c13bae91cf6c870026dd381ebe354259059fc8a15b94e273a0c40840b8d0",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/data-check.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/data-check.json",
+    "sha256_at_move": "80f79f9154a8f00aa66b688a7615a13520a2342f63f8045998b7daa212d12809",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/hygiene-check.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+    "sha256_at_move": "95ec8444c40f873383016b3f0b1e3d8d3abc277c528e257f1d9a8cf127be0996",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/parser-tests.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/parser-tests.json",
+    "sha256_at_move": "fe277878cf63b500c68456a1561ca5ac21f930fde9ae357ebdbbb68c50e8bf2d",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/compress-regression.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/compress-regression.json",
+    "sha256_at_move": "a29f3102e625913c7a1c7cadda0070c322b558bdba4a7c8828a3f32c3f37fa96",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/script-checks.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/script-checks.json",
+    "sha256_at_move": "edbd62d1eb17a154e87d591d12b5e9f09ab9ea9c80c13a8e30fae764a606f7d8",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/file-check.txt",
+    "new_path": "A2/evidence/timing/invalidated-derived/file-check.txt",
+    "sha256_at_move": "597c70da72999e24153c45329039eb6c74d2da3ec131b58917ee1e66f9852d4f",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/preflight-check.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/preflight-check.json",
+    "sha256_at_move": "0f6eca91d306e49b6f5159cf62d9217c900e2a7e169eba666df47529237be193",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/capture-tests.json",
+    "new_path": "A2/evidence/timing/invalidated-derived/capture-tests.json",
+    "sha256_at_move": "064b925e1bbe9c8be61c85f4ea8bb190fca24f6cee09428c77ae0c632980e44f",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance"
+  },
+  {
+    "original_path": "A2/evidence/final/script-review.md",
+    "new_path": "A2/evidence/timing/invalidated-derived/script-review.md",
+    "sha256_at_move": "20e4f0e6e4db1f0d17b533e14cdb832b8a346625596a057c067b03061106fc11",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance",
+    "sha256_after_link_relocation": "1e657f85ce952e0eb407495beee6719a11b386034717b7a328236407bbd207b4"
+  },
+  {
+    "original_path": "A2/evidence/final/final-value-map.md",
+    "new_path": "A2/evidence/timing/invalidated-derived/final-value-map.md",
+    "sha256_at_move": "b7c85d284e42f312dd2fb1fc28fcd00bd2e93f978ae5de18e18d4c301eeb93dd",
+    "role": "Historical evidence associated with timing-invalidated measurements; not final measurement acceptance",
+    "sha256_after_link_relocation": "882bd427070ff671daf8444aedb29879c1f3c0350f14f22d8706fe3592eff4c1"
+  },
+  {
+    "original_path": "A2/evidence/run-index.md",
+    "new_path": "A2/evidence/timing/invalidated-derived/run-index.md",
+    "sha256_at_move": "01a292b82d9f8a9807e368a0b00e1bc32494219337f3e4e3564918e759554af1",
+    "role": "Historical run index",
+    "sha256_after_link_relocation": "1a0f13932bdb17b0209aa6e1caa416724b5816fc8846ff93d2d198bce6756ffb"
+  }
+]

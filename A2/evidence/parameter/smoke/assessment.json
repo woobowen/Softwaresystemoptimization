@@ -1,0 +1,35 @@
+{
+  "mode": "smoke",
+  "workload_count": 1,
+  "workloads": [
+    "compress"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "1002.67"
+    ],
+    ".html": [
+      "1002.67",
+      "1002.67"
+    ],
+    ".summary": [
+      "1002.67"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Peak",
+  "violations": [
+    "Not a compliant sequence of benchmarks for publication.",
+    "Property specjvm.iteration.time must be at least 240 seconds for publication."
+  ],
+  "score": 1002.66531592669,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 25.0,
+  "monotonic_seconds": 22.975,
+  "stdout_bytes": 1505,
+  "native_images_verified": 5,
+  "stderr_bytes": 0
+}

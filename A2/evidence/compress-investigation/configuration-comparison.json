@@ -1,0 +1,326 @@
+[
+  {
+    "metadata": "A2/evidence/base/base-1/run.json",
+    "result_id": "SPECjvm2008.006",
+    "pid": 16566,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-jar",
+      "SPECjvm2008.jar",
+      "--base"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/repeat/repeat-1/run.json",
+    "result_id": "SPECjvm2008.007",
+    "pid": 57549,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/repeat/repeat-2/run.json",
+    "result_id": "SPECjvm2008.008",
+    "pid": 58638,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/repeat/repeat-3/run.json",
+    "result_id": "SPECjvm2008.009",
+    "pid": 59662,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/parameter/parameter-1/run.json",
+    "result_id": "SPECjvm2008.011",
+    "pid": 61762,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-XX:+UseSerialGC",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/parameter/parameter-2/run.json",
+    "result_id": "SPECjvm2008.012",
+    "pid": 62879,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-XX:+UseSerialGC",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/parameter/parameter-3/run.json",
+    "result_id": "SPECjvm2008.013",
+    "pid": 63833,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-XX:+UseSerialGC",
+      "-jar",
+      "SPECjvm2008.jar",
+      "compress"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "120000",
+      "iterationTime": "240s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Base",
+    "violations": [
+      "Not a compliant sequence of benchmarks for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  },
+  {
+    "metadata": "A2/evidence/compatibility/jdk7-preflight-fixed/run.json",
+    "result_id": "SPECjvm2008.005",
+    "pid": 11941,
+    "java_path": "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "argv": [
+      "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+      "-jar",
+      "SPECjvm2008.jar",
+      "-wt",
+      "5s",
+      "-it",
+      "5s"
+    ],
+    "jdk_version": "24.75-b04 mixed mode",
+    "environment": {
+      "JAVA_HOME": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+      "CLASSPATH": null,
+      "JAVA_TOOL_OPTIONS": null,
+      "_JAVA_OPTIONS": null,
+      "JDK_JAVA_OPTIONS": null,
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+    },
+    "runner_sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+    "compress_config": {
+      "name": "compress",
+      "category": "null",
+      "args": "",
+      "minIter": "1",
+      "maxIter": "1",
+      "numberBmThreads": "22",
+      "warmupTime": "5000",
+      "iterationTime": "5s",
+      "bmType": "multi",
+      "runMode": "2"
+    },
+    "category": "SPECjvm2008 Peak",
+    "violations": [
+      "Property specjvm.iteration.time must be at least 240 seconds for publication."
+    ],
+    "score_source": "benchmark-results/benchmark-result[@name=compress]/iterations/iteration-result; operations * 60000 / (endTime-startTime)",
+    "heap_actual_pid": "not recorded; no -Xms/-Xmx in argv; independent same-JDK flags are not PID measurements"
+  }
+]

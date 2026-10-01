@@ -1,0 +1,11 @@
+{
+  "time": "2026-10-01T10:57:29.419441+08:00",
+  "python_java_probe_compiled_and_ran": true,
+  "probe_rejects_wrong_clocksource": true,
+  "monitor_detected_tsc_anomaly": true,
+  "monitor_cpu_seconds": 0.0009805040000000036,
+  "tool_sha256": {
+    "A2/evidence/tools/clock-probe.py": "f6f91e16d0105043649279da95e087cded10b4152a1f9f3728fa3b30f775e6b6",
+    "A2/evidence/tools/clock-monitor.py": "7eadfc6aba0bbf2ce114cf45bc5f4a1b2a1c0e0069fd009259e7749a40ab16d2"
+  }
+}

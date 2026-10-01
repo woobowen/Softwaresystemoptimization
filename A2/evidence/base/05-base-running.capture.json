@@ -1,0 +1,7 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/05-base-running.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/base/05-base-running.sh",
+  "captured_at": "2026-10-01T00:36:21.307879+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "73fa11c734b461afe0aeb7ba2503232f38de755dc6e95e960c840d14430850ef"
+}

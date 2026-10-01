@@ -1,0 +1,26 @@
+/usr/lib/jvm/java-21-openjdk-amd64/bin/jar tf /home/addaswsw/.cache/a2-downloads/SPECjvm2008_1_01_setup.jar
+exit=1
+java.util.zip.ZipException: Invalid CEN header (invalid extra data field size for tag: 0x3231 at 0)
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1781)
+	at java.base/java.util.zip.ZipFile$Source.checkExtraFields(ZipFile.java:1294)
+	at java.base/java.util.zip.ZipFile$Source.checkAndAddEntry(ZipFile.java:1233)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1720)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:151)
+	at jdk.jartool/sun.tools.jar.Main.list(Main.java:1524)
+	at jdk.jartool/sun.tools.jar.Main.run(Main.java:370)
+	at jdk.jartool/sun.tools.jar.Main.main(Main.java:1702)
+
+/usr/lib/jvm/java-21-openjdk-amd64/bin/java -Djdk.util.zip.disableZip64ExtraFieldValidation=true -jar /home/addaswsw/.cache/a2-downloads/SPECjvm2008_1_01_setup.jar -help
+exit=1
+Exception in thread "main" java.lang.NoClassDefFoundError: java/lang/Compiler
+	at install.<clinit>(DashoA10*..)
+Caused by: java.lang.ClassNotFoundException: java.lang.Compiler
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 1 more

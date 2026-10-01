@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-01T11:14:11.268091+08:00",
+  "failure": "First bounded PowerShell query wrapper used Python text=True with UTF-8 decoding; stderr decoding raised UnicodeDecodeError byte 0xd5. No probe or clocksource operation failed in that step.",
+  "fix": "Capture bytes; decode UTF-8, then GB18030, then UTF-16LE. Repeated bounded read-only query once; exit 0, NoMatchingEvents.",
+  "successful_evidence": "gate-1/host-event-check.json",
+  "configuration_changed": false
+}

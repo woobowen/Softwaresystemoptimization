@@ -1,0 +1,18 @@
+{
+  "ended_at": "2026-10-01T11:08:33.884202+08:00",
+  "sample_count": 2,
+  "interval_seconds": 15,
+  "wall_seconds": 0.2247014045715332,
+  "monotonic_seconds": 0.22470228799647884,
+  "cumulative_difference_seconds": -8.83424945641309e-07,
+  "min_interval_difference_seconds": -8.83424945641309e-07,
+  "max_interval_difference_seconds": -8.83424945641309e-07,
+  "forward_adjustments_over_50ms": 0,
+  "backward_adjustments_over_50ms": 0,
+  "backward_wall_intervals": 0,
+  "clocksource_values": [
+    "hyperv_clocksource_tsc_page"
+  ],
+  "process_cpu_seconds": 0.0007052989999999995,
+  "timing_healthy": true
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "A2/scripts/run-spec.py",
+    "A2/evidence/parameter/smoke",
+    "-XX:+UseSerialGC",
+    "-jar",
+    "SPECjvm2008.jar",
+    "-wt",
+    "5s",
+    "-it",
+    "5s",
+    "compress"
+  ],
+  "pid": 61208,
+  "launched_at": "2026-10-01T03:19:36.509724+08:00"
+}

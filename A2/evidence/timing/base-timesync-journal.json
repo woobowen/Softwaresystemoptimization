@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "journalctl",
+    "-u",
+    "systemd-timesyncd",
+    "--since",
+    "2026-10-01 00:30:00",
+    "--until",
+    "2026-10-01 03:00:00",
+    "--no-pager",
+    "-o",
+    "short-iso"
+  ],
+  "exit": 0,
+  "stdout": "2026-10-01T01:20:52+08:00 LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).\n2026-10-01T01:55:06+08:00 LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).\n2026-10-01T01:55:08+08:00 LAPTOP-KI0GT6AJ systemd-timesyncd[143]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\n",
+  "stderr": ""
+}

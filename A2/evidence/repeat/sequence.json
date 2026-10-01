@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "A2/evidence/final/run-three.py",
+    "repeat",
+    "compress"
+  ],
+  "cwd": "/home/addaswsw/lab/Software_system_optimization",
+  "pid": 57530,
+  "launched_at": "2026-10-01T02:56:22.030552+08:00",
+  "log": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/repeat/sequence.log"
+}

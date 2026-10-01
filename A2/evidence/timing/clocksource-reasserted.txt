@@ -1,0 +1,21 @@
+{
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--user",
+    "root",
+    "--exec",
+    "sh",
+    "-c",
+    "echo hyperv_clocksource_tsc_page > /sys/devices/system/clocksource/clocksource0/current_clocksource"
+  ],
+  "before": "hyperv_clocksource_tsc_page",
+  "after": "hyperv_clocksource_tsc_page",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "time": "2026-10-01T11:14:10.267991+08:00",
+  "monotonic": 37330.933713824,
+  "purpose": "Reassert the same authorized runtime clocksource after failed first gate; no NTP/host settings changed"
+}

@@ -1,0 +1,97 @@
+{
+  "workload": "compress",
+  "one_changed_jvm_option": "-XX:+UseSerialGC",
+  "same_environment_jdk_runner_threads_durations": true,
+  "six_independent_processes_and_raw_files": true,
+  "runs": [
+    {
+      "group": "repeat",
+      "number": 1,
+      "pid": 57549,
+      "start": "2026-10-01T02:56:22+08:00",
+      "end": "2026-10-01T03:02:59+08:00",
+      "score_ops_m": 801.2364480935909,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.007/SPECjvm2008.007.raw",
+      "sha256": "4a66c063774cc6db571e03d1226f402d0cae3c3cf5030c2ae8d2fe3b410840ec"
+    },
+    {
+      "group": "repeat",
+      "number": 2,
+      "pid": 58638,
+      "start": "2026-10-01T03:02:59+08:00",
+      "end": "2026-10-01T03:09:43+08:00",
+      "score_ops_m": 787.9627495844901,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.008/SPECjvm2008.008.raw",
+      "sha256": "1d90d9ce386d0d24c1448680f699ee4312d2d4065bc3e318c9aaa6d789353d34"
+    },
+    {
+      "group": "repeat",
+      "number": 3,
+      "pid": 59662,
+      "start": "2026-10-01T03:09:43+08:00",
+      "end": "2026-10-01T03:16:27+08:00",
+      "score_ops_m": 812.5824665594416,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw",
+      "sha256": "4717cfd2e59b19e04b166a47a02d34cc79a092b40ca1c8470646b8ec3783ab27"
+    },
+    {
+      "group": "parameter",
+      "number": 1,
+      "pid": 61762,
+      "start": "2026-10-01T03:22:34+08:00",
+      "end": "2026-10-01T03:29:15+08:00",
+      "score_ops_m": 800.0799272118082,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/parameter/SPECjvm2008.011/SPECjvm2008.011.raw",
+      "sha256": "4ca01bb1d598a39418c6c9409cadc6876c583669738b284ede24d896a183657d"
+    },
+    {
+      "group": "parameter",
+      "number": 2,
+      "pid": 62879,
+      "start": "2026-10-01T03:29:15+08:00",
+      "end": "2026-10-01T03:36:03+08:00",
+      "score_ops_m": 804.4155779737505,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/parameter/SPECjvm2008.012/SPECjvm2008.012.raw",
+      "sha256": "e3b69246198fbf2def4aa3890b968ccfb96a42a8afe0e458d956629abb64cef7"
+    },
+    {
+      "group": "parameter",
+      "number": 3,
+      "pid": 63833,
+      "start": "2026-10-01T03:36:03+08:00",
+      "end": "2026-10-01T03:42:41+08:00",
+      "score_ops_m": 806.4824001839282,
+      "raw": "/home/addaswsw/lab/Software_system_optimization/A2/results/parameter/SPECjvm2008.013/SPECjvm2008.013.raw",
+      "sha256": "b9b5fc47ea8d2a2f20009282833aaa8ba3e7b70562838c21e4445e72fc483893"
+    }
+  ],
+  "original": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      801.2364480935909,
+      787.9627495844901,
+      812.5824665594416
+    ],
+    "mean": 800.5938880791742,
+    "min": 787.9627495844901,
+    "max": 812.5824665594416,
+    "range": 24.61971697495153,
+    "relative_range_percent": 3.0751817296557697
+  },
+  "modified": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      800.0799272118082,
+      804.4155779737505,
+      806.4824001839282
+    ],
+    "mean": 803.659301789829,
+    "min": 800.0799272118082,
+    "max": 806.4824001839282,
+    "range": 6.402472972119995,
+    "relative_range_percent": 0.7966650741005613
+  },
+  "percentage_change": 0.3828924697401037
+}

@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "raw": "results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790787023287",
+        "endTime": "1790787263287",
+        "operations": "1445.0898764644649"
+      },
+      "score": 361.2724691161162,
+      "warmup_score_excluded": 520.8360036914614
+    },
+    {
+      "raw": "results/repeat/SPECjvm2008.007/SPECjvm2008.007.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790794722115",
+        "endTime": "1790794962115",
+        "operations": "3204.9457923743635"
+      },
+      "score": 801.2364480935909,
+      "warmup_score_excluded": 804.6706552809018
+    },
+    {
+      "raw": "results/repeat/SPECjvm2008.008/SPECjvm2008.008.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790795121769",
+        "endTime": "1790795361769",
+        "operations": "3151.8509983379604"
+      },
+      "score": 787.9627495844901,
+      "warmup_score_excluded": 809.5652024554117
+    },
+    {
+      "raw": "results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790795525438",
+        "endTime": "1790795765438",
+        "operations": "3250.3298662377665"
+      },
+      "score": 812.5824665594416,
+      "warmup_score_excluded": 789.5072624964504
+    },
+    {
+      "raw": "results/parameter/SPECjvm2008.011/SPECjvm2008.011.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790796293338",
+        "endTime": "1790796533338",
+        "operations": "3200.319708847233"
+      },
+      "score": 800.0799272118082,
+      "warmup_score_excluded": 846.5903582834709
+    },
+    {
+      "raw": "results/parameter/SPECjvm2008.012/SPECjvm2008.012.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790796698885",
+        "endTime": "1790796938885",
+        "operations": "3217.662311895002"
+      },
+      "score": 804.4155779737505,
+      "warmup_score_excluded": 800.689572909597
+    },
+    {
+      "raw": "results/parameter/SPECjvm2008.013/SPECjvm2008.013.raw",
+      "name": "compress",
+      "phase": "iterations",
+      "fields": {
+        "iteration": "1",
+        "expectedDuration": "240000",
+        "startTime": "1790797101385",
+        "endTime": "1790797341385",
+        "operations": "3225.929600735713"
+      },
+      "score": 806.4824001839282,
+      "warmup_score_excluded": 816.3248678782868
+    }
+  ]
+}

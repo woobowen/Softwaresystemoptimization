@@ -1,0 +1,123 @@
+{
+  "checked_at": "2026-10-01T03:52:59.260279+08:00",
+  "readme_sha256": "a567bc44baab6b263bee4297a1d391ada602e1f8a72a45601498d15307d515f1",
+  "question_count": 7,
+  "student_identity_correct": true,
+  "readme_numbers_match_raw": true,
+  "no_placeholders_or_internal_terms": true,
+  "local_markdown_links_checked": 15,
+  "formal_runs": [
+    {
+      "log_dir": "evidence/base/base-1",
+      "native_dir": "SPECjvm2008.006",
+      "files": 84,
+      "links": 77,
+      "images": 79,
+      "exit": 0,
+      "native_status": "Run is compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/repeat/repeat-1",
+      "native_dir": "SPECjvm2008.007",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/repeat/repeat-2",
+      "native_dir": "SPECjvm2008.008",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/repeat/repeat-3",
+      "native_dir": "SPECjvm2008.009",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/parameter/parameter-1",
+      "native_dir": "SPECjvm2008.011",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/parameter/parameter-2",
+      "native_dir": "SPECjvm2008.012",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    },
+    {
+      "log_dir": "evidence/parameter/parameter-3",
+      "native_dir": "SPECjvm2008.013",
+      "files": 10,
+      "links": 3,
+      "images": 5,
+      "exit": 0,
+      "native_status": "Run is valid, but not compliant",
+      "native_category": "SPECjvm2008 Base"
+    }
+  ],
+  "formal_native_file_count": 144,
+  "native_images_verified": 109,
+  "native_html_links": 95,
+  "all_source_and_copy_hashes_match": true,
+  "base_ops_m": 482.4931319457377,
+  "original": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      801.2364480935909,
+      787.9627495844901,
+      812.5824665594416
+    ],
+    "mean": 800.5938880791742,
+    "min": 787.9627495844901,
+    "max": 812.5824665594416,
+    "range": 24.61971697495153,
+    "relative_range_percent": 3.0751817296557697
+  },
+  "modified": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      800.0799272118082,
+      804.4155779737505,
+      806.4824001839282
+    ],
+    "mean": 803.659301789829,
+    "min": 800.0799272118082,
+    "max": 806.4824001839282,
+    "range": 6.402472972119995,
+    "relative_range_percent": 0.7966650741005613
+  },
+  "percentage_change": 0.3828924697401037,
+  "check_code_fix": "An initial ad hoc section regex missed section 2 because a FAQ URL includes #Q4.8. Splitting only at anchored ## n. headings corrected the check; the report had all seven sections.",
+  "readme_sha256_at_numeric_audit": "910d016aaf4c4849abd0f50ea73d23c7e44291c43cc380b147d14b6926015d29",
+  "final_readme_recheck": {
+    "checked_at": "2026-10-01T04:07:40.086741+08:00",
+    "same_values_and_seven_questions": true,
+    "local_links": 15,
+    "change_since_numeric_audit": "Removed duplicate cross-workload warning and clarified group references; measured values unchanged."
+  }
+}

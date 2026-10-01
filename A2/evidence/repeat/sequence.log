@@ -1,0 +1,136 @@
+Starting repeat-1
+2026-10-01T02:56:22+08:00 /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar compress
+2026-10-01T03:02:59+08:00 exit=0
+[
+  {
+    "source": "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.007",
+    "copy": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.007",
+    "file_count": 10,
+    "relative_links_checked": 3
+  }
+]
+{
+  "mode": "single",
+  "workload_count": 1,
+  "workloads": [
+    "compress"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "801.24"
+    ],
+    ".html": [
+      "801.24",
+      "801.24"
+    ],
+    ".summary": [
+      "801.24"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Base",
+  "violations": [
+    "Not a compliant sequence of benchmarks for publication."
+  ],
+  "score": 801.2364480935911,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 397.0,
+  "monotonic_seconds": 374.153,
+  "stdout_bytes": 1438,
+  "native_images_verified": 5,
+  "stderr_bytes": 0
+}
+Starting repeat-2
+2026-10-01T03:02:59+08:00 /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar compress
+2026-10-01T03:09:43+08:00 exit=0
+[
+  {
+    "source": "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.008",
+    "copy": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.008",
+    "file_count": 10,
+    "relative_links_checked": 3
+  }
+]
+{
+  "mode": "single",
+  "workload_count": 1,
+  "workloads": [
+    "compress"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "787.96"
+    ],
+    ".html": [
+      "787.96",
+      "787.96"
+    ],
+    ".summary": [
+      "787.96"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Base",
+  "violations": [
+    "Not a compliant sequence of benchmarks for publication."
+  ],
+  "score": 787.9627495844903,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 404.0,
+  "monotonic_seconds": 375.866,
+  "stdout_bytes": 1438,
+  "native_images_verified": 5,
+  "stderr_bytes": 0
+}
+Starting repeat-3
+2026-10-01T03:09:43+08:00 /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar compress
+2026-10-01T03:16:27+08:00 exit=0
+[
+  {
+    "source": "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.009",
+    "copy": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.009",
+    "file_count": 10,
+    "relative_links_checked": 3
+  }
+]
+{
+  "mode": "single",
+  "workload_count": 1,
+  "workloads": [
+    "compress"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "812.58"
+    ],
+    ".html": [
+      "812.58",
+      "812.58"
+    ],
+    ".summary": [
+      "812.58"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Base",
+  "violations": [
+    "Not a compliant sequence of benchmarks for publication."
+  ],
+  "score": 812.5824665594416,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 404.0,
+  "monotonic_seconds": 376.291,
+  "stdout_bytes": 1438,
+  "native_images_verified": 5,
+  "stderr_bytes": 0
+}
+Completed all three repeat runs

@@ -1,0 +1,7 @@
+{
+  "compile_exit": 0,
+  "exit": 0,
+  "stdout": "state=0 status=8192 tick=10833 freq_scaled_ppm=2167896 offset=0 tolerance=32768000 constant=1 precision=1\n",
+  "stderr": "",
+  "read_only_modes": 0
+}

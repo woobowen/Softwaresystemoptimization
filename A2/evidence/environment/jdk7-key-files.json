@@ -1,0 +1,8 @@
+{
+  "bin/java": "ef185d20f77fcb9699a60b2beb24acb097b4c4c1ee747506a90f04447a6de1d7",
+  "bin/javac": "a7616368c5b93662a80cba85706f103a729860e21e7edd072a3175472a357b3b",
+  "jre/bin/java": "ef185d20f77fcb9699a60b2beb24acb097b4c4c1ee747506a90f04447a6de1d7",
+  "jre/lib/rt.jar": "bbdd2f5909ea77fa115f03a2b030f231cc4bf720528b0436f83459a2be429349",
+  "jre/lib/amd64/server/libjvm.so": "3a60e3a75b11b0a7d15ad5ce48efeaf1b6bac54c8c575c569fe7c5a8d8b9fed0",
+  "jre/lib/amd64/libfreetype.so.6": "a868a2afd131e5a98b212bcc8820595f00f392c3f7580f703a04d635553d40b1"
+}

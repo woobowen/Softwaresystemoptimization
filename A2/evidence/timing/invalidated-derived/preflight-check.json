@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-09-30T10:43:26+08:00",
+  "scope": "preflight only; no benchmark started; waiting SPEC license authorization",
+  "readme_sections": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+  ],
+  "readme_relative_links": [
+    {
+      "path": "images/01-initial-java-environment.png",
+      "exists": true
+    }
+  ],
+  "input_pdf_sha256": "082f314ba649486afbff73b3af458b6b02d9b9e41ea9b7a64ecccf7fd0bce4dd",
+  "input_pdf_preserved": true,
+  "screenshot_sha256": "a2363b715e86bb8b395d1df24a877d57dd067826b0ec9d60ac9725c67d48189a",
+  "screenshot_verified": true,
+  "readme_continuous_review": "Read entire README. Corrected separation of initial JDK versus not-yet-selected measurement JDK; no local scores claimed. Sections 2-7 remain incomplete where measurements are required.",
+  "git_branch": "main",
+  "git_head": "5dcc4949e16127c212ad587ed096865894ebf1de",
+  "git_staged_diff": "",
+  "git_a1_diff": "",
+  "git_diff_check_exit": 0,
+  "new_system_or_language_packages": [],
+  "base_run": null,
+  "repeat_runs": [],
+  "parameter_runs": [],
+  "commit_push_submission_performed": false
+}

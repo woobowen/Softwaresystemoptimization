@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "retrieved": "2026-10-01T00:08:51.921940+08:00",
+    "sha256": "81d53945c97e5082c7b75b2b39c0a8ea99400592341073d9b497dd60e9701a98",
+    "matches_previous": true
+  },
+  {
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+    "retrieved": "2026-10-01T00:08:53.516940+08:00",
+    "sha256": "8472daef33df919535faf0b21b02b7ecc3a8c72b92bd8f49002e56d4faf016b3",
+    "matches_previous": true
+  }
+]

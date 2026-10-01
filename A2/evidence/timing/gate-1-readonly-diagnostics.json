@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-10-01T11:02:30.329197+08:00",
+  "commands": [
+    {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "exit_code": 0,
+      "stdout": "Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cat",
+        "/proc/sys/kernel/random/boot_id"
+      ],
+      "exit_code": 0,
+      "stdout": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "timedatectl",
+        "timesync-status"
+      ],
+      "exit_code": 0,
+      "stdout": "       Server: 185.125.190.57 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.523ms (max: 5s)\n       Offset: -312.414ms\n        Delay: 160.299ms\n       Jitter: 3.277515s\n Packet count: 1113\n    Frequency: -33.386ppm\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "timedatectl",
+        "show-timesync",
+        "--all"
+      ],
+      "exit_code": 0,
+      "stdout": "LinkNTPServers=\nSystemNTPServers=\nRuntimeNTPServers=\nFallbackNTPServers=ntp.ubuntu.com\nServerName=ntp.ubuntu.com\nServerAddress=185.125.190.57\nRootDistanceMaxUSec=5s\nPollIntervalMinUSec=32s\nPollIntervalMaxUSec=34min 8s\nPollIntervalUSec=32s\nNTPMessage={ Leap=0, Version=4, Mode=4, Stratum=2, Precision=-25, RootDelay=6.469ms, RootDispersion=289us, Reference=1D586304, OriginateTimestamp=Thu 2026-10-01 11:02:12 CST, ReceiveTimestamp=Thu 2026-10-01 11:02:12 CST, TransmitTimestamp=Thu 2026-10-01 11:02:12 CST, DestinationTimestamp=Thu 2026-10-01 11:02:12 CST, Ignored=no, PacketCount=1113, Jitter=3.277515s }\nFrequency=-2187979\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "journalctl",
+        "-k",
+        "-b",
+        "--since",
+        "2026-10-01T10:59:04.908424+08:00",
+        "--no-pager"
+      ],
+      "exit_code": 0,
+      "stdout": "Oct 01 10:59:04 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 10:59:04 LAPTOP-KI0GT6AJ kernel: clocksource: Switched to clocksource hyperv_clocksource_tsc_page\nOct 01 10:59:17 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 10:59:22 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 10:59:22 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:39 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:40 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:50 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:50 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:55 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:55 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:12 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:12 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:06 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:06 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:13 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:13 LAPTOP-KI0GT6AJ kernel: Adjusting hyperv_clocksource_tsc_page more than 11% (1472393379 vs 1862270976)\nOct 01 11:02:19 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "--since",
+        "2026-10-01T10:59:04.908424+08:00",
+        "--no-pager"
+      ],
+      "exit_code": 0,
+      "stdout": "-- No entries --\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "wsl.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "WSL \u7248\u672c: 2.7.12.0\r\n\u5185\u6838\u7248\u672c: 6.18.33.2-2\r\nWSLg \u7248\u672c: 1.0.73.2\r\nMSRDC \u7248\u672c: 1.2.7214\r\nDirect3D \u7248\u672c: 1.611.1-81528511\r\nDXCore \u7248\u672c: 10.0.26100.1-240331-1435.ge-release\r\nWindows: 10.0.22631.6199\r\n",
+      "stderr": ""
+    }
+  ],
+  "clocksource": "hyperv_clocksource_tsc_page"
+}

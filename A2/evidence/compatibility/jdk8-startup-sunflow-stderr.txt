@@ -1,0 +1,1419 @@
+Diagnostic only: read child stderr pipe; pid=11248; pipe_capacity=65536. This intervention excludes the run from performance results.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+Note: /tmp/SPECjvm2008/compiler.sunflow/sunflow/src/org/sunflow/system/RenderGlobalsPanel.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 warnings
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@498d3967: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2463236f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1145d697: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3164ee1b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@448cab5f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7172b5db: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4489b55f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3af1ebb4: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43db2d3f: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a073863: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5b5f08b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@40f5ee3c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1cd1732: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22749d3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4d9f1346: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71440a88: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@775fc4d7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@54a6307e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4722c3ce: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@22e23e94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1c27bca1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27889aaf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76651123: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@454087e5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6423e958: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@71d5a91: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@592fbf58: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@18917437: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63833754: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ea72067: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2ad69b94: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@39756235: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4336dbd8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@74257fc1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6ab140ea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@78c7f343: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@d5a1f98: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@52dea285: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@32081e24: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7592becd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2869c938: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@f848c3a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d8f4ad0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d0be77a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b4dcdea: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@50837be5: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@57dd62ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@15af7f59: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@98d29b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@19c2f8bb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bb185f9: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@43c993f0: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@704e1244: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60206288: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3830fe26: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@386c1756: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5bbb16f1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21c1f0d3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1ebfeb03: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@6bd73480: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@ad13d0a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@27d5f5bd: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@246fb520: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7b7d29bc: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2bbca370: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@23ccc3a7: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7a53b44b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@68f14274: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2698db39: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@41ae470: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@669af465: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@63bba9c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@29e5ea8: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@51f403ef: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@60fcec68: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3bc855b1: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4b53377e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3a49ae80: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3d518a0d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@44cd35cb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@16f702eb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@613d931b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@508d6cd3: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@7d436864: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@530dcd7d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@5ea5294c: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@65753dbf: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@393793d: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@3ec82a17: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@49509bcb: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@504df9b: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@1d461497: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@62211dba: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@2fe24cf6: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@c39a696: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@21f6f92a: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@4bd0ec63: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@76e89c13: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@37a4994e: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: spec.benchmarks.compiler.SpecFileManager$CachedFileObject@218d1939: major version 52 is newer than 51, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.

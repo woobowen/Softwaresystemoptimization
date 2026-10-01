@@ -1,0 +1,31 @@
+[
+  {
+    "argv": [
+      "powershell.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$ErrorActionPreference='Stop'; $s=[datetime]'2026-10-01T00:30:00'; $e=[datetime]'2026-10-01T03:00:00'; $providers=@('Microsoft-Windows-Kernel-Power','Microsoft-Windows-Power-Troubleshooter','Microsoft-Windows-Kernel-General','Microsoft-Windows-Time-Service'); $events=Get-WinEvent -FilterHashtable @{LogName='System';StartTime=$s;EndTime=$e;ProviderName=$providers} -ErrorAction SilentlyContinue; @($events | Where-Object {$_.Id -in @(1,42,107,506,507,35,37)} | ForEach-Object { $x=[xml]$_.ToXml(); $d=@{}; foreach($n in $x.Event.EventData.Data) {if($n.Name -in @('NewTime','OldTime','SleepTime','WakeTime','Reason','TargetState','EffectiveState','SleepDuration','WakeDuration')) {$d[$n.Name]=$n.'#text'}}; [pscustomobject]@{TimeCreated=$_.TimeCreated.ToString('o');Id=$_.Id;Provider=$_.ProviderName;Data=$d}}) | ConvertTo-Json -Depth 5"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "journalctl",
+      "-k",
+      "--since",
+      "2026-10-01 00:30:00",
+      "--until",
+      "2026-10-01 03:00:00",
+      "--no-pager",
+      "-g",
+      "(?i)suspend|resume|clock|time.*jump|time.*change|hyperv|tsc"
+    ],
+    "exit": 1,
+    "stdout": "-- No entries --\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,508 @@
+     11599:	find library=libpthread.so.0 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/glibc-hwcaps/x86-64-v3:/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/glibc-hwcaps/x86-64-v2:/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/glibc-hwcaps/x86-64-v3/libpthread.so.0
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/glibc-hwcaps/x86-64-v2/libpthread.so.0
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libpthread.so.0
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libpthread.so.0
+     11599:	
+     11599:	find library=libjli.so [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libjli.so
+     11599:	
+     11599:	find library=libdl.so.2 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libdl.so.2
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libdl.so.2
+     11599:	
+     11599:	find library=libc.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libc.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib64/ld-linux-x86-64.so.2
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libdl.so.2
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libpthread.so.0
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libjli.so
+     11599:	
+     11599:	
+     11599:	initialize program: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java
+     11599:	
+     11599:	
+     11599:	transferring control: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java
+     11599:	
+     11599:	find library=libm.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libm.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libm.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libm.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/server/libjvm.so
+     11599:	
+     11599:	find library=librt.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/librt.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/librt.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/librt.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libverify.so
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/server/libjvm.so: error: symbol lookup error: undefined symbol: JVM_begin_signal_setting (fatal)
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: ZIP_ReadMappedEntry (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_initIDs (fatal)
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so
+     11599:	
+     11599:	find library=libXext.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/glibc-hwcaps/x86-64-v3:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/glibc-hwcaps/x86-64-v2:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../glibc-hwcaps/x86-64-v3:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../glibc-hwcaps/x86-64-v2:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/glibc-hwcaps/x86-64-v3/libXext.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/glibc-hwcaps/x86-64-v2/libXext.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXext.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../glibc-hwcaps/x86-64-v3/libXext.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../glibc-hwcaps/x86-64-v2/libXext.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXext.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXext.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXext.so.6
+     11599:	
+     11599:	find library=libX11.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libX11.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libX11.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libX11.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libX11.so.6
+     11599:	
+     11599:	find library=libXrender.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXrender.so.1
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXrender.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXrender.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXrender.so.1
+     11599:	
+     11599:	find library=libXtst.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXtst.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXtst.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXtst.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXtst.so.6
+     11599:	
+     11599:	find library=libXi.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXi.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXi.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXi.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXi.so.6
+     11599:	
+     11599:	find library=libxcb.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libxcb.so.1
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libxcb.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libxcb.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libxcb.so.1
+     11599:	
+     11599:	find library=libXau.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXau.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXau.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXau.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXau.so.6
+     11599:	
+     11599:	find library=libXdmcp.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXdmcp.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXdmcp.so.6
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXdmcp.so.6
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXdmcp.so.6
+     11599:	
+     11599:	find library=libbsd.so.0 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libbsd.so.0
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libbsd.so.0
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libbsd.so.0
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libbsd.so.0
+     11599:	
+     11599:	find library=libmd.so.0 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmd.so.0
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libmd.so.0
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libmd.so.0
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libmd.so.0
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libmd.so.0
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libbsd.so.0
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXdmcp.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXau.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libxcb.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libX11.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXext.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXi.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXtst.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXrender.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_ColorModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_ColorModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_BufferedImage_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_BufferedImage_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_Raster_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_Raster_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_SampleModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_SampleModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_SinglePixelPackedSampleModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_SinglePixelPackedSampleModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_IntegerComponentRaster_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_IntegerComponentRaster_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_Toolkit_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_Toolkit_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_Rectangle_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_Rectangle_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_awt_X11GraphicsEnvironment_initDisplay (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_awt_X11GraphicsEnvironment_initDisplay (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_awt_X11_XlibWrapper_SetToolkitErrorHandler (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_awt_X11_XlibWrapper_SetToolkitErrorHandler (fatal)
+     11599:	find library=libXinerama.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libXinerama.so.1
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libXinerama.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libXinerama.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libXinerama.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libXinerama.so.1
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXinerama.so.1 [0]
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_Font_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_Font_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_SurfaceData_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_SurfaceData_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_IndexColorModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_image_IndexColorModel_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_open (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getTotal (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_startsWithLOC (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntry (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryFlag (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryTime (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryCrc (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntrySize (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryCSize (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryMethod (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_getEntryBytes (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_freeEntry (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_jar_JarFile_getMetaInfEntryNames (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_util_zip_ZipFile_read (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_security_AccessController_doPrivileged (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_pipe_SpanClipRenderer_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_pipe_SpanClipRenderer_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_pipe_Region_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_pipe_Region_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_BufImgSurfaceData_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_BufImgSurfaceData_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_BufImgSurfaceData_initRaster (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_awt_image_BufImgSurfaceData_initRaster (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_Disposer_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_Disposer_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_loops_GraphicsPrimitiveMgr_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_loops_GraphicsPrimitiveMgr_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_awt_Color_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_awt_Color_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_loops_GraphicsPrimitiveMgr_registerNativeLoops (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_java2d_loops_GraphicsPrimitiveMgr_registerNativeLoops (fatal)
+     11599:	find library=libfreetype.so.6 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/glibc-hwcaps/x86-64-v3:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/glibc-hwcaps/x86-64-v2:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/glibc-hwcaps/x86-64-v3/libfreetype.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/glibc-hwcaps/x86-64-v2/libfreetype.so.6
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfreetype.so.6
+     11599:	
+     11599:	find library=libgcc_s.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libgcc_s.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libgcc_s.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libgcc_s.so.1
+     11599:	
+     11599:	find library=libz.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libz.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libz.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libz.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libz.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /lib/x86_64-linux-gnu/libgcc_s.so.1
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfreetype.so.6
+     11599:	
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_font_SunFontManager_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_font_SunFontManager_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_sun_font_SunFontManager_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_sun_font_SunFontManager_initIDs (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_font_StrikeCache_getGlyphCacheDescription (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_font_StrikeCache_getGlyphCacheDescription (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_sun_font_StrikeCache_getGlyphCacheDescription (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_sun_font_StrikeCache_getGlyphCacheDescription (fatal)
+     11599:	
+     11599:	calling init: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libnet.so
+     11599:	
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddress_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddress_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddress_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddress_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddress_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddressImplFactory_isIPv6Supported (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddressImplFactory_isIPv6Supported (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddressImplFactory_isIPv6Supported (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddressImplFactory_isIPv6Supported (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_InetAddressImplFactory_isIPv6Supported (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_getLocalHostName (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_getLocalHostName (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_getLocalHostName (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_getLocalHostName (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_getLocalHostName (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_lookupAllHostAddr (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_lookupAllHostAddr (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_lookupAllHostAddr (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_lookupAllHostAddr (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6AddressImpl_lookupAllHostAddr (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet4Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet4Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet4Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet4Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet4Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so: error: symbol lookup error: undefined symbol: Java_java_net_Inet6Address_init (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so: error: symbol lookup error: undefined symbol: Java_sun_font_FontConfigManager_getFontConfig (fatal)
+     11599:	/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so: error: symbol lookup error: undefined symbol: Java_sun_font_FontConfigManager_getFontConfig (fatal)
+     11599:	find library=libfontconfig.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libfontconfig.so.1
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libfontconfig.so.1
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libfontconfig.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libfontconfig.so.1
+     11599:	
+     11599:	find library=libexpat.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libexpat.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libexpat.so.1
+     11599:	
+     11599:	/lib/x86_64-linux-gnu/libfontconfig.so.1: error: symbol lookup error: undefined symbol: FT_Done_MM_Var (fatal)
+     11599:	find library=libfontconfig.so [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/..		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libfontconfig.so
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/../libfontconfig.so
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libfontconfig.so
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libfontconfig.so
+     11599:	
+     11599:	find library=libexpat.so.1 [0]; searching
+     11599:	 search path=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli		(RPATH from file /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java)
+     11599:	  trying file=/home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libexpat.so.1
+     11599:	 search cache=/etc/ld.so.cache
+     11599:	  trying file=/lib/x86_64-linux-gnu/libexpat.so.1
+     11599:	
+     11599:	/lib/x86_64-linux-gnu/libfontconfig.so: error: symbol lookup error: undefined symbol: FT_Done_MM_Var (fatal)
+Exception in thread "main" java.lang.NullPointerException
+	at sun.awt.X11FontManager.getDefaultPlatformFont(X11FontManager.java:779)
+	at sun.font.SunFontManager$2.run(SunFontManager.java:433)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.font.SunFontManager.<init>(SunFontManager.java:376)
+	at sun.awt.X11FontManager.<init>(X11FontManager.java:32)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at sun.font.FontManagerFactory$1.run(FontManagerFactory.java:83)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.font.FontManagerFactory.getInstance(FontManagerFactory.java:74)
+	at java.awt.Font.getFont2D(Font.java:490)
+	at java.awt.Font.access$000(Font.java:224)
+	at java.awt.Font$FontAccessImpl.getFont2D(Font.java:228)
+	at sun.font.FontUtilities.getFont2D(FontUtilities.java:180)
+	at sun.java2d.SunGraphics2D.checkFontInfo(SunGraphics2D.java:634)
+	at sun.java2d.SunGraphics2D.getFontInfo(SunGraphics2D.java:795)
+	at sun.java2d.pipe.GlyphListPipe.drawString(GlyphListPipe.java:50)
+	at sun.java2d.pipe.ValidatePipe.drawString(ValidatePipe.java:165)
+	at sun.java2d.SunGraphics2D.drawString(SunGraphics2D.java:2869)
+	at FontProbe.main(FontProbe.java:12)
+     11599:	
+     11599:	calling fini:  [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/../lib/amd64/jli/libjli.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/librt.so.1 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libzip.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/xawt/libmawt.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXrender.so.1 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXtst.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXi.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXext.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libX11.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libxcb.so.1 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXau.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libXdmcp.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libbsd.so.0 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libmd.so.0 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfontmanager.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libawt.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libfreetype.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libgcc_s.so.1 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libz.so.1 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libnet.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libjava.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/libverify.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/amd64/server/libjvm.so [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libpthread.so.0 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libdl.so.2 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libm.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib/x86_64-linux-gnu/libc.so.6 [0]
+     11599:	
+     11599:	
+     11599:	calling fini: /lib64/ld-linux-x86-64.so.2 [0]
+     11599:	

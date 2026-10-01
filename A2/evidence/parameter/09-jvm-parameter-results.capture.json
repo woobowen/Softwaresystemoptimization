@@ -1,0 +1,9 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/09-jvm-parameter-results.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/parameter/09-jvm-parameter-results.sh",
+  "command_exit_code": 0,
+  "commands_sha256": "b8a562bbf14bd0df5eee6032170021ec837d8602c879c5632958839cdb4ecf7f",
+  "captured_at": "2026-10-01T03:43:41.605102+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "4be844b9a4a4bfaaf6fe75c4214d63400f1b84765d73f97d665a320e8e10ef2b"
+}

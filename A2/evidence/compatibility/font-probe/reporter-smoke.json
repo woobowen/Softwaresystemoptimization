@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-jar",
+    "SPECjvm2008.jar",
+    "--reporter",
+    "/home/addaswsw/.cache/a2-downloads/report-font-smoke/SPECjvm2008.004.raw"
+  ],
+  "cwd": "/home/addaswsw/.local/opt/specjvm2008",
+  "start": "2026-10-01T00:24:23.496693+08:00",
+  "raw_sha256_before": "ad447e3e14a9fc482da35084d840dd6a876e6ffe97d84d8c6a5132cf005b6a02",
+  "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6",
+  "exit_code": 0,
+  "end": "2026-10-01T00:24:29.472367+08:00",
+  "raw_sha256_after": "ad447e3e14a9fc482da35084d840dd6a876e6ffe97d84d8c6a5132cf005b6a02",
+  "native_images_verified": 79
+}

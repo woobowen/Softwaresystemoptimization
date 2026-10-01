@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "A2/evidence/final/run-three.py",
+    "parameter",
+    "compress",
+    "-XX:+UseSerialGC"
+  ],
+  "cwd": "/home/addaswsw/lab/Software_system_optimization",
+  "pid": 61759,
+  "launched_at": "2026-10-01T03:22:34.616814+08:00",
+  "log": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/parameter/sequence.log"
+}

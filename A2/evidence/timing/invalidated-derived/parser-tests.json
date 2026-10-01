@@ -1,0 +1,55 @@
+{
+  "parser_sha256": "40fb2c62cd5536cd5e022fc1cb6c135a83685cef4c3973862537c096a97e88e8",
+  "tests": [
+    {
+      "case": "actual_raw",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "directory",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "same_path_twice",
+      "exit_code": 1,
+      "stderr": "Error: Duplicate result is not an independent run: /home/addaswsw/lab/Software_system_optimization/A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003/SPECjvm2008.003.raw"
+    },
+    {
+      "case": "duplicate_copy",
+      "exit_code": 1,
+      "stderr": "Error: Duplicate result is not an independent run: /tmp/a2-parser-test-ms_81_88/SPECjvm2008.003.raw"
+    },
+    {
+      "case": "missing_input",
+      "exit_code": 1,
+      "stderr": "Error: Input does not exist: /tmp/a2-parser-test-ms_81_88/absent"
+    },
+    {
+      "case": "missing_raw",
+      "exit_code": 1,
+      "stderr": "Error: No raw files in /tmp/a2-parser-test-ms_81_88/empty"
+    },
+    {
+      "case": "correctness_failure",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-ms_81_88/SPECjvm2008.003.raw: correctness errors in raw result"
+    },
+    {
+      "case": "missing_score_field",
+      "exit_code": 1,
+      "stderr": "Error: 'operations'"
+    },
+    {
+      "case": "nonpositive_score",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-ms_81_88/SPECjvm2008.003.raw: invalid score for compress"
+    },
+    {
+      "case": "missing_report_score",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-ms_81_88/SPECjvm2008.003.raw: composite differs from native TXT"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "environment": {},
+  "clocks": {
+    "CLOCK_REALTIME": 1790820200.9527268,
+    "CLOCK_MONOTONIC": 33380.4515554,
+    "CLOCK_MONOTONIC_RAW": 36127.354780029,
+    "CLOCK_BOOTTIME": 33380.451555809
+  },
+  "commands": [
+    {
+      "argv": [
+        "timedatectl",
+        "timesync-status"
+      ],
+      "exit": 0,
+      "stdout": "       Server: 185.125.190.57 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 1D586304\n    Precision: 1us (-25)\nRoot distance: 3.677ms (max: 5s)\n       Offset: +3.254952s\n        Delay: 196.760ms\n       Jitter: 72.313ms\n Packet count: 1012\n    Frequency: +28.780ppm\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "timedatectl",
+        "status"
+      ],
+      "exit": 0,
+      "stdout": "               Local time: Thu 2026-10-01 10:03:21 CST\n           Universal time: Thu 2026-10-01 02:03:21 UTC\n                 RTC time: Thu 2026-10-01 02:03:24\n                Time zone: Asia/Shanghai (CST, +0800)\nSystem clock synchronized: yes\n              NTP service: active\n          RTC in local TZ: no\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "cat",
+        "/sys/devices/system/clocksource/clocksource0/current_clocksource"
+      ],
+      "exit": 0,
+      "stdout": "tsc\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "cat",
+        "/sys/devices/system/clocksource/clocksource0/available_clocksource"
+      ],
+      "exit": 0,
+      "stdout": "tsc hyperv_clocksource_tsc_page hyperv_clocksource_msr acpi_pm \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd"
+      ],
+      "exit": 0,
+      "stdout": "active\n",
+      "stderr": ""
+    }
+  ]
+}

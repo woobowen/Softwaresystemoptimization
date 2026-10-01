@@ -1,0 +1,6 @@
+{
+  "query": "$ErrorActionPreference='Stop'; try {$s=[DateTimeOffset]::Parse('2026-10-01T00:30:00+08:00').LocalDateTime; $e=[DateTimeOffset]::Parse('2026-10-01T03:00:00+08:00').LocalDateTime; $ev=Get-WinEvent -FilterHashtable @{LogName='System';StartTime=$s;EndTime=$e;ProviderName=@('Microsoft-Windows-Kernel-Power','Microsoft-Windows-Power-Troubleshooter','Microsoft-Windows-Kernel-General','Microsoft-Windows-Time-Service')}; $r=@($ev|Where-Object {$_.Id -in @(1,42,107,506,507,35,37)}|ForEach-Object {[pscustomobject]@{TimeCreated=$_.TimeCreated.ToString('o');Id=$_.Id;Provider=$_.ProviderName}}); [pscustomobject]@{Status='QuerySucceeded';Timezone=[TimeZoneInfo]::Local.Id;Events=$r}|ConvertTo-Json -Depth 4} catch { [pscustomobject]@{Status='QueryErrorOrNoMatches';ErrorId=$_.FullyQualifiedErrorId;Category=$_.CategoryInfo.Category.ToString()}|ConvertTo-Json }",
+  "exit": 0,
+  "stdout": "{\n    \"Status\":  \"QuerySucceeded\",\n    \"Timezone\":  \"China Standard Time\",\n    \"Events\":  [\n\n               ]\n}\n",
+  "stderr": ""
+}

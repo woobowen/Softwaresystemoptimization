@@ -1,0 +1,233 @@
+Frozen at: 2026-10-01T00:34:37.064125+08:00
+SPEC install: /home/addaswsw/.local/opt/specjvm2008
+SPEC: Benchmark=     SPECjvm2008
+            Kit_version=   1.01
+            Build_user=    dagastin
+            Build_date=    20090519
+Java: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java
+Runner SHA256: 902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6
+Original SPEC files unchanged: 777
+Base command: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar --base
+Repeat template: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -jar SPECjvm2008.jar <selected-workload>
+Modified template: /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java <one-JVM-option> -jar SPECjvm2008.jar <same-workload>
+Timekeeping: Start/end use CLOCK_REALTIME; runner wall_seconds uses CLOCK_MONOTONIC. Both are retained because their elapsed times differ in this WSL2 environment. No native scores are adjusted.
+
+Environment:
+JAVA_HOME=/home/addaswsw/.local/opt/java-se-7u75-ri
+PATH=/home/addaswsw/.local/opt/java-se-7u75-ri/bin:/home/addaswsw/.local/bin:/home/addaswsw/.codex/tmp/arg0/codex-arg0X2Vfmn:/home/addaswsw/.vscode-server/bin/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/home/addaswsw/.local/bin:/home/addaswsw/.npm-global/bin:/home/addaswsw/.local/bin:/home/addaswsw/.local/texlive/2026/bin/x86_64-linux:/home/addaswsw/.cargo/bin:/home/addaswsw/.nvm/versions/node/v22.22.0/bin:/home/addaswsw/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/caozuoxitong/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/d/MySQL/MySQL Server 8.0/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/dotnet/:/mnt/d/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/code2video/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/Program Files/nodejs/:/mnt/d/installation/cursor/resources/app/bin:/mnt/d/installation/gamescreencast/:/mnt/d/installation/MongoDB/bin/:/mnt/d/installation/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/d/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/lenovo/AppData/Local/Microsoft/WindowsApps:/mnt/d/installation/Microsoft VS Code/bin:/mnt/c/Program Files/mingw64/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Users/lenovo/.dotnet/tools:/mnt/c/Program Files:/mnt/d/installation/miktex/miktex/bin/x64/:/mnt/c/Users/lenovo/AppData/Roaming/npm:/mnt/d/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/texlive/2025/bin/windows:/mnt/d/installation/MongoDB/bin/:/snap/bin:/usr/local/go/bin:/home/addaswsw/.local/bin:/home/addaswsw/.vscode-server/extensions/openai.chatgpt-26.917.62051/bin/linux-x86_64:/home/addaswsw/.local/bin
+CLASSPATH=None
+JAVA_TOOL_OPTIONS=None
+_JAVA_OPTIONS=None
+JDK_JAVA_OPTIONS=None
+LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6
+LD_LIBRARY_PATH=None
+DISPLAY=:0
+FONTCONFIG_PATH=None
+LANG=C.UTF-8
+LC_ALL=C.UTF-8
+TZ=None
+
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+exit=0
+
+$ uname -srmo
+Linux 6.18.33.2-microsoft-standard-WSL2 x86_64 GNU/Linux
+
+exit=0
+
+$ lscpu -J
+{
+   "lscpu": [
+      {
+         "field": "Architecture:",
+         "data": "x86_64"
+      },{
+         "field": "CPU op-mode(s):",
+         "data": "32-bit, 64-bit"
+      },{
+         "field": "Address sizes:",
+         "data": "46 bits physical, 48 bits virtual"
+      },{
+         "field": "Byte Order:",
+         "data": "Little Endian"
+      },{
+         "field": "CPU(s):",
+         "data": "22"
+      },{
+         "field": "On-line CPU(s) list:",
+         "data": "0-21"
+      },{
+         "field": "Vendor ID:",
+         "data": "GenuineIntel"
+      },{
+         "field": "Model name:",
+         "data": "Intel(R) Core(TM) Ultra 9 185H"
+      },{
+         "field": "CPU family:",
+         "data": "6"
+      },{
+         "field": "Model:",
+         "data": "170"
+      },{
+         "field": "Thread(s) per core:",
+         "data": "2"
+      },{
+         "field": "Core(s) per socket:",
+         "data": "11"
+      },{
+         "field": "Socket(s):",
+         "data": "1"
+      },{
+         "field": "Stepping:",
+         "data": "4"
+      },{
+         "field": "BogoMIPS:",
+         "data": "6143.99"
+      },{
+         "field": "Flags:",
+         "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities"
+      },{
+         "field": "Virtualization:",
+         "data": "VT-x"
+      },{
+         "field": "Hypervisor vendor:",
+         "data": "Microsoft"
+      },{
+         "field": "Virtualization type:",
+         "data": "full"
+      },{
+         "field": "L1d cache:",
+         "data": "528 KiB (11 instances)"
+      },{
+         "field": "L1i cache:",
+         "data": "704 KiB (11 instances)"
+      },{
+         "field": "L2 cache:",
+         "data": "22 MiB (11 instances)"
+      },{
+         "field": "L3 cache:",
+         "data": "24 MiB (1 instance)"
+      },{
+         "field": "NUMA node(s):",
+         "data": "1"
+      },{
+         "field": "NUMA node0 CPU(s):",
+         "data": "0-21"
+      },{
+         "field": "Vulnerability Gather data sampling:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Ghostwrite:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Indirect target selection:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Itlb multihit:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability L1tf:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Mds:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Meltdown:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Mmio stale data:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Old microcode:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Reg file data sampling:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Retbleed:",
+         "data": "Mitigation; Enhanced IBRS"
+      },{
+         "field": "Vulnerability Spec rstack overflow:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Spec store bypass:",
+         "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+      },{
+         "field": "Vulnerability Spectre v1:",
+         "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+      },{
+         "field": "Vulnerability Spectre v2:",
+         "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S"
+      },{
+         "field": "Vulnerability Srbds:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Tsa:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Tsx async abort:",
+         "data": "Not affected"
+      },{
+         "field": "Vulnerability Vmscape:",
+         "data": "Not affected"
+      }
+   ]
+}
+
+exit=0
+
+$ nproc
+22
+
+exit=0
+
+$ free -b
+               total        used        free      shared  buff/cache   available
+Mem:     16561393664  1913761792 11267575808     4149248  3620200448 14647631872
+Swap:     4294967296           0  4294967296
+
+exit=0
+
+$ df -B1 /home/addaswsw/.local/opt/specjvm2008
+Filesystem         1B-blocks         Used    Available Use% Mounted on
+/dev/sdd       1081101176832 313746796544 712362024960  31% /
+
+exit=0
+
+$ which -a java
+/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java
+/usr/bin/java
+/bin/java
+
+exit=0
+
+$ /home/addaswsw/.local/opt/java-se-7u75-ri/bin/java -version
+
+openjdk version "1.7.0_75"
+OpenJDK Runtime Environment (build 1.7.0_75-b13)
+OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
+exit=0
+
+$ /home/addaswsw/.local/opt/java-se-7u75-ri/bin/javac -version
+
+javac 1.7.0_75
+exit=0
+
+$ readlink -f /usr/bin/java
+/usr/lib/jvm/java-21-openjdk-amd64/bin/java
+
+exit=0

@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-09-30T15:55:35+08:00",
+  "native_status": "Run is valid, but not compliant",
+  "workloads_completed": 38,
+  "performance_usable": false,
+  "reason": "Short trial timings and external diagnostic drain of blocked startup child stderr. Not a Base or repetition measurement.",
+  "full_console": "console.log.gz",
+  "full_console_sha256": "86c9e8dcf258423a03ec8ee8cd065c6a6850964874deff66362ad05e6074be77",
+  "excluded_warning_lines_in_excerpt": 50600,
+  "original_kit_files_changed": []
+}

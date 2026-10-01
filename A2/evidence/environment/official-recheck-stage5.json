@@ -1,0 +1,22 @@
+[
+  {
+    "name": "official-summary",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "checked_at": "2026-10-01T10:57:49.881801+08:00",
+    "http_status": 200,
+    "sha256": "81d53945c97e5082c7b75b2b39c0a8ea99400592341073d9b497dd60e9701a98",
+    "bytes": 2202,
+    "unchanged_from_stage4": true,
+    "contains_853_15": true
+  },
+  {
+    "name": "official-base",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+    "checked_at": "2026-10-01T10:57:53.011019+08:00",
+    "http_status": 200,
+    "sha256": "8472daef33df919535faf0b21b02b7ecc3a8c72b92bd8f49002e56d4faf016b3",
+    "bytes": 52404,
+    "unchanged_from_stage4": true,
+    "contains_853_15": true
+  }
+]

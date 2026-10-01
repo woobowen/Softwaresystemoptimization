@@ -1,0 +1,1149 @@
+{
+  "runs": [
+    {
+      "raw_file": "/home/addaswsw/lab/Software_system_optimization/A2/results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+      "sha256": "8c67caaa971974eab807797577bd1c22b9bd1a477aeb02f6be6a0d2cc2849d47",
+      "category": "SPECjvm2008 Base",
+      "unit": "ops/m",
+      "run_date": "Thu Oct 01 00:34:37 CST 2026",
+      "native_status": "Run is compliant",
+      "composite_ops_m": 482.4931319457377,
+      "groups_ops_m": {
+        "startup": 62.492890658420116,
+        "compiler": 1068.8651885296379,
+        "compress": 361.27246911611627,
+        "crypto": 425.9791820862012,
+        "derby": 362.70189164065545,
+        "mpegaudio": 472.5322336818597,
+        "scimark.large": 205.95621294522766,
+        "scimark.small": 1408.5559321026708,
+        "serial": 758.4879659831142,
+        "sunflow": 381.63016828288164,
+        "xml": 2229.995856351999
+      },
+      "workloads_ops_m": {
+        "startup.helloworld": 550.4587155963303,
+        "startup.compiler.compiler": 18.083182640144667,
+        "startup.compiler.sunflow": 19.455252918287936,
+        "startup.compress": 68.18181818181819,
+        "startup.crypto.aes": 37.5,
+        "startup.crypto.rsa": 104.34782608695652,
+        "startup.crypto.signverify": 97.40259740259741,
+        "startup.mpegaudio": 45.662100456621005,
+        "startup.scimark.fft": 143.54066985645932,
+        "startup.scimark.lu": 166.66666666666666,
+        "startup.scimark.monte_carlo": 62.37006237006237,
+        "startup.scimark.sor": 90.22556390977444,
+        "startup.scimark.sparse": 93.89671361502347,
+        "startup.serial": 44.776119402985074,
+        "startup.sunflow": 63.62672322375398,
+        "startup.xml.transform": 9.132420091324201,
+        "startup.xml.validation": 44.742729306487696,
+        "compiler.compiler": 1709.137038220233,
+        "compiler.sunflow": 668.4500807730349,
+        "compress": 361.2724691161162,
+        "crypto.aes": 184.65042324175863,
+        "crypto.rsa": 665.1833273530176,
+        "crypto.signverify": 629.3227957653485,
+        "derby": 362.70189164065545,
+        "mpegaudio": 472.5322336818599,
+        "scimark.fft.large": 235.321246897205,
+        "scimark.lu.large": 48.185887165476494,
+        "scimark.sor.large": 216.27144817311984,
+        "scimark.sparse.large": 119.5422040923223,
+        "scimark.fft.small": 1698.3864275942447,
+        "scimark.lu.small": 2568.3061922027996,
+        "scimark.sor.small": 1180.6121408969534,
+        "scimark.sparse.small": 851.7396997216581,
+        "scimark.monte_carlo": 1264.0755763683087,
+        "serial": 758.4879659831145,
+        "sunflow": 381.6301682828817,
+        "xml.transform": 1675.0343889594428,
+        "xml.validation": 2968.823537071563
+      },
+      "measurements": {
+        "startup.helloworld": {
+          "configuration": {
+            "name": "startup.helloworld",
+            "category": "null",
+            "args": "helloworld",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786089993",
+              "endTime": "1790786090102",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.compiler.compiler": {
+          "configuration": {
+            "name": "startup.compiler.compiler",
+            "category": "null",
+            "args": "compiler.compiler",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786090104",
+              "endTime": "1790786093422",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.compiler.sunflow": {
+          "configuration": {
+            "name": "startup.compiler.sunflow",
+            "category": "null",
+            "args": "compiler.sunflow",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786093426",
+              "endTime": "1790786096510",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.compress": {
+          "configuration": {
+            "name": "startup.compress",
+            "category": "null",
+            "args": "compress",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786096512",
+              "endTime": "1790786097392",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.crypto.aes": {
+          "configuration": {
+            "name": "startup.crypto.aes",
+            "category": "null",
+            "args": "crypto.aes",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786097393",
+              "endTime": "1790786098993",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.crypto.rsa": {
+          "configuration": {
+            "name": "startup.crypto.rsa",
+            "category": "null",
+            "args": "crypto.rsa",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786098996",
+              "endTime": "1790786099571",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.crypto.signverify": {
+          "configuration": {
+            "name": "startup.crypto.signverify",
+            "category": "null",
+            "args": "crypto.signverify",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786099572",
+              "endTime": "1790786100188",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.mpegaudio": {
+          "configuration": {
+            "name": "startup.mpegaudio",
+            "category": "null",
+            "args": "mpegaudio",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786100189",
+              "endTime": "1790786101503",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.scimark.fft": {
+          "configuration": {
+            "name": "startup.scimark.fft",
+            "category": "null",
+            "args": "scimark.fft",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786101505",
+              "endTime": "1790786101923",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.scimark.lu": {
+          "configuration": {
+            "name": "startup.scimark.lu",
+            "category": "null",
+            "args": "scimark.lu",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786101925",
+              "endTime": "1790786102285",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.scimark.monte_carlo": {
+          "configuration": {
+            "name": "startup.scimark.monte_carlo",
+            "category": "null",
+            "args": "scimark.monte_carlo",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786102286",
+              "endTime": "1790786103248",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.scimark.sor": {
+          "configuration": {
+            "name": "startup.scimark.sor",
+            "category": "null",
+            "args": "scimark.sor",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786103249",
+              "endTime": "1790786103914",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.scimark.sparse": {
+          "configuration": {
+            "name": "startup.scimark.sparse",
+            "category": "null",
+            "args": "scimark.sparse",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786103915",
+              "endTime": "1790786104554",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.serial": {
+          "configuration": {
+            "name": "startup.serial",
+            "category": "null",
+            "args": "serial",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786104556",
+              "endTime": "1790786105896",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.sunflow": {
+          "configuration": {
+            "name": "startup.sunflow",
+            "category": "null",
+            "args": "sunflow",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786105898",
+              "endTime": "1790786106841",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.xml.transform": {
+          "configuration": {
+            "name": "startup.xml.transform",
+            "category": "null",
+            "args": "xml.transform",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786106843",
+              "endTime": "1790786113413",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "startup.xml.validation": {
+          "configuration": {
+            "name": "startup.xml.validation",
+            "category": "null",
+            "args": "xml.validation",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "1",
+            "numberOfLoops": "1",
+            "bmType": "single",
+            "runMode": "1"
+          },
+          "warmup": [],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedLoops": "1",
+              "startTime": "1790786113414",
+              "endTime": "1790786114755",
+              "operations": "1.0"
+            }
+          ]
+        },
+        "compiler.compiler": {
+          "configuration": {
+            "name": "compiler.compiler",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790786116823",
+              "endTime": "1790786236823",
+              "operations": "2942.2480864643685"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790786246283",
+              "endTime": "1790786486283",
+              "operations": "6836.548152880931"
+            }
+          ]
+        },
+        "compiler.sunflow": {
+          "configuration": {
+            "name": "compiler.sunflow",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790786504169",
+              "endTime": "1790786624169",
+              "operations": "1601.1587613924144"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790786633356",
+              "endTime": "1790786873356",
+              "operations": "2673.800323092139"
+            }
+          ]
+        },
+        "compress": {
+          "configuration": {
+            "name": "compress",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790786890663",
+              "endTime": "1790787010663",
+              "operations": "1041.6720073829229"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790787023287",
+              "endTime": "1790787263287",
+              "operations": "1445.0898764644649"
+            }
+          ]
+        },
+        "crypto.aes": {
+          "configuration": {
+            "name": "crypto.aes",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790787281346",
+              "endTime": "1790787401346",
+              "operations": "382.4760598219515"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790787421126",
+              "endTime": "1790787661126",
+              "operations": "738.6016929670345"
+            }
+          ]
+        },
+        "crypto.rsa": {
+          "configuration": {
+            "name": "crypto.rsa",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790787681041",
+              "endTime": "1790787801041",
+              "operations": "1314.565364782141"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790787809662",
+              "endTime": "1790788049662",
+              "operations": "2660.7333094120704"
+            }
+          ]
+        },
+        "crypto.signverify": {
+          "configuration": {
+            "name": "crypto.signverify",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790788066228",
+              "endTime": "1790788186228",
+              "operations": "1317.0699592420149"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790788196009",
+              "endTime": "1790788436009",
+              "operations": "2517.291183061394"
+            }
+          ]
+        },
+        "derby": {
+          "configuration": {
+            "name": "derby",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790788483512",
+              "endTime": "1790788603512",
+              "operations": "691.287476598073"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790788614236",
+              "endTime": "1790788854236",
+              "operations": "1450.8075665626218"
+            }
+          ]
+        },
+        "mpegaudio": {
+          "configuration": {
+            "name": "mpegaudio",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790788873116",
+              "endTime": "1790788993116",
+              "operations": "460.582478190336"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790789006105",
+              "endTime": "1790789246105",
+              "operations": "1890.1289347274396"
+            }
+          ]
+        },
+        "scimark.fft.large": {
+          "configuration": {
+            "name": "scimark.fft.large",
+            "category": "null",
+            "args": "scimark.fft",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790789267655",
+              "endTime": "1790789387655",
+              "operations": "468.9912982433191"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790789403830",
+              "endTime": "1790789643830",
+              "operations": "941.28498758882"
+            }
+          ]
+        },
+        "scimark.lu.large": {
+          "configuration": {
+            "name": "scimark.lu.large",
+            "category": "null",
+            "args": "scimark.lu",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790789664238",
+              "endTime": "1790789784238",
+              "operations": "102.19630676068176"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790789844364",
+              "endTime": "1790790084364",
+              "operations": "192.74354866190595"
+            }
+          ]
+        },
+        "scimark.sor.large": {
+          "configuration": {
+            "name": "scimark.sor.large",
+            "category": "null",
+            "args": "scimark.sor",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790790146302",
+              "endTime": "1790790266302",
+              "operations": "436.67634243059166"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790790284338",
+              "endTime": "1790790524338",
+              "operations": "865.0857926924793"
+            }
+          ]
+        },
+        "scimark.sparse.large": {
+          "configuration": {
+            "name": "scimark.sparse.large",
+            "category": "null",
+            "args": "scimark.sparse",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790790550475",
+              "endTime": "1790790670475",
+              "operations": "251.3022193178059"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790790710740",
+              "endTime": "1790790950740",
+              "operations": "478.1688163692892"
+            }
+          ]
+        },
+        "scimark.fft.small": {
+          "configuration": {
+            "name": "scimark.fft.small",
+            "category": "null",
+            "args": "scimark.fft",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790790989969",
+              "endTime": "1790791109969",
+              "operations": "3236.0423983931687"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790791118858",
+              "endTime": "1790791358858",
+              "operations": "6793.545710376979"
+            }
+          ]
+        },
+        "scimark.lu.small": {
+          "configuration": {
+            "name": "scimark.lu.small",
+            "category": "null",
+            "args": "scimark.lu",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790791374198",
+              "endTime": "1790791494198",
+              "operations": "5089.137329550183"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790791503476",
+              "endTime": "1790791743476",
+              "operations": "10273.224768811198"
+            }
+          ]
+        },
+        "scimark.sor.small": {
+          "configuration": {
+            "name": "scimark.sor.small",
+            "category": "null",
+            "args": "scimark.sor",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790791760737",
+              "endTime": "1790791880737",
+              "operations": "2289.3111947892303"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790791890408",
+              "endTime": "1790792130408",
+              "operations": "4722.448563587814"
+            }
+          ]
+        },
+        "scimark.sparse.small": {
+          "configuration": {
+            "name": "scimark.sparse.small",
+            "category": "null",
+            "args": "scimark.sparse",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790792146221",
+              "endTime": "1790792266221",
+              "operations": "1695.0845001346918"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790792277675",
+              "endTime": "1790792517675",
+              "operations": "3406.9587988866324"
+            }
+          ]
+        },
+        "scimark.monte_carlo": {
+          "configuration": {
+            "name": "scimark.monte_carlo",
+            "category": "null",
+            "args": "scimark",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790792532939",
+              "endTime": "1790792652939",
+              "operations": "2483.561984048763"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790792664321",
+              "endTime": "1790792904321",
+              "operations": "5056.302305473235"
+            }
+          ]
+        },
+        "serial": {
+          "configuration": {
+            "name": "serial",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790792922263",
+              "endTime": "1790793042263",
+              "operations": "1535.1471129771805"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790793049700",
+              "endTime": "1790793289700",
+              "operations": "3033.9518639324583"
+            }
+          ]
+        },
+        "sunflow": {
+          "configuration": {
+            "name": "sunflow",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "11",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790793304501",
+              "endTime": "1790793424501",
+              "operations": "759.3789618465224"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790793435833",
+              "endTime": "1790793675833",
+              "operations": "1526.5206731315268"
+            }
+          ]
+        },
+        "xml.transform": {
+          "configuration": {
+            "name": "xml.transform",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790793701729",
+              "endTime": "1790793821729",
+              "operations": "3265.0536565244183"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790793829875",
+              "endTime": "1790794069875",
+              "operations": "6700.137555837771"
+            }
+          ]
+        },
+        "xml.validation": {
+          "configuration": {
+            "name": "xml.validation",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790794085646",
+              "endTime": "1790794205646",
+              "operations": "5782.931069481784"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790794213418",
+              "endTime": "1790794453418",
+              "operations": "11875.294148286252"
+            }
+          ]
+        }
+      },
+      "violations": [],
+      "jvm": {
+        "spec.jvm2008.report.jvm.app.class.path": "SPECjvm2008.jar",
+        "spec.jvm2008.report.jvm.name": "OpenJDK 64-Bit Server VM",
+        "spec.jvm2008.report.jvm.version": "24.75-b04 mixed mode",
+        "spec.jvm2008.report.jvm.java.specification": "1.7",
+        "spec.jvm2008.report.jvm.command.line.max.heap.size": "n/a",
+        "spec.jvm2008.report.jvm.other.tuning": " ",
+        "spec.jvm2008.report.jvm.available.date": "n/a",
+        "spec.jvm2008.report.jvm.vendor.url": "http://java.oracle.com/",
+        "spec.jvm2008.report.jvm.boot.class.path": "/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/resources.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/rt.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/sunrsasign.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jsse.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jce.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/charsets.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jfr.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/classes",
+        "spec.jvm2008.report.jvm.startup.command.line": " ",
+        "spec.jvm2008.report.jvm.address.bits": "64",
+        "spec.jvm2008.report.jvm.startup.launcher": "default",
+        "spec.jvm2008.report.jvm.vendor": "Oracle Corporation",
+        "spec.jvm2008.report.jvm.command.line": "n/a",
+        "spec.jvm2008.report.jvm.command.line.initial.heap.size": "n/a"
+      }
+    }
+  ]
+}

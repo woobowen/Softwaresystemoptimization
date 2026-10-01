@@ -1,0 +1,178 @@
+[
+  {
+    "file": "evidence/compatibility/images/01-initial-java-environment.png",
+    "method": "Existing initial-environment terminal screenshot retained from the earlier stage",
+    "facts_record": "evidence/environment/initial-environment.txt",
+    "historical_text_capture": "evidence/environment/01-initial-java-environment.terminal.txt",
+    "historical_text_capture_bytes": 0,
+    "scope": "Historical image; not used in the final JDK 7 report",
+    "sha256_at_review": "a2363b715e86bb8b395d1df24a877d57dd067826b0ec9d60ac9725c67d48189a",
+    "referenced_in_readme": false,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "historical",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Initial OS/CPU/memory and Java 21, consistent with initial-environment.txt. The old terminal.txt is empty and is not treated as a transcript."
+    },
+    "original_file": "images/01-initial-java-environment.png",
+    "current_role": "historical diagnostic"
+  },
+  {
+    "file": "evidence/compatibility/images/02-jdk-compatibility.png",
+    "method": "Actual Zutty terminal under Xvfb :91, captured directly through Pillow X11 ImageGrab; no pixel editing",
+    "commands": "evidence/environment/02-jdk-compatibility.terminal-commands.txt",
+    "captured_at": "2026-09-30T15:55:56.433366+08:00",
+    "scope": "diagnosis / installed environment, not formal performance result",
+    "sha256_at_review": "50b737bd166fd183d683e72c0a8fff62dd5faca39b277491699cf858f4087d81",
+    "referenced_in_readme": false,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "historical",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Actual Java 21 IllegalAccessError and JDK 8 child stderr warning/thread excerpts; excluded from formal performance results."
+    },
+    "original_file": "images/02-jdk-compatibility.png",
+    "current_role": "historical diagnostic"
+  },
+  {
+    "file": "evidence/compatibility/images/03-spec-install-check.png",
+    "method": "Actual Zutty terminal under Xvfb :91, captured directly through Pillow X11 ImageGrab; no pixel editing",
+    "commands": "evidence/environment/03-spec-install-check.terminal-commands.txt",
+    "captured_at": "2026-09-30T16:00:27.916158+08:00",
+    "scope": "diagnosis / installed environment, not formal performance result",
+    "sha256_at_review": "4190915fbaadbf769d1ff951551f770e20657f5d7994c255c06b42ad5bfc14e5",
+    "referenced_in_readme": false,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "historical",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "JDK 8 installation-stage version and SPEC 1.01 build 20090519; not the formal JDK screenshot."
+    },
+    "original_file": "images/03-spec-install-check.png",
+    "current_role": "historical diagnostic"
+  },
+  {
+    "file": "images/04-jdk7-environment.png",
+    "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+    "commands": "evidence/environment/04-jdk7-environment.sh",
+    "captured_at": "2026-10-01T00:28:05.941321+08:00",
+    "sha256_at_capture": "ef00e272d48fd03253e0d763c2eb5c079bc48a89db16a3e6a5b3b16b21cd4011",
+    "sha256_at_review": "ef00e272d48fd03253e0d763c2eb5c079bc48a89db16a3e6a5b3b16b21cd4011",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q2",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Java/javac 1.7.0_75, selected JAVA_HOME, existing system FreeType, unset option variables and unchanged global Java 21."
+    }
+  },
+  {
+    "file": "images/05-base-running.png",
+    "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+    "commands": "evidence/base/05-base-running.sh",
+    "captured_at": "2026-10-01T00:36:21.307879+08:00",
+    "sha256_at_capture": "73fa11c734b461afe0aeb7ba2503232f38de755dc6e95e960c840d14430850ef",
+    "sha256_at_review": "73fa11c734b461afe0aeb7ba2503232f38de755dc6e95e960c840d14430850ef",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q2",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Actual formal Base PID 16566 at 00:36:18; JDK 7 path, --base, 22 threads for compiler.compiler and 120/240 s."
+    }
+  },
+  {
+    "file": "images/06-base-summary.png",
+    "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+    "commands": "evidence/base/06-base-summary.sh",
+    "captured_at": "2026-10-01T02:55:57.655369+08:00",
+    "sha256_at_capture": "0905826e7f18ccbbedc7b82274c1f4dbcd8225cd301cc5aead71c6889f6ccfa1",
+    "sha256_at_review": "0905826e7f18ccbbedc7b82274c1f4dbcd8225cd301cc5aead71c6889f6ccfa1",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q2/Q3",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Native SPECjvm2008.006 TXT, compliant status, workload groups and 482.49 Base ops/m."
+    }
+  },
+  {
+    "file": "images/07-official-result.png",
+    "method": "Playwright Chromium screenshot of unmodified official HTML fetched at stage 2",
+    "local_source": "file:///home/addaswsw/lab/Software_system_optimization/materials/A2/official-docs/official-summary.html",
+    "official_url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "captured_at": "2026-09-30T15:41:40.924659+08:00",
+    "viewport": {
+      "width": 1180,
+      "height": 410
+    },
+    "deviceScaleFactor": 1.5,
+    "sha256_at_review": "572f3820f6cdebdbd811c37f9c8f30f94bd3e55e3e494a80a6800a2d87a4cbaa",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q4",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Unmodified official Summary Report: Red Hat, Sugon, 2 chips/20 cores/40 CPUs, 853.15 Base, published 23-Feb-2015."
+    }
+  },
+  {
+    "file": "images/08-repeat-results.png",
+    "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+    "commands": "evidence/repeat/08-repeat-results.sh",
+    "captured_at": "2026-10-01T03:18:58.081316+08:00",
+    "sha256_at_capture": "5f95d843d9cd7f63ba280b4732d4b42b11574969d2bd113131943c25e0cb0c77",
+    "sha256_at_review": "5f95d843d9cd7f63ba280b4732d4b42b11574969d2bd113131943c25e0cb0c77",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q5",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Parser output from .007/.008/.009: 801.24/787.96/812.58, mean 800.59, range 24.62 and 3.08%."
+    }
+  },
+  {
+    "file": "images/09-jvm-parameter-results.png",
+    "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+    "commands": "evidence/parameter/09-jvm-parameter-results.sh",
+    "captured_at": "2026-10-01T03:43:41.605102+08:00",
+    "command_exit_code": 0,
+    "commands_sha256": "b8a562bbf14bd0df5eee6032170021ec837d8602c879c5632958839cdb4ecf7f",
+    "sha256_at_capture": "4be844b9a4a4bfaaf6fe75c4214d63400f1b84765d73f97d665a320e8e10ef2b",
+    "sha256_at_review": "4be844b9a4a4bfaaf6fe75c4214d63400f1b84765d73f97d665a320e8e10ef2b",
+    "referenced_in_readme": true,
+    "metadata_checked_at": "2026-10-01T04:02:36.625508+08:00",
+    "final_visual_review": {
+      "reviewed_at": "2026-10-01T04:02:36.625508+08:00",
+      "actual_image_opened": true,
+      "role": "Q7",
+      "readable": true,
+      "sensitive_content_observed": false,
+      "content_check": "Parser output from original and modified raw files plus inspected JVM flags: 800.08/804.42/806.48, mean 803.66, change +0.38%, relative range 0.80%."
+    }
+  }
+]

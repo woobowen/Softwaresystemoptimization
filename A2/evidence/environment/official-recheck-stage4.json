@@ -1,0 +1,34 @@
+[
+  {
+    "name": "official-base",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+    "http_status": 200,
+    "bytes": 52404,
+    "sha256": "8472daef33df919535faf0b21b02b7ecc3a8c72b92bd8f49002e56d4faf016b3",
+    "contains_853_15": true
+  },
+  {
+    "name": "official-summary",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "http_status": 200,
+    "bytes": 2202,
+    "sha256": "81d53945c97e5082c7b75b2b39c0a8ea99400592341073d9b497dd60e9701a98",
+    "contains_853_15": true
+  },
+  {
+    "name": "FAQ",
+    "url": "https://www.spec.org/jvm2008/docs/FAQ.html",
+    "http_status": 200,
+    "bytes": 26287,
+    "sha256": "8d5359eb3b99412f4c6375bb57d492aeb434f639d11e52956f7495e0903defa4",
+    "contains_853_15": false
+  },
+  {
+    "name": "KnownIssues",
+    "url": "https://www.spec.org/jvm2008/docs/KnownIssues.html",
+    "http_status": 200,
+    "bytes": 13794,
+    "sha256": "475de0b12e287d624639023123fdafd17bafc38ea3cea7d20257b57aecceca39",
+    "contains_853_15": false
+  }
+]

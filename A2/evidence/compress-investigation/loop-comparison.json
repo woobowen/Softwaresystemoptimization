@@ -1,0 +1,74 @@
+[
+  {
+    "raw": "A2/results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw",
+    "operations": 3250.3298662377665,
+    "recorded_loops": 3430,
+    "median_loop_ms": 1508.5,
+    "min_loop_ms": 1348,
+    "max_loop_ms": 4819,
+    "score_ops_m": 812.5824665594416
+  },
+  {
+    "raw": "A2/results/repeat/SPECjvm2008.007/SPECjvm2008.007.raw",
+    "operations": 3204.9457923743635,
+    "recorded_loops": 3417,
+    "median_loop_ms": 1531,
+    "min_loop_ms": 1315,
+    "max_loop_ms": 4902,
+    "score_ops_m": 801.2364480935909
+  },
+  {
+    "raw": "A2/results/repeat/SPECjvm2008.008/SPECjvm2008.008.raw",
+    "operations": 3151.8509983379604,
+    "recorded_loops": 3427,
+    "median_loop_ms": 1518,
+    "min_loop_ms": 1325,
+    "max_loop_ms": 4773,
+    "score_ops_m": 787.9627495844901
+  },
+  {
+    "raw": "A2/results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+    "operations": 1445.0898764644649,
+    "recorded_loops": 1535,
+    "median_loop_ms": 3131,
+    "min_loop_ms": 1911,
+    "max_loop_ms": 11016,
+    "score_ops_m": 361.2724691161162
+  },
+  {
+    "raw": "A2/results/parameter/SPECjvm2008.013/SPECjvm2008.013.raw",
+    "operations": 3225.929600735713,
+    "recorded_loops": 3468,
+    "median_loop_ms": 1510.0,
+    "min_loop_ms": 1284,
+    "max_loop_ms": 4138,
+    "score_ops_m": 806.4824001839282
+  },
+  {
+    "raw": "A2/results/parameter/SPECjvm2008.012/SPECjvm2008.012.raw",
+    "operations": 3217.662311895002,
+    "recorded_loops": 3529,
+    "median_loop_ms": 1484,
+    "min_loop_ms": 1295,
+    "max_loop_ms": 4870,
+    "score_ops_m": 804.4155779737505
+  },
+  {
+    "raw": "A2/results/parameter/SPECjvm2008.011/SPECjvm2008.011.raw",
+    "operations": 3200.319708847233,
+    "recorded_loops": 3494,
+    "median_loop_ms": 1500.0,
+    "min_loop_ms": 1300,
+    "max_loop_ms": 4969,
+    "score_ops_m": 800.0799272118082
+  },
+  {
+    "raw": "A2/evidence/compress-investigation/standalone-diagnostic/native-results/SPECjvm2008.014/SPECjvm2008.014.raw",
+    "operations": 3196.01811651377,
+    "recorded_loops": 3417,
+    "median_loop_ms": 1470,
+    "min_loop_ms": 189,
+    "max_loop_ms": 5963,
+    "score_ops_m": 799.0045291284425
+  }
+]

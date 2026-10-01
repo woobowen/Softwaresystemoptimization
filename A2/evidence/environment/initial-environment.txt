@@ -1,0 +1,108 @@
+$ date --iso-8601=seconds
+2026-09-30T10:33:07+08:00
+$ pwd
+/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse --show-toplevel
+/home/addaswsw/lab/Software_system_optimization
+$ git branch --show-current
+main
+$ git remote -v
+origin	https://github.com/woobowen/Softwaresystemoptimization.git (fetch)
+origin	https://github.com/woobowen/Softwaresystemoptimization.git (push)
+$ git rev-parse HEAD
+5dcc4949e16127c212ad587ed096865894ebf1de
+$ git diff --cached --stat
+$ uname -a
+Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+$ lscpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  22
+On-line CPU(s) list:                     0-21
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) Ultra 9 185H
+CPU family:                              6
+Model:                                   170
+Thread(s) per core:                      2
+Core(s) per socket:                      11
+Socket(s):                               1
+Stepping:                                4
+BogoMIPS:                                6144.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               528 KiB (11 instances)
+L1i cache:                               704 KiB (11 instances)
+L2 cache:                                22 MiB (11 instances)
+L3 cache:                                24 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-21
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+$ nproc
+22
+$ free -b
+               total        used        free      shared  buff/cache   available
+Mem:     16561385472  2025660416 14200635392     4165632   564281344 14535725056
+Swap:     4294967296           0  4294967296
+$ df -h .
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  292G  665G  31% /
+$ readlink -f /usr/bin/java
+/usr/lib/jvm/java-21-openjdk-amd64/bin/java
+$ java -version
+openjdk version "21.0.12.1" 2026-08-18
+OpenJDK Runtime Environment (build 21.0.12.1+1-1-24.04.4-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-24.04.4-Ubuntu, mixed mode, sharing)
+$ javac -version
+javac 21.0.12.1
+$ command -v zutty
+/usr/bin/zutty
+$ command -v Xvfb
+/usr/bin/Xvfb
+$ command -v tmux
+/usr/bin/tmux
+$ uptime
+ 10:33:08 up 16 min,  1 user,  load average: 0.10, 0.13, 0.09
+
+Initial git status before task writes: clean working tree and index (observed before this file).
+PATH=/home/addaswsw/.local/bin:/home/addaswsw/.codex/tmp/arg0/codex-arg0Kawfb9:/home/addaswsw/.vscode-server/bin/04c0d99f4fb0d8afe6ce4f0c58e31e183ac3e4b1/bin/remote-cli:/home/addaswsw/.local/bin:/home/addaswsw/.npm-global/bin:/home/addaswsw/.local/bin:/home/addaswsw/.local/texlive/2026/bin/x86_64-linux:/home/addaswsw/.cargo/bin:/home/addaswsw/.nvm/versions/node/v22.22.0/bin:/home/addaswsw/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/caozuoxitong/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/d/MySQL/MySQL Server 8.0/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files/dotnet/:/mnt/d/Windows Kits/10/Windows Performance Toolkit/:/mnt/d/code2video/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/Program Files/nodejs/:/mnt/d/installation/cursor/resources/app/bin:/mnt/d/installation/gamescreencast/:/mnt/d/installation/MongoDB/bin/:/mnt/d/installation/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/d/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/lenovo/AppData/Local/Microsoft/WindowsApps:/mnt/d/installation/Microsoft VS Code/bin:/mnt/c/Program Files/mingw64/bin:/mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312:/mnt/c/Users/lenovo/.dotnet/tools:/mnt/c/Program Files:/mnt/d/installation/miktex/miktex/bin/x64/:/mnt/c/Users/lenovo/AppData/Roaming/npm:/mnt/d/ffmpeg-2025-12-22-git-c50e5c7778-full_build/ffmpeg-2025-12-22-git-c50e5c7778-full_build/bin:/mnt/c/texlive/2025/bin/windows:/mnt/d/installation/MongoDB/bin/:/snap/bin:/usr/local/go/bin:/home/addaswsw/.local/bin:/home/addaswsw/.vscode-server/extensions/openai.chatgpt-26.917.62051/bin/linux-x86_64:/home/addaswsw/.local/bin
+JAVA_HOME=<unset>
+CLASSPATH=<unset>
+JAVA_TOOL_OPTIONS=<unset>
+_JAVA_OPTIONS=<unset>
+JDK_JAVA_OPTIONS=<unset>

@@ -1,0 +1,877 @@
+{
+  "scope": "Local checkpoint publication checks only; not Engineering PASS or timing recovery",
+  "recorded_at_guest_wall": "2026-10-01T11:56:20.543242+08:00",
+  "previous_head": "5dcc4949e16127c212ad587ed096865894ebf1de",
+  "protected_initial_files_checked": 476,
+  "changed_existing_a2_files": [
+    "A2/README.md",
+    "A2/evidence/environment/installation-log.md",
+    "A2/evidence/final/final-value-map.md",
+    "A2/evidence/requirement-matrix.md",
+    "A2/evidence/run-index.md",
+    "A2/evidence/timing/conclusion.md",
+    "A2/evidence/timing/invalidated-results/manifest.md",
+    "A2/evidence/timing/recovery-conclusion.md",
+    "A2/evidence/timing/recovery-options.md"
+  ],
+  "removed_existing_a2_files": [],
+  "native_integrity": {
+    "native_directories": [
+      {
+        "directory": "A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001",
+        "run_id": "SPECjvm2008.001",
+        "files": 8,
+        "raw_sha256": "1e5d8e0c22c8cd8155607f47bb03bc35d5c87a89845d8be59b0ebf40b978b860",
+        "directory_digest_sha256": "1fe9fd27eec3a54392e8209e1e0afd828e7a64fe2e4732ee9fc92202897e505c",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 1,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/compatibility/jdk7-preflight/native-results/SPECjvm2008.004",
+        "run_id": "SPECjvm2008.004",
+        "files": 84,
+        "raw_sha256": "ad447e3e14a9fc482da35084d840dd6a876e6ffe97d84d8c6a5132cf005b6a02",
+        "directory_digest_sha256": "83681561f5849f57b23714e4aa9d1cc6571890cb8fb7ec60f8c5e9f8bc4e8909",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 77,
+        "empty_jpegs": 79
+      },
+      {
+        "directory": "A2/evidence/compatibility/jdk7-preflight-fixed/native-results/SPECjvm2008.005",
+        "run_id": "SPECjvm2008.005",
+        "files": 84,
+        "raw_sha256": "3d970fa022c89b3252d4af323d40fd0af2f37679da2b5755ca0b989fda14bca3",
+        "directory_digest_sha256": "8decdc65732cee951627672cbecc09eb2eef539033c648dc30b1e0a1f0ea4108",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 77,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/compatibility/jdk8-preflight/native-results/SPECjvm2008.002",
+        "run_id": "SPECjvm2008.002",
+        "files": 84,
+        "raw_sha256": "0e585ea86ce2056c35940138fe0f16d2a74f10d186a1108d0e8c801c43904fc7",
+        "directory_digest_sha256": "01b96e05f5cf71fba80a93459696ccf031d6030ea06651497d151faf90e57d8b",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 77,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/parameter/smoke/native-results/SPECjvm2008.010",
+        "run_id": "SPECjvm2008.010",
+        "files": 10,
+        "raw_sha256": "b62284eaa1e55d535f23e9a37d5ac8ac4f38fe0b3182a339a96f1856b797e289",
+        "directory_digest_sha256": "a7eca314d5aa0fedf2f4d6a332b4a9e481c3b75c91e556e63e1fe6cbdf6ee0b6",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003",
+        "run_id": "SPECjvm2008.003",
+        "files": 10,
+        "raw_sha256": "7718b5106f9257ee300e8a80105535b229d7ca64b6f0aab896d48bada2a12194",
+        "directory_digest_sha256": "e098f54338800055d5207b57d5cd3ae35c8b95b85e79905ff5b7f98ce65a99a9",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006",
+        "run_id": "SPECjvm2008.006",
+        "files": 84,
+        "raw_sha256": "8c67caaa971974eab807797577bd1c22b9bd1a477aeb02f6be6a0d2cc2849d47",
+        "directory_digest_sha256": "eb167435d2d51e20c5fc195170c6abd5f52644a3325fa5c29b2b1bd4757b522b",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 77,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/diagnostic/SPECjvm2008.014",
+        "run_id": "SPECjvm2008.014",
+        "files": 10,
+        "raw_sha256": "a0239382835f1363555b1fea706c7241b7dcd3f3f1ade76e7a84745c3cd62027",
+        "directory_digest_sha256": "d4d7a449093098422b824b1afee6045d7be7287336dcd03d2eae42761be4adc4",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.011",
+        "run_id": "SPECjvm2008.011",
+        "files": 10,
+        "raw_sha256": "4ca01bb1d598a39418c6c9409cadc6876c583669738b284ede24d896a183657d",
+        "directory_digest_sha256": "4cc2c98f835f186b680e1e26f65a4d21158f5fdb4264a70bebef22a34de28f81",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.012",
+        "run_id": "SPECjvm2008.012",
+        "files": 10,
+        "raw_sha256": "e3b69246198fbf2def4aa3890b968ccfb96a42a8afe0e458d956629abb64cef7",
+        "directory_digest_sha256": "1ba0a453c1e66b1f4e64310511073dc539e684b6210ebb1d5ead67eaf82839d8",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.013",
+        "run_id": "SPECjvm2008.013",
+        "files": 10,
+        "raw_sha256": "b9b5fc47ea8d2a2f20009282833aaa8ba3e7b70562838c21e4445e72fc483893",
+        "directory_digest_sha256": "a88fdca1d004bda33159b2794edce72c5f895819bbc54f55df3ac510f2c3fab8",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.007",
+        "run_id": "SPECjvm2008.007",
+        "files": 10,
+        "raw_sha256": "4a66c063774cc6db571e03d1226f402d0cae3c3cf5030c2ae8d2fe3b410840ec",
+        "directory_digest_sha256": "829ead265959df33a1e946d1d019a2941321502e6f11bc94b29bf821ee4d7fc8",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.008",
+        "run_id": "SPECjvm2008.008",
+        "files": 10,
+        "raw_sha256": "1d90d9ce386d0d24c1448680f699ee4312d2d4065bc3e318c9aaa6d789353d34",
+        "directory_digest_sha256": "ab29896fa55d66c79689527fd7f89af5edba22c3120e697e609ed6375c8f7a69",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      },
+      {
+        "directory": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009",
+        "run_id": "SPECjvm2008.009",
+        "files": 10,
+        "raw_sha256": "4717cfd2e59b19e04b166a47a02d34cc79a092b40ca1c8470646b8ec3783ab27",
+        "directory_digest_sha256": "1a4bbaf0c5577cfc3c1ccea9119155e96a7438f8b9367393a6ae6b89b2f18bcb",
+        "digest_method": "SHA256 of JSON object mapping sorted relative file paths to SHA256, using json.dumps(sort_keys=True)",
+        "matches_installed_native_source": true,
+        "local_html_links": 3,
+        "empty_jpegs": 0
+      }
+    ],
+    "broken_html_links": []
+  },
+  "invalidated_manifest": {
+    "runs": 8,
+    "files": 154,
+    "all_sha256_match": true
+  },
+  "timing_raw_offline_recalculation": [
+    {
+      "path": "A2/evidence/timing/probe-10min",
+      "sample_count": 601,
+      "samples_sha256": "d2c044c028d82c9b983aba158a257d514b165840ba8cfa767f542f76383de4a3",
+      "python": {
+        "wall_seconds": 650.3662610054016,
+        "monotonic_seconds": 600.3783695509992,
+        "difference_seconds": 49.987891454402416,
+        "forward_jumps_over_50ms": 18,
+        "backward_jumps_over_50ms": 1,
+        "min_interval_difference_seconds": -1.0865580145618878,
+        "max_interval_difference_seconds": 3.7474660585066886
+      },
+      "java": {
+        "wall_seconds": 650.366,
+        "monotonic_seconds": 600.378267306,
+        "difference_seconds": 49.98773269399999,
+        "forward_jumps_over_50ms": 18,
+        "backward_jumps_over_50ms": 1,
+        "min_interval_difference_seconds": -1.086384204,
+        "max_interval_difference_seconds": 3.747980515
+      }
+    },
+    {
+      "path": "A2/evidence/timing/gate-1",
+      "sample_count": 601,
+      "samples_sha256": "eca99b990df072f22e7d8a76f66722de1dedeb31f80087f174b8b7425de26f27",
+      "python": {
+        "wall_seconds": 639.1804237365723,
+        "monotonic_seconds": 600.5212091569992,
+        "difference_seconds": 38.65921457957302,
+        "forward_jumps_over_50ms": 16,
+        "backward_jumps_over_50ms": 0,
+        "min_interval_difference_seconds": -7.63694042689167e-05,
+        "max_interval_difference_seconds": 3.329239778300689
+      },
+      "java": {
+        "wall_seconds": 639.181,
+        "monotonic_seconds": 600.521213328,
+        "difference_seconds": 38.659786671999996,
+        "forward_jumps_over_50ms": 16,
+        "backward_jumps_over_50ms": 0,
+        "min_interval_difference_seconds": -0.000907750000000096,
+        "max_interval_difference_seconds": 3.32951992
+      }
+    },
+    {
+      "path": "A2/evidence/timing/gate-2",
+      "sample_count": 601,
+      "samples_sha256": "b6e5c0fd03a6b0e5f468cdf3a52af995755e69b984db0cdbcfd67dfc7693f4ae",
+      "python": {
+        "wall_seconds": 646.4356799125671,
+        "monotonic_seconds": 600.1487015200037,
+        "difference_seconds": 46.28697839256347,
+        "forward_jumps_over_50ms": 18,
+        "backward_jumps_over_50ms": 0,
+        "min_interval_difference_seconds": -5.070008774055168e-05,
+        "max_interval_difference_seconds": 2.694234777263773
+      },
+      "java": {
+        "wall_seconds": 646.436,
+        "monotonic_seconds": 600.148705103,
+        "difference_seconds": 46.28729489700004,
+        "forward_jumps_over_50ms": 18,
+        "backward_jumps_over_50ms": 0,
+        "min_interval_difference_seconds": -0.0006342329999999841,
+        "max_interval_difference_seconds": 2.694664492
+      }
+    }
+  ],
+  "markdown": {
+    "files": 29,
+    "relative_links": 186,
+    "broken_links": [],
+    "external_url_syntax_checked": 38,
+    "readme_questions": "1-7",
+    "formal_images": [
+      "images/04-environment.png",
+      "images/07-official-result.png"
+    ],
+    "historical_score_or_workflow_leakage": false
+  },
+  "data_readability": {
+    "json_files": 150,
+    "jsonl_lines": 1982
+  },
+  "shell_syntax": [
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/base/05-base-running.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/base/06-base-summary.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/environment/04-environment.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/environment/04-jdk7-environment.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/parameter/09-jvm-parameter-results.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "A2/evidence/repeat/08-repeat-results.sh"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "script_tests": {
+    "runner": "runner-tests-checkpoint.json",
+    "runner_cases": 6,
+    "parser": "parser-tests-checkpoint.json",
+    "parser_cases": 15,
+    "fixture_role": "timing-invalidated",
+    "syntax": "checkpoint-syntax-checks.json"
+  },
+  "file_hygiene": {
+    "candidate_a2_files_excluding_this_record": 743,
+    "bytes_excluding_this_record": 47974503,
+    "over_10MiB": [
+      {
+        "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+        "bytes": 12660504
+      }
+    ],
+    "over_50MiB": [],
+    "unwanted_files": [],
+    "ignored_candidates": [],
+    "retained_gzip": "A2/evidence/compatibility/jdk8-preflight/console.log.gz is original diagnostic text"
+  },
+  "secret_scan": {
+    "scope": "Only .gitignore, AGENTS.md and candidate A2 files, including decompressed console.log.gz",
+    "strong_findings": [],
+    "keyword_review": "All listed hits are rules, historical scan labels, or no-cached-credential description; no actual secret values",
+    "keyword_locations": [
+      {
+        "path": ".gitignore",
+        "line": 18
+      },
+      {
+        "path": ".gitignore",
+        "line": 19
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 711
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 892
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 894
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 903
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 916
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 918
+      },
+      {
+        "path": "AGENTS.md",
+        "line": 920
+      },
+      {
+        "path": "A2/evidence/timing/clocksource-after-switch.txt",
+        "line": 13
+      },
+      {
+        "path": "A2/evidence/final/stage3-review.md",
+        "line": 12
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/file-check.txt",
+        "line": 15
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+        "line": 110
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+        "line": 111
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+        "line": 113
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+        "line": 115
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-derived/hygiene-check.json",
+        "line": 119
+      }
+    ]
+  },
+  "clocksource_readonly": {
+    "current": "tsc",
+    "available": [
+      "tsc",
+      "hyperv_clocksource_tsc_page",
+      "hyperv_clocksource_msr",
+      "acpi_pm"
+    ],
+    "switched_this_task": false
+  },
+  "boundary": {
+    "new_benchmarks": 0,
+    "new_timing_probes": 0,
+    "global_configuration_changes": 0,
+    "new_packages_or_toolchains": 0,
+    "a1_changed": false,
+    "shuishan_actions": 0
+  },
+  "known_preserved_failure": "SPECjvm2008.004 contains 79 zero-byte JPEGs from original font failure; these are preserved failure evidence, not valid report images",
+  "git_whitespace": {
+    "full_command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "full_exit_code": 2,
+    "warning_count": 3092,
+    "warning_files": 66,
+    "preserved_original_whitespace": [
+      {
+        "path": "A2/evidence/base/base-1/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "abb499933351e33c7ac38c3b90df5082b509450df5f58cae31b76622d3ead170"
+      },
+      {
+        "path": "A2/evidence/compatibility/font-probe/loader.log",
+        "kind": "trailing whitespace.",
+        "count": 146,
+        "unchanged_initial_sha256": "ca21380199f7971ddc195fe9eed5ada4d2d74a654f2b63c614ad366e48787341"
+      },
+      {
+        "path": "A2/evidence/compatibility/java21-help.log",
+        "kind": "trailing whitespace.",
+        "count": 4,
+        "unchanged_initial_sha256": "f02dd58abc5f169dc01984869decbe82a905faf1996344286d95ac7daa5ec76a"
+      },
+      {
+        "path": "A2/evidence/compatibility/java21-preflight/console.log",
+        "kind": "trailing whitespace.",
+        "count": 2,
+        "unchanged_initial_sha256": "c72ca0a643faf4d8e1405d3a8f2325eb893c8023f0f0a2e4e1c4a5df85a9130e"
+      },
+      {
+        "path": "A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001/SPECjvm2008.001.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "585cbed43337c1de4c27014fa9f2b7890cbae12b38f56a763a4e565acb829c86"
+      },
+      {
+        "path": "A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001/SPECjvm2008.001.summary",
+        "kind": "trailing whitespace.",
+        "count": 2,
+        "unchanged_initial_sha256": "6e845bc3d1c00b3a28eacbd357d7deca7b10844491a32cd2db6040665632beac"
+      },
+      {
+        "path": "A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001/SPECjvm2008.001.txt",
+        "kind": "trailing whitespace.",
+        "count": 51,
+        "unchanged_initial_sha256": "ba7f328a5f7d786dbf3b4086586d7575b528290ce4ddebb0786988a4d011a0b6"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight-fixed/native-results/SPECjvm2008.005/SPECjvm2008.005.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "a30381b0615be360ae3053d9e1a0c0ef10fe0a2c82b0f6a2cf559e55303a5fa6"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight-fixed/native-results/SPECjvm2008.005/SPECjvm2008.005.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "e7e4019a4cffe4c1a07c1c681e9f0b15ea1fbaab4c53327351debfd231c1ccfb"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight-fixed/native-results/SPECjvm2008.005/SPECjvm2008.005.txt",
+        "kind": "trailing whitespace.",
+        "count": 120,
+        "unchanged_initial_sha256": "029d4af94eef5ea7d709abcbbf38734147546d4a166ddf2e5e5f360ae297a36c"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight-fixed/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "51ae30a14dff6f56c08925800b13d7bafca3eeabc7cdd78d6c7111c380ee65d3"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight/native-results/SPECjvm2008.004/SPECjvm2008.004.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "d5c772c9bc1146f27ebcc25ea7b2f8bc3a219e903048adb6f285c6c44d136900"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight/native-results/SPECjvm2008.004/SPECjvm2008.004.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "1e0457537e6464586745a808d28d6e41877cdc503547ba8bc217417315a634a3"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight/native-results/SPECjvm2008.004/SPECjvm2008.004.txt",
+        "kind": "trailing whitespace.",
+        "count": 120,
+        "unchanged_initial_sha256": "110a6171251c273f214fb6260eb4611e9e8fa10e887cec7aa2b8eea6c117f330"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk7-preflight/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "a7f2dfd92a8d4a44502d64ea45d1a0e2e068a8ef5072c5d316eb6a44c05e83f7"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-preflight/console-excerpt.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "18cc26e81708bfde936872e0f112b26cc0c272b917993dc2c24012d29b75b69f"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-preflight/native-results/SPECjvm2008.002/SPECjvm2008.002.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "44114fd09d49a4e5d0db3cbc1a96ec8b44bb9cc0ee4072087ff1930e86f0dcf4"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-preflight/native-results/SPECjvm2008.002/SPECjvm2008.002.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "920947da3b0921c7abc41e42f3672f0d2d91ec9576360ac5df887d5a9ccc3633"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-preflight/native-results/SPECjvm2008.002/SPECjvm2008.002.txt",
+        "kind": "trailing whitespace.",
+        "count": 120,
+        "unchanged_initial_sha256": "f0d134976955592367599d6b11b9c2455434da66a393dc49dde5de454c4b6612"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-startup-sunflow-threads.txt",
+        "kind": "new blank line at EOF.",
+        "count": 1,
+        "unchanged_initial_sha256": "556bd078053ec16a1035410efa0c762c9422f104ef864cac1ccc2b124ed67e0c"
+      },
+      {
+        "path": "A2/evidence/compatibility/jdk8-startup-sunflow-threads.txt",
+        "kind": "trailing whitespace.",
+        "count": 18,
+        "unchanged_initial_sha256": "556bd078053ec16a1035410efa0c762c9422f104ef864cac1ccc2b124ed67e0c"
+      },
+      {
+        "path": "A2/evidence/compress-investigation/standalone-diagnostic/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "a2e00ed110998c1b13010a7c002370a218e44af2663a1dd4a82afa2fd5f4ea94"
+      },
+      {
+        "path": "A2/evidence/environment/spec-install.log",
+        "kind": "trailing whitespace.",
+        "count": 310,
+        "unchanged_initial_sha256": "04007c7b042e27fa2db5bbc649bc9e0aa5dc28485a80cc38fd58b89d9fed4d36"
+      },
+      {
+        "path": "A2/evidence/environment/spec-installed.txt",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "3caa1a7406144243ae477b8db6dd9409b311d1b39ffec8cd7449a084df804335"
+      },
+      {
+        "path": "A2/evidence/parameter/default-flags.txt",
+        "kind": "trailing whitespace.",
+        "count": 671,
+        "unchanged_initial_sha256": "99bc6864a61f1f0c75e5e2b9324a4c0137f9900dc2d329dcda3dea551fa432f8"
+      },
+      {
+        "path": "A2/evidence/parameter/modified-flags.txt",
+        "kind": "trailing whitespace.",
+        "count": 671,
+        "unchanged_initial_sha256": "7ca2cca187f6518f0f398f3fb61d75a20f5672e10e696c206d9b21eb7524ae31"
+      },
+      {
+        "path": "A2/evidence/parameter/parameter-1/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "77cadcec9ff96ce16e45a6f5744e8839ff2bd2b1261c2024c164ef70d18fff03"
+      },
+      {
+        "path": "A2/evidence/parameter/parameter-2/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "4e3677aab9c5aabb68682237e036d7c12ce60c9c04c1ebae13505aec9022a70d"
+      },
+      {
+        "path": "A2/evidence/parameter/parameter-3/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "bbbc428d6ae505c4f627e67615c404ef3118e9d2c28741ba47b798ac5f789d2d"
+      },
+      {
+        "path": "A2/evidence/parameter/smoke/native-results/SPECjvm2008.010/SPECjvm2008.010.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "d71cca3977a15078a0cabbc88f036e8287639944fe3e37738e39a7bc3b045521"
+      },
+      {
+        "path": "A2/evidence/parameter/smoke/native-results/SPECjvm2008.010/SPECjvm2008.010.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "8548372bf375c3b11f04724762b52dfb9b9c0d8506498936ea8b55bcbd109005"
+      },
+      {
+        "path": "A2/evidence/parameter/smoke/native-results/SPECjvm2008.010/SPECjvm2008.010.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "e38dff9a1a008bc1db97cca70ee583f626bd91a7c5a95da4bd68f11ee3f26b2d"
+      },
+      {
+        "path": "A2/evidence/parameter/smoke/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "a7caeab4d178e405360980da0c27c939efffde0015d55a4fe1d1f6b4b5c01aec"
+      },
+      {
+        "path": "A2/evidence/repeat/repeat-1/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "eb22bde7587bdebc7b8cca3eafb6c36161703c83dffa1ad91a8013642705a982"
+      },
+      {
+        "path": "A2/evidence/repeat/repeat-2/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "6fe5652ea66d19b5a58e02915ecd1c046ffb476686ee5568e356b2176920c217"
+      },
+      {
+        "path": "A2/evidence/repeat/repeat-3/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "528b58bbebf8450a4ca1ddcb67374f71d8b02e186c434051b193ec3f6aafbd76"
+      },
+      {
+        "path": "A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003/SPECjvm2008.003.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "73ccf269bace6ffd23b168690328dd471116e19c5dde40d204652babc5ad7fd0"
+      },
+      {
+        "path": "A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003/SPECjvm2008.003.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "cec41b407601000df408d4e42b3442f79a380e4dfef64047b97cdea5eaf77114"
+      },
+      {
+        "path": "A2/evidence/runner/spec-smoke-jdk8/native-results/SPECjvm2008.003/SPECjvm2008.003.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "d77dd9f1bc71a9a468708518bd3689d89be0bdd62c0a7e22f78cda29c3dddd70"
+      },
+      {
+        "path": "A2/evidence/runner/spec-smoke-jdk8/stdout.log",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "8a6830ba773b057748d8d19543812bad14c5e73f17f1c70ea6c43127932a7a9f"
+      },
+      {
+        "path": "A2/evidence/timing/base-timeline.csv",
+        "kind": "trailing whitespace.",
+        "count": 128,
+        "unchanged_initial_sha256": "9f2cfbedc7ef1165b1d6ccb4e2392438e16acfda235766b351f342d87bd79c16"
+      },
+      {
+        "path": "A2/evidence/timing/harness-excerpts.txt",
+        "kind": "trailing whitespace.",
+        "count": 14,
+        "unchanged_initial_sha256": "1738dee7758d7c6aa0afdd7b7cdb6793869f1dabad4a39f59563303a66bb5245"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-report.md",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "41a1bdb78d284c1fc3316ead3a314ea1b6cdc6b447cdbb75e84c53fe92b570aa"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "5b36b40026eeeecf7f92c1dfeb139b281a464f47f1f3b7eaf738f60270c1b53b"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "5d8327b0b940c06079cbc0530ad699dd3e59b864e9b705a65971ae3e39bd03ea"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.txt",
+        "kind": "trailing whitespace.",
+        "count": 120,
+        "unchanged_initial_sha256": "0969d75fa282778dce0f918f3b8318c5e18d66a42ade89addf82a05334a78681"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/diagnostic/SPECjvm2008.014/SPECjvm2008.014.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "29d0dfc9d6ac05744acab0fda23e8bd6248f6ee1d569adab8c78fb6270e564ae"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/diagnostic/SPECjvm2008.014/SPECjvm2008.014.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "00368d2a3086645a882fb4e4f137316c1507a57e6b371a81346276789d94fdf2"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/diagnostic/SPECjvm2008.014/SPECjvm2008.014.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "54b58d266e8243b272221e7ed6cd1533afb452c262e26cb8e9742a4528678587"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.011/SPECjvm2008.011.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "61c54e3f555313d7e919741e5b06044f31e8decd417b38363433e8d418ed2bbb"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.011/SPECjvm2008.011.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "1e4095ce0e6b8643c5e55330c9bc0e49133af5b0b33b92b64996eb012a704bc3"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.011/SPECjvm2008.011.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "46b924bf6aae4156b0ef2dea4200d69019f93701755d828ba09bbefdb2996138"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.012/SPECjvm2008.012.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "2185656912821378a4004d0dd9690406bb3f4749c29928d544c2693be555739e"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.012/SPECjvm2008.012.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "582ea3b86bccb3c1f1d7826e1b5d328e82e2fda8ff04205aa0f3cfe27d0a3176"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.012/SPECjvm2008.012.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "3090ccb8a88e1422f09cbe19c4688e9a85258e6971208754b7124a7c0a99d843"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.013/SPECjvm2008.013.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "2d0aeb754ca5b2c80c7f9a37536d972319b6f737260fbc40720a65a86119e2de"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.013/SPECjvm2008.013.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "bfa8b3191bd7c67beb34bb0456d594e47c8711331365cce89672c94f053d8fd0"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/parameter/SPECjvm2008.013/SPECjvm2008.013.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "7e126461f3f0900ae685c8e8871955e7b0910b159b74c9d6eb4ec7884b56c614"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.007/SPECjvm2008.007.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "a81275da29b6e79462bdbd6b722c57a2abf8b77c73f56a8b20dd9a8eae6ab019"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.007/SPECjvm2008.007.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "968da43815624abdc3f77e0366c3d5935719bc7fc98ba19cff9227b72ab36b3e"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.007/SPECjvm2008.007.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "e72471dcb2eafcf96059866d4d70e600ffc78ffa7cb22370b3c2cd35fa6b7a61"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.008/SPECjvm2008.008.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "ed27a61bffe9fa6ed5b304315ea533f258437538bbcaae8fb0e001e8a8e24249"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.008/SPECjvm2008.008.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "52075f180d07432be0942fb74dc4ad6cf36684b653a40c2c2dbb4ac6bf7da453"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.008/SPECjvm2008.008.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "47328f1b47fb8edf9ef12e64038d3065277ea28a121b4b3c85bba7c1d305edec"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009/SPECjvm2008.009.sub",
+        "kind": "trailing whitespace.",
+        "count": 6,
+        "unchanged_initial_sha256": "c076efc364547d554a1618a393813627b69d3e030f5f8d71b9d33b141e991272"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009/SPECjvm2008.009.summary",
+        "kind": "trailing whitespace.",
+        "count": 1,
+        "unchanged_initial_sha256": "13fb841e10819006e0ea38081fca2047b197af76f18e8d7bce9761306338d0e5"
+      },
+      {
+        "path": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009/SPECjvm2008.009.txt",
+        "kind": "trailing whitespace.",
+        "count": 53,
+        "unchanged_initial_sha256": "1f5c7ec704bf5b9c8d439ff03673a4353309836efb7e5618b93922f8b8d57a1c"
+      }
+    ],
+    "authored_files_check_exit_code": 0,
+    "policy": "Do not change historical/native evidence bytes to silence whitespace warnings; no Git whitespace setting changed"
+  },
+  "staged_review": {
+    "file_count": 746,
+    "only_authorized_paths": true,
+    "staged_bytes_match_worktree": true,
+    "a1_changes": 0,
+    "ignore_check_used_no_index": true,
+    "ignored_paths": [],
+    "strong_secret_findings": [],
+    "keyword_file_counts": {
+      ".gitignore": 2,
+      "A2/evidence/final/checkpoint-local-validation.json": 1,
+      "A2/evidence/final/stage3-review.md": 1,
+      "A2/evidence/timing/clocksource-after-switch.txt": 1,
+      "A2/evidence/timing/invalidated-derived/file-check.txt": 1,
+      "A2/evidence/timing/invalidated-derived/hygiene-check.json": 5,
+      "AGENTS.md": 7
+    },
+    "keyword_review": "Hits describe rules, historical credential-scan names and lack of cached sudo credentials; no secret values detected"
+  }
+}

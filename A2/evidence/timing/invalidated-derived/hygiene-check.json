@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-10-01T04:00:45.494801+08:00",
+  "protected_checkpoint_files": 277,
+  "protected_files_changed": [],
+  "a1_files_checked": 274,
+  "teacher_pdfs_present_and_hash_identical": [
+    "materials/A2/A2 SPECjvm2008基准评测.pdf"
+  ],
+  "materials_ignored": true,
+  "spec_original_files_checked": 777,
+  "spec_files_changed": [],
+  "jdk7_key_files_checked": 6,
+  "jdk_files_changed": [],
+  "default_java": "/usr/lib/jvm/java-21-openjdk-amd64/bin/java",
+  "retained_installations_and_cache": [
+    "/home/addaswsw/.local/opt/java-se-8u41-ri",
+    "/home/addaswsw/.local/opt/java-se-7u75-ri",
+    "/home/addaswsw/.local/opt/specjvm2008",
+    "/home/addaswsw/.cache/a2-downloads"
+  ],
+  "script_syntax_checks": [
+    {
+      "file": "A2/evidence/base/05-base-running.sh",
+      "sha256": "29f4f28e92103c3d4a22353810f8ddc9c7a9ab62041e9d76dd94369bff336232",
+      "syntax": "bash -n passed"
+    },
+    {
+      "file": "A2/evidence/base/06-base-summary.sh",
+      "sha256": "89ece4d7c953d72543b431f092606dd06fbf39fcdfcb14a5c0ccc88afe5fd5dc",
+      "syntax": "bash -n passed"
+    },
+    {
+      "file": "A2/evidence/environment/04-jdk7-environment.sh",
+      "sha256": "5f281c1772af2289c2acaee48c49ca91b145f718dd9d56601e3e68c018cd37dd",
+      "syntax": "bash -n passed"
+    },
+    {
+      "file": "A2/evidence/final/capture-terminal.py",
+      "sha256": "e6fe3c727c106a1ce6c9a8b56c7c09b252256b69440c873f9a01b6c065f87445",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/check-experiments.py",
+      "sha256": "9510a1db248769f7eda08cd22812fb1be6b9d4431a2385fe9a216e079d1a1152",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/check-run.py",
+      "sha256": "724bdadd1a00e9b547347baf7b09a689df4921c786332f1a39ddbed6e431d8b6",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/monitor-run.py",
+      "sha256": "c33d190cf9fe0e6394ccdf37cf214bb3d22a6c27b1b25eec322e838c51215a07",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/preserve-results.py",
+      "sha256": "5ffd53370e8470f923aa161dcc4641b0e4f9119241d081365d302dc46fca7201",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/run-three.py",
+      "sha256": "77ea9490aedf0255ded8826ec88e2f40facce43d3dacf2f87e0d1f8590ffc542",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/final/test-summarizer.py",
+      "sha256": "32cfe17f50316a1a2bb33245c3a20ac15e6e78fca48edc78797ccc4ddae1e578",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/evidence/parameter/09-jvm-parameter-results.sh",
+      "sha256": "b8a562bbf14bd0df5eee6032170021ec837d8602c879c5632958839cdb4ecf7f",
+      "syntax": "bash -n passed"
+    },
+    {
+      "file": "A2/evidence/repeat/08-repeat-results.sh",
+      "sha256": "714517f2779fc7d15b93220e26f7995f6fed0d9aee5a2f50ce08a1e857761823",
+      "syntax": "bash -n passed"
+    },
+    {
+      "file": "A2/evidence/runner/test-runner.py",
+      "sha256": "247b63faa44d9a3f8f4aff6f5fc31d7141dbf8142a698a91be1029e3d665d079",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/scripts/run-spec.py",
+      "sha256": "902363d62d17a109faefa3de3ba49d76203757e81c23b976e21b958b534b98f6",
+      "syntax": "AST parse passed"
+    },
+    {
+      "file": "A2/scripts/summarize-spec.py",
+      "sha256": "40fb2c62cd5536cd5e022fc1cb6c135a83685cef4c3973862537c096a97e88e8",
+      "syntax": "AST parse passed"
+    }
+  ],
+  "tested_script_hashes_match": true,
+  "compiled_artifacts": [],
+  "cache_files": [],
+  "empty_directories": [],
+  "retained_compressed_diagnostic_log": [
+    "A2/evidence/compatibility/jdk8-preflight/console.log.gz"
+  ],
+  "formal_native_files_not_ignored": 144,
+  "secret_scan": {
+    "text_files_scanned": 331,
+    "binary_files_skipped": 289,
+    "patterns": [
+      "private_key",
+      "github_token",
+      "aws_access_key",
+      "slack_token",
+      "api_secret",
+      "credential_url",
+      "assigned_secret"
+    ],
+    "findings": [],
+    "scope": "All A2 text and decompressed historical console log; detects listed common credential patterns, not a proof that every possible secret format is absent."
+  },
+  "active_spec_java_processes": [],
+  "capture_display_91_lock_exists": false,
+  "git": {
+    "branch": "main",
+    "head": "5dcc4949e16127c212ad587ed096865894ebf1de",
+    "status": " M .gitignore\n M AGENTS.md\n?? A2/\n",
+    "staged_files": "",
+    "no_stage_commit_push_or_branch_creation": true
+  }
+}

@@ -1,0 +1,56 @@
+
+SPECjvm2008 Base
+  Properties file:   none
+  Benchmarks:        compress
+
+  WARNING: Run will not be compliant.
+  Not a compliant sequence of benchmarks for publication.
+
+  Kit signature and checksum is validated.
+  This can take several minutes.
+  Use argument '-ikv' to skip this.
+  ....................................passed.
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   check
+  Run mode:    static run
+  Test type:   functional
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Thu Oct 01 03:09:53 CST 2026
+Iteration 1 (1 operation) ends:   Thu Oct 01 03:09:53 CST 2026
+Iteration 1 (1 operation) result: PASSED
+
+Valid run!
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   compress
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     22
+  Warmup:      120s
+  Iterations:  1
+  Run length:  240s
+
+Warmup (120s) begins: Thu Oct 01 03:09:53 CST 2026
+Warmup (120s) ends:   Thu Oct 01 03:12:05 CST 2026
+Warmup (120s) result: 789.51 ops/m
+
+Iteration 1 (240s) begins: Thu Oct 01 03:12:05 CST 2026
+Iteration 1 (240s) ends:   Thu Oct 01 03:16:26 CST 2026
+Iteration 1 (240s) result: 812.58 ops/m
+
+Valid run!
+Score on compress: 812.58 ops/m
+
+Results are stored in: 
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.009/SPECjvm2008.009.raw
+Generating reports in:
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.009
+
+Noncompliant composite result: 812.58 ops/m

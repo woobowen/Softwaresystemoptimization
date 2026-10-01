@@ -1,0 +1,57 @@
+
+SPECjvm2008 Peak
+  Properties file:   none
+  Benchmarks:        compress
+
+  WARNING: Run will not be compliant.
+  Not a compliant sequence of benchmarks for publication.
+  Property specjvm.iteration.time must be at least 240 seconds for publication.
+
+  Kit signature and checksum is validated.
+  This can take several minutes.
+  Use argument '-ikv' to skip this.
+  ....................................passed.
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   check
+  Run mode:    static run
+  Test type:   functional
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Thu Oct 01 03:19:44 CST 2026
+Iteration 1 (1 operation) ends:   Thu Oct 01 03:19:44 CST 2026
+Iteration 1 (1 operation) result: PASSED
+
+Valid run!
+
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   compress
+  Run mode:    timed run
+  Test type:   multi
+  Threads:     22
+  Warmup:      5s
+  Iterations:  1
+  Run length:  5s
+
+Warmup (5s) begins: Thu Oct 01 03:19:44 CST 2026
+Warmup (5s) ends:   Thu Oct 01 03:19:53 CST 2026
+Warmup (5s) result: 600.76 ops/m
+
+Iteration 1 (5s) begins: Thu Oct 01 03:19:53 CST 2026
+Iteration 1 (5s) ends:   Thu Oct 01 03:20:01 CST 2026
+Iteration 1 (5s) result: 1002.67 ops/m
+
+Valid run!
+Score on compress: 1002.67 ops/m
+
+Results are stored in: 
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.010/SPECjvm2008.010.raw
+Generating reports in:
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.010
+
+Noncompliant composite result: 1002.67 ops/m

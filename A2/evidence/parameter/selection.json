@@ -1,0 +1,54 @@
+{
+  "selected_at": "2026-10-01T03:18:17.756151+08:00",
+  "workload": "compress",
+  "one_jvm_option": "-XX:+UseSerialGC",
+  "default": {
+    "UseSerialGC": "false",
+    "UseParallelGC": "true",
+    "UseParallelOldGC": "true",
+    "UseConcMarkSweepGC": "false",
+    "UseG1GC": "false",
+    "ParallelGCThreads": "16",
+    "InitialHeapSize": "258771776",
+    "MaxHeapSize": "4141875200"
+  },
+  "modified": {
+    "UseSerialGC": "true",
+    "UseParallelGC": "false",
+    "UseParallelOldGC": "false",
+    "UseConcMarkSweepGC": "false",
+    "UseG1GC": "false",
+    "ParallelGCThreads": "0",
+    "InitialHeapSize": "258771776",
+    "MaxHeapSize": "4141875200"
+  },
+  "official_reference": "https://docs.oracle.com/javase/7/docs/technotes/guides/vm/gc-ergonomics.html",
+  "workload_source": "src/spec/benchmarks/compress/Compress.java",
+  "reason": "The completed Base and three original single-workload runs use the same frozen JDK. Actual defaults select Parallel GC. Compress creates Compressor/Decompressor objects and table arrays on each action; changing the collector is a simple documented comparison, without predicting its result or claiming measured GC counts.",
+  "spec_arguments": [
+    "-jar",
+    "SPECjvm2008.jar",
+    "compress"
+  ],
+  "independent_formal_runs": 3,
+  "warmup_seconds": 120,
+  "measurement_seconds": 240,
+  "benchmark_threads": 22,
+  "original_runs": [
+    "SPECjvm2008.007",
+    "SPECjvm2008.008",
+    "SPECjvm2008.009"
+  ],
+  "effective_flag_check": "PrintFlagsFinal shows UseSerialGC false -> true and UseParallelGC true -> false; both commands exit 0.",
+  "next": "Short correctness/report smoke before formal parameter runs; no parameter replacement to improve score.",
+  "smoke": {
+    "metadata": "smoke/run.json",
+    "assessment": "smoke/assessment.json",
+    "accepted_and_effective": true,
+    "correctness": "passed",
+    "reports": "passed",
+    "excluded_from_formal_statistics": true,
+    "native_command_field": "n/a",
+    "native_field_note": "metadata-note.md"
+  }
+}

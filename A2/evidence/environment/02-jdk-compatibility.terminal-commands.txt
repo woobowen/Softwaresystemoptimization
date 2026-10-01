@@ -1,0 +1,4 @@
+cd /home/addaswsw/lab/Software_system_optimization
+rg -m 1 'IllegalAccessError' A2/evidence/compatibility/java21-preflight/console.log
+head -n 5 A2/evidence/compatibility/jdk8-startup-sunflow-stderr.txt
+sed -n '7,10p' A2/evidence/compatibility/jdk8-startup-sunflow-threads.txt

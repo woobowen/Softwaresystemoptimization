@@ -1,0 +1,101 @@
+Static excerpts from installed SPECjvm2008 1.01; source and jar unchanged.
+Copyright (c) 2008 SPEC. Excerpts retained only for timing/pipe investigation.
+
+
+spec/harness/ProgramRunner.java SHA256 f02cfd82a85d4e904385b4f6fe3c5041e740a1df05444ac62894f572c9f5cc56
+469:             long startTime = System.currentTimeMillis();
+470:             long stopTime = startTime + itResult.getExpectedDuration();
+471:             
+472:             itResult.setStartTime(startTime);
+473:             itResult.setStopTime(stopTime);
+474:             
+475:             for (int i = 0; i < bmts.length; i++) {
+476:                 bmts[i].start();
+477:             }
+478: 
+479:             // And here all the work run in the "background"...
+480: 
+481:             if (bmResult.getRunMode() == TestResult.TIMED) {
+482: 				try {
+483: 					sleep(itResult.getExpectedDuration());
+484: 				} catch (InterruptedException e1) {
+485: 					String msg = "Harness interruped during measurement period.";
+486: 					itResult.addError(msg);
+487: 
+488: 					// The expected cause is a failure in a benchmark thread.
+489: 					// Signal all (other?) bm threads to end as usual below.
+490: 					// Then gather them all.
+491: 				}
+492: 
+493: 				// Record end of measurement interval
+494:                 itResult.setEndTime(itResult.getStopTime());
+495: 				endOfMeasurementInterval(System.currentTimeMillis());
+
+spec/harness/BenchmarkThread.java SHA256 43d74869a210e95661a9e51ff0c8ce126c069a0e25c498303221e81d4b11ae7a
+106:         
+107:         // Check in and say that this bm thread is done.
+108:         boolean lastWorker = itResult.incNumberBmThreadsDone();
+109:         if (lastWorker && bmResult.getRunMode() == TestResult.ITER) {
+110:             itResult.setEndTime(lastLoopDoneTime);
+111:         }
+112:         long iterEndTime = itResult.getEndTime();
+113:         
+114:         if (bmResult.getRunMode() == TestResult.TIMED && iterEndTime < lastLoopDoneTime) {
+115:             // Adjust how much of last operation actually counted.
+116:             // Remove the part of the op that was not inside the measurement period.
+117:             // Assume an ops work is done in equal amount all the time.
+118:             // All bm threads will keep working until all is checked in,
+119:             // so none should get better behavior in the end.
+120:             double extra = ((double) (lastLoopDoneTime - iterEndTime)) / ((double) (lastLoopDoneTime - lastLoopStartTime));
+121:             dops -= extra;
+122:         }
+123:         
+149:      */
+150:     public LoopResult runLoop(IterationResult iResult) {
+151:         
+152:         LoopResult lResult = new LoopResult();
+153:         lResult.setStartTime(System.currentTimeMillis());
+154:         lResult.setBmThreadId(this.btid);
+155:         lResult.setIteration(iResult.getIteration());
+207:         
+208:         lResult.setEndTime(System.currentTimeMillis());
+209:         
+
+spec/harness/results/IterationResult.java SHA256 e668df018103b72a9375e931869e85be25d2d371141596d517e53f43fb18de80
+176:      */
+177:     public synchronized double getScore() {
+178:     	if (isValid()) {
+179:             return ((double) getOperations()) * 60 * 1000 / getDuration();
+180:     	} else {
+181:     		return 0;
+182:     	}
+183:     }
+184:     
+
+spec/harness/results/BenchmarkResult.java SHA256 869cd3c7b86196fac8a8de81b4f7a26ff856ebc3a2134df748ff3324a5d744c9
+203:     public double getScore() {
+204:         double bScore = 0;
+205:         for (Iterator iter = iterationResults.iterator(); iter.hasNext(); ) {
+206:             IterationResult res = (IterationResult) iter.next();
+207:             if (res.isValid()) {
+208:                 if (res.getScore() > bScore) {
+209:                     bScore = res.getScore();
+210:                 }
+211:             }
+212:         }
+213:         return bScore;
+
+spec/benchmarks/startup/Main.java SHA256 15b6d24751aeb818b540aca3eff22beec3d891887bb8b8d356bdde4f30869ed0
+97:         }
+98:         Runtime run = Runtime.getRuntime();
+99:         try {
+100:             Process p = run.exec(execString);
+101:             StartupBenchmarkOutput out = new StartupBenchmarkOutput(p
+102:                     .getInputStream());
+103:             
+104:             // Start startup benchmark output thread
+105:             out.start();
+106:             out.join();
+107:             // Wait for process to finish
+108:             p.waitFor();
+109:         } catch (IOException ioe) {

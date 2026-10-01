@@ -1,0 +1,27 @@
+[
+  {
+    "original_path": "A2/images/04-jdk7-environment.png",
+    "new_path": "A2/evidence/timing/invalidated-images/04-jdk7-environment.png",
+    "sha256": "ef00e272d48fd03253e0d763c2eb5c079bc48a89db16a3e6a5b3b16b21cd4011"
+  },
+  {
+    "original_path": "A2/images/05-base-running.png",
+    "new_path": "A2/evidence/timing/invalidated-images/05-base-running.png",
+    "sha256": "73fa11c734b461afe0aeb7ba2503232f38de755dc6e95e960c840d14430850ef"
+  },
+  {
+    "original_path": "A2/images/06-base-summary.png",
+    "new_path": "A2/evidence/timing/invalidated-images/06-base-summary.png",
+    "sha256": "0905826e7f18ccbbedc7b82274c1f4dbcd8225cd301cc5aead71c6889f6ccfa1"
+  },
+  {
+    "original_path": "A2/images/08-repeat-results.png",
+    "new_path": "A2/evidence/timing/invalidated-images/08-repeat-results.png",
+    "sha256": "5f95d843d9cd7f63ba280b4732d4b42b11574969d2bd113131943c25e0cb0c77"
+  },
+  {
+    "original_path": "A2/images/09-jvm-parameter-results.png",
+    "new_path": "A2/evidence/timing/invalidated-images/09-jvm-parameter-results.png",
+    "sha256": "4be844b9a4a4bfaaf6fe75c4214d63400f1b84765d73f97d665a320e8e10ef2b"
+  }
+]

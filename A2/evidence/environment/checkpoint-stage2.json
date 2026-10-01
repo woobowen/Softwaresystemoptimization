@@ -1,0 +1,13 @@
+{
+  "time": "2026-09-30T15:35:25.474038+08:00",
+  "branch": "main",
+  "head": "5dcc4949e16127c212ad587ed096865894ebf1de",
+  "existing_changes": " M .gitignore\n M AGENTS.md\n?? A2/\n",
+  "license": "User explicitly accepted SPEC General License Agreement and authorized official download and local coursework use.",
+  "preserved_files": {
+    "AGENTS.md": "df8077416ee09a16485e20b00918809e34e09ee08458c33985fe2ee641e2d0e6",
+    ".gitignore": "a71b4ee8fe2ea36ae6d35f8c891b6c849c4ea527a8418f05c8a955c9996a1a27",
+    "A2/images/01-initial-java-environment.png": "a2363b715e86bb8b395d1df24a877d57dd067826b0ec9d60ac9725c67d48189a",
+    "materials/A2/A2 SPECjvm2008基准评测.pdf": "082f314ba649486afbff73b3af458b6b02d9b9e41ea9b7a64ecccf7fd0bce4dd"
+  }
+}

@@ -1,0 +1,75 @@
+time: 2026-09-30T15:47:27.182369+08:00
+install: /home/addaswsw/.local/opt/specjvm2008
+
+            Benchmark=     SPECjvm2008
+            Kit_version=   1.01
+            Build_user=    dagastin
+            Build_date=    20090519
+        
+
+Building:
+  You do not need to build SPECjvm2008 to run it.
+  The user guide will describe how it is done if need be.
+
+Running:    
+  To run a compliant run:
+    java -jar SPECjvm2008.jar
+
+  To know how to configure, run:
+    java -jar SPECjvm2008.jar --help
+
+More documentation:
+  See docs/index.html
+
+run-specjvm.sh exists: True
+Usage: spec.harness.Launch <configuration>
+  -h,   --help                   Show this help.
+        --version                Print version and exit.
+  -sv,  --showversion            Print version and continue.
+        --base                   Run the base compliant run of SPECjvm2008 
+                                 (default, unless jvm args are specified)
+        --peak                   Run the peak compliant run of SPECjvm2008
+        --lagom                  Run the Lagom benchmark suite, a version
+                                 of SPECjvm2008 that uses a fixed workload.
+  -pf,  --propfile <string>      Use this properties file.
+  -i,   --iterations <int>       How many iterations to run. 
+                                 'inf' means an infinite number.
+  -mi,  --miniter <int>          Minimum number of iterations.
+  -ma,  --maxiter <int>          Maximum number of iterations.
+  -it,  --iterationTime <time>   How long one iteration should be.
+                                 The time is specified as an integer,
+                                 and assumed to be in seconds, or an integer
+                                 with unit, for example 4m (4 minutes).
+                                 Units available are ms, s, m and h.
+                                 If iteration time is too short, based on the
+                                 warmup result, it will be adjusted to handle
+                                 at least 5 operations.
+  -fit, --forceIterationTime <time> As iteration time, but not adjusting time.
+  -wt,  --warmuptime <time>      How long warmup should be.
+                                 Time format is the same as in iteration time.
+  -ops, --operations <int>       Hom many operations each iteration will 
+                                 consist of. It will then be a fixed workload
+                                 and iteration time is ignored.
+  -bt,  --benchmarkThreads <int> How many benchmark threads to use.
+  -ja,  --jvmArgs "options"      JVM arguments used for startup subtests.
+  -jl,  --jvmLauncher "path"     JVM launcher used for startup subtests.
+  -r,   --reporter <file name>   Invokes the reporter with given file(s).
+                                 The benchmarks will not be run.
+  -v,   --verbose                Print verbose info.
+  -pja, --parseJvmArgs           Parse jvm arguments info for command line,
+                                 including heap settings (uses JMXBean info).
+  -coe, --contintueOnError       Continue to run suite, even if one test fails.
+  -ict, --ignoreCheckTest        Do not run check benchmark.
+  -ikv, --ignoreKitValidation    Do not run checksum validition of
+                                 benchmark kit.
+  -crf, --createRawFile <bool>   Whether to generate a raw file.
+  -ctf, --createTextFile <bool>  Whether to generate text report.
+  -chf, --createHtmlFile <bool>  Whether to generate html report.
+                                 If raw is disabled, so is text and html.
+  -xd,  --xmlDir "path"          To set path to xml input files
+  <benchmark>                    Name of benchmark(s) to run. Benchmarks
+                                 with sub-benchmarks is also possible to 
+                                 specify. By default all submission
+                                 benchmarks will be selected.
+
+Benchmarks: startup.helloworld startup.compiler.compiler startup.compiler.sunflow startup.compress startup.crypto.aes startup.crypto.rsa startup.crypto.signverify startup.mpegaudio startup.scimark.fft startup.scimark.lu startup.scimark.monte_carlo startup.scimark.sor startup.scimark.sparse startup.serial startup.sunflow startup.xml.transform startup.xml.validation compiler.compiler compiler.sunflow compress crypto.aes crypto.rsa crypto.signverify derby mpegaudio scimark.fft.large scimark.lu.large scimark.sor.large scimark.sparse.large scimark.fft.small scimark.lu.small scimark.sor.small scimark.sparse.small scimark.monte_carlo serial sunflow xml.transform xml.validation

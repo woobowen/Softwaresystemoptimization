@@ -1,0 +1,10 @@
+Report:      SPECjvm2008 Peak summary
+Result:      Noncompliant composite result: 1002.67 ops/m
+HW Model:    n/a, n/a
+HW CPU:      n/a, n/a
+OS:          Linux
+JVM:         Oracle Corporation, OpenJDK 64-Bit Server VM, 24.75-b04 mixed mode
+JVM tuning:  n/a
+JVM startup:  
+Tester:      addaswsw, n/a
+Run date:    Thu Oct 01 03:19:36 CST 2026

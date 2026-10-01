@@ -1,0 +1,3 @@
+https://www.spec.org/order/md5sums/
+2026-09-30T15:37:43.519334+08:00
+No SPECjvm2008 checksum listed on this official checksum page.

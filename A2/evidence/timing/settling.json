@@ -1,0 +1,5 @@
+{
+  "settling_seconds": 90.00030416100344,
+  "ended_at": "2026-10-01T11:00:41.377927+08:00",
+  "current_clocksource": "hyperv_clocksource_tsc_page"
+}

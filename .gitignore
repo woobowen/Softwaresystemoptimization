@@ -40,3 +40,22 @@ temp/
 # Input document text is kept locally; source hashes identify the handouts.
 /A1/evidence/environment_2026/official_docx.txt
 /A1/evidence/mit6172_2026/official_pdf.txt
+
+# A2 original handout, downloaded installers and local reference copies.
+/materials/A2/
+
+# Local downloads/installations; keep A2 evidence and native result resources.
+/.cache/
+/.local/
+/A2/.cache/
+/A2/.local/
+/A2/cache/
+/A2/downloads/
+/A2/installers/
+/A2/**/jdk*.tar.gz
+/A2/**/jdk*.zip
+/A2/**/openjdk*.tar.gz
+/A2/**/openjdk*.zip
+/A2/**/SPECjvm2008*.jar
+/A2/**/SPECjvm2008*.zip
+/A2/**/*.class

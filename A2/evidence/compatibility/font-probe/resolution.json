@@ -1,0 +1,18 @@
+{
+  "time": "2026-10-01T00:22:53.475304+08:00",
+  "cause": "Bundled JDK7 FreeType lacks FT_Done_MM_Var required by system libfontconfig",
+  "setting": {
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+  },
+  "library_target": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6.20.1",
+  "library_sha256": "c14c53c5baff12afafb610c6312fb879e9bb77e80dd42e27504d52d6d8bcd059",
+  "packages": "libfontconfig1:amd64\t2.15.0-1.1ubuntu2\nlibfreetype6:amd64\t2.13.2+dfsg-1ubuntu0.1\n",
+  "jdk_files_changed": false,
+  "spec_files_changed": false,
+  "jvm_options_added": false,
+  "system_packages_added": [],
+  "probe_rendered": true,
+  "base_rule_rationale": "Use the existing OS font dependency for functional report generation, with identical environment in all formal runs. No heap/GC/JIT or harness tuning; exact environment disclosed. Native harness compliance will be checked separately; no SPEC publication is claimed.",
+  "reporter_test": "reporter-smoke.json",
+  "native_report_images_verified": 79
+}

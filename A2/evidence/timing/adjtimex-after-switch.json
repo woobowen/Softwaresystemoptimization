@@ -1,0 +1,18 @@
+{
+  "queried_at": "2026-10-01T11:03:22.960072+08:00",
+  "compile_command": [
+    "cc",
+    "-Wall",
+    "-Wextra",
+    "A2/evidence/tools/read-adjtimex.c",
+    "-o",
+    "/tmp/a2-adjtimex-stage5-231g0jsq/read-adjtimex"
+  ],
+  "compile_exit": 0,
+  "compile_stderr": "",
+  "exit": 0,
+  "stdout": "state=0 status=8192 tick=9167 freq_scaled_ppm=-2187979 offset=0 tolerance=32768000 constant=1 precision=1\n",
+  "stderr": "",
+  "modes": 0,
+  "read_only": true
+}

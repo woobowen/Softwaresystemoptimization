@@ -1,0 +1,225 @@
+{
+  "runs": [
+    {
+      "raw_file": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.007/SPECjvm2008.007.raw",
+      "sha256": "4a66c063774cc6db571e03d1226f402d0cae3c3cf5030c2ae8d2fe3b410840ec",
+      "category": "SPECjvm2008 Base",
+      "unit": "ops/m",
+      "run_date": "Thu Oct 01 02:56:22 CST 2026",
+      "native_status": "Run is valid, but not compliant",
+      "composite_ops_m": 801.2364480935911,
+      "groups_ops_m": {
+        "compress": 801.2364480935911
+      },
+      "workloads_ops_m": {
+        "compress": 801.2364480935909
+      },
+      "measurements": {
+        "compress": {
+          "configuration": {
+            "name": "compress",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790794590081",
+              "endTime": "1790794710081",
+              "operations": "1609.3413105618035"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790794722115",
+              "endTime": "1790794962115",
+              "operations": "3204.9457923743635"
+            }
+          ]
+        }
+      },
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "jvm": {
+        "spec.jvm2008.report.jvm.app.class.path": "SPECjvm2008.jar",
+        "spec.jvm2008.report.jvm.name": "OpenJDK 64-Bit Server VM",
+        "spec.jvm2008.report.jvm.version": "24.75-b04 mixed mode",
+        "spec.jvm2008.report.jvm.java.specification": "1.7",
+        "spec.jvm2008.report.jvm.command.line.max.heap.size": "n/a",
+        "spec.jvm2008.report.jvm.other.tuning": " ",
+        "spec.jvm2008.report.jvm.available.date": "n/a",
+        "spec.jvm2008.report.jvm.vendor.url": "http://java.oracle.com/",
+        "spec.jvm2008.report.jvm.boot.class.path": "/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/resources.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/rt.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/sunrsasign.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jsse.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jce.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/charsets.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jfr.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/classes",
+        "spec.jvm2008.report.jvm.startup.command.line": " ",
+        "spec.jvm2008.report.jvm.address.bits": "64",
+        "spec.jvm2008.report.jvm.startup.launcher": "default",
+        "spec.jvm2008.report.jvm.vendor": "Oracle Corporation",
+        "spec.jvm2008.report.jvm.command.line": "n/a",
+        "spec.jvm2008.report.jvm.command.line.initial.heap.size": "n/a"
+      }
+    },
+    {
+      "raw_file": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.008/SPECjvm2008.008.raw",
+      "sha256": "1d90d9ce386d0d24c1448680f699ee4312d2d4065bc3e318c9aaa6d789353d34",
+      "category": "SPECjvm2008 Base",
+      "unit": "ops/m",
+      "run_date": "Thu Oct 01 03:03:00 CST 2026",
+      "native_status": "Run is valid, but not compliant",
+      "composite_ops_m": 787.9627495844903,
+      "groups_ops_m": {
+        "compress": 787.9627495844903
+      },
+      "workloads_ops_m": {
+        "compress": 787.9627495844901
+      },
+      "measurements": {
+        "compress": {
+          "configuration": {
+            "name": "compress",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790794992409",
+              "endTime": "1790795112409",
+              "operations": "1619.1304049108235"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790795121769",
+              "endTime": "1790795361769",
+              "operations": "3151.8509983379604"
+            }
+          ]
+        }
+      },
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "jvm": {
+        "spec.jvm2008.report.jvm.app.class.path": "SPECjvm2008.jar",
+        "spec.jvm2008.report.jvm.name": "OpenJDK 64-Bit Server VM",
+        "spec.jvm2008.report.jvm.version": "24.75-b04 mixed mode",
+        "spec.jvm2008.report.jvm.java.specification": "1.7",
+        "spec.jvm2008.report.jvm.command.line.max.heap.size": "n/a",
+        "spec.jvm2008.report.jvm.other.tuning": " ",
+        "spec.jvm2008.report.jvm.available.date": "n/a",
+        "spec.jvm2008.report.jvm.vendor.url": "http://java.oracle.com/",
+        "spec.jvm2008.report.jvm.boot.class.path": "/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/resources.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/rt.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/sunrsasign.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jsse.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jce.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/charsets.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jfr.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/classes",
+        "spec.jvm2008.report.jvm.startup.command.line": " ",
+        "spec.jvm2008.report.jvm.address.bits": "64",
+        "spec.jvm2008.report.jvm.startup.launcher": "default",
+        "spec.jvm2008.report.jvm.vendor": "Oracle Corporation",
+        "spec.jvm2008.report.jvm.command.line": "n/a",
+        "spec.jvm2008.report.jvm.command.line.initial.heap.size": "n/a"
+      }
+    },
+    {
+      "raw_file": "/home/addaswsw/lab/Software_system_optimization/A2/results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw",
+      "sha256": "4717cfd2e59b19e04b166a47a02d34cc79a092b40ca1c8470646b8ec3783ab27",
+      "category": "SPECjvm2008 Base",
+      "unit": "ops/m",
+      "run_date": "Thu Oct 01 03:09:43 CST 2026",
+      "native_status": "Run is valid, but not compliant",
+      "composite_ops_m": 812.5824665594416,
+      "groups_ops_m": {
+        "compress": 812.5824665594416
+      },
+      "workloads_ops_m": {
+        "compress": 812.5824665594416
+      },
+      "measurements": {
+        "compress": {
+          "configuration": {
+            "name": "compress",
+            "category": "null",
+            "args": "",
+            "minIter": "1",
+            "maxIter": "1",
+            "numberBmThreads": "22",
+            "warmupTime": "120000",
+            "iterationTime": "240s",
+            "bmType": "multi",
+            "runMode": "2"
+          },
+          "warmup": [
+            {
+              "iteration": "0",
+              "expectedDuration": "120000",
+              "startTime": "1790795393259",
+              "endTime": "1790795513259",
+              "operations": "1579.0145249929008"
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": "1",
+              "expectedDuration": "240000",
+              "startTime": "1790795525438",
+              "endTime": "1790795765438",
+              "operations": "3250.3298662377665"
+            }
+          ]
+        }
+      },
+      "violations": [
+        "Not a compliant sequence of benchmarks for publication."
+      ],
+      "jvm": {
+        "spec.jvm2008.report.jvm.app.class.path": "SPECjvm2008.jar",
+        "spec.jvm2008.report.jvm.name": "OpenJDK 64-Bit Server VM",
+        "spec.jvm2008.report.jvm.version": "24.75-b04 mixed mode",
+        "spec.jvm2008.report.jvm.java.specification": "1.7",
+        "spec.jvm2008.report.jvm.command.line.max.heap.size": "n/a",
+        "spec.jvm2008.report.jvm.other.tuning": " ",
+        "spec.jvm2008.report.jvm.available.date": "n/a",
+        "spec.jvm2008.report.jvm.vendor.url": "http://java.oracle.com/",
+        "spec.jvm2008.report.jvm.boot.class.path": "/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/resources.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/rt.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/sunrsasign.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jsse.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jce.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/charsets.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/lib/jfr.jar:/home/addaswsw/.local/opt/java-se-7u75-ri/jre/classes",
+        "spec.jvm2008.report.jvm.startup.command.line": " ",
+        "spec.jvm2008.report.jvm.address.bits": "64",
+        "spec.jvm2008.report.jvm.startup.launcher": "default",
+        "spec.jvm2008.report.jvm.vendor": "Oracle Corporation",
+        "spec.jvm2008.report.jvm.command.line": "n/a",
+        "spec.jvm2008.report.jvm.command.line.initial.heap.size": "n/a"
+      }
+    }
+  ],
+  "statistics": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      801.2364480935909,
+      787.9627495844901,
+      812.5824665594416
+    ],
+    "mean": 800.5938880791742,
+    "min": 787.9627495844901,
+    "max": 812.5824665594416,
+    "range": 24.61971697495153,
+    "relative_range_percent": 3.0751817296557697
+  }
+}

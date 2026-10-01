@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-01T11:13:37.201882+08:00",
+  "commands": [
+    {
+      "command": [
+        "journalctl",
+        "-k",
+        "-b",
+        "--since",
+        "2026-10-01T11:00:41.435807+08:00",
+        "--until",
+        "2026-10-01T11:11:20.890669+08:00",
+        "--no-pager"
+      ],
+      "exit_code": 0,
+      "stdout": "Oct 01 11:00:50 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:50 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:55 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:00:55 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:12 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:01:12 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:06 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:06 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:13 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:02:13 LAPTOP-KI0GT6AJ kernel: Adjusting hyperv_clocksource_tsc_page more than 11% (1472393379 vs 1862270976)\nOct 01 11:02:19 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:23 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:23 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:29 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:29 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:37 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:37 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:46 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:03:46 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:04:53 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:04:53 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:05:11 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:05:12 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:05:19 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:05:19 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:07:18 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:07:18 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:09:25 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:09:25 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:02 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:02 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:07 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:18 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:18 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:43 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\nOct 01 11:10:43 LAPTOP-KI0GT6AJ unknown: WSL (229) ERROR: CheckConnection: getaddrinfo() failed: -5\n",
+      "stderr": "",
+      "stdout_encoding": "utf-8",
+      "stderr_encoding": "utf-8"
+    },
+    {
+      "command": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "--since",
+        "2026-10-01T11:00:41.435807+08:00",
+        "--until",
+        "2026-10-01T11:11:20.890669+08:00",
+        "--no-pager"
+      ],
+      "exit_code": 0,
+      "stdout": "-- No entries --\n",
+      "stderr": "",
+      "stdout_encoding": "utf-8",
+      "stderr_encoding": "utf-8"
+    },
+    {
+      "command": [
+        "timedatectl",
+        "timesync-status"
+      ],
+      "exit_code": 0,
+      "stdout": "       Server: 185.125.190.56 (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 91EE5050\n    Precision: 1us (-25)\nRoot distance: 4.088ms (max: 5s)\n       Offset: +2.465988s\n        Delay: 177.657ms\n       Jitter: 1.045688s\n Packet count: 1132\n    Frequency: -33.449ppm\n",
+      "stderr": "",
+      "stdout_encoding": "utf-8",
+      "stderr_encoding": "utf-8"
+    },
+    {
+      "command": [
+        "timedatectl",
+        "show-timesync",
+        "--all"
+      ],
+      "exit_code": 0,
+      "stdout": "LinkNTPServers=\nSystemNTPServers=\nRuntimeNTPServers=\nFallbackNTPServers=ntp.ubuntu.com\nServerName=ntp.ubuntu.com\nServerAddress=185.125.190.56\nRootDistanceMaxUSec=5s\nPollIntervalMinUSec=32s\nPollIntervalMaxUSec=34min 8s\nPollIntervalUSec=32s\nNTPMessage={ Leap=0, Version=4, Mode=4, Stratum=2, Precision=-25, RootDelay=7.171ms, RootDispersion=503us, Reference=91EE5050, OriginateTimestamp=Thu 2026-10-01 11:13:19 CST, ReceiveTimestamp=Thu 2026-10-01 11:13:21 CST, TransmitTimestamp=Thu 2026-10-01 11:13:21 CST, DestinationTimestamp=Thu 2026-10-01 11:13:19 CST, Ignored=no, PacketCount=1132, Jitter=1.045688s }\nFrequency=-2192115\n",
+      "stderr": "",
+      "stdout_encoding": "utf-8",
+      "stderr_encoding": "utf-8"
+    }
+  ],
+  "boot_id": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "clocksource": "hyperv_clocksource_tsc_page"
+}

@@ -1,0 +1,156 @@
+{
+  "checked_at": "2026-10-01T04:07:40.086741+08:00",
+  "seven_question_order": true,
+  "readme_numbers_match_previous_raw_audit": true,
+  "new_or_updated_document_local_links_checked": 69,
+  "broken_links": [],
+  "documents_sha256": {
+    "A2/README.md": "a567bc44baab6b263bee4297a1d391ada602e1f8a72a45601498d15307d515f1",
+    "A2/evidence/requirement-matrix.md": "9e3eb073f8c4ba9e2d9862823f0f3b0dce89c598d77301f9dbc00fd179dc0917",
+    "A2/evidence/run-index.md": "cdd2c9619ec66128600ee2889acd660af0a9601e97a9bbd1f3a748a389aa8877",
+    "A2/evidence/final/script-review.md": "20e4f0e6e4db1f0d17b533e14cdb832b8a346625596a057c067b03061106fc11",
+    "A2/evidence/final/stage3-review.md": "c2318e140d12e6f778349f9ea070b2d28915a68b8ad6805861ff688eea53d522"
+  },
+  "nine_images_opened_and_hashes_match": true,
+  "six_report_images": true,
+  "matrix_and_run_index_complete": true,
+  "group_inventory_before_this_record": {
+    "README.md": {
+      "files": 1,
+      "bytes": 10064
+    },
+    "scripts": {
+      "files": 2,
+      "bytes": 10190
+    },
+    "results/parameter": {
+      "files": 30,
+      "bytes": 2734003
+    },
+    "images": {
+      "files": 9,
+      "bytes": 630878
+    },
+    "results/base": {
+      "files": 84,
+      "bytes": 19520967
+    },
+    "results/repeat": {
+      "files": 30,
+      "bytes": 2748024
+    },
+    "evidence/runner": {
+      "files": 19,
+      "bytes": 327325
+    },
+    "evidence/references.md": {
+      "files": 1,
+      "bytes": 8468
+    },
+    "evidence/run-index.md": {
+      "files": 1,
+      "bytes": 7674
+    },
+    "evidence/compatibility": {
+      "files": 296,
+      "bytes": 13346758
+    },
+    "evidence/base": {
+      "files": 15,
+      "bytes": 5227741
+    },
+    "evidence/repeat": {
+      "files": 25,
+      "bytes": 54941
+    },
+    "evidence/parameter": {
+      "files": 53,
+      "bytes": 539054
+    },
+    "evidence/final": {
+      "files": 20,
+      "bytes": 59907
+    },
+    "evidence/environment": {
+      "files": 36,
+      "bytes": 221269
+    },
+    "evidence/requirement-matrix.md": {
+      "files": 1,
+      "bytes": 3817
+    }
+  },
+  "git_commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": " M .gitignore\n M AGENTS.md\n?? A2/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--stat"
+      ],
+      "exit": 0,
+      "stdout": " .gitignore |  3 +++\n AGENTS.md  | 16 ++++++++++++++++\n 2 files changed, 19 insertions(+)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--",
+        ".",
+        ":!A2/results/**"
+      ],
+      "exit": 0,
+      "stdout": "diff --git a/.gitignore b/.gitignore\nindex 988b6e0..63f3068 100644\n--- a/.gitignore\n+++ b/.gitignore\n@@ -40,3 +40,6 @@ temp/\n # Input document text is kept locally; source hashes identify the handouts.\n /A1/evidence/environment_2026/official_docx.txt\n /A1/evidence/mit6172_2026/official_pdf.txt\n+\n+# A2 original handout, downloaded installers and local reference copies.\n+/materials/A2/\ndiff --git a/AGENTS.md b/AGENTS.md\nindex fe136d8..ad40856 100644\n--- a/AGENTS.md\n+++ b/AGENTS.md\n@@ -84,6 +84,13 @@ an exact version.\n \n If the current real environment is newer or different but compatible, use it.\n \n+Reuse installed software and tools first. If a required tool is absent, prefer\n+the teacher's specified or recommended version. Determine compatibility by\n+actually completing the required workloads and checks, not by version output\n+or a single successful subtest. If an installed version proves unsuitable,\n+preserve it and prefer a task-local or user-level parallel installation rather\n+than changing global defaults.\n+\n Do not downgrade, reinstall, or replace a working environment merely to match\n a reference version exactly.\n \n@@ -299,6 +306,14 @@ dumps, and temporary files out of the formal source tree.\n Teacher-provided PDF/DOCX/ZIP materials are inputs, not normal final artifacts,\n unless explicitly required for submission.\n \n+Complete native result directories explicitly required by the teacher are\n+formal deliverables even when generated. Preserve raw measurements, reports,\n+shared resources and internal links; do not apply ordinary build-output cleanup\n+rules to them. Separate diagnostic and failed runs from formal measurements,\n+retain their provenance, and never edit original scores or validity fields.\n+Keep provided input originals, record any moves, and do not silently untrack\n+materials that are already in Git.\n+\n Before publication, perform a file-hygiene review:\n \n - correct directory placement;\n@@ -801,6 +816,7 @@ needs, normally:\n - `images/`;\n - required source code;\n - required scripts;\n+- complete native results when required by the assignment;\n - other explicitly required formal deliverables.\n \n Do not normally submit:\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "5dcc4949e16127c212ad587ed096865894ebf1de\n",
+      "stderr": ""
+    }
+  ],
+  "publication": "Not authorized in this stage; no add/commit/push/new branch/Shuishan/SPEC submission.",
+  "initial_check_error_and_fix": "The first ad hoc inventory check attempted relative_to(absolute_A2) on relative rg paths. Prefixing those paths with the repository root fixed the check. No experiment source, results or script was changed; this rerun completed.",
+  "late_written_records_secret_scan": {
+    "files": 8,
+    "findings": []
+  },
+  "completion_record": "A2/evidence/final/stage3-progress.json",
+  "completion_record_sha256": "b72ba9e214f40a0c265b88da139a577ea6d96d750c2e066395ed5b1eec956dff"
+}

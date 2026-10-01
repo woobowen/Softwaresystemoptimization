@@ -1,0 +1,58 @@
+{
+  "command": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-cp",
+    "/tmp/a2-clock-probe-7b3l7jxh",
+    "ClockProbe",
+    "600"
+  ],
+  "exit_code": 0,
+  "sample_count": 601,
+  "started_at": "2026-10-01T11:00:41.435807+08:00",
+  "ended_at": "2026-10-01T11:11:20.890669+08:00",
+  "requested_seconds": 600,
+  "elapsed_seconds": {
+    "python_time": 639.1804237365723,
+    "python_monotonic": 600.5212091569992,
+    "python_boottime": 600.5212038800018,
+    "java_currentTimeMillis": 639.181,
+    "java_nanoTime": 600.521213328
+  },
+  "python_wall_minus_monotonic_seconds": 38.65921457957302,
+  "java_wall_minus_nano_seconds": 38.659786671999996,
+  "min_step_difference_seconds": -7.63694042689167e-05,
+  "max_step_difference_seconds": 3.329239778300689,
+  "clocksource_values": [
+    "hyperv_clocksource_tsc_page"
+  ],
+  "clocksource_consistent": true,
+  "boot_id_start": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "boot_id_end": "7af866bf-70f0-4652-bc4c-4d28a4eccfc6",
+  "boottime_minus_monotonic_seconds": -5.276997399050742e-06,
+  "python": {
+    "forward_adjustments_over_50ms": 16,
+    "backward_adjustments_over_50ms": 0,
+    "backward_wall_intervals": 0,
+    "min_interval_difference_seconds": -7.63694042689167e-05,
+    "max_interval_difference_seconds": 3.329239778300689,
+    "cumulative_difference_seconds": 38.65921457957302,
+    "max_monotonic_interval_seconds": 1.062472172001435
+  },
+  "java": {
+    "forward_adjustments_over_50ms": 16,
+    "backward_adjustments_over_50ms": 0,
+    "backward_wall_intervals": 0,
+    "min_interval_difference_seconds": -0.000907750000000096,
+    "max_interval_difference_seconds": 3.32951992,
+    "cumulative_difference_seconds": 38.659786671999996,
+    "max_monotonic_interval_seconds": 1.06248008
+  },
+  "acceptance_limits": {
+    "max_abs_interval_difference_seconds": 1,
+    "max_abs_cumulative_difference_seconds": 2,
+    "max_sample_gap_seconds": 5,
+    "jump_count_threshold_seconds": 0.05,
+    "scope": "internal, not SPEC requirements"
+  },
+  "gate_pass": false
+}

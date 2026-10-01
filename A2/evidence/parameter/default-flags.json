@@ -1,0 +1,20 @@
+{
+  "time": "2026-10-01T03:17:20.055699+08:00",
+  "command": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-XX:+PrintFlagsFinal",
+    "-version"
+  ],
+  "exit_code": 0,
+  "selected_flags": {
+    "UseSerialGC": "false",
+    "UseParallelGC": "true",
+    "UseParallelOldGC": "true",
+    "UseConcMarkSweepGC": "false",
+    "UseG1GC": "false",
+    "ParallelGCThreads": "16",
+    "InitialHeapSize": "258771776",
+    "MaxHeapSize": "4141875200"
+  },
+  "stdout_sha256": "99bc6864a61f1f0c75e5e2b9324a4c0137f9900dc2d329dcda3dea551fa432f8"
+}

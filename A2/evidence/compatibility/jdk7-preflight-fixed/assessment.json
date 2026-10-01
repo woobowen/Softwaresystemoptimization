@@ -1,0 +1,71 @@
+{
+  "mode": "full",
+  "workload_count": 38,
+  "workloads": [
+    "startup.helloworld",
+    "startup.compiler.compiler",
+    "startup.compiler.sunflow",
+    "startup.compress",
+    "startup.crypto.aes",
+    "startup.crypto.rsa",
+    "startup.crypto.signverify",
+    "startup.mpegaudio",
+    "startup.scimark.fft",
+    "startup.scimark.lu",
+    "startup.scimark.monte_carlo",
+    "startup.scimark.sor",
+    "startup.scimark.sparse",
+    "startup.serial",
+    "startup.sunflow",
+    "startup.xml.transform",
+    "startup.xml.validation",
+    "compiler.compiler",
+    "compiler.sunflow",
+    "compress",
+    "crypto.aes",
+    "crypto.rsa",
+    "crypto.signverify",
+    "derby",
+    "mpegaudio",
+    "scimark.fft.large",
+    "scimark.lu.large",
+    "scimark.sor.large",
+    "scimark.sparse.large",
+    "scimark.fft.small",
+    "scimark.lu.small",
+    "scimark.sor.small",
+    "scimark.sparse.small",
+    "scimark.monte_carlo",
+    "serial",
+    "sunflow",
+    "xml.transform",
+    "xml.validation"
+  ],
+  "checksum": "passed",
+  "correctness": "passed",
+  "reports_agree": {
+    ".txt": [
+      "569.04"
+    ],
+    ".html": [
+      "569.04",
+      "569.04"
+    ],
+    ".summary": [
+      "569.04"
+    ]
+  },
+  "native_status": "Run is valid, but not compliant",
+  "category": "SPECjvm2008 Peak",
+  "violations": [
+    "Property specjvm.iteration.time must be at least 240 seconds for publication."
+  ],
+  "score": 569.0387924052009,
+  "unit": "ops/m",
+  "exit_code": 0,
+  "wall_clock_seconds": 623.0,
+  "monotonic_seconds": 588.961,
+  "stdout_bytes": 19429,
+  "native_images_verified": 79,
+  "stderr_bytes": 201117
+}

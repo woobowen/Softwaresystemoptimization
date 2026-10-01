@@ -1,0 +1,86 @@
+{
+  "parser_sha256": "40fb2c62cd5536cd5e022fc1cb6c135a83685cef4c3973862537c096a97e88e8",
+  "results_root": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/invalidated-results",
+  "measurement_role": "timing-invalidated-fixtures",
+  "source_raw": "A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw",
+  "base_raw": "A2/evidence/timing/invalidated-results/base/SPECjvm2008.006/SPECjvm2008.006.raw",
+  "tests": [
+    {
+      "case": "actual_raw",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "directory",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "same_path_twice",
+      "exit_code": 1,
+      "stderr": "Error: Duplicate result is not an independent run: /home/addaswsw/lab/Software_system_optimization/A2/evidence/timing/invalidated-results/repeat/SPECjvm2008.009/SPECjvm2008.009.raw"
+    },
+    {
+      "case": "full_suite",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "statistics_and_compare",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "duplicate_copy",
+      "exit_code": 1,
+      "stderr": "Error: Duplicate result is not an independent run: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw"
+    },
+    {
+      "case": "missing_input",
+      "exit_code": 1,
+      "stderr": "Error: Input does not exist: /tmp/a2-parser-test-kne_jld6/absent"
+    },
+    {
+      "case": "missing_raw",
+      "exit_code": 1,
+      "stderr": "Error: No raw files in /tmp/a2-parser-test-kne_jld6/empty"
+    },
+    {
+      "case": "correctness_failure",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw: correctness errors in raw result"
+    },
+    {
+      "case": "missing_score_field",
+      "exit_code": 1,
+      "stderr": "Error: 'operations'"
+    },
+    {
+      "case": "nonpositive_score",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw: invalid score for compress"
+    },
+    {
+      "case": "duplicate_workload",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw: duplicate workload compress"
+    },
+    {
+      "case": "warmup_excluded",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "case": "wrong_unit",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw: unexpected unit ops/s"
+    },
+    {
+      "case": "missing_report_score",
+      "exit_code": 1,
+      "stderr": "Error: /tmp/a2-parser-test-kne_jld6/SPECjvm2008.009.raw: composite differs from native TXT"
+    }
+  ],
+  "group_child_startup_selection": true,
+  "statistics_from_native_fields": true
+}

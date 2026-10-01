@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.oracle.com/javase/7/docs/technotes/guides/vm/gc-ergonomics.html",
+  "retrieved_at": "2026-10-01T00:49:26.985638+08:00",
+  "sha256": "02f4ebeec1a52d6ebe5ec89853c40559ba829dcfb3598c04fe7961627e0238b5",
+  "title": "Garbage Collector Ergonomics",
+  "note": "Reference only; formal parameter has not been selected. The attempted /javase/7/.../gctuning/collectors.html redirected to a current JDK overview and is not used."
+}

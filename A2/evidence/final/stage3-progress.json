@@ -1,0 +1,101 @@
+{
+  "updated_at": "2026-10-01T04:08:43.792249+08:00",
+  "engineering_status": "CODEX_COMPLETE",
+  "status_scope": "Local stage-3 completion only; independent acceptance and publication are pending.",
+  "scope": "A2 one-off, no git add/commit/push/new branch/Shuishan/SPEC submission",
+  "active_run": null,
+  "java_pid": null,
+  "runner_pid": null,
+  "sequence_pid": null,
+  "formal_jdk": "/home/addaswsw/.local/opt/java-se-7u75-ri",
+  "compatibility_environment": {
+    "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6"
+  },
+  "base": {
+    "score_ops_m": 482.4931319457377,
+    "native_status": "Run is compliant",
+    "result": "A2/results/base/SPECjvm2008.006",
+    "start": "2026-10-01T00:34:37+08:00",
+    "end": "2026-10-01T02:54:41+08:00",
+    "elapsed_realtime_seconds": 8404,
+    "elapsed_monotonic_seconds": 7933.371,
+    "exit_code": 0
+  },
+  "repeat": {
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      801.2364480935909,
+      787.9627495844901,
+      812.5824665594416
+    ],
+    "mean": 800.5938880791742,
+    "min": 787.9627495844901,
+    "max": 812.5824665594416,
+    "range": 24.61971697495153,
+    "relative_range_percent": 3.0751817296557697
+  },
+  "parameter": {
+    "one_option": "-XX:+UseSerialGC",
+    "workload": "compress",
+    "unit": "ops/m",
+    "scores": [
+      800.0799272118082,
+      804.4155779737505,
+      806.4824001839282
+    ],
+    "mean": 803.659301789829,
+    "min": 800.0799272118082,
+    "max": 806.4824001839282,
+    "range": 6.402472972119995,
+    "relative_range_percent": 0.7966650741005613,
+    "mean_change_percent": 0.3828924697401037,
+    "conclusion": "No clear improvement; the mean change is smaller than the observed within-group ranges."
+  },
+  "completed": [
+    "runner direct-file output, stress and signal checks",
+    "official JDK 7 download, checksum and user-level installation",
+    "full JDK 7 preflight and process-local font compatibility repair",
+    "frozen environment and one full default Base",
+    "three independent original compress runs",
+    "one JVM parameter with inspected defaults, smoke and three independent modified runs",
+    "complete native result copies and SHA256 checks",
+    "README seven questions with four continuous reading rounds",
+    "nine images opened and six final report images checked",
+    "all scripts read; syntax and relevant actual tests checked",
+    "teacher PDF both pages reread and visualized",
+    "seven review loops, requirement matrix, run index and final Git/file checks"
+  ],
+  "artifacts": {
+    "report": "A2/README.md",
+    "readme_sha256": "a567bc44baab6b263bee4297a1d391ada602e1f8a72a45601498d15307d515f1",
+    "matrix": "A2/evidence/requirement-matrix.md",
+    "run_index": "A2/evidence/run-index.md",
+    "review": "A2/evidence/final/stage3-review.md",
+    "final_check": "A2/evidence/final/stage3-final-check.json"
+  },
+  "limitations": [
+    "WSL2 CLOCK_REALTIME and CLOCK_MONOTONIC elapsed times differ; native scores are preserved without correction.",
+    "Native single-workload JVM metadata is n/a and category text remains Base without -pja; actual configuration is recorded in argv, flags and /proc evidence.",
+    "Native compliant does not constitute SPEC publication approval.",
+    "Historical image 01 terminal transcript is empty; final report uses image 04 and historical facts are recorded separately."
+  ],
+  "remaining": "本地 A2 工程内容已完成，等待 ChatGPT 阶段验收和后续 Publish Prompt。",
+  "git": {
+    "branch": "main",
+    "head": "5dcc4949e16127c212ad587ed096865894ebf1de",
+    "status": " M .gitignore\n M AGENTS.md\n?? A2/\n",
+    "staged_files": "",
+    "no_stage_commit_push_or_branch_creation": true
+  },
+  "new_installations": {
+    "toolchains": [
+      "OpenJDK 7u75 RI, user-level"
+    ],
+    "system_packages": [],
+    "language_packages": [],
+    "fonts": [],
+    "global_configuration_changes": [],
+    "preserved": "Java 21, JDK 8, SPEC and download cache per user instruction"
+  }
+}

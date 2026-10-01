@@ -1,0 +1,10 @@
+{
+  "url": "https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz",
+  "local_path": "/home/addaswsw/.cache/a2-downloads/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz",
+  "size": 174287938,
+  "sha256": "98c13207b5d208613c987c91c353a199fbf28ca07481c1f077803e4e436ea58a",
+  "official_md5": "35f515e9436f4fefad091db2c1450c5f",
+  "local_md5": "35f515e9436f4fefad091db2c1450c5f",
+  "md5_matches": true,
+  "download_finished": "2026-09-30T15:45:11.886467+08:00"
+}

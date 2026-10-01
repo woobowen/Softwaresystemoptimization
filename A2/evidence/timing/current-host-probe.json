@@ -1,0 +1,24 @@
+{
+  "python_start": {
+    "CLOCK_REALTIME": 1790820330.2721133,
+    "CLOCK_MONOTONIC": 33496.34229513,
+    "CLOCK_MONOTONIC_RAW": 36254.683484305,
+    "CLOCK_BOOTTIME": 33496.342296423
+  },
+  "python_end": {
+    "CLOCK_REALTIME": 1790820360.856419,
+    "CLOCK_MONOTONIC": 33524.188529223,
+    "CLOCK_MONOTONIC_RAW": 36285.45387717,
+    "CLOCK_BOOTTIME": 33524.188530774
+  },
+  "python_deltas": {
+    "CLOCK_REALTIME": 30.58430576324463,
+    "CLOCK_MONOTONIC": 27.846234092998202,
+    "CLOCK_MONOTONIC_RAW": 30.77039286500076,
+    "CLOCK_BOOTTIME": 27.84623435100366
+  },
+  "powershell_exit": 0,
+  "powershell_stdout": "{\n    \"WallSeconds\":  30.158,\n    \"StopwatchSeconds\":  30.159849299999998,\n    \"Frequency\":  10000000,\n    \"HighResolution\":  true\n}\n",
+  "powershell_stderr": "",
+  "note": "Python includes PowerShell process startup/teardown; Windows internal comparison excludes them."
+}

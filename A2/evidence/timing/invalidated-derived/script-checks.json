@@ -1,0 +1,36 @@
+[
+  {
+    "check": "valid diagnostic parse",
+    "command": [
+      "python3",
+      "A2/scripts/summarize-spec.py",
+      "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.002/SPECjvm2008.002.raw"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "detail": "38 workloads; recomputed 192.09336329457665 rounds to native diagnostic 192.09; not a formal score"
+  },
+  {
+    "check": "invalid correctness rejection",
+    "command": [
+      "python3",
+      "A2/scripts/summarize-spec.py",
+      "A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001/SPECjvm2008.001.raw"
+    ],
+    "exit": 1,
+    "expected_exit": 1,
+    "detail": "ValueError: /home/addaswsw/lab/Software_system_optimization/A2/evidence/compatibility/java21-preflight/native-results/SPECjvm2008.001/SPECjvm2008.001.raw: correctness errors in raw result"
+  },
+  {
+    "check": "duplicate run rejection",
+    "command": [
+      "python3",
+      "A2/scripts/summarize-spec.py",
+      "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.002/SPECjvm2008.002.raw",
+      "/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.002/SPECjvm2008.002.raw"
+    ],
+    "exit": 1,
+    "expected_exit": 1,
+    "detail": "ValueError: Repeated input file is not an independent run"
+  }
+]

@@ -84,6 +84,13 @@ an exact version.
 
 If the current real environment is newer or different but compatible, use it.
 
+Reuse installed software and tools first. If a required tool is absent, prefer
+the teacher's specified or recommended version. Determine compatibility by
+actually completing the required workloads and checks, not by version output
+or a single successful subtest. If an installed version proves unsuitable,
+preserve it and prefer a task-local or user-level parallel installation rather
+than changing global defaults.
+
 Do not downgrade, reinstall, or replace a working environment merely to match
 a reference version exactly.
 
@@ -298,6 +305,14 @@ dumps, and temporary files out of the formal source tree.
 
 Teacher-provided PDF/DOCX/ZIP materials are inputs, not normal final artifacts,
 unless explicitly required for submission.
+
+Complete native result directories explicitly required by the teacher are
+formal deliverables even when generated. Preserve raw measurements, reports,
+shared resources and internal links; do not apply ordinary build-output cleanup
+rules to them. Separate diagnostic and failed runs from formal measurements,
+retain their provenance, and never edit original scores or validity fields.
+Keep provided input originals, record any moves, and do not silently untrack
+materials that are already in Git.
 
 Before publication, perform a file-hygiene review:
 
@@ -801,6 +816,7 @@ needs, normally:
 - `images/`;
 - required source code;
 - required scripts;
+- complete native results when required by the assignment;
 - other explicitly required formal deliverables.
 
 Do not normally submit:

@@ -1,0 +1,53 @@
+
+SPECjvm2008 Peak
+  Properties file:   none
+  Benchmarks:        compiler.compiler compiler.sunflow xml.transform xml.validation
+
+  WARNING: Run will not be compliant.
+  Property specjvm.iteration.time must be at least 240 seconds for publication.
+  Not a compliant sequence of benchmarks for publication.
+
+  Kit signature and checksum is validated.
+  This can take several minutes.
+  Use argument '-ikv' to skip this.
+  ....................................passed.
+
+--- --- --- --- --- --- --- --- ---
+
+  Benchmark:   check
+  Run mode:    static run
+  Test type:   functional
+  Threads:     1
+  Iterations:  1
+  Run length:  1 operation
+
+Iteration 1 (1 operation) begins: Wed Sep 30 15:47:36 CST 2026
+Iteration 1 (1 operation) ends:   Wed Sep 30 15:47:36 CST 2026
+Iteration 1 (1 operation) result: FAILED
+
+Errors in benchmark: check
+  [iter=1] Interrupted when joining benchmark thread 0: null
+  [iter=1] java.lang.InterruptedException: null
+java.base/java.lang.Object.wait0(Native Method)
+java.base/java.lang.Object.wait(Object.java:366)
+java.base/java.lang.Thread.join(Thread.java:2079)
+java.base/java.lang.Thread.join(Thread.java:2155)
+spec.harness.ProgramRunner.runIteration(ProgramRunner.java:504)
+spec.harness.ProgramRunner.runBenchmark(ProgramRunner.java:348)
+spec.harness.ProgramRunner.run(ProgramRunner.java:98)
+
+  [iter=1] Iteration failed.
+  [iter=1][bt:1|op:1] java.lang.IllegalAccessError: class spec.benchmarks.check.Main (in unnamed module @0x2630b1d) cannot access class com.sun.tools.javac.main.JavaCompiler (in module jdk.compiler) because module jdk.compiler does not export com.sun.tools.javac.main to unnamed module @0x2630b1d
+
+No benchmarks will be run, since initial check test failed.
+
+The Javac version test in check failed.
+The Javac version must be the one included in SPECjvm2008.
+There is a known issue with this for Java on Mac OS X, including a workaround.
+For more info, see ./docs/KnownIssues.html
+Results are stored in: 
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.001/SPECjvm2008.001.raw
+Generating reports in:
+/home/addaswsw/.local/opt/specjvm2008/results/SPECjvm2008.001
+
+Composite result: 1 

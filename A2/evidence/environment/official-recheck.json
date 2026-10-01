@@ -1,0 +1,16 @@
+[
+  {
+    "name": "official-summary",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.html",
+    "time": "2026-09-30T15:35:59.984411+08:00",
+    "status": 200,
+    "sha256": "81d53945c97e5082c7b75b2b39c0a8ea99400592341073d9b497dd60e9701a98"
+  },
+  {
+    "name": "official-base",
+    "url": "https://www.spec.org/jvm2008/results/res2015q1/jvm2008-20150120-00018.base/SPECjvm2008.base.html",
+    "time": "2026-09-30T15:36:02.166630+08:00",
+    "status": 200,
+    "sha256": "8472daef33df919535faf0b21b02b7ecc3a8c72b92bd8f49002e56d4faf016b3"
+  }
+]

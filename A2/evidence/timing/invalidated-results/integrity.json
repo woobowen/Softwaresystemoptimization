@@ -1,0 +1,66 @@
+[
+  {
+    "run_id": "SPECjvm2008.006",
+    "files": 84,
+    "jpegs": 79,
+    "relative_links": 77,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.007",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.008",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.009",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.011",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.012",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.013",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  },
+  {
+    "run_id": "SPECjvm2008.014",
+    "files": 10,
+    "jpegs": 5,
+    "relative_links": 3,
+    "matches_native_source_and_move_manifest": true,
+    "measurement_status": "TIMING-INVALIDATED"
+  }
+]

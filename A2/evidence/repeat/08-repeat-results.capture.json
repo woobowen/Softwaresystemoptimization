@@ -1,0 +1,7 @@
+{
+  "image": "/home/addaswsw/lab/Software_system_optimization/A2/images/08-repeat-results.png",
+  "commands": "/home/addaswsw/lab/Software_system_optimization/A2/evidence/repeat/08-repeat-results.sh",
+  "captured_at": "2026-10-01T03:18:58.081316+08:00",
+  "method": "Real Zutty terminal in Xvfb, Pillow X11 ImageGrab; no pixel edits",
+  "sha256": "5f95d843d9cd7f63ba280b4732d4b42b11574969d2bd113131943c25e0cb0c77"
+}

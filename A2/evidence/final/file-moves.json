@@ -1,0 +1,20 @@
+[
+  {
+    "from": "A2/images/01-initial-java-environment.png",
+    "to": "A2/evidence/compatibility/images/01-initial-java-environment.png",
+    "sha256": "a2363b715e86bb8b395d1df24a877d57dd067826b0ec9d60ac9725c67d48189a",
+    "reason": "Historical Java 21 / JDK 8 image not referenced by final README; preserved unchanged."
+  },
+  {
+    "from": "A2/images/02-jdk-compatibility.png",
+    "to": "A2/evidence/compatibility/images/02-jdk-compatibility.png",
+    "sha256": "50b737bd166fd183d683e72c0a8fff62dd5faca39b277491699cf858f4087d81",
+    "reason": "Historical Java 21 / JDK 8 image not referenced by final README; preserved unchanged."
+  },
+  {
+    "from": "A2/images/03-spec-install-check.png",
+    "to": "A2/evidence/compatibility/images/03-spec-install-check.png",
+    "sha256": "4190915fbaadbf769d1ff951551f770e20657f5d7994c255c06b42ad5bfc14e5",
+    "reason": "Historical Java 21 / JDK 8 image not referenced by final README; preserved unchanged."
+  }
+]

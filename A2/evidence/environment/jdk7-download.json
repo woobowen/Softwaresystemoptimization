@@ -1,0 +1,17 @@
+{
+  "page": "https://jdk.java.net/java-se-ri/7",
+  "url": "https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz",
+  "downloaded_at": "2026-10-01T00:07:11.030518+08:00",
+  "filename": "openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz",
+  "cache_path": "/home/addaswsw/.cache/a2-downloads/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz",
+  "size": 156554803,
+  "official_checksum_url": "https://download.java.net/openjdk/jdk7u75/ri/checksum.md5",
+  "official_md5": "538acd35c6cf6977fa19d21ab2c17b0a",
+  "local_md5": "538acd35c6cf6977fa19d21ab2c17b0a",
+  "md5_matches": true,
+  "local_sha256": "56d84d0bfc8c1194d501c889765a387e949d6a063feef6608e5e12b8152411fb",
+  "official_sha256_available": false,
+  "archive_roots": [
+    "java-se-7u75-ri"
+  ]
+}

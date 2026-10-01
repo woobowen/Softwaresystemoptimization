@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/home/addaswsw/.local/opt/java-se-7u75-ri/bin/java",
+    "-cp",
+    "/tmp/a2-clock-probe-707u_dgp",
+    "ClockProbe",
+    "600"
+  ],
+  "exit_code": 0,
+  "sample_count": 601,
+  "elapsed_seconds": {
+    "python_time": 650.3662610054016,
+    "python_monotonic": 600.3783695509992,
+    "python_boottime": 600.3782653000017,
+    "java_currentTimeMillis": 650.366,
+    "java_nanoTime": 600.378267306
+  },
+  "python_wall_minus_monotonic_seconds": 49.987891454402416,
+  "java_wall_minus_nano_seconds": 49.98773269399999,
+  "min_step_difference_seconds": -1.0865580145618878,
+  "max_step_difference_seconds": 3.7474660585066886
+}
