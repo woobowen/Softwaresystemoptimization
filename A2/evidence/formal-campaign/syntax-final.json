@@ -25,7 +25,8 @@
     "A2/evidence/tools/test-runner.py",
     "A2/evidence/tools/test-summarizer.py",
     "A2/scripts/run-spec.py",
-    "A2/scripts/summarize-spec.py"
+    "A2/scripts/summarize-spec.py",
+    "A2/evidence/tools/verify-github-files.py"
   ],
   "bash_n": [
     "A2/scripts/run-formal.sh",
@@ -35,5 +36,9 @@
     "A2/evidence/formal-campaign/screenshots/08-final-repeat.sh",
     "A2/evidence/formal-campaign/screenshots/09-final-parameter.sh"
   ],
-  "passed": true
+  "passed": true,
+  "node_check": [
+    "A2/evidence/tools/verify-github-readme.cjs"
+  ],
+  "github_verifier_checked_at": "2026-10-01T19:09:21.712193+08:00"
 }

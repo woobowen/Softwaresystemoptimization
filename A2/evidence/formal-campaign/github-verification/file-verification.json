@@ -1,0 +1,1305 @@
+{
+  "at": "2026-10-01T19:06:37.336237+08:00",
+  "sha": "45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a",
+  "git_remote_sha": "45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a",
+  "local_equals_remote": true,
+  "tree_url": "https://api.github.com/repos/woobowen/Softwaresystemoptimization/git/trees/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a?recursive=1",
+  "tree_response_sha256": "9800087f3ae260edfff464916b83073c61600f32420a191546d93a71b4a8fda2",
+  "remote_tree_entries": 1653,
+  "files_actually_downloaded": [
+    {
+      "path": "A2/README.md",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/README.md",
+      "http_status": 200,
+      "bytes": 8576,
+      "sha256": "3a50cadc5ae48796e2daf88ddab6fc39a47b30c1816cb022c865a5b6facdf03a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/requirement-matrix.md",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/requirement-matrix.md",
+      "http_status": 200,
+      "bytes": 3261,
+      "sha256": "267ad28cee1346c1b936c3558d11a7dfb87997572a12000b7f490671d2d2db95",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/formal-campaign/final-timing-audit.md",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/formal-campaign/final-timing-audit.md",
+      "http_status": 200,
+      "bytes": 2454,
+      "sha256": "667a3a0457993d63386a0255ef9d36c69eff4652938c4aa8d139beb7ca33efe0",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/formal-campaign/final-data-audit.json",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/formal-campaign/final-data-audit.json",
+      "http_status": 200,
+      "bytes": 8974,
+      "sha256": "8508b8facd0431d153abd02c3433e8c2944fe3c838aaa7db24bfd4d4f04107a4",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/formal-campaign/final-statistics.json",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/formal-campaign/final-statistics.json",
+      "http_status": 200,
+      "bytes": 20206,
+      "sha256": "f7ec8a5858b6719baf245ac505caa8b92625aa2b2548ad11487a8063dde35b0a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/formal-campaign/restore.json",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/formal-campaign/restore.json",
+      "http_status": 200,
+      "bytes": 8809,
+      "sha256": "66ed85a4d8e92bf0095d856890c62f11d63598078a3fd603e76aa0f4b32da0e3",
+      "matches_local": true
+    },
+    {
+      "path": "A2/evidence/final/final-value-map.md",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/evidence/final/final-value-map.md",
+      "http_status": 200,
+      "bytes": 5627,
+      "sha256": "9d3a43b36dd1dad2b0f784a2e4553b95616c487e79d32bbbd7d6fd7120caae09",
+      "matches_local": true
+    },
+    {
+      "path": "A2/scripts/run-formal.sh",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/scripts/run-formal.sh",
+      "http_status": 200,
+      "bytes": 432,
+      "sha256": "1f77aec81126c9b1b56fea053984dc678d783f4e9175e78cbf582285b4ba4b85",
+      "matches_local": true
+    },
+    {
+      "path": "A2/scripts/run-spec.py",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/scripts/run-spec.py",
+      "http_status": 200,
+      "bytes": 5581,
+      "sha256": "37b7b7c3cb61de09104b07b2e92e1a7a52dc97a66e9abb73067b5f2dd00ddd4e",
+      "matches_local": true
+    },
+    {
+      "path": "A2/scripts/summarize-spec.py",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/scripts/summarize-spec.py",
+      "http_status": 200,
+      "bytes": 6345,
+      "sha256": "40fb2c62cd5536cd5e022fc1cb6c135a83685cef4c3973862537c096a97e88e8",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/04-final-environment.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/04-final-environment.png",
+      "http_status": 200,
+      "bytes": 63801,
+      "sha256": "92a9131d6512ce7253468d6d1321edf14ee32d38034d59129d886e784d4407ec",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/05-final-base-summary.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/05-final-base-summary.png",
+      "http_status": 200,
+      "bytes": 53740,
+      "sha256": "d43a8607d7a668e6d523b93a1d37a773a9b4b3b025386d5e8d6be139031e847d",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/06-final-workloads.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/06-final-workloads.png",
+      "http_status": 200,
+      "bytes": 35611,
+      "sha256": "b8041096dc6f3df352a3e7dc9dbf1a3f1813375c866e8f584d53538e3f2cff93",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/07-official-result.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/07-official-result.png",
+      "http_status": 200,
+      "bytes": 76310,
+      "sha256": "572f3820f6cdebdbd811c37f9c8f30f94bd3e55e3e494a80a6800a2d87a4cbaa",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/08-final-repeat.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/08-final-repeat.png",
+      "http_status": 200,
+      "bytes": 35067,
+      "sha256": "29f9913ed2ea449cff78a4a23e61ffa28845ea327a6706a7963ba5a4f4a17be2",
+      "matches_local": true
+    },
+    {
+      "path": "A2/images/09-final-parameter.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/09-final-parameter.png",
+      "http_status": 200,
+      "bytes": 60835,
+      "sha256": "41262c46ec00ed7e5e284e444606107d179f853dad172de7c5099807da90cd90",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.html",
+      "http_status": 200,
+      "bytes": 51674,
+      "sha256": "1b780e9ac67a44c7dde8ef05055e2e6af0035b2d957d8c78bfe4c90d96c9e754",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.raw",
+      "http_status": 200,
+      "bytes": 13005027,
+      "sha256": "d2a9695220330ae054412d01f85e8b923d3bd8c45cbe4673ed44cccb563079bd",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.sub",
+      "http_status": 200,
+      "bytes": 2931,
+      "sha256": "c1d520b0bad1defa210b2af121cd8d9f9747e166074e668b74ef0b6414ebdbb6",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.summary",
+      "http_status": 200,
+      "bytes": 343,
+      "sha256": "9fca1aaa1feb50bd62651f4932100be7242836db32f2b5a0c3fc23383f667bed",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/SPECjvm2008.015.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/SPECjvm2008.015.txt",
+      "http_status": 200,
+      "bytes": 11733,
+      "sha256": "ababf174cd60ab524cf8e742acb525b219d5c4c1c4006e163a4e70883a5b32a3",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/all.jpg",
+      "http_status": 200,
+      "bytes": 41485,
+      "sha256": "84d910251afa1f007333c0c4e4425a1153867761bf4ae9116fcf5e9225edf0c2",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/check.jpg",
+      "http_status": 200,
+      "bytes": 80491,
+      "sha256": "e5eadc52632d196895d03e90500b146b25b7a8b85e4e23b03fee4dc7b3d18187",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 15054,
+      "sha256": "f938bc83330aaba709c70e50d07b328402f39da7a21210d6100aa1c00d85b991",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compiler.compiler.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compiler.compiler.jpg",
+      "http_status": 200,
+      "bytes": 188172,
+      "sha256": "b29acdd2feed48dd939cf66159168237cab4a7ffee68011cfb643bb8c3af0761",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compiler.compiler_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compiler.compiler_results.jpg",
+      "http_status": 200,
+      "bytes": 15211,
+      "sha256": "b7c334d150e35dce9884986865a3a97fa4c8636fdf13831b802c25d992e3a9f4",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compiler.sunflow.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compiler.sunflow.jpg",
+      "http_status": 200,
+      "bytes": 225937,
+      "sha256": "3da6c2989438e49231dce800b4049a22bd1806283f74e9bdce30b080c6267690",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compiler.sunflow_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compiler.sunflow_results.jpg",
+      "http_status": 200,
+      "bytes": 12357,
+      "sha256": "ac08e2080901db3ae5ded1f2e1e05c76fc85491271237816ca81c755556efa64",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 216112,
+      "sha256": "aab89a9c3b593389e01e0d11c65812d0dae1436f482e60ae61742d6e1e5d9827",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 11639,
+      "sha256": "b7eab5d99d310539b76380ea34e657666377f6010d563677000ae280b2f0740d",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.aes.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.aes.jpg",
+      "http_status": 200,
+      "bytes": 237159,
+      "sha256": "8aac6453735ea392cf66a4835afc4a36adcfcb2aa6331fb99576f9cebd01c743",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.aes_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.aes_results.jpg",
+      "http_status": 200,
+      "bytes": 15011,
+      "sha256": "d941e8871475b9ae809b9fadd53c9054d372ef81d16e8ca0f84efbfda9b17033",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.rsa.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.rsa.jpg",
+      "http_status": 200,
+      "bytes": 218897,
+      "sha256": "f721e221c826eace76f6675de0a1ff4115bc5e3f93d1f05b9d1099bd2ddedf34",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.rsa_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.rsa_results.jpg",
+      "http_status": 200,
+      "bytes": 14874,
+      "sha256": "74a21f3dde41136205e03e6318b1d909dff9e17a8e6b39ab9d125a63b1a7c90e",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.signverify.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.signverify.jpg",
+      "http_status": 200,
+      "bytes": 263650,
+      "sha256": "2d31e60298119f747c83e15b2445f9b124a3148dd6991429dc028335e9d51d9b",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/crypto.signverify_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/crypto.signverify_results.jpg",
+      "http_status": 200,
+      "bytes": 15537,
+      "sha256": "6ea6f30548ee427fd0c6364d56832ee8b0b963acb2c3b040bf2b9991b4d5b9f7",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/derby.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/derby.jpg",
+      "http_status": 200,
+      "bytes": 209069,
+      "sha256": "1ba36b923fb97848c55a15a0291179a45c8bc0c13a8b5b11d479322bf7a201ce",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/derby_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/derby_results.jpg",
+      "http_status": 200,
+      "bytes": 14910,
+      "sha256": "53d1b7054916325a68cd59146afe04b8fb31c28ec50c19a131ee00f6a435d1cd",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/mpegaudio.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/mpegaudio.jpg",
+      "http_status": 200,
+      "bytes": 218963,
+      "sha256": "9309d16a247d6d90ccd7628ff9d4c943ef25f06477445562de7e072acd37b129",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/mpegaudio_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/mpegaudio_results.jpg",
+      "http_status": 200,
+      "bytes": 12804,
+      "sha256": "d64e21788ea210b0d6e0cafdfb92a12950f58c05e764137fd57f7a70c565b0f6",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.fft.large.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.fft.large.jpg",
+      "http_status": 200,
+      "bytes": 228512,
+      "sha256": "e87eb20e01f336d27e18be108856044efcb5c794b88873c4e361de40a94df975",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.fft.large_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.fft.large_results.jpg",
+      "http_status": 200,
+      "bytes": 14400,
+      "sha256": "811ceefd3a668433dda3688e5a085a38853cbcb5ff17039f4383876bc45ec4e4",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.fft.small.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.fft.small.jpg",
+      "http_status": 200,
+      "bytes": 265045,
+      "sha256": "1fadaf9a9c403576bb7d55e4297f8f38405c938b5e68d133a6ecd9e507924a48",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.fft.small_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.fft.small_results.jpg",
+      "http_status": 200,
+      "bytes": 13697,
+      "sha256": "b42d257f0e5d29b71712ef3770610cfb1b4c079ff73a8d86a59677c8fbfeba0c",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.lu.large.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.lu.large.jpg",
+      "http_status": 200,
+      "bytes": 202128,
+      "sha256": "7320cca678a3a18c5bcc6905f55b5752d7d02c8bff798ee2f11b6288691a9ce0",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.lu.large_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.lu.large_results.jpg",
+      "http_status": 200,
+      "bytes": 11337,
+      "sha256": "dd497184046d1c4b732ab9b8f6a5fcb834587266554de8fdc8f52f0cc1a84999",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.lu.small.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.lu.small.jpg",
+      "http_status": 200,
+      "bytes": 236420,
+      "sha256": "dc486fc9f4138e54244a0685a9fef70ab3b7a2c579f17723888f48d8004a478d",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.lu.small_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.lu.small_results.jpg",
+      "http_status": 200,
+      "bytes": 14196,
+      "sha256": "fd5b6b2cf58a6bb301ff15e7b3e8789ec69613950d7cbf13e61be45be9a482a9",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.monte_carlo.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.monte_carlo.jpg",
+      "http_status": 200,
+      "bytes": 276277,
+      "sha256": "89498b55bf5a5f918aebc8d70e54868303e0f0da73218c465019fb42daff16b3",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.monte_carlo_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.monte_carlo_results.jpg",
+      "http_status": 200,
+      "bytes": 12620,
+      "sha256": "617f02fd25727afaa36bc0a318387e018f19245c9fb91c8a52cceb4c19229af7",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sor.large.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sor.large.jpg",
+      "http_status": 200,
+      "bytes": 216551,
+      "sha256": "91a93379955756ddc37304fc0da4a0f94ae411aca0e33935ebd14fbae117d761",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sor.large_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sor.large_results.jpg",
+      "http_status": 200,
+      "bytes": 11985,
+      "sha256": "4e646a4af4ad4f825068c6ef2ebdcb6c2a67653027fdee5486cfa81609e27f16",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sor.small.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sor.small.jpg",
+      "http_status": 200,
+      "bytes": 245317,
+      "sha256": "d111f857e73d4bf7272f4ec0d7e091fd1a8ef28b3aa897ef96a8a3fc16a89a30",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sor.small_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sor.small_results.jpg",
+      "http_status": 200,
+      "bytes": 13162,
+      "sha256": "3913c451896526a70417e92aeed19b4e9cbd3ea932469ce9bf79b7ccb9ecf7fa",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sparse.large.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sparse.large.jpg",
+      "http_status": 200,
+      "bytes": 169224,
+      "sha256": "b90795d46fb5f68fc004ae98f88ee566323613a7db1e650dd7c24898e2914d67",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sparse.large_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sparse.large_results.jpg",
+      "http_status": 200,
+      "bytes": 13094,
+      "sha256": "3482a49d9d76df12248df13942bb51e2840bc8b028057895c0d592f2ee9149a8",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sparse.small.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sparse.small.jpg",
+      "http_status": 200,
+      "bytes": 250401,
+      "sha256": "c01057f3039c70463f88ced226b7630af7b5f56127975296e56f88de1735b0e6",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/scimark.sparse.small_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/scimark.sparse.small_results.jpg",
+      "http_status": 200,
+      "bytes": 12552,
+      "sha256": "b7d835ed4a5c9367d213db7c9317888967bf0053ff1b2373999da47f2b96a007",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/serial.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/serial.jpg",
+      "http_status": 200,
+      "bytes": 223160,
+      "sha256": "6b9420eebb34d5936bba6094514d325ccfbd98fa057c3bb3d8b6d25beff313bd",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/serial_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/serial_results.jpg",
+      "http_status": 200,
+      "bytes": 12681,
+      "sha256": "df7933f81eddab5e32e6f0645f36e2bd844dd76e10744ebf5d409ba4d1694712",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compiler.compiler.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compiler.compiler.jpg",
+      "http_status": 200,
+      "bytes": 120671,
+      "sha256": "9dbcb8079343f7aa880ef176841870c16774efd1d11f25d8bddf53dffc97a3c5",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compiler.compiler_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compiler.compiler_results.jpg",
+      "http_status": 200,
+      "bytes": 14196,
+      "sha256": "7d6ebd147d4f43da411c2cfc731fb569ddf7f9e3c78306c4c8bd4ef3f665735d",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compiler.sunflow.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compiler.sunflow.jpg",
+      "http_status": 200,
+      "bytes": 109790,
+      "sha256": "5ac499a3745000d77b06c32afc6009acaa7f8c2dcdbe69f0921e127f7a0f2d69",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compiler.sunflow_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compiler.sunflow_results.jpg",
+      "http_status": 200,
+      "bytes": 14753,
+      "sha256": "1f19024c99ac2a3e128924198b58b8b27650727ba52261beb0d11081063267b3",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compress.jpg",
+      "http_status": 200,
+      "bytes": 83746,
+      "sha256": "9a5d1bf408456b4733e23432e259d5efaa04792f5e8a72daa5d5aad1d4a248ed",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.compress_results.jpg",
+      "http_status": 200,
+      "bytes": 14651,
+      "sha256": "888482f11d6c4ebe803bac5744db8f74681a6f2b10e2b5516e5a4ded21c2ec33",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.aes.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.aes.jpg",
+      "http_status": 200,
+      "bytes": 122627,
+      "sha256": "41e7408672897bd9c226f5dc4dac8f5dadd0d00c95226b4b30e28836a8a52f3a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.aes_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.aes_results.jpg",
+      "http_status": 200,
+      "bytes": 14238,
+      "sha256": "6d99559d23912aa87ad25eb1af5d7d95b4cad9c47368d60e79d36de56753c1d8",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.rsa.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.rsa.jpg",
+      "http_status": 200,
+      "bytes": 95595,
+      "sha256": "da82d0d5cc7a565c05f117a5fabb208013c847655b963bec395f778b19a31d57",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.rsa_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.rsa_results.jpg",
+      "http_status": 200,
+      "bytes": 13952,
+      "sha256": "75a2f522a5f91c1c90cac3d49698381b6802c452b92e5753a0f0849a89a3c23a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.signverify.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.signverify.jpg",
+      "http_status": 200,
+      "bytes": 101585,
+      "sha256": "efd9524c08188414284e0ef05900742ea4f69142bf3695e7178096040bfb376e",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.crypto.signverify_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.crypto.signverify_results.jpg",
+      "http_status": 200,
+      "bytes": 14606,
+      "sha256": "c900e93cb61d369c1570baf11a687caad37a0adc434ed392a99e507419525e99",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.helloworld.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.helloworld.jpg",
+      "http_status": 200,
+      "bytes": 89001,
+      "sha256": "0d2ae10404b3021491d9a3b112b80d002c0a90a7ca6486688504f4c4a1228981",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.helloworld_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.helloworld_results.jpg",
+      "http_status": 200,
+      "bytes": 13579,
+      "sha256": "3f08bca3e6547eadac509feb018bf73949bf4f6c9be6b682915b1b50611fca18",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.mpegaudio.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.mpegaudio.jpg",
+      "http_status": 200,
+      "bytes": 104599,
+      "sha256": "186f0fb95a91dbf5e4bd6cb3436a1b80fbdf23fcbfd4a58bafd44bd7bebff121",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.mpegaudio_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.mpegaudio_results.jpg",
+      "http_status": 200,
+      "bytes": 13892,
+      "sha256": "43b5508dd2411edf085468ca2f8ab57c6ed9f3da8a661873c1a799116c029579",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.fft.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.fft.jpg",
+      "http_status": 200,
+      "bytes": 82563,
+      "sha256": "ad43fe416367a15be46efca38e626b6a0cd1c9821b5e6fa22b8c98a31f0aa1c1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.fft_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.fft_results.jpg",
+      "http_status": 200,
+      "bytes": 15170,
+      "sha256": "118f7a85546cc05f8dca021d11b06e552fd1bef0eff1510e4601763ddb953b93",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.lu.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.lu.jpg",
+      "http_status": 200,
+      "bytes": 73156,
+      "sha256": "b3a2e902d66ac419cb9ba1ceb60c01a83e412cb535a31e51434c9fb35db92210",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.lu_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.lu_results.jpg",
+      "http_status": 200,
+      "bytes": 13750,
+      "sha256": "045c2ed5d2a8f8cf2c127dee35235ad3bc3e0ba08979191af84ea644053a7f86",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.monte_carlo.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.monte_carlo.jpg",
+      "http_status": 200,
+      "bytes": 92248,
+      "sha256": "81dd8741a19428d335729a823c5c100d7f192f8407510d904936701f5f499fb6",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.monte_carlo_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.monte_carlo_results.jpg",
+      "http_status": 200,
+      "bytes": 14029,
+      "sha256": "4b51a5aad0e27a113dea3bc9a1580c0c7bfe7eb436b8ec15e707ae20b3333748",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.sor.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.sor.jpg",
+      "http_status": 200,
+      "bytes": 116103,
+      "sha256": "7c3cf3c841383b1fe12e0353834c2af01b57322ed2ce99a8504f0d1707e8d5c5",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.sor_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.sor_results.jpg",
+      "http_status": 200,
+      "bytes": 14249,
+      "sha256": "ee74f8f3a1753f05439520587a09df5a40dd9d8ad428011dbfcabc1fd0d3a1d1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.sparse.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.sparse.jpg",
+      "http_status": 200,
+      "bytes": 93108,
+      "sha256": "b0b52431ea6dbd3d2b0c9f1b667521a5f2d92776498c45530d9d23f817f0d101",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.scimark.sparse_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.scimark.sparse_results.jpg",
+      "http_status": 200,
+      "bytes": 14639,
+      "sha256": "675a442ce07021c446898487a6fade16dc3d783fe7853ad339b45a7defcc473b",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.serial.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.serial.jpg",
+      "http_status": 200,
+      "bytes": 110586,
+      "sha256": "4f18ff032ac8cb12e0f22d21d66b1a255ab11c8d6a06d0106f0e3abb3de10386",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.serial_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.serial_results.jpg",
+      "http_status": 200,
+      "bytes": 14166,
+      "sha256": "50f968b374782474745a912aa25294b94b44b94e9c70756996b37ce92cf69460",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.sunflow.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.sunflow.jpg",
+      "http_status": 200,
+      "bytes": 90247,
+      "sha256": "e0a67bfc13a02469e718285c072296f61118c83cf2b8da55b2a8cb3683f8db2a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.sunflow_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.sunflow_results.jpg",
+      "http_status": 200,
+      "bytes": 14809,
+      "sha256": "cd14732c54c42bbf27207c138e1e27f713eead8f8a6b4561da3c87abe69fe46b",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.xml.transform.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.xml.transform.jpg",
+      "http_status": 200,
+      "bytes": 110488,
+      "sha256": "21a6974339b2509fbcda0eee639928f54090d02b7c4266381ce532941fecd27b",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.xml.transform_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.xml.transform_results.jpg",
+      "http_status": 200,
+      "bytes": 13459,
+      "sha256": "4eea781d7789256919c7a3b0432e1dd82ca87e5a92e06bcb7156935182508834",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.xml.validation.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.xml.validation.jpg",
+      "http_status": 200,
+      "bytes": 108087,
+      "sha256": "4732d4cba7946ed54cfd8eaa359372b2ed25d7e190fdae9b669db4fab178482c",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/startup.xml.validation_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/startup.xml.validation_results.jpg",
+      "http_status": 200,
+      "bytes": 14087,
+      "sha256": "8fe45c011d7aecb5342a55f1ffe66e0d96eb7c7a4aef194c20fa72bf337a9a3e",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/sunflow.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/sunflow.jpg",
+      "http_status": 200,
+      "bytes": 213777,
+      "sha256": "ba5f49137d3d80a29ea06938983ce29d0c02f355adf22ebe74e9d8f6db76fb33",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/sunflow_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/sunflow_results.jpg",
+      "http_status": 200,
+      "bytes": 15488,
+      "sha256": "d33a2fa3fd6b8bb419f278f45d1bd389afbc59ad287565d250b9f8dc7696bac7",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/xml.transform.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/xml.transform.jpg",
+      "http_status": 200,
+      "bytes": 203611,
+      "sha256": "a7f90973ef6c23ca00bb03533f01e40a95a68a7f095fa61a35764296642c5992",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/xml.transform_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/xml.transform_results.jpg",
+      "http_status": 200,
+      "bytes": 12321,
+      "sha256": "90bfddf67e3da4bfd891a463cc2277b39e4d03a1ce81f85ab6f75e94c5744d28",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/xml.validation.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/xml.validation.jpg",
+      "http_status": 200,
+      "bytes": 191740,
+      "sha256": "134365cf1e7f9bad5c6a1426bd7945ad45c4da88eaa896ebde33f1294b084cfb",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/base/SPECjvm2008.015/images/xml.validation_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/base/SPECjvm2008.015/images/xml.validation_results.jpg",
+      "http_status": 200,
+      "bytes": 16113,
+      "sha256": "f7f232a10f2f8ad0d98e0c6b46616b45140318d4eecfe044f7e58401756bf343",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.html",
+      "http_status": 200,
+      "bytes": 20219,
+      "sha256": "0626ca184480e3734f1f66cf8db7f5e0e440c8bdbde40a3589e7093f0beb91ad",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.raw",
+      "http_status": 200,
+      "bytes": 438563,
+      "sha256": "f8e0c17a67dd49bec2d8d04ede3fcfe0c02165cc9367d0afcace43d2f6cc7302",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.sub",
+      "http_status": 200,
+      "bytes": 2928,
+      "sha256": "e14215076cd22eaa8efcd1eb8f3016cf182c5cb79f3d94da2333c551b2346587",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.summary",
+      "http_status": 200,
+      "bytes": 338,
+      "sha256": "1f9fe145d04c0eeb23aa0fe016d13bd5275f319089e5722fbb58b6439a9ed310",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/SPECjvm2008.019.txt",
+      "http_status": 200,
+      "bytes": 5011,
+      "sha256": "81c5c203a2084a1ed6493715d35f4d1a4d1710e2f731ddbf5ca6e0213f514b7e",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17423,
+      "sha256": "5ecf3ac96f546bfc8ecb5b8f7eca375f0a418e0f7a716267e680dbd8fa8e2413",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/images/check.jpg",
+      "http_status": 200,
+      "bytes": 88256,
+      "sha256": "bf97e5c194b87686e099366c579fd5dde9e71f5e944390b3324b8bd1ac3e777a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 13852,
+      "sha256": "395724e6c179c47ab179a73d1ab1dfaa12c7e40c44430246a781b47e57d9ce6a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 225861,
+      "sha256": "a6b65dfa437efeff1c826ebc8c9a8703f3c7001a6c299294878f0f0836605969",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.019/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.019/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 12197,
+      "sha256": "aaea1b96033cd2426a9647301d2c1003cdc18008a35cb67f37d47aa3b445a898",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.html",
+      "http_status": 200,
+      "bytes": 20225,
+      "sha256": "a4db2967811ec892824e62ce61a1fe88a9542194bcaf4be7c044b587eaf53f86",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.raw",
+      "http_status": 200,
+      "bytes": 465324,
+      "sha256": "527374edad21d39116d1958ae04b3968cdae429b1ad1b3627ffad5dd7fb1c08c",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.sub",
+      "http_status": 200,
+      "bytes": 2929,
+      "sha256": "0e08ab4e57788f947896b3a7d3452c06df70eaaa82498b778b219c33303d52c1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.summary",
+      "http_status": 200,
+      "bytes": 339,
+      "sha256": "a2e0776a21acf81753b23a31725d1f8c16f60c9e8a0ce1489558023cc49ac004",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/SPECjvm2008.020.txt",
+      "http_status": 200,
+      "bytes": 5012,
+      "sha256": "944abe663602f9b3cb03fa7664e313e4149dfc80d7dc922a73ea471d32156c80",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17916,
+      "sha256": "11d1c41c0ccf6d42300cf79083d186d83a91480581fe211ed9f0e8ae54c6ea11",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/images/check.jpg",
+      "http_status": 200,
+      "bytes": 79566,
+      "sha256": "fb040897d57660c8c7fe7cbefb0810bccc78b19f6e41e904c1e488d1199a7146",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 13844,
+      "sha256": "38223802bdf6001b2b9c6a71ac7bc1b413a9a6628b034492680373c00e74a136",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 252826,
+      "sha256": "4a1b24a2b5aba12ecc56f53d34c2bb1ecefec0cfc735a7747c96e9148e9acdbc",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.020/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.020/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 14576,
+      "sha256": "7df092d6daa95c2a2c128871ecf4fb91251e42c56848722bf89787230eb132d9",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.html",
+      "http_status": 200,
+      "bytes": 20225,
+      "sha256": "d42707f2278e17b3c1332505cdcc8b0dfeae1614a2bf97917c0a7d3804f43cbc",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.raw",
+      "http_status": 200,
+      "bytes": 468571,
+      "sha256": "ac387b87f98eca800ed0b93fa3e28ada4b9219afd511ffc2d03c4658fc7c6db1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.sub",
+      "http_status": 200,
+      "bytes": 2929,
+      "sha256": "9a7798ec9f01359c06ef7d24795228496f5779caee881a79ad2c5d97db8abeb8",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.summary",
+      "http_status": 200,
+      "bytes": 339,
+      "sha256": "f32bc5e73512e3f8276109628a5c6d5fc1eef3d1021bfe48d993172751398c10",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/SPECjvm2008.021.txt",
+      "http_status": 200,
+      "bytes": 5012,
+      "sha256": "aba601be101b59a2192f65a83b421062e4139025274e446b5c5d8fffcb518c76",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17742,
+      "sha256": "0c0937b17f5570fa7c79746b419470da6b84bbad9c6ca00302b329fe30f92e5c",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/images/check.jpg",
+      "http_status": 200,
+      "bytes": 78101,
+      "sha256": "63c6473f82d0b2d7d3be8a6abcef61d83bb4afa9517b2ba2d969212b862fe5aa",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 15720,
+      "sha256": "0310f0659db17801dd638056efc67a54626a42500452b5a5c22b576fc8777487",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 212177,
+      "sha256": "46bfaf5ee61a2b03c68c872a69280629ebaa7cf4f9574d5f330b416b66adca98",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/parameter/SPECjvm2008.021/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/parameter/SPECjvm2008.021/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 11579,
+      "sha256": "af56f2ff6140994cebba0044048d6b76dc84d584120e79969ab9ca8e64e1d3e4",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.html",
+      "http_status": 200,
+      "bytes": 20225,
+      "sha256": "c4dc849f5b8ffa7bc89cb2bd7f5379571fb6b40819244e2c28a440768847c9e1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.raw",
+      "http_status": 200,
+      "bytes": 428681,
+      "sha256": "899c889d081725f854ee7157340f2ddbbcfdba580091af636860f40cd063b11f",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.sub",
+      "http_status": 200,
+      "bytes": 2929,
+      "sha256": "75b779f4dd1564b3be6ec32f5b05efb140c0a72d8641f3b43219b7af2fb1aa4a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.summary",
+      "http_status": 200,
+      "bytes": 339,
+      "sha256": "57a3dc63d58e38f84e47b51cfb34db26650c7d5ce1ef38f0e2df548b55a99959",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/SPECjvm2008.016.txt",
+      "http_status": 200,
+      "bytes": 5012,
+      "sha256": "4f42f8bef1180109422ebf9325616b5dded91cc168f5f6ef2772ed2951cc486b",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17363,
+      "sha256": "7318cfa06f587e144c0bf3531252c95ba93aafc39bf46d887e29ff44d13643df",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/images/check.jpg",
+      "http_status": 200,
+      "bytes": 90410,
+      "sha256": "b77fda1807916e36e6ea946e8ab78686214f6966146c4e608e1694e840d0f0b9",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 14882,
+      "sha256": "6157ba08b9079519298341099d63ca2e5b079d1ca407aa9ba07a35b3128dc35a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 228167,
+      "sha256": "888903243bb0794f25bbb111a540ce552f39ddaa95d918d0af48e29b6dd630fe",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.016/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.016/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 15695,
+      "sha256": "61050cbc7d2c3bc4776ca25741dd81de449ed78bcd6b1095d64aa1332a6801d1",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.html",
+      "http_status": 200,
+      "bytes": 20223,
+      "sha256": "f902d61e2dc9cf7599440215c2572d3f590ea005b84f9ce965b9491ef6fa3e5a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.raw",
+      "http_status": 200,
+      "bytes": 420773,
+      "sha256": "d52d922377319a3045756188fad7e050f9ab2b4b7ac7f17ec48320b2efa1fe8a",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.sub",
+      "http_status": 200,
+      "bytes": 2929,
+      "sha256": "3468f565da5ad7e430c0bf205334034055a9d1dfe927426c4aa20ebc432854de",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.summary",
+      "http_status": 200,
+      "bytes": 339,
+      "sha256": "6d3d1add897818629050ca5afebeedb443acbea7ff13746bbde36d32d2dc8426",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/SPECjvm2008.017.txt",
+      "http_status": 200,
+      "bytes": 5012,
+      "sha256": "ca0334702ce5720f4ab9833a32fdad0d016d0294a41f9f42549a8892199e1919",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17032,
+      "sha256": "7e6c17c05d746a2dde385db613e9ab117ff4aef1840beae86e43fb8b4e5ae1ec",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/images/check.jpg",
+      "http_status": 200,
+      "bytes": 101498,
+      "sha256": "a6ed556f394ef5676c62f93764e665c0c0bf5d38410b7ae799054c676eae8585",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 14940,
+      "sha256": "d1160fa7bf225f52e38c6ce4be11537e8486445958acce903ed37e74236eeb89",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 239324,
+      "sha256": "ae6ae77624bd60cf7b5b72a73ade544b98adadf68d848ce2db1457bba716a514",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.017/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.017/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 12773,
+      "sha256": "4fb877b95fcd05a59d1e05715173f4943e91cffecbd986b04288f3424ed12980",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.html",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.html",
+      "http_status": 200,
+      "bytes": 20225,
+      "sha256": "b34decd793fb5283c79d5ea341c263c45c66399ee22229321061b5e19f86bb70",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.raw",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.raw",
+      "http_status": 200,
+      "bytes": 444985,
+      "sha256": "0abf48bc83a51d3d3006ca448b46b2f92e38aeca93b45fe3e38eb16fed6f5db7",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.sub",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.sub",
+      "http_status": 200,
+      "bytes": 2929,
+      "sha256": "87728301815b21baa7e3fa2e43c3ca74fa24a155b7ae2f8fcb4cae1f5779b3cd",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.summary",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.summary",
+      "http_status": 200,
+      "bytes": 339,
+      "sha256": "a3f95898460c855906017cef3a3d8e51695326560db04df5197044a7630bfd26",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.txt",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/SPECjvm2008.018.txt",
+      "http_status": 200,
+      "bytes": 5012,
+      "sha256": "f83de209e6723ecdb55ae5bfff3a5c2e896501b34c3d9cd6b0ec0ad3e5e28628",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/images/all.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/images/all.jpg",
+      "http_status": 200,
+      "bytes": 17443,
+      "sha256": "dbd5d2141fba1c36f3161319431dac3c561dd2a12d337d2b652b26451a064b71",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/images/check.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/images/check.jpg",
+      "http_status": 200,
+      "bytes": 93646,
+      "sha256": "34f399e6529a42ea6c92bcec08fa960b2fbc09dd06d1150b3c307f48e8cae4a0",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/images/check_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/images/check_results.jpg",
+      "http_status": 200,
+      "bytes": 14751,
+      "sha256": "4edb56a2afbbaa05aa5291788e8b6a08601806d11ace2942db608b1150e37885",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/images/compress.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/images/compress.jpg",
+      "http_status": 200,
+      "bytes": 232423,
+      "sha256": "e45deb5d70b97882b2e21e01adc2e8e3de15e18aac1b3048191a76e1346ed1ab",
+      "matches_local": true
+    },
+    {
+      "path": "A2/results/repeat/SPECjvm2008.018/images/compress_results.jpg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/results/repeat/SPECjvm2008.018/images/compress_results.jpg",
+      "http_status": 200,
+      "bytes": 13664,
+      "sha256": "67cb53394edc1a8b04d3e429cf90efc7c3b0832fb07f23cabb5faf4580219877",
+      "matches_local": true
+    }
+  ],
+  "readme_relative_links": [
+    "A2/images/04-final-environment.png",
+    "A2/images/05-final-base-summary.png",
+    "A2/results/base/SPECjvm2008.015",
+    "A2/images/06-final-workloads.png",
+    "A2/images/07-official-result.png",
+    "A2/results/repeat",
+    "A2/images/08-final-repeat.png",
+    "A2/results/parameter",
+    "A2/images/09-final-parameter.png"
+  ],
+  "readme_Q1_Q7_complete": true,
+  "old_values_TODO_internal_terms_absent": true,
+  "passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PUBLISHED_FOR_FINAL_REVIEW",
+  "verified_candidate_sha": "45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a",
+  "starting_sha": "764cc9055782463cb8f15495cdebb2af55ac5229",
+  "at": "2026-10-01T19:09:21.714429+08:00",
+  "git_remote_matched_candidate": true,
+  "actual_http_file_count": 160,
+  "actual_browser_render_passed": true,
+  "browser_screenshots_opened": true,
+  "no_teacher_submission": true,
+  "independent_final_engineering_review": "PENDING",
+  "followup_scope": "Record verification receipts and their internal tools; no README/results/images/formal script changes. Final receipt-commit SHA is verified again after push and reported in the final response.",
+  "browser_capture_note": "GitHub uses a nested scrolling container; initial window scrolling did not reach the intended positions. Re-captured the actual article; no pixel editing.",
+  "screenshot_sha256": {
+    "readme-bottom.png": "9738cbd55b74a5914498c3688ad489b33fbe2a6c739c487f51b16091091b247c",
+    "readme-top.png": "154bce173f701d7f918379ff6b9725cb600d6db8d0a122e3bad727e4277b0c95"
+  },
+  "verification_tool_sha256": {
+    "verify-github-readme.cjs": "b721c9add0f8d4284ccf9ac5bc2f86c0b2c2821b46ae3d8a7c658eed46177546",
+    "verify-github-files.py": "e4f49487b8e7344b7e04d3a63c7216d8bd512e8a101eb634ef3641fbaaafdd97"
+  }
+}

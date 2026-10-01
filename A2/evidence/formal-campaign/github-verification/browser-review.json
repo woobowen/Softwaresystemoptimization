@@ -1,0 +1,65 @@
+{
+  "sha": "45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a",
+  "url": "https://github.com/woobowen/Softwaresystemoptimization/blob/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/README.md",
+  "status": 200,
+  "at": "2026-10-01T11:09:37.830Z",
+  "browser": "149.0.7827.55",
+  "playwright": "1.61.0",
+  "headings": [
+    "系统信息",
+    "1. SPECjvm2008 的用途与测试类别",
+    "2. 安装、环境配置与完整 Base",
+    "3. 总体结果与测试项分析",
+    "4. 与官方结果比较",
+    "5. 单项三次独立运行",
+    "6. 运行体会与问题处理",
+    "7. 修改一个 JVM 参数"
+  ],
+  "tables": 6,
+  "images": [
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/04-final-environment.png",
+      "alt": "JDK 与实验环境",
+      "complete": true,
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/05-final-base-summary.png",
+      "alt": "Base 原生结果汇总",
+      "complete": true,
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/06-final-workloads.png",
+      "alt": "Base 中的三个测试项",
+      "complete": true,
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/07-official-result.png",
+      "alt": "官方 Summary Report",
+      "complete": true,
+      "width": 1770,
+      "height": 615
+    },
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/08-final-repeat.png",
+      "alt": "compress 三次独立运行",
+      "complete": true,
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "src": "https://github.com/woobowen/Softwaresystemoptimization/raw/45b88b7e22853b6d1de2c1c9c187d46b0fc6ec4a/A2/images/09-final-parameter.png",
+      "alt": "默认配置与 Serial GC 比较",
+      "complete": true,
+      "width": 1440,
+      "height": 720
+    }
+  ],
+  "displayed_values_checked": true,
+  "passed": true
+}

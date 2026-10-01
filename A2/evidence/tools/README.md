@@ -42,6 +42,10 @@ Java 每秒输出 `currentTimeMillis nanoTime`；Python 收到一行后读取 `t
 
 [clock-monitor.py](clock-monitor.py)沿用 15 秒轻量监视器，增加 raw、boottime、boot ID 和样本序号；默认期待 `tsc`，支持显式指定历史 clocksource。SIGTERM 会追加末尾样本并写 summary。[collect-timing-diagnostics.py](collect-timing-diagnostics.py)保留受限 guest 日志和 host 事件元数据查询逻辑；已有输出不是 Windows event 全量导出。
 
+## GitHub 文件与页面检查
+
+[verify-github-files.py](verify-github-files.py)实际下载指定提交的 README、脚本、证据和全部原生结果资源，比对 SHA256 与链接；[verify-github-readme.cjs](verify-github-readme.cjs)使用本机已有缓存中的 Playwright/Chromium，检查 GitHub 原生渲染、七题、表格和六张图片。两者从仓库根运行，参数均为 `<commit-sha> <output-dir>`；浏览器工具保留本机已用的缓存路径，不安装依赖。
+
 ## 其他工具
 
 - [test-runner.py](test-runner.py)：临时假 Java 程序测试双日志、退出码、信号、互斥、防覆盖和启动失败，不运行 SPEC。可将新输出 JSON 路径作为第一个参数，避免覆盖历史测试。
