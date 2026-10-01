@@ -33,11 +33,17 @@ SPEC（Standard Performance Evaluation Corporation）制定标准化性能基准
 
 Base 各项采用统一的默认 JVM 配置，不允许手工调优 JVM 或更改默认运行时间；Peak 允许按测试项调优 JVM，并可延长运行时间。[User's Guide](https://www.spec.org/jvm2008/docs/UserGuide.html)、[Run and Reporting Rules](https://www.spec.org/jvm2008/docs/RunRules.html)
 
+这样的区分使 Base 便于比较默认配置下的表现，减少人为调参对公平比较的干扰；Peak 则更接近针对具体负载进行性能调优的场景。统一的工作负载和运行规则是成绩可比的基础，因此比较时应选择相同测试类别，并结合软硬件配置理解差异。
+
 ## 2. 安装、环境配置与完整 Base
 
-SPECjvm2008 1.01（20090519）从[官方网站](https://www.spec.org/jvm2008/)下载，使用 JDK 8 运行安装器的 `-i console` 模式，安装到 `~/.local/opt/specjvm2008/`。实验选用[官方 OpenJDK 7u75 RI](https://jdk.java.net/java-se-ri/7)，位于 `~/.local/opt/java-se-7u75-ri/`。Java 21 的功能检查出现模块访问错误，JDK 8 的 compiler 启动测试也遇到兼容问题；相关限制见 [FAQ Q4.8](https://www.spec.org/jvm2008/docs/FAQ.html#Q4.8)和 [Known Issues](https://www.spec.org/jvm2008/docs/KnownIssues.html)。
+SPECjvm2008 1.01（20090519）从[官方网站](https://www.spec.org/jvm2008/)下载，使用 JDK 8 运行安装器的 `-i console` 模式，安装到 `~/.local/opt/specjvm2008/`。
 
-`JAVA_HOME` 指向该 JDK，`PATH` 将其 `bin` 放在首位；`CLASSPATH`、`JAVA_TOOL_OPTIONS`、`_JAVA_OPTIONS` 和 `JDK_JAVA_OPTIONS` 均不设置。JDK 7 自带 FreeType 与系统 fontconfig 不兼容，运行时通过 `LD_PRELOAD` 使用系统库，使报告图像正常生成。
+原机器已有 Java 21，但 SPECjvm2008 使用的编译器等组件较旧，与较新 Java 版本存在兼容问题。Java 21 未能通过套件的功能检查，JDK 8 虽能完成安装，也不能顺利运行全部测试项。因此，实验最终选用[官方 OpenJDK 7u75 RI](https://jdk.java.net/java-se-ri/7)，位于 `~/.local/opt/java-se-7u75-ri/`，它能够完整运行这套 benchmark。选择这个 JDK 的依据是对整套 workload 的支持，不能仅以安装器能否启动来判断兼容性。相关限制见 [FAQ Q4.8](https://www.spec.org/jvm2008/docs/FAQ.html#Q4.8)和 [Known Issues](https://www.spec.org/jvm2008/docs/KnownIssues.html)。
+
+实验在 WSL2 的 Ubuntu 中运行，JDK 安装在用户目录，保留系统原有 Java。完整 Base、单项重复实验和 JVM 参数实验均使用同一个 JDK，避免比较成绩时混入 Java 版本变化的影响。
+
+`JAVA_HOME` 指向该 JDK，`PATH` 将其 `bin` 放在首位，使 `java` 命令使用实验所选的版本；`CLASSPATH`、`JAVA_TOOL_OPTIONS`、`_JAVA_OPTIONS` 和 `JDK_JAVA_OPTIONS` 均不设置，避免额外的类路径或启动选项影响测试。JDK 7 自带 FreeType 与系统 fontconfig 不兼容，因此通过 `LD_PRELOAD` 在进程启动时优先加载系统 FreeType 库，使报告图像正常生成。这一设置用于解决字体库兼容问题，Base 仍使用默认 JVM 参数。
 
 ![JDK 与实验环境](images/04-final-environment.png)
 
@@ -51,13 +57,13 @@ cd "$HOME/.local/opt/specjvm2008"
 java -jar SPECjvm2008.jar --base
 ```
 
-Base 使用默认 JVM 配置，properties 未修改。普通吞吐项目预热 120 秒、测量 240 秒。
+Base 使用默认 JVM 配置，properties 未修改。普通吞吐项目预热 120 秒、测量 240 秒。预热让常用代码有机会完成 JIT 编译，随后统计测量区间内的吞吐量，减少启动阶段对成绩的影响。
 
 ![Base 原生结果汇总](images/05-final-base-summary.png)
 
 Base 总体成绩为 **604.34 ops/m**，包含 38 个计分 workload。完整原生结果保存在 [results/base/SPECjvm2008.015/](results/base/SPECjvm2008.015/)，包含 raw、TXT、HTML、summary、sub 和报告图片。
 
-WSL2 前期出现过离散时间校正，因此这次测量使用 `tsc`，暂时停止 `systemd-timesyncd`，并以 Windows 主机计时对照 Linux 单调时钟。全部测量结束后已恢复服务。
+前期测试发现 WSL2 默认时间同步会产生离散时间校正，因此正式测量前进行了计时稳定性检查，并在稳定环境下完成 benchmark。
 
 ## 3. 总体结果与测试项分析
 
@@ -71,7 +77,15 @@ WSL2 前期出现过离散时间校正，因此这次测量使用 `tsc`，暂时
 | derby | 1148.35 |
 | crypto.aes | 397.00 |
 
-这三项中 derby 的 ops/m 最高，crypto.aes 最低。compress 主要进行 LZW 压缩、解压和数组访问；derby 结合数据库逻辑、锁与 BigDecimal 运算；crypto.aes 使用 JRE 的 AES、DES 实现，运算路径和每次操作的数据量不同。这些差异会影响每分钟完成的操作数，不能将不同 workload 的分数比直接解释为加速比。[compress](https://www.spec.org/jvm2008/docs/benchmarks/compress.html)、[derby](https://www.spec.org/jvm2008/docs/benchmarks/derby.html)、[crypto](https://www.spec.org/jvm2008/docs/benchmarks/crypto.html)
+这三项中 derby 的 ops/m 最高，crypto.aes 最低。
+
+compress 使用 LZW 对真实文件数据进行压缩和解压，通过匹配重复的字节串，用编码替代原数据。字符串匹配涉及字典查找，编码和解码还包含数组访问与位操作。从任务特点看，这些重复执行的循环有机会受益于 JIT 对热点代码的优化，可能有助于获得较高的吞吐量。[compress](https://www.spec.org/jvm2008/docs/benchmarks/compress.html)
+
+derby 将纯 Java 数据库与业务逻辑结合，既处理数据库操作和事务，也进行 BigDecimal 高精度计算。锁协调会影响并发处理，BigDecimal 则用于保持业务数值计算的精度，这些环节共同影响吞吐量。它的软件执行路径比单一计算循环更复杂，更接近实际应用。[derby](https://www.spec.org/jvm2008/docs/benchmarks/derby.html)
+
+crypto.aes 调用 JRE 中的 AES、DES 实现进行加密和解密，数据需要经过多轮变换。这项测试既考察加密库的实现，也受到 JVM 执行效率和底层计算能力的影响。每次操作的数据量和算法步骤与前两项不同，较低的 ops/m 也需要结合它实际完成的任务来理解。[crypto](https://www.spec.org/jvm2008/docs/benchmarks/crypto.html)
+
+这些工作负载的差异会影响每分钟完成的操作数，不能将不同 workload 的分数比直接解释为加速比。
 
 ## 4. 与官方结果比较
 
@@ -87,7 +101,7 @@ WSL2 前期出现过离散时间校正，因此这次测量使用 `tsc`，暂时
 | JDK/JVM | Red Hat OpenJDK 1.7.0_45，64-Bit Server VM 24.45-b08 | OpenJDK 1.7.0_75 RI，64-Bit Server VM 24.75-b04 |
 | Base 总体结果 | 853.15 ops/m | 604.34 ops/m |
 
-本机总体成绩低于这条官方记录。官方机器使用双路服务器处理器、更多逻辑处理器和更大内存，本机则在 WSL2 中运行；两者的操作系统和 JVM 版本也不同。这些软硬件差异会共同影响结果，不能把差距全部归因于某一项配置。
+本机总体成绩低于这条官方记录。官方机器使用双路服务器处理器、更多逻辑处理器和更大内存，本机则在 WSL2 中运行；两者的操作系统和 JVM 版本也不同。benchmark 成绩不仅受 CPU 数量影响，还反映 JVM 实现、内存、操作系统与虚拟化环境的共同作用，不能把差距全部归因于某一项配置。
 
 ## 5. 单项三次独立运行
 
@@ -111,13 +125,15 @@ java -jar SPECjvm2008.jar compress
 | 极差 | 48.34 |
 | 相对极差 | 7.10% |
 
-相对极差为“极差 / 均值 × 100%”。JIT 编译、垃圾回收、操作系统调度和缓存状态都可能造成运行间差异，WSL2 还与宿主共享资源，因此需要结合多次结果比较性能。
+相对极差为“极差 / 均值 × 100%”。JIT 编译状态、垃圾回收、操作系统调度、缓存状态和系统背景负载都可能造成运行间差异，WSL2 还与宿主共享资源。重复运行可以观察这种波动，减少单次偶然结果对性能判断的影响。
 
 ## 6. 运行体会与问题处理
 
-套件较旧，需要先检查 JDK 兼容性。JDK 8 的 startup.compiler.sunflow 因套件未读取子进程的大量 stderr 而阻塞，改用 Java 7 后启动测试正常；报告字体库冲突则通过预加载系统 FreeType 解决。字体故障时 Java 进程仍返回 0，因此还需要检查原生报告和图片。
+旧版基准套件与现代 Java 环境的兼容性是这次实验首先遇到的问题。改用能够完成全部测试项的 OpenJDK 7u75 RI，并预加载系统 FreeType 解决报告绘图问题后，才完成了整套测试。运行环境要按套件对完整工作负载的兼容性来选择。
 
-时钟问题也说明，计算结果正确不代表性能计时可靠。比较 JVM 参数时，既要看多次运行的均值，也要看波动范围，不能仅凭一次分数升高就判断优化有效。
+时间校正问题说明，性能测试还需要稳定的测量环境。先解决时间同步带来的离散校正，再检查计时稳定性，才能合理解释每分钟完成的操作数；程序计算正确与性能计时可靠是两个需要分别考虑的问题。
+
+三次重复实验中，即使机器和配置相同，成绩仍有波动。因此，比较 JVM 参数时要同时看均值和波动范围，小幅变化需要谨慎判断，不能仅凭一次分数升高就认定优化有效。
 
 ## 7. 修改一个 JVM 参数
 
