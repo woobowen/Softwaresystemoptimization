@@ -24,6 +24,7 @@ import uuid
 BLOCKS = (8, 16, 24, 64, 128)
 OPTS = ("O0", "O1", "O2", "O3")
 COMMON_FLAGS = ("-std=c11", "-Wall", "-Wextra")
+ALGORITHMS = ("grid", "random", "greedy", "stratified", "patience")
 
 
 def now():
@@ -137,6 +138,10 @@ class TargetProgram:
         self.cache_dir = Path(cache_dir or Path(__file__).resolve().parents[1] / ".cache" / "build").resolve()
         source_text = self.source.read_text()
         self.require_checksum = bool(re.search(r'printf\s*\(\s*"checksum=', source_text))
+        code = re.sub(r'//[^\n]*|/\*.*?\*/|"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'',
+                      " ", source_text, flags=re.S)
+        self.kernel_clock = "CLOCK_MONOTONIC" if re.search(
+            r"\bclock_gettime\s*\(\s*CLOCK_MONOTONIC\s*,", code) else "unknown"
         match = re.search(r"^\s*#\s*define\s+n\s+(\d+)\b", source_text, re.M)
         self.n = int(match[1]) if match else None
 
@@ -145,7 +150,7 @@ class TargetProgram:
         return dict(source=str(self.source), source_sha256=self.source_sha256, n=self.n,
                     compiler={k: v for k, v in self.compiler_info.items() if k != "probe"},
                     flags=list(self.flags), compile_timeout=self.compile_timeout,
-                    require_checksum=self.require_checksum)
+                    require_checksum=self.require_checksum, kernel_clock=self.kernel_clock)
 
     def build(self, opt, emit=None):
         if opt not in OPTS:
@@ -242,22 +247,43 @@ class TargetProgram:
                     raise ValueError("missing checksum output for this target")
             except ValueError as exc:
                 result.update(status="parse_error", error=str(exc), kernel_s=None)
+            if result["status"] == "ok" and self.kernel_clock == "CLOCK_MONOTONIC" and \
+                    result["kernel_s"] > result["process_wall_s"] + .005:
+                result.update(status="clock_error", error="kernel elapsed exceeds process wall time + 0.005 s")
         return result
 
 
 class SearchStrategy:
     """Propose configurations using only this search's observed feedback."""
-    def __init__(self, name, space, seed=0):
-        if name not in ("grid", "random", "greedy"):
+    def __init__(self, name, space, seed=0, min_trials=5, patience=3, min_relative_improvement=0.0):
+        if name not in ALGORITHMS:
             raise ValueError("unknown search algorithm")
+        if type(min_trials) is not int or min_trials < 1 or type(patience) is not int or patience < 1:
+            raise ValueError("min_trials and patience must be positive integers")
+        if not math.isfinite(min_relative_improvement) or not 0 <= min_relative_improvement < 1:
+            raise ValueError("min_relative_improvement must be finite and in [0, 1)")
         self.name, self.space, self.scores = name, space, {}
+        self.min_trials, self.patience = min_trials, patience
+        self.min_relative_improvement = min_relative_improvement
+        self.stale, self.best_score = 0, None
         self.order = list(space.configs)
         rng = random.Random(seed)
-        if name == "random":
+        if name in ("random", "patience"):
             rng.shuffle(self.order)
+        elif name == "stratified":
+            blocks = {opt: list(space.blocks) for opt in space.opts}
+            for values in blocks.values():
+                rng.shuffle(values)
+            self.order = []
+            for i in range(len(space.blocks)):
+                opts = list(space.opts)
+                rng.shuffle(opts)
+                self.order.extend(Config(blocks[opt][i], opt) for opt in opts)
         self.current = rng.choice(space.configs) if name == "greedy" else None
 
     def suggest(self):
+        if self.name == "patience" and len(self.scores) >= self.min_trials and self.stale >= self.patience:
+            return None
         if self.name != "greedy":
             return next((c for c in self.order if c not in self.scores), None)
         if self.current not in self.scores:
@@ -279,6 +305,12 @@ class SearchStrategy:
         if score is not None and (not math.isfinite(score) or score <= 0):
             raise ValueError("invalid feedback score")
         self.scores[config] = score
+        if self.name == "patience":
+            significant = score is not None and (self.best_score is None or
+                (self.best_score - score) / self.best_score > self.min_relative_improvement)
+            self.stale = 0 if significant else self.stale + 1
+            if score is not None and (self.best_score is None or score < self.best_score):
+                self.best_score = score
 
 
 class Journal:
@@ -457,7 +489,12 @@ def search(strategy, evaluator, budget, session_started=None):
         r["type"] == "session_end" for r in journal.records)
     compile_wall = sum(r["compile_wall_s"] for r in builds)
     tuning_wall = sum(r["wall_s"] for r in journal.records if r["type"] == "session_end")
+    stop_reason = "budget" if len(trials) >= budget else (
+        "patience" if strategy.name == "patience" and len(strategy.scores) >= strategy.min_trials and
+        strategy.stale >= strategy.patience else
+        "local_optimum" if strategy.name == "greedy" else "space_exhausted")
     return journal.append("summary", best=trials[-1]["best_so_far"] if trials else None,
+        stop_reason=stop_reason,
         proposals=len([r for r in journal.records if r["type"] == "trial_start"]),
         attempted_trials=len(trials), completed_configs=sum(r["status"] == "ok" for r in trials),
         distinct_configs=len({Config(**r["config"]).key for r in trials}),
@@ -489,7 +526,11 @@ def main(argv=None):
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--s", type=int)
     parser.add_argument("--opt", choices=OPTS)
-    parser.add_argument("--algorithm", choices=("grid", "random", "greedy"), default="grid")
+    parser.add_argument("--algorithm", choices=ALGORITHMS, default="grid")
+    parser.add_argument("--min-trials", type=int, default=5)
+    parser.add_argument("--patience", type=int, default=3)
+    parser.add_argument("--min-relative-improvement", type=float, default=0.0,
+                        help="relative reduction required to reset patience, e.g. 0.02 for 2%%")
     parser.add_argument("--budget", type=int, default=20)
     parser.add_argument("--repeats", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
@@ -504,6 +545,9 @@ def main(argv=None):
         space = ConfigSpace(tuple(int(s) for s in args.blocks.split(",")), args.opts.split(","))
         if args.budget < 0 or args.repeats < 1 or not math.isfinite(args.timeout) or args.timeout <= 0:
             raise ValueError("budget >= 0, repeats >= 1, and finite timeout > 0 required")
+        if args.min_trials < 1 or args.patience < 1 or not math.isfinite(args.min_relative_improvement) or \
+                not 0 <= args.min_relative_improvement < 1:
+            raise ValueError("min_trials >= 1, patience >= 1, finite min_relative_improvement in [0, 1) required")
         if args.resume and args.output is None:
             raise ValueError("--resume requires --output")
         if args.action == "list":
@@ -520,7 +564,10 @@ def main(argv=None):
             target=target.metadata(), blocks=list(space.blocks), opts=list(space.opts),
             action=args.action, algorithm=args.algorithm if args.action == "search" else "grid",
             seed=args.seed, budget=args.budget if args.action == "search" else 1,
+            min_trials=args.min_trials, patience=args.patience,
+            min_relative_improvement=args.min_relative_improvement,
             repeats=args.repeats, timeout=args.timeout,
+            runtime_affinity=sorted(os.sched_getaffinity(0)),
             protocol_sha256=digest(args.protocol.read_bytes()) if args.protocol else None,
             cache_dir=str(target.cache_dir))
         output = args.output or Path(__file__).resolve().parents[1] / "results" / (args.action + "-" + uuid.uuid4().hex + ".jsonl")
@@ -542,7 +589,8 @@ def main(argv=None):
                           compile_wall_recorded_s=cost)
             code = int(any(r["status"] != "ok" for r in result["builds"]))
         else:
-            strategy = SearchStrategy(metadata["algorithm"], space, args.seed)
+            strategy = SearchStrategy(metadata["algorithm"], space, args.seed,
+                                      args.min_trials, args.patience, args.min_relative_improvement)
             result = search(strategy, Evaluator(target, space, journal, args.repeats, args.timeout),
                             metadata["budget"], session_started)
             result = dict(result, output=str(output))

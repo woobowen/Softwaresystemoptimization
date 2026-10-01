@@ -1,12 +1,40 @@
 {
-  "stage": "reviewed-basic-v1-before-two-candidates",
+  "stage": "reviewed-common-baseline-before-formal-selection-v1",
   "files": {
-    "P1/src/autotuner.py": "e2e0baa908eb8d32771544b5102bca5ad8e358d2cc6aff9aafab6b4a7634fb27",
-    "P1/src/matrix_multiplication.c": "e321025e6097c9c8124c7e8624a6ae4132e2a54d426e135ae07d595a401be0b0",
+    "P1/src/autotuner.py": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+    "P1/src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
     "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
-    "P1/scripts/validate_target.py": "6030c68e05c67894bbe75f4932c8384728aaa087c33bbc9519e5042b8f4cd34a",
-    "P1/tests/test_autotuner.py": "c14e68b69dde7c60bedfec98fe0fe577f4ff8b47866674ce9cc8a5aad8231458"
+    "P1/scripts/validate_target.py": "189128c2c7e13db73c1dc516401c72a0eb053cacce74ae0db70ebd72dfc21a36",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/evidence/protocol_v1.json": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66"
   },
-  "conditions": "4096 double original timed kernel, std=c11 Wall Wextra O0..O3",
-  "review": "reviews/code_review.md"
+  "conditions": "n=4096; double; original six-loop kernel; CLOCK_MONOTONIC same timing boundaries; std=c11 Wall Wextra O0..O3; CPU0",
+  "baseline": {
+    "algorithm": "random",
+    "budget": 8,
+    "repeats": 1,
+    "confirmation_repeats": 3,
+    "seeds": [
+      104729,
+      130363,
+      155921
+    ]
+  },
+  "production_strategies": [
+    "grid",
+    "random",
+    "greedy"
+  ],
+  "isolated_candidate_entrypoints": {
+    "S1": "stratified",
+    "S2": "patience"
+  },
+  "previous_checkpoint": "d545d536129441a53d4b0659716176631ff20c3b",
+  "reviews": [
+    "reviews/code_review.md",
+    "reviews/experiment_report_review.md"
+  ]
 }

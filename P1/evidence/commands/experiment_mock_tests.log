@@ -1,0 +1,71 @@
+Command: python3 -B -m unittest discover -s P1/tests -p test_experiment.py -v
+Scope: TemporaryDirectory synthetic journals and mocked TargetProgram/Popen only; no compiler or n=4096 kernel was executed.
+
+First owner run: 10 tests, 5 errors, Ran 10 tests in 0.347s, exit 1.
+The five errors were ValueError: journal settings/fingerprint differ from the frozen task, in metadata, clone, partial resume, raw clock and warmup checks.
+Root cause: the explicit CLI timeout/compile-timeout options are parsed as float, while the expected canonical fingerprint used JSON integer values. Numeric metadata equality held, but canonical JSON hashing distinguished 60 from 60.0 and 1200 from 1200.0.
+One repair: construct expected timeout/compile_timeout/min_relative_improvement with the real CLI float types, retaining strict full metadata and fingerprint checks. The next 10-test run passed in 0.381s. Subsequent new-boundary suites passed 17, 18, 19 and 21 tests; no failed samples were presented as benchmark measurements.
+
+Final owner run, exit 0:
+
+test_actual_cli_metadata_and_completed_setting_tampering (test_experiment.ExperimentTests.test_actual_cli_metadata_and_completed_setting_tampering) ... ok
+test_clear_cost_rejection_survives_reference_uncertainty (test_experiment.ExperimentTests.test_clear_cost_rejection_survives_reference_uncertainty) ... ok
+test_clone_historical_analysis_and_strict_resume (test_experiment.ExperimentTests.test_clone_historical_analysis_and_strict_resume) ... ok
+test_complete_framework_summary_does_not_hide_torn_driver_cost (test_experiment.ExperimentTests.test_complete_framework_summary_does_not_hide_torn_driver_cost) ... ok
+test_complete_legal_driver_row_without_newline_preserved (test_experiment.ExperimentTests.test_complete_legal_driver_row_without_newline_preserved) ... ok
+test_complete_states_required_for_keep_and_raw_output_protected (test_experiment.ExperimentTests.test_complete_states_required_for_keep_and_raw_output_protected) ... ok
+test_conflict_cap_interleaving_and_original_reference_unchanged (test_experiment.ExperimentTests.test_conflict_cap_interleaving_and_original_reference_unchanged) ... ok
+test_end_to_end_driver_wall_sums_attempts_and_confirmation (test_experiment.ExperimentTests.test_end_to_end_driver_wall_sums_attempts_and_confirmation) ... ok
+test_frozen_driver_and_compiler_identity (test_experiment.ExperimentTests.test_frozen_driver_and_compiler_identity) ... ok
+test_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost (test_experiment.ExperimentTests.test_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost) ... ok
+test_hard_recovery_torn_tail_unknown_cost_and_no_zero (test_experiment.ExperimentTests.test_hard_recovery_torn_tail_unknown_cost_and_no_zero) ... ok
+test_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds (test_experiment.ExperimentTests.test_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds) ... ok
+test_negative_and_overflowed_acceptance_numbers_rejected (test_experiment.ExperimentTests.test_negative_and_overflowed_acceptance_numbers_rejected) ... ok
+test_partial_resume_reserves_remaining_processes (test_experiment.ExperimentTests.test_partial_resume_reserves_remaining_processes) ... ok
+test_plan_counts_seed_rotation_and_single_baseline (test_experiment.ExperimentTests.test_plan_counts_seed_rotation_and_single_baseline) ... ok
+test_popen_pid_log_failure_cleans_child_without_fake_completion (test_experiment.ExperimentTests.test_popen_pid_log_failure_cleans_child_without_fake_completion) ... ok
+test_raw_checksum_duplicate_repeat_and_summary_count_rejected (test_experiment.ExperimentTests.test_raw_checksum_duplicate_repeat_and_summary_count_rejected) ... ok
+test_raw_stdout_repeat_counts_and_clock_rejection (test_experiment.ExperimentTests.test_raw_stdout_repeat_counts_and_clock_rejection) ... ok
+test_robust_gain_count_and_risk_endpoints (test_experiment.ExperimentTests.test_robust_gain_count_and_risk_endpoints) ... ok
+test_same_configuration_conflict_only_three_diagnostic_runs (test_experiment.ExperimentTests.test_same_configuration_conflict_only_three_diagnostic_runs) ... ok
+test_summary_cli_and_relocated_clone_produce_identical_tables (test_experiment.ExperimentTests.test_summary_cli_and_relocated_clone_produce_identical_tables) ... ok
+test_warmup_kept_in_raw_and_excluded_from_three_reference_samples (test_experiment.ExperimentTests.test_warmup_kept_in_raw_and_excluded_from_three_reference_samples) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.467s
+
+OK
+
+ER08 independent review regression (isolated synthetic journals only)
+Command: python3 -B -m unittest discover -s P1/tests -p test_experiment.py -v
+Compiler invocations: 0; n=4096 target invocations: 0
+Change: reject rc!=0, spawned!=true scored samples; validate unique measurement_start/completion matching and reject unfinished starts hidden by complete summary; actual process count comes from starts.
+test_actual_cli_metadata_and_completed_setting_tampering (test_experiment.ExperimentTests.test_actual_cli_metadata_and_completed_setting_tampering) ... ok
+test_clear_cost_rejection_survives_reference_uncertainty (test_experiment.ExperimentTests.test_clear_cost_rejection_survives_reference_uncertainty) ... ok
+test_clone_historical_analysis_and_strict_resume (test_experiment.ExperimentTests.test_clone_historical_analysis_and_strict_resume) ... ok
+test_complete_framework_summary_does_not_hide_torn_driver_cost (test_experiment.ExperimentTests.test_complete_framework_summary_does_not_hide_torn_driver_cost) ... ok
+test_complete_legal_driver_row_without_newline_preserved (test_experiment.ExperimentTests.test_complete_legal_driver_row_without_newline_preserved) ... ok
+test_complete_states_required_for_keep_and_raw_output_protected (test_experiment.ExperimentTests.test_complete_states_required_for_keep_and_raw_output_protected) ... ok
+test_conflict_cap_interleaving_and_original_reference_unchanged (test_experiment.ExperimentTests.test_conflict_cap_interleaving_and_original_reference_unchanged) ... ok
+test_end_to_end_driver_wall_sums_attempts_and_confirmation (test_experiment.ExperimentTests.test_end_to_end_driver_wall_sums_attempts_and_confirmation) ... ok
+test_exit_spawn_and_process_start_completion_rejected (test_experiment.ExperimentTests.test_exit_spawn_and_process_start_completion_rejected) ... ok
+test_frozen_driver_and_compiler_identity (test_experiment.ExperimentTests.test_frozen_driver_and_compiler_identity) ... ok
+test_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost (test_experiment.ExperimentTests.test_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost) ... ok
+test_hard_recovery_torn_tail_unknown_cost_and_no_zero (test_experiment.ExperimentTests.test_hard_recovery_torn_tail_unknown_cost_and_no_zero) ... ok
+test_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds (test_experiment.ExperimentTests.test_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds) ... ok
+test_negative_and_overflowed_acceptance_numbers_rejected (test_experiment.ExperimentTests.test_negative_and_overflowed_acceptance_numbers_rejected) ... ok
+test_partial_resume_reserves_remaining_processes (test_experiment.ExperimentTests.test_partial_resume_reserves_remaining_processes) ... ok
+test_plan_counts_seed_rotation_and_single_baseline (test_experiment.ExperimentTests.test_plan_counts_seed_rotation_and_single_baseline) ... ok
+test_popen_pid_log_failure_cleans_child_without_fake_completion (test_experiment.ExperimentTests.test_popen_pid_log_failure_cleans_child_without_fake_completion) ... ok
+test_raw_checksum_duplicate_repeat_and_summary_count_rejected (test_experiment.ExperimentTests.test_raw_checksum_duplicate_repeat_and_summary_count_rejected) ... ok
+test_raw_stdout_repeat_counts_and_clock_rejection (test_experiment.ExperimentTests.test_raw_stdout_repeat_counts_and_clock_rejection) ... ok
+test_robust_gain_count_and_risk_endpoints (test_experiment.ExperimentTests.test_robust_gain_count_and_risk_endpoints) ... ok
+test_same_configuration_conflict_only_three_diagnostic_runs (test_experiment.ExperimentTests.test_same_configuration_conflict_only_three_diagnostic_runs) ... ok
+test_summary_cli_and_relocated_clone_produce_identical_tables (test_experiment.ExperimentTests.test_summary_cli_and_relocated_clone_produce_identical_tables) ... ok
+test_warmup_kept_in_raw_and_excluded_from_three_reference_samples (test_experiment.ExperimentTests.test_warmup_kept_in_raw_and_excluded_from_three_reference_samples) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.478s
+
+OK
+exit_code: 0

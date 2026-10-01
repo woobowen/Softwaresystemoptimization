@@ -67,6 +67,54 @@ class LogicTests(unittest.TestCase):
         self.assertEqual(set(a), set(space.configs))
         self.assertEqual(len(set(a)), 20)
 
+    def test_stratified_complete_blind_balanced_prefix_and_seed(self):
+        space = at.ConfigSpace()
+        for seed in (0, 17, 43):
+            first = self.visit(at.SearchStrategy("stratified", space, seed), 20, lambda c, i: 1)
+            second = self.visit(at.SearchStrategy("stratified", space, seed), 20, lambda c, i: None)
+            self.assertEqual(first, second)
+            self.assertEqual(set(first), set(space.configs))
+            self.assertEqual(len(set(first)), 20)
+            for size in range(1, 21):
+                counts = [sum(c.opt == opt for c in first[:size]) for opt in space.opts]
+                self.assertLessEqual(max(counts) - min(counts), 1)
+            for start in range(0, 20, 4):
+                self.assertEqual({c.opt for c in first[start:start + 4]}, set(space.opts))
+        self.assertNotEqual(at.SearchStrategy("stratified", space, 0).order,
+                            at.SearchStrategy("stratified", space, 17).order)
+
+    def test_patience_plateau_min_trials_and_small_budgets(self):
+        space = at.ConfigSpace()
+        for budget in (0, 1, 4, 20):
+            candidate = at.SearchStrategy("patience", space, 17)
+            visited = self.visit(candidate, budget, lambda c, i: 1)
+            self.assertEqual(len(visited), min(budget, 5))
+            baseline = self.visit(at.SearchStrategy("random", space, 17), len(visited), lambda c, i: 1)
+            self.assertEqual(visited, baseline)
+        self.assertEqual(len(self.visit(at.SearchStrategy("patience", space, 17), 20,
+                                       lambda c, i: None)), 5)
+        progressing = at.SearchStrategy("patience", space, 17, min_relative_improvement=.1)
+        self.assertEqual(len(self.visit(progressing, 20, lambda c, i: 100 * .5 ** i)), 20)
+
+    def test_patience_threshold_equality_small_improvement_and_failures(self):
+        strategy = at.SearchStrategy("patience", at.ConfigSpace(), 9,
+                                     min_trials=5, patience=3, min_relative_improvement=.1)
+        for score, stale, best in ((100, 0, 100), (90, 1, 90), (89, 2, 89),
+                                   (None, 3, 89), (89, 4, 89)):
+            strategy.observe(strategy.suggest(), score)
+            self.assertEqual(strategy.stale, stale)
+            self.assertEqual(strategy.best_score, best)
+        self.assertIsNone(strategy.suggest())
+        reset = at.SearchStrategy("patience", at.ConfigSpace(), 9, min_relative_improvement=.1)
+        for score in (100, 100, 89):
+            reset.observe(reset.suggest(), score)
+        self.assertEqual(reset.stale, 0)
+        for options in ({"min_trials": 0}, {"min_trials": True}, {"patience": -1},
+                        {"min_relative_improvement": -1}, {"min_relative_improvement": 1},
+                        {"min_relative_improvement": float("nan")}):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                at.SearchStrategy("patience", at.ConfigSpace(), **options)
+
     def test_greedy_seeded_start_ties_and_no_improvement(self):
         space = at.ConfigSpace()
         for seed in (0, 9, 43):
@@ -120,7 +168,11 @@ class LogicTests(unittest.TestCase):
         for args in (["list", "--budget", "-1"], ["list", "--repeats", "0"],
                      ["list", "--timeout", "nan"], ["list", "--blocks", "8,8"],
                      ["list", "--opts", "O4"], ["run", "--s", "32", "--opt", "O0"],
-                     ["run", "--s", "8"], ["search", "--resume"]):
+                     ["run", "--s", "8"], ["search", "--resume"],
+                     ["list", "--min-trials", "0"], ["list", "--patience", "0"],
+                     ["list", "--min-relative-improvement", "nan"],
+                     ["list", "--min-relative-improvement", "-0.01"],
+                     ["list", "--algorithm", "stratified+patience"]):
             with self.subTest(args=args), contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
                 at.main(args)
             self.assertEqual(error.exception.code, 2)
@@ -168,6 +220,99 @@ class ProcessTests(unittest.TestCase):
         trials = [r for r in evaluator.journal.records if r["type"] == "trial"]
         self.assertTrue(all(r["trial_wall_s"] > 0 and r["started_at"] and r["ended_at"] for r in trials))
         self.assertEqual(sorted(r["tuning_elapsed_s"] for r in trials), [r["tuning_elapsed_s"] for r in trials])
+
+    def test_candidate_real_fixture_budget_seed_and_random_prefix(self):
+        for name in ("stratified", "patience"):
+            for budget in (0, 1, 20):
+                evaluator = self.evaluator(name + str(budget))
+                strategy = at.SearchStrategy(name, evaluator.space, 17, patience=30)
+                result = at.search(strategy, evaluator, budget)
+                self.assertEqual(result["process_runs"], budget)
+                self.assertEqual(result["distinct_configs"], budget)
+                actual = [at.Config(**r["config"]) for r in evaluator.journal.records if r["type"] == "trial"]
+                expected_name = "random" if name == "patience" else name
+                expected = LogicTests.visit(at.SearchStrategy(expected_name, evaluator.space, 17), budget,
+                                           lambda c, i: 1)
+                self.assertEqual(actual, expected)
+        baseline = self.evaluator("random-pair")
+        random_result = at.search(at.SearchStrategy("random", baseline.space, 43), baseline, 8)
+        candidate = self.evaluator("patience-pair")
+        candidate_result = at.search(at.SearchStrategy("patience", candidate.space, 43), candidate, 8)
+        random_trials = [r for r in baseline.journal.records if r["type"] == "trial"]
+        candidate_trials = [r for r in candidate.journal.records if r["type"] == "trial"]
+        self.assertLessEqual(candidate_result["process_runs"], random_result["process_runs"])
+        for reference, current in zip(random_trials, candidate_trials):
+            self.assertEqual(current["config"], reference["config"])
+            self.assertEqual(current["score"], reference["score"])
+
+    def test_candidate_resume_reconstructs_order_and_patience(self):
+        for name in ("stratified", "patience"):
+            evaluator = self.evaluator(name + "-resume", repeats=2)
+            original = self.target.measure
+            calls = 0
+            def interrupt(*args, **kwargs):
+                nonlocal calls
+                calls += 1
+                if calls == 12:
+                    raise KeyboardInterrupt
+                return original(*args, **kwargs)
+            with mock.patch.object(self.target, "measure", interrupt), self.assertRaises(KeyboardInterrupt):
+                at.search(at.SearchStrategy(name, evaluator.space, 43, min_relative_improvement=.1), evaluator, 8)
+            evaluator.journal.close()
+            resumed = self.evaluator(name + "-resume", repeats=2, resume=True)
+            strategy = at.SearchStrategy(name, resumed.space, 43, min_relative_improvement=.1)
+            result = at.search(strategy, resumed, 8)
+            expected_strategy = at.SearchStrategy(name, resumed.space, 43, min_relative_improvement=.1)
+            expected = LogicTests.visit(expected_strategy, 8, lambda c, i: c.s / 100)
+            actual = [at.Config(**r["config"]) for r in resumed.journal.records if r["type"] == "trial"]
+            self.assertEqual(actual, expected)
+            self.assertEqual(result["process_runs"], 2 * len(expected))
+            self.assertEqual(strategy.stale, expected_strategy.stale)
+            self.assertEqual(strategy.best_score, expected_strategy.best_score)
+            self.assertEqual(at.search(at.SearchStrategy(name, resumed.space, 43), resumed, 8), result)
+
+    def monotonic_source(self):
+        self.source.write_text('#define _POSIX_C_SOURCE 200809L\n#include <stdio.h>\n#include <time.h>\n'
+            'int main(void) { struct timespec start, end, delay = {0, 20000000};\n'
+            'clock_gettime(CLOCK_MONOTONIC, &start); nanosleep(&delay, 0);\n'
+            'clock_gettime(CLOCK_MONOTONIC, &end);\n'
+            'printf("%.9f\\n", (end.tv_sec-start.tv_sec) + 1e-9*(end.tv_nsec-start.tv_nsec));\n'
+            'printf("checksum=1\\n"); return 0; }\n')
+        self.target = at.TargetProgram(self.source, cache_dir=self.target.cache_dir)
+
+    def test_monotonic_mini_target_and_clock_detection(self):
+        self.source.write_text(self.source.read_text() + '\n/* clock_gettime(CLOCK_MONOTONIC, &fake); */\n'
+            'const char *clock_text = "clock_gettime(CLOCK_MONOTONIC, &fake)";\n'
+            '// clock_gettime(CLOCK_MONOTONIC, &fake);\n')
+        self.target = at.TargetProgram(self.source, cache_dir=self.target.cache_dir)
+        self.assertEqual(self.target.metadata()["kernel_clock"], "unknown")
+        evaluator = self.evaluator("unknown-clock")
+        result = at.search(at.SearchStrategy("grid", evaluator.space), evaluator, 1)
+        self.assertIsNotNone(result["best"])
+        self.monotonic_source()
+        self.assertEqual(self.target.metadata()["kernel_clock"], "CLOCK_MONOTONIC")
+        evaluator = self.evaluator("monotonic-clock")
+        result = at.search(at.SearchStrategy("grid", evaluator.space), evaluator, 1)
+        self.assertEqual(result["failed_trials"], 0)
+        measurement = next(r for r in evaluator.journal.records if r["type"] == "measurement")
+        self.assertGreater(measurement["kernel_s"], 0)
+        self.assertLessEqual(measurement["kernel_s"], measurement["process_wall_s"] + .005)
+
+    def test_monotonic_clock_overrun_is_preserved_and_excluded(self):
+        self.monotonic_source()
+        self.target.build("O0")
+        evaluator = self.evaluator("clock-error")
+        fake = dict(command=["test-only mock"], started_at=at.now(), ended_at=at.now(), spawned=True,
+                    stdout="1.0\nchecksum=1\n", stderr="", returncode=0, status="ok", error=None,
+                    process_wall_s=.01)
+        with mock.patch.object(at, "process", return_value=fake):
+            result = at.search(at.SearchStrategy("grid", evaluator.space), evaluator, 1)
+        self.assertIsNone(result["best"])
+        self.assertEqual(result["failed_trials"], 1)
+        measurement = next(r for r in evaluator.journal.records if r["type"] == "measurement")
+        self.assertEqual(measurement["status"], "clock_error")
+        self.assertEqual(measurement["kernel_s"], 1)
+        self.assertEqual(measurement["stdout"], "1.0\nchecksum=1\n")
 
     def test_build_cache_identity_and_binary_corruption(self):
         first = self.target.build("O2")
@@ -409,6 +554,26 @@ class ProcessTests(unittest.TestCase):
                 result = at.main(["build", "--target", str(self.source), "--output", str(path)])
         self.assertEqual(result, 130)
         self.assertEqual(build.call_count, 1)
+
+    def test_cli_candidate_options_and_runtime_affinity_are_fingerprinted(self):
+        path = self.directory / "patience-cli.jsonl"
+        args = ["search", "--target", str(self.source), "--cache-dir", str(self.target.cache_dir),
+                "--output", str(path), "--algorithm", "patience", "--budget", "1", "--seed", "43",
+                "--min-trials", "5", "--patience", "3", "--min-relative-improvement", "0.02"]
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(at.main(args), 0)
+        metadata = json.loads(path.read_text().splitlines()[0])["metadata"]
+        self.assertEqual(metadata["min_trials"], 5)
+        self.assertEqual(metadata["patience"], 3)
+        self.assertEqual(metadata["min_relative_improvement"], .02)
+        self.assertEqual(metadata["runtime_affinity"], sorted(os.sched_getaffinity(0)))
+        for changes in (["--min-trials", "6"], ["--patience", "4"],
+                        ["--min-relative-improvement", "0.03"], ["--seed", "44"]):
+            with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                at.main([*args, "--resume", *changes])
+        with mock.patch.object(os, "sched_getaffinity", return_value={999}):
+            with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                at.main([*args, "--resume"])
 
 
 if __name__ == "__main__":

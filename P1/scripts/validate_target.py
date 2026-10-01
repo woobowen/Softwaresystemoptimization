@@ -11,7 +11,11 @@ SOURCE = ROOT / "src/matrix_multiplication.c"
 
 
 def kernel(text):
-    return text[text.index("    for(int ih"):text.index("    gettimeofday(&end")]
+    start = text.index("    for(int ih")
+    endings = ("    gettimeofday(&end", "    if (clock_gettime(CLOCK_MONOTONIC, &end)")
+    found = [text.index(marker, start) for marker in endings if marker in text[start:]]
+    assert len(found) == 1, "Unexpected timer boundary"
+    return "\n".join(line.rstrip() for line in text[start:found[0]].splitlines())
 
 
 REFERENCE = r'''
@@ -73,10 +77,11 @@ def validation_source(size):
     assert kernel(measured) == kernel(original), "Measured kernel changed"
     replacements = [
         ("#define n 4096", f"#define n {size}"),
+        ("    return 0;", "    return verify();"),
         ("int main(int argc, const char *argv[]){", REFERENCE + "\nint main(int argc, const char *argv[]){"),
         ("    if (argc != 2) {", "    if (argc != 4) {"),
         ("    int s = (int)block;", "    int s = (int)block;\n    srand((unsigned)strtoul(argv[2], NULL, 10));\n    int mode = atoi(argv[3]);"),
-        ("            A[i][j] = (double)rand() / (double)RAND_MAX; \n            B[i][j] = (double)rand() / (double)RAND_MAX; ",
+        ("            A[i][j] = (double)rand() / (double)RAND_MAX;\n            B[i][j] = (double)rand() / (double)RAND_MAX;",
          """            if (mode == 2) {
                 A[i][j] = (i == j) ? 1.0 : 0.0;
                 B[i][j] = (double)(i - j) / n;
@@ -88,7 +93,6 @@ def validation_source(size):
                     B[i][j] = 2.0 * B[i][j] - 1.0;
                 }
             }"""),
-        ("    return 0; ", "    return verify(); "),
     ]
     for old, new in replacements:
         assert measured.count(old) == 1, f"Unexpected source marker: {old!r}"

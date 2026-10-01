@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "state": "approved",
+  "approval": {
+    "evidence": "evidence/reviews/experiment_report_review.md",
+    "frozen_at_utc": "2026-10-01T21:03:34.498833+00:00",
+    "code_evidence": "evidence/reviews/code_review.md"
+  },
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build",
+    "warmup": {
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "acceptance_cost": "full_driver_search_plus_return_wall",
+    "curve_clock": "internal_tuning_window_monotonic",
+    "clock_health": {
+      "status": "resolved",
+      "timer": "CLOCK_MONOTONIC",
+      "kernel_over_process_tolerance_s": 0.005
+    }
+  },
+  "reference": {
+    "rounds": 3,
+    "order_seed": 314159,
+    "noise_relative_range": 0.18,
+    "noise_additional_runs": 0,
+    "conflict": {
+      "relative_difference": 0.12,
+      "max_selection_events": 2,
+      "max_holdout_events": 1,
+      "repeats_per_config": 3,
+      "order_seed": 424243,
+      "replace_original_reference": false,
+      "affected_decision": "INCONCLUSIVE"
+    }
+  },
+  "online": {
+    "budget": 8,
+    "repeats": 1,
+    "algorithms": [
+      "grid",
+      "random",
+      "greedy",
+      "stratified",
+      "patience"
+    ],
+    "seeds": [
+      104729,
+      130363,
+      155921
+    ]
+  },
+  "return_confirmation": {
+    "repeats": 3
+  },
+  "holdout": {
+    "seeds": [
+      196613,
+      229939,
+      262147
+    ]
+  },
+  "strategy_options": {
+    "patience": {
+      "min_trials": 5,
+      "patience": 3,
+      "min_relative_improvement": 0.06
+    }
+  },
+  "acceptance": {
+    "epsilon_pct": 5,
+    "quality_gain_pp": 12,
+    "quality_gain_s": 5.6,
+    "quality_loss_pp": 2,
+    "wall_increase_fraction": 0.1,
+    "wall_saving_s": 40,
+    "improving_seed_count": 2,
+    "saving_seed_count": 2,
+    "minimum_saved_processes": 1
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true
+  },
+  "resources": {
+    "max_process_runs": 360,
+    "max_wall_s": 57600,
+    "failure_process_reserve": 15,
+    "conflict_process_reserve": 18,
+    "formal_batches": [
+      "results/reference_v1",
+      "results/selection_v1",
+      "results/holdout_v1",
+      "results/conflict_selection_v1",
+      "results/conflict_holdout_v1"
+    ],
+    "additional_selection_batches": 0
+  },
+  "pretest_basis": {
+    "batch": "results/pretest_monotonic",
+    "noise_batch": "results/pretest_noise",
+    "completed": true,
+    "excluded_warmup": true,
+    "fast_samples": [
+      42.548756,
+      46.046341,
+      49.066238,
+      41.610653,
+      47.216225,
+      49.724476
+    ],
+    "slow_samples": [
+      304.606781,
+      310.77005,
+      312.302917
+    ],
+    "fast_median_s": 46.631282999999996,
+    "fast_mad_s": 2.7640740000000044
+  }
+}

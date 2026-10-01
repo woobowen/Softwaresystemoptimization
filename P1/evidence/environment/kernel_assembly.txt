@@ -350,3 +350,189 @@ Matrix storage declarations:
  347 	.size	A, 134217728
 
 Conclusion: inspect the actual multiply/add/store instructions and loop backedges between the timing calls; checksum code is after the second call. This is an assembly audit, not timing data.
+
+Monotonic target re-audit after clock anomaly
+source_sha256=cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835
+assembly_sha256=e42c01d527e09fccd7e4729ae98ff16046050fb54b5aa3e58acddb8070142548
+command=['gcc', '-std=c11', '-Wall', '-Wextra', '-O3', '-S', '/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c', '-o', '/tmp/p1-monotonic-review-bh_0ml77/monotonic.s']
+exit=0 stderr=empty
+clock_gettime calls at assembly lines 149,276; requested CLOCK_MONOTONIC argument is 1
+ 143 	cmpq	%rax, %rbx
+ 144 	jne	.L9
+ 145 	leaq	112(%rsp), %rsi
+ 146 	movl	$1, %edi
+ 147 	movq	%r15, (%rsp)
+ 148 	movq	8(%rsp), %rbp
+ 149 	call	clock_gettime@PLT
+ 150 	movq	(%rsp), %r8
+ 151 	testl	%eax, %eax
+ 152 	jne	.L5
+ 153 	leaq	0(,%r8,8), %rax
+ 154 	movq	%r8, %r9
+ 155 	movl	%r8d, %esi
+ 156 	xorl	%edx, %edx
+ 157 	movq	%rax, 24(%rsp)
+ 158 	salq	$15, %r9
+ 159 	leaq	C(%rip), %r11
+ 160 	movl	$4096, %r15d
+ 161 	movq	%r14, 48(%rsp)
+ 162 	movl	%r8d, %r14d
+ 163 .L13:
+ 164 	xorl	%ecx, %ecx
+ 165 	movl	%edx, 60(%rsp)
+ 166 	movq	%r8, %rax
+ 167 	xorl	%r12d, %r12d
+ 168 	movq	%rcx, 16(%rsp)
+ 169 	movl	$4096, %edi
+ 170 	movq	%rbp, %r8
+ 171 .L26:
+ 172 	movq	16(%rsp), %rbx
+ 173 	movl	%r12d, 88(%rsp)
+ 174 	movq	%r8, %r13
+ 175 	xorl	%r10d, %r10d
+ 176 	movl	$0, 56(%rsp)
+ 177 	movl	$4096, %ebp
+ 178 	leaq	0(,%rbx,8), %rdx
+ 179 	leaq	(%rdx,%r11), %rbx
+ 180 	movq	%rbx, 40(%rsp)
+ 181 	leaq	B(%rip), %rbx
+ 182 	addq	%rdx, %rbx
+ 183 	movq	%rbx, 32(%rsp)
+ 184 .L24:
+ 185 	movq	32(%rsp), %rbx
+ 186 	movq	%r10, %r12
+ 187 	movq	%rax, 64(%rsp)
+ 188 	movq	%r13, %rcx
+ 189 	salq	$15, %r12
+ 190 	movq	%r13, 72(%rsp)
+ 191 	xorl	%edx, %edx
+ 192 	movq	%r10, 80(%rsp)
+ 193 	addq	%rbx, %r12
+ 194 	movq	40(%rsp), %rbx
+ 195 	movl	%r14d, 92(%rsp)
+ 196 	.p2align 4,,10
+ 197 	.p2align 3
+ 198 .L22:
+ 199 	movl	%edx, (%rsp)
+ 200 	movq	%r12, %r14
+ 201 	movq	%rcx, %r13
+ 202 	xorl	%r10d, %r10d
+ 203 	movq	%rcx, 8(%rsp)
+ 204 	.p2align 4,,10
+ 205 	.p2align 3
+ 206 .L20:
+ 207 	movsd	0(%r13), %xmm1
+ 208 	movq	%r14, %rcx
+ 209 	movq	%rbx, %rdx
+ 210 	xorl	%eax, %eax
+ 211 	jmp	.L17
+ 212 	.p2align 4,,10
+ 213 	.p2align 3
+ 214 .L14:
+ 215 	addq	$8, %rdx
+ 216 	addq	$8, %rcx
+ 217 	cmpl	%edi, %eax
+ 218 	je	.L18
+ 219 .L17:
+ 220 	movsd	(%rcx), %xmm0
+ 221 	addl	$1, %eax
+ 222 	mulsd	%xmm1, %xmm0
+ 223 	addsd	(%rdx), %xmm0
+ 224 	movsd	%xmm0, (%rdx)
+ 225 	cmpl	%eax, %esi
+ 226 	jg	.L14
+ 227 .L18:
+ 228 	addl	$1, %r10d
+ 229 	cmpl	%r10d, %esi
+ 230 	jle	.L35
+ 231 	addq	$8, %r13
+ 232 	addq	$32768, %r14
+ 233 	cmpl	%ebp, %r10d
+ 234 	jne	.L20
+ 235 .L35:
+ 236 	movl	(%rsp), %edx
+ 237 	movq	8(%rsp), %rcx
+ 238 	addl	$1, %edx
+ 239 	cmpl	%edx, %esi
+ 240 	jle	.L19
+ 241 	addq	$32768, %rbx
+ 242 	addq	$32768, %rcx
+ 243 	cmpl	%r15d, %edx
+ 244 	jne	.L22
+ 245 .L19:
+ 246 	addl	%esi, 56(%rsp)
+ 247 	movq	64(%rsp), %rax
+ 248 	movq	72(%rsp), %r13
+ 249 	movq	80(%rsp), %r10
+ 250 	movl	92(%rsp), %r14d
+ 251 	movq	24(%rsp), %rcx
+ 252 	movl	56(%rsp), %ebx
+ 253 	addq	%rax, %r10
+ 254 	subl	%r14d, %ebp
+ 255 	addq	%rcx, %r13
+ 256 	cmpl	$4095, %ebx
+ 257 	jle	.L24
+ 258 	movl	88(%rsp), %r12d
+ 259 	addq	%rax, 16(%rsp)
+ 260 	subl	%r14d, %edi
+ 261 	addl	%esi, %r12d
+ 262 	cmpl	$4095, %r12d
+ 263 	jle	.L26
+ 264 	movl	60(%rsp), %edx
+ 265 	movq	%r8, %rbp
+ 266 	subl	%r14d, %r15d
+ 267 	movq	%rax, %r8
+ 268 	addq	%r9, %rbp
+ 269 	addq	%r9, %r11
+ 270 	addl	%esi, %edx
+ 271 	cmpl	$4095, %edx
+ 272 	jle	.L13
+ 273 	leaq	128(%rsp), %rsi
+ 274 	movl	$1, %edi
+ 275 	movq	48(%rsp), %r14
+ 276 	call	clock_gettime@PLT
+ 277 	movl	%eax, %ebx
+ 278 	testl	%eax, %eax
+ 279 	jne	.L5
+ 280 	movq	136(%rsp), %rax
+ 281 	pxor	%xmm0, %xmm0
+ 282 	subq	120(%rsp), %rax
+ 283 	pxor	%xmm1, %xmm1
+ 284 	cvtsi2sdq	%rax, %xmm0
+ 285 	movq	128(%rsp), %rax
+ 286 	subq	112(%rsp), %rax
+ 287 	leaq	.LC5(%rip), %rsi
+ 288 	mulsd	.LC0(%rip), %xmm0
+ 289 	cvtsi2sdq	%rax, %xmm1
+ 290 	movl	$2, %edi
+ 291 	movl	$1, %eax
+ 292 	addsd	%xmm1, %xmm0
+ 293 	cvtsd2ss	%xmm0, %xmm0
+ 294 	cvtss2sd	%xmm0, %xmm0
+ 295 	call	__printf_chk@PLT
+ 296 	leaq	32768+C(%rip), %rdx
+ 297 	leaq	134250496(%r14), %rcx
+ 298 	pxor	%xmm0, %xmm0
+ 299 .L28:
+ 300 	movq	%r14, %rax
+ 301 .L29:
+ 302 	addsd	(%rax), %xmm0
+ 303 	addq	$16, %rax
+ 304 	addsd	-8(%rax), %xmm0
+ 305 	cmpq	%rax, %rdx
+ 306 	jne	.L29
+ 307 	addq	$32768, %rdx
+ 308 	addq	$32768, %r14
+ 309 	cmpq	%rdx, %rcx
+ 310 	jne	.L28
+ 311 	leaq	.LC6(%rip), %rsi
+ 312 	movl	$2, %edi
+ 313 	movl	$1, %eax
+ 314 	call	__printf_chk@PLT
+ 315 	jmp	.L3
+ 316 .L6:
+ 317 	leaq	.LC3(%rip), %rsi
+ 318 	movl	$2, %edi
+ 319 	xorl	%eax, %eax
+ 320 	orl	$-1, %ebx
+Observed: multiply/add/store and loop backedges remain between timers; checksum traversal occurs after the second clock_gettime; error returns are outside the kernel. No timed n4096 execution was started.
