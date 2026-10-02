@@ -1,0 +1,13 @@
+{
+  "ledger_source": "evidence/measurement/resource_ledger.jsonl",
+  "snapshot_path": "evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl",
+  "snapshot_bytes": 255807,
+  "snapshot_rows": 407,
+  "snapshot_sha256": "31a5a58c68db0d8c7dbebd6f89aea5e2c762014605f47dee7e2c164ab869b6cf",
+  "actual_n4096_calls": 47,
+  "actual_resource_s": 3613.087682189,
+  "source_checkpoint": "2dc75c9cc838bd1cbbcf5dfafa89733dd3532775",
+  "score_clock": "CLOCK_MONOTONIC_RAW",
+  "reason": "first RAW AA complete target/driver ratio to previous exceeds2%; seven jobs not started",
+  "raw_formal_admission": false
+}

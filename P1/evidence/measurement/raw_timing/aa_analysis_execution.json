@@ -1,0 +1,46 @@
+{
+  "input_sha256": {
+    "results/raw_aa_v3/plan.json": "4c514b38eecfabd15011dfab5ff970ba949e5b927fdabee3421981d8a39de063",
+    "results/raw_aa_v3/raw-aa-01-F-A1.jsonl": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+    "results/raw_aa_v3/raw-aa-01-F-A1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/raw_aa_v3/raw-aa-01-F-A1.stdout.txt": "7ae0cd39a4ceb27ec31d5cc7215e8d1e84d6ac6931d9cb4fc491d01202bc0f79",
+    "evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl": "31a5a58c68db0d8c7dbebd6f89aea5e2c762014605f47dee7e2c164ab869b6cf",
+    "evidence/protocol_raw_aa.json": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca",
+    "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3"
+  },
+  "input_sha256_after": {
+    "results/raw_aa_v3/plan.json": "4c514b38eecfabd15011dfab5ff970ba949e5b927fdabee3421981d8a39de063",
+    "results/raw_aa_v3/raw-aa-01-F-A1.jsonl": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+    "results/raw_aa_v3/raw-aa-01-F-A1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/raw_aa_v3/raw-aa-01-F-A1.stdout.txt": "7ae0cd39a4ceb27ec31d5cc7215e8d1e84d6ac6931d9cb4fc491d01202bc0f79",
+    "evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl": "31a5a58c68db0d8c7dbebd6f89aea5e2c762014605f47dee7e2c164ab869b6cf",
+    "evidence/protocol_raw_aa.json": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca",
+    "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3"
+  },
+  "raw_and_source_unchanged": true,
+  "derived_sha256": {
+    "results/raw_aa_summary_v3/batch_costs.csv": "161cbc9e49f7cf327ec6057c3e2eda0ebc2138fb86ab97190dfb661538a7f13d",
+    "results/raw_aa_summary_v3/build_costs.csv": "c2b0b8374b1fa4559368d141f0d3a8d13dc28f36d2455cbfd32800b8f8ed8998",
+    "results/raw_aa_summary_v3/measurements.csv": "8c79db6c71704486f58fdf8ecfcdb73fc0581512a025dca03d40e95fd3d06e33",
+    "results/raw_aa_summary_v3/process_costs.csv": "0672d4780214a888e9e7da84dd244b5f42bdb35466b72a45b48d45ac285dc071",
+    "results/raw_aa_summary_v3/raw_aa_rank.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "results/raw_aa_summary_v3/raw_aa_summary.csv": "fad97da6053d40095329f9fcf347700ab88177fe4333be6e606f386da9a625f2",
+    "results/raw_aa_summary_v3/summary.json": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66"
+  },
+  "resource_attempt_id": "ed56913af7fb4af7a6d15f8ff591ecec",
+  "returncode": 0,
+  "n4096_calls": 0,
+  "clock_elapsed_s": {
+    "monotonic": 0.266315103,
+    "raw": 0.27409479,
+    "realtime": 0.266315751
+  },
+  "resource_s": 0.27409479,
+  "lock_released": true
+}

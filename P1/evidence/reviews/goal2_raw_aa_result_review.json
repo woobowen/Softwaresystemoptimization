@@ -1,0 +1,335 @@
+{
+  "reviewer": "/root/review",
+  "reviewed_at_utc": "2026-10-02T21:12:42.028009+00:00",
+  "state": "FINITE_RAW_AA_CLOCK_GUARD_STOP_CONFIRMED",
+  "independent_arithmetic": "standard library JSON, integer nanosecond subtraction and Fraction; no producer or analyzer helper imported",
+  "source_input_sha256": {
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca"
+  },
+  "immutable_inputs_unchanged": {
+    "evidence/reviews/goal2_raw_aa_gate.md": "015339d3d9dfd30a572422e418d6a6446cc68f27519e712883d6c1eb76b1c1f6",
+    "evidence/reviews/goal2_raw_aa_gate.json": "6501a20f209060f6c273482c55d2c2c4e6b79b0263040197412f4699e539bec3",
+    "evidence/reviews/goal2_raw_aa_freeze_check.json": "c7a0e9ecf7e9f889dafe2434b14cfd18c6e3e5ab4144654b1cb004024bcd5ebb",
+    "evidence/reviews/goal2_raw_timing_result_review.json": "89140b14f02fd16a675086078d15fe1384855fb618e6c0a12ef07c91d3f84b33",
+    "evidence/protocol_raw_aa.json": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "results/raw_aa_v3/plan.json": "4c514b38eecfabd15011dfab5ff970ba949e5b927fdabee3421981d8a39de063"
+  },
+  "source_freeze_commit": "2dc75c9cc838bd1cbbcf5dfafa89733dd3532775",
+  "actual_attempt": "b69d6ddb29d842fea528038ed310ba8c",
+  "actual_job": {
+    "id": "raw-aa-01-F-A1",
+    "action": "run",
+    "role": "aa_raw_timer",
+    "config": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "tier": "F",
+    "label": "A",
+    "pair": 1,
+    "repeats": 1,
+    "seed": 0
+  },
+  "raw_path": "results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+  "raw_sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+  "raw_rows": 10,
+  "metadata_fingerprint": "ee13f42e511056ec232a36bb63278b1e5856a41727b040ad725975820b066b0c",
+  "command": [
+    "taskset",
+    "-c",
+    "0",
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+    "run",
+    "--target",
+    "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+    "--compiler",
+    "gcc",
+    "--cache-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw",
+    "--protocol",
+    "/home/addaswsw/lab/Software_system_optimization/P1/evidence/protocol_raw_aa.json",
+    "--output",
+    "/home/addaswsw/lab/Software_system_optimization/P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+    "--repeats",
+    "1",
+    "--seed",
+    "0",
+    "--timeout",
+    "1200",
+    "--compile-timeout",
+    "60",
+    "--s",
+    "128",
+    "--opt",
+    "O2"
+  ],
+  "primary_start": {
+    "type": "task_start",
+    "at": "2026-10-02T21:05:30.675310+00:00",
+    "task": "raw-aa-01-F-A1",
+    "role": "aa_raw_timer",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/usr/bin/python3",
+      "-B",
+      "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+      "run",
+      "--target",
+      "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+      "--compiler",
+      "gcc",
+      "--cache-dir",
+      "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw",
+      "--protocol",
+      "/home/addaswsw/lab/Software_system_optimization/P1/evidence/protocol_raw_aa.json",
+      "--output",
+      "/home/addaswsw/lab/Software_system_optimization/P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "--repeats",
+      "1",
+      "--seed",
+      "0",
+      "--timeout",
+      "1200",
+      "--compile-timeout",
+      "60",
+      "--s",
+      "128",
+      "--opt",
+      "O2"
+    ],
+    "attempt_id": "b69d6ddb29d842fea528038ed310ba8c",
+    "clock_start_ns": {
+      "monotonic": 93716528408970,
+      "raw": 98005220461002,
+      "realtime": 1790975130662268517
+    },
+    "call_upper": 1,
+    "journal": "results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+    "prior_measurement_starts": 0,
+    "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163"
+  },
+  "primary_end": {
+    "type": "task_end",
+    "at": "2026-10-02T21:06:12.111079+00:00",
+    "task": "raw-aa-01-F-A1",
+    "role": "aa_raw_timer",
+    "attempt_id": "b69d6ddb29d842fea528038ed310ba8c",
+    "returncode": 0,
+    "reason": "complete target process RAW/REALTIME changed >2% relative to first or previous",
+    "n4096_calls": 1,
+    "n4096_calls_known": true,
+    "driver_wall_s": 40.587241403,
+    "clock_elapsed_s": {
+      "monotonic": 40.587241403,
+      "raw": 41.760444408,
+      "realtime": 41.447995734
+    },
+    "clock_end_ns": {
+      "monotonic": 93757115650373,
+      "raw": 98046980905410,
+      "realtime": 1790975172110264251
+    },
+    "resource_s": 41.760444408,
+    "resource_wall_s": 41.760444408,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "results/raw_aa_v3/raw-aa-01-F-A1.stdout.txt",
+    "stderr": "results/raw_aa_v3/raw-aa-01-F-A1.stderr.txt",
+    "clock_conflict": true,
+    "clock_guard": {
+      "schema": 2,
+      "mode": "complete_raw_realtime_target_and_driver",
+      "history": {
+        "path": "evidence/measurement/raw_timing/clock_history.json",
+        "sha256": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3"
+      },
+      "threshold_fraction": 0.02,
+      "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163",
+      "process_checks": [
+        {
+          "source": "target_process",
+          "identity": [
+            "d3671d6317cd4edc85a0b07b1e535415",
+            0,
+            0,
+            412292
+          ],
+          "clock_elapsed_s": {
+            "monotonic": 40.099409014,
+            "raw": 41.25733453,
+            "realtime": 40.960162684
+          },
+          "q": 1.007255143205671,
+          "baselines": [
+            {
+              "identity": [
+                "e68dcc091e74490694a8b3532e8c215d",
+                0,
+                0,
+                248077
+              ],
+              "attempt_id": "d30f547b4da1406eac53b6b92250e447",
+              "q": 0.9981160163930989
+            },
+            {
+              "identity": [
+                "3a66e824b4854f5aa36ddf3cfe658d1a",
+                0,
+                0,
+                397545
+              ],
+              "attempt_id": "82f0b8afb8c047889ba7148ead33ed1a",
+              "q": 0.9849827393166586
+            }
+          ],
+          "conflict": true
+        }
+      ],
+      "driver_check": {
+        "source": "driver",
+        "identity": "b69d6ddb29d842fea528038ed310ba8c",
+        "clock_elapsed_s": {
+          "monotonic": 40.587241403,
+          "raw": 41.760444408,
+          "realtime": 41.447995734
+        },
+        "q": 1.0075383301041911,
+        "baselines": [
+          {
+            "identity": "a754f5ea5bc94becb31302b4966a852d",
+            "q": 0.9986300042296413
+          },
+          {
+            "identity": "82f0b8afb8c047889ba7148ead33ed1a",
+            "q": 0.9854103163848129
+          }
+        ],
+        "conflict": true
+      },
+      "complete": true,
+      "error": "complete target process RAW/REALTIME changed >2% relative to first or previous"
+    }
+  },
+  "process_span_ns": {
+    "CLOCK_MONOTONIC": 40099409014,
+    "CLOCK_MONOTONIC_RAW": 41257334530,
+    "CLOCK_REALTIME": 40960162684
+  },
+  "driver_span_ns": {
+    "monotonic": 40587241403,
+    "raw": 41760444408,
+    "realtime": 41447995734
+  },
+  "process_q": 1.0072551432056709,
+  "process_first_q": 0.9981160163930988,
+  "process_previous_q": 0.9849827393166586,
+  "process_relative_first_pct": 0.9156377277261132,
+  "process_relative_previous_pct": 2.2611973794042357,
+  "driver_q": 1.0075383301041911,
+  "driver_first_q": 0.9986300042296413,
+  "driver_previous_q": 0.9854103163848129,
+  "driver_relative_first_pct": 0.892054698619026,
+  "driver_relative_previous_pct": 2.2455634319477813,
+  "kernel_raw_s": 40.539898,
+  "same_raw_kernel_boundary_valid": true,
+  "checksum": 17180040496.458935,
+  "C_returncode": 0,
+  "CLI_summary_returncode_inferred_from_primary": 0,
+  "clock_conflict": true,
+  "valid_AA_samples": 0,
+  "A_B_pairs_completed": 0,
+  "coarse_rank_available": false,
+  "remaining_seven_jobs": [
+    "raw-aa-02-F-B1",
+    "raw-aa-03-M-B1",
+    "raw-aa-04-M-A1",
+    "raw-aa-05-M-A2",
+    "raw-aa-06-M-B2",
+    "raw-aa-07-F-B2",
+    "raw-aa-08-F-A2"
+  ],
+  "remaining_seven_started": false,
+  "cost": {
+    "actual_n4096_calls": 1,
+    "compile_processes": 1,
+    "cached": false,
+    "compile_monotonic_s": 0.244979521,
+    "compile_raw_s": 0.253926714,
+    "kernel_raw_s": 40.539898,
+    "process_raw_s": 41.25733453,
+    "driver_raw_s": 41.760444408,
+    "driver_monotonic_s": 40.587241403,
+    "resource_s": 41.760444408,
+    "only_primary_task_in_global_sum": true
+  },
+  "global_closed_snapshot": {
+    "path": "evidence/measurement/resource_ledger.jsonl",
+    "sha256": "31a5a58c68db0d8c7dbebd6f89aea5e2c762014605f47dee7e2c164ab869b6cf",
+    "rows": 407,
+    "all_tasks_closed": true,
+    "n4096_calls": 47,
+    "resource_s": 3613.087682189,
+    "remaining_calls": 473,
+    "remaining_resource_s": 53986.912317811
+  },
+  "owned_pids_absent": {
+    "412285": true,
+    "412286": true,
+    "412287": true,
+    "412292": true
+  },
+  "no_active_task_binary_paths": true,
+  "process_scan_scope": "recorded owned PIDs and /proc argv[0] only for the two exact P1 task binary directories; no unrelated argv printed or process modified",
+  "cache_key_difference": {
+    "expected_cold_key": "a7375bdb69b3572824899a64e1b1f3f2e1d9e78bad18c64bb992d91f58047ee6",
+    "actual_key": "1317058693b6991e19ee10fa5a47f85cf32e9b02f78f31823ff2c6a60daaa96e",
+    "actual_binary_sha256": "93cf81cccc36d45beff38e5df62c43400df48a3a39465a6cb8aeb279ddc7ed91",
+    "cause": "compile_timeout 60 versus 60.0 encoded differently in build identity",
+    "same_binary": true,
+    "actual_compile_charged": true,
+    "changed_computation": false
+  },
+  "root_cause": {
+    "protection_correct": true,
+    "parse_or_unit_error": false,
+    "version_or_boundary_error": false,
+    "stored_float_rounding": "maximum one ulp differences from exact ns ratio, immaterial to >2percent predicate",
+    "observed": "whole intervals RAW/REALTIME relationship changed >2percent from previous eligible numeric process and driver",
+    "ultimate_host_or_timesync_root_cause": "NOT_ESTABLISHED",
+    "RAW_absolute_truth": false,
+    "REALTIME_absolute_truth": false
+  },
+  "dependent_work": {
+    "new_reference": "BLOCKED_NOT_EXECUTED",
+    "main_six_seed_algorithms": "BLOCKED_NOT_EXECUTED",
+    "S3_selection": "NOT_EXECUTED",
+    "new_seed_confirmation": "NOT_EXECUTED",
+    "Greedy_start_panel": "NOT_EXECUTED",
+    "performance_KEEP_allowed": false
+  },
+  "safe_independent_work": [
+    "history reproduction at matching fixed commits",
+    "clean-clone correctness/build/source checks and raw-derived analysis with accurate pending labels",
+    "full report/readme and images review",
+    "two independent final reviews with explicit remaining performance gaps",
+    "reviewed truthful GitHub stage publication"
+  ],
+  "recommendation": "Do not append retries or change first/previous/2percent/REALTIME guard to make this same AA batch pass; retain primary cost and complete raw, exclude failed observation from score and future eligible baseline; continue nondependent deliverables.",
+  "full_formal_admission": false,
+  "old_v2_continue_admission": false,
+  "Engineering_PASS": false,
+  "Goal2_complete": false,
+  "n4096_calls_by_reviewer": 0,
+  "compile_or_runtime_tests_by_reviewer": 0
+}

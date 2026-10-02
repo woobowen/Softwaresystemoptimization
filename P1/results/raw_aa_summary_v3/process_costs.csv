@@ -1,0 +1,2 @@
+stage,component,process_runs,valid_runs,failed_runs,kernel_recorded_s,process_recorded_s,process_raw_recorded_s,unknown_kernel_runs,unknown_process_runs,unknown_raw_process_runs
+raw_aa,aa_raw_timer,1,0,1,40.539898,40.099409014,41.25733453,0,0,0

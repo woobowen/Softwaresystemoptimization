@@ -1,0 +1,3 @@
+tier,a,b,complete,signed_median_difference_pct,paired_difference_s,paired_difference_pct,D_pct,P_pct
+F,"{""valid_runs"": 0, ""median_s"": null, ""min_s"": null, ""max_s"": null, ""mad_s"": null, ""relative_range"": null, ""samples"": []}","{""valid_runs"": 0, ""median_s"": null, ""min_s"": null, ""max_s"": null, ""mad_s"": null, ""relative_range"": null, ""samples"": []}",False,,[],[],,
+M,"{""valid_runs"": 0, ""median_s"": null, ""min_s"": null, ""max_s"": null, ""mad_s"": null, ""relative_range"": null, ""samples"": []}","{""valid_runs"": 0, ""median_s"": null, ""min_s"": null, ""max_s"": null, ""mad_s"": null, ""relative_range"": null, ""samples"": []}",False,,[],[],,
