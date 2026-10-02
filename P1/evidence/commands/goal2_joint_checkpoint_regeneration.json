@@ -1,0 +1,43 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/scripts/summarize_v2.py",
+    "--protocol",
+    "/home/addaswsw/lab/Software_system_optimization/P1/evidence/protocol_clock_followup_r1.json",
+    "--clock-followup",
+    "/home/addaswsw/lab/Software_system_optimization/P1/results/clock_followup_v2_r1",
+    "--initial-root",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/initial-reproduction/P1",
+    "--initial-derived",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/initial-reproduction/P1/.cache/derived",
+    "--ledger",
+    "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/resource_ledger.jsonl",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/results/clock_followup_summary_v2"
+  ],
+  "returncode": 0,
+  "stdout": "{\"output\": \"/home/addaswsw/lab/Software_system_optimization/P1/results/clock_followup_summary_v2\", \"actual_process_runs\": 41, \"charged_process_upper\": 41, \"recorded_ledger_charged_calls\": 41, \"missing_job_raw_starts\": 0, \"costs_complete\": true}\n",
+  "stderr": "",
+  "clock_start_ns": {
+    "monotonic": 78750789519368,
+    "raw": 82719864725088,
+    "realtime": 1790959845228820952
+  },
+  "clock_end_ns": {
+    "monotonic": 78750899141241,
+    "raw": 82719974347091,
+    "realtime": 1790959845338443400
+  },
+  "elapsed_s": {
+    "monotonic": 0.109621873,
+    "raw": 0.109622003,
+    "realtime": 0.109622448
+  },
+  "analysis_only": true,
+  "n4096_calls": 0,
+  "protected_inputs_unchanged": true,
+  "method_values_unchanged": true,
+  "ledger_sha256": "a59afd3fd4f1f46bcf148927589cd0e6197b263feeaa89c3ac1ba8e8b3386542",
+  "summary_sha256": "5c446acce299d85d7bc13ea3d43df921263bca30636462c9ab828775f40d1a53"
+}

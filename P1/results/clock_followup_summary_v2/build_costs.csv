@@ -1,0 +1,11 @@
+stage,task,role,actual_compile_processes,cached_build_checks,compile_recorded_s,incomplete_builds
+diagnostic,clock-followup-01-M-B3,aa_replacement,0,1,0,0
+diagnostic,clock-followup-02-F-A3,aa_replacement,0,1,0,0
+diagnostic,clock-followup-05-F-A1,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-06-F-B1,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-07-M-B1,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-08-M-A1,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-09-M-A2,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-10-M-B2,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-11-F-B2,clock_followup_aa,0,1,0,0
+diagnostic,clock-followup-12-F-A2,clock_followup_aa,0,1,0,0

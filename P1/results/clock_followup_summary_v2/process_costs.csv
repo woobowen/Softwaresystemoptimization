@@ -1,0 +1,3 @@
+stage,component,process_runs,valid_runs,failed_runs,kernel_recorded_s,process_recorded_s,unknown_kernel_runs,unknown_process_runs
+diagnostic,aa_replacement,2,2,0,100.523727,101.65415462499999,0,0
+diagnostic,clock_followup_aa,8,8,0,471.577759,476.08693041299995,0,0

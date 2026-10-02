@@ -208,6 +208,36 @@ class Goal2ReplayTests(unittest.TestCase):
 
 
 class Goal2QualityTests(unittest.TestCase):
+    def test_partial_shared_panel_cannot_confirm_same_reference_identity(self):
+        task = synthetic_task()
+        task.update(state="complete", job=dict(id="search", action="search", role="search",
+            block=1, algorithm="random", seed=700001))
+        batch = dict(path=Path("unit-fixture"), manifest=dict(stage="comparison"), tasks=[task], driver=[])
+        grid = [dict(s=8, opt="O2", gap_ref_pct=0, **su.describe([1, 1, 1]))]
+        panel = dict(stage="comparison", block=1, s=8, opt="O2", complete=False, **su.describe([1]))
+        rows, _ = su.search_tables([batch], grid, [panel], protocol())
+        self.assertEqual(rows[0]["gap_ref_pct"], 0)
+        self.assertEqual(rows[0]["quality_class"], "uncertain")
+        self.assertIsNone(rows[0]["panel_gap_high_pct"])
+        self.assertFalse(rows[0]["confirmation_complete"])
+        missing_anchor_grid = [dict(s=8, opt="O1", gap_ref_pct=0, **su.describe([.9, .9, .9])),
+            dict(s=8, opt="O2", gap_ref_pct=100/9, **su.describe([1, 1, 1]))]
+        complete_return = dict(panel, complete=True, **su.describe([1, 1, 1]))
+        missing, _ = su.search_tables([batch], missing_anchor_grid, [complete_return], protocol())
+        self.assertFalse(missing[0]["confirmation_complete"])
+        self.assertEqual(missing[0]["quality_class"], "uncertain")
+        batch["panels"] = [dict(configs=[dict(s=8, opt="O2")], block=1, seed=700001,
+                               reference_config=dict(s=8, opt="O2"))]
+        samples = [dict(stage="comparison", role="shared_confirmation", block=1, s=8, opt="O2",
+                        round=round_id, valid=True, kernel_s=1) for round_id in (1, 1, 3)]
+        duplicate = su.panel_table(samples, [batch])
+        self.assertFalse(duplicate[0]["complete"])
+        returned, _ = su.search_tables([batch], grid, duplicate, protocol())
+        self.assertFalse(returned[0]["confirmation_complete"])
+        seeds = protocol()["holdout"]["seeds"]
+        holdout = [dict(returned[0], stage="confirmation", seed=seed) for seed in seeds]
+        self.assertFalse(su.baseline_confirmation(holdout, seeds)["complete"])
+
     def test_same_identity_scores_zero_despite_independent_time_differences(self):
         a, b, anchor = su.describe([30, 31, 32]), su.describe([36, 37, 38]), su.describe([30, 31, 32])
         self.assertEqual(su.gain_bounds(a, b, anchor, same_config=True), (0, 0))
@@ -268,7 +298,79 @@ class Goal2QualityTests(unittest.TestCase):
         self.assertEqual(su.decision([paired() for _ in range(6)], proto, 6)["decision"], "INCONCLUSIVE")
 
 
+    def test_known_cost_same_identity_cannot_keep_with_clock_conflict(self):
+        result = su.decision([paired(saving=.2)] * 6, protocol(), 6,
+                             project_cost_complete=True, project_clock_healthy=False)
+        self.assertEqual(result["decision"], "INCONCLUSIVE")
+        self.assertIn("clock", result["reasons"][0])
+
+
 class Goal2DiagnosticAndCostTests(unittest.TestCase):
+    def test_ledger_snapshot_hash_and_rows_describe_the_same_read(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "ledger.jsonl"
+            first = b'{"type":"task_start","attempt_id":"fixture"}\n'
+            path.write_bytes(first)
+            data, rows, digest = su.record_snapshot(path)
+            path.write_bytes(first + b'{"type":"task_end","attempt_id":"fixture"}\n')
+            self.assertEqual(data, first)
+            self.assertEqual(rows, [dict(type="task_start", attempt_id="fixture")])
+            self.assertEqual(digest, su.hashlib.sha256(first).hexdigest())
+            self.assertNotEqual(digest, su.sha256(path))
+
+    def test_complete_clock_check_uses_first_and_previous_same_source(self):
+        healthy = su.complete_clock_check("formal_target_process", dict(monotonic=40, raw=40.4, realtime=40), [1.0, 1.01])
+        self.assertFalse(healthy["conflict"])
+        conflict = su.complete_clock_check("formal_target_process", dict(monotonic=40, raw=41.2, realtime=40), [1.0, 1.015])
+        self.assertTrue(conflict["conflict"])
+        self.assertEqual(conflict["baseline_ratios"], [1.0, 1.015])
+        with self.assertRaises(ValueError):
+            su.clock_spans(dict(monotonic=0, raw=0, realtime=0), dict(monotonic=1, raw=-1, realtime=1))
+
+    def test_prefix_conflict_does_not_become_a_complete_conflict(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "fixture.clocks.jsonl"
+            start = dict(task="fixture", clock_start_ns=dict(monotonic=0, raw=0, realtime=0))
+            finish = dict(monotonic=40_000_000_000, raw=40_000_000_000, realtime=40_000_000_000)
+            checks = [su.complete_clock_check(source, dict(monotonic=40, raw=40, realtime=40), [1.0])
+                      for source in ("driver", "formal_target_process")]
+            expected = dict(task="fixture", clock_complete_checks=checks, prefix_clock_conflict=True,
+                complete_clock_conflict=False, clock_conflict=False, complete_clock_observation=True)
+            query = dict(readonly=True, offset_raw=0, frequency_scaled_ppm=0, tick_us=10000,
+                         status=0, precision_us=1, returncode=0, offset_unit="us")
+            previous, trace = start["clock_start_ns"], []
+            for phase, ns in (("start", previous), ("interval", dict(monotonic=12_000_000_000,
+                    raw=11_700_000_000, realtime=12_000_000_000)), ("end", finish)):
+                prefix = su.clock_spans(start["clock_start_ns"], ns)
+                local = su.clock_spans(previous, ns)
+                ratio = prefix["raw"] / prefix["monotonic"] if prefix["monotonic"] else None
+                trace.append(dict(type="clock_sample", phase=phase, task="fixture", clock_ns=ns, unit="ns",
+                    read_order=["monotonic", "raw", "realtime"], prefix_elapsed_s=prefix, local_elapsed_s=local,
+                    prefix_ratio=ratio, local_ratio=local["raw"] / local["monotonic"] if local["monotonic"] else None,
+                    prefix_clock_conflict=prefix["monotonic"] >= 10 and abs(ratio - 1) > .02, adjtimex=query))
+                previous = ns
+            trace.append(dict(type="clock_complete", **expected))
+            path.write_text("".join(json.dumps(row) + "\n" for row in trace))
+            end = dict(clock_end_ns=finish, clock_trace_sha256=su.sha256(path), **expected)
+            rows = su.followup_timeline(path, start, end, checks, [1.0])
+            self.assertEqual(sum(row["prefix_clock_conflict"] for row in rows), 1)
+            bad = copy.deepcopy(trace)
+            bad[-1]["complete_clock_conflict"] = True
+            path.write_text("".join(json.dumps(row) + "\n" for row in bad))
+            end.update(clock_trace_sha256=su.sha256(path), complete_clock_conflict=True)
+            with self.assertRaises(ValueError):
+                su.followup_timeline(path, start, end, checks, [1.0])
+
+    def test_new_two_pair_aa_preserves_large_label_differences(self):
+        rows = [dict(role="clock_followup_aa", tier=tier, label=label, pair=pair, s=128 if tier == "F" else 8,
+            opt="O2", valid=True, kernel_s=(40 if tier == "F" else 60) * (1.25 if label == "B" else 1))
+            for tier in ("F", "M") for label in ("A", "B") for pair in (1, 2)]
+        summary = su.followup_aa_table(rows)
+        self.assertTrue(all(row["complete"] for row in summary))
+        self.assertTrue(all(abs(row["signed_median_difference_pct"] - 25) < 1e-12 for row in summary))
+        with self.assertRaises(ValueError):
+            su.followup_aa_table(rows + [rows[0]])
+
     def test_clock_diagnostics_recompute_nanoseconds_units_and_float_output(self):
         proto = protocol()
         proto["target"].update(sha256="fixture-clock-source", compiler_identity={"path": "fixture-clock-compiler"})

@@ -1,0 +1,417 @@
+{
+  "reviewer": "/root/implementation",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "P1/tests",
+    "-p",
+    "test_goal2_summary.py",
+    "-v"
+  ],
+  "started_at_utc": "2026-10-02T16:37:28.018903+00:00",
+  "ended_at_utc": "2026-10-02T16:37:28.134404+00:00",
+  "exit_code": 0,
+  "tests": 43,
+  "suite_reported_s": 0.014,
+  "clock_start_ns": {
+    "monotonic": 77955383563204,
+    "raw": 81922505930735,
+    "realtime": 1790959048018919998
+  },
+  "clock_end_ns": {
+    "monotonic": 77955499043897,
+    "raw": 81922619117102,
+    "realtime": 1790959048134400664
+  },
+  "elapsed_s": {
+    "monotonic": 0.115480693,
+    "raw": 0.113186367,
+    "realtime": 0.115480666
+  },
+  "source_sha256_before": {
+    "scripts/summarize_v2.py": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+    "tests/test_goal2_summary.py": "e2818f35365c88c19d6c22332b0cb0688b8b7c3e0d1fea1b2d3c2f16b7235bf2"
+  },
+  "source_sha256_after": {
+    "scripts/summarize_v2.py": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+    "tests/test_goal2_summary.py": "e2818f35365c88c19d6c22332b0cb0688b8b7c3e0d1fea1b2d3c2f16b7235bf2"
+  },
+  "source_unchanged": true,
+  "exclusive_nonblocking_lock_acquired": true,
+  "n4096_calls": 0,
+  "c_compilations": 0,
+  "plots": 0
+}
+
+STDOUT
+
+STDERR
+test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed (test_goal2_summary.Goal2DiagnosticAndCostTests.test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed) ... ok
+test_batch_copy_cannot_disagree_with_global_actual_attempt (test_goal2_summary.Goal2DiagnosticAndCostTests.test_batch_copy_cannot_disagree_with_global_actual_attempt) ... ok
+test_clock_diagnostics_recompute_nanoseconds_units_and_float_output (test_goal2_summary.Goal2DiagnosticAndCostTests.test_clock_diagnostics_recompute_nanoseconds_units_and_float_output) ... ok
+test_complete_clock_check_uses_first_and_previous_same_source (test_goal2_summary.Goal2DiagnosticAndCostTests.test_complete_clock_check_uses_first_and_previous_same_source) ... ok
+test_derived_path_cannot_overwrite_or_nest_under_raw (test_goal2_summary.Goal2DiagnosticAndCostTests.test_derived_path_cannot_overwrite_or_nest_under_raw) ... ok
+test_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup (test_goal2_summary.Goal2DiagnosticAndCostTests.test_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup) ... ok
+test_guarded_task_uses_exact_global_journal_end_without_raw_copy (test_goal2_summary.Goal2DiagnosticAndCostTests.test_guarded_task_uses_exact_global_journal_end_without_raw_copy) ... ok
+test_internal_rechecks_are_charged_not_external_confirmation (test_goal2_summary.Goal2DiagnosticAndCostTests.test_internal_rechecks_are_charged_not_external_confirmation) ... ok
+test_ledger_snapshot_hash_and_rows_describe_the_same_read (test_goal2_summary.Goal2DiagnosticAndCostTests.test_ledger_snapshot_hash_and_rows_describe_the_same_read) ... ok
+test_matching_cost_copies_cannot_hide_a_raw_target_call (test_goal2_summary.Goal2DiagnosticAndCostTests.test_matching_cost_copies_cannot_hide_a_raw_target_call) ... ok
+test_method_rank_reversal_prevents_diagnostic_performance_gate (test_goal2_summary.Goal2DiagnosticAndCostTests.test_method_rank_reversal_prevents_diagnostic_performance_gate) ... ok
+test_missing_whole_cost_attempt_is_not_a_complete_project_bill (test_goal2_summary.Goal2DiagnosticAndCostTests.test_missing_whole_cost_attempt_is_not_a_complete_project_bill) ... ok
+test_new_two_pair_aa_preserves_large_label_differences (test_goal2_summary.Goal2DiagnosticAndCostTests.test_new_two_pair_aa_preserves_large_label_differences) ... ok
+test_partial_aa_preserves_available_labels_without_selecting_arrangement (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_aa_preserves_available_labels_without_selecting_arrangement) ... ok
+test_partial_cost_copies_use_all_exact_journal_attempts_once (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_cost_copies_use_all_exact_journal_attempts_once) ... ok
+test_prefix_conflict_does_not_become_a_complete_conflict (test_goal2_summary.Goal2DiagnosticAndCostTests.test_prefix_conflict_does_not_become_a_complete_conflict) ... ok
+test_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost (test_goal2_summary.Goal2DiagnosticAndCostTests.test_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost) ... ok
+test_same_attempt_copy_timestamps_are_not_new_cost_or_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_same_attempt_copy_timestamps_are_not_new_cost_or_identity) ... ok
+test_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero (test_goal2_summary.Goal2DiagnosticAndCostTests.test_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero) ... ok
+test_two_batch_panels_with_same_identity_are_not_new_evidence (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_batch_panels_with_same_identity_are_not_new_evidence) ... ok
+test_two_copies_of_forged_cost_cannot_override_original_clock_boundaries (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_copies_of_forged_cost_cannot_override_original_clock_boundaries) ... ok
+test_two_different_batches_cannot_replace_same_seed_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_different_batches_cannot_replace_same_seed_identity) ... ok
+test_zero_m0_branch_does_not_claim_observed_aa_reduction (test_goal2_summary.Goal2DiagnosticAndCostTests.test_zero_m0_branch_does_not_claim_observed_aa_reduction) ... ok
+test_anchor_endpoint_corners_preserve_signed_ranges (test_goal2_summary.Goal2QualityTests.test_anchor_endpoint_corners_preserve_signed_ranges) ... ok
+test_clear_quality_regression_and_unsupported_risk (test_goal2_summary.Goal2QualityTests.test_clear_quality_regression_and_unsupported_risk) ... ok
+test_disjoint_reference_panel_blocks_keep (test_goal2_summary.Goal2QualityTests.test_disjoint_reference_panel_blocks_keep) ... ok
+test_known_cost_same_identity_cannot_keep_with_clock_conflict (test_goal2_summary.Goal2QualityTests.test_known_cost_same_identity_cannot_keep_with_clock_conflict) ... ok
+test_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate (test_goal2_summary.Goal2QualityTests.test_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate) ... ok
+test_partial_shared_panel_cannot_confirm_same_reference_identity (test_goal2_summary.Goal2QualityTests.test_partial_shared_panel_cannot_confirm_same_reference_identity) ... ok
+test_quality_route_requires_useful_supported_lower_bound (test_goal2_summary.Goal2QualityTests.test_quality_route_requires_useful_supported_lower_bound) ... ok
+test_rho_padding_prevents_false_five_percent_classification (test_goal2_summary.Goal2QualityTests.test_rho_padding_prevents_false_five_percent_classification) ... ok
+test_same_config_efficiency_boundary_and_cost_regression (test_goal2_summary.Goal2QualityTests.test_same_config_efficiency_boundary_and_cost_regression) ... ok
+test_same_identity_scores_zero_despite_independent_time_differences (test_goal2_summary.Goal2QualityTests.test_same_identity_scores_zero_despite_independent_time_differences) ... ok
+test_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep (test_goal2_summary.Goal2QualityTests.test_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep) ... ok
+test_base_order_and_greedy_explicit_start_are_independently_replayed (test_goal2_summary.Goal2ReplayTests.test_base_order_and_greedy_explicit_start_are_independently_replayed) ... ok
+test_clock_units_domains_and_nan_do_not_create_a_fastest_sample (test_goal2_summary.Goal2ReplayTests.test_clock_units_domains_and_nan_do_not_create_a_fastest_sample) ... ok
+test_failed_batch_remains_failed_and_forged_metadata_is_rejected (test_goal2_summary.Goal2ReplayTests.test_failed_batch_remains_failed_and_forged_metadata_is_rejected) ... ok
+test_final_tie_uses_original_visit_order (test_goal2_summary.Goal2ReplayTests.test_final_tie_uses_original_visit_order) ... ok
+test_nonfinite_zero_and_invalid_recheck_contract_are_rejected (test_goal2_summary.Goal2ReplayTests.test_nonfinite_zero_and_invalid_recheck_contract_are_rejected) ... ok
+test_raw_replay_rejects_backfilled_best_and_missing_process (test_goal2_summary.Goal2ReplayTests.test_raw_replay_rejects_backfilled_best_and_missing_process) ... ok
+test_recheck_failure_is_ineligible_without_extra_free_exploration (test_goal2_summary.Goal2ReplayTests.test_recheck_failure_is_ineligible_without_extra_free_exploration) ... ok
+test_recheck_recomputes_best_upward_and_preserves_random_prefix (test_goal2_summary.Goal2ReplayTests.test_recheck_recomputes_best_upward_and_preserves_random_prefix) ... ok
+test_zero_or_one_finalist_stops_without_padding (test_goal2_summary.Goal2ReplayTests.test_zero_or_one_finalist_stops_without_padding) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.014s
+
+OK
+
+INDEPENDENT RAW RECOUNT
+{
+  "reviewer": "/root/implementation",
+  "checked_at_utc": "2026-10-02T16:47:32.846753+00:00",
+  "independent_of_author_analysis_functions": true,
+  "initial_fixed_commit": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+  "initial_inputs_checked": 32,
+  "initial_raw_matches_git": true,
+  "raw_files_hashed": 159,
+  "raw_unchanged": true,
+  "ordinary_initial_valid": 26,
+  "original_interrupted": 1,
+  "followup_valid_formal_target": 10,
+  "followup_valid_diagnostic_kernel": 2,
+  "global_calls": 41,
+  "global_attempts": 57,
+  "mono_driver_s": 2743.5990474280015,
+  "resource_max_domain_s": 2755.910424768,
+  "partial_aa": [
+    {
+      "method": "M0",
+      "tier": "F",
+      "a_samples": [
+        58.778687,
+        61.583714
+      ],
+      "b_samples": [
+        60.847298,
+        58.235882,
+        51.987427
+      ],
+      "a_median_s": 60.1812005,
+      "b_median_s": 58.235882,
+      "paired_difference_s": [
+        2.068611000000004,
+        -3.347832000000004
+      ],
+      "paired_difference_pct": [
+        3.5193215527254074,
+        -5.436229455079644
+      ],
+      "signed_median_difference_pct": -3.2324355177992925,
+      "complete": false
+    },
+    {
+      "method": "M0",
+      "tier": "M",
+      "a_samples": [
+        84.766418,
+        95.408348,
+        86.904335
+      ],
+      "b_samples": [
+        85.556702,
+        83.758797
+      ],
+      "a_median_s": 86.904335,
+      "b_median_s": 84.6577495,
+      "paired_difference_s": [
+        0.7902839999999998,
+        -11.649551000000002
+      ],
+      "paired_difference_pct": [
+        0.9323078863613166,
+        -12.210200935456928
+      ],
+      "signed_median_difference_pct": -2.585124781174619,
+      "complete": false
+    },
+    {
+      "method": "M1",
+      "tier": "F",
+      "a_samples": [
+        63.237171,
+        55.668694,
+        49.826942
+      ],
+      "b_samples": [
+        64.870026,
+        54.526001,
+        56.695389
+      ],
+      "a_median_s": 55.668694,
+      "b_median_s": 56.695389,
+      "paired_difference_s": [
+        1.6328549999999993,
+        -1.1426930000000013,
+        6.868446999999996
+      ],
+      "paired_difference_pct": [
+        2.58211266281978,
+        -2.0526671597505097,
+        13.784604722481264
+      ],
+      "signed_median_difference_pct": 1.8442951077673797,
+      "complete": true
+    },
+    {
+      "method": "M1",
+      "tier": "M",
+      "a_samples": [
+        84.853203,
+        83.857307,
+        84.139397
+      ],
+      "b_samples": [
+        87.179337,
+        83.895874,
+        84.750038
+      ],
+      "a_median_s": 84.139397,
+      "b_median_s": 84.750038,
+      "paired_difference_s": [
+        2.3261340000000104,
+        0.03856700000000046,
+        0.6106410000000011
+      ],
+      "paired_difference_pct": [
+        2.7413626330640817,
+        0.045991221730989906,
+        0.7257491992722409
+      ],
+      "signed_median_difference_pct": 0.7257491992722409,
+      "complete": true
+    }
+  ],
+  "filled_aa": [
+    {
+      "method": "M0",
+      "tier": "F",
+      "a_samples": [
+        58.778687,
+        61.583714,
+        35.371246
+      ],
+      "b_samples": [
+        60.847298,
+        58.235882,
+        51.987427
+      ],
+      "a_median_s": 58.778687,
+      "b_median_s": 58.235882,
+      "paired_difference_s": [
+        2.068611000000004,
+        -3.347832000000004,
+        16.616180999999997
+      ],
+      "paired_difference_pct": [
+        3.5193215527254074,
+        -5.436229455079644,
+        46.976521550866494
+      ],
+      "signed_median_difference_pct": -0.9234724824663032,
+      "complete": true
+    },
+    {
+      "method": "M0",
+      "tier": "M",
+      "a_samples": [
+        84.766418,
+        95.408348,
+        86.904335
+      ],
+      "b_samples": [
+        85.556702,
+        83.758797,
+        65.152481
+      ],
+      "a_median_s": 86.904335,
+      "b_median_s": 83.758797,
+      "paired_difference_s": [
+        0.7902839999999998,
+        -11.649551000000002,
+        -21.75185400000001
+      ],
+      "paired_difference_pct": [
+        0.9323078863613166,
+        -12.210200935456928,
+        -25.029653584024324
+      ],
+      "signed_median_difference_pct": -3.619540958457368,
+      "complete": true
+    },
+    {
+      "method": "M1",
+      "tier": "F",
+      "a_samples": [
+        63.237171,
+        55.668694,
+        49.826942
+      ],
+      "b_samples": [
+        64.870026,
+        54.526001,
+        56.695389
+      ],
+      "a_median_s": 55.668694,
+      "b_median_s": 56.695389,
+      "paired_difference_s": [
+        1.6328549999999993,
+        -1.1426930000000013,
+        6.868446999999996
+      ],
+      "paired_difference_pct": [
+        2.58211266281978,
+        -2.0526671597505097,
+        13.784604722481264
+      ],
+      "signed_median_difference_pct": 1.8442951077673797,
+      "complete": true
+    },
+    {
+      "method": "M1",
+      "tier": "M",
+      "a_samples": [
+        84.853203,
+        83.857307,
+        84.139397
+      ],
+      "b_samples": [
+        87.179337,
+        83.895874,
+        84.750038
+      ],
+      "a_median_s": 84.139397,
+      "b_median_s": 84.750038,
+      "paired_difference_s": [
+        2.3261340000000104,
+        0.03856700000000046,
+        0.6106410000000011
+      ],
+      "paired_difference_pct": [
+        2.7413626330640817,
+        0.045991221730989906,
+        0.7257491992722409
+      ],
+      "signed_median_difference_pct": 0.7257491992722409,
+      "complete": true
+    }
+  ],
+  "new_aa": [
+    {
+      "method": "followup",
+      "tier": "F",
+      "a_samples": [
+        36.219837,
+        41.888515
+      ],
+      "b_samples": [
+        36.487453,
+        39.956944
+      ],
+      "a_median_s": 39.054176,
+      "b_median_s": 38.222198500000005,
+      "paired_difference_s": [
+        0.26761600000000385,
+        -1.9315709999999982
+      ],
+      "paired_difference_pct": [
+        0.738865832002511,
+        -4.611218612070633
+      ],
+      "signed_median_difference_pct": -2.130316358486206,
+      "complete": true
+    },
+    {
+      "method": "followup",
+      "tier": "M",
+      "a_samples": [
+        68.213715,
+        81.377769
+      ],
+      "b_samples": [
+        84.824883,
+        82.608643
+      ],
+      "a_median_s": 74.79574199999999,
+      "b_median_s": 83.716763,
+      "paired_difference_s": [
+        16.611168000000006,
+        1.230874
+      ],
+      "paired_difference_pct": [
+        24.351654209127904,
+        1.51254330897177
+      ],
+      "signed_median_difference_pct": 11.927177619282148,
+      "complete": true
+    }
+  ],
+  "new_max_abs_pair_difference_pct": 24.351654209127904,
+  "complete_clock_intervals_checked": 80,
+  "complete_clock_conflicts": [],
+  "clock_trace_points_checked": 360,
+  "clock_trace_prefix_conflicts": 0,
+  "completed_followup_jobs": [
+    "clock-followup-01-M-B3",
+    "clock-followup-02-F-A3",
+    "clock-followup-03-multiclock-F",
+    "clock-followup-04-multiclock-M",
+    "clock-followup-05-F-A1",
+    "clock-followup-06-F-B1",
+    "clock-followup-07-M-B1",
+    "clock-followup-08-M-A1",
+    "clock-followup-09-M-A2",
+    "clock-followup-10-M-B2",
+    "clock-followup-11-F-B2",
+    "clock-followup-12-F-A2"
+  ],
+  "selected_arrangement": "M1",
+  "resolution_pp": 14,
+  "new_AA_exceeds_resolution": true,
+  "formal_admission": false,
+  "author_summary_values_match_independent_arithmetic": true,
+  "n4096_calls_spawned_by_reviewer": 0
+}

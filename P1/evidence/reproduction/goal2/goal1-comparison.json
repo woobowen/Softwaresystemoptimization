@@ -1,0 +1,122 @@
+{
+  "commit": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/scripts/summarize.py",
+    "--reference",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/reference_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/selection_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/conflict_selection_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/holdout_v1",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/.cache/derived",
+    "--plots",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/.cache/derived-images"
+  ],
+  "task": {
+    "type": "task_end",
+    "at": "2026-10-02T16:28:39.686461+00:00",
+    "task": "goal1-historical-regeneration",
+    "role": "historical_analysis",
+    "attempt_id": "eb0a9d16fc2147928ba4e137c720e9b6",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 1.255715018,
+    "clock_elapsed_s": {
+      "monotonic": 1.255715018,
+      "raw": 1.2644484,
+      "realtime": 1.255716113
+    },
+    "clock_end_ns": {
+      "monotonic": 77429977061968,
+      "raw": 81394390305473,
+      "realtime": 1790958519686139667
+    },
+    "resource_s": 1.2644484,
+    "resource_wall_s": 1.2644484,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0002454449461908
+    ],
+    "stdout": "evidence/reproduction/goal2/goal1-historical-regeneration.stdout.txt",
+    "stderr": "evidence/reproduction/goal2/goal1-historical-regeneration.stderr.txt"
+  },
+  "files": [
+    {
+      "file": "batch_costs.csv",
+      "original_sha256": "b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302",
+      "regenerated_sha256": "b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302",
+      "equal": true
+    },
+    {
+      "file": "conflict_request_holdout.json",
+      "original_sha256": "02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e",
+      "regenerated_sha256": "02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e",
+      "equal": true
+    },
+    {
+      "file": "conflict_request_selection.json",
+      "original_sha256": "ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7",
+      "regenerated_sha256": "ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7",
+      "equal": true
+    },
+    {
+      "file": "grid_summary.csv",
+      "original_sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "regenerated_sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "equal": true
+    },
+    {
+      "file": "measurements.csv",
+      "original_sha256": "f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3",
+      "regenerated_sha256": "f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3",
+      "equal": true
+    },
+    {
+      "file": "online_curves.csv",
+      "original_sha256": "c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26",
+      "regenerated_sha256": "c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26",
+      "equal": true
+    },
+    {
+      "file": "reference_conflicts.csv",
+      "original_sha256": "5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90",
+      "regenerated_sha256": "5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90",
+      "equal": true
+    },
+    {
+      "file": "search_summary.csv",
+      "original_sha256": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc",
+      "regenerated_sha256": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc",
+      "equal": true
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+      "regenerated_sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+      "equal": true
+    }
+  ],
+  "images": [
+    {
+      "file": "grid_median.png",
+      "original_sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "regenerated_sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "equal": true
+    },
+    {
+      "file": "online_search.png",
+      "original_sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "regenerated_sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "equal": true
+    }
+  ],
+  "matrix_runs": 0,
+  "all_equal": true
+}
