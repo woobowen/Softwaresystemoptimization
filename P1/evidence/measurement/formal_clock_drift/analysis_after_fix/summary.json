@@ -1,0 +1,1199 @@
+{
+  "schema": 2,
+  "protocol_sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+  "analysis_sha256": "8111d72ec9684d0b0f8fb00579f44cb6f94f7794b44f64619ffe3d1e610f0289",
+  "batch_manifest_sha256": {
+    "reference_v2": "62db9f54de38d611e8f2cd59701b836106ab4bca1a532e4497e8180a5beca54c"
+  },
+  "resource_ledger_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+  "clock_identity_sha256": null,
+  "tasks": [
+    {
+      "stage": "reference",
+      "id": "warmup-reference",
+      "role": "warmup",
+      "state": "clock_conflict",
+      "actual_process_starts": 1,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    }
+  ],
+  "costs": {
+    "rows": [
+      {
+        "stage": "goal",
+        "role": "correctness_small",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 3.26511312,
+        "conservative_resource_s": 3.286546387,
+        "failed_tasks": 0,
+        "tasks": 1,
+        "domains_s": {
+          "monotonic": 3.26511312,
+          "raw": 3.286546387,
+          "realtime": 3.265114406
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "correctness_sanitizer",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 0.503538603,
+        "conservative_resource_s": 0.506945202,
+        "failed_tasks": 0,
+        "tasks": 1,
+        "domains_s": {
+          "monotonic": 0.503538603,
+          "raw": 0.506945202,
+          "realtime": 0.503539481
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "diagnostic_build",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 1.019499293,
+        "conservative_resource_s": 1.020492,
+        "failed_tasks": 0,
+        "tasks": 3,
+        "domains_s": {
+          "monotonic": 1.019499293,
+          "raw": 1.01965848,
+          "realtime": 1.019502438
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "clock_probe",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 140.573375154,
+        "conservative_resource_s": 142.56888442300001,
+        "failed_tasks": 0,
+        "tasks": 9,
+        "domains_s": {
+          "monotonic": 140.573375154,
+          "raw": 141.932387553,
+          "realtime": 141.970600856
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "clock_matrix_diagnostic",
+        "process_runs": 4,
+        "process_runs_known": true,
+        "recorded_process_lower": 4,
+        "full_driver_wall_s": 245.879863662,
+        "conservative_resource_s": 247.92162629,
+        "failed_tasks": 0,
+        "tasks": 4,
+        "domains_s": {
+          "monotonic": 245.879863662,
+          "raw": 247.541623357,
+          "realtime": 247.77362453299997
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "aa",
+        "process_runs": 23,
+        "process_runs_known": true,
+        "recorded_process_lower": 23,
+        "full_driver_wall_s": 1607.8042576490002,
+        "conservative_resource_s": 1610.23187487,
+        "failed_tasks": 1,
+        "tasks": 23,
+        "domains_s": {
+          "monotonic": 1607.8042576490002,
+          "raw": 1609.68798842,
+          "realtime": 1609.506019882
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "diagnostic_anchor",
+        "process_runs": 4,
+        "process_runs_known": true,
+        "recorded_process_lower": 4,
+        "full_driver_wall_s": 221.681567481,
+        "conservative_resource_s": 222.168510356,
+        "failed_tasks": 0,
+        "tasks": 4,
+        "domains_s": {
+          "monotonic": 221.681567481,
+          "raw": 221.885072536,
+          "realtime": 222.105259859
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "diagnostic_preflight",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 0.374852005,
+        "conservative_resource_s": 0.376610473,
+        "failed_tasks": 2,
+        "tasks": 2,
+        "domains_s": {
+          "monotonic": 0.374852005,
+          "raw": 0.376610473,
+          "realtime": 0.374853796
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "aa_replacement",
+        "process_runs": 2,
+        "process_runs_known": true,
+        "recorded_process_lower": 2,
+        "full_driver_wall_s": 102.253109026,
+        "conservative_resource_s": 103.73071213099999,
+        "failed_tasks": 0,
+        "tasks": 2,
+        "domains_s": {
+          "monotonic": 102.253109026,
+          "raw": 103.73071213099999,
+          "realtime": 103.63720459800001
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "clock_followup_aa",
+        "process_runs": 8,
+        "process_runs_known": true,
+        "recorded_process_lower": 8,
+        "full_driver_wall_s": 477.76453458099996,
+        "conservative_resource_s": 483.157285839,
+        "failed_tasks": 0,
+        "tasks": 8,
+        "domains_s": {
+          "monotonic": 477.76453458099996,
+          "raw": 482.57141655399994,
+          "realtime": 482.395979205
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "historical_analysis",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 1.776606675,
+        "conservative_resource_s": 1.79031241,
+        "failed_tasks": 0,
+        "tasks": 3,
+        "domains_s": {
+          "monotonic": 1.776606675,
+          "raw": 1.78550597,
+          "realtime": 1.7766093340000002
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "screenshot_validation",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 2.75671459,
+        "conservative_resource_s": 2.757842945,
+        "failed_tasks": 0,
+        "tasks": 1,
+        "domains_s": {
+          "monotonic": 2.75671459,
+          "raw": 2.757842945,
+          "realtime": 2.756715988
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "correctness_test",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 6.601983993,
+        "conservative_resource_s": 7.170852325999999,
+        "failed_tasks": 0,
+        "tasks": 4,
+        "domains_s": {
+          "monotonic": 6.601983993,
+          "raw": 6.66590363,
+          "realtime": 7.116559517
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "short_test",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 2.548176786,
+        "conservative_resource_s": 2.612425372,
+        "failed_tasks": 1,
+        "tasks": 8,
+        "domains_s": {
+          "monotonic": 2.548176786,
+          "raw": 2.612425372,
+          "realtime": 2.5481924449999998
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "numeric_smoke",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 0.5185725539999999,
+        "conservative_resource_s": 0.527333388,
+        "failed_tasks": 0,
+        "tasks": 2,
+        "domains_s": {
+          "monotonic": 0.5185725539999999,
+          "raw": 0.527333388,
+          "realtime": 0.518574823
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "numeric_validation",
+        "process_runs": 2,
+        "process_runs_known": true,
+        "recorded_process_lower": 2,
+        "full_driver_wall_s": 266.414466486,
+        "conservative_resource_s": 271.091947967,
+        "failed_tasks": 0,
+        "tasks": 2,
+        "domains_s": {
+          "monotonic": 266.414466486,
+          "raw": 271.091947967,
+          "realtime": 270.958307816
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "analysis_regression",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 0.770612147,
+        "conservative_resource_s": 0.785743732,
+        "failed_tasks": 0,
+        "tasks": 2,
+        "domains_s": {
+          "monotonic": 0.770612147,
+          "raw": 0.785743732,
+          "realtime": 0.7706138410000001
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "regression",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 15.050159485999998,
+        "conservative_resource_s": 15.703610042,
+        "failed_tasks": 0,
+        "tasks": 3,
+        "domains_s": {
+          "monotonic": 15.050159485999998,
+          "raw": 15.225834379,
+          "realtime": 15.695202263999999
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "goal",
+        "role": "preflight",
+        "process_runs": 0,
+        "process_runs_known": true,
+        "recorded_process_lower": 0,
+        "full_driver_wall_s": 0.255891551,
+        "conservative_resource_s": 0.261049111,
+        "failed_tasks": 0,
+        "tasks": 1,
+        "domains_s": {
+          "monotonic": 0.255891551,
+          "raw": 0.261049111,
+          "realtime": 0.255892541
+        },
+        "unknown_attempts": []
+      },
+      {
+        "stage": "reference",
+        "role": "warmup",
+        "process_runs": 1,
+        "process_runs_known": true,
+        "recorded_process_lower": 1,
+        "full_driver_wall_s": 33.558745205,
+        "conservative_resource_s": 34.217699605,
+        "failed_tasks": 1,
+        "tasks": 1,
+        "domains_s": {
+          "monotonic": 33.558745205,
+          "raw": 34.217699605,
+          "realtime": 34.158560932
+        },
+        "unknown_attempts": []
+      }
+    ],
+    "unfinished_attempts": [],
+    "missing_jobs": [],
+    "complete": true,
+    "totals": {
+      "actual_process_runs": 44,
+      "charged_process_upper": 44,
+      "recorded_ledger_charged_calls": 44,
+      "missing_job_raw_starts": 0
+    }
+  },
+  "measurement_clock_healthy": false,
+  "measurement_clock_health": {
+    "healthy": false,
+    "attempts": [
+      {
+        "attempt_id": "45586dcb04f04acc832ca39456f2451e",
+        "journal": "results/reference_v2/warmup-reference.jsonl",
+        "healthy": false,
+        "conflict": true,
+        "complete": true
+      }
+    ],
+    "missing_jobs": [
+      "results/reference_v2/anchor-r1-00.jsonl",
+      "results/reference_v2/anchor-r1-10.jsonl",
+      "results/reference_v2/anchor-r1-20.jsonl",
+      "results/reference_v2/anchor-r2-00.jsonl",
+      "results/reference_v2/anchor-r2-10.jsonl",
+      "results/reference_v2/anchor-r2-20.jsonl",
+      "results/reference_v2/anchor-r3-00.jsonl",
+      "results/reference_v2/anchor-r3-10.jsonl",
+      "results/reference_v2/anchor-r3-20.jsonl",
+      "results/reference_v2/ref-r1-01.jsonl",
+      "results/reference_v2/ref-r1-02.jsonl",
+      "results/reference_v2/ref-r1-03.jsonl",
+      "results/reference_v2/ref-r1-04.jsonl",
+      "results/reference_v2/ref-r1-05.jsonl",
+      "results/reference_v2/ref-r1-06.jsonl",
+      "results/reference_v2/ref-r1-07.jsonl",
+      "results/reference_v2/ref-r1-08.jsonl",
+      "results/reference_v2/ref-r1-09.jsonl",
+      "results/reference_v2/ref-r1-10.jsonl",
+      "results/reference_v2/ref-r1-11.jsonl",
+      "results/reference_v2/ref-r1-12.jsonl",
+      "results/reference_v2/ref-r1-13.jsonl",
+      "results/reference_v2/ref-r1-14.jsonl",
+      "results/reference_v2/ref-r1-15.jsonl",
+      "results/reference_v2/ref-r1-16.jsonl",
+      "results/reference_v2/ref-r1-17.jsonl",
+      "results/reference_v2/ref-r1-18.jsonl",
+      "results/reference_v2/ref-r1-19.jsonl",
+      "results/reference_v2/ref-r1-20.jsonl",
+      "results/reference_v2/ref-r2-01.jsonl",
+      "results/reference_v2/ref-r2-02.jsonl",
+      "results/reference_v2/ref-r2-03.jsonl",
+      "results/reference_v2/ref-r2-04.jsonl",
+      "results/reference_v2/ref-r2-05.jsonl",
+      "results/reference_v2/ref-r2-06.jsonl",
+      "results/reference_v2/ref-r2-07.jsonl",
+      "results/reference_v2/ref-r2-08.jsonl",
+      "results/reference_v2/ref-r2-09.jsonl",
+      "results/reference_v2/ref-r2-10.jsonl",
+      "results/reference_v2/ref-r2-11.jsonl",
+      "results/reference_v2/ref-r2-12.jsonl",
+      "results/reference_v2/ref-r2-13.jsonl",
+      "results/reference_v2/ref-r2-14.jsonl",
+      "results/reference_v2/ref-r2-15.jsonl",
+      "results/reference_v2/ref-r2-16.jsonl",
+      "results/reference_v2/ref-r2-17.jsonl",
+      "results/reference_v2/ref-r2-18.jsonl",
+      "results/reference_v2/ref-r2-19.jsonl",
+      "results/reference_v2/ref-r2-20.jsonl",
+      "results/reference_v2/ref-r3-01.jsonl",
+      "results/reference_v2/ref-r3-02.jsonl",
+      "results/reference_v2/ref-r3-03.jsonl",
+      "results/reference_v2/ref-r3-04.jsonl",
+      "results/reference_v2/ref-r3-05.jsonl",
+      "results/reference_v2/ref-r3-06.jsonl",
+      "results/reference_v2/ref-r3-07.jsonl",
+      "results/reference_v2/ref-r3-08.jsonl",
+      "results/reference_v2/ref-r3-09.jsonl",
+      "results/reference_v2/ref-r3-10.jsonl",
+      "results/reference_v2/ref-r3-11.jsonl",
+      "results/reference_v2/ref-r3-12.jsonl",
+      "results/reference_v2/ref-r3-13.jsonl",
+      "results/reference_v2/ref-r3-14.jsonl",
+      "results/reference_v2/ref-r3-15.jsonl",
+      "results/reference_v2/ref-r3-16.jsonl",
+      "results/reference_v2/ref-r3-17.jsonl",
+      "results/reference_v2/ref-r3-18.jsonl",
+      "results/reference_v2/ref-r3-19.jsonl",
+      "results/reference_v2/ref-r3-20.jsonl"
+    ],
+    "states": {
+      "results/reference_v2/warmup-reference.jsonl": "clock_conflict",
+      "results/reference_v2/anchor-r1-00.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r1-10.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r1-20.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r2-00.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r2-10.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r2-20.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r3-00.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r3-10.jsonl": "clock_unverified",
+      "results/reference_v2/anchor-r3-20.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-01.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-02.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-03.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-04.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-05.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-06.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-07.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-08.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-09.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-10.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-11.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-12.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-13.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-14.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-15.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-16.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-17.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-18.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-19.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r1-20.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-01.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-02.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-03.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-04.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-05.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-06.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-07.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-08.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-09.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-10.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-11.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-12.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-13.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-14.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-15.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-16.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-17.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-18.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-19.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r2-20.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-01.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-02.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-03.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-04.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-05.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-06.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-07.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-08.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-09.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-10.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-11.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-12.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-13.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-14.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-15.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-16.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-17.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-18.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-19.jsonl": "clock_unverified",
+      "results/reference_v2/ref-r3-20.jsonl": "clock_unverified"
+    }
+  },
+  "reference_complete": false,
+  "decisions": {
+    "comparison": {
+      "decision": "NOT_EXECUTED",
+      "reasons": [
+        "no actual search is recorded for comparison"
+      ],
+      "executed": false,
+      "observed_search_tasks": [],
+      "evaluation_complete": false,
+      "dependencies": [
+        "the complete 20-configuration reference table is unavailable",
+        "the compared measurements have unresolved clock conflicts or missing clock evidence",
+        "the required valid paired searches and common confirmation panels are incomplete"
+      ]
+    },
+    "confirmation": {
+      "decision": "NOT_EXECUTED",
+      "reasons": [
+        "S3 confirmation has not executed; the main selection or its new-seed confirmation remains pending"
+      ],
+      "executed": false,
+      "observed_search_tasks": [],
+      "evaluation_complete": false,
+      "dependencies": [
+        "the complete 20-configuration reference table is unavailable",
+        "the compared measurements have unresolved clock conflicts or missing clock evidence",
+        "the required valid paired searches and common confirmation panels are incomplete",
+        "a completed main selection must precede candidate confirmation"
+      ]
+    }
+  },
+  "retention": {
+    "selection": "NOT_EXECUTED",
+    "confirmation": "NOT_EXECUTED",
+    "retained": false,
+    "default_algorithm": "random"
+  },
+  "baseline_confirmation": {
+    "expected_seeds": [
+      1328375,
+      1433104,
+      1537833
+    ],
+    "observed_seeds": [],
+    "complete": false,
+    "quality_classes": []
+  }
+}

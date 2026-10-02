@@ -1,0 +1,2 @@
+stage,component,process_runs,valid_runs,failed_runs,kernel_recorded_s,process_recorded_s,unknown_kernel_runs,unknown_process_runs
+reference,warmup,1,0,1,32.74292,33.337630412,0,0

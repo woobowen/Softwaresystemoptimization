@@ -1,0 +1,9 @@
+{
+  "ledger_path": "evidence/measurement/resource_ledger.jsonl",
+  "snapshot_bytes": 165878,
+  "snapshot_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+  "usage": [
+    44,
+    3151.888304869
+  ]
+}

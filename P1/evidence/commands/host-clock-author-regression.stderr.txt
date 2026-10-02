@@ -1,0 +1,18 @@
+test_backwards_interval_is_rejected (test_host_clock_probe.HostClockTests.test_backwards_interval_is_rejected) ... ok
+test_buffered_second_line_is_not_lost (test_host_clock_probe.HostClockTests.test_buffered_second_line_is_not_lost) ... ok
+test_cleanup_is_bound_to_a_process_object (test_host_clock_probe.HostClockTests.test_cleanup_is_bound_to_a_process_object) ... ok
+test_excessive_endpoint_latency_cannot_be_usable (test_host_clock_probe.HostClockTests.test_excessive_endpoint_latency_cannot_be_usable) ... ok
+test_integer_ticks_and_endpoint_uncertainty (test_host_clock_probe.HostClockTests.test_integer_ticks_and_endpoint_uncertainty) ... ok
+test_invalid_response_raw_is_preserved (test_host_clock_probe.HostClockTests.test_invalid_response_raw_is_preserved) ... ok
+test_oversized_reply_is_rejected (test_host_clock_probe.HostClockTests.test_oversized_reply_is_rejected) ... ok
+test_partial_line_has_a_deadline (test_host_clock_probe.HostClockTests.test_partial_line_has_a_deadline) ... ok
+test_failed_workload (test_host_clock_probe.NativeHostCleanupTests.test_failed_workload) ... ok
+test_normal (test_host_clock_probe.NativeHostCleanupTests.test_normal) ... ok
+test_sigterm (test_host_clock_probe.NativeHostCleanupTests.test_sigterm) ... ok
+test_sigterm_during_cleanup (test_host_clock_probe.NativeHostCleanupTests.test_sigterm_during_cleanup) ... ok
+test_timeout (test_host_clock_probe.NativeHostCleanupTests.test_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.819s
+
+OK

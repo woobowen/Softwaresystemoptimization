@@ -1,0 +1,489 @@
+{
+  "reviewer": "/root/review",
+  "at_utc": "2026-10-02T18:32:33.692412+00:00",
+  "state": "GENUINE_FROZEN_COMPLETE_CLOCK_GUARD_TRIGGER_FORMAL_MEASUREMENT_STOPPED",
+  "independent_without_project_helpers": true,
+  "source_checkpoint": "6463e2a3ab507debf02204d555c1f2083257235e",
+  "frozen_protocol_sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+  "primary_attempt_id": "45586dcb04f04acc832ca39456f2451e",
+  "warmup_raw_sha256": "348dd486037b3656e1b64ff6d15c67298e1ffb454c9ed4a5239bf3909cd2002f",
+  "raw_resource_ledger_prefix_sha256": "93a9eaa4827cd8468274dbf0fc9d06dcef9c786c311b028fdd59718deb6ed6a1",
+  "raw_clock_recount": {
+    "target_process": {
+      "span_s": {
+        "monotonic": 33.337630412,
+        "raw": 33.990309693,
+        "realtime": 33.937446023
+      },
+      "q": 1.0195778546025593,
+      "references": [
+        {
+          "identity": [
+            "e68dcc091e74490694a8b3532e8c215d",
+            0,
+            0,
+            248077
+          ],
+          "attempt_id": "d30f547b4da1406eac53b6b92250e447",
+          "q": 0.9981160219083189
+        },
+        {
+          "identity": [
+            "b6b64cd002b84b45a9c82af434713c20",
+            0,
+            0,
+            328562
+          ],
+          "attempt_id": "5fa6da79df0a4b178193737082b6bf0b",
+          "q": 1.0175708210627565
+        }
+      ],
+      "first_relative_change_pct": 2.150234263668782,
+      "previous_relative_change_pct": 0.1972377252039026,
+      "threshold_pct": 2,
+      "conflict": true,
+      "valid_history_intervals": 38
+    },
+    "driver": {
+      "span_s": {
+        "monotonic": 33.558745205,
+        "raw": 34.217699605,
+        "realtime": 34.158560932
+      },
+      "q": 1.01963584740653,
+      "references": [
+        {
+          "identity": "a754f5ea5bc94becb31302b4966a852d",
+          "q": 0.9986300261262919
+        },
+        {
+          "identity": "5fa6da79df0a4b178193737082b6bf0b",
+          "q": 1.0175726205657998
+        }
+      ],
+      "first_relative_change_pct": 2.1034638184994403,
+      "previous_relative_change_pct": 0.20275966540677093,
+      "threshold_pct": 2,
+      "conflict": true,
+      "valid_history_intervals": 42
+    }
+  },
+  "identity": {
+    "formal_source": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "framework": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "driver": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "compiler": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+    "binary": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c",
+    "all_actual_file_bytes_match": true,
+    "build_cached": true,
+    "same_s128_O2": true,
+    "units": "integerns before difference/conversion",
+    "read_order": [
+      "CLOCK_MONOTONIC",
+      "CLOCK_MONOTONIC_RAW",
+      "CLOCK_REALTIME"
+    ],
+    "boundary_read_order": {
+      "start": [
+        "CLOCK_MONOTONIC",
+        "CLOCK_MONOTONIC_RAW",
+        "CLOCK_REALTIME",
+        "RUSAGE_CHILDREN"
+      ],
+      "end": [
+        "RUSAGE_CHILDREN",
+        "CLOCK_MONOTONIC",
+        "CLOCK_MONOTONIC_RAW",
+        "CLOCK_REALTIME"
+      ]
+    }
+  },
+  "target_exit_code": 0,
+  "raw_kernel_s": 32.74292,
+  "checksum": 17180040496.458935,
+  "kernel_over_process_guard_passed": true,
+  "guard_coverage_complete": true,
+  "cost": {
+    "known": true,
+    "attempt_calls": 1,
+    "driver_monotonic_s": 33.558745205,
+    "resource_max_domains_s": 34.217699605,
+    "total_calls_through_stop": 44,
+    "total_raw_ns_max_domains_resource_s_through_stop": 3091.299055679
+  },
+  "owned_recorded_pids_currently_present": {
+    "346736": false,
+    "346737": false,
+    "346738": false
+  },
+  "reference_progress": {
+    "warmup_launched": 1,
+    "new_reference_score_samples": 0,
+    "new_reference_configs_completed": 0,
+    "missing_required_reference_samples": 60,
+    "batch_driver_copy_present": false,
+    "primary_end_saved_despite_controlled_raise": true
+  },
+  "interpretation": {
+    "parser_unit_integer_precision_failure_found": false,
+    "source_binary_timer_version_mismatch_found": false,
+    "first_and_previous_implementation_matches_frozen_rule": true,
+    "both_complete_sources_flag_first": true,
+    "previous_interval_alone_would_not_flag": true,
+    "absolute_clock_truth_proven": false,
+    "timesyncd_or_host_root_cause_proven": false
+  },
+  "performance_dependencies": "reference/main/S3/holdout/startpanel cannot continue under frozen guard until a justified reviewed closure; do not relax thresholds/deletefirst/rebaseline/rewrite formal results",
+  "next_finite_paths": [
+    "rawns/source-specific first+previous replay completed here",
+    "independent same-interval short multiclock probe plus readonly timex",
+    "actual service logs/clocksource readonly"
+  ],
+  "review_n4096_calls": 0,
+  "review_tests_or_compiles": 0,
+  "formal_performance_continue_admission": false,
+  "goal2_complete": false,
+  "candidate_keep": false,
+  "engineering_pass": false,
+  "finite_readonly_probe_design_gate": {
+    "at_utc": "2026-10-02T18:33:55.609386+00:00",
+    "state": "APPROVED_EXACT_TWO_OLD_CONSTRUCTION_PROBES_NOT_FORMAL_READMISSION",
+    "path": "evidence/measurement/formal_clock_drift_design.md",
+    "sha256": "fc8ae2aa79a893838c94102593942a6cd4792f40a5ac7750a22df8e712ac4daf",
+    "jobs": [
+      {
+        "task": "formal-drift-idle40",
+        "mode": "idle",
+        "count": 0,
+        "idle_s": 40,
+        "timeout_s": 300
+      },
+      {
+        "task": "formal-drift-work8e9",
+        "mode": "work",
+        "count": 8000000000,
+        "idle_s": 0,
+        "timeout_s": 300
+      }
+    ],
+    "probe_source_actual_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9",
+    "probe_binary_actual_sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+    "compiler_actual_sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+    "adjtimex_modes": 0,
+    "new_compilation": false,
+    "n4096_calls_upper": 0,
+    "total_timeout_s_upper": 600,
+    "resource_time_still_charged": true,
+    "old_same_mode_comparison_samples": [
+      "probe-5-idle",
+      "probe-6-work",
+      "probe-7-work"
+    ],
+    "global_or_service_changes_authorized": false,
+    "first_previous_or_threshold_changes_authorized": false,
+    "any_probe_result_automatically_restores_formal_admission": false
+  },
+  "finite_readonly_probe_actual_review": {
+    "at_utc": "2026-10-02T18:40:03.689471+00:00",
+    "state": "EXACT_TWO_READONLY_PROBES_COMPLETED_RAW_NS_INDEPENDENTLY_RECOUNTED",
+    "probe_rows": [
+      {
+        "label": "old-idle40",
+        "path": "evidence/measurement/clocks/probe-5-idle.stdout.txt",
+        "raw_sha256": "87f73d5e047ee520c6505a72786cd5eb9aaae0d5fdf555dc1fdfb66fc382ce88",
+        "mode": "idle",
+        "iterations": 0,
+        "idle_s": 40,
+        "elapsed_s": {
+          "MONOTONIC": 40.0070531,
+          "RAW": 40.236572701,
+          "REALTIME": 40.007053171,
+          "PROCESS_CPU": 5.7622e-05
+        },
+        "RAW_over_MONO": 1.0057369784379344,
+        "REALTIME_over_MONO": 1.000000001774687,
+        "CPU_over_MONO": 1.4402960362006767e-06,
+        "CPU_over_RAW": 1.4320802228408465e-06,
+        "timex_raw": {
+          "adjtimex_readonly": true,
+          "returncode": 0,
+          "offset_raw": 85,
+          "offset_unit": "us",
+          "frequency_scaled_ppm": 324036,
+          "tick_us": 10746,
+          "status": 0,
+          "precision_us": 1
+        },
+        "frequency_ppm": 4.94439697265625,
+        "raw_ns_exactly_match_printed_seconds": true
+      },
+      {
+        "label": "old-work8e9-1",
+        "path": "evidence/measurement/clocks/probe-6-work.stdout.txt",
+        "raw_sha256": "8e5ccca20a0d7fac128a47abdbb9e09d29473ebde4c7409be2f54965d7767443",
+        "mode": "work",
+        "iterations": 8000000000,
+        "idle_s": 0,
+        "elapsed_s": {
+          "MONOTONIC": 19.506154108,
+          "RAW": 19.15499602,
+          "REALTIME": 19.506154051,
+          "PROCESS_CPU": 19.150416736
+        },
+        "RAW_over_MONO": 0.9819975744036605,
+        "REALTIME_over_MONO": 0.9999999970778453,
+        "CPU_over_MONO": 0.9817628134161975,
+        "CPU_over_RAW": 0.9997609352674771,
+        "timex_raw": {
+          "adjtimex_readonly": true,
+          "returncode": 0,
+          "offset_raw": 63457,
+          "offset_unit": "us",
+          "frequency_scaled_ppm": -6856548,
+          "tick_us": 9960,
+          "status": 0,
+          "precision_us": 1
+        },
+        "frequency_ppm": -104.62261962890625,
+        "raw_ns_exactly_match_printed_seconds": true
+      },
+      {
+        "label": "old-work8e9-2",
+        "path": "evidence/measurement/clocks/probe-7-work.stdout.txt",
+        "raw_sha256": "bf4a83678245241897b5b2f488a8e3ac9a52249bf8fe727d1c645f737b4e089a",
+        "mode": "work",
+        "iterations": 8000000000,
+        "idle_s": 0,
+        "elapsed_s": {
+          "MONOTONIC": 19.256039052,
+          "RAW": 19.463207849,
+          "REALTIME": 19.256039028,
+          "PROCESS_CPU": 19.438453388
+        },
+        "RAW_over_MONO": 1.0107586402603648,
+        "REALTIME_over_MONO": 0.9999999987536379,
+        "CPU_over_MONO": 1.0094730975309822,
+        "CPU_over_RAW": 0.9987281407467848,
+        "timex_raw": {
+          "adjtimex_readonly": true,
+          "returncode": 0,
+          "offset_raw": 4391,
+          "offset_unit": "us",
+          "frequency_scaled_ppm": -449039,
+          "tick_us": 9960,
+          "status": 0,
+          "precision_us": 1
+        },
+        "frequency_ppm": -6.8517913818359375,
+        "raw_ns_exactly_match_printed_seconds": true
+      },
+      {
+        "label": "new-idle40",
+        "path": "evidence/measurement/formal_clock_drift/probe-idle40.stdout.txt",
+        "raw_sha256": "9955a6fc209b5291923214a3398da1f345a20ec5ad6fbd93f471c37c956f8043",
+        "mode": "idle",
+        "iterations": 0,
+        "idle_s": 40,
+        "elapsed_s": {
+          "MONOTONIC": 40.000076353,
+          "RAW": 40.856237023,
+          "REALTIME": 40.706880358,
+          "PROCESS_CPU": 2.4012e-05
+        },
+        "RAW_over_MONO": 1.0214039758935558,
+        "REALTIME_over_MONO": 1.0176700663959355,
+        "CPU_over_MONO": 6.002988541345398e-07,
+        "CPU_over_RAW": 5.877193238937413e-07,
+        "timex_raw": {
+          "adjtimex_readonly": true,
+          "returncode": 0,
+          "offset_raw": 0,
+          "offset_unit": "ns",
+          "frequency_scaled_ppm": 498196,
+          "tick_us": 9790,
+          "status": 8192,
+          "precision_us": 1
+        },
+        "frequency_ppm": 7.60186767578125,
+        "raw_ns_exactly_match_printed_seconds": true
+      },
+      {
+        "label": "new-work8e9",
+        "path": "evidence/measurement/formal_clock_drift/probe-work8e9.stdout.txt",
+        "raw_sha256": "903bd8674254d14da94c4ff458231532ea4f817ba434487323ce702c9e636abd",
+        "mode": "work",
+        "iterations": 8000000000,
+        "idle_s": 0,
+        "elapsed_s": {
+          "MONOTONIC": 18.788800085,
+          "RAW": 19.190231442,
+          "REALTIME": 19.479207337,
+          "PROCESS_CPU": 19.185461714
+        },
+        "RAW_over_MONO": 1.0213654600178799,
+        "REALTIME_over_MONO": 1.0367456808777897,
+        "CPU_over_MONO": 1.0211115998470106,
+        "CPU_over_RAW": 0.9997514502097372,
+        "timex_raw": {
+          "adjtimex_readonly": true,
+          "returncode": 0,
+          "offset_raw": 0,
+          "offset_unit": "ns",
+          "frequency_scaled_ppm": -761136,
+          "tick_us": 9792,
+          "status": 8192,
+          "precision_us": 1
+        },
+        "frequency_ppm": -11.614013671875,
+        "raw_ns_exactly_match_printed_seconds": true
+      }
+    ],
+    "controlled_costs": [
+      {
+        "task": "probe-idle40",
+        "attempt_id": "5fe76d8bd437425c996863a5a6dd068a",
+        "actual_command": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe",
+          "idle",
+          "0",
+          "40"
+        ],
+        "clock_elapsed_s": {
+          "monotonic": 40.026365269,
+          "raw": 40.883090969,
+          "realtime": 40.733170962
+        },
+        "max_resource_s": 40.883090969,
+        "matrix_calls": 0
+      },
+      {
+        "task": "probe-work8e9",
+        "attempt_id": "4b459a792785473cb82f70c83f0c2471",
+        "actual_command": [
+          "taskset",
+          "-c",
+          "0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe",
+          "work",
+          "8000000000",
+          "0"
+        ],
+        "clock_elapsed_s": {
+          "monotonic": 19.015749519,
+          "raw": 19.42200622,
+          "realtime": 19.706158221
+        },
+        "max_resource_s": 19.706158221,
+        "matrix_calls": 0
+      }
+    ],
+    "new_probe_resource_s": 60.589249190000004,
+    "new_n4096_calls": 0,
+    "findings": [
+      "Change appears in both idle and fixed workload independently of matrix parsing/initialization.",
+      "The new work CPU/RAW is near1 while CPU/MONO is higher; relative evidence, not absolute-clock truth.",
+      "Old work probes also differ materially; retain both instead of selecting a favorable old sample.",
+      "Timex status8192 and tick/frequency changed; no specific service or host cause proved."
+    ],
+    "formal_continue_admission": false,
+    "automatic_first_or_threshold_change": false,
+    "new_probe_target_labels": "actual ledger labels probe-idle40/probe-work8e9 differ from proposed formal-drift labels; commands/order/modes/counts remained exact"
+  },
+  "readonly_system_path_review": {
+    "at_utc": "2026-10-02T18:48:53.393234+00:00",
+    "path": "evidence/measurement/formal_clock_drift/system_readonly.json",
+    "sha256": "3aa53bc6141e9fe113a55261e41da120a693b560f3659dd4f11b62deefced76a",
+    "commands_read_as_saved_not_rerun": [
+      [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd"
+      ],
+      [
+        "timedatectl",
+        "show",
+        "-p",
+        "NTP",
+        "-p",
+        "NTPSynchronized",
+        "-p",
+        "TimeUSec"
+      ],
+      [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "--since",
+        "2026-10-02 13:29:47 UTC",
+        "--until",
+        "2026-10-02 18:27:00 UTC",
+        "--no-pager",
+        "-n",
+        "40",
+        "-o",
+        "json"
+      ]
+    ],
+    "timesyncd_active": true,
+    "NTP_enabled": true,
+    "NTPSynchronized_reported": true,
+    "current_clocksource": "tsc",
+    "timex_raw": {
+      "readonly": true,
+      "offset_raw": 0,
+      "frequency_scaled_ppm": -840840,
+      "tick_us": 9721,
+      "status": 8192,
+      "precision_us": 1,
+      "returncode": 0,
+      "offset_unit": "ns"
+    },
+    "journal_record_count": 2,
+    "journal_REALTIME_timestamps_UTC": [
+      "2026-10-02T13:38:32.507326+00:00",
+      "2026-10-02T13:38:32.696767+00:00"
+    ],
+    "journal_window_end_UTC": "2026-10-02T18:27:00+00:00",
+    "events_prove_cause_at_warmup_UTC18_25": false,
+    "host_clock_root_cause_known": false,
+    "service_or_global_config_changes_executed": false
+  },
+  "finite_diagnostic_closure": {
+    "at_utc": "2026-10-02T18:48:53.393234+00:00",
+    "completed_distinct_paths": [
+      "raw parse/units/source/binary/first+previous complete interval independent replay",
+      "two fixed construction independent idle/work probes and every old same-mode comparison",
+      "actual readonly service/log/clocksource/timex saved command evidence"
+    ],
+    "software_bug_causing_guard_found": false,
+    "authorized_local_fix_proved_to_restore_frozen_comparability": false,
+    "formal_continue_admission": false,
+    "affected_deliveries": [
+      "new20x3reference",
+      "sixnewblocks baselinealgorithms",
+      "S3samebudget control and selection",
+      "requirednewseedperformanceconfirmation",
+      "Greedystructuralstarts"
+    ],
+    "can_continue": [
+      "history version reproduction",
+      "code/functional and clean reproduction with accurate clock status",
+      "concise report/current evidence",
+      "secure real screenshots and visuals",
+      "independent final reviews",
+      "honest partial stage publication"
+    ],
+    "must_not_do": [
+      "repeat formal until one favorable interval",
+      "deletefirst or relax2%",
+      "retroactively calibrateMONO",
+      "promoteRAWorCPUtoabsoluteclockwithoutnewproof",
+      "claimunexecuted or blocked performanceascomplete"
+    ],
+    "current_stage_performance_state": "BLOCKED_UNDER_FROZEN_PROTOCOL",
+    "goal2_complete": false
+  }
+}

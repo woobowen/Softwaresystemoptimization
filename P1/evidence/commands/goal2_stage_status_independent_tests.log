@@ -1,0 +1,888 @@
+{
+  "reviewer": "/root/implementation",
+  "started_at_utc": "2026-10-02T19:21:13.451070+00:00",
+  "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+  "source_before_sha256": {
+    "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "tests/test_goal2_summary.py": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+  },
+  "expected_source_sha256": {
+    "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "tests/test_goal2_summary.py": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+  },
+  "n4096_calls": 0,
+  "c_compilations": 0,
+  "plots_or_gui": 0,
+  "controlled": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "primary_ledger_record": {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.057079+00:00",
+        "task": "goal2-stage-status-independent-65",
+        "role": "short_test",
+        "attempt_id": "116fbd8bc808405aa7cb7955bafd91ff",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.505531393,
+        "clock_elapsed_s": {
+          "monotonic": 0.505531393,
+          "raw": 0.517116812,
+          "realtime": 0.505533107
+        },
+        "clock_end_ns": {
+          "monotonic": 87614312511097,
+          "raw": 91748523855575,
+          "realtime": 1790968874056575605
+        },
+        "resource_s": 0.517116812,
+        "resource_wall_s": 0.517116812,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-65.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-65.stderr.txt"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import py_compile; py_compile.compile('P1/scripts/summarize_v2.py', cfile='P1/.cache/goal2-stage-status-independent/summarize_v2.pyc', doraise=True); py_compile.compile('P1/tests/test_goal2_summary.py', cfile='P1/.cache/goal2-stage-status-independent/test_goal2_summary.pyc', doraise=True)"
+      ],
+      "primary_ledger_record": {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.319447+00:00",
+        "task": "goal2-stage-status-independent-syntax",
+        "role": "short_test",
+        "attempt_id": "62b9f40436514793bf9c8aba58cd66b0",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254369309,
+        "clock_elapsed_s": {
+          "monotonic": 0.254369309,
+          "raw": 0.260258735,
+          "realtime": 0.254371066
+        },
+        "clock_end_ns": {
+          "monotonic": 87614575126807,
+          "raw": 91748792550008,
+          "realtime": 1790968874319190921
+        },
+        "resource_s": 0.260258735,
+        "resource_wall_s": 0.260258735,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-syntax.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-syntax.stderr.txt"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "P1/scripts/summarize_v2.py",
+        "--protocol",
+        "P1/evidence/protocol_v2.json",
+        "--reference",
+        "P1/results/reference_v2",
+        "--ledger",
+        "P1/.cache/formal-stop-ledger.jsonl",
+        "--output-dir",
+        "P1/.cache/goal2-stage-status-independent/derived"
+      ],
+      "primary_ledger_record": {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.591107+00:00",
+        "task": "goal2-stage-status-independent-closed-cli",
+        "role": "analysis",
+        "attempt_id": "833304fd3c8d413d8dabc61066f88957",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254489109,
+        "clock_elapsed_s": {
+          "monotonic": 0.254489109,
+          "raw": 0.260381236,
+          "realtime": 0.254490614
+        },
+        "clock_end_ns": {
+          "monotonic": 87614846781773,
+          "raw": 91749070493236,
+          "realtime": 1790968874590845645
+        },
+        "resource_s": 0.260381236,
+        "resource_wall_s": 0.260381236,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-closed-cli.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-closed-cli.stderr.txt"
+      }
+    }
+  ],
+  "actual_cli_summary_sha256": "f77c0910b3bd4423e614165465f8f81a48032e8b834d4d5cd2857e1d100f66bb",
+  "actual_cli_analysis_sha256": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+  "analysis_input_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+  "summary": {
+    "reference_complete": false,
+    "measurement_clock_healthy": false,
+    "decisions": {
+      "comparison": {
+        "decision": "NOT_EXECUTED",
+        "reasons": [
+          "no actual search is recorded for comparison"
+        ],
+        "executed": false,
+        "observed_search_tasks": [],
+        "evaluation_complete": false,
+        "dependencies": [
+          "the complete 20-configuration reference table is unavailable",
+          "the compared measurements have unresolved clock conflicts or missing clock evidence",
+          "the required valid paired searches and common confirmation panels are incomplete"
+        ]
+      },
+      "confirmation": {
+        "decision": "NOT_EXECUTED",
+        "reasons": [
+          "S3 confirmation has not executed; the main selection or its new-seed confirmation remains pending"
+        ],
+        "executed": false,
+        "observed_search_tasks": [],
+        "evaluation_complete": false,
+        "dependencies": [
+          "the complete 20-configuration reference table is unavailable",
+          "the compared measurements have unresolved clock conflicts or missing clock evidence",
+          "the required valid paired searches and common confirmation panels are incomplete",
+          "a completed main selection must precede candidate confirmation"
+        ]
+      }
+    },
+    "retention": {
+      "selection": "NOT_EXECUTED",
+      "confirmation": "NOT_EXECUTED",
+      "retained": false,
+      "default_algorithm": "random"
+    },
+    "baseline_confirmation": {
+      "expected_seeds": [
+        1328375,
+        1433104,
+        1537833
+      ],
+      "observed_seeds": [],
+      "complete": false,
+      "quality_classes": []
+    }
+  },
+  "costs_complete": true,
+  "cost_totals": {
+    "actual_process_runs": 44,
+    "charged_process_upper": 44,
+    "recorded_ledger_charged_calls": 44,
+    "missing_job_raw_starts": 0
+  },
+  "task_states": [
+    {
+      "stage": "reference",
+      "id": "warmup-reference",
+      "role": "warmup",
+      "state": "clock_conflict",
+      "actual_process_starts": 1,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r1-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r1-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r2-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r2-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-00",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-01",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-02",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-03",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-04",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-05",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-06",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-07",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-08",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-09",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-10",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-10",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-11",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-12",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-13",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-14",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-15",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-16",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-17",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-18",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-19",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "ref-r3-20",
+      "role": "reference",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    },
+    {
+      "stage": "reference",
+      "id": "anchor-r3-20",
+      "role": "anchor",
+      "state": "clock_unverified",
+      "actual_process_starts": 0,
+      "valid_measurements": 0,
+      "interrupted_measurements": 0
+    }
+  ],
+  "verification_exit_code": 0,
+  "protected_input_files": 516,
+  "protected_inputs_unchanged": true,
+  "source_after_sha256": {
+    "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "tests/test_goal2_summary.py": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+  },
+  "source_unchanged": true,
+  "ended_at_utc": "2026-10-02T19:21:14.624117+00:00",
+  "protected_input_manifest_before_sha256": "a3362a8c194e6d1d7c22f8dda5072f1451ef66b9b1a80563b2c64d08cd6bf9c7",
+  "protected_input_manifest_after_sha256": "a3362a8c194e6d1d7c22f8dda5072f1451ef66b9b1a80563b2c64d08cd6bf9c7",
+  "changed_protected_inputs": [],
+  "critical_input_sha256": {
+    "evidence/protocol_v2.json": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+    "evidence/protocol_v2.md": "dcf635a1abe3b6e6c72c64f4658dcafd519f4008463e6b5b5aa15533fa3df41c",
+    ".cache/formal-stop-ledger.jsonl": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+    "results/reference_v2/plan.json": "62db9f54de38d611e8f2cd59701b836106ab4bca1a532e4497e8180a5beca54c",
+    "results/reference_v2/warmup-reference.jsonl": "348dd486037b3656e1b64ff6d15c67298e1ffb454c9ed4a5239bf3909cd2002f",
+    "results/reference_v2/warmup-reference.stdout.txt": "49be6f7fce969da82b9ee51adb7f96f0c7d5b34749299e612039657bb6179833",
+    "results/reference_v2/warmup-reference.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "tests": 65,
+  "suite_reported_s": 0.34,
+  "test_failures": 0,
+  "test_errors": 0,
+  "python_syntax_checks": 2,
+  "independent_closed_recount": {
+    "independent_of_analysis_function_imports": true,
+    "closed_ledger_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+    "ledger_rows": 251,
+    "task_starts": 84,
+    "task_ends": 84,
+    "unfinished_attempts": [],
+    "actual_calls": 44,
+    "monotonic_driver_s": 3131.3716400470016,
+    "max_domain_resource_s": 3151.8883048689995,
+    "derived_costs_match_raw_ns": true,
+    "failed_tasks": 5,
+    "valid_new_reference_samples": 0
+  }
+}

@@ -204,3 +204,29 @@ M1 的原完整样本 D=1.8442951、P=13.7846047，按预定规则得到 rho=14�
 本审核者另实际读取主控总回归原始输出：`goal2-all-nongui-tests.stderr.txt` 为 174 项、11.514 秒、OK；`goal2-all-native-screenshot-tests.stderr.txt` 为 4 项、2.685 秒、OK；作者最终 fixture 原始输出为 1 项、0.010 秒、OK。16 个 Python 语法检查由主控报告退出 0；这些实际执行角色仍标为主控/作者，没有冒充本角色独立跑了 178。
 
 **方法/分析生产代码关口的意见：已审、未发现仍开放的 AS8–AS12 依赖；允许在主控完成精确协议/源码冻结后进入所述粗粒度真实比较。** 签名身份为分析 `3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb`、最终分析测试 `32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d`、driver `b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f`。协议状态仍待冻结；改变影响测量的这些身份需重新检查相关关口。不同配置身份风险支持 flag 保持 false，5%/2pp/10% 标准不放宽，真实实验最终判定、全部图片和干净复现另审。没有授予整个阶段/项目最终 Engineering PASS。
+
+## 正式受阻之后的阶段标签修复（AS14，独立执行待授权窗口）
+
+上段是冻结前的历史关口记录。后来协议按 `8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b` 冻结，真实正式参照的第一项预热完成后，完整区间相对首个基准超过原 2% 保护，停止测量。项目已有 44 次 n4096 调用，新增正式参照有效数为 0；六块在线搜索及 S3 尚未开始，不能把它们写成完成的 REJECT 或让未执行确认成为 NOT_REQUIRED。
+
+本角色连续阅读当前生产 diff：新增 `search_stage_decisions:1262–1311` 及 `main:1747–1757` 的归类入口，没有改变接受数值、原始观测重放或时钟/成本判定。实际 session/trial/build/measurement/summary 记录才算开始，计划或 header-only 不算；S3 确认的实际开始仅检查 recheck，Random 基线留出另列。只有完整有效主比较未获选，候选留出才为 NOT_REQUIRED；完整但不同身份风险依据不足的 INCONCLUSIVE 属未获选，仍保留三个新种子的基线稳定性确认要求。时钟/成本/参照/配对缺失阻止 evaluation_complete，未开始留出继续 NOT_EXECUTED，已获选但未确认不能保留。
+
+当前分析 SHA `eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147`，测试 SHA `16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061`，driver SHA `b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f`。新增六个 fixtures 覆盖未开始、只计划、部分/时钟/成本受阻、完整未获选（含基线留出）、获选缺确认（含基线留出）、完整存盘受阻预热 CLI。静态未发现新的开放问题，实际独立 65 项、两项语法及闭合账本 CLI 仍待主控授予独占窗口，尚未宣称该版本实际通过。
+
+本角色读取作者原始输出：先前 helper 源码 `8111d72e…` 上 65 项、suite 0.407 秒、OK；最终 `eded9312…` 的两项相关测试 0.001 秒、OK，属于作者执行。保存的 `formal_clock_drift/analysis_after_fix/summary.json` 也明确来自较早 `8111d72e…`，不能当最终源码的 CLI 重算。它如实给出 44 调用/已知成本完整、reference_complete=false、measurement_clock_healthy=false，主比较及 S3 确认均 NOT_EXECUTED，基线确认不完整、默认 Random。后续独立重算写到忽略缓存，不覆盖旧派生或 raw。此次本角色没有运行测试、编译、图形或目标进程，也没有授予新的性能准入。
+
+### AS14 最终源码的实际独立回归与闭合账本复算
+
+2026-10-02 19:21:13–19:21:14 UTC，经主控交还窗口，在实际全局非阻塞 flock 下执行最终 `eded9312…` / `16913ec9…` 的 65 项分析测试：65 项、0 failure/error、suite 0.340 秒；两项 Python 文件 py_compile 退出 0。随后实际执行最终分析 CLI，固定输入账本 `formal-stop-ledger.jsonl` SHA `a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e`，新输出写入忽略目录 `.cache/goal2-stage-status-independent/derived`。三个受控任务均退出 0、0 n4096，primary ledger 逐项实记：
+
+| 任务 | attempt | MONOTONIC(s) | 逐任务三域最大值(s) |
+| --- | --- | ---: | ---: |
+| 独立 65 项 | 116fbd8bc808405aa7cb7955bafd91ff | 0.505531393 | 0.517116812 |
+| 两项语法 | 62b9f40436514793bf9c8aba58cd66b0 | 0.254369309 | 0.260258735 |
+| 闭合账本 CLI | 833304fd3c8d413d8dabc61066f88957 | 0.254489109 | 0.260381236 |
+
+源码/测试/driver/core/测量目标五项身份在执行前后不变。516 个历史和本次结果文件、协议、原始 C、闭合账本输入前后哈希不变；记录使用清单总指纹与关键输入哈希，避免另存两份重复的大清单。锁释放后立即交还主控，没有遗留测试/基准进程；后续本角色只读和编辑本记录。
+
+最终 CLI 的 summary SHA `f77c0910b3bd4423e614165465f8f81a48032e8b834d4d5cd2857e1d100f66bb`，内嵌 analysis_sha256 明确为最终 `eded9312…`，不是旧 `8111d72e…`。输出为 actual_process_runs=44、已知成本完整、新参照有效样本为 0、clockfalse；主比较和 S3 确认均 NOT_EXECUTED/evaluation_complete=false，基线确认不完整、retained=false、默认 Random。独立直接读取闭合账本的三域原始整数 ns，未导入分析作者函数：251 记录中 84 个起点与 84 个终点一一闭合、无 unfinished，重算总 MONOTONIC 3131.371640047 秒、逐任务取三域最大值之和 3151.888304869 秒，与最终 JSON 的成本行求和在 1e-9 秒内一致。该账本包含较晚的零调用工作，不能把它与预热刚停止时的 3091.299 秒混作同一截止点。
+
+证据见 [goal2_stage_status_independent_tests.log](../commands/goal2_stage_status_independent_tests.log) 及三个任务的原始 stderr/stdout。**AS14 已按最终源码独立关闭；这是状态/分析回归，不是实际 S3 获选或新时钟的性能准入。** 旧协议、2%/5%/2pp/10% 规则、原始数据和旧派生没有重写。完整新参照、六组在线比较、单项/必要确认仍受实际时钟问题阻断，任何最小 timer 适配仍需独立证据与新冻结关口；没有授予最终 Engineering PASS。

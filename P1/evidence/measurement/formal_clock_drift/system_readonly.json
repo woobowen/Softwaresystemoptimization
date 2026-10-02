@@ -1,0 +1,73 @@
+{
+  "at_utc": "2026-10-02T18:45:08.491507+00:00",
+  "queries_readonly": true,
+  "timex": {
+    "readonly": true,
+    "offset_raw": 0,
+    "frequency_scaled_ppm": -840840,
+    "tick_us": 9721,
+    "status": 8192,
+    "precision_us": 1,
+    "returncode": 0,
+    "offset_unit": "ns"
+  },
+  "current_clocksource": "tsc",
+  "commands": [
+    {
+      "command": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd"
+      ],
+      "returncode": 0,
+      "stdout": "active\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "timedatectl",
+        "show",
+        "-p",
+        "NTP",
+        "-p",
+        "NTPSynchronized",
+        "-p",
+        "TimeUSec"
+      ],
+      "returncode": 0,
+      "stdout": "NTP=yes\nNTPSynchronized=yes\nTimeUSec=Sat 2026-10-03 02:45:07 CST\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "--since",
+        "2026-10-02 13:29:47 UTC",
+        "--until",
+        "2026-10-02 18:27:00 UTC",
+        "--no-pager",
+        "-n",
+        "40",
+        "-o",
+        "json"
+      ],
+      "returncode": 0,
+      "stdout": [
+        {
+          "__REALTIME_TIMESTAMP": "1790948312507326",
+          "__MONOTONIC_TIMESTAMP": "67254910434",
+          "MESSAGE": "Timed out waiting for reply from [2620:2d:4000:1::3f]:123 (ntp.ubuntu.com)."
+        },
+        {
+          "__REALTIME_TIMESTAMP": "1790948312696767",
+          "__MONOTONIC_TIMESTAMP": "67255099874",
+          "MESSAGE": "Contacted time server [2620:2d:4000:1::41]:123 (ntp.ubuntu.com)."
+        }
+      ],
+      "stderr": ""
+    }
+  ],
+  "limitations": "Actual service state and sparse logs do not establish the host or NTP root cause; no settings changed."
+}

@@ -3,7 +3,7 @@
   "role": "independent_method_analysis_review",
   "reviewer_authored_under_review": false,
   "started_at_utc": "2026-10-02T14:26:56Z",
-  "state": "METHOD_ANALYSIS_CODE_GATE_REVIEWED_PROTOCOL_FREEZE_AND_REAL_EXPERIMENTS_PENDING",
+  "state": "METHOD_ANALYSIS_STAGE_STATUS_REGRESSION_COMPLETE_PERFORMANCE_CLOCK_BLOCKED",
   "source_snapshot": {
     "scripts/summarize_v2.py": "5b710a0ca02e907b690d2bbac691577e9d0b5b5e89de6220881b495a7dc7295d",
     "tests/test_goal2_summary.py": "df6ff9be996cf416b4a838c85d8e869793ba6e1a85ee13044cb2e3b7a31e9693",
@@ -13,8 +13,8 @@
     "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
   },
   "latest_static_snapshot": {
-    "scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
-    "tests/test_goal2_summary.py": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+    "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "tests/test_goal2_summary.py": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
     "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
   },
   "executed_by_reviewer": {
@@ -834,6 +834,20 @@
       "suite_reported_s": 0.01,
       "log": "P1/evidence/commands/goal2_formal_panel_independent_tests.log",
       "is_full_59_rerun": false
+    },
+    "latest_analysis_tests": 65,
+    "latest_analysis_source_sha256": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "latest_tests_sha256": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
+    "stage_status_revision_run": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "suite_reported_s": 0.34,
+      "syntax_checks": 2,
+      "n4096_calls": 0,
+      "c_compilations": 0,
+      "plots_or_gui": 0,
+      "evidence": "evidence/commands/goal2_stage_status_independent_tests.log"
     }
   },
   "findings": [
@@ -1018,6 +1032,20 @@
       "independent_final_selector": "test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples",
       "independent_final_tests": 1,
       "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log"
+    },
+    {
+      "id": "AS14",
+      "severity": "high_status_integrity",
+      "owner": "/root/measurement",
+      "function": "summarize_v2.search_stage_decisions:1262-1311 / main:1747-1757",
+      "state": "CLOSED_INDEPENDENT_65_SYNTAX_AND_FINAL_SOURCE_CLI_REGRESSION",
+      "issue": "unstarted or clock-blocked main searches formerly fell through numeric INCONCLUSIVE and candidate confirmation was marked NOT_REQUIRED without a completed valid main selection",
+      "fix": "explicit started/evaluation_complete/dependencies, header-only is unstarted, baseline-only holdout does not execute S3 confirmation; NOT_REQUIRED only after completed valid nonselected S3 selection",
+      "thresholds_changed": false,
+      "raw_or_protocol_changed_by_this_reviewer": false,
+      "independent_tests_this_revision": 65,
+      "closed_at_utc": "2026-10-02T19:23:37.621667+00:00",
+      "regression_evidence": "evidence/commands/goal2_stage_status_independent_tests.log"
     }
   ],
   "observations": {
@@ -1096,10 +1124,8 @@
     ]
   },
   "remaining": [
-    "freeze exact protocol/source before formal performance execution; full clean reproduction still required at delivery",
-    "final S3 phase plot and all formal images actual visual inspection",
-    "new complete reference/main/S3 evaluation/necessary confirmation and experiment/report final review",
-    "final report/README rewrite and clean reproduction/publication review"
+    "Actual formal warmup failed the unchanged first/previous 2% complete-clock guard; new reference/main/S3/confirmation not completed, any timer adaptation needs evidence and separately frozen/reviewed source/protocol",
+    "Final report/README, all formal images actual visual inspection, clean current/historical reproduction and publication review remain required"
   ],
   "followup_code_crosscheck": {
     "checked_at_utc": "2026-10-02T15:52:38Z",
@@ -1288,5 +1314,261 @@
       "formal-summary-numeric-prefix-regression.stderr.txt": "fd447875638afae223cf4c9a5fb9bc603974fbdf7ec133f9b1597f4f21876b05"
     },
     "these_are_not_additional_distinct_analysis_cases": true
+  },
+  "stage_label_revision": {
+    "checked_at_utc": "2026-10-02T19:16:48.924925+00:00",
+    "source_snapshot": {
+      "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+      "tests/test_goal2_summary.py": "16913ec97c7e221743fca811c031491742410106bcaa89af212e1cf211ad6061",
+      "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+    },
+    "production_diff_continuously_read": true,
+    "new_fixture_count": 6,
+    "independent_tests": 65,
+    "compilations": 0,
+    "plots_or_gui": 0,
+    "n4096_calls": 0,
+    "performance_execution_approved": false,
+    "static_issues_open": [],
+    "prior_protocol_freeze_preserved": true,
+    "protocol_sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+    "author_regression_read": {
+      "prior_source_sha256": "8111d72ec9684d0b0f8fb00579f44cb6f94f7794b44f64619ffe3d1e610f0289",
+      "prior_full_suite_tests": 65,
+      "prior_full_suite_s": 0.407,
+      "final_related_tests": 2,
+      "final_related_suite_s": 0.001,
+      "reported_in_author_record": "evidence/commands/goal2_unexecuted_stage_regression.json"
+    },
+    "saved_author_closed_analysis": {
+      "analysis_sha256": "8111d72ec9684d0b0f8fb00579f44cb6f94f7794b44f64619ffe3d1e610f0289",
+      "resource_ledger_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+      "actual_calls": 44,
+      "cost_complete": true,
+      "reference_complete": false,
+      "measurement_clock_healthy": false,
+      "decisions": {
+        "comparison": {
+          "decision": "NOT_EXECUTED",
+          "reasons": [
+            "no actual search is recorded for comparison"
+          ],
+          "executed": false,
+          "observed_search_tasks": [],
+          "evaluation_complete": false,
+          "dependencies": [
+            "the complete 20-configuration reference table is unavailable",
+            "the compared measurements have unresolved clock conflicts or missing clock evidence",
+            "the required valid paired searches and common confirmation panels are incomplete"
+          ]
+        },
+        "confirmation": {
+          "decision": "NOT_EXECUTED",
+          "reasons": [
+            "S3 confirmation has not executed; the main selection or its new-seed confirmation remains pending"
+          ],
+          "executed": false,
+          "observed_search_tasks": [],
+          "evaluation_complete": false,
+          "dependencies": [
+            "the complete 20-configuration reference table is unavailable",
+            "the compared measurements have unresolved clock conflicts or missing clock evidence",
+            "the required valid paired searches and common confirmation panels are incomplete",
+            "a completed main selection must precede candidate confirmation"
+          ]
+        }
+      },
+      "retention": {
+        "selection": "NOT_EXECUTED",
+        "confirmation": "NOT_EXECUTED",
+        "retained": false,
+        "default_algorithm": "random"
+      },
+      "baseline_confirmation": {
+        "expected_seeds": [
+          1328375,
+          1433104,
+          1537833
+        ],
+        "observed_seeds": [],
+        "complete": false,
+        "quality_classes": []
+      }
+    },
+    "final_source_cli_recompute_pending": false,
+    "independent_suite_reported_s": 0.34,
+    "test_failures": 0,
+    "test_errors": 0,
+    "python_syntax_checks": 2,
+    "independent_execution_started_at_utc": "2026-10-02T19:21:13.451070+00:00",
+    "independent_execution_ended_at_utc": "2026-10-02T19:21:14.624117+00:00",
+    "final_source_cli_recompute_complete": true,
+    "final_source_cli_summary_sha256": "f77c0910b3bd4423e614165465f8f81a48032e8b834d4d5cd2857e1d100f66bb",
+    "final_source_cli_output": ".cache/goal2-stage-status-independent/derived",
+    "analysis_input_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+    "final_source_cli_summary": {
+      "reference_complete": false,
+      "measurement_clock_healthy": false,
+      "decisions": {
+        "comparison": {
+          "decision": "NOT_EXECUTED",
+          "reasons": [
+            "no actual search is recorded for comparison"
+          ],
+          "executed": false,
+          "observed_search_tasks": [],
+          "evaluation_complete": false,
+          "dependencies": [
+            "the complete 20-configuration reference table is unavailable",
+            "the compared measurements have unresolved clock conflicts or missing clock evidence",
+            "the required valid paired searches and common confirmation panels are incomplete"
+          ]
+        },
+        "confirmation": {
+          "decision": "NOT_EXECUTED",
+          "reasons": [
+            "S3 confirmation has not executed; the main selection or its new-seed confirmation remains pending"
+          ],
+          "executed": false,
+          "observed_search_tasks": [],
+          "evaluation_complete": false,
+          "dependencies": [
+            "the complete 20-configuration reference table is unavailable",
+            "the compared measurements have unresolved clock conflicts or missing clock evidence",
+            "the required valid paired searches and common confirmation panels are incomplete",
+            "a completed main selection must precede candidate confirmation"
+          ]
+        }
+      },
+      "retention": {
+        "selection": "NOT_EXECUTED",
+        "confirmation": "NOT_EXECUTED",
+        "retained": false,
+        "default_algorithm": "random"
+      },
+      "baseline_confirmation": {
+        "expected_seeds": [
+          1328375,
+          1433104,
+          1537833
+        ],
+        "observed_seeds": [],
+        "complete": false,
+        "quality_classes": []
+      }
+    },
+    "independent_closed_recount": {
+      "independent_of_analysis_function_imports": true,
+      "closed_ledger_sha256": "a7cac3e99d3d6385abc4fb2ff5edbfe12826fd4d6929cf9d0a7b6c5878be853e",
+      "ledger_rows": 251,
+      "task_starts": 84,
+      "task_ends": 84,
+      "unfinished_attempts": [],
+      "actual_calls": 44,
+      "monotonic_driver_s": 3131.3716400470016,
+      "max_domain_resource_s": 3151.8883048689995,
+      "derived_costs_match_raw_ns": true,
+      "failed_tasks": 5,
+      "valid_new_reference_samples": 0
+    },
+    "protected_input_files": 516,
+    "protected_inputs_unchanged": true,
+    "source_unchanged": true,
+    "primary_controlled_records": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.057079+00:00",
+        "task": "goal2-stage-status-independent-65",
+        "role": "short_test",
+        "attempt_id": "116fbd8bc808405aa7cb7955bafd91ff",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.505531393,
+        "clock_elapsed_s": {
+          "monotonic": 0.505531393,
+          "raw": 0.517116812,
+          "realtime": 0.505533107
+        },
+        "clock_end_ns": {
+          "monotonic": 87614312511097,
+          "raw": 91748523855575,
+          "realtime": 1790968874056575605
+        },
+        "resource_s": 0.517116812,
+        "resource_wall_s": 0.517116812,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-65.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-65.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.319447+00:00",
+        "task": "goal2-stage-status-independent-syntax",
+        "role": "short_test",
+        "attempt_id": "62b9f40436514793bf9c8aba58cd66b0",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254369309,
+        "clock_elapsed_s": {
+          "monotonic": 0.254369309,
+          "raw": 0.260258735,
+          "realtime": 0.254371066
+        },
+        "clock_end_ns": {
+          "monotonic": 87614575126807,
+          "raw": 91748792550008,
+          "realtime": 1790968874319190921
+        },
+        "resource_s": 0.260258735,
+        "resource_wall_s": 0.260258735,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-syntax.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-syntax.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T19:21:14.591107+00:00",
+        "task": "goal2-stage-status-independent-closed-cli",
+        "role": "analysis",
+        "attempt_id": "833304fd3c8d413d8dabc61066f88957",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254489109,
+        "clock_elapsed_s": {
+          "monotonic": 0.254489109,
+          "raw": 0.260381236,
+          "realtime": 0.254490614
+        },
+        "clock_end_ns": {
+          "monotonic": 87614846781773,
+          "raw": 91749070493236,
+          "realtime": 1790968874590845645
+        },
+        "resource_s": 0.260381236,
+        "resource_wall_s": 0.260381236,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-stage-status-independent-closed-cli.stdout.txt",
+        "stderr": "evidence/commands/goal2-stage-status-independent-closed-cli.stderr.txt"
+      }
+    ],
+    "total_this_window_monotonic_s": 1.014389811,
+    "total_this_window_max_domain_s": 1.037756783,
+    "lock_released": true,
+    "log_sha256": "57c3cf48c03dd8a723148d93a64bc69f27502f0b099efa71149f146e1f3dc8cd"
   }
 }

@@ -1,0 +1,12 @@
+{"task": "warmup-reference", "role": "warmup", "state": "running"}
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 894, in <module>
+    main()
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 874, in main
+    execute(directory, manifest, protocol, args.protocol.resolve(), args.reference, args.max_jobs)
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 821, in execute
+    record = controlled(command(job, directory, protocol, protocol_path), directory,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 465, in controlled
+    raise ValueError(f"task {task} failed ({reason or code}); inspect its raw output")
+ValueError: task warmup-reference failed (complete target process RAW/MONOTONIC changed >2% relative to first or previous); inspect its raw output

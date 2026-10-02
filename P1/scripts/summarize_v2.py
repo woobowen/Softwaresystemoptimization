@@ -1259,6 +1259,58 @@ def final_retention(selection, confirmation):
                 default_algorithm="recheck" if selection["decision"] == confirmation["decision"] == "KEEP" else "random")
 
 
+def search_stage_decisions(batches, stage_pairs, protocol, reference_complete,
+                           project_cost_complete, project_clock_healthy):
+    """Unstarted dependent experiments are not completed negative selections."""
+    common = []
+    if not reference_complete:
+        common.append("the complete 20-configuration reference table is unavailable")
+    if not project_cost_complete:
+        common.append("the actual project cost ledger is incomplete")
+    if not project_clock_healthy:
+        common.append("the compared measurements have unresolved clock conflicts or missing clock evidence")
+    if protocol.get("state") != "approved" or protocol["acceptance"].get("state") != "frozen" or \
+            not finite_positive(protocol["measurement"]["clock_health"]["resolution_pp"]):
+        common.append("the formal decision rules and diagnostic resolution are not frozen")
+    outcomes = {}
+    for stage, count in (("comparison", len(protocol["online"]["seeds"])),
+                         ("confirmation", len(protocol["holdout"]["seeds"]))):
+        started = [task["job"]["id"] for batch in batches if batch["manifest"]["stage"] == stage
+            for task in batch["tasks"] if task["job"]["action"] == "search" and
+            (stage != "confirmation" or task["job"].get("algorithm") == "recheck") and any(
+                row["type"] in ("session_start", "trial_start", "build_start", "measurement_start", "summary")
+                for row in task["records"])]
+        pairs = stage_pairs[stage]
+        dependencies = list(common)
+        if len(pairs) != count or any(not row["valid"] or None in (
+                row["gain_ref_pp"], row["wall_saving_fraction"], row["gain_ref_low_pp"],
+                row["gain_ref_high_pp"], row["gain_panel_low_pp"], row["gain_panel_high_pp"]) for row in pairs):
+            dependencies.append("the required valid paired searches and common confirmation panels are incomplete")
+        if any(row["baseline_calls"] != protocol["online"]["budget"] or
+               row["candidate_calls"] != protocol["online"]["budget"] for row in pairs):
+            dependencies.append("the equal actual-call-budget comparison is incomplete")
+        if any(row.get("reference_panel_conflict") for row in pairs):
+            dependencies.append("the reference table and simultaneous panel remain in conflict")
+        result = decision(pairs, protocol, count, project_cost_complete, project_clock_healthy)
+        result.update(executed=bool(started), observed_search_tasks=started,
+                      evaluation_complete=bool(started) and not dependencies, dependencies=dependencies)
+        if not started:
+            result.update(decision="NOT_EXECUTED", reasons=[f"no actual search is recorded for {stage}"])
+        outcomes[stage] = result
+    selection, confirmation = outcomes["comparison"], outcomes["confirmation"]
+    if not confirmation["executed"]:
+        if selection["evaluation_complete"] and selection["decision"] != "KEEP":
+            confirmation.update(decision="NOT_REQUIRED", dependencies=[],
+                reasons=["the completed valid main selection did not select S3; baseline confirmation is still required"])
+        elif selection["evaluation_complete"] and selection["decision"] == "KEEP":
+            confirmation["dependencies"].append("the selected candidate requires new-seed paired confirmation")
+            confirmation["reasons"] = ["selected S3 confirmation has not executed on the new seeds"]
+        else:
+            confirmation["dependencies"].append("a completed main selection must precede candidate confirmation")
+            confirmation["reasons"] = ["S3 confirmation has not executed; the main selection or its new-seed confirmation remains pending"]
+    return outcomes
+
+
 def baseline_confirmation(runs, seeds):
     rows = [row for row in runs if row["stage"] == "confirmation" and row["algorithm"] == "random"]
     return dict(expected_seeds=seeds, observed_seeds=[row["seed"] for row in rows],
@@ -1692,18 +1744,14 @@ def main(argv=None):
         runs, curves = search_tables(batches, grid, panels, protocol)
         write_csv(output / "search_summary.csv", runs)
         write_csv(output / "online_curves.csv", curves)
-        decisions = {}
-        for stage, count in (("comparison", len(protocol["online"]["seeds"])),
-                             ("confirmation", len(protocol["holdout"]["seeds"]))):
-            stage_pairs = paired_rows(runs, grid, panels, protocol, stage) if complete else []
-            write_csv(output / (stage + "_paired.csv"), stage_pairs)
+        stage_pairs = {}
+        for stage in ("comparison", "confirmation"):
+            stage_pairs[stage] = paired_rows(runs, grid, panels, protocol, stage) if complete else []
+            write_csv(output / (stage + "_paired.csv"), stage_pairs[stage])
             if stage == "comparison":
-                pairs = stage_pairs
-            decisions[stage] = decision(stage_pairs, protocol, count, costs["complete"] and args.ledger is not None,
-                                        summary["measurement_clock_healthy"])
-        if decisions["comparison"]["decision"] != "KEEP" and not any(row["stage"] == "confirmation" and
-                row["algorithm"] == "recheck" for row in runs):
-            decisions["confirmation"] = dict(decision="NOT_REQUIRED", reasons=["S3 was not selected; baseline confirmation is reported separately"])
+                pairs = stage_pairs[stage]
+        decisions = search_stage_decisions(batches, stage_pairs, protocol, complete,
+            costs["complete"] and args.ledger is not None, summary["measurement_clock_healthy"])
         summary["decisions"] = decisions
         summary["retention"] = final_retention(decisions["comparison"], decisions["confirmation"])
         summary["baseline_confirmation"] = baseline_confirmation(runs, protocol["holdout"]["seeds"])

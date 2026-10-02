@@ -1,0 +1,2 @@
+{"mode":"work","iterations":8000000000,"requested_idle_seconds":0,"idle_control_clock":"CLOCK_BOOTTIME","clock_order":["MONOTONIC","RAW","REALTIME","PROCESS_CPU"],"start_ns":[84983657277129,89059240149439,1790966184468079404,1360320],"end_ns":[85002446077214,89078430380881,1790966203947286741,19186822034],"elapsed_s":[18.788800085,19.190231442,19.479207337,19.185461714],"work_checksum":0.29999999972244429}
+{"adjtimex_readonly":true,"returncode":0,"offset_raw":0,"offset_unit":"ns","frequency_scaled_ppm":-761136,"tick_us":9792,"status":8192,"precision_us":1}

@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-10-02T19:28:53.164851+00:00",
+  "parent_commit": "6463e2a3ab507debf02204d555c1f2083257235e",
+  "actual_n4096_calls": 44,
+  "resource_s": 3228.911797217,
+  "preserved_historical_files": 431,
+  "preserved_assignment_trees": {
+    "A1": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+    "A2": "139b6e7469d63b27cfa100d1e005061548d36ce8"
+  },
+  "formal_v2": "stopped_on_first_warmup_full_clock_conflict; 0 reference samples",
+  "raw_timer_adaptation_started": false,
+  "source_sha256": {
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "scripts/summarize_v2.py": "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147",
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "evidence/measurement/formal_clock_drift_design.md": "ac920bb167e07760d841c430491df6edcdad45fe3be25af33e2acfe8f3924ea6"
+  },
+  "raw_qpc_sha256": "3e13770e3e3b3cb927de2760c7f21f00c4c43dbf709be7dc0f5e3bbd306213d3"
+}

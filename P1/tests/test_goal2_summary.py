@@ -356,6 +356,82 @@ class Goal2ReplayTests(unittest.TestCase):
 
 
 class Goal2QualityTests(unittest.TestCase):
+    def test_unstarted_searches_are_not_completed_negative_selection(self):
+        batch = dict(manifest=dict(stage="reference"), tasks=[dict(
+            job=dict(id="warmup", action="run"), records=[dict(type="summary")])])
+        result = su.search_stage_decisions([batch], dict(comparison=[], confirmation=[]),
+            protocol(), False, True, False)
+        for stage in ("comparison", "confirmation"):
+            self.assertEqual(result[stage]["decision"], "NOT_EXECUTED")
+            self.assertFalse(result[stage]["evaluation_complete"])
+            self.assertTrue(any("reference" in value for value in result[stage]["dependencies"]))
+            self.assertTrue(any("clock" in value for value in result[stage]["dependencies"]))
+        retained = su.final_retention(result["comparison"], result["confirmation"])
+        self.assertFalse(retained["retained"])
+        self.assertEqual(retained["default_algorithm"], "random")
+
+    def test_planned_jobs_and_header_only_journal_do_not_count_as_executed(self):
+        batch = dict(manifest=dict(stage="comparison"), tasks=[dict(
+            job=dict(id="planned", action="search"), records=[dict(type="header")])])
+        result = su.search_stage_decisions([batch], dict(comparison=[], confirmation=[]),
+            protocol(), True, True, True)
+        self.assertEqual(result["comparison"]["decision"], "NOT_EXECUTED")
+        self.assertEqual(result["confirmation"]["decision"], "NOT_EXECUTED")
+        self.assertEqual(result["comparison"]["observed_search_tasks"], [])
+
+    def test_partial_or_clock_blocked_selection_does_not_skip_confirmation(self):
+        batch = dict(manifest=dict(stage="comparison"), tasks=[dict(
+            job=dict(id="started", action="search"), records=[dict(type="session_start")])])
+        cases = [(1, True, True), (6, True, False), (6, False, True)]
+        for count, cost_complete, clock_healthy in cases:
+            with self.subTest(count=count, cost=cost_complete, clock=clock_healthy):
+                result = su.search_stage_decisions([batch],
+                    dict(comparison=[paired(saving=0)] * count, confirmation=[]),
+                    protocol(), True, cost_complete, clock_healthy)
+                self.assertEqual(result["comparison"]["decision"], "INCONCLUSIVE")
+                self.assertFalse(result["comparison"]["evaluation_complete"])
+                self.assertEqual(result["confirmation"]["decision"], "NOT_EXECUTED")
+                self.assertTrue(result["confirmation"]["dependencies"])
+
+    def test_completed_valid_nonselected_s3_does_not_require_candidate_holdout(self):
+        batch = dict(manifest=dict(stage="comparison"), tasks=[dict(
+            job=dict(id="completed", action="search"), records=[dict(type="summary")])])
+        result = su.search_stage_decisions([batch],
+            dict(comparison=[paired(saving=0)] * 6, confirmation=[]), protocol(), True, True, True)
+        self.assertEqual(result["comparison"]["decision"], "REJECT")
+        self.assertTrue(result["comparison"]["evaluation_complete"])
+        self.assertEqual(result["confirmation"]["decision"], "NOT_REQUIRED")
+        self.assertFalse(su.baseline_confirmation([], protocol()["holdout"]["seeds"])["complete"])
+        baseline = dict(manifest=dict(stage="confirmation"), tasks=[dict(
+            job=dict(id="baseline-only", action="search", algorithm="random"), records=[dict(type="summary")])])
+        with_baseline = su.search_stage_decisions([batch, baseline],
+            dict(comparison=[paired(saving=0)] * 6, confirmation=[]), protocol(), True, True, True)
+        self.assertEqual(with_baseline["confirmation"]["decision"], "NOT_REQUIRED")
+        self.assertFalse(with_baseline["confirmation"]["executed"])
+        limited = protocol()
+        limited["acceptance"]["different_identity_risk_supported"] = False
+        result = su.search_stage_decisions([batch],
+            dict(comparison=[paired(0, 0, False)] * 6, confirmation=[]), limited, True, True, True)
+        self.assertEqual(result["comparison"]["decision"], "INCONCLUSIVE")
+        self.assertTrue(result["comparison"]["evaluation_complete"])
+        self.assertEqual(result["confirmation"]["decision"], "NOT_REQUIRED")
+
+    def test_selected_s3_without_new_seed_confirmation_is_not_retained(self):
+        batch = dict(manifest=dict(stage="comparison"), tasks=[dict(
+            job=dict(id="completed", action="search"), records=[dict(type="summary")])])
+        result = su.search_stage_decisions([batch],
+            dict(comparison=[paired(saving=.2)] * 6, confirmation=[]), protocol(), True, True, True)
+        self.assertEqual(result["comparison"]["decision"], "KEEP")
+        self.assertEqual(result["confirmation"]["decision"], "NOT_EXECUTED")
+        self.assertFalse(su.final_retention(result["comparison"], result["confirmation"])["retained"])
+        baseline = dict(manifest=dict(stage="confirmation"), tasks=[dict(
+            job=dict(id="baseline-only", action="search", algorithm="random"), records=[dict(type="summary")])])
+        result = su.search_stage_decisions([batch, baseline],
+            dict(comparison=[paired(saving=.2)] * 6, confirmation=[]), protocol(), True, True, True)
+        self.assertEqual(result["confirmation"]["decision"], "NOT_EXECUTED")
+        self.assertFalse(result["confirmation"]["executed"])
+        self.assertTrue(any("selected candidate" in value for value in result["confirmation"]["dependencies"]))
+
     def test_partial_shared_panel_cannot_confirm_same_reference_identity(self):
         task = synthetic_task()
         task.update(state="complete", job=dict(id="search", action="search", role="search",
@@ -530,6 +606,48 @@ class Goal2FormalClockTests(unittest.TestCase):
             self.assertEqual(summary["resource_ledger_sha256"], su.sha256(fixture["ledger_path"]))
             panel = json.loads((fixture["comparison"] / "panel-b1.json").read_text())
             self.assertEqual(panel["reference_config"], dict(s=8, opt="O0"))
+
+    def test_clock_stopped_warmup_cli_preserves_known_cost_and_unexecuted_stages(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            first, prior = formal_fixture(root, data, "prior-diagnostic")
+            ph = [dict(identity=["prior-diagnostic", 0, 0, 123], attempt_id="prior-diagnostic", q=1.0)]
+            dh = [dict(identity="prior-diagnostic", q=1.0)]
+            batch, current = formal_fixture(root, data, "warmup-reference", ratios=(1.03,),
+                driver_ratio=1.03, process_history=ph, driver_history=dh)
+            task = batch["tasks"][0]
+            task["job"] = dict(id="warmup-reference", action="run", role="warmup",
+                config=dict(s=8, opt="O2"), repeats=1, seed=7)
+            for row in current:
+                row["role"] = "warmup"
+            proto = root / "protocol.json"
+            proto.write_text(json.dumps(data))
+            raw = batch["path"]
+            (raw / "plan.json").write_text(json.dumps(dict(measurement_root=str(root),
+                protocol="protocol.json", stage="reference", jobs=[task["job"]])))
+            ledger = root / "snapshot.jsonl"
+            ledger.write_text("".join(json.dumps(row) + "\n" for row in prior + current))
+            # The stopped attempt has no batch-driver copy; its primary completion
+            # and original boundaries still account for the real process once.
+            with mock.patch.object(su.ex, "freeze_check"), \
+                    mock.patch.object(su.ex, "common_metadata", return_value=task["records"][0]["metadata"]), \
+                    mock.patch.object(su.ex, "validate_task", side_effect=AssertionError("live runtime")), \
+                    mock.patch("builtins.print"):
+                self.assertEqual(su.main(["--protocol", str(proto), "--reference", str(raw),
+                    "--ledger", str(ledger), "--output-dir", str(root / "derived")]), 0)
+            summary = json.loads((root / "derived/summary.json").read_text())
+            self.assertFalse(summary["reference_complete"])
+            self.assertFalse(summary["measurement_clock_healthy"])
+            self.assertTrue(summary["costs"]["complete"])
+            self.assertEqual(summary["costs"]["totals"]["actual_process_runs"], 2)
+            self.assertEqual(summary["tasks"][0]["state"], "clock_conflict")
+            self.assertEqual(summary["tasks"][0]["valid_measurements"], 0)
+            for stage in ("comparison", "confirmation"):
+                self.assertEqual(summary["decisions"][stage]["decision"], "NOT_EXECUTED")
+                self.assertFalse(summary["decisions"][stage]["evaluation_complete"])
+            self.assertFalse(summary["retention"]["retained"])
+            self.assertEqual(summary["retention"]["default_algorithm"], "random")
 
     def test_saved_panel_whole_identity_and_full_reference_are_reconstructed(self):
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):

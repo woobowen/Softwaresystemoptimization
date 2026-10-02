@@ -1,0 +1,36 @@
+{
+  "new_system_packages": [],
+  "new_language_packages": [],
+  "new_toolchains": [],
+  "global_configuration_changes": [],
+  "reused_tools": [
+    "GCC 13.3.0",
+    "Python 3.12.3",
+    "matplotlib",
+    "Xvfb",
+    "xdpyinfo",
+    "ffmpeg",
+    "ss",
+    "Goal 1 extracted xterm",
+    "existing Windows PowerShell"
+  ],
+  "cleanup": [
+    {
+      "action": "delete_only_obsolete_download_archive",
+      "path": "P1/.cache/screenshot-tools/xterm_390-1ubuntu3_amd64.deb",
+      "bytes": 883484,
+      "sha256": "3541b6956d6c4be71db7b66ec91985bd5eb128fb130e806f1c879f9d94a97c72",
+      "provenance": "P1/evidence/environment/dependencies.md",
+      "active_users_check": {
+        "command": [
+          "fuser",
+          "P1/.cache/screenshot-tools/xterm_390-1ubuntu3_amd64.deb"
+        ],
+        "exit_code": 1,
+        "output": ""
+      },
+      "preserved_extracted_tool": "P1/.cache/screenshot-tools/root/usr/bin/xterm",
+      "preserved_data": "images, raw results, user inputs, reproduction evidence, build tools and caches"
+    }
+  ]
+}

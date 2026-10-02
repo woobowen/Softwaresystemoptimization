@@ -1,0 +1,2 @@
+stage,task,role,block,round,method,tier,label,pair,seed,algorithm,s,opt,trial_id,repeat,valid,spawned,phase,status,returncode,kernel_s,process_wall_s,source_sha256,binary_sha256,command
+reference,warmup-reference,warmup,,,,,,,0,,128,O2,0,0,False,True,explore,ok,0,32.74292,33.337630412,cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835,2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c,"[""/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/6fa77b7534d39847122ae17cc2c35b7062c5b407b3fe1908eff84b871eee0a1a"", ""128""]"

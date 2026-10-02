@@ -1,0 +1,176 @@
+{
+  "reviewer": "/root/implementation",
+  "role": "independent_experiment_report_review",
+  "state": "CLOCK_BLOCKED_ADAPTATION_FEASIBILITY_REVIEW_PENDING_EVIDENCE",
+  "checked_at_utc": "2026-10-02T18:31:32.557313+00:00",
+  "source_checkpoint": "6463e2a3ab507debf02204d555c1f2083257235e",
+  "input_sha256": {
+    "report.md": "1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc",
+    "README.md": "41322069f4d5fe074486510715d414e11f7597aaa983387d6628cc0f8308001b",
+    "evidence/protocol_v2.md": "dcf635a1abe3b6e6c72c64f4658dcafd519f4008463e6b5b5aa15533fa3df41c",
+    "evidence/protocol_v2.json": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "teacher_pdf": "ffe21db96ab0af28ff2f329f6d0a03b61fac577e530e8649c375ce13bf74eafe"
+  },
+  "continuous_read": {
+    "report": true,
+    "readme": true,
+    "teacher_pdf": true,
+    "protocol_md": true,
+    "protocol_json": true
+  },
+  "executed_by_reviewer": {
+    "tests": 0,
+    "compilations": 0,
+    "plots": 0,
+    "gui": 0,
+    "n4096": 0
+  },
+  "teacher_requirements": {
+    "interfaces_and_diagram": "present; final explanation/visual pending",
+    "target": "Matrix Multiplication; frozen original computation",
+    "space": "8,16,24,64,128 x O0,O1,O2,O3",
+    "algorithms": "Grid, Random, Greedy retained; limited repeat candidate additional",
+    "formal_report": "report.md, required identity and teacher order present",
+    "environment": "OS/CPU/compiler/memory present",
+    "teacher_branch": "project01 later teacher submission; not created here",
+    "deadline": "2026-10-28 24:00 per actual PDF"
+  },
+  "issues": [
+    {
+      "id": "ER1",
+      "path": "report.md:27-36 / src/autotuner.py:561-569",
+      "scope": "code explanation",
+      "state": "OWNER_REVISION_REQUIRED_BEFORE_FINAL_REVIEW",
+      "finding": "The report search snippet is the three-base-algorithm path; S3 passes strategy to Evaluator and observes the fresh score inside evaluate.",
+      "recommendation": "Label the snippet as the base search loop or show the actual S3 branch. Remove the recovery narrative from the formal report; retain the budget/failure behavior briefly."
+    },
+    {
+      "id": "ER2",
+      "path": "report.md:64-80",
+      "scope": "reference method and results",
+      "state": "WAIT_ACTUAL_REFERENCE_THEN_REVISE",
+      "finding": "Current table is explicitly Goal1 data and its warmup is s128/O3; frozen new protocol uses s128/O2 and three full rounds plus nine anchors.",
+      "recommendation": "Use the new complete 20-cell table and derived min/max/MAD link after it finishes. State the exact warmup once; keep only result-supported O/block/tail/assembly explanations."
+    },
+    {
+      "id": "ER3",
+      "path": "report.md:87-109,119-127",
+      "scope": "quality and actual cost",
+      "state": "WAIT_ACTUAL_COMPARISON_THEN_REVISE",
+      "finding": "Three old seeds, per-algorithm 3-run confirmation, old t_confirm/39.499706 gap, and search+3 costs cannot describe six-block shared-panel identity evaluation.",
+      "recommendation": "Use common g_ref, independent same-block panel and near/worse/uncertain classes; charge actual search including rechecks, with shared external evaluation cost recorded once. Link per-round details and keep relevant severe cases/start sensitivity."
+    },
+    {
+      "id": "ER4",
+      "path": "report.md:45,76,111-131,148",
+      "scope": "conciseness and measurement limits",
+      "state": "OWNER_REVISION_REQUIRED_BEFORE_FINAL_REVIEW",
+      "finding": "Timer unification alone is insufficient; long old S1/S2 and holdout narration plus repeated screenshot disclaimers dominate the answer.",
+      "recommendation": "Explain independent same-configuration variation and fine-order limits once. Move old enhancement/holdout details to evidence, keep a short historical negative conclusion, and use one source caption instead of repeated process narration."
+    },
+    {
+      "id": "ER5",
+      "path": "README.md:3 / scripts/safe_screenshots.py:89-95",
+      "scope": "actual local dependencies",
+      "state": "OWNER_REVISION_AND_CLEAN_REPRODUCTION_REQUIRED",
+      "finding": "README lists xauth as required but native Xauthority is generated with struct; the actual script requires ss and uses an ignored local xterm fallback when PATH lacks xterm.",
+      "recommendation": "Remove unused xauth, list ss/iproute2, and give a concrete local-tool check/reuse step for a clean clone. Verify all documented commands in the final clean reproduction without assuming an ignored cache exists."
+    }
+  ],
+  "historical_readme_fixed_revision": {
+    "goal1": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+    "initial": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+    "followup": "c247e900d3f9c4d46e4abf06092939a0a9480429",
+    "old_CR1": "STATIC_DOCUMENT_FIX_CLEAN_REPRODUCTION_PENDING"
+  },
+  "current_report_data_are_goal1": true,
+  "formal_goal2_data_reviewed": false,
+  "final_images_opened_by_this_reviewer": false,
+  "final_report_approved": false,
+  "final_engineering_pass_assigned": false,
+  "remaining": [
+    "method decision on finite new four-clock probes and, only if justified, separately reviewed minimal timer adaptation plus new protocol/batch",
+    "otherwise report actual blocked scope without relabeling historical measurements",
+    "final report/README, final image visual review and clean reproduction of completed scope",
+    "publication and fixed-commit remote readback"
+  ],
+  "formal_reference_start_failure": {
+    "task": "warmup-reference",
+    "attempt_id": "45586dcb04f04acc832ca39456f2451e",
+    "actual_program_exit": 0,
+    "program_status": "ok",
+    "kernel_s": 32.74292,
+    "kernel_clock": "CLOCK_MONOTONIC",
+    "process_span_ns_recomputed_s": {
+      "CLOCK_MONOTONIC": 33.337630412,
+      "CLOCK_MONOTONIC_RAW": 33.990309693,
+      "CLOCK_REALTIME": 33.937446023
+    },
+    "process_q": 1.0195778546025593,
+    "process_change_from_first_pct": 2.150234263668782,
+    "driver_change_from_first_pct": 2.1034638184994403,
+    "clock_conflict": true,
+    "guard_complete": true,
+    "known_process_calls": 1,
+    "known_driver_monotonic_s": 33.558745205,
+    "known_max_domain_resource_s": 34.217699605,
+    "formal_reference_sample_count": 0,
+    "raw_sha256": "348dd486037b3656e1b64ff6d15c67298e1ffb454c9ed4a5239bf3909cd2002f"
+  },
+  "provisional_timer_adaptation_review": {
+    "checked_utc": "2026-10-02T18:47:04.541298+00:00",
+    "implemented": false,
+    "tests_executed": false,
+    "source_modifications": false,
+    "new_timer_selected": false,
+    "new_clock_admission_approved": false,
+    "scope": "static feasibility and dependency review only; method owner decides adequacy of exact idle/fixed-work four-clock probes",
+    "minimum_boundaries": [
+      {
+        "path": "src/matrix_multiplication.c:42,52",
+        "change": "two matching timer calls only; loop/initialization/tail/checksum boundary unchanged"
+      },
+      {
+        "path": "src/autotuner.py:163,255-275",
+        "change": "recognize one consistent declared kernel domain and guard against matching recorded process clock delta; RAW must not become unknown or skip the upper-bound guard"
+      },
+      {
+        "path": "scripts/validate_target.py:15-17",
+        "change": "extend exact allowed end-timer marker and rerun same-source kernel/element/tail/sanitizer checks"
+      },
+      {
+        "path": "scripts/experiment_v2.py:101-111,235-325,476,509",
+        "change": "time-domain metadata, costs, same-domain tests and new complete clock admission semantics must match new protocol; kernel timer change alone cannot close current RAW/MONO ratio conflict"
+      },
+      {
+        "path": "scripts/summarize_v2.py:90-118,990-1163,1326-1353",
+        "change": "independent same-domain ns validation and primary cost extraction, with exact old/new schema or fixed-version dispatch; no silent reinterpretation of old MONO fields"
+      }
+    ],
+    "historical_rules": [
+      "keep all old raw/header/protocol/derived/failed decisions unchanged and use matching fixed commits",
+      "new target/framework/build identities and protocol/batch required if timer changes; no old samples relabeled as new",
+      "resource ledger retains all previous calls and max-domain costs; splitting scoring batches does not reset the Goal cap",
+      "time-domain health rule changes need a separate method/code gate; no free removal of 2% or favorable baseline refresh"
+    ],
+    "evidence_limits": [
+      "two new probes do not certify absolute clock accuracy or multi-hour stability",
+      "CPU time is diagnostic and cannot replace real process/driver waiting cost",
+      "RAW is a candidate observed domain, not automatically true time",
+      "new comparable A/A and formal reference/comparison remain required if an adapter is admitted"
+    ],
+    "fallback_if_not_admitted": {
+      "goal2": "PARTIAL/BLOCKED performance branch",
+      "new_reference": "NOT_COMPLETED",
+      "new_six_seed_comparison": "NOT_EXECUTED",
+      "S3": "NOT_EXECUTED; no KEEP/REJECT from absent control data",
+      "teacher_full_grid": "preserved actual Goal1 table with historical provenance and explicit new measurement blocker"
+    }
+  },
+  "review_record_write_error": {
+    "kind": "SyntaxError unmatched closing parenthesis in reviewer-only serialization command",
+    "attempted_write_occurred": false,
+    "corrected_without_source_raw_or_protocol_changes": true
+  }
+}

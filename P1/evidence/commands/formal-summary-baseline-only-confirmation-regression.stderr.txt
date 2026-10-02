@@ -1,0 +1,7 @@
+test_completed_valid_nonselected_s3_does_not_require_candidate_holdout (test_goal2_summary.Goal2QualityTests.test_completed_valid_nonselected_s3_does_not_require_candidate_holdout) ... ok
+test_selected_s3_without_new_seed_confirmation_is_not_retained (test_goal2_summary.Goal2QualityTests.test_selected_s3_without_new_seed_confirmation_is_not_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK

@@ -1,0 +1,25 @@
+{
+  "at_utc": "2026-10-02T19:22:19.959278+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+    "--probe",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe"
+  ],
+  "identities": {
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "evidence/measurement/formal_clock_drift_design.md": "ac920bb167e07760d841c430491df6edcdad45fe3be25af33e2acfe8f3924ea6"
+  },
+  "code_gate_sha256": "4a46cc745d3b52476b2878d90fa2bb5ba72365c7c5707851cb5321d06ad12a17",
+  "probe_source_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9",
+  "probe_binary_sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+  "call_upper": 0,
+  "time_limit_s": 750,
+  "usage_before": [
+    44,
+    3167.613356207
+  ],
+  "formal_v2_continue": false
+}

@@ -1,0 +1,106 @@
+{
+  "reviewer": "/root/review",
+  "started_at_utc": "2026-10-02T19:18:31.336166+00:00",
+  "source_sha256": {
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "evidence/measurement/formal_clock_drift_design.md": "ac920bb167e07760d841c430491df6edcdad45fe3be25af33e2acfe8f3924ea6"
+  },
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests",
+      "-p",
+      "test_host_clock_probe.py",
+      "-v"
+    ],
+    [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "py_compile",
+      "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_host_clock_probe.py"
+    ]
+  ],
+  "native_log": "evidence/commands/host_cleanup_independent.jsonl",
+  "formal_v2_continue_admission": false,
+  "new_RAW_AA_approved": false,
+  "full_formal_approved": false,
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T19:18:35.365111+00:00",
+      "task": "host-clock-independent-tests",
+      "role": "correctness",
+      "attempt_id": "bf46b5773b1a44c4b05b7f55d8a47817",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 4.016981284,
+      "clock_elapsed_s": {
+        "monotonic": 4.016981284,
+        "raw": 4.109213654,
+        "realtime": 4.016982025
+      },
+      "clock_end_ns": {
+        "monotonic": 87459306427405,
+        "raw": 91589952197435,
+        "realtime": 1790968715364849491
+      },
+      "resource_s": 4.109213654,
+      "resource_wall_s": 4.109213654,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0175726205657998
+      ],
+      "stdout": "evidence/commands/host-clock-independent-tests.stdout.txt",
+      "stderr": "evidence/commands/host-clock-independent-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T19:18:35.637114+00:00",
+      "task": "host-clock-independent-syntax",
+      "role": "correctness",
+      "attempt_id": "849e49a035304e49905aaca189ea649f",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.255389483,
+      "clock_elapsed_s": {
+        "monotonic": 0.255389483,
+        "raw": 0.261254345,
+        "realtime": 0.255390732
+      },
+      "clock_end_ns": {
+        "monotonic": 87459578430258,
+        "raw": 91590230445658,
+        "realtime": 1790968715636852505
+      },
+      "resource_s": 0.261254345,
+      "resource_wall_s": 0.261254345,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0175726205657998
+      ],
+      "stdout": "evidence/commands/host-clock-independent-syntax.stdout.txt",
+      "stderr": "evidence/commands/host-clock-independent-syntax.stderr.txt"
+    }
+  ],
+  "usage_before": [
+    44,
+    3162.2051314249998
+  ],
+  "usage_after": [
+    44,
+    3166.575599424
+  ],
+  "finished_at_utc": "2026-10-02T19:18:35.654218+00:00"
+}

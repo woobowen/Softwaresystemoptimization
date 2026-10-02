@@ -1,8 +1,10 @@
 # P1 运行入口
 
-正式报告见 [report.md](report.md)。目标程序和调优器使用 GCC 与 Python 3.12，调优器只依赖 Python 标准库。数据图另需 matplotlib；四项真实截图测试需要 Xvfb、xauth、xdpyinfo、ffmpeg 和 xterm，可复用已有的本地工具。
+正式报告见 [report.md](report.md)。目标程序和调优器使用 GCC 与 Python 3.12，调优器只依赖 Python 标准库。数据图另需 matplotlib；真实截图测试需要 Xvfb、xdpyinfo、ffmpeg、ss（iproute2）和 xterm，可复用已有的本地工具。Windows 计时诊断的原生清理测试在可用的 WSL interop 中调用现有 PowerShell，其他环境会明确跳过这些测试。
 
 以下命令从仓库根目录执行。正式目标固定为 n=4096，单次运行可能需要数分钟。演示输出放在忽略的 `.cache/` 中，避免混入保存的实验数据。
+
+若 xterm 仅在另一个 checkout 的任务缓存中，运行图形测试前可用 `export PATH="/实际任务缓存/screenshot-tools/root/usr/bin:$PATH"` 为当前 shell 复用它；不要修改全局配置。没有这些工具时先安装本机缺少的依赖，再执行相应原生测试。
 
 ```bash
 python3 P1/src/autotuner.py list

@@ -1,0 +1,295 @@
+{
+  "reviewer": "/root/review",
+  "at_utc": "2026-10-02T19:00:02.885197+00:00",
+  "state": "FINITE_TWO_WORKLOAD_QPC_DIAGNOSTIC_CODE_AND_METHOD_ADMITTED",
+  "draft_source_sha256": "56ba3d7c55eae5fc08c65188101897c1db3c6ba4c0f573637160a84acba95cf4",
+  "read_complete_source": true,
+  "tests_executed": 13,
+  "native_host_QPC_executed": true,
+  "n4096_calls": 0,
+  "formal_v2_continue_admission": false,
+  "correct_scope": [
+    "integer ticks subtracted before frequency conversion",
+    "Linux wall event range from last.before-first.after to last.after-first.before",
+    "startup outside compared clock intervals but inside controlled cost",
+    "finite fixed idle40/work8e9 using original probe",
+    "no global setting/service changes and no original threshold/first/raw edits"
+  ],
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high_execution_timeout",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:line",
+      "issue": "selector readiness followed by TextIO.readline can block on a partial reply without newline beyond10s",
+      "required_fix": "deadline bounded os.read loop with byte limit and partial-line/EOF fixture",
+      "fix_and_review": "Bounded selector/os.read with RAW deadline/4096byte cap; partial-line and buffered/oversized fixtures independently pass"
+    },
+    {
+      "id": "H2",
+      "severity": "high_owned_resource_cleanup",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:main/finally",
+      "issue": "default SIGTERM exits without finally while bridge has a separate session; kill Linux relay alone does not demonstrate Windows PID disappearance",
+      "required_fix": "signal handler funnels all exits through bounded own-workload cleanup/quit/EOF/wait; actual owned Windows PID exit evidence for success/timeout/interrupt; preserve failure data",
+      "fix_and_review": "Signal-to-finally, scoped own-workload TERM/KILL, bridge quit/wait, native PID+creation-time Handle/InputObject cleanup and five actual native lifecycle cases independently pass"
+    },
+    {
+      "id": "H3",
+      "severity": "high_method_gate_not_implemented",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:interval/main",
+      "issue": "20ms endpoint/.2percent interval-width conditions are absent from eligibility decisions; complete=True irrespective of those measurement limits",
+      "required_fix": "freeze method scope, calculate all fixed4 endpoint and3wall bounds without discarding slow samples, and explicitly mark eligibility/refusal",
+      "fix_and_review": "All fixed endpoint20ms/wall bracket0.2percent checks affect eligibility; conservative2tick bounds and both full RAW/QPC [.995,1.005] required"
+    },
+    {
+      "id": "H4",
+      "severity": "medium_domain_description",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:CLOCKS/workload",
+      "issue": "PROCESS_CPU here is Python bridge parent CPU while fixedwork is an externalC child; it does not cover the same host interval as targetC CPU",
+      "required_fix": "label parent CPU and innerC CPU separately; do not use their disagreement or sum as a same-event QPC truth check",
+      "fix_and_review": "Python PROCESS_CPU scope explicitly separate from original C workload stdout; no CPU/QPC same-interval substitution"
+    },
+    {
+      "id": "H5",
+      "severity": "high_actual_cleanup_command",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:113",
+      "issue": "Actual PowerShell cleanup string begins with literal + before $ErrorActionPreference assignment",
+      "required_fix": "Remove stray prefix; cover exact cleanup command and actual native lifecycle",
+      "fix_and_review": "Cleanup PowerShell literal+ removed; exact-command fixture and actual native queries exit0/absent"
+    },
+    {
+      "id": "H6",
+      "severity": "medium_failure_raw_preservation",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:sample/main",
+      "issue": "Malformed/changed response is rejected before raw response append; already completed workload stdout is lost if end sample fails",
+      "required_fix": "Save acquired response/end clocks and acquired workload output before validation and exception propagation",
+      "fix_and_review": "Sample raw row appended before validation, acquired reply/end clocks preserved; acquired workload stdout precedes end QPC sample; timeout/SIGTERM original output saved"
+    },
+    {
+      "id": "H7",
+      "severity": "medium_order_and_PID_reuse",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:sample/host_cleanup",
+      "issue": "Positive tick and inter-endpoint Linux order require explicit checks; cleanup identity check then fresh Stop-Process by ID can race PID reuse",
+      "required_fix": "Require tick positive and all before>=previous after; pin recorded Process handle then verify StartTime and stop that same Process object",
+      "fix_and_review": "Positive QPC tick and across-endpoint Linux order checks; pin Process.Handle before StartTime, stop same Process object, reused PID never killed"
+    },
+    {
+      "id": "H8",
+      "severity": "medium_signal_during_cleanup",
+      "state": "CLOSED",
+      "path": "scripts/host_clock_probe.py:finally",
+      "issue": "SIGTERM during finally could interrupt native cleanup and failure JSON",
+      "fix_and_review": "Bounded finally ignores SIGTERM/SIGINT; additional real cleanup-signal case independently passes and confirms host PID absent"
+    }
+  ],
+  "other_required_clarifications": [
+    "request-sequence correlation and nondecreasing QPC across all saved samples",
+    "bound host tick quantization conservatively or explicitly show its negligible term",
+    "do not assume QPC frequency is hardware Hz or that QPC and RAW are independent oscillators",
+    "retain prior RAW/REALTIME2.93percent counterexample",
+    "at most authorize future reviewed RAW feasibility A/A, never automatic full formal or oldv2 recovery"
+  ],
+  "primary_sources_read": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps",
+      "scope": "QPC difference-clock semantics/fixed boot frequency/virtualization/quantization/precision conversions and possible hardware relation"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.gettimestamp?view=netframework-4.8.1",
+      "scope": "Stopwatch timestamp retrieval"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.frequency?view=netframework-4.8.1",
+      "scope": "frequency units and counter conversion"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.ishighresolution?view=netframework-4.8.1",
+      "scope": "actual highresolution true required; otherwise system-timer fallback"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-handles-and-identifiers",
+      "scope": "Handles refer to original process and remain valid until closed, including after exit"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-process?view=powershell-7.5",
+      "scope": "InputObject accepts specific Process; Stop-Process is asynchronous and completion requires wait"
+    }
+  ],
+  "code_execution_approved": true,
+  "new_RAW_AA_approved": false,
+  "full_formal_approved": false,
+  "goal2_complete": false,
+  "engineering_pass": false,
+  "updated_at_utc": "2026-10-02T19:21:12.330982+00:00",
+  "method_design_sha256": "ac920bb167e07760d841c430491df6edcdad45fe3be25af33e2acfe8f3924ea6",
+  "method_static_approved": true,
+  "method_scope": "One fixed five-handshake / idle40 / work8e9 diagnostic; only potential support for separately reviewed RAW A/A, never automatic formal admission",
+  "method_checks": {
+    "integer_difference_before_conversion": true,
+    "fixed_four_endpoint_no_selection": true,
+    "wall_endpoint_limit_s": 0.02,
+    "relative_bracket_width_limit": 0.002,
+    "host_tick_quantization_allowance": 2,
+    "screen_full_raw_qpc_bounds": [
+      0.995,
+      1.005
+    ],
+    "both_intervals_required": true,
+    "RAW_QPC_shared_hardware_basis_possible": true,
+    "CPU_scopes_separate": true,
+    "old_v2_first_and_2_percent_unchanged": true,
+    "old_RAW_REALTIME_counterexample_retained": true
+  },
+  "remaining_code_gate": "None for exact two-workload diagnostic scope; startup identity/resource checks remain runtime requirements",
+  "final_source_sha256": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+  "final_tests_sha256": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+  "tests_passed": 13,
+  "unittest_elapsed_s": 3.738,
+  "syntax_exit_code": 0,
+  "native_host_scope": "Five lifecycle checks with five real QPC handshakes each; zero workload comparison intervals; never formal samples",
+  "clock_comparison_intervals_executed": 0,
+  "controlled_resource_s": 4.370467999000001,
+  "total_calls_after_regression": 44,
+  "total_resource_s_after_regression": 3166.575599424,
+  "regression_path": "evidence/reviews/goal2_host_clock_regression.json",
+  "native_log_path": "evidence/commands/host_cleanup_independent.jsonl",
+  "native_checks": [
+    {
+      "mode": "error",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+        "--cleanup-check",
+        "error"
+      ],
+      "returncode": 1,
+      "host_pid": 77472,
+      "host_start_utc_ticks": 639265655113413415,
+      "linux_bridge_pid": 367740,
+      "workload_pid": null,
+      "host_cleanup_state": "absent",
+      "lifecycle_valid": true,
+      "readings": 5,
+      "comparison_intervals": 0,
+      "raw_candidate_feasible": false
+    },
+    {
+      "mode": "normal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+        "--cleanup-check",
+        "normal"
+      ],
+      "returncode": 0,
+      "host_pid": 73496,
+      "host_start_utc_ticks": 639265655120577488,
+      "linux_bridge_pid": 367751,
+      "workload_pid": null,
+      "host_cleanup_state": "absent",
+      "lifecycle_valid": true,
+      "readings": 5,
+      "comparison_intervals": 0,
+      "raw_candidate_feasible": false
+    },
+    {
+      "mode": "signal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+        "--cleanup-check",
+        "signal"
+      ],
+      "returncode": -2,
+      "host_pid": 68200,
+      "host_start_utc_ticks": 639265655127071674,
+      "linux_bridge_pid": 367771,
+      "workload_pid": 367772,
+      "host_cleanup_state": "absent",
+      "lifecycle_valid": true,
+      "readings": 5,
+      "comparison_intervals": 0,
+      "raw_candidate_feasible": false
+    },
+    {
+      "mode": "cleanup-signal",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+        "--cleanup-check",
+        "cleanup-signal"
+      ],
+      "returncode": 0,
+      "host_pid": 47752,
+      "host_start_utc_ticks": 639265655136058978,
+      "linux_bridge_pid": 367775,
+      "workload_pid": null,
+      "host_cleanup_state": "absent",
+      "lifecycle_valid": true,
+      "readings": 5,
+      "comparison_intervals": 0,
+      "raw_candidate_feasible": false
+    },
+    {
+      "mode": "timeout",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+        "--cleanup-check",
+        "timeout"
+      ],
+      "returncode": 1,
+      "host_pid": 43724,
+      "host_start_utc_ticks": 639265655142781660,
+      "linux_bridge_pid": 367783,
+      "workload_pid": 367796,
+      "host_cleanup_state": "absent",
+      "lifecycle_valid": true,
+      "readings": 5,
+      "comparison_intervals": 0,
+      "raw_candidate_feasible": false
+    }
+  ],
+  "output_hashes": {
+    "evidence/reviews/goal2_host_clock_regression.json": "bd6daaf9e0c54be4428ebdb99bcbb4486b0ea19c147948e809351a1d83c50d21",
+    "evidence/commands/host_cleanup_independent.jsonl": "4fa8d74033eaa23e97b6fb983611f32630168efe7e54b741c5db90125723524f",
+    "evidence/commands/host-clock-independent-tests.stderr.txt": "5f8eb056533b90779097d62a243b854f9ada4e8d599489ea307a2880231854b7"
+  },
+  "approved_execution_scope": {
+    "exact_invocations": 1,
+    "warm_handshakes": 5,
+    "fixed_measurement_endpoints": 4,
+    "workloads": [
+      {
+        "mode": "idle",
+        "count": 0,
+        "seconds": 40
+      },
+      {
+        "mode": "work",
+        "count": 8000000000,
+        "seconds": 0
+      }
+    ],
+    "probe_source_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9",
+    "probe_binary_sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+    "require_original_probe_identity_before_launch": true,
+    "require_real_nonblocking_performance_lock": true,
+    "require_primary_resource_ledger": true,
+    "total_timeout_s": 750,
+    "n4096_calls": 0,
+    "no_repeat_until_screen_pass": true,
+    "only_possible_next_step": "Propose separately reviewed and frozen finite RAW A/A if both complete valid full ratio bounds contained in [.995,1.005]"
+  }
+}

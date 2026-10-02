@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-10-02T18:25:13.131258+00:00",
+  "source_freeze_commit": "6463e2a3ab507debf02204d555c1f2083257235e",
+  "source_sha256": {
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "evidence/protocol_v2.json": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+    "results/reference_v2/plan.json": "62db9f54de38d611e8f2cd59701b836106ab4bca1a532e4497e8180a5beca54c",
+    "evidence/measurement/resource_plan_v2.json": "632f574048caecbded6692ff6e755fd13128ef8762793aa401a4c15b14d9c447",
+    "evidence/reviews/goal2_protocol_review.json": "7a095c31833803b2a84dfb50153afb6d3cc563609d4a59c8d3bca1c026f70117"
+  },
+  "command": [
+    "python3",
+    "-B",
+    "P1/scripts/experiment_v2.py",
+    "execute",
+    "--directory",
+    "P1/results/reference_v2"
+  ],
+  "performance_owner": "/root",
+  "parallel_heavy_agents_allowed": false
+}
