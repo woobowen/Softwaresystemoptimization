@@ -1,0 +1,41 @@
+{
+  "/proc/loadavg": "0.13 0.67 0.76 3/516 26769",
+  "/proc/pressure/cpu": "some avg10=0.00 avg60=0.00 avg300=0.00 total=2946114\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0",
+  "/sys/fs/cgroup/cpu.max": "not exposed",
+  "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq": "not exposed",
+  "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor": "not exposed",
+  "cpu0_quiet_probe": {
+    "monotonic_span_s": 2.000309066000227,
+    "jiffy_deltas": [
+      2,
+      0,
+      2,
+      195,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "busy_fraction": 0.02010050251256279
+  },
+  "process_names_only": [
+    "    PID    PPID COMMAND         %CPU PSR",
+    "   1544    1224 MainThread       2.5  21",
+    "   1563    1544 codex            1.1  10",
+    "  26767   26764 python3          0.9  14",
+    "   1224    1220 MainThread       0.1  16",
+    "    269       1 containerd       0.1   8",
+    "   1256    1250 MainThread       0.1   4",
+    "   1783    1224 MainThread       0.1   2",
+    "   1250    1249 Relay(1256)      0.0   0",
+    "  22268    1563 python3          0.0  10",
+    "   3327    1563 codex-code-mode  0.0  16",
+    "   1261    1224 MainThread       0.0  13",
+    "    343       1 dockerd          0.0   2",
+    "   1238    1237 MainThread       0.0   6"
+  ],
+  "temperature_sensors": [],
+  "interpretation": "snapshot after pretest; does not establish host isolation or cause of within-run variance; no global settings changed"
+}

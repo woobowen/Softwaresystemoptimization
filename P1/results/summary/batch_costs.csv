@@ -1,0 +1,5 @@
+stage,recorded_spawned_processes,unrecorded_process_run_upper,failed_measurements,known_process_wall_s,compile_processes,known_compile_wall_s,actual_driver_wall_s,driver_wall_recorded_lower_bound_s,resource_driver_wall_upper_s,unknown_driver_cost
+reference,61,0,0,5563.930275264998,0,0,5569.810459629005,5569.810459629005,5569.810459629005,False
+selection,154,0,0,12011.861293886017,0,0,12016.120602788997,12016.120602788997,12016.120602788997,False
+conflict_selection,9,0,0,363.32093909000105,0,0,364.22182902099667,364.22182902099667,364.22182902099667,False
+holdout,34,0,0,2658.7066166160002,0,0,2659.654210890996,2659.654210890996,2659.654210890996,False

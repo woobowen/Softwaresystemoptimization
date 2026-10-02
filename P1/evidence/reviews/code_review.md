@@ -197,3 +197,73 @@ ER08 只修改派生分析与实验 tests，runner/core/target 不变。owner �
 **代码关口：批准。** 上述冻结源码的原计算、缓存复用、候选预算/反馈、错误清理、恢复记录及派生分析已完成实际验证，未见阻断进入正式实验的未关闭代码问题。独立实验/设计关口仍由另一审核者给出；主控必须等两关口均批准后设置协议 state/approval 并记录最终协议哈希，才启动正式数据。审核者现在停止编译/tests，测量期间仅读；结果完成后仍须按最终文件和实际数据再次终审。此结论不是 Goal1 完成、不是性能改善结论，也不是最终 Engineering PASS。
 
 此处读取的协议 JSON SHA `e071a1459c11f45e59705f7a60ef2fdff7f3b7b087d102e485e5a691e068d7ae`、MD SHA `905b81446f57cf7e4fbf8708911e6bcd636823a8c5f33fdf78a4bb239b6857a3`；JSON 的批准字段尚待主控设置，最终协议哈希会随这项已授权操作更新，不应把旧 draft hash 称为最终冻结 hash。
+
+## 最终冻结代码只读复核（正式测量锁期间）
+
+主控正在串行执行 selection_v1，测量锁 ON。本工作包首 shell 为 `ls -la`，目录仍含 A1/A2/P1、课程原始材料、AGENTS 和 P1 提示，审核只涉及 P1。完整重读六个源码/验证文件共 2035 行、两组 tests 共 1141 行以及冻结协议；只执行文件读取、stdlib SHA/文本计算和 `git show` 字节比较。没有编译、运行 tests、绘图、启动性能程序或自行运行 n4096；本节没有新增动态验证成绩。
+
+当前 HEAD/checkpoint 为 `dea74febda56aa4a2ef8eaa877068d5523bf1842`。下列十个文件的当前 bytes 与该 checkpoint 逐一相同：
+
+| 文件 | 行数 | 实读 SHA-256 |
+| --- | ---: | --- |
+| `src/autotuner.py` | 612 | `0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49` |
+| `src/matrix_multiplication.c` | 61 | `cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835` |
+| `src/matrix_multiplication.original.c` | 48 | `188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15` |
+| `scripts/validate_target.py` | 161 | `189128c2c7e13db73c1dc516401c72a0eb053cacce74ae0db70ebd72dfc21a36` |
+| `scripts/experiment.py` | 583 | `9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052` |
+| `scripts/summarize.py` | 570 | `2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c` |
+| `tests/test_autotuner.py` | 580 | `ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f` |
+| `tests/test_experiment.py` | 561 | `b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32` |
+| `evidence/protocol_v1.json` | 168 | `64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66` |
+| `evidence/protocol_v1.md` | 111 | `d679dac852d4ca9b9bd8edeb208d3960f2fcbb64dd44be3d70f4056fdad3aae2` |
+
+JSON 的 state 已为 approved，引用的 `evidence/reviews/experiment_report_review.md` 实际存在；target/framework SHA 与上表相同。批准字段变更后的实际协议 SHA 为 64bb…，不再沿用前节 draft SHA。
+
+逐项静态核对范围与证据如下，未发现新的阻断问题：
+
+| 范围与位置 | 实际核对的行为 |
+| --- | --- |
+| `matrix_multiplication.c:33–59`；原件 `:26–46` | A/B 的交错 rand 初始化、double/n4096、C 清零和六层循环不变；三维尾块条件完整，s24 的 n4096 尾块包含在循环内。MONOTONIC 两调用仍包围同一个 kernel；checksum 读取全部 C，位于结束计时后。保存原件与根目录教师 C 逐 bytes 相同；两版完整 kernel 仅规范化行尾空白后相同，kernel SHA 为 `4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab`。本节的文本比较不能替代前节已执行的汇编与数值检查。 |
+| `validate_target.py:13–18,74–101,113–155` | 生成前后比较同源完整 kernel，唯一 marker 检查保留；独立朴素 long-double 点积未使用被测分块算法。小尺寸为全元素、多 seed/符号/单位输入；大尺寸仅 24 个边缘/确定随机位置。验证产物使用 `.cache/validation`，与生产 `.cache/build` 分开，其输出不是正式性能记录。 |
+| `autotuner.py:53–75,256–313,460–480` | 配置枚举固定且无重复；Random 无放回，Greedy 只读本次反馈与离散相邻四邻居。S1 仅改变顺序；S2 仅在同 seed Random 前缀上增加 min_trials/patience/strict delta 停止条件。没有两机制组合、参照表读取或跨算法观测共享；失败占用 trial 预算，B 耗尽不追加评估。seed 控制搜索次序，生产 C 的默认矩阵输入不因搜索 seed 改变。 |
+| `autotuner.py:120–203,235–253` | cache identity 包含源码、编译器路径/版本/二进制 SHA 与完整 flags，没有 s/seed/算法；同 O 的 s 由运行参数传入，缓存只复用构建。命中先核实际 binary SHA，测量前再次核 binary；logger 的错误不被 cache-read except 吞掉。合法输出需正有限时间、正式目标唯一有限 checksum；clock_error 保留原始值而不给分。 |
+| `autotuner.py:78–117,316–457,575–608` | 子进程使用 argv，无 shell；超时/中断清理独立 process group 并 wait。启动记录 OSError 发生在 child 已创建后会清理再抛，不冒充完成。Journal fsync，合法 JSON 无尾换行保留后补分隔；损坏的未完成尾片段记录恢复事件。build/run/search 均拒绝仍活的旧 group，已完成 repeat 保留，未知完成按失败占用一次；完整 metadata/fingerprint 不同禁止 resume。 |
+| `experiment.py:61–141,156–290` | 固定三参照轮、探索/留出 seed、轮转次序与立即三次返回确认；warmup/参照/搜索/返回/冲突 role 分开。runner 对已经完成的日志也重建全量 metadata，不以其自有 fingerprint 代替正式设置比较。plan 保留 protocol/target/framework/driver/request SHA；原目录才能 execute/resume，历史 clone 分析重建原 source/cache 路径并继续核其余字段与源码 SHA。留出子集由主控依据选择结论显式指定，不在 runner 内自动判定 KEEP。 |
+| `experiment.py:293–451,454–528` | 同一 driver attempt 必须有唯一 start/end；整批持有文件锁，资源跨所有 registered batches 累加。部分恢复只预留剩余次数；未匹配或 torn driver 成本在 skip completed task 前也检查。hard recovery 必须有对应诊断证据、同 boot、旧 PID/group 已消失；实际 driver wall=null，下界与含等待的资源上界分列，未知 spawn 保守占额度。spawn 后持久化和 wait 异常清理同一个 child，不盲杀历史 PID，不自动重跑 failed task。 |
+| `summarize.py:44–130,156–244,391–415` | 评分核 raw stdout/checksum、rc0、spawned=true、唯一 start/completion/repeat、median/best 前缀与计数；warmup 不进入参照三样本。acceptance 成本为每 task 全部 driver attempt 的实际 wall 加新返回确认；内部 feedback 窗口单列。hard recovery/缺失 ledger 不用内部窗口、资源上界或零回填 actual wall；记录成本下界仍可单独查看。 |
+| `summarize.py:247–388,418–499` | 固定百分点/秒数/成本门与观察端点范围，端点明确不是 CI；KEEP 同时需要选择/留出。参照噪声/冲突不替换原 t_ref 或确认分数，明确成本违反仍 REJECT；重复 stage/algorithm/seed 拒绝挑选 preferred rerun。曲线只画该搜索已观察 best 的前缀，derived output 禁止进入 raw 批次。 |
+| `tests/test_autotuner.py:181–576`；`tests/test_experiment.py:25–558` | 前者真实小 C 子进程只位于 TemporaryDirectory；后者明确 synthetic/FakeTarget/mock，fixture 不编译且临时根与正式 P1 分离。测试包含缓存损坏、失败/预算、seed、部分 repeat 与候选恢复、SIGTERM/日志失败 cleanup、完整 JSON 无 newline、硬恢复未知成本、clone 分析与正式设置篡改拒绝。没有将夹具伪时间放入 production 目标或正式批次的代码路径。 |
+
+需保持表述准确的已有行为（非新阻断项）：`autotuner.py:421–422` 在一次失败 repeat 后结束该 trial，`search:475–480` 仍可在同一任务中提议后续配置；`experiment.py:525–526` 在失败 CLI 任务结束后停止整个批次。失败试验不会成为 best，并照常消耗预算与已启动进程成本。因此应写“失败任务停止批次并诊断”，不能将协议中的“停止并诊断”扩写成“首个失败测量立即停止同一搜索”。该事实已通知主控，主控确认最终说明按这两层区分。冻结代码和协议未因此修改。
+
+规模与可解释性复读：C 保留教师结构；三接口与统一 Evaluator/Journal 各承担明确要求。两个实验脚本较长，主要由真实分阶段测量、来源匹配、有限恢复、预算计费与统计派生组成，主体为普通函数和标准库，可选绘图使用 Matplotlib；没有额外继承层级、数据库、通用平台、复合候选或未来作业扩展。本阶段不提出纯风格变更去改变已测源码身份。
+
+本阶段结论仅为：冻结代码与此前已批准关口的 bytes 相同，完整只读复核没有发现新的阻断问题。真实正式结果与派生文件由另一个独立审核者审查；锁释放后的最终测试/必要隔离复现、最终文件树与 GitHub 审核尚待主控交接。本节不作工程完成或性能改善结论，不以此前 31/23 项历史成绩冒充本阶段重新执行。
+
+## 最终干净隔离复现准备（尚未执行）
+
+主控已交接后续独立复现职责，当前仍在串行诊断/留出，锁 ON；要求等 data/docs 冻结、提供等效干净副本路径并明确释放独占窗口后才执行。此阶段再次以 `ls -la` 为首 shell，完整读当前 README（23 行）、report（109 行）、协议 JSON/MD 和前次审核。只作 stdlib AST/SHA/链接计算；没有运行 unittest、compiler、plots 或 n4096。
+
+当前测试源码 AST 中 `test_` 方法数为 **31+23=54**，SHA 仍为 ff3c…/b607…；这是静态清点，不是测试成绩。旧 53 项属于 ER08 修复前快照，不用于最终完整测试计数。当前 README/report 所有本地链接均存在；report:109 明确等待诊断/留出和最终结论，按未冻结文档处理。读取时 README SHA 为 `0a46f40b83554731a73b00c51c1055e0ae3483c31b69e7448c7cd20b2c3e91fe`，report SHA 为 `0398af23ee8acc8218a129bc0bcce7734b8aa9816d5cafc458c49a229d61a69b`；最终交接后须重新读/hash，不能用这两个中途快照替代最终报告。
+
+后续在主控提供的隔离副本根目录串行执行下列命令，产物全部位于该副本忽略的 `P1/.cache/independent-final/`，不写正式 raw：
+
+```bash
+mkdir -p P1/.cache/independent-final
+python3 -B -m unittest discover -s P1/tests -v
+python3 -B P1/src/autotuner.py build --compile-timeout 60 \
+  --cache-dir P1/.cache/independent-final/build \
+  --output P1/.cache/independent-final/build.jsonl
+taskset -c 0 python3 -B P1/src/autotuner.py run --s 128 --opt O3 \
+  --seed 0 --repeats 1 --timeout 1200 --compile-timeout 60 \
+  --min-trials 5 --patience 3 --min-relative-improvement 0.06 \
+  --protocol P1/evidence/protocol_v1.json \
+  --cache-dir P1/.cache/independent-final/build \
+  --output P1/.cache/independent-final/run.jsonl
+```
+
+实际调用时逐条捕获原始 stdout/stderr、command、退出码及 monotonic wall 到隔离副本；本节命令块尚未执行。四 O 构建与单次运行都显式传递 compile-timeout 60，保证同一浮点表示的 cache identity；期望真实四次 build_start、运行 O3 cache hit 且无新增编译。将重算四 binary 与 manifest 哈希，校源码/框架/编译器/完整 flags、kernel 时钟、CPU0、r1、rc0、唯一有限 checksum 与 clock guard。不同副本的 source/cache 绝对路径会改变 build key，按本副本的 identity 重算，不强迫 key 等于原测量目录的 key。该次 n4096 仅验证干净复现，不回填正式参照或候选成绩。
+
+最终汇总重生成以保存的 `results/summary/summary.json` 中 `batch_manifest_sha256` 的**插入顺序**构造参数：第一项为原 reference 的 `--reference`，余项按原序传 `--runs`；额外核对这些目录覆盖最终所有应纳入的正式批次。用冻结 summarize.py、原 protocol 和原 plan/measurement_root/command 字符串，在隔离副本 `.cache/independent-final/summary` 与 `plots` 生成。保持原字节路径是 historical_only 分析的要求，不能把 raw header 改成 clone 路径。绘图用副本内 MPLCONFIGDIR，避免复用原构建或图形缓存。
+
+查验点包括：最终源码/协议与冻结身份；54 项实际运行而非 skip；全部预备构建与单次真实 n4096 的原始记录；正式 raw 在复现前后的 SHA 不变；全部保存 CSV/JSON 与新生成输出的文件集合相同且逐 bytes 相同，遇到差异保存双方而不改 raw；图表来源、内容可读性、README/report 完整连续复读及本地链接/图片存在；日志、可执行文件与缓存留在隔离副本，主控只集成有用文本证据。若 code/data/docs 变化，按真实变更复核，不沿用旧成功记录。这里只记录准备与等待条件，没有最终复现或工程完成结论。

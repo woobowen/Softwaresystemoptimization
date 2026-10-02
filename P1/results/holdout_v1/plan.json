@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "stage": "holdout",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "protocol": "evidence/protocol_v1.json",
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "framework_sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "driver_sha256": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+  "jobs": [
+    {
+      "id": "warmup-holdout",
+      "action": "run",
+      "role": "warmup",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "holdout-random-seed196613",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 196613
+    },
+    {
+      "id": "confirm-holdout-random-seed196613",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "holdout-random-seed196613",
+      "repeats": 3,
+      "seed": 196613
+    },
+    {
+      "id": "holdout-random-seed229939",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 229939
+    },
+    {
+      "id": "confirm-holdout-random-seed229939",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "holdout-random-seed229939",
+      "repeats": 3,
+      "seed": 229939
+    },
+    {
+      "id": "holdout-random-seed262147",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 262147
+    },
+    {
+      "id": "confirm-holdout-random-seed262147",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "holdout-random-seed262147",
+      "repeats": 3,
+      "seed": 262147
+    }
+  ]
+}

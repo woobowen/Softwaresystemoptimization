@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "stage": "selection",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "protocol": "evidence/protocol_v1.json",
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "framework_sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "driver_sha256": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+  "jobs": [
+    {
+      "id": "warmup-selection",
+      "action": "run",
+      "role": "warmup",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "selection-grid-seed104729",
+      "action": "search",
+      "role": "search",
+      "algorithm": "grid",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 104729
+    },
+    {
+      "id": "confirm-selection-grid-seed104729",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-grid-seed104729",
+      "repeats": 3,
+      "seed": 104729
+    },
+    {
+      "id": "selection-random-seed104729",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 104729
+    },
+    {
+      "id": "confirm-selection-random-seed104729",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-random-seed104729",
+      "repeats": 3,
+      "seed": 104729
+    },
+    {
+      "id": "selection-greedy-seed104729",
+      "action": "search",
+      "role": "search",
+      "algorithm": "greedy",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 104729
+    },
+    {
+      "id": "confirm-selection-greedy-seed104729",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-greedy-seed104729",
+      "repeats": 3,
+      "seed": 104729
+    },
+    {
+      "id": "selection-stratified-seed104729",
+      "action": "search",
+      "role": "search",
+      "algorithm": "stratified",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 104729
+    },
+    {
+      "id": "confirm-selection-stratified-seed104729",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-stratified-seed104729",
+      "repeats": 3,
+      "seed": 104729
+    },
+    {
+      "id": "selection-patience-seed104729",
+      "action": "search",
+      "role": "search",
+      "algorithm": "patience",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 104729
+    },
+    {
+      "id": "confirm-selection-patience-seed104729",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-patience-seed104729",
+      "repeats": 3,
+      "seed": 104729
+    },
+    {
+      "id": "selection-greedy-seed130363",
+      "action": "search",
+      "role": "search",
+      "algorithm": "greedy",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 130363
+    },
+    {
+      "id": "confirm-selection-greedy-seed130363",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-greedy-seed130363",
+      "repeats": 3,
+      "seed": 130363
+    },
+    {
+      "id": "selection-stratified-seed130363",
+      "action": "search",
+      "role": "search",
+      "algorithm": "stratified",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 130363
+    },
+    {
+      "id": "confirm-selection-stratified-seed130363",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-stratified-seed130363",
+      "repeats": 3,
+      "seed": 130363
+    },
+    {
+      "id": "selection-patience-seed130363",
+      "action": "search",
+      "role": "search",
+      "algorithm": "patience",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 130363
+    },
+    {
+      "id": "confirm-selection-patience-seed130363",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-patience-seed130363",
+      "repeats": 3,
+      "seed": 130363
+    },
+    {
+      "id": "selection-grid-seed130363",
+      "action": "search",
+      "role": "search",
+      "algorithm": "grid",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 130363
+    },
+    {
+      "id": "confirm-selection-grid-seed130363",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-grid-seed130363",
+      "repeats": 3,
+      "seed": 130363
+    },
+    {
+      "id": "selection-random-seed130363",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 130363
+    },
+    {
+      "id": "confirm-selection-random-seed130363",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-random-seed130363",
+      "repeats": 3,
+      "seed": 130363
+    },
+    {
+      "id": "selection-patience-seed155921",
+      "action": "search",
+      "role": "search",
+      "algorithm": "patience",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 155921
+    },
+    {
+      "id": "confirm-selection-patience-seed155921",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-patience-seed155921",
+      "repeats": 3,
+      "seed": 155921
+    },
+    {
+      "id": "selection-grid-seed155921",
+      "action": "search",
+      "role": "search",
+      "algorithm": "grid",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 155921
+    },
+    {
+      "id": "confirm-selection-grid-seed155921",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-grid-seed155921",
+      "repeats": 3,
+      "seed": 155921
+    },
+    {
+      "id": "selection-random-seed155921",
+      "action": "search",
+      "role": "search",
+      "algorithm": "random",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 155921
+    },
+    {
+      "id": "confirm-selection-random-seed155921",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-random-seed155921",
+      "repeats": 3,
+      "seed": 155921
+    },
+    {
+      "id": "selection-greedy-seed155921",
+      "action": "search",
+      "role": "search",
+      "algorithm": "greedy",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 155921
+    },
+    {
+      "id": "confirm-selection-greedy-seed155921",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-greedy-seed155921",
+      "repeats": 3,
+      "seed": 155921
+    },
+    {
+      "id": "selection-stratified-seed155921",
+      "action": "search",
+      "role": "search",
+      "algorithm": "stratified",
+      "budget": 8,
+      "repeats": 1,
+      "seed": 155921
+    },
+    {
+      "id": "confirm-selection-stratified-seed155921",
+      "action": "run",
+      "role": "return_confirmation",
+      "depends_on": "selection-stratified-seed155921",
+      "repeats": 3,
+      "seed": 155921
+    }
+  ]
+}

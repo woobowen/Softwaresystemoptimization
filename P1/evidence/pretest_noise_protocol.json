@@ -1,0 +1,39 @@
+{
+  "version": "pretest-monotonic-noise-v1",
+  "formal_comparison": false,
+  "n": 4096,
+  "affinity": [
+    0
+  ],
+  "repeats_per_task": 1,
+  "timeout_s": 1200,
+  "flags": [
+    "-std=c11",
+    "-Wall",
+    "-Wextra"
+  ],
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "framework_sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+  "order": [
+    [
+      "diagnostic",
+      128,
+      "O3"
+    ],
+    [
+      "diagnostic",
+      128,
+      "O3"
+    ],
+    [
+      "diagnostic",
+      128,
+      "O3"
+    ]
+  ],
+  "timer": "CLOCK_MONOTONIC",
+  "kernel_over_process_tolerance_s": 0.005,
+  "prior_batch": "pretest (diagnostic only; clock anomaly)",
+  "reason": "bounded three consecutive fast runs after 14.15 percent interleaved range; clock-rate/resource diagnosis, not selection or formal reference",
+  "maximum_process_runs": 3
+}

@@ -1,0 +1,1 @@
+{"atol": 1e-12, "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab", "reference": "independent unblocked dot products accumulated in long double", "rtol": 1e-11, "source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835", "suite": "sanitizer", "type": "source"}

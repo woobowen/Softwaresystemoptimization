@@ -1,0 +1,244 @@
+$ pwd
+/home/addaswsw/lab/Software_system_optimization
+exit=0
+
+$ git rev-parse --show-toplevel
+/home/addaswsw/lab/Software_system_optimization
+exit=0
+
+$ git branch --show-current
+main
+exit=0
+
+$ git rev-parse HEAD
+9b0ca66cdd218de034ba2c29979bcbfa9307e1fb
+exit=0
+
+$ git remote -v
+origin	https://github.com/woobowen/Softwaresystemoptimization.git (fetch)
+origin	https://github.com/woobowen/Softwaresystemoptimization.git (push)
+exit=0
+
+$ git status --short
+?? P1/
+?? P1_Goal1_Codex_Prompt.md
+?? matrix_multiplication.c
+exit=0
+
+$ ls -la
+total 2700
+drwxr-xr-x 7 addaswsw addaswsw    4096 Oct  2 02:12 .
+drwxr-xr-x 7 addaswsw addaswsw    4096 Sep 26 23:36 ..
+drwxr-xr-x 9 addaswsw addaswsw    4096 Oct  2 02:17 .git
+-rw-r--r-- 1 addaswsw addaswsw    1222 Oct  1 11:51 .gitignore
+drwxr-xr-x 6 addaswsw addaswsw    4096 Sep 16 12:37 A1
+-rw-r--r-- 1 addaswsw addaswsw  333584 Sep 16 09:46 A1 Getting Started.pdf
+-rw-r--r-- 1 addaswsw addaswsw   19136 Sep 16 09:47 A1 代码材料.zip
+-rw-r--r-- 1 addaswsw addaswsw   32314 Sep 16 09:46 A1 初试环境和工具.docx
+-rw-r--r-- 1 addaswsw addaswsw  219682 Sep 14 10:16 A1 初试环境和工具.pdf
+-rw-r--r-- 1 addaswsw addaswsw     301 Sep 14 10:16 A1 初试环境和工具.pdf:Zone.Identifier
+drwxr-xr-x 6 addaswsw addaswsw    4096 Oct  1 18:04 A2
+-rw-r--r-- 1 addaswsw addaswsw   25982 Sep 30 10:36 AGENTS.md
+drwxr-xr-x 4 addaswsw addaswsw    4096 Oct  2 02:12 P1
+-rw-r--r-- 1 addaswsw addaswsw  198183 Oct  2 00:47 P1 Matrix Multiplication Autotuner.pdf
+-rw-r--r-- 1 addaswsw addaswsw   37151 Oct  2 02:07 P1_Goal1_Codex_Prompt.md
+-rw-r--r-- 1 addaswsw addaswsw      90 Oct  2 02:07 P1_Goal1_Codex_Prompt.md:Zone.Identifier
+-rw-r--r-- 1 addaswsw addaswsw     151 Sep 15 00:00 README.md
+drwxr-xr-x 3 addaswsw addaswsw    4096 Sep 30 10:33 materials
+-rw-r--r-- 1 addaswsw addaswsw    1357 Oct  2 00:47 matrix_multiplication.c
+-rw-r--r-- 1 addaswsw addaswsw 1827933 Sep 14 10:16 环境搭建和工具安装.pdf
+-rw-r--r-- 1 addaswsw addaswsw     303 Sep 14 10:16 环境搭建和工具安装.pdf:Zone.Identifier
+exit=0
+
+$ uname -a
+Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+exit=0
+
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+exit=0
+
+$ lscpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  22
+On-line CPU(s) list:                     0-21
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) Ultra 9 185H
+CPU family:                              6
+Model:                                   170
+Thread(s) per core:                      2
+Core(s) per socket:                      11
+Socket(s):                               1
+Stepping:                                4
+BogoMIPS:                                6143.99
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               528 KiB (11 instances)
+L1i cache:                               704 KiB (11 instances)
+L2 cache:                                22 MiB (11 instances)
+L3 cache:                                24 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-21
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+exit=0
+
+$ cat /proc/meminfo
+MemTotal:       16173232 kB
+MemFree:        13561672 kB
+MemAvailable:   13973948 kB
+Buffers:           22556 kB
+Cached:           557416 kB
+SwapCached:            0 kB
+Active:           135236 kB
+Inactive:        1699956 kB
+Active(anon):       2700 kB
+Inactive(anon):  1256624 kB
+Active(file):     132536 kB
+Inactive(file):   443332 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       4194304 kB
+SwapFree:        4194304 kB
+Dirty:               804 kB
+Writeback:             0 kB
+AnonPages:       1255432 kB
+Mapped:           435316 kB
+Shmem:              4048 kB
+KReclaimable:      45376 kB
+Slab:             205544 kB
+SReclaimable:      45376 kB
+SUnreclaim:       160168 kB
+KernelStack:        8696 kB
+PageTables:        23344 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12280920 kB
+Committed_AS:    3103952 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      157808 kB
+VmallocChunk:          0 kB
+Percpu:            10848 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+Balloon:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:       82944 kB
+DirectMap2M:    11247616 kB
+DirectMap1G:    13631488 kB
+exit=0
+
+$ gcc --version
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+exit=0
+
+$ python3 --version
+Python 3.12.3
+exit=0
+
+$ uptime
+ 02:17:58 up 23 min,  1 user,  load average: 0.04, 0.09, 0.04
+exit=0
+
+$ ps -eo pid,comm,pcpu,pmem --sort=-pcpu
+    PID COMMAND         %CPU %MEM
+   5382 python3         40.0  0.1
+   1544 MainThread       3.1  3.3
+   1563 codex            1.2  2.3
+   1224 MainThread       0.3  0.8
+   1256 MainThread       0.2  0.5
+   1783 MainThread       0.1  0.4
+    269 containerd       0.1  0.2
+   3557 python3          0.1  0.3
+   1250 Relay(1256)      0.1  0.0
+   3327 codex-code-mode  0.0  0.1
+   2484 python3          0.0  0.3
+   2603 python3          0.0  0.3
+   2338 python3          0.0  0.3
+    343 dockerd          0.0  0.4
+   1238 MainThread       0.0  0.4
+      1 systemd          0.0  0.0
+   1261 MainThread       0.0  0.3
+    202 avahi-daemon     0.0  0.0
+     58 systemd-journal  0.0  0.1
+    108 systemd-udevd    0.0  0.0
+   1237 Relay(1238)      0.0  0.0
+    219 rsyslogd         0.0  0.0
+    191 systemd-resolve  0.0  0.0
+    885 systemd          0.0  0.0
+    192 systemd-timesyn  0.0  0.0
+    342 unattended-upgr  0.0  0.1
+    208 polkitd          0.0  0.0
+    204 dbus-daemon      0.0  0.0
+    216 wsl-pro-service  0.0  0.0
+      7 init             0.0  0.0
+   1800 bash             0.0  0.0
+    914 bash             0.0  0.0
+    213 systemd-logind   0.0  0.0
+    235 wpa_supplicant   0.0  0.0
+      2 init-systemd(Ub  0.0  0.0
+    203 cron             0.0  0.0
+    223 avahi-daemon     0.0  0.0
+    282 agetty           0.0  0.0
+    842 login            0.0  0.0
+    886 (sd-pam)         0.0  0.0
+   1211 SessionLeader    0.0  0.0
+   1212 Relay(1213)      0.0  0.0
+   1213 sh               0.0  0.0
+   1214 sh               0.0  0.0
+   1220 sh               0.0  0.0
+   1236 SessionLeader    0.0  0.0
+   1249 SessionLeader    0.0  0.0
+   5381 bash             0.0  0.0
+   5400 ps               0.0  0.0
+exit=0

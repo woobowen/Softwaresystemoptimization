@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 Z" fill="#456078"/></marker></defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#19344b;font-size:17px;text-anchor:middle} .box{fill:#f1f6fa;stroke:#547894;stroke-width:2;rx:10} .input{fill:#e3f0e8;stroke:#4f8264;stroke-width:2;rx:10} .line{fill:none;stroke:#456078;stroke-width:2;marker-end:url(#arrow)} .small{font-size:14px} .title{font-size:23px;font-weight:bold}</style>
+<rect width="1000" height="640" fill="white"/>
+<text x="500" y="35" class="title">Matrix Multiplication Autotuner</text>
+<rect x="25" y="65" width="285" height="65" class="input"/><text x="167" y="91">Target input</text><text x="167" y="114" class="small">--target / --compiler</text>
+<rect x="357" y="65" width="285" height="65" class="input"/><text x="499" y="91">Configuration input</text><text x="499" y="114" class="small">--blocks / --opts</text>
+<rect x="690" y="65" width="285" height="65" class="input"/><text x="832" y="91">Search input</text><text x="832" y="114" class="small">--algorithm / --budget / --seed</text>
+<path d="M167,130 V170" class="line"/><path d="M499,130 V170" class="line"/><path d="M832,130 V170" class="line"/>
+<rect x="25" y="170" width="285" height="80" class="box"/><text x="167" y="201">TargetProgram</text><text x="167" y="227" class="small">build / measure / parse</text>
+<rect x="357" y="170" width="285" height="80" class="box"/><text x="499" y="201">ConfigSpace</text><text x="499" y="227" class="small">20 configs; legality; stable order</text>
+<rect x="690" y="170" width="285" height="80" class="box"/><text x="832" y="201">SearchStrategy</text><text x="832" y="227" class="small">suggest / observe; own feedback only</text>
+<path d="M642,210 H690" class="line"/><text x="663" y="192" class="small">space</text>
+<path d="M832,250 V300 H660 V330" class="line"/><text x="799" y="289" class="small">proposal</text>
+<path d="M540,330 V283 H760 V250" class="line"/><text x="631" y="277" class="small">measured feedback</text>
+<path d="M499,250 V330" class="line"/>
+<rect x="355" y="330" width="360" height="85" class="box"/><text x="535" y="362">Evaluator + search()</text><text x="535" y="389" class="small">repeats / median / timeout / budget</text>
+<path d="M355,370 H167 V250" class="line"/><text x="256" y="356" class="small">evaluate config</text>
+<path d="M167,250 V460" class="line"/>
+<rect x="25" y="460" width="285" height="95" class="box"/><text x="167" y="490">4 cached builds + C process</text><text x="167" y="517" class="small">-O0 ... -O3; runtime block size</text><text x="167" y="541" class="small">kernel time + checksum</text>
+<path d="M715,370 H834 V460" class="line"/>
+<rect x="690" y="460" width="285" height="95" class="box"/><text x="832" y="490">Journal</text><text x="832" y="517" class="small">append-only JSONL; identities</text><text x="832" y="541" class="small">trials / raw output / costs / resume</text>
+<path d="M535,415 V485" class="line"/><rect x="370" y="485" width="285" height="70" class="input"/><text x="512" y="513">Result</text><text x="512" y="539" class="small">best config + real cost summary</text>
+<text x="500" y="604" class="small">All search rules use one evaluator; build reuse is separate from fresh measurements.</text>
+</svg>

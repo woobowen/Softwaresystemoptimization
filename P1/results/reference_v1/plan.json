@@ -1,0 +1,621 @@
+{
+  "schema": 1,
+  "stage": "reference",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "protocol": "evidence/protocol_v1.json",
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "framework_sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "driver_sha256": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+  "jobs": [
+    {
+      "id": "warmup-reference",
+      "action": "run",
+      "role": "warmup",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "ref-r1-s24-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s64-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s16-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s128-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s16-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s24-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s8-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s8-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s64-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s8-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s128-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s64-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s64-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s16-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s128-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s128-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s8-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s24-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s24-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-s16-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314159,
+      "round": 1
+    },
+    {
+      "id": "ref-r2-s8-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s64-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s64-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s128-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s16-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s8-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s24-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s16-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s24-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s128-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s8-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s64-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s16-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s128-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s24-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s64-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s128-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s24-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s16-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-s8-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314160,
+      "round": 2
+    },
+    {
+      "id": "ref-r3-s64-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s16-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s24-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s128-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s128-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s16-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s8-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s24-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s8-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s128-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s16-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s64-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s16-O3",
+      "action": "run",
+      "role": "reference",
+      "s": 16,
+      "opt": "O3",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s128-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 128,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s64-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s8-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s8-O1",
+      "action": "run",
+      "role": "reference",
+      "s": 8,
+      "opt": "O1",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s64-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 64,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s24-O0",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O0",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-s24-O2",
+      "action": "run",
+      "role": "reference",
+      "s": 24,
+      "opt": "O2",
+      "repeats": 1,
+      "seed": 314161,
+      "round": 3
+    }
+  ]
+}

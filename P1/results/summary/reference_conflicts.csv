@@ -1,0 +1,4 @@
+stage,event,member,s,opt,valid_runs,median_s,original_reference_config_median_s,relative_reference_change,environment_drift,return_instability,samples
+conflict_selection,1,both,128,O2,3,37.563213,39.499706,0.049025504139195486,False,True,"[37.563213, 36.683041, 39.4361]"
+conflict_selection,2,returned,128,O3,3,40.802387,42.501537,0.03997855418734608,False,True,"[40.151283, 40.91119, 40.802387]"
+conflict_selection,2,reference,128,O2,3,41.061607,39.499706,0.03954209178164514,False,False,"[40.804188, 41.600006, 41.061607]"

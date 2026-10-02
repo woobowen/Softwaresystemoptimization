@@ -1,0 +1,92 @@
+# Diagnostic assemblies and optimization remarks; not formal binaries
+target_sha256=cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835
+
+['gcc', '-std=c11', '-Wall', '-Wextra', '-O0', '-S', '-fopt-info-vec-all', 'P1/src/matrix_multiplication.c', '-o', 'P1/.cache/assembly/O0.s']
+assembly_sha256=5bbc01e4a57d8c07ed2f65964093061af2973640e65764a02175010d0877dc21
+kernel between clock calls: lines=130, mulsd=1, addsd=1, mulpd=0, addpd=0
+vectorization diagnostics:
+(none; pass may be disabled at this level)
+
+['gcc', '-std=c11', '-Wall', '-Wextra', '-O1', '-S', '-fopt-info-vec-all', 'P1/src/matrix_multiplication.c', '-o', 'P1/.cache/assembly/O1.s']
+assembly_sha256=d8380768ad996f46a39f35ef4b753a6c5248a4e6256a2562f873b367cf09dad9
+kernel between clock calls: lines=138, mulsd=1, addsd=1, mulpd=0, addpd=0
+vectorization diagnostics:
+(none; pass may be disabled at this level)
+
+['gcc', '-std=c11', '-Wall', '-Wextra', '-O2', '-S', '-fopt-info-vec-all', 'P1/src/matrix_multiplication.c', '-o', 'P1/.cache/assembly/O2.s']
+assembly_sha256=75431a575152dcc6009112a658616702b2fc98d22931a68986571adbe54c04eb
+kernel between clock calls: lines=128, mulsd=1, addsd=1, mulpd=0, addpd=0
+vectorization diagnostics:
+P1/src/matrix_multiplication.c:15:39: note: ***** Analysis failed with vector mode V2DI
+P1/src/matrix_multiplication.c:15:39: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+P1/src/matrix_multiplication.c:56:23: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:58:29: missed: not vectorized: complicated access pattern.
+P1/src/matrix_multiplication.c:57:27: optimized: loop vectorized using 16 byte vectors
+P1/src/matrix_multiplication.c:44:24: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:44:24: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:45:28: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:45:28: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:46:32: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:46:32: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:19:5: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:19:5: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:50:56: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:50:56: missed: not vectorized: control flow in loop.
+P1/src/matrix_multiplication.c:50:37: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:50:37: missed: not vectorized: control flow in loop.
+P1/src/matrix_multiplication.c:33:22: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:34:26: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:19:5: note: vectorized 1 loops in function.
+P1/src/matrix_multiplication.c:25:18: missed: statement clobbers memory: block_56 = strtol (_4, &tail, 10);
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:36:31: missed: statement clobbers memory: _13 = rand ();
+P1/src/matrix_multiplication.c:42:9: missed: statement clobbers memory: _16 = clock_gettime (1, &start);
+P1/src/matrix_multiplication.c:52:9: missed: statement clobbers memory: _27 = clock_gettime (1, &end);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "%0.6f\n", _28);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "checksum=%.17g\n", checksum_144);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "Invalid input values.\n");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __fprintf_chk (stderr.0_2, 2, "Usage: %s block_size\n", _1);
+P1/src/matrix_multiplication.c:19:5: note: ***** Analysis failed with vector mode V2DI
+P1/src/matrix_multiplication.c:19:5: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+
+
+['gcc', '-std=c11', '-Wall', '-Wextra', '-O3', '-S', '-fopt-info-vec-all', 'P1/src/matrix_multiplication.c', '-o', 'P1/.cache/assembly/O3.s']
+assembly_sha256=e42c01d527e09fccd7e4729ae98ff16046050fb54b5aa3e58acddb8070142548
+kernel between clock calls: lines=128, mulsd=1, addsd=1, mulpd=0, addpd=0
+vectorization diagnostics:
+P1/src/matrix_multiplication.c:15:39: note: ***** Analysis failed with vector mode V2DI
+P1/src/matrix_multiplication.c:15:39: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+P1/src/matrix_multiplication.c:56:23: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:58:29: missed: not vectorized: complicated access pattern.
+P1/src/matrix_multiplication.c:57:27: optimized: loop vectorized using 16 byte vectors
+P1/src/matrix_multiplication.c:44:24: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:44:24: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:45:28: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:45:28: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:46:32: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:46:32: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:19:5: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:19:5: missed: not vectorized: multiple nested loops.
+P1/src/matrix_multiplication.c:50:56: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:50:56: missed: not vectorized: control flow in loop.
+P1/src/matrix_multiplication.c:50:37: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:50:37: missed: not vectorized: control flow in loop.
+P1/src/matrix_multiplication.c:33:22: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:34:26: missed: couldn't vectorize loop
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:19:5: note: vectorized 1 loops in function.
+P1/src/matrix_multiplication.c:25:18: missed: statement clobbers memory: block_56 = strtol (_4, &tail, 10);
+P1/src/matrix_multiplication.c:35:31: missed: statement clobbers memory: _10 = rand ();
+P1/src/matrix_multiplication.c:36:31: missed: statement clobbers memory: _13 = rand ();
+P1/src/matrix_multiplication.c:42:9: missed: statement clobbers memory: _16 = clock_gettime (1, &start);
+P1/src/matrix_multiplication.c:52:9: missed: statement clobbers memory: _27 = clock_gettime (1, &end);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "%0.6f\n", _28);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "checksum=%.17g\n", checksum_144);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "Invalid input values.\n");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __fprintf_chk (stderr.0_2, 2, "Usage: %s block_size\n", _1);
+P1/src/matrix_multiplication.c:19:5: note: ***** Analysis failed with vector mode V2DI
+P1/src/matrix_multiplication.c:19:5: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+

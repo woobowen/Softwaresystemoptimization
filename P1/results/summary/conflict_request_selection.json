@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "source_stage": "selection",
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "events": [
+    {
+      "returned_config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "reference_config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "affected": [
+        {
+          "stage": "selection",
+          "algorithm": "random",
+          "seed": 130363,
+          "s": 128,
+          "opt": "O2",
+          "relative_difference": 0.15970979632101578,
+          "reference_config_median_s": 39.499706,
+          "confirmed_s": 33.191216
+        },
+        {
+          "stage": "selection",
+          "algorithm": "stratified",
+          "seed": 155921,
+          "s": 128,
+          "opt": "O2",
+          "relative_difference": 0.1835661257833161,
+          "reference_config_median_s": 39.499706,
+          "confirmed_s": 32.248898
+        }
+      ]
+    },
+    {
+      "returned_config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "reference_config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "affected": [
+        {
+          "stage": "selection",
+          "algorithm": "patience",
+          "seed": 155921,
+          "s": 128,
+          "opt": "O3",
+          "relative_difference": 0.21422780545560027,
+          "reference_config_median_s": 42.501537,
+          "confirmed_s": 33.396526
+        },
+        {
+          "stage": "selection",
+          "algorithm": "random",
+          "seed": 155921,
+          "s": 128,
+          "opt": "O3",
+          "relative_difference": 0.22563134599108725,
+          "reference_config_median_s": 42.501537,
+          "confirmed_s": 32.911858
+        },
+        {
+          "stage": "selection",
+          "algorithm": "greedy",
+          "seed": 155921,
+          "s": 128,
+          "opt": "O3",
+          "relative_difference": 0.22257298600754127,
+          "reference_config_median_s": 42.501537,
+          "confirmed_s": 33.041843
+        }
+      ]
+    }
+  ]
+}

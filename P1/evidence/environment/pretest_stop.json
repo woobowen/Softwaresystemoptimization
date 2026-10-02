@@ -1,0 +1,8 @@
+{
+  "reason": "repeated incompatible realtime kernel vs monotonic process clock, before any formal comparison",
+  "journal": "P1/results/pretest/04-sample-s8-O0.jsonl",
+  "target_pid": 15134,
+  "owned_autotuner_pid": 15132,
+  "command": "python3 P1/src/autotuner.py run --s 8 --opt O0 --repeats 1 --timeout 1200 --protocol P1/evidence/pretest_protocol.json --output P1/results/pretest/04-sample-s8-O0.jsonl ",
+  "action": "SIGTERM to own verified autotuner; handler cleans owned target group"
+}

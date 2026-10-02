@@ -1,0 +1,64 @@
+{
+  "version": "pretest-v1",
+  "formal_comparison": false,
+  "n": 4096,
+  "affinity": [
+    0
+  ],
+  "repeats_per_task": 1,
+  "timeout_s": 1200,
+  "flags": [
+    "-std=c11",
+    "-Wall",
+    "-Wextra"
+  ],
+  "target_sha256": "e321025e6097c9c8124c7e8624a6ae4132e2a54d426e135ae07d595a401be0b0",
+  "framework_sha256": "e2e0baa908eb8d32771544b5102bca5ad8e358d2cc6aff9aafab6b4a7634fb27",
+  "order": [
+    [
+      "warmup",
+      128,
+      "O3"
+    ],
+    [
+      "sample",
+      8,
+      "O0"
+    ],
+    [
+      "sample",
+      24,
+      "O1"
+    ],
+    [
+      "sample",
+      128,
+      "O3"
+    ],
+    [
+      "sample",
+      8,
+      "O0"
+    ],
+    [
+      "sample",
+      24,
+      "O2"
+    ],
+    [
+      "sample",
+      128,
+      "O3"
+    ],
+    [
+      "sample",
+      8,
+      "O0"
+    ],
+    [
+      "sample",
+      128,
+      "O3"
+    ]
+  ]
+}

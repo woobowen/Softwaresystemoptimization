@@ -1,0 +1,68 @@
+{
+  "old_source_sha256": "e321025e6097c9c8124c7e8624a6ae4132e2a54d426e135ae07d595a401be0b0",
+  "old_code_commit": "d545d53",
+  "batch_excluded_from_formal_results": true,
+  "raw_records_unchanged": true,
+  "observations": [
+    {
+      "path": "P1/results/pretest/00-warmup-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "raw_kernel_s": 65.59095,
+      "monotonic_process_s": 61.350186787999974,
+      "realtime_process_s": 66.142915,
+      "execution_status": "ok",
+      "formal_use": false
+    },
+    {
+      "path": "P1/results/pretest/01-sample-s8-O0.jsonl",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "raw_kernel_s": 376.662109,
+      "monotonic_process_s": 349.0484673619999,
+      "realtime_process_s": 377.184083,
+      "execution_status": "ok",
+      "formal_use": false
+    },
+    {
+      "path": "P1/results/pretest/02-sample-s24-O1.jsonl",
+      "config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "raw_kernel_s": 51.599155,
+      "monotonic_process_s": 46.956739837999976,
+      "realtime_process_s": 52.083949,
+      "execution_status": "ok",
+      "formal_use": false
+    },
+    {
+      "path": "P1/results/pretest/03-sample-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "raw_kernel_s": 53.868687,
+      "monotonic_process_s": 51.91476063299979,
+      "realtime_process_s": 54.37165,
+      "execution_status": "ok",
+      "formal_use": false
+    },
+    {
+      "path": "P1/results/pretest/04-sample-s8-O0.jsonl",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "raw_kernel_s": null,
+      "monotonic_process_s": 224.3212482859999,
+      "realtime_process_s": 240.470081,
+      "execution_status": "interrupted",
+      "formal_use": false
+    }
+  ]
+}

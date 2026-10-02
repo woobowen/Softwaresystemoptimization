@@ -1,0 +1,51 @@
+[
+  {
+    "mode": "unbound",
+    "command": [
+      "P1/.cache/clock_compare"
+    ],
+    "before": {
+      "python_monotonic": 3907.86751033,
+      "clock_monotonic": 3907.867512593,
+      "realtime": 1790881341.0033543
+    },
+    "after": {
+      "python_monotonic": 3908.868466145,
+      "clock_monotonic": 3908.86846793,
+      "realtime": 1790881342.0043094
+    },
+    "deltas": {
+      "python_monotonic": 1.0009558149999975,
+      "clock_monotonic": 1.0009553370000503,
+      "realtime": 1.0009551048278809
+    },
+    "c_kernel_s": 1.000069718,
+    "returncode": 0
+  },
+  {
+    "mode": "cpu0",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "P1/.cache/clock_compare"
+    ],
+    "before": {
+      "python_monotonic": 3908.868550311,
+      "clock_monotonic": 3908.868550662,
+      "realtime": 1790881342.004392
+    },
+    "after": {
+      "python_monotonic": 3909.870078966,
+      "clock_monotonic": 3909.870081306,
+      "realtime": 1790881343.0059228
+    },
+    "deltas": {
+      "python_monotonic": 1.0015286550001292,
+      "clock_monotonic": 1.0015306440000131,
+      "realtime": 1.0015308856964111
+    },
+    "c_kernel_s": 1.000018458,
+    "returncode": 0
+  }
+]

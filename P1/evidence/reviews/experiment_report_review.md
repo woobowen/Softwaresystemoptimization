@@ -235,3 +235,306 @@ ER-01 至 ER-14 的正式设计阻塞已关闭：收益用百分点与秒差，w
 上述审批字段路径随后由主控修正。最终冻结时刻为 `2026-10-01T21:03:34.498833+00:00`，最终 JSON SHA-256 为 **`64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66`**；Markdown 仍为 `d679dac852d4ca9b9bd8edeb208d3960f2fcbb64dd44be3d70f4056fdad3aae2`。本审核者再次逐字段比较，仅 state/approval 相对 draft 改变，两份证据文件确实存在，五份源文件 SHA 不变，真实只读 `plan(reference)` + `check_frozen` 已成功（exit 0）。没有正式目录、compiler/target 启动或原始测量；之前7e437的审批路径失配不产生任何正式 runs。
 
 **最终字节与 preflight 均批准，可由主控串行启动正式批次。** 当前审批路径问题已关闭。本审核者停止测试/编译，在测量锁期间只做静态读取，不修改冻结规则；正式 raw 重算与完整报告/GitHub 审核仍未完成。
+
+## 8. 正式 reference_v1 原始数据独立审核
+
+审核时间：2026-10-01 22:56 UTC 起（北京时间 2026-10-02 06:56）。reference 已结束，selection 正在主控串行测量；测量锁仍 ON。本审核者只执行 Python 标准库只读解析、hash、CSV 比对和统计，不 import 调度入口、不启动 compiler/target、不运行 unittest 或绘图。没有读取 selection 的反馈，也不据网格修改冻结策略/阈值。唯一写入仍为本文。
+
+### 8.1 原始记录、计划与构建身份
+
+61 份 journal 全部以完整 JSONL 和末尾换行保存，61 个独立 run_id/fingerprint；每份严格包含 header、session_start、trial_start、cached build、measurement_start、measurement、trial、session_end、summary。逐记录核对 run_id、trial_id=0/repeat=0、配置、command、PID、spawned=true、start/completion 唯一对应；60份正式记录恰为20配置×3轮，另1份独立 warmup。用独立 Random(314159+round_index) 重建每轮20配置次序，与实际计划和driver顺序逐项一致。
+
+每份 stdout 首行重新 float 解析，等于 kernel_s 和该 trial/best score，且正/有限；唯一 checksum 重新解析并全部等于17180040496.458935。61份均 returncode=0、status=ok、stderr空、error=null、未中断；内核均满足 MONO process wall +0.005秒 guard。header完整字典逐字段对冻结协议核对，并独立 canonical JSON 重算 fingerprint：target/frame/protocol hash、compiler完整路径/版本/SHA、公共flags、n=4096、CLOCK_MONOTONIC、实际affinity=[0]、timeout1200、compile_timeout60.0、δ.06及其余参数均一致。
+
+四份 cache binary 的实际字节 SHA、cache identity、build_key 和原始准备记录均匹配；61份 cached build 的历史compile记录与准备阶段原记录完全一致，compile_wall均0，没有将历史compile成本重复计费。准备阶段的四组build_start/build与成功编译PID/command相对应，公共flags仅 -std=c11 -Wall -Wextra 加各自-O等级；正式reference没有编译启动。61次compiler --version探针也各有成功记录，其成本在完整CLI wall内。
+
+只读审核脚本首版误将cache manifest的build_key当顶层字段而产生KeyError；读取实际结构后改为result.build_key并核对identity，第二次整套读取通过。这是审核者的解析假设修正，工程源码、日志和分数没有修改，也没有补测。
+
+### 8.2 20配置统计与完整派生表
+
+从60份正式stdout重建每配置三个值，warmup=45.921619秒保留并排除排序。独立用median、median(abs(x−median))及(max−min)/median重算；grid_summary.csv的20行顺序、valid=3/failed=0、rounds/samples、median/min/max/MAD/range逐值完全一致。另逐行核对measurements.csv的61份原stdout/stderr/rc/command/配置/时间与hash字段，全部一致；reference-only summary.json及batch_costs.csv的计数、时间与噪声标记也匹配。
+
+以下为独立重算值，range列使用百分比显示，CSV保留比例：
+
+| s | opt | median秒 | MAD秒 | relative range |
+| --- | --- | ---: | ---: | ---: |
+| 8 | O0 | 300.623230 | 5.290100 | 4.9083% |
+| 8 | O1 | 77.373161 | 0.143493 | 0.8671% |
+| 8 | O2 | 78.313446 | 0.174309 | 1.3959% |
+| 8 | O3 | 78.263649 | 0.771935 | 2.4937% |
+| 16 | O0 | 217.292618 | 0.516922 | 0.5100% |
+| 16 | O1 | 44.326172 | 0.431633 | 8.2284% |
+| 16 | O2 | 43.614208 | 1.487328 | 7.4005% |
+| 16 | O3 | 44.371098 | 0.042152 | 2.5848% |
+| 24 | O0 | 210.435379 | 0.824280 | 1.4575% |
+| 24 | O1 | 46.188328 | 0.339321 | 2.5455% |
+| 24 | O2 | 43.737030 | 0.055725 | 2.1718% |
+| 24 | O3 | 44.067669 | 0.779091 | 4.5286% |
+| 64 | O0 | 179.600632 | 1.095856 | 3.2582% |
+| 64 | O1 | 41.472359 | 1.192818 | 7.7028% |
+| 64 | O2 | 41.239479 | 0.024376 | 5.7859% |
+| 64 | O3 | 41.112492 | 2.239270 | 13.8415% |
+| 128 | O0 | 178.396179 | 5.207840 | 8.5254% |
+| 128 | O1 | 41.177814 | 2.659123 | 24.3169% |
+| 128 | O2 | 39.499706 | 0.885681 | 14.9380% |
+| 128 | O3 | 42.501537 | 4.259323 | 32.3638% |
+
+原参照观测最优为 O2/s128，中位数39.499706秒；三轮样本40.385387、39.499706、34.484921秒，MAD0.885681秒、range14.9380%。它是三样本中位数的观测最优，不是单次最小值或真实全局最优保证。128/O1的range24.3169%、128/O3的32.3638%超过冻结18%诊断门，只有这两个配置被标记；summary.reference_checks完全一致，参照最优本身未越门。有效慢/离散样本全部保留，没有把33.005756秒等快单次替换t_ref。
+
+### 8.3 独立成本与版本快照
+
+计数为61个真实target进程、61次compiler版本探针、0次reference编译、0失败/恢复/未知成本。driver有61组完整start/process/end，attempt_id0..60，rc0且interrupted=false；monotonic starts和各完整driver wall证明这些任务串行，不用UTC跨度代替成本。以下均含reference warmup，时间单位秒：
+
+| 项目 | 独立重算 |
+| --- | ---: |
+| 内核时间和 | 5533.803465000 |
+| target process wall和 | 5563.930275265 |
+| 框架内部窗口和 | 5565.119835502 |
+| 完整CLI driver wall和 | 5569.810459629 |
+| 版本探针process wall和（已在CLI内） | 0.118502434 |
+| 共同四次编译process wall和（单列准备） | 0.537283707 |
+| 共同build完整driver wall（单列准备） | 0.610331204 |
+
+target process wall−kernel为0.458709–0.636853秒；UTC跨度−MONO process wall为约−0.000008至25.387543秒，后者只作时钟诊断，不加入调优成本或推断物理硬件原因。没有未知wall或免费恢复数据。上述值不等于整个项目最终成本，selection/holdout/冲突及其他准备项尚未结算。
+
+审核快照：
+
+- protocol JSON：64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66。
+- reference plan：9f5f093803045373aecc48a22b355ce99ef8fc19eb8c07d79fb95ef409dde1ad。
+- reference driver.jsonl：05a23220bc4ed3b59686f14f9dea5ed7d969fb104f26f53a78c7aafbd62037a7。
+- 61份journal集合：ffeeeb906b5eec5910af67569e1ca5ad7787932b737c32fa3e9c7413aadec6a2；定义为计划顺序的(file_name,SHA256)列表经sort_keys、紧凑分隔canonical JSON再SHA256。
+- grid_summary.csv：8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec。
+- measurements.csv：b0c8f4e1f90cba3ac6b244b6f372b6c1c0a914291dc526707c0536e853ee2715。
+- reference-only summary.json：b7c427137899298ad78201bdfc4a3addd6df84b77b8440eac3152646278dc48d。
+- batch_costs.csv：6082bcf50daac80ccf0f2d9a97cc97f8d45d1e8d7f2cba3994cfadfd08c8007e。
+
+这些派生摘要以后加入selection/holdout可更新，以上为仅reference快照，原始reference文件不得更改。冻结目标cece、框架0a71、runner9041、summarizer2630仍一致。
+
+**reference审核结论：完整61份原始数据与20配置表通过，未发现影响结果的实现或派生数据错误。** 128/O1与128/O3的预设噪声标记应如实保留，后续只有相关返回配置才应用对应gate，不能因新网格数据重调参数、删除样本或更换参照。selection/holdout/冲突、最终曲线和报告/GitHub的独立审核仍待各批结束，不授予最终Engineering PASS。
+
+## 9. 报告已完成段落的连续通读
+
+审核时刻：2026-10-01 23:16:45 UTC。selection仍在主控串行测量、锁ON。完整通读当时的report.md，重点范围为1–3和4(1)，并核对4(2)已写的方法说明；其明确的在线结果待填区域按项目进度保留，不作为当前缺陷。report SHA-256为`9c7dede676c07994ffb915d7a3cd7d44fb269d8bd199c0a47bac6be328660305`，framework.svg为`dbc13ad44a457092bff9547d12c0751fbc9cc917fc40d76b989a84731c3a93bb`。本节不是完整最终报告或实际GitHub验收。
+
+### 9.1 已核对内容
+
+- 再次完整读取老师一页PDF：报告按1（三接口）、2（附件目标）、3（五s与四O）、4（Grid与另两算法）原题次序组织；学生10245102410/吴博闻正确。已包含框架图与实现优劣、关键搜索循环代码及明确软件硬件信息。
+- 逐段与ConfigSpace、TargetProgram、SearchStrategy、Evaluator和search()实际源码对应：配置枚举、四构建缓存、测量与构建隔离、统一feedback/预算、失败score=None、恢复已完成trial占预算均准确。代码片段与search()循环一致，没有把全部网格中位数回填在线轨迹。Greedy相邻候选列表、稳定邻域访问、严格改进、全局已观测best返回也与源码一致。
+- 读取运行目标和原始附件、验证生成器及现存记录：计时前初始化、原六层循环与末块边界、计时后checksum、同边界CLOCK_MONOTONIC说明正确。独立重新解析240个small、5个sanitizer、2个full检查的stdout CHECK行/rc/stderr/source SHA；全部failures=0。small最大绝对误差5.174333e−14、full2.937539e−12，与report逐值一致；full确实各检查24点，报告没有冒称4096逐元素比较。容差式与独立long double点积代码一致。
+- 原始C实际字节与根目录输入完全相同：1357字节、47个CRLF、原始SHA为188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15。仅读文本比较时归一换行并逐行rstrip，运行目标与原附件的循环文本相同，kernel SHA为4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab；没有混用文本归一后的hash冒充原始字节SHA。
+- 报告20个网格中位数全部与第8节已独立审核CSV精确对应，O2/s128样本/MAD及两项range噪声说明正确。明确观测参照不是真值、保留快慢有效数据；缓存原因只作结构解释，没有由时间反推精确cache命中或物理硬件原因。
+- 读取已有四份assembly，无重新编译：每个计时区间均包含mulsd/addsd且没有mulpd/addpd。O2/O3两计时调用之间的原始行文本SHA同为`1de9fbae5f59d7faae97467f0367110271122a31d21be341eadfad8802668aef`。O0内核可见多次栈索引访问，O1有指针加8；源码报告以“相符”解释耗时下降，没有假称测量了cache miss。向量化优化备注与实际指令的表述还需下述PR-01修订。
+- Ubuntu24.04.2、WSL2内核6.18.33.2、CPU显示Intel Core Ultra9 185H、GCC13.3、Python3.12.3都对应initial_environment记录；MemTotal16173232KiB转换为15.423996GiB，约15.42GiB正确。未用厂商规格替代WSL2证据。
+- 所有本地Markdown链接对应现存文件；framework.svg是有效SVG XML、1000×640，三输入、真实类名、Evaluator/search、Journal及反馈箭头结构与实现一致，没有外部图片依赖或伪终端结果。仅核本地结构与链接，GitHub实际渲染留待发布后的最终审核。
+- 通读文风：已完成段落先说明行为再给必要结果，主体是学生回答与技术解释，没有Codex/ChatGPT/AI/审核流水账或状态标签；表格数值不重复逐项念述，正确性与噪声限制保留有必要的明确边界。没有仅凭关键词筛查判定“自然”。
+
+上述只读标准库断言与原记录重解析命令exit0，未启动compiler或target，未运行unittest、绘图或改变测量文件。当前没有P1级内容/数据阻塞，以下两项P2表述问题由主控接受，仍待其修订与再次核对。
+
+### PR-01：区分GCC向量化备注与实际checksum归约指令
+
+严重性P2。位置：report.md第76行“向量化的 checksum 循环位于计时之后”。optimization_diagnostics.txt确实将源码57行checksum内层标为“loop vectorized using 16 byte vectors”，但现有O2/O3实际计时后归约使用连续addsd，未见addpd/mulpd。把该备注直接写成实际packed算术容易混淆IR阶段优化报告和最后指令。
+
+改法：保留“计时内核标量乘加/O2O3区间相同/内层控制流阻碍向量化”，将这一短句改为“优化信息中唯一标为向量化的是计时后的checksum循环”。这样准确说明GCC备注位置，又不把它当计时SIMD加速证据。主控已接受；状态：待主控在测量监控窗口结束后修改文稿，本审核者不改report。
+
+### PR-02：框架图TargetProgram方法名与源码一致
+
+严重性P2。位置：images/framework.svg第10行TargetProgram框的“build / run / parse; compiler identity”。TargetProgram实际方法为build、measure、parse（measure在autotuner.py第235行），run是CLI动作而不是该类方法。图中的类名和方法名应直接对应读者查看的源码。
+
+改法：将标签run改为measure，必要时简化后面的描述以保持框内文字长度，不变更框架数据流。主控已接受；状态：待主控修改SVG标签。本项仅文档准确性，与冻结源码/协议/性能数据无关。
+
+**本次部分报告审核结论：已完成1–3/4(1)的内容和数值与证据相符，两项P2修订待复查；4(2)结果尚未结束，最终全文/图表/selection/holdout审核未完成。** 不授予最终Engineering PASS；测量锁继续遵守。
+
+## 10. 正式 selection_v1 原始数据、比较与后续诊断关口
+
+记录时刻：2026-10-02 02:53:33 UTC。31个选择任务已结束，主控随后串行启动已批准的9个 conflict_selection_v1 诊断任务；测量锁持续ON。本审核者只执行 Python 标准库的JSONL/CSV/计划、hash和数值重算，不调用工程中的搜索或比较实现，不启动compiler/target，不运行unittest或绘图。原始结果、派生表、冻结代码/协议均未修改，唯一写入为本文。
+
+### 10.1 原始记录与真实运行数
+
+独立逐份读取reference的61份和selection的31份journal，合计92个不同run_id、215个真实target测量。selection恰含108次online、45次返回确认、1次warmup，共154；五种算法online分别为Grid24、Random24、Greedy19、S1分层24、S2 patience17。15个搜索轮都只有各自新feedback，三个确认样本是搜索结束后的独立进程，warmup保留但不进入质量排序。相同参数的header可以具有相同fingerprint，独立run_id和measurement_start证明它们没有共享测量。
+
+所有原始stdout恰有首行正有限float和唯一有限checksum，重新解析后与kernel_s、trial中位数/score及best完全对应；checksum均为17180040496.458935。每次均spawned=true、returncode=0、status=ok、stderr空、error=null，满足kernel≤MONO process wall+0.005秒。按trial_id/repeat核对唯一start与completion、配置/command/PID/start/end与重复索引；完整trial和summary计数一致，没有失败、未终结记录、重跑恢复或未知wall。
+
+各header完整metadata和独立canonical JSON fingerprint与冻结source/frame/protocol/compiler版本、realpath/SHA、flags、affinity=[0]、B8/r1/seed/δ.06/min5/patience3/timeout等逐项一致。确认任务的action=run、r3和最终选择配置另行核对，未误用搜索预算。31组driver start/process/end严格按实际计划串行，algorithm轮换后立刻执行自身确认；31次compiler版本探针成功、0次新增编译。cached build的四个binary实际SHA、identity、build_key和原准备记录保持一致。原reference journal集合SHA仍为ffeeeb…，grid_summary.csv仍为8f3bfb…，没有覆盖原参照。
+
+### 10.2 候选次序、停止与当时反馈
+
+用独立Random(seed)重建三次Random无放回列表；S2前三个序列分别等于对应Random的5、7、5步前缀。S1独立重建四O层内的s打乱和每轮O打乱：20配置不放回，任意前缀各O计数差≤1，B8每O各2次；候选生成不读取Grid或其他轮反馈。Grid三轮均为稳定前8项。Greedy以seed均匀选择单起点，重建相邻下标四邻域、配置枚举稳定次序、整邻域观测后严格改善及本轮缓存，得到7、7、5次测量和local_optimum停止，与每条trial一致；起点16/O2、128/O3、64/O3如报告所写，不据这些较有利起点推断一般优势。
+
+S2的stale/best逐步重放一致：104729第5步42.730598秒比原best43.460831改善约1.6802%，仍更新best但未越6%，stale=3后停止；130363第4步改善约6.3483%重置计数，第5步约2.6348%只更新best，第7步stale=3后停止。该seed的Random第8项128/O2在S2中没有被评估，不能免费补入S2结果；155921第5步停止。所有试探计入真实预算，无未测候选参与best。
+
+逐行核对当前215行measurements.csv、108行online_curves.csv和15行search_summary.csv，配置、stdout、hash、分数、计数及完整成本均一致。曲线每个prefix best只取当时本搜索已经完成的原始score；横轴为框架内部窗口，不回填全网格中位数或后续确认值。以下表由原始测量和driver重建，时间单位秒，g列为相对原t_ref=39.499706秒的百分值：
+
+| 算法 | seed | 返回s/opt | online数 | online best秒 | 确认median秒 | g（%） | 完整search+confirm wall秒 |
+| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |
+| Grid | 104729 | 16/O1 | 8 | 45.099396 | 44.194180 | 11.884833 | 1053.200412 |
+| Grid | 130363 | 16/O3 | 8 | 44.952080 | 44.844345 | 13.530832 | 1040.768085 |
+| Grid | 155921 | 16/O3 | 8 | 42.053825 | 42.672432 | 8.032278 | 1006.073105 |
+| Random | 104729 | 16/O1 | 8 | 43.431442 | 48.896767 | 23.790205 | 1082.793920 |
+| Random | 130363 | 128/O2 | 8 | 34.116451 | 33.191216 | -15.970980 | 697.458856 |
+| Random | 155921 | 128/O3 | 8 | 32.570972 | 32.911858 | -16.678220 | 1057.642905 |
+| Greedy | 104729 | 16/O3 | 7 | 44.572552 | 43.453590 | 10.009907 | 526.521878 |
+| Greedy | 130363 | 128/O1 | 7 | 37.570213 | 39.124683 | -0.949432 | 529.634615 |
+| Greedy | 155921 | 128/O3 | 5 | 32.670555 | 33.041843 | -16.349142 | 289.012571 |
+| S1 分层 | 104729 | 128/O2 | 8 | 39.282055 | 39.030720 | -1.187315 | 924.156011 |
+| S1 分层 | 130363 | 128/O2 | 8 | 35.368584 | 36.206318 | -8.337753 | 875.295188 |
+| S1 分层 | 155921 | 128/O2 | 8 | 32.955601 | 32.248898 | -18.356613 | 890.827406 |
+| S2 patience | 104729 | 16/O3 | 5 | 42.730598 | 46.152561 | 16.842796 | 559.359397 |
+| S2 patience | 130363 | 64/O3 | 7 | 38.860531 | 39.563389 | 0.161224 | 664.630474 |
+| S2 patience | 155921 | 128/O3 | 5 | 32.697639 | 33.396526 | -15.451204 | 770.713016 |
+
+近优计数Grid0/3、Random2/3、Greedy2/3、S1 3/3、S2 2/3，与派生表一致。负g对应比原参照阶段更快的后续有效样本，不表示生成了配置空间之外的性能。
+
+### 10.3 成本与配对接受规则的独立重算
+
+selection含warmup的kernel和11935.717976秒、target process wall和12011.861294秒、内部窗口和12013.745039秒、完整CLI driver wall和12016.120603秒；31次版本探针wall和0.061806秒已包含在CLI成本内，不重复加。reference与selection共215个target进程、完整CLI合计17585.931062秒。共同准备的四次compile成本仍单列，各搜索没有新增compile。没有用内部窗口、UTC跨度或资源上界替代真实完整成本。
+
+15轮比较成本逐轮为自身search完整driver wall加自身三个确认的完整driver wall，不能免费省去共同确认。三seed完整wall中位数：Grid1040.768085、Random1057.642905、Greedy526.521878、S1 890.827406、S2 664.630474秒。S1每轮与Random均8次搜索，wall满足≤1.10×Random；S2真实少跑3、1、3次搜索，合计7次，三seed中位数节约393.012431秒，进程与40秒成本门均满足。
+
+配对gain以原始确认值直接计算：gain秒=t_random−t_candidate，gain_pp=100×gain秒/t_ref。端点为[minRandom−maxCandidate, maxRandom−minCandidate]，不解释为CI、真实参数界或统计显著性：
+
+| 候选 | seed | median gain秒 | median gain_pp | 样本端点gain秒 | 样本端点gain_pp |
+| --- | ---: | ---: | ---: | --- | --- |
+| S1 分层 | 104729 | 9.866047 | 24.977520 | [8.646503, 11.560444] | [21.890044, 29.267165] |
+| S1 分层 | 130363 | -3.015102 | -7.633226 | [-4.208470, -2.064873] | [-10.654434, -5.227565] |
+| S1 分层 | 155921 | 0.662960 | 1.678392 | [0.410816, 1.182334] | [1.040048, 2.993273] |
+| S2 patience | 104729 | 2.744206 | 6.947409 | [1.651348, 6.074474] | [4.180659, 15.378530] |
+| S2 patience | 130363 | -6.372173 | -16.132204 | [-7.311440, -5.351803] | [-18.510112, -13.548969] |
+| S2 patience | 155921 | -0.484668 | -1.227017 | [-1.021938, 0.400440] | [-2.587204, 1.013780] |
+
+S1仅104729这1对的lower同时满足≥12pp、≥5.6秒；possible upper也只有1对，未满足至少2对实质改善。130363风险全落在−2pp坏侧，quality和risk事前门均失败。该seed的Random与S1实际上都返回128/O2，−3.015102秒差发生于相同目标配置的不同时段，不能归因于策略改变了固定配置性能。
+
+S2近优次数未减少且成本门通过，但130363的风险upper=−13.548969pp，明确越过−2pp；155921端点跨−2pp。独立重算两项decision_before_reference_checks均为REJECT。相关原128/O3 range32.3638%越18%，配对Random155921返回该配置；原128/O1 range24.3169%只对相关Greedy结果标记。返回确认自身的range都没有超过18%。再按原同配置reference/confirmation差核得五条超过12%的冲突，正好是Random130363/O2、S1 155921/O2、S2 155921/O3、Random155921/O3、Greedy155921/O3。
+
+根据冻结的诊断优先级，相关reference噪声/冲突使上述质量REJECT保守降为INCONCLUSIVE；没有成本REJECT被覆盖，两项都不是KEEP、retained=false。summary.json的条件、clear failures、端点、robust/possible数、near hits、成本及reference标记逐字段一致。后续诊断不能更换原t_ref、原在线feedback或原确认样本，也不能据此把失败门放宽为KEEP。
+
+### 10.4 预注册诊断请求和下一步边界
+
+从上述五条冲突独立按ConfigSpace canonical顺序去重，恰得两事件：第一为returned=reference=128/O2，影响Random130363与S1 155921，只需三份新样本；第二为returned128/O3与reference128/O2，影响S2/Random/Greedy155921，两配置各三份，采用AB、BA、AB次序。请求受最多2个selection事件限制，无warmup、无新增selection seed，合计9个target任务；与conflict_request_selection.json和conflict_selection_v1/plan.json的每个id/round/member/配置/repeat/seed完全一致。manifest冻结源码、protocol与request路径/hash也一致，215+9=224未超360总进程上限，9未超18诊断reserve。
+
+实际只读审核首版误把manifest.conflict_request.sha256当成顶层conflict_request_sha256，产生KeyError；按真实嵌套结构修正审核读取后整套数值、请求、计划与hash断言exit0。没有修改工程代码、计划或raw，没有补测。本审核者批准时该诊断尚未启动；主控随后实际启动9任务，记录本节时仍在串行运行，诊断结果尚未审核，不冒称已结束。
+
+**selection数据与诊断plan关口批准：没有影响结果的实现/派生数据阻塞，允许主控执行上述唯一预注册9进程诊断。** S1/S2当前均INCONCLUSIVE而非KEEP，后续holdout只能按冻结规则保留Random基础版本；实际holdout计划/原始数据和诊断完成结果仍待独立复算。此批准不增加搜索、修改阈值、采用增强或授予最终Engineering PASS。
+
+### 10.5 报告修订闭环与审核快照
+
+本审核者连续通读新增4(2)及internal optimization.md，与上表和原始停止轨迹对应。正式表9行基本算法的配置/median/g/运行数/wall、Greedy三个起点与有限推广、S1第二seed同配置时段差、S2错过第8项及负结果均如实说明；尚待完成的诊断/holdout句子保留其未结束状态，没有将待执行结果当成最终结论。
+
+PR-01已改为“优化信息中唯一标为向量化的是计时后的checksum循环”，区分GCC备注和最终packed指令；PR-02图中方法改为build/measure/parse，与TargetProgram源码一致，两项关闭。新增P2 PR-03指出“后续确认低超过12%”不能覆盖全部O2/128确认：S1 104729/130363仅低1.1873%/8.3378%；主控已加“其中部分”，本审核者实际重新读取并断言该限定词存在，PR-03关闭。三项都是文字/标签修正，不改变冻结代码、规则或原始数值。
+
+当前报告字节SHA：0398af23ee8acc8218a129bc0bcce7734b8aa9816d5cafc458c49a229d61a69b；SVG字节SHA：f6ef83292bb2623a0e4ecd2604b4b4577ef1040d5320b0946736d15089fa3bdc。报告后续还将补诊断/holdout，以上不是最终GitHub版本。
+
+selection审核快照（后续加入诊断/holdout允许更新派生summary，原始文件不得改）：
+
+- selection plan：0e6629e2f62abab18cf56bf3803497517883aa430e1219a3fddd4b9384431700。
+- selection driver.jsonl：775ddb2b11564057583e7ba55b96b6cd459da1292e75ed9d71b25b49ae15477a。
+- 31份selection journal集合：d41a55591e54dfae84d4f3ce4e5662281670bb9ec17bfaa734ca60e914d10a7f；集合hash定义同第8节。
+- summary.json：1fa894182340ebeb3399666847465f6de3b786010ad325e3252193ab683ad361。
+- measurements.csv：391b61624cc010b439bb9f76507991653fbec9044cd27cd49c605275f0e241fe。
+- online_curves.csv：f8686d18812b6837c883203d757fdb31b8e24541e4ce7e2edec7cfce083e72c1。
+- search_summary.csv：5eb883e2ceea3e38ea1602761d90674a349d2cb9617addb1dfffcfc2179ff2d1。
+- batch_costs.csv：759c501b62997b190bfe28be81871b651d7ab0c4e91901ef5f382e40c765a282。
+- conflict_request_selection.json：ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7。
+- conflict_selection_v1 plan：7a8c6f4aeeac2b3e2f9350da4f71f27efc4d3e2c9f5c8d261b4465b849a166fb。
+
+本节所有独立raw/派生/接受规则读取命令均已实际exit0，compiler/target启动数0，新增依赖/配置0；未用unittest通过替代原始数据重算。完整最终report通读、诊断/holdout/曲线图和实际GitHub文件审核仍未完成。
+
+## 11. selection冲突诊断完成与Random-only留出关口
+
+记录时刻：2026-10-02 02:59:07 UTC。主控9任务实际exit0后，本审核者再次独立标准库读取reference61、selection31、conflict_selection9份journal及三份driver，合计101个独立run_id、224个真实target进程；完整raw/helper统计核对命令实际exit0。没有compiler/target启动、unittest、绘图或源代码/原始结果写入，锁ON约束继续遵守。
+
+### 11.1 九份原始诊断和派生表
+
+9份记录与第10节批准的两事件/配置/AB、BA、AB次序逐项一致，无warmup、额外seed或重试。重新检查全部header/fingerprint、冻结目标/框架/协议、affinity、compiler identity、实际cache binary SHA与历史build identity；每个trial唯一start/completion、配置/command/PID、repeat0、rc0/spawned=true/status=ok/stderr空、stdout首行finite positive和checksum=17180040496.458935，clock guard全部满足。9次版本探针成功、0次编译；CLI stdout的完整summary与journal末record相同且output路径正确，stderr文件全空。27条driver记录按计划串行、attempt_id0..8、完整wall已知，无中断或恢复。
+
+从原始stdout独立分组计算中位数和相对原同配置reference差，与reference_conflicts.csv三行及summary.diagnostics完全一致：
+
+| event | member | s/opt | 三个原样本秒 | median秒 | 相对原reference绝对差 | environment_drift | return_instability |
+| --- | --- | --- | --- | ---: | ---: | --- | --- |
+| 1 | both | 128/O2 | 37.563213 / 36.683041 / 39.436100 | 37.563213 | 4.902550% | false | true |
+| 2 | returned | 128/O3 | 40.151283 / 40.911190 / 40.802387 | 40.802387 | 3.997855% | false | true |
+| 2 | reference | 128/O2 | 40.804188 / 41.600006 / 41.061607 | 41.061607 | 3.954209% | false | false |
+
+environment_drift只对reference/both成员应用原参照相对差>12%的事前规则；两项相关reference差约4.9026%和3.9542%，未触发门。它不表示不存在时漂，也不能确认宿主机频率或温度。return_instability以诊断median与同配置原selection返回确认比较；e1的128/O2及e2的128/O3均有差>12%，故前两项true，纯reference成员不把该条件当返回标记。没有将任何样本删除、把37.563213或41.061607秒替代t_ref，或据此重排在线历史/原确认。
+
+所有原reference/selection journal集合hash、grid_summary、online_curves、search_summary字节hash均与第10节快照一致。summary原reference_median仍39.499706秒，两项selection决定、质量端点、成本门、原始失败门逐字段未变；均INCONCLUSIVE、retained=false，候选holdout状态NOT_REQUIRED。
+
+### 11.2 完整成本与下一计划
+
+九次诊断kernel总和359.013015秒、target process wall363.320939090秒、框架内部窗口363.506392784秒、完整外部CLI wall364.221829021秒；9次版本探针0.018835431秒已含CLI成本，无免费诊断。当前三个正式批次共224target、invalid=0、完整driver wall17950.152891439秒；batch_costs.csv及summary.costs各列全部与独立driver/measurement计数和求和匹配。准备、正确性、预测试仍各单列，以上不是整个项目总投入。
+
+独立按冻结warmup、B8/r1、返回r3和三固定留出seed196613/229939/262147重建holdout计划，再与实际plan逐字典字段比较：schema/stage、原measurement_root、协议路径/hash、框架/target/driver hash和七项jobs完全一致。恰为warmup1、Random搜索3及各自依赖确认3；仅Random，没有候选/组合或新增seed。预定34个target进程，224+34=258小于360上限；当前wall未达57600秒，runner既有全局wall限制仍需执行时保持。审核时holdout目录仅plan.json，没有journal、driver或已启动测量。
+
+**诊断原始数据与Random-only留出plan关口批准。** 可由主控串行执行这一个冻结计划；此关口不采用S1/S2、追加选择或修改阈值。诊断不能提升原INCONCLUSIVE为KEEP。实际留出原始结果/可能的一次预注册留出冲突事件、完整报告和GitHub最终审核仍待执行后核对，不授予Engineering PASS。
+
+审核快照：
+
+- conflict_selection plan：7a8c6f4aeeac2b3e2f9350da4f71f27efc4d3e2c9f5c8d261b4465b849a166fb。
+- conflict_selection driver.jsonl：005c3ff9a42f6249108a2a448b7c4f46947620afdaca6ac60460cd9f19f952fd。
+- 9份诊断journal集合：3bddb779929a3e3d19a0685b764c5d06fec3cf32b280250aff24223255510332；集合hash定义同第8节。
+- summary.json：6a4139d6c87bd006345cb95eb75d01c454674b8684c8b7d548267fafe5e0f935。
+- reference_conflicts.csv：5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90。
+- measurements.csv：a98b86334ddde64517c26c021893563a066b3d969e1bf7a7546f8031d4369163。
+- batch_costs.csv：962e0b47d2ce40ae36fd4861e423a70db9bb73bf7b073b812dbaecae40b3a755。
+- holdout计划：03362796d14612cac9a2d622ea68146d712e37cc255fde9e7dbecef998c54cd5。
+
+本审核者停止计算、测试和编译，等待主控留出结束后的新工作包。唯一改动仍为本文，无新依赖或配置。
+
+## 12. 完整holdout与全部正式原始数据最终关口
+
+记录时刻：2026-10-02 03:52:00 UTC。主控holdout七个CLI任务实际exit0后重生strict summary；本审核者才将完成记录纳入本节。接任务时先ls -la扫描并完整重读最新AGENTS.md；目录/一页老师题目/任务范围不变。仍只执行标准库JSONL/CSV/hash/统计、没有编译、测试、绘图或n4096；冻结代码/协议与全部raw均仅读，唯一写入本文。
+
+### 12.1 留出预算、次序与原始输出
+
+七份journal/21条driver记录全部结束，无partial、torn tail、失败、timeout、恢复或未知wall。独立逐字段核对plan、三seed196613/229939/262147、B8/r1/返回r3、实际affinity=[0]、source/frame/runner/protocol SHA、完整compiler identity/公共flags和四cache binary字节SHA；每份header canonical fingerprint正确。只含Random、warmup1、online24和返回确认9，合计34个target进程；7次版本探针、0新增compile。
+
+独立按Random(seed)无放回shuffle20配置重建前8项，与每个trial完全一致：
+
+- 196613：16/O3 → 128/O3 → 64/O0 → 8/O2 → 8/O0 → 8/O1 → 16/O1 → 8/O3。
+- 229939：16/O1 → 24/O2 → 64/O0 → 24/O3 → 128/O1 → 64/O2 → 16/O2 → 64/O3。
+- 262147：16/O3 → 16/O1 → 8/O2 → 128/O3 → 24/O0 → 8/O3 → 8/O0 → 24/O2。
+
+所有初选与试探占预算，每轮恰8个不同配置；prefix best逐次由当时本轮score更新，严格更好才移动，没有读取参考表或确认值回填。三个seed都没有测到原观测最优128/O2，不隐藏这一限制。返回配置从相应搜索最后best确定，确认依赖正确，三个新样本未复用原测量。
+
+34个measurement_start与completion按trial_id/repeat唯一匹配；每个实际spawned=true/rc0/status=ok/stderr空/error=null、命令/配置/PID/start/end一致。stdout两行重新解析为正有限时间与唯一checksum17180040496.458935，和kernel_s、score/median一致，均满足process wall+0.005秒clock guard。CLI stdout末summary与对应journal一致且output路径正确，stderr文件空；driver记录证明七个CLI严格串行。
+
+| seed | 返回s/opt | online best秒 | 三个新确认样本秒 | 确认median秒 | g | 搜索+确认进程 | 完整search+confirm wall秒 |
+| --- | --- | ---: | --- | ---: | ---: | ---: | ---: |
+| 196613 | 16/O3 | 45.317799 | 43.493999 / 44.634007 / 44.424389 | 44.424389 | 12.467645% | 8+3 | 998.793670 |
+| 229939 | 64/O3 | 41.704674 | 42.496933 / 41.582001 / 43.278969 | 42.496933 | 7.587973% | 8+3 | 618.051391 |
+| 262147 | 16/O3 | 42.843807 | 44.296986 / 44.321510 / 43.848125 | 44.296986 | 12.145103% | 8+3 | 993.877322 |
+
+原t_ref=39.499706秒不变，冻结近优门g≤5%下Random留出命中0/3。不能由selection的2/3近优推广为稳定命中，或将未保留候选当作在留出获得免费成绩。各返回确认range约2.5662%、3.9932%、1.0687%；均保留全部有效样本。
+
+### 12.2 空冲突请求与实际成本
+
+独立读取各返回配置的原reference中位数：16/O3为44.371098秒，64/O3为41.112492秒。与三次确认median的绝对相对差依次为0.120103%、3.367446%、0.167028%，均未超过冻结12%冲突门。重建conflict_request_holdout.json为schema1、source_stage=holdout、相同protocol SHA、events=[]，与文件完全相等；没有conflict_holdout_v1目录或诊断任务。
+
+**留出不需再启动任何冲突目标进程。** 最多1事件是资源上限，不是必须填满；不得因近优0/3追加seed、重跑直到结果更好或更换参照。两候选selection仍INCONCLUSIVE、retained=false，候选holdout为NOT_REQUIRED，没有KEEP或组合接口进入留出。
+
+holdout含warmup的kernel总和2642.373157秒、target process wall2658.706616616秒、内部窗口2659.137691733秒、完整外部CLI wall2659.654210891秒；7次版本探针0.014937509秒已含CLI成本。三个搜索+确认完整wall中位数993.877322秒；warmup单列，不计任何单次算法质量/比较成本。
+
+全部正式四批次共108个不同run_id、258个真实target进程、0invalid，完整CLI driver wall20609.807102330秒，小于冻结360进程/57600秒上限。四阶段分别61、154、9、34进程；没有重复将cached build历史compile计入，四次共同准备仍另列，也没有省略诊断或返回确认。准备、预测试与正确性证据仍单列，正式CLI合计不冒称项目全部耗时。
+
+### 12.3 全部派生表、不可变性与结论
+
+此次独立重读全部reference、selection、selection诊断及holdout的原始记录，重新核对258行measurements.csv、132行online_curves.csv和18行search_summary.csv；所有配置、原stdout、有效性/rc、hash、当时分数、确认median/min/max/range、near标记、进程数和internal/full wall列完全一致。batch_costs.csv与summary.costs四阶段的实际完整wall、记录下界和资源上界均相等、unknown=false，不用内部窗口替代外部成本。
+
+summary的原t_ref、selection两项条件/端点/robust/possible/收益/成本/REJECT→INCONCLUSIVE规则逐字段保持第10节结果，九次diagnostics保持第11节结果；原reference/selection/conflict_selection journal集合SHA和20配置CSV字节不变。summary中的四plan hash对应实际manifest，冻结target cece/framework0a71/runner9041/summarizer2630/protocol64bb均不变。
+
+**全部正式实验原始数据与派生汇总关口通过，无未解决的数据/成本/空冲突请求错误。** 结果是S1/S2未保留、基础Random留出0/3近优；本审核者认可如实报告这些负/不确定结论，不认可增强性能提升、统计显著性或跨机器推广。这个数据关口不等于最终Engineering PASS：最终report完整连续通读、图/截图/链接、实际GitHub版本仍待主控冻结后独立核查。
+
+最终测量快照：
+
+- holdout plan：03362796d14612cac9a2d622ea68146d712e37cc255fde9e7dbecef998c54cd5。
+- holdout driver.jsonl：3f82c70f8a6ade6b756a8c701d4088c2ce8b3d830d7bc7773488b41ccf4e7573。
+- 七份holdout journal集合：8a268adc179e1f3525afaa35a8f0e8d30e7fbddb25703d5e4e7f38c3357d35cb；定义同第8节。
+- summary.json：4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de。
+- grid_summary.csv：8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec。
+- measurements.csv：f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3。
+- online_curves.csv：c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26。
+- search_summary.csv：9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc。
+- batch_costs.csv：b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302。
+- reference_conflicts.csv：5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90。
+- conflict_request_holdout.json：02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e。
+
+所有独立复算命令实际exit0，compiler/target启动数0，没有新依赖或配置。本审核者等待最终图/截图/report稳定稿，继续只读与本文记录。

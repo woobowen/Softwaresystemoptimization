@@ -45,7 +45,7 @@ Do not claim success merely because code was written or because a command
 A Codex self-check is not the final engineering judgment.
 
 Final acceptance is based on independent review of the actual GitHub files,
-including code, README, screenshots, and necessary evidence.
+including code, the formal report, screenshots, and necessary evidence.
 
 ---
 
@@ -351,7 +351,7 @@ Before publication, perform a file-hygiene review:
 - no binaries/objects/caches/temp files;
 - no unrelated/future assignments;
 - no unnecessary teacher handout copies;
-- valid README/image/source links.
+- valid formal-report/image/source links.
 
 After reorganizing files, rebuild/rerun relevant checks to ensure that path
 changes did not break reproducibility.
@@ -754,7 +754,7 @@ finish implementation\
 → rerun the final command/code\
 → capture screenshot\
 → place it under `<task>/images/`\
-→ reference it from `README.md`
+→ reference it from the teacher-required formal report
 
 Do not use an old screenshot after the underlying code/result has changed.
 
@@ -886,7 +886,7 @@ Before submission:
 4. inspect files/templates already present on that branch;
 5. preserve teacher-provided content unless explicitly told otherwise;
 6. prepare the clean Teacher Submission Package;
-7. verify README/image/source links;
+7. verify formal-report/image/source links;
 8. scan for secrets and unwanted files;
 9. review staged changes;
 10. commit normally;

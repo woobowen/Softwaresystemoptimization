@@ -1,0 +1,30 @@
+{
+  "purpose": "diagnose kernel elapsed larger than process monotonic wall in pretest warmup",
+  "samples": [
+    {
+      "realtime_s": 1.000187873840332,
+      "monotonic_s": 1.000190830000065,
+      "monotonic_raw_s": 1.091217793999931
+    },
+    {
+      "realtime_s": 1.0001063346862793,
+      "monotonic_s": 1.0001087800001187,
+      "monotonic_raw_s": 1.0911283690002165
+    },
+    {
+      "realtime_s": 1.000135898590088,
+      "monotonic_s": 1.000137592000101,
+      "monotonic_raw_s": 1.091159564999998
+    },
+    {
+      "realtime_s": 1.0000452995300293,
+      "monotonic_s": 1.0000469589999739,
+      "monotonic_raw_s": 1.0910609859997749
+    },
+    {
+      "realtime_s": 1.0001015663146973,
+      "monotonic_s": 1.0001033900002767,
+      "monotonic_raw_s": 1.0911222759996235
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "started_at_utc": "2026-10-01T21:07:38.493713+00:00",
+  "observer_monotonic_start_s": 10819.147850482,
+  "observer_raw_start_s": 11734.921793414,
+  "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163",
+  "measurement_commit": "dea74febda56aa4a2ef8eaa877068d5523bf1842",
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "note": "Observer span includes stage integration/checking; actual algorithm costs use each full driver attempt. UTC/RAW are diagnostic timestamps, not score clocks.",
+  "ended_at_utc": "2026-10-02T03:47:59.598324+00:00",
+  "observer_monotonic_end_s": 33012.995392034,
+  "observer_raw_end_s": 35755.633567728,
+  "observer_monotonic_span_s": 22193.847541551997,
+  "observer_raw_span_s": 24020.711774314,
+  "formal_driver_wall_s": 20609.807102329993,
+  "formal_target_process_runs": 258,
+  "formal_failed_measurements": 0,
+  "formal_phase_ended_before_reproduction": true
+}

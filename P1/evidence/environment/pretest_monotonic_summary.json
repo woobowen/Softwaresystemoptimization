@@ -1,0 +1,130 @@
+{
+  "formal_comparison": false,
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "measurements": [
+    {
+      "file": "00-warmup-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "kernel_s": 45.829971,
+      "process_wall_s": 46.3717255319998,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "01-sample-s8-O0.jsonl",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "kernel_s": 304.606781,
+      "process_wall_s": 305.0857191489995,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "02-sample-s24-O1.jsonl",
+      "config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "kernel_s": 44.059204,
+      "process_wall_s": 44.526088401999914,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "03-sample-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "kernel_s": 42.548756,
+      "process_wall_s": 43.011224707999645,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "04-sample-s8-O0.jsonl",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "kernel_s": 310.77005,
+      "process_wall_s": 311.24182107699926,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "05-sample-s24-O2.jsonl",
+      "config": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "kernel_s": 42.895458,
+      "process_wall_s": 43.37397386700013,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "06-sample-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "kernel_s": 46.046341,
+      "process_wall_s": 46.51248436499918,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "07-sample-s8-O0.jsonl",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "kernel_s": 312.302917,
+      "process_wall_s": 312.8037939299993,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    },
+    {
+      "file": "08-sample-s128-O3.jsonl",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "kernel_s": 49.066238,
+      "process_wall_s": 49.519836971000586,
+      "status": "ok",
+      "checksum": 17180040496.458935
+    }
+  ],
+  "groups": {
+    "s8-O0": {
+      "values": [
+        304.606781,
+        310.77005,
+        312.302917
+      ],
+      "median_s": 310.77005,
+      "mad_s": 1.5328669999999534,
+      "relative_mad": 0.0049324798190815144,
+      "relative_range": 0.024764728776148045
+    },
+    "s128-O3": {
+      "values": [
+        42.548756,
+        46.046341,
+        49.066238
+      ],
+      "median_s": 46.046341,
+      "mad_s": 3.0198970000000003,
+      "relative_mad": 0.06558386474182608,
+      "relative_range": 0.14154180024858004
+    }
+  },
+  "all_clock_guards_passed": true
+}

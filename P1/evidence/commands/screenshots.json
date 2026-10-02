@@ -1,0 +1,26 @@
+{
+  "method": "Actual xterm windows on an owned Xvfb TCP display; ffmpeg x11grab after actual commands exit 0. Neither HTML/text rendering nor user-desktop capture. Figures are separate SVG/matplotlib assets.",
+  "recorded_at_utc": "2026-10-02T04:04:40.225571+00:00",
+  "tool": "locally extracted xterm; existing Xvfb, ffmpeg; no global changes",
+  "capture_driver_sha256": "cf96fc879afc955df0b3ff281f65813980ee3d176bee12cd0ad9015efc45a804",
+  "capture_driver": "from pathlib import Path\nimport os\nimport socket\nimport subprocess\nimport sys\nimport time\n\nscript, output, done = map(lambda value: Path(value).resolve(), sys.argv[1:4])\nterminal = Path(__file__).resolve().parents[1] / \"screenshot-tools/root/usr/bin/xterm\"\nlog_path = output.with_suffix(\".capture.log\")\noutput.parent.mkdir(parents=True, exist_ok=True)\ndone.unlink(missing_ok=True)\nwith log_path.open(\"wb\") as log:\n    server = subprocess.Popen([\"Xvfb\", \":99\", \"-nolisten\", \"local\", \"-nolisten\", \"unix\", \"-listen\", \"tcp\", \"-screen\", \"0\", \"1440x960x24\", \"-ac\"], stdout=log, stderr=log)\n    terminal_process = None\n    try:\n        for _ in range(100):\n            if server.poll() is not None:\n                raise RuntimeError(\"Xvfb stopped before the display was ready\")\n            try:\n                with socket.create_connection((\"127.0.0.1\", 6099), timeout=.2):\n                    break\n            except OSError:\n                time.sleep(.1)\n        else:\n            raise RuntimeError(\"Display startup timed out\")\n        terminal_process = subprocess.Popen([str(terminal), \"-display\", \"127.0.0.1:99\", \"-geometry\", \"114x38+0+0\", \"-fa\", \"DejaVu Sans Mono\", \"-fs\", \"15\", \"-hold\", \"-e\", \"bash\", \"--noprofile\", \"--norc\", str(script)], stdout=log, stderr=log)\n        started = time.monotonic()\n        while not done.exists():\n            if terminal_process.poll() is not None:\n                raise RuntimeError(\"Terminal closed before the commands finished\")\n            if time.monotonic() - started > 1300:\n                raise RuntimeError(\"Terminal command completion timed out\")\n            time.sleep(.25)\n        if done.read_text().strip() != \"0\":\n            raise RuntimeError(\"Terminal commands failed: \" + done.read_text().strip())\n        time.sleep(.5)\n        subprocess.run([\"ffmpeg\", \"-hide_banner\", \"-loglevel\", \"error\", \"-f\", \"x11grab\", \"-video_size\", \"1440x960\", \"-i\", \"127.0.0.1:99\", \"-frames:v\", \"1\", \"-y\", str(output)], check=True, stdout=log, stderr=log)\n    finally:\n        if terminal_process is not None and terminal_process.poll() is None:\n            terminal_process.terminate()\n            terminal_process.wait(timeout=10)\n        if server.poll() is None:\n            server.terminate()\n            server.wait(timeout=10)\nprint(output)\n",
+  "saved_result_viewer": "import csv\nimport json\nfrom pathlib import Path\nroot = Path(\"P1/results/summary\")\nsummary = json.loads((root / \"summary.json\").read_text())\nprint(\"Stored experiment results; this view does not rerun benchmarks.\")\nprint(\"n=4096; online r=1; return confirmation r=3; budget=8\")\nprint(\"Reference: three runs per configuration; t_ref = %.6f s\" % summary[\"reference_median_s\"])\nprint(\"stage       algorithm   seed    config    confirmed_s  runs  total_wall_s\")\nfor row in csv.DictReader((root / \"search_summary.csv\").open()):\n    if row[\"algorithm\"] in (\"grid\", \"random\", \"greedy\"):\n        print(\"%-11s %-10s %6s  %3s/%s  %11.6f  %2d+3  %12.2f\" % (row[\"stage\"], row[\"algorithm\"], row[\"seed\"], row[\"returned_s\"], row[\"returned_opt\"], float(row[\"confirmed_s\"]), int(row[\"search_process_runs\"]), float(row[\"total_wall_s\"])))\nprint(\"Batches: reference_v1, selection_v1, conflict_selection_v1, holdout_v1\")\n",
+  "screenshots": [
+    {
+      "file": "P1/images/interfaces-kernel.png",
+      "sha256": "b39b7b7a331a1eb359966c6eba837bf9b6e5214b5718181aba9ece3977761fac",
+      "actual_script": "#!/bin/bash\nset -eu\ntrap 'printf \"%s\" \"$?\" > /home/addaswsw/lab/Software_system_optimization/P1/.cache/capture/source.done' EXIT\ncd /home/addaswsw/lab/Software_system_optimization\nset -x\nrg -n '^class (TargetProgram|ConfigSpace|SearchStrategy|Evaluator)|^def search' P1/src/autotuner.py\nsed -n '470,480p' P1/src/autotuner.py\nsed -n '44,55p' P1/src/matrix_multiplication.c\nset +x\n",
+      "exit_status": 0,
+      "capture_log": "P1/evidence/commands/interfaces-kernel.capture.log",
+      "file_mtime_utc": "2026-10-02T03:48:56.429374+00:00"
+    },
+    {
+      "file": "P1/images/saved-search-results.png",
+      "sha256": "c32ff46f82d4ca98b68aba86ebfa690089dff30d3b7acb0664393b7ab6aea833",
+      "actual_script": "#!/bin/bash\nset -eu\ntrap 'printf \"%s\" \"$?\" > /home/addaswsw/lab/Software_system_optimization/P1/.cache/capture/results.done' EXIT\ncd /home/addaswsw/lab/Software_system_optimization\nset -x\npython3 P1/.cache/capture/view_saved.py\nset +x\n",
+      "exit_status": 0,
+      "capture_log": "P1/evidence/commands/saved-search-results.capture.log",
+      "file_mtime_utc": "2026-10-02T03:52:26.298141+00:00"
+    }
+  ]
+}
