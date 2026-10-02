@@ -182,11 +182,13 @@ def matrix_clock_baselines(rows,boot_id):
     return [r["clock_elapsed_s"]["raw"]/r["driver_wall_s"] for r in rows
         if r["type"]=="task_end" and (r.get("driver_wall_s") or 0)>=10 and
         r.get("n4096_calls",0)>0 and r.get("clock_elapsed_s") and
+        r.get("returncode")==0 and r.get("reason") is None and
+        r.get("n4096_calls_known",True) and
         starts[r["attempt_id"]]["boot_id"]==boot_id]
 
 
 def controlled(command, directory, task, role, call_upper=0, journal=None,
-               direct_calls=None, ledger=LEDGER, time_limit=None):
+               direct_calls=None, ledger=LEDGER, time_limit=None, diagnostic_observer=None):
     """Caller holds the performance lock. Unknown starts block future work."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
@@ -207,6 +209,8 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
     boot_id=Path("/proc/sys/kernel/random/boot_id").read_text().strip()
     clock_baselines=matrix_clock_baselines(previous_rows,boot_id)
     argv = list(map(str, command))
+    if diagnostic_observer is not None:
+        diagnostic_observer.validate(task, argv, call_upper, journal)
     append(ledger, "task_start", task=task, role=role, command=argv,
            attempt_id=attempt, clock_start_ns=before, call_upper=call_upper,
            journal=str(Path(journal).resolve().relative_to(P1)) if journal else None,
@@ -214,12 +218,17 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
            boot_id=boot_id)
     child, code, reason = None, None, None
     try:
+        if diagnostic_observer is not None:
+            diagnostic_observer.sample("start", before, clock_baselines)
         with stdout.open("a") as out, stderr.open("a") as err:
             child = subprocess.Popen(argv, stdout=out, stderr=err, start_new_session=True)
             append(ledger, "task_process", task=task, attempt_id=attempt, pid=child.pid)
             while child.poll() is None:
-                spans = elapsed(before, clocks())
-                if call_upper>0 and spans["monotonic"] >= 10 and clock_baselines and any(
+                current = clocks()
+                spans = elapsed(before, current)
+                if diagnostic_observer is not None:
+                    diagnostic_observer.sample("interval", current, clock_baselines)
+                if diagnostic_observer is None and call_upper>0 and spans["monotonic"] >= 10 and clock_baselines and any(
                         abs((spans["raw"] / spans["monotonic"]) / baseline - 1) > .02
                         for baseline in (clock_baselines[0], clock_baselines[-1])):
                     reason = "RAW/MONOTONIC changed >2% relative to first or previous long interval"
@@ -260,12 +269,19 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
         # A task with no target journal has an explicit known direct-process count.
         if calls > call_upper:
             reason = "actual calls exceeded the reserved upper bound"
+        observation = {}
+        if diagnostic_observer is not None:
+            try:
+                observation = diagnostic_observer.finish(after, rows, stdout, code, clock_baselines)
+            except Exception as error:
+                reason = "diagnostic observation failed: " + str(error)
         record = append(ledger, "task_end", task=task, role=role, attempt_id=attempt,
             returncode=code, reason=reason, n4096_calls=calls,n4096_calls_known=True,
             driver_wall_s=spans["monotonic"], clock_elapsed_s=spans,
             clock_end_ns=after, resource_s=max(spans.values()), resource_wall_s=max(spans.values()),
             clock_ratio_baselines=clock_baselines[:1]+clock_baselines[-1:] if clock_baselines else [],
-            stdout=str(stdout.resolve().relative_to(P1)), stderr=str(stderr.resolve().relative_to(P1)))
+            stdout=str(stdout.resolve().relative_to(P1)), stderr=str(stderr.resolve().relative_to(P1)),
+            **observation)
     if reason or code:
         raise ValueError(f"task {task} failed ({reason or code}); inspect its raw output")
     return record

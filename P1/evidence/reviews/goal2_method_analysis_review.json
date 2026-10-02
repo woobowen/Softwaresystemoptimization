@@ -224,6 +224,18 @@
       "panel_fixture_present": true,
       "actual_batch_selection_observed": false,
       "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    },
+    {
+      "id": "CF1",
+      "severity": "medium",
+      "owner": "/root",
+      "function": "clock_followup.completed_job",
+      "line_at_initial_review": 201,
+      "issue": "whole clock trace not bound; changing timex content or sample phase/task could pass numeric-only resume validation",
+      "actual_raw_mutation": false,
+      "fix": "after clock_complete append, global end binds canonical whole trace SHA; resume verifies hash then independently rederives ns costs and ratios",
+      "state": "CLOSED_STATIC_AND_PEER_INDEPENDENT_REGRESSION",
+      "regression_evidence": "evidence/reviews/goal2_followup_code_review.json"
     }
   ],
   "observations": {
@@ -268,6 +280,24 @@
         "v1 introduction"
       ],
       "scope": "title, authors, 2026-06-04 v1, fixed-budget repeated-evaluation cost; no project adoption of its ES mechanism"
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/adjtimex.2.html",
+      "read_sections": [
+        "DESCRIPTION",
+        "RETURN VALUE",
+        "NOTES"
+      ],
+      "scope": "modes zero read-only, STA_NANO-dependent offset unit, microsecond tick/precision, 2^-16 ppm frequency; states do not establish local root cause"
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man3/clock_gettime.3.html",
+      "read_sections": [
+        "CLOCK_MONOTONIC",
+        "CLOCK_MONOTONIC_RAW",
+        "CLOCK_PROCESS_CPUTIME_ID"
+      ],
+      "scope": "incremental adjustments and CPU versus wall semantics; RAW not assumed absolute reference"
     }
   ],
   "final_engineering_pass_assigned": false,
@@ -288,5 +318,76 @@
     "final S3 phase plot actual visual inspection",
     "final formal protocol/source approval before any reference/search experiment",
     "new real reference/main/confirmation and experiment/report final review"
-  ]
+  ],
+  "followup_code_crosscheck": {
+    "checked_at_utc": "2026-10-02T15:52:38Z",
+    "source_snapshot": {
+      "scripts/clock_followup.py": "6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "d2c2f1f21dc41d882c4f7772467f2aa31dbcef092892281d40d1277b9a80181d",
+      "tests/test_goal2_driver.py": "4ae8038a84bcae516541a89df79b82570f0b29662c341ede76c7a08f5fc4b2a7",
+      "evidence/protocol_clock_followup.json": "ea1984ec01549b15188c9de4b02b68cdc905821233246a761aa4e2186db642bd"
+    },
+    "protocol_state_at_read": "draft",
+    "scope": "only one approved finite twelve-call diagnostic after protocol freeze",
+    "formal_performance_approved": false,
+    "default_formal_guard_unchanged": true,
+    "ratio_threshold_fraction": 0.02,
+    "sources_compared_separately": [
+      "driver",
+      "formal_target_process",
+      "diagnostic_kernel"
+    ],
+    "failed_interrupted_unknown_other_boot_excluded": true,
+    "query_modes": 0,
+    "frequency_unit": "ppm with 16-bit fractional part; raw integer retained",
+    "ns_boundaries_and_known_cost_recomputed": true,
+    "new_tests_executed_by_this_reviewer": 0,
+    "new_n4096_executed_by_this_reviewer": 0,
+    "peer_code_regression": {
+      "reviewer": "/root/review",
+      "evidence": "evidence/reviews/goal2_followup_code_review.json",
+      "final_tests": 12,
+      "final_failures": 0,
+      "final_suite_reported_s": 0.302
+    },
+    "initial_checkpoint": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+    "initial_files_bytes_checked": 115,
+    "initial_files_changed": [],
+    "initial_ledger_prefix_unchanged": true,
+    "ledger_addition": "one read-only query build start/process/end, zero n4096 calls",
+    "complete_interval_formal_semantic_change_requires_new_review_and_freeze": true
+  },
+  "continuous_report_read": {
+    "report_sha256": "1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc",
+    "readme_sha256": "7d074554ea71094bad2edf95da6d22a044b5da28ae3afefc463bd13d9079bb1d",
+    "complete_from_start_to_end": true,
+    "formal_report_final_approved": false,
+    "issues": [
+      {
+        "id": "CR1",
+        "path": "README.md:28-37",
+        "state": "OWNER_ACKNOWLEDGED_PENDING_FIX_AND_CLEAN_REPRODUCTION",
+        "issue": "historical raw analysis at current changed core SHA must use matching fixed Goal1/initial-diagnostic checkpoint"
+      },
+      {
+        "id": "CR2",
+        "path": "report.md:36,111-131,148",
+        "state": "PENDING_REPORT_REWRITE",
+        "issue": "move recovery/old enhancement detail to evidence; shorten repeated screenshot narration"
+      },
+      {
+        "id": "CR3",
+        "path": "report.md:76,87-107,127",
+        "state": "PENDING_NEW_REAL_RESULTS",
+        "issue": "replace internal labels with source links; separate common identity quality from time-specific confirmation and historical mixed classifications"
+      },
+      {
+        "id": "CR4",
+        "path": "report.md:27-34",
+        "state": "PENDING_REPORT_REWRITE",
+        "issue": "generic score observe snippet only base algorithms; S3 consumes fresh score inside evaluator, avoiding duplicated feedback"
+      }
+    ]
+  }
 }

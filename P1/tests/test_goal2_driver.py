@@ -196,7 +196,7 @@ class Goal2DriverTests(unittest.TestCase):
         rows=[]
         for name,boot,calls in (("probe","current",0),("old","other",1),("matrix","current",1)):
             rows.append(dict(type="task_start",attempt_id=name,boot_id=boot))
-            rows.append(dict(type="task_end",attempt_id=name,n4096_calls=calls,driver_wall_s=40,
+            rows.append(dict(type="task_end",attempt_id=name,n4096_calls=calls,driver_wall_s=40,returncode=0,reason=None,
                 clock_elapsed_s=dict(raw=44,monotonic=40,realtime=40)))
         self.assertEqual(ex.matrix_clock_baselines(rows,"current"),[1.1])
 

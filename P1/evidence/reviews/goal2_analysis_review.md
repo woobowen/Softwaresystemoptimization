@@ -1,6 +1,6 @@
 # Goal 2 派生分析与接受规则独立审核
 
-审核者：`/root/review`；分析/方法作者：`/root/measurement`。完整读取 `scripts/summarize_v2.py`、`tests/test_goal2_summary.py` 和配套协议草稿；本记录尚不放行正式实验，专用 fixtures 的独立执行等待主控空闲窗口。
+审核者：`/root/review`；分析/方法作者：`/root/measurement`。完整读取 `scripts/summarize_v2.py`、`tests/test_goal2_summary.py` 和配套协议草稿；37 项专用 fixtures 已实际独立通过，初始诊断已独立重算。本记录尚不放行正式实验，时钟与完整 A/A 测量关仍未关闭。
 
 ## 独立检查的规则
 
@@ -14,14 +14,14 @@
 
 | 位置/问题 | 严重性与影响 | 修正后的实际路径 | 状态 |
 | --- | --- | --- | --- |
-| `read_batch` 生成 panel 默认使用执行根 | 中：干净 clone 可能与原绝对 metadata 错配；分析还可能创建缺失 raw 面板 | `ex.panel(..., historical=True)`；runner 历史模式只读，缺失不写 | 实现静态关闭；干净 clone 全重算待交付关 |
-| `cost_table` 将 recovered `clock_elapsed_s=None` 当 dict | 高：恢复账无法汇总，或未知 driver/calls 被误叫完整成本 | None 保留为 null；unknown_calls/driver/bound 不成为实际完整成本；专用 recovered fixture 已读 | 实现静态关闭；独立 fixtures 待执行 |
-| 全局账不完整未影响候选接受 | 高：六个局部已知 pair 可能在仍有未知全局任务时 KEEP | CLI 明确把全局 ledger 存在且完整传入 `decision(project_cost_complete=...)`；未知或未结任务一律阻止 KEEP | 实现静态关闭；独立 fixtures 待执行 |
-| S3 曲线资格变化未可视标明 | 中：前六步临时首测 best 与后续成功 finalist-only 连成同样线型，读者可能误解上升 | 作者现保留原始在线值，以虚线/复核三角点和文字说明阶段；预算轴另由累计 `measurement_start` 计真实调用 | 静态修正已读；独立 fixtures 与最终图片实际查看待执行 |
+| `read_batch` 生成 panel 默认使用执行根 | 中：干净 clone 可能与原绝对 metadata 错配；分析还可能创建缺失 raw 面板 | `ex.panel(..., historical=True)`；runner 历史模式只读，缺失不写 | 实现及独立 fixtures 关闭；干净 clone 全重算待交付关 |
+| `cost_table` 将 recovered `clock_elapsed_s=None` 当 dict | 高：恢复账无法汇总，或未知 driver/calls 被误叫完整成本 | None 保留为 null；unknown_calls/driver/bound 不成为实际完整成本；专用 recovered fixture 已读 | 修复与独立 fixtures 关闭 |
+| 全局账不完整未影响候选接受 | 高：六个局部已知 pair 可能在仍有未知全局任务时 KEEP | CLI 明确把全局 ledger 存在且完整传入 `decision(project_cost_complete=...)`；未知或未结任务一律阻止 KEEP | 修复与独立 fixtures 关闭 |
+| S3 曲线资格变化未可视标明 | 中：前六步临时首测 best 与后续成功 finalist-only 连成同样线型，读者可能误解上升 | 作者现保留原始在线值，以虚线/复核三角点和文字说明阶段；预算轴另由累计 `measurement_start` 计真实调用 | 静态修正与在线数据 fixtures 通过；最终图片实际查看待执行 |
 
 ## 正式协议关前的剩余检查
 
-独立执行专用全部 fixtures，核对实际诊断的 A/A、M0/M1、rho 和可分辨两档门；冻结精确调用上界与按诊断更新的资源预测；读取正式协议 approved/frozen 的最终身份。任何未知成本、参照冲突或不能支持 2pp 风险均不能 KEEP。当前 26 项专用 fixtures 的作者执行记录不是审核者已执行的证据。
+核对补诊断后的 A/A、M0/M1、rho 和可分辨两档门；冻结精确调用上界与按诊断更新的资源预测；读取正式协议 approved/frozen 的最终身份。任何未知成本、参照冲突或不能支持 2pp 风险均不能 KEEP。早期 26 项 fixtures 的作者执行不能替代审核者证据；最新 37 项独立执行记录见下节。
 
 正式原始数据产生后还须独立重算全部 20×3、六块真实步骤、面板/参考来源、每个种子成本、起点面板、候选判定及必要新 seed 确认。代码规则通过不预先认定数据结论成立，也不授予最终 Engineering PASS。
 
@@ -42,3 +42,7 @@
 2026-10-02 15:32:12.938–15:32:13.054 UTC，主控授权纯 fixtures 空闲窗口，实际取得 `.cache/performance.lock` 非阻塞独占锁后执行 `python3 -B -m unittest discover -s tests -p test_goal2_summary.py -v`。37 项全部通过、exit 0、无 skip；unittest 报 0.012 秒，外层 MONOTONIC/RAW/REALTIME 分别 0.115351367/0.115581514/0.115351347 秒。锁已释放，n4096=0，无编译；它是工程测试成本，不补记成受控目标成本。
 
 分析源码 `96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f`、专用测试 `421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7` 与 runner `22a839…` 执行前后不变。完整输出、三域整数边界和身份保存同名 JSON 的 `independent_analysis_regression`。恢复未知成本、同身份零选择收益、回填/缺失/重复数据、非法字段、失败批次、A/A 原标签、原始成本边界和 partial 闭环的 fixtures 经独立执行通过。上述 A1–A3 与 AS1/AS2/AS4/AS5 的相关代码修复回归关闭；A4/AS3 最终图像仍须实际查看，干净克隆全重算与正式原始结果审查仍待后续。
+
+## 初始阶段代码的固定 Git 身份
+
+主控在新 driver 改动前创建普通本地检查点 `2fc0c334039bb6696c4d83acbe029ce65ca66ab9`。审核者实际读取该提交 blob 并重算 SHA，确认 runner `22a839…`、analysis `963524…`、诊断 protocol `8c0d51…`、原 plan `cbfc028…` 与账本 `9812d4…` 均已保存在 Git。158 个差异路径全部位于 P1；此次尚未 push，不算远端发布完成。后续干净复现可从该固定提交取匹配脚本重算初始诊断，不必放宽哈希检查或修改旧 header；README 的真实固定版本入口和全重算仍须交付关实测。

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "20ef2a6e2aa4fb90a36ea4d587f9e0d762ec9a64377e238047e9c1570ac38533",
+  "binary_sha256": "3d176110454783823f801af59d3c9ad07d47650814ef9c3cb023fc03a2bce971",
+  "compiler": {
+    "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+    "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+  },
+  "readonly_modes": 0
+}

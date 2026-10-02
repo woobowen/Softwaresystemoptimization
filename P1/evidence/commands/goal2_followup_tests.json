@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "P1/tests",
+    "-p",
+    "test_clock_followup.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "start_ns": {
+    "monotonic": 74983462085242,
+    "raw": 78930567054554,
+    "realtime": 1790956055989066798
+  },
+  "end_ns": {
+    "monotonic": 74983878325859,
+    "raw": 78930985422517,
+    "realtime": 1790956056405307678
+  },
+  "elapsed_s": {
+    "monotonic": 0.416240617,
+    "raw": 0.418367963,
+    "realtime": 0.41624088
+  },
+  "stdout": "",
+  "stderr": "test_clock_backwards_and_incomplete_summary_hard_fail (test_clock_followup.ClockFollowupTests.test_clock_backwards_and_incomplete_summary_hard_fail) ... ok\ntest_complete_target_conflict_is_visible_even_with_summary (test_clock_followup.ClockFollowupTests.test_complete_target_conflict_is_visible_even_with_summary) ... ok\ntest_completed_resume_checks_command_cost_reason_and_raw_trace (test_clock_followup.ClockFollowupTests.test_completed_resume_checks_command_cost_reason_and_raw_trace) ... ok\ntest_failed_interrupted_unknown_and_other_boot_excluded_from_baseline (test_clock_followup.ClockFollowupTests.test_failed_interrupted_unknown_and_other_boot_excluded_from_baseline) ... ok\ntest_matrix_raw_ns_recomputed_and_cpu_not_wall_reference (test_clock_followup.ClockFollowupTests.test_matrix_raw_ns_recomputed_and_cpu_not_wall_reference) ... ok\ntest_multi_attempt_baselines_select_only_that_attempts_processes (test_clock_followup.ClockFollowupTests.test_multi_attempt_baselines_select_only_that_attempts_processes) ... ok\ntest_nonpositive_nan_and_two_percent_boundary (test_clock_followup.ClockFollowupTests.test_nonpositive_nan_and_two_percent_boundary) ... ok\ntest_observer_cannot_disable_task_timeout_or_known_cost_record (test_clock_followup.ClockFollowupTests.test_observer_cannot_disable_task_timeout_or_known_cost_record) ... ok\ntest_query_identity_cannot_authorize_another_source_or_clock_change (test_clock_followup.ClockFollowupTests.test_query_identity_cannot_authorize_another_source_or_clock_change) ... ok\ntest_query_is_readonly_and_cap_is_checked_before_spawn (test_clock_followup.ClockFollowupTests.test_query_is_readonly_and_cap_is_checked_before_spawn) ... ok\ntest_scope_rejects_formal_other_job_command_calls_and_existing_trace (test_clock_followup.ClockFollowupTests.test_scope_rejects_formal_other_job_command_calls_and_existing_trace) ... ok\ntest_short_prefix_conflict_does_not_become_complete_conflict (test_clock_followup.ClockFollowupTests.test_short_prefix_conflict_does_not_become_complete_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.284s\n\nOK\n",
+  "n4096_calls": 0,
+  "source_sha256": {
+    "P1/scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+    "P1/scripts/clock_followup.py": "51bb0876e7350db434fe2aceb03a9477e5819a70d990351769afefe5f48cc4f6",
+    "P1/tests/test_clock_followup.py": "d6671756eb17725e8861b0afa0ec48bcfd92ea805715909dc5921de6982f5c43"
+  }
+}

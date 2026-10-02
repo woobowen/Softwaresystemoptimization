@@ -1,0 +1,322 @@
+{
+  "reviewer": "/root/review",
+  "author": "/root",
+  "at_utc": "2026-10-02T15:40:51+00:00",
+  "state": "FINITE_TWELVE_RUN_DIAGNOSTIC_GATE_APPROVED_FORMAL_COMPARISON_NOT_ALLOWED",
+  "source_snapshot": {
+    "scripts/clock_followup.py": "5694e73c6b61fcbf0d06eed72dde7bccaf9544ebe0e90426b4eede3e88ea7bfd",
+    "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+    "evidence/protocol_clock_followup.json": "71f5b9008e2204b55aa52e321386ddfbe804439e9b68e9cf775e362a93295001"
+  },
+  "initial_diagnostic_checkpoint": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "path": "scripts/clock_followup.py:main old-task recovery",
+      "status": "CLOSED_BY_STATIC_REVIEW_AND_INDEPENDENT_FIXTURES"
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "path": "scripts/clock_followup.py:matrix_interval",
+      "status": "CLOSED_BY_STATIC_REVIEW_AND_INDEPENDENT_FIXTURES"
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "path": "scripts/clock_followup.py:complete_sources",
+      "status": "CLOSED_BY_STATIC_REVIEW_AND_INDEPENDENT_FIXTURES"
+    },
+    {
+      "id": "F4",
+      "severity": "high",
+      "path": "scripts/clock_followup.py:query_reader identity freeze",
+      "status": "CODE_CLOSED_ACTUAL_IDENTITY_PROTOCOL_BINDING_REQUIRED"
+    },
+    {
+      "id": "CF1",
+      "severity": "medium",
+      "path": "scripts/clock_followup.py:whole raw clock trace recovery identity",
+      "reported_by": "/root/implementation",
+      "status": "CLOSED_BY_HASH_BINDING_AND_INDEPENDENT_FIXTURES"
+    }
+  ],
+  "independent_fixture_tests": 12,
+  "n4096_runs_by_reviewer": 0,
+  "finite_followup_allowed": true,
+  "formal_comparison_allowed": false,
+  "final_engineering_pass_assigned": false,
+  "independent_initial_regression": {
+    "source_sha256_before": {
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "scripts/clock_followup.py": "fca87ec33483b8b4d87d946ca58eb69cee86ba652abcb13133eba36551b97eac",
+      "tests/test_clock_followup.py": "2d9f1b98f8f84e8f145c55f6aea9733a5793a0c190cd4c2ac2a0d408a3b88f7d",
+      "tests/test_goal2_driver.py": "4ae8038a84bcae516541a89df79b82570f0b29662c341ede76c7a08f5fc4b2a7"
+    },
+    "source_sha256_after": {
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "scripts/clock_followup.py": "fca87ec33483b8b4d87d946ca58eb69cee86ba652abcb13133eba36551b97eac",
+      "tests/test_clock_followup.py": "2d9f1b98f8f84e8f145c55f6aea9733a5793a0c190cd4c2ac2a0d408a3b88f7d",
+      "tests/test_goal2_driver.py": "4ae8038a84bcae516541a89df79b82570f0b29662c341ede76c7a08f5fc4b2a7"
+    },
+    "source_unchanged": true,
+    "exclusive_nonblocking_lock_acquired": true,
+    "records": [
+      {
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_clock_followup.py",
+          "-v"
+        ],
+        "started_at_utc": "2026-10-02T15:45:53.438728+00:00",
+        "finished_at_utc": "2026-10-02T15:45:53.811517+00:00",
+        "returncode": 0,
+        "tests_count": 12,
+        "unittest_reported_s": 0.283,
+        "stdout": "",
+        "stderr": "test_clock_backwards_and_incomplete_summary_hard_fail (test_clock_followup.ClockFollowupTests.test_clock_backwards_and_incomplete_summary_hard_fail) ... ok\ntest_complete_target_conflict_is_visible_even_with_summary (test_clock_followup.ClockFollowupTests.test_complete_target_conflict_is_visible_even_with_summary) ... ok\ntest_completed_resume_checks_command_cost_reason_and_raw_trace (test_clock_followup.ClockFollowupTests.test_completed_resume_checks_command_cost_reason_and_raw_trace) ... ok\ntest_failed_interrupted_unknown_and_other_boot_excluded_from_baseline (test_clock_followup.ClockFollowupTests.test_failed_interrupted_unknown_and_other_boot_excluded_from_baseline) ... ok\ntest_matrix_raw_ns_recomputed_and_cpu_not_wall_reference (test_clock_followup.ClockFollowupTests.test_matrix_raw_ns_recomputed_and_cpu_not_wall_reference) ... ok\ntest_multi_attempt_baselines_select_only_that_attempts_processes (test_clock_followup.ClockFollowupTests.test_multi_attempt_baselines_select_only_that_attempts_processes) ... ok\ntest_nonpositive_nan_and_two_percent_boundary (test_clock_followup.ClockFollowupTests.test_nonpositive_nan_and_two_percent_boundary) ... ok\ntest_observer_cannot_disable_task_timeout_or_known_cost_record (test_clock_followup.ClockFollowupTests.test_observer_cannot_disable_task_timeout_or_known_cost_record) ... ok\ntest_query_identity_cannot_authorize_another_source_or_clock_change (test_clock_followup.ClockFollowupTests.test_query_identity_cannot_authorize_another_source_or_clock_change) ... ok\ntest_query_is_readonly_and_cap_is_checked_before_spawn (test_clock_followup.ClockFollowupTests.test_query_is_readonly_and_cap_is_checked_before_spawn) ... ok\ntest_scope_rejects_formal_other_job_command_calls_and_existing_trace (test_clock_followup.ClockFollowupTests.test_scope_rejects_formal_other_job_command_calls_and_existing_trace) ... ok\ntest_short_prefix_conflict_does_not_become_complete_conflict (test_clock_followup.ClockFollowupTests.test_short_prefix_conflict_does_not_become_complete_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.283s\n\nOK\n",
+        "clock_start_ns": {
+          "monotonic": 74880911744852,
+          "raw": 78827970291156,
+          "realtime": 1790955953438726062
+        },
+        "clock_end_ns": {
+          "monotonic": 74881284395115,
+          "raw": 78828341930887,
+          "realtime": 1790955953811376608
+        },
+        "elapsed_s": {
+          "monotonic": 0.372650263,
+          "raw": 0.371639731,
+          "realtime": 0.372650546
+        }
+      },
+      {
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_goal2_driver.py",
+          "-v"
+        ],
+        "started_at_utc": "2026-10-02T15:45:53.811544+00:00",
+        "finished_at_utc": "2026-10-02T15:45:54.944545+00:00",
+        "returncode": 0,
+        "tests_count": 19,
+        "unittest_reported_s": 1.053,
+        "stdout": "",
+        "stderr": "test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok\ntest_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 1.053s\n\nOK\n",
+        "clock_start_ns": {
+          "monotonic": 74881284562539,
+          "raw": 78828342097257,
+          "realtime": 1790955953811543250
+        },
+        "clock_end_ns": {
+          "monotonic": 74882417544065,
+          "raw": 78829478797798,
+          "realtime": 1790955954944525382
+        },
+        "elapsed_s": {
+          "monotonic": 1.132981526,
+          "raw": 1.136700541,
+          "realtime": 1.132982132
+        }
+      }
+    ],
+    "tests_count": 31,
+    "all_passed": true,
+    "actual_readonly_query": {
+      "readonly": true,
+      "offset_raw": 71285,
+      "frequency_scaled_ppm": -1068189,
+      "tick_us": 9824,
+      "status": 0,
+      "precision_us": 1,
+      "returncode": 0,
+      "offset_unit": "us"
+    },
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  },
+  "independent_final_regression": {
+    "at_utc": "2026-10-02T15:52:30.447893+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_clock_followup.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "tests_count": 12,
+    "unittest_reported_s": 0.302,
+    "stdout": "",
+    "stderr": "test_clock_backwards_and_incomplete_summary_hard_fail (test_clock_followup.ClockFollowupTests.test_clock_backwards_and_incomplete_summary_hard_fail) ... ok\ntest_complete_target_conflict_is_visible_even_with_summary (test_clock_followup.ClockFollowupTests.test_complete_target_conflict_is_visible_even_with_summary) ... ok\ntest_completed_resume_checks_command_cost_reason_and_raw_trace (test_clock_followup.ClockFollowupTests.test_completed_resume_checks_command_cost_reason_and_raw_trace) ... ok\ntest_failed_interrupted_unknown_and_other_boot_excluded_from_baseline (test_clock_followup.ClockFollowupTests.test_failed_interrupted_unknown_and_other_boot_excluded_from_baseline) ... ok\ntest_matrix_raw_ns_recomputed_and_cpu_not_wall_reference (test_clock_followup.ClockFollowupTests.test_matrix_raw_ns_recomputed_and_cpu_not_wall_reference) ... ok\ntest_multi_attempt_baselines_select_only_that_attempts_processes (test_clock_followup.ClockFollowupTests.test_multi_attempt_baselines_select_only_that_attempts_processes) ... ok\ntest_nonpositive_nan_and_two_percent_boundary (test_clock_followup.ClockFollowupTests.test_nonpositive_nan_and_two_percent_boundary) ... ok\ntest_observer_cannot_disable_task_timeout_or_known_cost_record (test_clock_followup.ClockFollowupTests.test_observer_cannot_disable_task_timeout_or_known_cost_record) ... ok\ntest_query_identity_cannot_authorize_another_source_or_clock_change (test_clock_followup.ClockFollowupTests.test_query_identity_cannot_authorize_another_source_or_clock_change) ... ok\ntest_query_is_readonly_and_cap_is_checked_before_spawn (test_clock_followup.ClockFollowupTests.test_query_is_readonly_and_cap_is_checked_before_spawn) ... ok\ntest_scope_rejects_formal_other_job_command_calls_and_existing_trace (test_clock_followup.ClockFollowupTests.test_scope_rejects_formal_other_job_command_calls_and_existing_trace) ... ok\ntest_short_prefix_conflict_does_not_become_complete_conflict (test_clock_followup.ClockFollowupTests.test_short_prefix_conflict_does_not_become_complete_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.302s\n\nOK\n",
+    "clock_start_ns": {
+      "monotonic": 75277024864636,
+      "raw": 79225224015876,
+      "realtime": 1790956350447891259
+    },
+    "clock_end_ns": {
+      "monotonic": 75277400526291,
+      "raw": 79225603517352,
+      "realtime": 1790956350823553182
+    },
+    "elapsed_s": {
+      "monotonic": 0.375661655,
+      "raw": 0.379501476,
+      "realtime": 0.375661923
+    },
+    "source_before": {
+      "scripts/clock_followup.py": "6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "d2c2f1f21dc41d882c4f7772467f2aa31dbcef092892281d40d1277b9a80181d",
+      "evidence/measurement/clock_followup/timex_identity.json": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+    },
+    "source_after": {
+      "scripts/clock_followup.py": "6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "d2c2f1f21dc41d882c4f7772467f2aa31dbcef092892281d40d1277b9a80181d",
+      "evidence/measurement/clock_followup/timex_identity.json": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+    },
+    "source_unchanged": true,
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  },
+  "finite_scope_limit": 12,
+  "final_gate_source_sha256": {
+    "scripts/clock_followup.py": "6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221",
+    "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+    "tests/test_clock_followup.py": "d2c2f1f21dc41d882c4f7772467f2aa31dbcef092892281d40d1277b9a80181d",
+    "evidence/measurement/clock_followup/timex_identity.json": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+  },
+  "independent_regression_before_whole_trace_hash": {
+    "at_utc": "2026-10-02T15:50:11.001090+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_clock_followup.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "tests_count": 12,
+    "unittest_reported_s": 0.281,
+    "stdout": "",
+    "stderr": "test_clock_backwards_and_incomplete_summary_hard_fail (test_clock_followup.ClockFollowupTests.test_clock_backwards_and_incomplete_summary_hard_fail) ... ok\ntest_complete_target_conflict_is_visible_even_with_summary (test_clock_followup.ClockFollowupTests.test_complete_target_conflict_is_visible_even_with_summary) ... ok\ntest_completed_resume_checks_command_cost_reason_and_raw_trace (test_clock_followup.ClockFollowupTests.test_completed_resume_checks_command_cost_reason_and_raw_trace) ... ok\ntest_failed_interrupted_unknown_and_other_boot_excluded_from_baseline (test_clock_followup.ClockFollowupTests.test_failed_interrupted_unknown_and_other_boot_excluded_from_baseline) ... ok\ntest_matrix_raw_ns_recomputed_and_cpu_not_wall_reference (test_clock_followup.ClockFollowupTests.test_matrix_raw_ns_recomputed_and_cpu_not_wall_reference) ... ok\ntest_multi_attempt_baselines_select_only_that_attempts_processes (test_clock_followup.ClockFollowupTests.test_multi_attempt_baselines_select_only_that_attempts_processes) ... ok\ntest_nonpositive_nan_and_two_percent_boundary (test_clock_followup.ClockFollowupTests.test_nonpositive_nan_and_two_percent_boundary) ... ok\ntest_observer_cannot_disable_task_timeout_or_known_cost_record (test_clock_followup.ClockFollowupTests.test_observer_cannot_disable_task_timeout_or_known_cost_record) ... ok\ntest_query_identity_cannot_authorize_another_source_or_clock_change (test_clock_followup.ClockFollowupTests.test_query_identity_cannot_authorize_another_source_or_clock_change) ... ok\ntest_query_is_readonly_and_cap_is_checked_before_spawn (test_clock_followup.ClockFollowupTests.test_query_is_readonly_and_cap_is_checked_before_spawn) ... ok\ntest_scope_rejects_formal_other_job_command_calls_and_existing_trace (test_clock_followup.ClockFollowupTests.test_scope_rejects_formal_other_job_command_calls_and_existing_trace) ... ok\ntest_short_prefix_conflict_does_not_become_complete_conflict (test_clock_followup.ClockFollowupTests.test_short_prefix_conflict_does_not_become_complete_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.281s\n\nOK\n",
+    "clock_start_ns": {
+      "monotonic": 75137578057740,
+      "raw": 79085654905983,
+      "realtime": 1790956211001085387
+    },
+    "clock_end_ns": {
+      "monotonic": 75137945542658,
+      "raw": 79086025913752,
+      "realtime": 1790956211368571001
+    },
+    "elapsed_s": {
+      "monotonic": 0.367484918,
+      "raw": 0.371007769,
+      "realtime": 0.367485614
+    },
+    "source_before": {
+      "scripts/clock_followup.py": "51bb0876e7350db434fe2aceb03a9477e5819a70d990351769afefe5f48cc4f6",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "d6671756eb17725e8861b0afa0ec48bcfd92ea805715909dc5921de6982f5c43",
+      "tests/test_goal2_driver.py": "4ae8038a84bcae516541a89df79b82570f0b29662c341ede76c7a08f5fc4b2a7",
+      "evidence/measurement/clock_followup/timex_identity.json": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+    },
+    "source_after": {
+      "scripts/clock_followup.py": "51bb0876e7350db434fe2aceb03a9477e5819a70d990351769afefe5f48cc4f6",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "d6671756eb17725e8861b0afa0ec48bcfd92ea805715909dc5921de6982f5c43",
+      "tests/test_goal2_driver.py": "4ae8038a84bcae516541a89df79b82570f0b29662c341ede76c7a08f5fc4b2a7",
+      "evidence/measurement/clock_followup/timex_identity.json": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+    },
+    "source_unchanged": true,
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "raw_measurement_ns_rechecked": 27,
+    "controlled_target_cost": false
+  },
+  "protocol_frozen_confirmed": true,
+  "frozen_protocol_sha256": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed",
+  "frozen_protocol_identity_verification": {
+    "framework": [
+      "src/autotuner.py",
+      "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    ],
+    "runner": [
+      "scripts/experiment_v2.py",
+      "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439"
+    ],
+    "executor": [
+      "scripts/clock_followup.py",
+      "6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221"
+    ],
+    "clock_diagnostic": [
+      "scripts/clock_diagnostics.py",
+      "12e22003e861028292445951c8bb4bffc80c3d61a9479611eddc73db230999ff"
+    ],
+    "target": [
+      "src/matrix_multiplication.c",
+      "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+    ],
+    "design": [
+      "evidence/measurement/clock_followup_design.md",
+      "9264fb4120a645fbc61d859612c084156205a48e537742d23847963fa546dcbb"
+    ],
+    "query_identity": [
+      "evidence/measurement/clock_followup/timex_identity.json",
+      "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+    ],
+    "multiclock_identity": [
+      "evidence/measurement/clocks/identity.json",
+      "c4820f1fe6ed2dde60845073c9c565cbaa2b9b555a21d71436c34bbbfe362727"
+    ]
+  },
+  "frozen_plan_independent_verification": {
+    "plan_sha256": "a10f8bb4dd7a549ea06cae72a056f550beb8c506c90df8fcb91a4489a03e5de3",
+    "protocol_sha256": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed",
+    "stage": "diagnostic",
+    "action_counts": {
+      "run": 10,
+      "clock_matrix": 2
+    },
+    "role_counts": {
+      "aa_replacement": 2,
+      "clock_matrix_diagnostic": 2,
+      "clock_followup_aa": 8
+    },
+    "exact_jobs_match": true,
+    "approval_evidence_paths_exist": true,
+    "measurement_root_matches": true
+  }
+}

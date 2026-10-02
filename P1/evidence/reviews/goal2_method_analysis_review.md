@@ -54,6 +54,35 @@ AS4 涉及已经冻结并开始诊断的 driver。不在运行中更换其 bytes
 
 补读 [clock_followup_design.md](../measurement/clock_followup_design.md)：这一次十二调用区分短前缀 q 与完整同来源 q，阈值仍 2%，有限诊断 flag 例外不成为正式准入。支持执行设计等待独立代码审核，**不批准正式性能实验**。补 M0 两标签包含 guard 后文档/测试中断，打断原连续平衡顺序；需分列未补齐、补齐与四对新 A/A，不能因标签差缩小宣称 M1 降低总体方差。
 
+## 十二调用追加诊断的代码交叉复核
+
+2026-10-02 15:52:38 UTC，完整只读检查 `clock_followup.py`、其十二项 fixtures、`experiment_v2.py` 相对初始 checkpoint 的 observer 差异和追加协议草案。本审核者没有在该阶段执行测试、编译、绘图或 n4096；另一审核者持有短测试窗口，代码 gate 及实际回归见 [goal2_followup_code_review.json](goal2_followup_code_review.json)。本方法意见仅支持冻结后这一次十二调用诊断，不批准正式成绩实验。
+
+`Observer.validate` 将例外限制在 approved、formal_admission=false、十二项冻结列表中的精确 job/command、call_upper=1 和新 trace。普通 `controlled` 调用仍执行原 2% 前缀守护；没有把例外放进正式 CLI。完整 driver、正式目标进程和独立诊断内核使用各自来源的首个/前一个完整区间，失败、中断、unknown 和异 boot 不进入完整基准；局部两秒比例仅为时钟时间线，不能计作新增矩阵重复。ns 原始起止和单位可重算，CPU 时间保留用途区别，未用 RAW 替换正式秒数。
+
+只读 `QUERY` 的零初始化使 modes=0；offset 的单位由 STA_NANO 指示，tick/precision 为微秒，frequency_scaled_ppm 保留原始 16 位小数 ppm。它没有设置时间参数；这些字段的变化也不能单独证明本机根因。[Linux adjtimex 手册](https://man7.org/linux/man-pages/man2/adjtimex.2.html) MONOTONIC 可受渐进调整，RAW 的接口语义不赋予其虚拟环境中绝对真值地位。[Linux clock_gettime 手册](https://man7.org/linux/man-pages/man3/clock_gettime.3.html)
+
+| ID | 严重性 | 位置 | 发现、修复与复核 | 状态 |
+| --- | --- | --- | --- | --- |
+| CF1 | 中 | `clock_followup.py:201`，`completed_job` | 最初只重算 ns/ratio 并检查 readonly 标记，单改 timex 内容或 sample phase/task 仍可能被称为未变 raw。该风险没有发生于真实数据。owner 在完成 trace append 后将整份 SHA 写入 global end，恢复核对规范路径/SHA 并继续独立重算；反例覆盖 phase、timex、重填 hash 后仍不一致的比例。 | CLOSED：本角色静态复核，另一审核者在实际锁内复测最终十二 fixtures，0 失败；不计入本角色的 37 项执行数 |
+
+最终复核源码 SHA：`clock_followup.py=6c0283cbba357ff7027091ad1ed2f157d2b7ad17443da150694654a576c00221`，`experiment_v2.py=7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439`；fixtures SHA `d2c2f1f21dc41d882c4f7772467f2aa31dbcef092892281d40d1277b9a80181d`。追加协议当时仍是 draft，SHA `ea1984ec01549b15188c9de4b02b68cdc905821233246a761aa4e2186db642bd`；冻结后执行必须记录新协议 SHA。
+
+独立逐文件比对初始 checkpoint `2fc0c334039bb6696c4d83acbe029ce65ca66ab9`：初始普通 raw、初始派生表、原诊断协议、clocks 证据共 115 个跟踪文件字节不变。global ledger 原前缀字节不变，只新增 read-only query 构建的 start/process/end 三条，其 n4096 调用为 0；该构建已知成本另计。当前源码的修改不迁移初始 batch identity，初始数据仍用该匹配 checkpoint 重生成。
+
+即使十二次只发现短前缀超限，正式改成 complete-versus-complete 仍需另行审查最小语义修订、新协议与源码冻结，2% 不放宽；若任何完整同来源比例超限，不能由末次较稳或最后几对 A/A 放行正式实验。补齐的两个 M0 标签仍明确含中断间隔，不能恢复为原连续安排或宣称因果方差收益。
+
+## 当前完整报告与入口的连续阅读意见
+
+该阶段连续读完整 `report.md` 与 `README.md`，没有以禁用词搜索替代阅读。正文保留老师 1—4 顺序、目标/参数与完整旧结果，仍待主控在新数据形成后更新。以下意见已交 owner，本角色不改正文：
+
+| ID | 位置（此次阅读时） | 需要的修改 | 状态 |
+| --- | --- | --- | --- |
+| CR1 | `README.md:28–37` | 旧 raw 的当前 HEAD 汇总命令在 core SHA 已变后不能直接重现。Goal 1 分析须用固定受审 `3ac0c4688b964c873379d012cbcf09afb7ed0937` 的只读 checkout；初始诊断另用 `2fc0c334…`，新派生用本阶段脚本/输出。不要放宽旧哈希。 | owner 已确认，交付前待修复/实际干净复现 |
+| CR2 | `report.md:36,111–131,148` | 恢复细节移到 evidence；旧分层/patience 的五段与留出表缩为无确认收益及必要原因，并链接历史证据；截图读取/未回填等重复说明集中为一处短图注。 | 建议待最终正文修订/连续重读 |
+| CR3 | `report.md:76,87–107,127` | 内部批次名称改简短来源链接；同配置的选择质量用共同表身份映射，时段确认独立列；旧 0/3 等混合判定保留为历史结果，不作为新种子结论。 | 新成绩尚未产生，待真实新数据后修订 |
+| CR4 | `report.md:27–34` | 该代码片段仅适用于三基础算法；如果新正文纳入 S3，说明其评价路径内部 observe(fresh_score)，不能把聚合 score 再 observe 一次。 | owner 修订时需保持与最终代码一致 |
+
 ## 尚需完成
 
 1. AS1/AS2/AS4/AS5 已经独立回归关闭；AS3 的最终图片实际查看仍待完成。
