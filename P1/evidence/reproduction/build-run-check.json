@@ -1,0 +1,119 @@
+{
+  "builds": [
+    {
+      "opt": "O0",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O0"
+      ],
+      "build_key": "fe09e5e9c83f57f60c06f878a7922331d4ba3e8ac6c0b67e30a15d7164326fe9",
+      "binary_sha256": "fc94eb28bd61575ae77bf2e963e52b19b0bfa32b36f5f4fbad2d02d00b1cb190",
+      "compile_wall_s": 0.15151925600366667
+    },
+    {
+      "opt": "O1",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O1"
+      ],
+      "build_key": "2eb74ff65e9f06c91cb83eb616b1f1f71710e6499a217c9da22f085bfc7540fc",
+      "binary_sha256": "5ebe9775efe700caa5e6971e0f29fb2cfeb68ce5db8ed3427a285ceae231ceab",
+      "compile_wall_s": 0.1294570929967449
+    },
+    {
+      "opt": "O2",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O2"
+      ],
+      "build_key": "8b458e0056d28b89e02d26bc581c8bd78881bfc1999a1131e655c015d7a48e8d",
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c",
+      "compile_wall_s": 0.17323761100124102
+    },
+    {
+      "opt": "O3",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O3"
+      ],
+      "build_key": "91cede2faf01e05f9ac6c96f66a0f9a1b905d100c3cb810f3f92a358f88b2665",
+      "binary_sha256": "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828",
+      "compile_wall_s": 0.13735968100081664
+    }
+  ],
+  "run": {
+    "command": [
+      "/tmp/p1-goal1-reproduction-ltmlbuch/P1/.cache/independent-final/build/91cede2faf01e05f9ac6c96f66a0f9a1b905d100c3cb810f3f92a358f88b2665",
+      "128"
+    ],
+    "started_at": "2026-10-02T04:15:51.958070+00:00",
+    "ended_at": "2026-10-02T04:16:26.040445+00:00",
+    "pid": 126253,
+    "status": "ok",
+    "returncode": 0,
+    "kernel_s": 30.583361,
+    "process_wall_s": 31.160816657997202,
+    "checksum": 17180040496.458935,
+    "build_key": "91cede2faf01e05f9ac6c96f66a0f9a1b905d100c3cb810f3f92a358f88b2665",
+    "binary_sha256": "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828",
+    "stdout": "30.583361\nchecksum=17180040496.458935\n",
+    "stderr": ""
+  },
+  "run_metadata": {
+    "schema": 1,
+    "framework_sha256": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49",
+    "target": {
+      "source": "/tmp/p1-goal1-reproduction-ltmlbuch/P1/src/matrix_multiplication.c",
+      "source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "n": 4096,
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra"
+      ],
+      "compile_timeout": 60.0,
+      "require_checksum": true,
+      "kernel_clock": "CLOCK_MONOTONIC"
+    },
+    "blocks": [
+      128
+    ],
+    "opts": [
+      "O3"
+    ],
+    "action": "run",
+    "algorithm": "grid",
+    "seed": 0,
+    "budget": 1,
+    "min_trials": 5,
+    "patience": 3,
+    "min_relative_improvement": 0.06,
+    "repeats": 1,
+    "timeout": 1200.0,
+    "runtime_affinity": [
+      0
+    ],
+    "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+    "cache_dir": "/tmp/p1-goal1-reproduction-ltmlbuch/P1/.cache/independent-final/build"
+  },
+  "build_start_count": 4,
+  "run_build_start_count": 0,
+  "checksum_matches_formal_default_input": true,
+  "formal_samples_not_changed_by_new_run": true,
+  "clock_guard": true,
+  "done": "0",
+  "native_screenshot_sha256": "6a956955836ad8c8c222bbe5efe05e93e77eefd88df596f4b5e7ce180c545dc8"
+}

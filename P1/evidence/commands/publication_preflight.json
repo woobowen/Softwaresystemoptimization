@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-10-02T04:36:19.417971+00:00",
+  "branch": "main",
+  "push_url": "https://github.com/woobowen/Softwaresystemoptimization.git",
+  "initial_head": "9b0ca66cdd218de034ba2c29979bcbfa9307e1fb",
+  "clean_reproduction_checkpoint": "9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9",
+  "measurement_checkpoint": "dea74febda56aa4a2ef8eaa877068d5523bf1842",
+  "reviews_sha256": {
+    "code_review.md": "e061516c31b80cc66fd2433a4426fb76f9ba17d89a721d05081f6e932f469363",
+    "experiment_report_review.md": "2de92480c0eb45ffc6ac5100d5d8d1b5e498c6c649750b6a264b2121d6b3327c"
+  },
+  "report_sha256": "1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc",
+  "source_protocol_tests_formal_data_unchanged_since_reproduction": true,
+  "original_user_input_hashes_unchanged": true,
+  "other_assignment_diff_empty": true,
+  "secret_unwanted_binary_archive_large_file_hits": 0,
+  "link_check_missing": 0,
+  "formal_images_only_svg_png": true,
+  "formal_runs_completed": 258,
+  "formal_failures": 0,
+  "reproduction_tests": 54,
+  "reproduction_tests_skipped": 0,
+  "separate_fresh_n4096_runs": 1,
+  "postpush_verification": "Perform live ls-remote refs/heads/main, fetch and remote tree/blob checks after authorized normal push; final exact SHA is reported in handoff, not recursively embedded in its own commit."
+}

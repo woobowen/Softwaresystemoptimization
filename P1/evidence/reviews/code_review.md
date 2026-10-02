@@ -267,3 +267,66 @@ taskset -c 0 python3 -B P1/src/autotuner.py run --s 128 --opt O3 \
 最终汇总重生成以保存的 `results/summary/summary.json` 中 `batch_manifest_sha256` 的**插入顺序**构造参数：第一项为原 reference 的 `--reference`，余项按原序传 `--runs`；额外核对这些目录覆盖最终所有应纳入的正式批次。用冻结 summarize.py、原 protocol 和原 plan/measurement_root/command 字符串，在隔离副本 `.cache/independent-final/summary` 与 `plots` 生成。保持原字节路径是 historical_only 分析的要求，不能把 raw header 改成 clone 路径。绘图用副本内 MPLCONFIGDIR，避免复用原构建或图形缓存。
 
 查验点包括：最终源码/协议与冻结身份；54 项实际运行而非 skip；全部预备构建与单次真实 n4096 的原始记录；正式 raw 在复现前后的 SHA 不变；全部保存 CSV/JSON 与新生成输出的文件集合相同且逐 bytes 相同，遇到差异保存双方而不改 raw；图表来源、内容可读性、README/report 完整连续复读及本地链接/图片存在；日志、可执行文件与缓存留在隔离副本，主控只集成有用文本证据。若 code/data/docs 变化，按真实变更复核，不沿用旧成功记录。这里只记录准备与等待条件，没有最终复现或工程完成结论。
+
+## 最终干净隔离复现实际结果与代码关口
+
+主控完成四批正式实验后，明确授予本审核者独占复现窗口。副本为 `/tmp/p1-goal1-reproduction-ltmlbuch`，由本地 `clone --no-hardlinks` 建立，HEAD 为 `9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9`。首 shell 实际执行 `ls -la`；初始 Git status 为空且没有 `P1/.cache`。完整读副本 AGENTS、README 和 report，再按上节命令执行；没有复用原目录构建缓存。前后 [inspection-before.json](../reproduction/inspection-before.json) / [inspection-after.json](../reproduction/inspection-after.json) 保存身份、文件 SHA 与目录状态；上节十项源码/测试/协议仍逐 bytes 等于测量 checkpoint `dea74febda56aa4a2ef8eaa877068d5523bf1842`。
+
+### 实际测试、构建与单次运行
+
+[steps.jsonl](../reproduction/steps.jsonl) 保存每步真实 argv、stdout/stderr 路径、退出码、UTC 标记和外部 monotonic wall；各步均 exit 0。这里使用 monotonic 计算成本，原始 UTC 标记保留，不用其跨度替换成本。
+
+| 实际步骤 | 结果 | 外部 monotonic wall |
+| --- | --- | ---: |
+| `python3 -B -m unittest discover -s P1/tests -v` | **54/54**，31 项 core + 23 项实验；无 skip，unittest 自报 7.615s | 7.725300s |
+| `autotuner.py build --compile-timeout 60` | 四级冷构建，4 个真实 build_start / build，均 cached=false、rc0 | 0.651080s |
+| `taskset -c 0 ... run --s 128 --opt O3 --repeats 1` | 唯一一次新 n4096，rc0；O3 cache hit，新增 compiler process=0 | 31.229703s |
+| 冻结 `summarize.py` 读取四批保存数据并生成两图 | 成功，CSV/JSON 与两 PNG 逐 bytes 相同 | 1.656962s |
+
+完整 [测试输出](../reproduction/unittest.stderr.txt) 逐项包含 54 个测试及 `OK`；本次成绩取代 ER08 修复前旧 53 项作为最终全量测试证据。测试的小 C 和 synthetic/mock 夹具只用于临时功能回归，未进入正式 raw 或这次生产矩阵运行。
+
+编译器实际为 `/usr/bin/x86_64-linux-gnu-gcc-13`、13.3.0，实际二进制 SHA 为 `1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26`，身份等于冻结协议。完整 flags 分别为 `-std=c11 -Wall -Wextra -O0/O1/O2/O3`，没有附加优化；build 和 run 的 compile-timeout 均解析为 60.0。实际重算四个 binary SHA 与 manifest identity / cache key，全部匹配 [build.jsonl](../reproduction/build.jsonl) 及 [build-run-check.json](../reproduction/build-run-check.json)：
+
+| 优化级别 | 冷构建 binary SHA-256 |
+| --- | --- |
+| O0 | `fc94eb28bd61575ae77bf2e963e52b19b0bfa32b36f5f4fbad2d02d00b1cb190` |
+| O1 | `5ebe9775efe700caa5e6971e0f29fb2cfeb68ce5db8ed3427a285ceae231ceab` |
+| O2 | `2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c` |
+| O3 | `2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828` |
+
+新运行 [run.jsonl](../reproduction/run.jsonl) 的实际 header 为 CPU affinity `[0]`、n4096、r1、target cece… / framework 0a71… / protocol 64bb…、CLOCK_MONOTONIC。唯一 measurement 的 kernel 为 **30.583361s**，process monotonic wall 为 **31.160816657997202s**，status=ok、returncode=0、spawned=true、stderr 为空。原始 stdout 为 `30.583361\nchecksum=17180040496.458935\n`；唯一有限 checksum 与正式默认输入相同，kernel ≤ process wall + 0.005s，clock guard 通过。实际 binary SHA 与上表 O3 相同，缓存 key 来自本副本 source/cache 路径。该进程退出后实际检查 PID/group 已不存在。
+
+构建与这唯一一次 n4096 都在真实 xterm 中执行。[terminal.sh](../reproduction/terminal.sh) 采用 set-e 和 EXIT 状态文件，[run_step.py](../reproduction/run_step.py) 捕获真实子进程输出，按实际 journal 显示摘要；没有以绘图或伪日志代替终端。[build-run.png](../../images/build-run.png) 是自身 Xvfb 窗口在脚本 exit0 后的原生截图，1440×960，实际查看清晰可读；SHA 为 `6a956955836ad8c8c222bbe5efe05e93e77eefd88df596f4b5e7ce180c545dc8`。截图明确标有 `Fresh run; separate from stored benchmarks`。截图没有触发第二次 n4096，capture 自有窗口/显示进程已经回收。
+
+### 保存数据重生成与来源核对
+
+实际按 README 的 reference / selection / conflict_selection / holdout 顺序执行：
+
+```bash
+MPLCONFIGDIR=P1/.cache/independent-final/matplotlib \
+python3 -B P1/scripts/summarize.py \
+  --reference P1/results/reference_v1 \
+  --runs P1/results/selection_v1 \
+  --runs P1/results/conflict_selection_v1 \
+  --runs P1/results/holdout_v1 \
+  --output-dir P1/.cache/independent-final/summary \
+  --plots P1/.cache/independent-final/plots
+```
+
+[comparison.json](../reproduction/comparison.json) 记录全部比对：9 个保存 CSV/JSON 与重生成文件的集合相同、逐 bytes 相同；保留标准库 CSV 的 CRLF，没有先规范化换行。包括 258 条正式记录的 measurements.csv，SHA 为 `f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3`；summary.json SHA 为 `4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de`。整个 results 下 358 个保存文件的前后 SHA 全部不变，最终快照所列 341 个正式 raw/derived 文件逐一匹配。副本源码、协议和原有文档也未在复现中改变，tracked diff 为空。
+
+两张重生成图与保存图也逐 bytes 相同，均实际查看：grid_median.png 为 1260×900、SHA `59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61`；online_search.png 为 1980×1728、SHA `a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb`。图中 20 个参照配置及在线搜索已观察前缀可读，未补齐提前停止后的虚构观测。另实际查看代码截图和明确标注保存数据的结果截图，framework.svg 可解析；图片与最终源码/表格相符。
+
+后续轻量来源核对覆盖正式四批的 **258** 条 measurement：每条记录的 binary_sha 都等于上述冷构建对应 O 的真实 binary SHA，全部 checksum 与新运行默认输入相同。该检查只读保存记录；新单次运行没有计入正式 258 条、没有替换 t_ref、没有改变候选或补测正式实验。单次复现耗时也不用于推导性能改善。独立实验结果判断继续由实验/报告审核者承担。
+
+### 文档修正、证据集成与结论
+
+| 问题位置 | 严重性 | 证据与最终状态 |
+| --- | --- | --- |
+| `P1/report.md:36` 原恢复说明 | 低 | 原“未完成的重复测量…接着执行”可能误解为重跑已启动但中断的 repeat。`autotuner.py:395–422` 将该 repeat 保留为失败，只继续尚未开始者；最终 54 项中的 orphan-resume 回归实际通过。主控已改为“恢复时保留已完成的重复，只继续尚未开始的测量；已记录的失败不重跑或覆盖。”完整重读更新后的 report，语义问题已关闭。 |
+
+最终重读原目录 README/report，report SHA 为 `1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc`。末尾新增真实 build-run 图及单次输出不加入三重复参照表的说明准确；13 个本地链接均存在。主控复制到 `evidence/reproduction/` 的 17 个原始文本及正式 images 下 PNG，已分别与副本逐 bytes 比较相同。上述恢复文案/图的集成没有修改冻结代码、协议或 raw，不需重新测量。
+
+追加只读来源与集成检查文件位于副本 `P1/.cache/independent-final/formal-binary-provenance.json` 和 `integration-check.json`，可按需要集成；完整构建缓存、binary、冗余派生表与 Matplotlib cache 留在副本，不作为正式源码。此次审核者没有安装依赖、改变系统时钟/全局配置、修改其他作业或实施 Git 发布。
+
+**最终本地代码/隔离复现关口：批准。** 原计算与尾块、同源数值验证方式、真实高优化内核、可观察结果、搜索预算与 seed、两候选单项隔离、构建缓存、错误清理、恢复与来源核对、成本统计及代码规模均已按前节逐项复读；本次对冻结最终文件完成 54 项实际回归、四级冷构建、唯一一次真实生产规模运行和全部保存派生数据重生成，没有未关闭的阻断代码问题。保留历史失败/诊断和测量环境波动限制。本结论针对本地冻结文件及隔离复现，不代替实际 GitHub 文件的最终 Engineering 判断，也不代替独立实验/报告结论或教师提交状态。

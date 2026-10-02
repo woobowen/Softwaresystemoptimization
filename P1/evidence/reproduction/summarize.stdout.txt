@@ -1,0 +1,394 @@
+{
+  "reference_complete": true,
+  "reference_median_s": 39.499706,
+  "process_measurements": 258,
+  "invalid_measurements": 0,
+  "reference_checks": {
+    "complete": true,
+    "noisy_configs": [
+      {
+        "s": 128,
+        "opt": "O1",
+        "relative_range": 0.2431689307256573
+      },
+      {
+        "s": 128,
+        "opt": "O3",
+        "relative_range": 0.3236378016164451
+      }
+    ],
+    "reference_best_config": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "reference_best_noisy": false,
+    "relevant_return_noise": [
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 130363,
+        "s": 128,
+        "opt": "O1",
+        "reference_relative_range": 0.2431689307256573,
+        "confirmation_relative_range": 0.05214695285837845
+      },
+      {
+        "stage": "selection",
+        "algorithm": "patience",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "reference_relative_range": 0.3236378016164451,
+        "confirmation_relative_range": 0.02626509715411726
+      },
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "reference_relative_range": 0.3236378016164451,
+        "confirmation_relative_range": 0.01656591372021616
+      },
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "reference_relative_range": 0.3236378016164451,
+        "confirmation_relative_range": 0.013718998664814071
+      }
+    ],
+    "conflicts": [
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 130363,
+        "s": 128,
+        "opt": "O2",
+        "relative_difference": 0.15970979632101578,
+        "reference_config_median_s": 39.499706,
+        "confirmed_s": 33.191216
+      },
+      {
+        "stage": "selection",
+        "algorithm": "patience",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "relative_difference": 0.21422780545560027,
+        "reference_config_median_s": 42.501537,
+        "confirmed_s": 33.396526
+      },
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "relative_difference": 0.22563134599108725,
+        "reference_config_median_s": 42.501537,
+        "confirmed_s": 32.911858
+      },
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "relative_difference": 0.22257298600754127,
+        "reference_config_median_s": 42.501537,
+        "confirmed_s": 33.041843
+      },
+      {
+        "stage": "selection",
+        "algorithm": "stratified",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O2",
+        "relative_difference": 0.1835661257833161,
+        "reference_config_median_s": 39.499706,
+        "confirmed_s": 32.248898
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "stage": "selection",
+      "algorithm": "stratified",
+      "decision": "INCONCLUSIVE",
+      "conditions": {
+        "quality": false,
+        "no_excess_loss": false,
+        "processes": true,
+        "wall": true
+      },
+      "clear_constraint_failure": [
+        "quality_risk",
+        "minimum_quality_gain"
+      ],
+      "quality_gains_pp": [
+        24.977520085845686,
+        -7.633226434647402,
+        1.678392239172629
+      ],
+      "quality_gains_s": [
+        9.866046999999995,
+        -3.015102000000006,
+        0.6629600000000053
+      ],
+      "robust_gain_pairs": 1,
+      "possible_gain_pairs": 1,
+      "descriptive_gain_ranges_pp": [
+        [
+          21.890043941086553,
+          29.267164672061114
+        ],
+        [
+          -10.654433731734606,
+          -5.227565491246944
+        ],
+        [
+          1.0400482474477073,
+          2.993272911955356
+        ]
+      ],
+      "descriptive_gain_ranges_s": [
+        [
+          8.646503000000003,
+          11.560444000000004
+        ],
+        [
+          -4.208469999999998,
+          -2.0648729999999986
+        ],
+        [
+          0.41081599999999696,
+          1.1823340000000044
+        ]
+      ],
+      "saved_search_processes": [
+        0,
+        0,
+        0
+      ],
+      "baseline_total_wall_median_s": 1057.6429054590008,
+      "candidate_total_wall_median_s": 890.8274056500013,
+      "reasons": [
+        "quality",
+        "no_excess_loss",
+        "reference best or a paired returned configuration exceeds the predeclared noise threshold",
+        "returned confirmation conflicts with the original reference"
+      ],
+      "decision_before_reference_checks": "REJECT"
+    },
+    {
+      "stage": "selection",
+      "algorithm": "patience",
+      "decision": "INCONCLUSIVE",
+      "conditions": {
+        "no_excess_loss": false,
+        "near_hits": true,
+        "processes": true,
+        "wall": true
+      },
+      "clear_constraint_failure": [
+        "quality_risk"
+      ],
+      "quality_gains_pp": [
+        6.947408671851881,
+        -16.13220361690794,
+        -1.2270167276688064
+      ],
+      "quality_gains_s": [
+        2.7442059999999984,
+        -6.372173000000004,
+        -0.4846679999999992
+      ],
+      "robust_gain_pairs": 0,
+      "possible_gain_pairs": 1,
+      "descriptive_gain_ranges_pp": [
+        [
+          4.180658964904697,
+          15.378529652853624
+        ],
+        [
+          -18.510112455014234,
+          -13.548969199922643
+        ],
+        [
+          -2.587204066784714,
+          1.0137796974995288
+        ]
+      ],
+      "descriptive_gain_ranges_s": [
+        [
+          1.6513479999999987,
+          6.074474000000002
+        ],
+        [
+          -7.311440000000005,
+          -5.351802999999997
+        ],
+        [
+          -1.0219380000000058,
+          0.40044000000000324
+        ]
+      ],
+      "saved_search_processes": [
+        3,
+        1,
+        3
+      ],
+      "baseline_total_wall_median_s": 1057.6429054590008,
+      "candidate_total_wall_median_s": 664.6304741550011,
+      "reasons": [
+        "no_excess_loss",
+        "observed endpoints cross the quality risk boundary; this is not a confidence interval",
+        "reference best or a paired returned configuration exceeds the predeclared noise threshold",
+        "returned confirmation conflicts with the original reference"
+      ],
+      "decision_before_reference_checks": "REJECT"
+    },
+    {
+      "stage": "holdout",
+      "algorithm": "stratified",
+      "decision": "NOT_REQUIRED",
+      "reasons": [
+        "candidate was not retained by selection"
+      ]
+    },
+    {
+      "stage": "holdout",
+      "algorithm": "patience",
+      "decision": "NOT_REQUIRED",
+      "reasons": [
+        "candidate was not retained by selection"
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "algorithm": "stratified",
+      "selection": "INCONCLUSIVE",
+      "holdout": "NOT_REQUIRED",
+      "retained": false
+    },
+    {
+      "algorithm": "patience",
+      "selection": "INCONCLUSIVE",
+      "holdout": "NOT_REQUIRED",
+      "retained": false
+    }
+  ],
+  "next_holdout_algorithms": [
+    "random"
+  ],
+  "costs": [
+    {
+      "stage": "reference",
+      "recorded_spawned_processes": 61,
+      "unrecorded_process_run_upper": 0,
+      "failed_measurements": 0,
+      "known_process_wall_s": 5563.930275264998,
+      "compile_processes": 0,
+      "known_compile_wall_s": 0,
+      "actual_driver_wall_s": 5569.810459629005,
+      "driver_wall_recorded_lower_bound_s": 5569.810459629005,
+      "resource_driver_wall_upper_s": 5569.810459629005,
+      "unknown_driver_cost": false
+    },
+    {
+      "stage": "selection",
+      "recorded_spawned_processes": 154,
+      "unrecorded_process_run_upper": 0,
+      "failed_measurements": 0,
+      "known_process_wall_s": 12011.861293886017,
+      "compile_processes": 0,
+      "known_compile_wall_s": 0,
+      "actual_driver_wall_s": 12016.120602788997,
+      "driver_wall_recorded_lower_bound_s": 12016.120602788997,
+      "resource_driver_wall_upper_s": 12016.120602788997,
+      "unknown_driver_cost": false
+    },
+    {
+      "stage": "conflict_selection",
+      "recorded_spawned_processes": 9,
+      "unrecorded_process_run_upper": 0,
+      "failed_measurements": 0,
+      "known_process_wall_s": 363.32093909000105,
+      "compile_processes": 0,
+      "known_compile_wall_s": 0,
+      "actual_driver_wall_s": 364.22182902099667,
+      "driver_wall_recorded_lower_bound_s": 364.22182902099667,
+      "resource_driver_wall_upper_s": 364.22182902099667,
+      "unknown_driver_cost": false
+    },
+    {
+      "stage": "holdout",
+      "recorded_spawned_processes": 34,
+      "unrecorded_process_run_upper": 0,
+      "failed_measurements": 0,
+      "known_process_wall_s": 2658.7066166160002,
+      "compile_processes": 0,
+      "known_compile_wall_s": 0,
+      "actual_driver_wall_s": 2659.654210890996,
+      "driver_wall_recorded_lower_bound_s": 2659.654210890996,
+      "resource_driver_wall_upper_s": 2659.654210890996,
+      "unknown_driver_cost": false
+    }
+  ],
+  "diagnostics": [
+    {
+      "stage": "conflict_selection",
+      "event": 1,
+      "member": "both",
+      "s": 128,
+      "opt": "O2",
+      "valid_runs": 3,
+      "median_s": 37.563213,
+      "original_reference_config_median_s": 39.499706,
+      "relative_reference_change": 0.049025504139195486,
+      "environment_drift": false,
+      "return_instability": true,
+      "samples": "[37.563213, 36.683041, 39.4361]"
+    },
+    {
+      "stage": "conflict_selection",
+      "event": 2,
+      "member": "returned",
+      "s": 128,
+      "opt": "O3",
+      "valid_runs": 3,
+      "median_s": 40.802387,
+      "original_reference_config_median_s": 42.501537,
+      "relative_reference_change": 0.03997855418734608,
+      "environment_drift": false,
+      "return_instability": true,
+      "samples": "[40.151283, 40.91119, 40.802387]"
+    },
+    {
+      "stage": "conflict_selection",
+      "event": 2,
+      "member": "reference",
+      "s": 128,
+      "opt": "O2",
+      "valid_runs": 3,
+      "median_s": 41.061607,
+      "original_reference_config_median_s": 39.499706,
+      "relative_reference_change": 0.03954209178164514,
+      "environment_drift": false,
+      "return_instability": false,
+      "samples": "[40.804188, 41.600006, 41.061607]"
+    }
+  ],
+  "protocol_sha256": "64bb8f6c66e70de2c9a53960cbd693447ecebaa43a258f21439bd2827e4b0f66",
+  "summarize_sha256": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+  "batch_manifest_sha256": {
+    "results/reference_v1": "9f5f093803045373aecc48a22b355ce99ef8fc19eb8c07d79fb95ef409dde1ad",
+    "results/selection_v1": "0e6629e2f62abab18cf56bf3803497517883aa430e1219a3fddd4b9384431700",
+    "results/conflict_selection_v1": "7a8c6f4aeeac2b3e2f9350da4f71f27efc4d3e2c9f5c8d261b4465b849a166fb",
+    "results/holdout_v1": "03362796d14612cac9a2d622ea68146d712e37cc255fde9e7dbecef998c54cd5"
+  }
+}

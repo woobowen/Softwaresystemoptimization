@@ -33,7 +33,7 @@ for trial_id in range(len(trials), budget):
     strategy.observe(config, trial["score"])
 ```
 
-`len(trials)` 使恢复后的已完成试验仍占用原预算；某次测量失败时 `score` 为 `None`，不会参与最优耗时比较。未完成的重复测量由评估器接着执行，已保存的有效重复不再运行。
+`len(trials)` 使恢复后的已完成试验仍占用原预算；某次测量失败时 `score` 为 `None`，不会参与最优耗时比较。恢复时保留已完成的重复，只继续尚未开始的测量；已记录的失败不重跑或覆盖。
 
 ![接口与原计算循环](images/interfaces-kernel.png)
 
@@ -142,3 +142,7 @@ taskset -c 0 python3 P1/src/autotuner.py search --algorithm random \
 ```
 
 `--target` 输入源码，`--blocks` 与 `--opts` 输入候选值，`--algorithm` 选择规则；将算法换为 `grid` 或 `greedy` 即可使用另外两种基础搜索。完整测试、四级构建、单配置运行、断点恢复和保存数据的图表重生成命令见 [运行入口](README.md)。输出使用新文件，避免覆盖已有实验。
+
+![四级构建与单配置运行](images/build-run.png)
+
+四级构建及一次 n=4096、s=128、O3 单配置运行。该单次输出不加入前面的三重复参照表。

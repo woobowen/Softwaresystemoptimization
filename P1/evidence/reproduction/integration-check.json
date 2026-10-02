@@ -1,0 +1,75 @@
+{
+  "root_report_sha256": "1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc",
+  "recovery_wording_corrected": true,
+  "copied_artifact_file_count": 17,
+  "copied_artifact_bytes_identical": true,
+  "copied_native_png_bytes_identical": true,
+  "root_local_link_count": 13,
+  "root_local_links": [
+    {
+      "document": "README.md",
+      "line": 3,
+      "target": "report.md"
+    },
+    {
+      "document": "README.md",
+      "line": 23,
+      "target": "evidence/README.md"
+    },
+    {
+      "document": "report.md",
+      "line": 11,
+      "target": "images/framework.svg"
+    },
+    {
+      "document": "report.md",
+      "line": 15,
+      "target": "src/autotuner.py"
+    },
+    {
+      "document": "report.md",
+      "line": 38,
+      "target": "images/interfaces-kernel.png"
+    },
+    {
+      "document": "report.md",
+      "line": 44,
+      "target": "src/matrix_multiplication.original.c"
+    },
+    {
+      "document": "report.md",
+      "line": 44,
+      "target": "src/matrix_multiplication.c"
+    },
+    {
+      "document": "report.md",
+      "line": 74,
+      "target": "images/grid_median.png"
+    },
+    {
+      "document": "report.md",
+      "line": 76,
+      "target": "results/summary/grid_summary.csv"
+    },
+    {
+      "document": "report.md",
+      "line": 105,
+      "target": "images/online_search.png"
+    },
+    {
+      "document": "report.md",
+      "line": 129,
+      "target": "images/saved-search-results.png"
+    },
+    {
+      "document": "report.md",
+      "line": 144,
+      "target": "README.md"
+    },
+    {
+      "document": "report.md",
+      "line": 146,
+      "target": "images/build-run.png"
+    }
+  ]
+}

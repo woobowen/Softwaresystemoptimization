@@ -22,6 +22,8 @@
 
 ## 最后隔离与发布
 
-当前待执行：干净本地clone的完整54测试、四级冷构建、一次n4096和全部派生重生成；之后独立两类最终产物审核、安全stage/diff/secret/大文件/links范围检查、GitHub main正常push、实际ls-remote与tree查询。完成后会更新这里的实际证据链接；本文件不把等待项记为成功。
+已实际完成：干净本地clone9ba1427中的完整54/54测试（7.615秒，无skip）、四级冷构建、一CPU0/O3/s128真实n4096（kernel30.583361秒；CLI31.229703秒；rc0/checksum正确）和全部9表/两图重生成逐bytes一致。完整实际argv/stdout/stderr/计时及哈希在 ../reproduction/steps.jsonl、build.jsonl、run.jsonl、comparison.json。新单次数据不加入正式258；source/protocol/raw未变。随后仍需独立两类最终产物审核、安全stage/diff/secret/大文件/links范围检查、GitHub main正常push、实际ls-remote与tree查询。完成后会更新这里的实际证据链接；本文件不把等待项记为成功。
 
 发布格式检查：标准库 csv 默认 CRLF 在普通 git diff --check 中被视为行尾空白；为保留冻结输出，使用一次性 `git -c core.whitespace=cr-at-eol diff --cached --check`，不是改Git配置或改写CSV。optimization_diagnostics.txt 的真实命令输出末尾空行单独保留；其余 staged 文件检查exit0。源代码/报告均无新增行尾空白。
+
+截图集成首次按原生成位置读取 capture.log 时，该日志已由复现审核者移动到其忽略cache；读取失败不涉及目标运行。rg定位到 native-capture.log 后复制成功，未重跑目标或改写数据。

@@ -1,0 +1,173 @@
+{
+  "head": "9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9",
+  "csv_json_comparison": [
+    {
+      "file": "batch_costs.csv",
+      "bytes": 664,
+      "identical": true,
+      "sha256": "b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302",
+      "crlf": 5
+    },
+    {
+      "file": "conflict_request_holdout.json",
+      "bytes": 152,
+      "identical": true,
+      "sha256": "02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e",
+      "crlf": 0
+    },
+    {
+      "file": "conflict_request_selection.json",
+      "bytes": 2009,
+      "identical": true,
+      "sha256": "ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7",
+      "crlf": 0
+    },
+    {
+      "file": "grid_summary.csv",
+      "bytes": 2671,
+      "identical": true,
+      "sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "crlf": 21
+    },
+    {
+      "file": "measurements.csv",
+      "bytes": 145611,
+      "identical": true,
+      "sha256": "f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3",
+      "crlf": 259
+    },
+    {
+      "file": "online_curves.csv",
+      "bytes": 11915,
+      "identical": true,
+      "sha256": "c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26",
+      "crlf": 133
+    },
+    {
+      "file": "reference_conflicts.csv",
+      "bytes": 529,
+      "identical": true,
+      "sha256": "5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90",
+      "crlf": 4
+    },
+    {
+      "file": "search_summary.csv",
+      "bytes": 6589,
+      "identical": true,
+      "sha256": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc",
+      "crlf": 19
+    },
+    {
+      "file": "summary.json",
+      "bytes": 10943,
+      "identical": true,
+      "sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+      "crlf": 0
+    }
+  ],
+  "saved_csv_json_file_count": 9,
+  "saved_result_file_count": 358,
+  "saved_result_bytes_unchanged": true,
+  "snapshot_data_hash_count": 341,
+  "snapshot_data_hashes_match": true,
+  "source_protocol_bytes_unchanged": true,
+  "document_bytes_unchanged": true,
+  "local_links": [
+    {
+      "document": "README.md",
+      "line": 3,
+      "target": "report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "line": 23,
+      "target": "evidence/README.md",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 11,
+      "target": "images/framework.svg",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 15,
+      "target": "src/autotuner.py",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 38,
+      "target": "images/interfaces-kernel.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 44,
+      "target": "src/matrix_multiplication.original.c",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 44,
+      "target": "src/matrix_multiplication.c",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 74,
+      "target": "images/grid_median.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 76,
+      "target": "results/summary/grid_summary.csv",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 105,
+      "target": "images/online_search.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 129,
+      "target": "images/saved-search-results.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "line": 144,
+      "target": "README.md",
+      "exists": true
+    }
+  ],
+  "plots": [
+    {
+      "file": "grid_median.png",
+      "dimensions": [
+        1260,
+        900
+      ],
+      "identical": true,
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61"
+    },
+    {
+      "file": "online_search.png",
+      "dimensions": [
+        1980,
+        1728
+      ],
+      "identical": true,
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb"
+    }
+  ],
+  "formal_process_measurements": 258,
+  "invalid_formal_measurements": 0,
+  "separate_fresh_process_measurements": 1,
+  "git_status": "?? P1/images/build-run.png\n"
+}

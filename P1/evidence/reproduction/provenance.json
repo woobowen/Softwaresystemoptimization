@@ -1,0 +1,30 @@
+{
+  "checkpoint": "9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9",
+  "checkout": "/tmp/p1-goal1-reproduction-ltmlbuch",
+  "method": "git clone --no-hardlinks; initially clean with no P1 cache; independent reviewer executes README-compatible commands",
+  "artifact_sha256": {
+    "terminal.sh": "28536fa71f73725857c5dd274c2c9437180bda2902e1176395b6c7398f0f6ce9",
+    "run_step.py": "61a952688cd6a22eb6c53f4cd8175413a37b5f9abbd78dd3295c2f1712f89b15",
+    "steps.jsonl": "07863cd7718b3ccf4e1c8e203761e0eb9d74a43720f33a1b10e82f54bd9695a7",
+    "unittest.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unittest.stderr.txt": "c255ceaa5afe4230e8d6a659198874375ee1e72f350ddfb5a895640aae3bdcd4",
+    "build.stdout.txt": "bc5f11908bf06dcc2d311ee0233ada5c556da08fa305dce2c8765c6e8e089eaa",
+    "build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run.stdout.txt": "8e5cacb9903d94ca5414917ad5cd3ccd17695df458a2886b198a49d5bc656f04",
+    "run.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "summarize.stdout.txt": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+    "summarize.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.jsonl": "a928843428955c857562188f9fb03c471968c035bbbada08206b5aace290febc",
+    "run.jsonl": "7ae919ff35f0074febf4090b83c004c215b6b1767bec3fcc88f7287ef9c754c0",
+    "inspection-before.json": "381ac662562c7726747610036362ffc3987f18323fc0c39613175ef9c6b381b7",
+    "inspection-after.json": "45702cd3c1a46c3073ceec97b29d3e5270b758b3b15b677c1ba0d5d9d4bbbfdf",
+    "build-run-check.json": "54bbd31478aa73a9bf55d337f76162775db2379078dbd1fd92a49d518ac151cb",
+    "comparison.json": "13537d5c1ec7caa73572243dcd51919d26e4e9534d147abc073ec3b9d755c0d3",
+    "formal-binary-provenance.json": "206e214f07cdb3ef9eea9d4ef0d4236b784b3c4735e735d9a28e6a1e8875bbd9",
+    "integration-check.json": "e193fcd13843d2d43d2ba0a22de265218d3559a93c257754a1c0ba723f4ace5d"
+  },
+  "later_changes": "Only final report photo/explanation and recovery wording, evidence/review/index/publication records. Frozen measured source/protocol/official raw/derived unchanged.",
+  "source_measurement_checkpoint": "dea74febda56aa4a2ef8eaa877068d5523bf1842",
+  "formal_target_runs": 258,
+  "separate_fresh_run": 1
+}

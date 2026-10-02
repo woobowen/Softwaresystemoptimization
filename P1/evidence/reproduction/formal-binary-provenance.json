@@ -1,0 +1,6 @@
+{
+  "formal_measurements_checked": 258,
+  "all_formal_binary_hashes_equal_clean_builds": true,
+  "all_formal_checksums_equal_fresh_default_input": true,
+  "compiler_identity_matches_frozen_protocol": true
+}

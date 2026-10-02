@@ -538,3 +538,96 @@ summary的原t_ref、selection两项条件/端点/robust/possible/收益/成本/
 - conflict_request_holdout.json：02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e。
 
 所有独立复算命令实际exit0，compiler/target启动数0，没有新依赖或配置。本审核者等待最终图/截图/report稳定稿，继续只读与本文记录。
+
+## 13. 最终report、README与现有图片实际审核
+
+记录时刻：2026-10-02 04:12:54 UTC。正式测量已经结束，本审核者先ls -la扫描，再完整连续读取report.md、README.md和老师一页PDF，逐题对应；实际查看四PNG，并渲染/查看SVG。随后重读主控修订后的全文和截图来源记录。正在执行的干净复现由代码审核者独占，本审核者不编译、不测试、不绘制数据图或运行n4096；新增build-run截图尚未到达，本节不提前标为完成。
+
+### 13.1 原题与报告内容
+
+老师四题和提交要求再次逐段读取：三明确接口及优缺点/框架图、附件目标、五s×四O、Grid全20配置与另外两算法比较，report.md、重点代码和OS/CPU/compiler信息均在报告对应1/2/3/4顺序中。学生学号10245102410/吴博闻与标题正确；没有改成另一个报告模板。三接口和search代码片段对应实际ConfigSpace/TargetProgram/SearchStrategy/Evaluator，预算/自身feedback/失败None/恢复已完成repeat说明与实现相符。
+
+第2题原始附件字节保留、原六层内核、n4096/double、s24尾部边界和计时后checksum说明准确；同边界CLOCK_MONOTONIC原因有必要说明，没有把计时适配当数值优化。240个同源小规模/五sanitizer/两full抽查及误差/容差沿用第9节已原始重解析证据，没有冒称大矩阵逐元素全量检查。
+
+独立标准库再次解析报告表格并与第12节已审核CSV核对：20个网格值、9行基本算法和3行holdout的配置/median/g两位舍入/进程/完整wall两位舍入逐项完全相等。reference_v1/selection_v1/holdout_v1、n4096、参照r3/online r1/新返回确认r3、warmup不排序都明确。g的百分值、收益秒差、原t_ref39.499706及实际诊断median37.563213/40.802387/41.061607一致，没有将g差误写为相对Random百分比。
+
+完整driver搜索加确认的表和曲线内部窗口分别说明，缓存共同准备与每轮零新增compile写明；Online曲线不回放网格值，早停不补后续步数。Grid预算前8项、Random随机质量/成本、Greedy四邻域及三个有利起点、三seed有限性均与原记录相符。关于cache和标量汇编的解释保留测量边界，IR向量化备注与实际SIMD区别已处理，不假定O3总最快或具体cache命中。
+
+S1/S2单独变化和两篇来源用途有具体界限：离散覆盖借鉴不冒称完整MLKAPS，JIT只支持关注成本动机，不冒称论文提出patience。S1第一对获益、第二对同配置时段差、S2省七进程但错过第八项、两项未确认综合收益并未采用、有限诊断不替换原reference、Random holdout0/3都如实写出，没有把负/不确定结果当KEEP或总体性能提升。
+
+### 13.2 图片实看、数据映射与真实截图
+
+SVG经XML/文本读取后，直接view_image因格式不支持失败；查现有工具帮助，使用已安装gdk-pixbuf-thumbnailer低负载在/tmp渲染1000像素预览，再实际view_image查看。原SVG hash前后相同，临时PNG已删除，无安装或正式图修改。短标签build/measure/parse、20configs/legality/stableorder没有溢出，三输入、真实类名、proposal/feedback、构建与fresh measurement、Journal/结果方向正确。
+
+实际查看grid_median.png：五分块×四O布局、20个两位数字与CSV舍入一致，色条明确Median kernel time(s),3runs，报告caption补reference_v1/n4096；刻度和文字可读。实际查看online_search.png：三个selection seed×左右两图，五版本图例、r1标题、左评估数/右internal窗口秒、纵轴observed best kernel秒明确；Greedy7/7/5和patience5/7/5端点都没有补到8。
+
+另静态读summarize.py绘图函数第456–506行：热力图直接取原grid median；曲线只筛selection，按该seed/algorithm逐条取step、tuning_elapsed_s、best_so_far_s画阶梯。与第12节已重算132行CSV中的108行selection相符，没有将holdout混入选择图、用确认median替换曲线或免费延长停止后的点。本审核者没有重新调用matplotlib/plots函数来替代图片实看。
+
+两张终端PNG已实际查看，文字可读、无凭据/无关个人内容。interfaces-kernel显示真实rg/sed命令、三个接口/评估器/实际search循环和C六层循环/计时尾部，行号与冻结源码吻合。saved-search-results显示读取已保存表的命令，明确stored results/non-rerun、n4096/r1/r3/B8/t_ref，以及9基本+3heldout值和批次；没有INC/audit标签或伪称刚执行全部基准。图中文字与第12节原表相符。
+
+读取evidence/commands/screenshots.json：截图来自实际xterm窗口、独占Xvfb和ffmpeg x11grab，actual_script及exit_status0、文件SHA与当前PNG匹配；保存表查看器确实只读CSV/JSON，不执行benchmark。图表为SVG/matplotlib数据图，终端PNG为实际窗口截图，没有把HTML/文本绘制伪装为终端。
+
+| 图片 | 实际尺寸 | SHA-256 |
+| --- | --- | --- |
+| framework.svg | 1000×640 SVG | 08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4 |
+| grid_median.png | 1260×900 | 59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61 |
+| online_search.png | 1980×1728 | a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb |
+| interfaces-kernel.png | 1440×960 | b39b7b7a331a1eb359966c6eba837bf9b6e5214b5718181aba9ece3977761fac |
+| saved-search-results.png | 1440×960 | c32ff46f82d4ca98b68aba86ebfa690089dff30d3b7acb0664393b7ab6aea833 |
+
+### 13.3 README、链接与写作通读
+
+README的Linux/GCC/Python3.12、标准库/额外matplotlib区别、仓库根路径、test/validation/build/run/search/恢复、忽略.cache输出、新文件要求和两候选仅实验不推荐均与实现相符。汇总命令包含reference、selection、selection诊断、holdout四批次，在新输出目录保存，不改原日志；历史只读跨checkout与真实execute/resume原root严格分开，边界符合已审核代码。没有把这次静态查看等同于干净clone已完成，实际clone由代码审核者另执行。
+
+report与README共12个本地Markdown链接逐项resolve并断言存在，source/PNG/SVG/CSV/报告/证据索引对应真实文件；原题要求的report.md名称与主README入口正确。源码关键部分已有实际说明，执行命令可读。两份原文连续从头读至尾：段落分别回答对应题目，数值集中表格，必要的波动/正确性/有限预算解释均与问题有关，没有Codex/ChatGPT/AI/Prompt/审核状态/验收流水账或机械“实验目的—总结”模板。保存结果截图的非rerun说明有明确用途，不把读取历史画面伪称性能执行。
+
+### 13.4 发布前P2处置与当前关口
+
+PR-04（P2，放置）：原images目录有interfaces-kernel.capture.log、saved-search-results.capture.log，为内部Xvfb键盘警告/抓图输出；建议移evidence/commands。主控已实际移动，当前images只含SVG/PNG，screenshots.json.capture_log路径也更新，两张PNG字节未改。再次读取路径/metadata通过，本项关闭。XKEYBOARD警告明确非fatal，未当程序计算失败，也未删除原日志。
+
+PR-05（P2建议，版本说明位置）：本审核者初按AGENTS默认建议GCC/Python移题。重新读取最新P1_Goal1_Codex_Prompt.md第324行，其明确要求环境信息写OS/CPU/内存/编译器版本，优先于默认建议；因此原GCC环境段合法，撤回该部分建议，不将它当原报告错误。主控将Python3.12.3移第1题实现段，实际全文核对后与证据相符，不重复堆版本说明。本项处置关闭。
+
+数值/本地链接标准库断言实际exit0，图片hash/尺寸与日志移动检查实际exit0。最初文件枚举包含不存在的非必需evidence/final目录而返回2，SVG直接显示工具亦不支持格式；改为读取现存路径和现有原生渲染器后完成检查。这些是读取工具/路径限制，非源码或结果失败；没有改动数据、补测或安装依赖。
+
+最新连续通读报告SHA为ecb3bdd9d14e75c6f7e786e2d3ff237fd0c6365733b2d5872a64e216e40e0ad2；README SHA为7d074554ea71094bad2edf95da6d22a044b5da28ae3afefc463bd13d9079bb1d。相比最初2a292报告只调整Python说明位置，数值/图保持相同。以上snapshot仍可能增加主控预定的真实build-run截图和必要说明。
+
+**现有最终report、README及五图审核通过，无尚未解决的数据、描述、图示或文风阻塞。** 新的干净复现结果/真实build-run截图尚未到达，必须到达后核对输出、代码hash、非正式成绩身份、图与报告对应，再完成发布前报告关口；实际GitHub版本仍待发布后独立查看，不授予最终Engineering PASS。本审核者停止任何渲染/测试/编译，仅等新截图轻量复查，无新增依赖或配置。
+
+## 14. 新增原生构建/运行截图与实验报告内部最终关口
+
+记录时刻：2026-10-02 04:31:48 UTC。本审核者实际view_image以原分辨率查看新增build-run.png，再完整连续通读最终report.md（SHA 1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc）及不变README。随后仅执行标准库只读解析/hash/原始证据比对；未启动compiler、target、测试、绘图或其他性能工作，唯一写入仍为本文。
+
+### 14.1 新截图与独立复现原始记录
+
+build-run.png尺寸1440×960、SHA为6a956955836ad8c8c222bbe5efe05e93e77eefd88df596f4b5e7ce180c545dc8。画面是实际xterm中的冷四级构建和一次4096运行，命令、flags、四binary SHA前缀、rc0、n4096/128/O3/r1/CPU[0]、kernel/processwall、checksum及完整O3 binary SHA均清晰；开头明确fresh clone与separate from stored benchmarks，无内部审核状态或凭据。报告末尾的两句说明准确限定这是单次展示，不进入原三重复参照表。
+
+直接读取evidence/reproduction的build.jsonl/run.jsonl/steps.jsonl，而非仅相信截图数字：四组build_start与build逐PID/command对应，O0/O1/O2/O3全部cached=false、成功spawn/rc0、公共flags相同且只变化-O等级。四个actual binary SHA与原正式准备完全相同，clone绝对路径使build_key不同仍正确由完整Target metadata+flags重算。
+
+fresh run有且只有一组measurement_start/completion，配置/command/PID/repeat/start唯一匹配，spawned=true、rc0/status=ok、stderr空/error=null。stdout重新解析为30.583361秒及checksum17180040496.458935；process wall为31.160816657997202秒，满足MONO+0.005秒guard。metadata source cece/framework0a71/protocol64bb与当前文件字节一致，n=4096、实际affinity=[0]、r1；运行复用刚生成的O3，0新增compile，summary process_runs1/best score等于原stdout。四编译process wall合计0.591573641秒，完整build CLI0.651079946秒；完整fresh run CLI31.229703376秒。这些均是单独复现成本，不加到正式比较中。
+
+读取screenshots.json的实际terminal.sh/run_step.py全文，与evidence/reproduction保存脚本完全一致；wrapper先实际subprocess执行CLI并保存stdout/stderr/steps，再显示简洁结果，没有把旧测量假装为刚跑。PNG hash与metadata及实际clone图片一致，捕获日志与原native-capture.log字节一致、已放commands。17份复现artifact hash及复制后字节均与原临时目录一致；实际只读git rev-parse确认clone HEAD为9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9，inspection-before记录初始clean且无P1 cache。
+
+代码审核者实际运行的54项无skip测试在保存stderr中可读，四步骤unittest/build/run/summarize全部rc0；这些是该独立执行者的实际结果，不冒称本审核者执行测试。两份重生PNG和9份CSV/JSON已由本审核者逐字节与当前正式派生文件比对，相等。原before/after的358结果文件hash字典完全相同，当前主工作区与clone每个对应文件也匹配；comparison中的341 snapshot匹配记录及两图/九表结果可对应。没有加入fresh1改写原样本、t_ref或质量条件。
+
+### 14.2 最终文字、全部链接与问题关闭
+
+最终报告完整从第一题至运行方式和最后真实图读完：第1题三个接口/核心代码/优缺点，第2题原C适配与同源正确性，第3题五s/四O，第4题完整网格差异、三基础算法、两个单项负/不确定结果、有限诊断和新seed0/3近优全部保留。实际数据、单位、重复数/批次、当时online feedback与确认分别统计、internal窗口与完整driver成本、Greedy起点限制、原reference不换等均与第8–12节已独立重算结论一致。文风仍为直接回答题目及必要技术解释，没有工作流状态泄漏、伪造硬件机制或未执行结论。
+
+PR-06（P2，由代码审核者提出）：旧第36行“未完成重复测量接着执行”可能被读为已失败的repeat重新跑。主控已改为“恢复时保留已完成的重复，只继续尚未开始的测量；已记录的失败不重跑或覆盖。”本审核者实际读autotuner.py第405–425行：已有非ok measurement会阻止继续构建/测量，正常partial从len(measurements)继续，失败不覆盖原记录；新句与分支及已审核恢复行为一致，本项在实验/报告范围关闭。代码审核者自己的修复复核仍在其证据文件记载，不由本审核者替代。
+
+去除新增图片/两句说明并将这一恢复句反向替换后，报告字节SHA精确恢复第13节ecb3bdd9…；因此旧正文实质数值/单位/来源/结论均没有改动。README仍为7d074554ea71094bad2edf95da6d22a044b5da28ae3afefc463bd13d9079bb1d，此前五图字节SHA完全不变。逐项resolve当前report/README共13个本地Markdown链接，全部真实存在；新增build-run链接也正确。现有截图为实际终端，SVG/PNG数据图分类明确，图片没有替代必要解释。
+
+全部原派生snapshot hash保持第12节，summary仍258正式target/0invalid/t_ref39.499706秒；S1/S2均未保留、Random holdout0/3，空holdout冲突请求不增加运行。PR-01/02/03与第13节PR-04/05均已关闭/按明确最新提示处置，新增PR-06也已核对。未发现未关闭的关键数据、报告、图片、成本或复现说明问题。
+
+**实验/报告内部最终关口：批准。** 本地阶段成品满足该关口，主控可结合独立代码/正确性关口和安全检查执行已授权的GitHub发布。这个结论没有把INCONCLUSIVE转为KEEP，没有改正式协议/策略，也不授予基于实际GitHub文件的最终Engineering PASS；实际发布commit/远端一致性和GitHub图/报告渲染仍需发布后检查。本审核者不提交/push，不准备水杉或组合阶段。
+
+最终已审核字节：
+
+- report.md：1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc。
+- README.md：7d074554ea71094bad2edf95da6d22a044b5da28ae3afefc463bd13d9079bb1d。
+- build-run.png：6a956955836ad8c8c222bbe5efe05e93e77eefd88df596f4b5e7ce180c545dc8。
+- reproduction/build.jsonl：a928843428955c857562188f9fb03c471968c035bbbada08206b5aace290febc。
+- reproduction/run.jsonl：7ae919ff35f0074febf4090b83c004c215b6b1767bec3fcc88f7287ef9c754c0。
+- reproduction/provenance checkpoint：9ba1427137fadbb17b8f99cf7a8c10ed7ec061d9；测量checkpoint仍dea74febda56aa4a2ef8eaa877068d5523bf1842。
+
+本节的独立原记录/hash/链接断言命令实际exit0，target/compiler启动数0，没有新依赖或配置。实验/报告工作包内部闭环完成，最终GitHub状态仍待真实发布版本审核。
