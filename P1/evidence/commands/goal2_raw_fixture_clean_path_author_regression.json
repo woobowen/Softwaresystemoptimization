@@ -1,0 +1,152 @@
+{
+  "checked_at": "2026-10-02T21:49:47.147697+00:00",
+  "owner": "measurement",
+  "scope": "Only synthetic numeric fixture command roots; production source and validation rules unchanged",
+  "previous_test_sha256": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+  "source_before": {
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+    "evidence/protocol_raw_diagnostic.json": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "evidence/protocol_raw_aa.json": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca"
+  },
+  "source_after": {
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+    "evidence/protocol_raw_diagnostic.json": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "evidence/protocol_raw_aa.json": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca"
+  },
+  "clean_clone_original_failure": {
+    "path": "evidence/reproduction/goal2/goal2-clean-independent-tests.stderr.txt",
+    "sha256": "f1ce8ee2aa304379914830818e423a57e061fde5bfc30afeb9b80c9fa9454099",
+    "actual_suite_tests": 221,
+    "errors": 2
+  },
+  "cause": "Fixture replaced current checkout P1 instead of the frozen command measurement_root; use the immutable numeric binding root",
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:49:46.364210+00:00",
+      "task": "goal2-raw-fixture-clean-path-related-tests",
+      "role": "analysis_regression",
+      "attempt_id": "f1dbd08aa2c34c389ee2d2cbda8f5da4",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.256909689,
+      "clock_elapsed_s": {
+        "monotonic": 0.256909689,
+        "raw": 0.264328817,
+        "realtime": 0.256910433
+      },
+      "clock_end_ns": {
+        "monotonic": 96297927767615,
+        "raw": 100661045045061,
+        "realtime": 1790977786363892247
+      },
+      "resource_s": 0.264328817,
+      "resource_wall_s": 0.264328817,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-clean-path-related-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-clean-path-related-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:49:46.880286+00:00",
+      "task": "goal2-raw-fixture-clean-path-all-tests",
+      "role": "analysis_regression",
+      "attempt_id": "325178bbb4cd452ebef9c29fc80e8b9e",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.505741458,
+      "clock_elapsed_s": {
+        "monotonic": 0.505741458,
+        "raw": 0.520345935,
+        "realtime": 0.505742682
+      },
+      "clock_end_ns": {
+        "monotonic": 96298443770441,
+        "raw": 100661575947527,
+        "realtime": 1790977786879895217
+      },
+      "resource_s": 0.520345935,
+      "resource_wall_s": 0.520345935,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-clean-path-all-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-clean-path-all-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:49:47.145100+00:00",
+      "task": "goal2-raw-fixture-clean-path-syntax",
+      "role": "analysis_regression",
+      "attempt_id": "a998e11be8ce4f9ba8d5a48509bcd499",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.255245213,
+      "clock_elapsed_s": {
+        "monotonic": 0.255245213,
+        "raw": 0.262616759,
+        "realtime": 0.255246468
+      },
+      "clock_end_ns": {
+        "monotonic": 96298708706674,
+        "raw": 100661848534287,
+        "realtime": 1790977787144831553
+      },
+      "resource_s": 0.262616759,
+      "resource_wall_s": 0.262616759,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-clean-path-syntax.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-clean-path-syntax.stderr.txt"
+    }
+  ],
+  "actual_tests": {
+    "related": {
+      "tests": 14,
+      "unittest_wall_s": 0.079,
+      "result": "PASS"
+    },
+    "all": {
+      "tests": 79,
+      "unittest_wall_s": 0.415,
+      "result": "PASS"
+    }
+  },
+  "syntax_files": 2,
+  "actual_n4096_calls": 0,
+  "C_builds": 0,
+  "lock_released": true,
+  "performance_lock": "P1/.cache/performance.lock nonblocking flock",
+  "controlled_resource_s": 1.047291511,
+  "cross_checkout_final_regression": "PENDING separate matching clean clone rerun after test-only checkpoint",
+  "logs": {
+    "evidence/commands/goal2-raw-fixture-clean-path-related-tests.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-clean-path-related-tests.stderr.txt": "8b9e51eb39d8b624dd5b6c75ca356b1211ac2897af5380f3a5c424139edf5524",
+    "evidence/commands/goal2-raw-fixture-clean-path-all-tests.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-clean-path-all-tests.stderr.txt": "8ba58ccfc5f419d9f2f9259be6c829771c2a5e232ed3465f112e6503efb6338b",
+    "evidence/commands/goal2-raw-fixture-clean-path-syntax.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-clean-path-syntax.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

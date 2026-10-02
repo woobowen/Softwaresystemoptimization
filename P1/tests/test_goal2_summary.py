@@ -334,11 +334,13 @@ def raw_aa_cli_fixture(root):
 
 def raw_numeric_fixture(root):
     data = raw_protocol()
+    measurement_root = su.load_json(
+        P1 / "evidence/measurement/raw_timing/numeric_clock_baselines.json")["measurement_root"]
     adapter = root / "numeric-adapter.json"
     adapter.write_bytes((P1 / "evidence/measurement/raw_timing/numeric_adapter.json").read_bytes())
     bound, observations = [], []
     for planned in data["numeric_validation_jobs"]:
-        planned["command"] = [value.replace(str(P1), str(root)) for value in planned["command"]]
+        planned["command"] = [value.replace(measurement_root, str(root)) for value in planned["command"]]
         batch, ledger = formal_fixture(root, data, planned["id"])
         task, config = batch["tasks"][0], planned["config"]
         meta = task["records"][0]["metadata"]
