@@ -1,0 +1,171 @@
+{
+  "reviewer": "/root/review",
+  "state": "TWO_RAW_NUMERIC_VALID_24_POINT_CHECKS_AND_COMPLETE_CLOCK_COST_VERIFIED_AA_PENDING_STRICT_KNOWN_FIELDS_AND_NEW_FREEZE",
+  "at_utc": "2026-10-02T20:28:45.424323+00:00",
+  "normal_source_protocol_checkpoint": "75a0154b563b4123813e39a967967b0abbfb7f5c",
+  "prelaunch_freeze_checks": {
+    "protocol_sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "aa_plan_sha256": "dff23cf65a61c286e4e196a34fbe9f6b334e0914cf3b39354d30a62d0ccfd253",
+    "resource_plan_sha256": "02f99dcc4f2d2ec0fc493a206e332efeefe7fedeab788d6dc782c2a3c0b9ebc9",
+    "frozen_gate_json_sha256": "155de5f7722579e30b658c724e424c6e92c2fb065421beea3c1f4210006d16f5",
+    "frozen_gate_md_sha256": "15320f3320a16b04a22173da8ac23503b2c44a4ae46888f3592544ef61c2e73c",
+    "exact_source_compiler_four_binary_identities": true,
+    "exact_AA_sequence": true,
+    "exact_two_numeric_commands": true,
+    "same_default_source_f195": true,
+    "closed_frozen_ledger_snapshot_rows": 359,
+    "closed_frozen_n4096_calls": 44,
+    "closed_frozen_resource_s": 3270.659356136,
+    "cost_independently_recomputed_from_integer_boundaries": true,
+    "candidate_call_upper": 516,
+    "baseline_call_upper": 483,
+    "no_extra_warmup_or_retry": true
+  },
+  "numeric_results_complete": true,
+  "numeric_execution_admission": true,
+  "numeric_admission_scope": "exactly two one-call target journals with real serial lock and complete RAW guard/history8ced; both actual numeric, clock and cost results independently verified",
+  "AA_execution_admission": false,
+  "AA_pending_dependencies": [
+    "strict known-field owner fixes and related independent regression",
+    "new frozen AA-only protocol matching source/analysis/tests/actual numeric binding",
+    "independent strict RAW analysis code gate"
+  ],
+  "full_formal_admission": false,
+  "old_v2_continue_admission": false,
+  "engineering_pass": false,
+  "goal2_complete": false,
+  "numeric_correctness_and_clock_recomputed": true,
+  "numeric_results": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "attempt_id": "4c1527651be84705b786f6ca4c27f475",
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "journal_sha256": "06e4ad6afe8cc510465f6526737a144c4dbe18b26685869faaeb585d7e3d3632",
+      "metadata_fingerprint": "3b0b4004d6cd655cd8b066b846c754b8db705f2d3c7eac7c3dc7d95fb2c40692",
+      "binary_sha256": "c779e927daaa93337f645ce22f91c15aa80571579c469775b372f565523075a5",
+      "target_identity": [
+        "ca269b5543434830b4fc849c58df94d2",
+        0,
+        0,
+        396082
+      ],
+      "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0",
+      "kernel_raw_s": 226.104004,
+      "process_clock_s": {
+        "monotonic": 221.153215912,
+        "raw": 226.99208287,
+        "realtime": 227.026423184
+      },
+      "driver_clock_s": {
+        "monotonic": 221.467358223,
+        "raw": 227.313596304,
+        "realtime": 227.340566506
+      },
+      "resource_s": 227.340566506,
+      "q_process": 0.9998487386907726,
+      "q_process_exact_ns": 0.9998487386907727,
+      "q_driver": 0.9998813665224183,
+      "process_first_previous_change_pct": [
+        0.17359928798010849,
+        -0.277659420970644
+      ],
+      "driver_first_previous_change_pct": [
+        0.12530790057148078,
+        -0.2910709080503393
+      ],
+      "all_raw_checks_recomputed": true,
+      "numerical_scope": "24 predetermined long-double dot products only; not full4096 element validation",
+      "formal_scores": false
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "attempt_id": "82f0b8afb8c047889ba7148ead33ed1a",
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "journal_sha256": "879c7a47ed36ab3853e6e21125d8202c06a975b521dd9413dd238183e548232e",
+      "metadata_fingerprint": "b8967ab82673bdf83c01719e3b75cb31f542efe53ab7696d7110714395d87209",
+      "binary_sha256": "c2baf59c12e002e781b440aa3bc87273f2015a11d3de2e719c791baf97bdda97",
+      "target_identity": [
+        "3a66e824b4854f5aa36ddf3cfe658d1a",
+        0,
+        0,
+        397545
+      ],
+      "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0",
+      "kernel_raw_s": 44.958908,
+      "process_clock_s": {
+        "monotonic": 44.457529158,
+        "raw": 45.480431077,
+        "realtime": 46.173835603
+      },
+      "driver_clock_s": {
+        "monotonic": 44.88963564,
+        "raw": 45.925977175,
+        "realtime": 46.60594314
+      },
+      "resource_s": 46.60594314,
+      "q_process": 0.9849827393166586,
+      "q_process_exact_ns": 0.9849827393166586,
+      "q_driver": 0.9854103163848129,
+      "process_first_previous_change_pct": [
+        -1.3158066658323087,
+        -1.4868248364827585
+      ],
+      "driver_first_previous_change_pct": [
+        -1.3237823607178956,
+        -1.4472767092295835
+      ],
+      "all_raw_checks_recomputed": true,
+      "numerical_scope": "24 predetermined long-double dot products only; not full4096 element validation",
+      "formal_scores": false
+    }
+  ],
+  "numeric_result_at_utc": "2026-10-02T20:39:39.666924+00:00",
+  "numeric_costs": {
+    "actual_n4096_calls": 2,
+    "driver_raw_s_sum": 273.239573479,
+    "driver_monotonic_s_sum": 266.356993863,
+    "resource_s_sum": 273.946509646,
+    "physical_compile_calls": 2
+  },
+  "closed_snapshot_after_two_numeric": {
+    "ledger_rows": 365,
+    "sha256": "6633ce5d3da13ad24d7f8b44bd4e7b8f3d46dc0e4b02646ecf1bf465c11bc21b",
+    "n4096_calls": 46,
+    "resource_s": 3544.605865782
+  },
+  "numeric_binding_review": {
+    "path": "evidence/measurement/raw_timing/numeric_clock_baselines.json",
+    "sha256": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca",
+    "two_actual_attempts_and_raw_metadata_and_commands_match": true,
+    "clock_only": true,
+    "formal_scores": false,
+    "actual_execution_protocol_sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "actual_execution_driver_sha256": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+    "source_checkpoint": "75a0154b563b4123813e39a967967b0abbfb7f5c"
+  },
+  "updated_at_utc": "2026-10-02T20:41:09.917432+00:00",
+  "numeric_starts_seen_at_initial_freeze_review": [
+    {
+      "task": "goal2-raw-n4096-O0-s24",
+      "attempt_id": "4c1527651be84705b786f6ca4c27f475",
+      "at": "2026-10-02T20:26:33.013370+00:00",
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl"
+    }
+  ],
+  "numeric_actual_completed_attempts": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "attempt_id": "4c1527651be84705b786f6ca4c27f475",
+      "journal_sha256": "06e4ad6afe8cc510465f6526737a144c4dbe18b26685869faaeb585d7e3d3632",
+      "complete": true,
+      "validated_points": 24
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "attempt_id": "82f0b8afb8c047889ba7148ead33ed1a",
+      "journal_sha256": "879c7a47ed36ab3853e6e21125d8202c06a975b521dd9413dd238183e548232e",
+      "complete": true,
+      "validated_points": 24
+    }
+  ]
+}

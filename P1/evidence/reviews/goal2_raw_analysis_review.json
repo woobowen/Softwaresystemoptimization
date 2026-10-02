@@ -1,0 +1,559 @@
+{
+  "reviewer": "/root/implementation",
+  "role": "independent_RAW_analysis_review",
+  "reviewer_authored_analyzer": false,
+  "reviewer_is_core_author": true,
+  "state": "FINITE_RAW_ANALYSIS_APPROVED_FOR_EIGHT_AA_AFTER_RA1_CLOSURE",
+  "started_at_utc": "2026-10-02T20:22:47.768564+00:00",
+  "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB; acquisition confirms no other cooperating owner holds lock",
+  "source_before_sha256": {
+    "scripts/summarize_v2.py": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+    "tests/test_goal2_summary.py": "895ba1efeb7acbd55969aaf6ac851a474c62dd75b0b972fd26adb4872811738d",
+    "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1"
+  },
+  "n4096_calls": 0,
+  "c_compilations": 0,
+  "plots_or_gui": 0,
+  "controlled_records": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "record": {
+        "type": "task_end",
+        "at": "2026-10-02T20:22:48.387331+00:00",
+        "task": "raw-analysis-independent-77",
+        "role": "short_test",
+        "attempt_id": "e5dc1ee53e4849aa891716f6f9e4645e",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.506444713,
+        "clock_elapsed_s": {
+          "monotonic": 0.506444713,
+          "raw": 0.519308931,
+          "realtime": 0.506445548
+        },
+        "clock_end_ns": {
+          "monotonic": 91220787779934,
+          "raw": 95442691658205,
+          "realtime": 1790972568387008447
+        },
+        "resource_s": 0.519308931,
+        "resource_wall_s": 0.519308931,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": ".cache/goal2-raw-analysis-independent/raw-analysis-independent-77.stdout.txt",
+        "stderr": ".cache/goal2-raw-analysis-independent/raw-analysis-independent-77.stderr.txt"
+      },
+      "stdout": "",
+      "stderr": "test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed (test_goal2_summary.Goal2DiagnosticAndCostTests.test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed) ... ok\ntest_batch_copy_cannot_disagree_with_global_actual_attempt (test_goal2_summary.Goal2DiagnosticAndCostTests.test_batch_copy_cannot_disagree_with_global_actual_attempt) ... ok\ntest_clock_diagnostics_recompute_nanoseconds_units_and_float_output (test_goal2_summary.Goal2DiagnosticAndCostTests.test_clock_diagnostics_recompute_nanoseconds_units_and_float_output) ... ok\ntest_complete_clock_check_uses_first_and_previous_same_source (test_goal2_summary.Goal2DiagnosticAndCostTests.test_complete_clock_check_uses_first_and_previous_same_source) ... ok\ntest_derived_path_cannot_overwrite_or_nest_under_raw (test_goal2_summary.Goal2DiagnosticAndCostTests.test_derived_path_cannot_overwrite_or_nest_under_raw) ... ok\ntest_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup (test_goal2_summary.Goal2DiagnosticAndCostTests.test_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup) ... ok\ntest_guarded_task_uses_exact_global_journal_end_without_raw_copy (test_goal2_summary.Goal2DiagnosticAndCostTests.test_guarded_task_uses_exact_global_journal_end_without_raw_copy) ... ok\ntest_internal_rechecks_are_charged_not_external_confirmation (test_goal2_summary.Goal2DiagnosticAndCostTests.test_internal_rechecks_are_charged_not_external_confirmation) ... ok\ntest_ledger_snapshot_hash_and_rows_describe_the_same_read (test_goal2_summary.Goal2DiagnosticAndCostTests.test_ledger_snapshot_hash_and_rows_describe_the_same_read) ... ok\ntest_matching_cost_copies_cannot_hide_a_raw_target_call (test_goal2_summary.Goal2DiagnosticAndCostTests.test_matching_cost_copies_cannot_hide_a_raw_target_call) ... ok\ntest_method_rank_reversal_prevents_diagnostic_performance_gate (test_goal2_summary.Goal2DiagnosticAndCostTests.test_method_rank_reversal_prevents_diagnostic_performance_gate) ... ok\ntest_missing_whole_cost_attempt_is_not_a_complete_project_bill (test_goal2_summary.Goal2DiagnosticAndCostTests.test_missing_whole_cost_attempt_is_not_a_complete_project_bill) ... ok\ntest_new_two_pair_aa_preserves_large_label_differences (test_goal2_summary.Goal2DiagnosticAndCostTests.test_new_two_pair_aa_preserves_large_label_differences) ... ok\ntest_partial_aa_preserves_available_labels_without_selecting_arrangement (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_aa_preserves_available_labels_without_selecting_arrangement) ... ok\ntest_partial_cost_copies_use_all_exact_journal_attempts_once (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_cost_copies_use_all_exact_journal_attempts_once) ... ok\ntest_prefix_conflict_does_not_become_a_complete_conflict (test_goal2_summary.Goal2DiagnosticAndCostTests.test_prefix_conflict_does_not_become_a_complete_conflict) ... ok\ntest_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost (test_goal2_summary.Goal2DiagnosticAndCostTests.test_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost) ... ok\ntest_same_attempt_copy_timestamps_are_not_new_cost_or_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_same_attempt_copy_timestamps_are_not_new_cost_or_identity) ... ok\ntest_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero (test_goal2_summary.Goal2DiagnosticAndCostTests.test_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero) ... ok\ntest_two_batch_panels_with_same_identity_are_not_new_evidence (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_batch_panels_with_same_identity_are_not_new_evidence) ... ok\ntest_two_copies_of_forged_cost_cannot_override_original_clock_boundaries (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_copies_of_forged_cost_cannot_override_original_clock_boundaries) ... ok\ntest_two_different_batches_cannot_replace_same_seed_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_different_batches_cannot_replace_same_seed_identity) ... ok\ntest_zero_m0_branch_does_not_claim_observed_aa_reduction (test_goal2_summary.Goal2DiagnosticAndCostTests.test_zero_m0_branch_does_not_claim_observed_aa_reduction) ... ok\ntest_clock_invalid_search_does_not_inherit_near_label_from_healthy_panel (test_goal2_summary.Goal2FormalClockTests.test_clock_invalid_search_does_not_inherit_near_label_from_healthy_panel) ... ok\ntest_clock_stopped_warmup_cli_preserves_known_cost_and_unexecuted_stages (test_goal2_summary.Goal2FormalClockTests.test_clock_stopped_warmup_cli_preserves_known_cost_and_unexecuted_stages) ... ok\ntest_complete_health_requires_every_process_and_intra_attempt_previous (test_goal2_summary.Goal2FormalClockTests.test_complete_health_requires_every_process_and_intra_attempt_previous) ... ok\ntest_failed_whole_attempt_and_other_boot_are_excluded_from_baselines (test_goal2_summary.Goal2FormalClockTests.test_failed_whole_attempt_and_other_boot_are_excluded_from_baselines) ... ok\ntest_formal_summary_read_uses_trace_then_snapshot_health_not_live_runtime (test_goal2_summary.Goal2FormalClockTests.test_formal_summary_read_uses_trace_then_snapshot_health_not_live_runtime) ... ok\ntest_incomplete_guard_or_resource_attempt_cannot_be_healthy (test_goal2_summary.Goal2FormalClockTests.test_incomplete_guard_or_resource_attempt_cannot_be_healthy) ... ok\ntest_manifest_protocol_path_cannot_be_self_injected (test_goal2_summary.Goal2FormalClockTests.test_manifest_protocol_path_cannot_be_self_injected) ... ok\ntest_missing_duplicate_or_reused_physical_process_is_rejected (test_goal2_summary.Goal2FormalClockTests.test_missing_duplicate_or_reused_physical_process_is_rejected) ... ok\ntest_missing_mandatory_guard_fields_never_become_healthy (test_goal2_summary.Goal2FormalClockTests.test_missing_mandatory_guard_fields_never_become_healthy) ... ok\ntest_numeric_baselines_match_runtime_history_and_never_enter_score_samples (test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples) ... ok\ntest_only_frozen_numeric_adapters_can_supply_clock_baselines (test_goal2_summary.Goal2FormalClockTests.test_only_frozen_numeric_adapters_can_supply_clock_baselines) ... ok\ntest_previous_successful_attempt_first_and_previous_identities_are_exact (test_goal2_summary.Goal2FormalClockTests.test_previous_successful_attempt_first_and_previous_identities_are_exact) ... ok\ntest_process_conflict_is_not_hidden_by_healthy_whole_driver (test_goal2_summary.Goal2FormalClockTests.test_process_conflict_is_not_hidden_by_healthy_whole_driver) ... ok\ntest_saved_healthy_flags_cannot_hide_forged_raw_clock_checks (test_goal2_summary.Goal2FormalClockTests.test_saved_healthy_flags_cannot_hide_forged_raw_clock_checks) ... ok\ntest_saved_panel_whole_identity_and_full_reference_are_reconstructed (test_goal2_summary.Goal2FormalClockTests.test_saved_panel_whole_identity_and_full_reference_are_reconstructed) ... ok\ntest_saved_reference_and_panel_cli_uses_only_specified_ledger_snapshot (test_goal2_summary.Goal2FormalClockTests.test_saved_reference_and_panel_cli_uses_only_specified_ledger_snapshot) ... ok\ntest_anchor_endpoint_corners_preserve_signed_ranges (test_goal2_summary.Goal2QualityTests.test_anchor_endpoint_corners_preserve_signed_ranges) ... ok\ntest_clear_quality_regression_and_unsupported_risk (test_goal2_summary.Goal2QualityTests.test_clear_quality_regression_and_unsupported_risk) ... ok\ntest_completed_valid_nonselected_s3_does_not_require_candidate_holdout (test_goal2_summary.Goal2QualityTests.test_completed_valid_nonselected_s3_does_not_require_candidate_holdout) ... ok\ntest_disjoint_reference_panel_blocks_keep (test_goal2_summary.Goal2QualityTests.test_disjoint_reference_panel_blocks_keep) ... ok\ntest_known_cost_same_identity_cannot_keep_with_clock_conflict (test_goal2_summary.Goal2QualityTests.test_known_cost_same_identity_cannot_keep_with_clock_conflict) ... ok\ntest_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate (test_goal2_summary.Goal2QualityTests.test_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate) ... ok\ntest_partial_or_clock_blocked_selection_does_not_skip_confirmation (test_goal2_summary.Goal2QualityTests.test_partial_or_clock_blocked_selection_does_not_skip_confirmation) ... ok\ntest_partial_shared_panel_cannot_confirm_same_reference_identity (test_goal2_summary.Goal2QualityTests.test_partial_shared_panel_cannot_confirm_same_reference_identity) ... ok\ntest_planned_jobs_and_header_only_journal_do_not_count_as_executed (test_goal2_summary.Goal2QualityTests.test_planned_jobs_and_header_only_journal_do_not_count_as_executed) ... ok\ntest_quality_route_requires_useful_supported_lower_bound (test_goal2_summary.Goal2QualityTests.test_quality_route_requires_useful_supported_lower_bound) ... ok\ntest_real_diagnostic_gate_blocks_different_identities_before_gain (test_goal2_summary.Goal2QualityTests.test_real_diagnostic_gate_blocks_different_identities_before_gain) ... ok\ntest_rho_padding_prevents_false_five_percent_classification (test_goal2_summary.Goal2QualityTests.test_rho_padding_prevents_false_five_percent_classification) ... ok\ntest_same_config_efficiency_boundary_and_cost_regression (test_goal2_summary.Goal2QualityTests.test_same_config_efficiency_boundary_and_cost_regression) ... ok\ntest_same_identity_scores_zero_despite_independent_time_differences (test_goal2_summary.Goal2QualityTests.test_same_identity_scores_zero_despite_independent_time_differences) ... ok\ntest_selected_s3_without_new_seed_confirmation_is_not_retained (test_goal2_summary.Goal2QualityTests.test_selected_s3_without_new_seed_confirmation_is_not_retained) ... ok\ntest_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep (test_goal2_summary.Goal2QualityTests.test_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep) ... ok\ntest_unstarted_searches_are_not_completed_negative_selection (test_goal2_summary.Goal2QualityTests.test_unstarted_searches_are_not_completed_negative_selection) ... ok\ntest_actual_binding_path_is_not_a_general_numeric_scope_waiver (test_goal2_summary.Goal2RawClockTests.test_actual_binding_path_is_not_a_general_numeric_scope_waiver) ... ok\ntest_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands (test_goal2_summary.Goal2RawClockTests.test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands) ... ok\ntest_legacy_clock_whitelist_cannot_be_used_for_new_score_samples (test_goal2_summary.Goal2RawClockTests.test_legacy_clock_whitelist_cannot_be_used_for_new_score_samples) ... ok\ntest_raw_AA_cli_uses_exact_snapshot_and_raw_realtime_not_raw_monotonic (test_goal2_summary.Goal2RawClockTests.test_raw_AA_cli_uses_exact_snapshot_and_raw_realtime_not_raw_monotonic) ... ok\ntest_raw_AA_partial_duplicate_or_mixed_binary_is_not_finite_evidence (test_goal2_summary.Goal2RawClockTests.test_raw_AA_partial_duplicate_or_mixed_binary_is_not_finite_evidence) ... ok\ntest_raw_decision_uses_fresh_raw_cost_without_changing_monotonic_advisory (test_goal2_summary.Goal2RawClockTests.test_raw_decision_uses_fresh_raw_cost_without_changing_monotonic_advisory) ... ok\ntest_raw_driver_seconds_are_read_directly_and_unknown_stays_unknown (test_goal2_summary.Goal2RawClockTests.test_raw_driver_seconds_are_read_directly_and_unknown_stays_unknown) ... ok\ntest_raw_failed_legacy_warmup_does_not_update_original_first_or_previous (test_goal2_summary.Goal2RawClockTests.test_raw_failed_legacy_warmup_does_not_update_original_first_or_previous) ... ok\ntest_raw_history_checks_both_original_prefix_bytes_and_canonical_rows (test_goal2_summary.Goal2RawClockTests.test_raw_history_checks_both_original_prefix_bytes_and_canonical_rows) ... ok\ntest_raw_missing_schema_history_or_coverage_never_counts_healthy (test_goal2_summary.Goal2RawClockTests.test_raw_missing_schema_history_or_coverage_never_counts_healthy) ... ok\ntest_raw_saved_q_and_first_identity_are_independently_recomputed (test_goal2_summary.Goal2RawClockTests.test_raw_saved_q_and_first_identity_are_independently_recomputed) ... ok\ntest_raw_unknown_completed_cost_cannot_become_method_ready (test_goal2_summary.Goal2RawClockTests.test_raw_unknown_completed_cost_cannot_become_method_ready) ... ok\ntest_base_order_and_greedy_explicit_start_are_independently_replayed (test_goal2_summary.Goal2ReplayTests.test_base_order_and_greedy_explicit_start_are_independently_replayed) ... ok\ntest_clock_units_domains_and_nan_do_not_create_a_fastest_sample (test_goal2_summary.Goal2ReplayTests.test_clock_units_domains_and_nan_do_not_create_a_fastest_sample) ... ok\ntest_failed_batch_remains_failed_and_forged_metadata_is_rejected (test_goal2_summary.Goal2ReplayTests.test_failed_batch_remains_failed_and_forged_metadata_is_rejected) ... ok\ntest_final_tie_uses_original_visit_order (test_goal2_summary.Goal2ReplayTests.test_final_tie_uses_original_visit_order) ... ok\ntest_nonfinite_zero_and_invalid_recheck_contract_are_rejected (test_goal2_summary.Goal2ReplayTests.test_nonfinite_zero_and_invalid_recheck_contract_are_rejected) ... ok\ntest_raw_replay_rejects_backfilled_best_and_missing_process (test_goal2_summary.Goal2ReplayTests.test_raw_replay_rejects_backfilled_best_and_missing_process) ... ok\ntest_recheck_failure_is_ineligible_without_extra_free_exploration (test_goal2_summary.Goal2ReplayTests.test_recheck_failure_is_ineligible_without_extra_free_exploration) ... ok\ntest_recheck_recomputes_best_upward_and_preserves_random_prefix (test_goal2_summary.Goal2ReplayTests.test_recheck_recomputes_best_upward_and_preserves_random_prefix) ... ok\ntest_zero_or_one_finalist_stops_without_padding (test_goal2_summary.Goal2ReplayTests.test_zero_or_one_finalist_stops_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 77 tests in 0.429s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import py_compile; py_compile.compile('P1/scripts/summarize_v2.py',cfile='P1/.cache/goal2-raw-analysis-independent/summarize_v2.pyc',doraise=True); py_compile.compile('P1/tests/test_goal2_summary.py',cfile='P1/.cache/goal2-raw-analysis-independent/test_goal2_summary.pyc',doraise=True)"
+      ],
+      "record": {
+        "type": "task_end",
+        "at": "2026-10-02T20:22:48.651681+00:00",
+        "task": "raw-analysis-independent-syntax",
+        "role": "short_test",
+        "attempt_id": "83bc09276cfc4d4abd7bd7d0f9659907",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.256325278,
+        "clock_elapsed_s": {
+          "monotonic": 0.256325278,
+          "raw": 0.262837128,
+          "realtime": 0.256326933
+        },
+        "clock_end_ns": {
+          "monotonic": 91221052178654,
+          "raw": 95442962772606,
+          "realtime": 1790972568651407414
+        },
+        "resource_s": 0.262837128,
+        "resource_wall_s": 0.262837128,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": ".cache/goal2-raw-analysis-independent/raw-analysis-independent-syntax.stdout.txt",
+        "stderr": ".cache/goal2-raw-analysis-independent/raw-analysis-independent-syntax.stderr.txt"
+      },
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests": 77,
+  "suite_reported_s": 0.429,
+  "test_failures": 0,
+  "test_errors": 0,
+  "python_syntax_checks": 2,
+  "verification_exit_code": 0,
+  "protected_input_files": 528,
+  "protected_manifest_before_sha256": "57ce1bd51ff60bc9eacd287e1d3c52251cfb47770bf49ebc9f8c5ae9fb44b021",
+  "protected_manifest_after_sha256": "57ce1bd51ff60bc9eacd287e1d3c52251cfb47770bf49ebc9f8c5ae9fb44b021",
+  "changed_protected_inputs": [],
+  "critical_input_sha256": {
+    "evidence/protocol_raw_diagnostic.json": "cf196d3eaaa5c8e3cc796f71cebf4f09c80f23498f2650fc987fb647cd84e213",
+    "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+    "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d",
+    "evidence/reviews/goal2_raw_timing_review.md": "15320f3320a16b04a22173da8ac23503b2c44a4ae46888f3592544ef61c2e73c",
+    "evidence/reviews/goal2_raw_timing_review.json": "155de5f7722579e30b658c724e424c6e92c2fb065421beea3c1f4210006d16f5",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490"
+  },
+  "protected_inputs_unchanged": true,
+  "source_after_sha256": {
+    "scripts/summarize_v2.py": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+    "tests/test_goal2_summary.py": "895ba1efeb7acbd55969aaf6ac851a474c62dd75b0b972fd26adb4872811738d",
+    "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1"
+  },
+  "ended_at_utc": "2026-10-02T20:22:48.675468+00:00",
+  "performance_admission": false,
+  "formal_admission": false,
+  "final_engineering_pass_assigned": false,
+  "source_unchanged": true,
+  "independent_legacy_raw_clock_recalculation": {
+    "method": "standard-library parse, original ns differences, independent of author/driver imports",
+    "fixed_commit": "a39f348e6cf0c7466900ec739a797753f4d93f0b",
+    "prefix_rows": 296,
+    "prefix_bytes": 190041,
+    "prefix_sha256": "b8fda62b67ed5cb486fc4090c12e2d39a9d1a561200fbb95f239cd81c99d2b79",
+    "frozen_git_blob_identical": true,
+    "legacy_journals": 40,
+    "all_legacy_journal_git_blobs_and_metadata_identical": true,
+    "charged_old_matrix_calls": 44,
+    "old_matrix_known_flag_values": [
+      "True"
+    ],
+    "healthy_process_intervals": 38,
+    "healthy_driver_intervals": 42,
+    "process_first": {
+      "identity": [
+        "e68dcc091e74490694a8b3532e8c215d",
+        0,
+        0,
+        248077
+      ],
+      "attempt_id": "d30f547b4da1406eac53b6b92250e447",
+      "q": 0.9981160163930989
+    },
+    "process_previous": {
+      "identity": [
+        "b6b64cd002b84b45a9c82af434713c20",
+        0,
+        0,
+        328562
+      ],
+      "attempt_id": "5fa6da79df0a4b178193737082b6bf0b",
+      "q": 1.0026326426809031
+    },
+    "driver_first": {
+      "identity": "a754f5ea5bc94becb31302b4966a852d",
+      "q": 0.9986300042296413
+    },
+    "driver_previous": {
+      "identity": "5fa6da79df0a4b178193737082b6bf0b",
+      "q": 1.002800226246886
+    },
+    "raw_realtime_process_q_range": [
+      0.9958610718671993,
+      1.0035859255508501
+    ],
+    "raw_realtime_driver_q_range": [
+      0.9937131833968241,
+      1.003591118404856
+    ],
+    "excluded_matrix_attempts": [
+      {
+        "task": "diagnostic-b4-05-M-B3",
+        "attempt": "a6282095a058444ab835f908a93a1b09",
+        "calls": 1,
+        "clock_conflict": null,
+        "returncode": 130
+      },
+      {
+        "task": "warmup-reference",
+        "attempt": "45586dcb04f04acc832ca39456f2451e",
+        "calls": 1,
+        "clock_conflict": true,
+        "returncode": 0
+      }
+    ],
+    "no_old_scores_migrated": true
+  },
+  "static_review_scope": [
+    "complete RAW analyzer diff from matching a39 version; new read_batch dispatcher and direct target/driver health dependencies",
+    "77 fixture source, new RAW counterexamples and retained S3/quality/confirmation contracts",
+    "raw_timing_design.md, frozen peer raw timing gate, draft cf196 protocol and approved 03218 finite protocol",
+    "specified once-read ledger snapshot, exact legacy prefix and forty original journals; no live execution/resume ledger used for formal RAW scoring"
+  ],
+  "approved_numeric_freeze": {
+    "commit": "75a0154b563b4123813e39a967967b0abbfb7f5c",
+    "protocol_sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "note": "independent 77 test window used previous draft cf196; this later finite numeric freeze is not relabeled as its test input"
+  },
+  "findings": [
+    {
+      "id": "RA1",
+      "severity": "high_contract_boundary",
+      "state": "CLOSED_WITH_INDEPENDENT_79",
+      "source_sha256": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+      "locations": [
+        "P1/scripts/summarize_v2.py:1174",
+        "P1/scripts/summarize_v2.py:1179",
+        "P1/scripts/summarize_v2.py:1560",
+        "P1/scripts/summarize_v2.py:1574",
+        "P1/scripts/summarize_v2.py:1589",
+        "P1/tests/test_goal2_summary.py:1116"
+      ],
+      "problem": "New post-cutoff nonowned RAW numerical baselines use get(n4096_calls_known, True), so a missing field or truthy non-bool can pass usable, while is True is checked only for owned batches. cost_table likewise defaults missing to known. The existing new counterexample tests owned AA flag False but not nonowned missing/non-bool numeric records.",
+      "impact": "Fresh incomplete call-count evidence could be accepted into clock history and reported as complete project cost. This is a static contract gap, not an observed real loss of calls or an actual erroneous numeric result.",
+      "suggested_fix": "Require n4096_calls_known is True for fresh RAW matrix attempts including nonowned numerical adapters. Permit legacy compatibility only within the already verified exact 296-row prefix. Missing/non-bool must preserve known recorded cost, mark clock_unverified/cost incomplete and never update first/previous baselines. Add fresh numeric missing, 1, string true counterexamples plus legacy-prefix compatibility.",
+      "owner": "/root/measurement (analysis/tests); /root (runtime driver)",
+      "owner_confirmed": true,
+      "reproduction_executed": false,
+      "reason_no_new_fixture_run": "ROOT held two exclusive n4096 numerical validations; the reviewer did not run competing tests or alter frozen abbd/895 source.",
+      "closure_requires": [
+        "owner new source/tests identity and actual regression",
+        "independent authorized relevant regression and full static fix review",
+        "new future AA freeze if driver identity changes; no modification of old 03218 protocol or its numeric logs"
+      ],
+      "author_reproduction": {
+        "source_sha256": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+        "tests": 1,
+        "subcases": [
+          null,
+          1,
+          "true",
+          false
+        ],
+        "returncode": 1,
+        "observed": "All four nonowned numerical-baseline cases were falsely classified healthy before repair.",
+        "log": "evidence/commands/goal2-raw-known-author-reproduction.stderr.txt",
+        "log_sha256": "0bbe6d7966593dab8615be122587e799352189db61c5a79c8761f370793f9651"
+      },
+      "closure": {
+        "source_sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+        "tests_sha256": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+        "runtime_driver_sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+        "independent_tests": 79,
+        "independent_syntax_checks": 2,
+        "strict_nonlegacy_calls_known_is_true": true,
+        "legacy_fallback_limited_to_same_snapshot_verified_prefix_end_ids": true,
+        "unknown_cannot_update_baselines_or_complete_project_cost": true,
+        "actual_numeric_true_records_unchanged_and_valid": true
+      },
+      "reproduction_execution_role": "author actually reproduced old bug in four synthetic subcases; reviewer actually ran all 79 repaired fixtures independently"
+    }
+  ],
+  "checked_contracts": {
+    "kernel_and_upper_bound_same_clock": true,
+    "process_wall_s_stays_monotonic": true,
+    "raw_cost_from_actual_nanoseconds_not_ratio_scaled": true,
+    "legacy_exact_bytes_and_clock_only": true,
+    "old_clock_conflicts_and_interrupted_attempt_excluded_from_healthy_history": true,
+    "independent_AA_labels_not_identity_deduplicated": true,
+    "shared_panel_and_online_feedback_separate": true,
+    "quality_thresholds_5pct_2pp_10pct_not_relaxed": true,
+    "different_identity_risk_supported_false_retained": true,
+    "new_seed_confirmation_required_before_retention": true,
+    "finite_AA_parser_never_grants_formal_admission": true,
+    "no_confidence_interval_or_population_claim": true,
+    "raw_safe_destination_preserved": true,
+    "fresh_missing_known_boundary_closed": true
+  },
+  "pending": [
+    "approved frozen eight-AA execution plus independent actual A/A result audit",
+    "future full formal method gate if coarse evidence is sufficient; no 5pct/2pp guarantee",
+    "complete reference/search/confirmation data if admitted, final report/images and clean reproduction"
+  ],
+  "actual_raw_numeric_independent_recalculation": {
+    "binding_sha256": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca",
+    "execution_protocol": {
+      "path": "evidence/protocol_raw_diagnostic.json",
+      "sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+      "commit": "75a0154b563b4123813e39a967967b0abbfb7f5c"
+    },
+    "driver_sha256_at_execution": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+    "ledger_snapshot_sha256": "b7c69631c66f32fc752e0ed7ed4f3ba13ae583ec3baee7a2ad96aa70130d6447",
+    "n4096_calls": 2,
+    "math": "independent standard-library integer-ns differences and complete saved-guard identities, no author/driver imports",
+    "jobs": [
+      {
+        "task": "goal2-raw-n4096-O0-s24",
+        "attempt": "4c1527651be84705b786f6ca4c27f475",
+        "journal_sha256": "06e4ad6afe8cc510465f6526737a144c4dbe18b26685869faaeb585d7e3d3632",
+        "known_is_exact_true": true,
+        "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+        "binary_sha256": "c779e927daaa93337f645ce22f91c15aa80571579c469775b372f565523075a5",
+        "kernel_raw_s": 226.104004,
+        "process_domains_s": {
+          "monotonic": 221.153215912,
+          "raw": 226.99208287,
+          "realtime": 227.026423184
+        },
+        "driver_domains_s": {
+          "monotonic": 221.467358223,
+          "raw": 227.313596304,
+          "realtime": 227.340566506
+        },
+        "resource_s": 227.340566506,
+        "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0",
+        "process_raw_realtime_q": 0.9998487386907726,
+        "driver_raw_realtime_q": 0.9998813665224183,
+        "process_first_previous_change_pct": [
+          0.17359928798010849,
+          -0.277659420970644
+        ],
+        "driver_first_previous_change_pct": [
+          0.12530790057148078,
+          -0.2910709080503393
+        ],
+        "exact_saved_guards_recomputed": true
+      },
+      {
+        "task": "goal2-raw-n4096-O3-s128",
+        "attempt": "82f0b8afb8c047889ba7148ead33ed1a",
+        "journal_sha256": "879c7a47ed36ab3853e6e21125d8202c06a975b521dd9413dd238183e548232e",
+        "known_is_exact_true": true,
+        "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+        "binary_sha256": "c2baf59c12e002e781b440aa3bc87273f2015a11d3de2e719c791baf97bdda97",
+        "kernel_raw_s": 44.958908,
+        "process_domains_s": {
+          "monotonic": 44.457529158,
+          "raw": 45.480431077,
+          "realtime": 46.173835603
+        },
+        "driver_domains_s": {
+          "monotonic": 44.88963564,
+          "raw": 45.925977175,
+          "realtime": 46.60594314
+        },
+        "resource_s": 46.60594314,
+        "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0",
+        "process_raw_realtime_q": 0.9849827393166586,
+        "driver_raw_realtime_q": 0.9854103163848129,
+        "process_first_previous_change_pct": [
+          -1.3158066658323087,
+          -1.4868248364827585
+        ],
+        "driver_first_previous_change_pct": [
+          -1.3237823607178956,
+          -1.4472767092295835
+        ],
+        "exact_saved_guards_recomputed": true
+      }
+    ],
+    "scope": "two successful 24-element numerical spot checks and two complete RAW clock intervals; no formal score, AA completion or long-term clock accuracy claim"
+  },
+  "actual_numeric_review_complete": true,
+  "review_orchestration_errors": [
+    {
+      "error": "TypeError: controlled() got an unexpected keyword argument 'timeout'",
+      "scope": "reviewer orchestration call failed before controlled body; no task attempt or tests were started",
+      "tests_started": false,
+      "controller_attempt_created": false,
+      "n4096_calls": 0,
+      "repair": "read real signature and use controlled(command,directory,task,role,call_upper=0,time_limit=60)",
+      "author_source_changed": false
+    }
+  ],
+  "strict_known_independent_regression": {
+    "started_at_utc": "2026-10-02T20:47:59.594378+00:00",
+    "source_before_sha256": {
+      "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "tests/test_goal2_summary.py": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+      "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1"
+    },
+    "protected_input_files": 635,
+    "controlled_records": [
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "P1/tests",
+          "-p",
+          "test_goal2_summary.py",
+          "-v"
+        ],
+        "record": {
+          "type": "task_end",
+          "at": "2026-10-02T20:48:00.367353+00:00",
+          "task": "raw-known-independent-79",
+          "role": "short_test",
+          "attempt_id": "a689286126be49fabacd9d98760a933e",
+          "returncode": 0,
+          "reason": null,
+          "n4096_calls": 0,
+          "n4096_calls_known": true,
+          "driver_wall_s": 0.765577812,
+          "clock_elapsed_s": {
+            "monotonic": 0.765577812,
+            "raw": 0.78546501,
+            "realtime": 0.765578995
+          },
+          "clock_end_ns": {
+            "monotonic": 92694476595978,
+            "raw": 96955306823400,
+            "realtime": 1790974080367090994
+          },
+          "resource_s": 0.78546501,
+          "resource_wall_s": 0.78546501,
+          "clock_ratio_baselines": [
+            0.9986300261262919,
+            1.0230864323183888
+          ],
+          "stdout": ".cache/goal2-raw-known-independent/raw-known-independent-79.stdout.txt",
+          "stderr": ".cache/goal2-raw-known-independent/raw-known-independent-79.stderr.txt"
+        },
+        "stdout": "",
+        "stderr": "test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed (test_goal2_summary.Goal2DiagnosticAndCostTests.test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed) ... ok\ntest_batch_copy_cannot_disagree_with_global_actual_attempt (test_goal2_summary.Goal2DiagnosticAndCostTests.test_batch_copy_cannot_disagree_with_global_actual_attempt) ... ok\ntest_clock_diagnostics_recompute_nanoseconds_units_and_float_output (test_goal2_summary.Goal2DiagnosticAndCostTests.test_clock_diagnostics_recompute_nanoseconds_units_and_float_output) ... ok\ntest_complete_clock_check_uses_first_and_previous_same_source (test_goal2_summary.Goal2DiagnosticAndCostTests.test_complete_clock_check_uses_first_and_previous_same_source) ... ok\ntest_derived_path_cannot_overwrite_or_nest_under_raw (test_goal2_summary.Goal2DiagnosticAndCostTests.test_derived_path_cannot_overwrite_or_nest_under_raw) ... ok\ntest_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup (test_goal2_summary.Goal2DiagnosticAndCostTests.test_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup) ... ok\ntest_guarded_task_uses_exact_global_journal_end_without_raw_copy (test_goal2_summary.Goal2DiagnosticAndCostTests.test_guarded_task_uses_exact_global_journal_end_without_raw_copy) ... ok\ntest_internal_rechecks_are_charged_not_external_confirmation (test_goal2_summary.Goal2DiagnosticAndCostTests.test_internal_rechecks_are_charged_not_external_confirmation) ... ok\ntest_ledger_snapshot_hash_and_rows_describe_the_same_read (test_goal2_summary.Goal2DiagnosticAndCostTests.test_ledger_snapshot_hash_and_rows_describe_the_same_read) ... ok\ntest_matching_cost_copies_cannot_hide_a_raw_target_call (test_goal2_summary.Goal2DiagnosticAndCostTests.test_matching_cost_copies_cannot_hide_a_raw_target_call) ... ok\ntest_method_rank_reversal_prevents_diagnostic_performance_gate (test_goal2_summary.Goal2DiagnosticAndCostTests.test_method_rank_reversal_prevents_diagnostic_performance_gate) ... ok\ntest_missing_whole_cost_attempt_is_not_a_complete_project_bill (test_goal2_summary.Goal2DiagnosticAndCostTests.test_missing_whole_cost_attempt_is_not_a_complete_project_bill) ... ok\ntest_new_two_pair_aa_preserves_large_label_differences (test_goal2_summary.Goal2DiagnosticAndCostTests.test_new_two_pair_aa_preserves_large_label_differences) ... ok\ntest_partial_aa_preserves_available_labels_without_selecting_arrangement (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_aa_preserves_available_labels_without_selecting_arrangement) ... ok\ntest_partial_cost_copies_use_all_exact_journal_attempts_once (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_cost_copies_use_all_exact_journal_attempts_once) ... ok\ntest_prefix_conflict_does_not_become_a_complete_conflict (test_goal2_summary.Goal2DiagnosticAndCostTests.test_prefix_conflict_does_not_become_a_complete_conflict) ... ok\ntest_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost (test_goal2_summary.Goal2DiagnosticAndCostTests.test_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost) ... ok\ntest_same_attempt_copy_timestamps_are_not_new_cost_or_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_same_attempt_copy_timestamps_are_not_new_cost_or_identity) ... ok\ntest_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero (test_goal2_summary.Goal2DiagnosticAndCostTests.test_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero) ... ok\ntest_two_batch_panels_with_same_identity_are_not_new_evidence (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_batch_panels_with_same_identity_are_not_new_evidence) ... ok\ntest_two_copies_of_forged_cost_cannot_override_original_clock_boundaries (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_copies_of_forged_cost_cannot_override_original_clock_boundaries) ... ok\ntest_two_different_batches_cannot_replace_same_seed_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_different_batches_cannot_replace_same_seed_identity) ... ok\ntest_zero_m0_branch_does_not_claim_observed_aa_reduction (test_goal2_summary.Goal2DiagnosticAndCostTests.test_zero_m0_branch_does_not_claim_observed_aa_reduction) ... ok\ntest_clock_invalid_search_does_not_inherit_near_label_from_healthy_panel (test_goal2_summary.Goal2FormalClockTests.test_clock_invalid_search_does_not_inherit_near_label_from_healthy_panel) ... ok\ntest_clock_stopped_warmup_cli_preserves_known_cost_and_unexecuted_stages (test_goal2_summary.Goal2FormalClockTests.test_clock_stopped_warmup_cli_preserves_known_cost_and_unexecuted_stages) ... ok\ntest_complete_health_requires_every_process_and_intra_attempt_previous (test_goal2_summary.Goal2FormalClockTests.test_complete_health_requires_every_process_and_intra_attempt_previous) ... ok\ntest_failed_whole_attempt_and_other_boot_are_excluded_from_baselines (test_goal2_summary.Goal2FormalClockTests.test_failed_whole_attempt_and_other_boot_are_excluded_from_baselines) ... ok\ntest_formal_summary_read_uses_trace_then_snapshot_health_not_live_runtime (test_goal2_summary.Goal2FormalClockTests.test_formal_summary_read_uses_trace_then_snapshot_health_not_live_runtime) ... ok\ntest_incomplete_guard_or_resource_attempt_cannot_be_healthy (test_goal2_summary.Goal2FormalClockTests.test_incomplete_guard_or_resource_attempt_cannot_be_healthy) ... ok\ntest_manifest_protocol_path_cannot_be_self_injected (test_goal2_summary.Goal2FormalClockTests.test_manifest_protocol_path_cannot_be_self_injected) ... ok\ntest_missing_duplicate_or_reused_physical_process_is_rejected (test_goal2_summary.Goal2FormalClockTests.test_missing_duplicate_or_reused_physical_process_is_rejected) ... ok\ntest_missing_mandatory_guard_fields_never_become_healthy (test_goal2_summary.Goal2FormalClockTests.test_missing_mandatory_guard_fields_never_become_healthy) ... ok\ntest_numeric_baselines_match_runtime_history_and_never_enter_score_samples (test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples) ... ok\ntest_only_frozen_numeric_adapters_can_supply_clock_baselines (test_goal2_summary.Goal2FormalClockTests.test_only_frozen_numeric_adapters_can_supply_clock_baselines) ... ok\ntest_previous_successful_attempt_first_and_previous_identities_are_exact (test_goal2_summary.Goal2FormalClockTests.test_previous_successful_attempt_first_and_previous_identities_are_exact) ... ok\ntest_process_conflict_is_not_hidden_by_healthy_whole_driver (test_goal2_summary.Goal2FormalClockTests.test_process_conflict_is_not_hidden_by_healthy_whole_driver) ... ok\ntest_saved_healthy_flags_cannot_hide_forged_raw_clock_checks (test_goal2_summary.Goal2FormalClockTests.test_saved_healthy_flags_cannot_hide_forged_raw_clock_checks) ... ok\ntest_saved_panel_whole_identity_and_full_reference_are_reconstructed (test_goal2_summary.Goal2FormalClockTests.test_saved_panel_whole_identity_and_full_reference_are_reconstructed) ... ok\ntest_saved_reference_and_panel_cli_uses_only_specified_ledger_snapshot (test_goal2_summary.Goal2FormalClockTests.test_saved_reference_and_panel_cli_uses_only_specified_ledger_snapshot) ... ok\ntest_anchor_endpoint_corners_preserve_signed_ranges (test_goal2_summary.Goal2QualityTests.test_anchor_endpoint_corners_preserve_signed_ranges) ... ok\ntest_clear_quality_regression_and_unsupported_risk (test_goal2_summary.Goal2QualityTests.test_clear_quality_regression_and_unsupported_risk) ... ok\ntest_completed_valid_nonselected_s3_does_not_require_candidate_holdout (test_goal2_summary.Goal2QualityTests.test_completed_valid_nonselected_s3_does_not_require_candidate_holdout) ... ok\ntest_disjoint_reference_panel_blocks_keep (test_goal2_summary.Goal2QualityTests.test_disjoint_reference_panel_blocks_keep) ... ok\ntest_known_cost_same_identity_cannot_keep_with_clock_conflict (test_goal2_summary.Goal2QualityTests.test_known_cost_same_identity_cannot_keep_with_clock_conflict) ... ok\ntest_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate (test_goal2_summary.Goal2QualityTests.test_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate) ... ok\ntest_partial_or_clock_blocked_selection_does_not_skip_confirmation (test_goal2_summary.Goal2QualityTests.test_partial_or_clock_blocked_selection_does_not_skip_confirmation) ... ok\ntest_partial_shared_panel_cannot_confirm_same_reference_identity (test_goal2_summary.Goal2QualityTests.test_partial_shared_panel_cannot_confirm_same_reference_identity) ... ok\ntest_planned_jobs_and_header_only_journal_do_not_count_as_executed (test_goal2_summary.Goal2QualityTests.test_planned_jobs_and_header_only_journal_do_not_count_as_executed) ... ok\ntest_quality_route_requires_useful_supported_lower_bound (test_goal2_summary.Goal2QualityTests.test_quality_route_requires_useful_supported_lower_bound) ... ok\ntest_real_diagnostic_gate_blocks_different_identities_before_gain (test_goal2_summary.Goal2QualityTests.test_real_diagnostic_gate_blocks_different_identities_before_gain) ... ok\ntest_rho_padding_prevents_false_five_percent_classification (test_goal2_summary.Goal2QualityTests.test_rho_padding_prevents_false_five_percent_classification) ... ok\ntest_same_config_efficiency_boundary_and_cost_regression (test_goal2_summary.Goal2QualityTests.test_same_config_efficiency_boundary_and_cost_regression) ... ok\ntest_same_identity_scores_zero_despite_independent_time_differences (test_goal2_summary.Goal2QualityTests.test_same_identity_scores_zero_despite_independent_time_differences) ... ok\ntest_selected_s3_without_new_seed_confirmation_is_not_retained (test_goal2_summary.Goal2QualityTests.test_selected_s3_without_new_seed_confirmation_is_not_retained) ... ok\ntest_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep (test_goal2_summary.Goal2QualityTests.test_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep) ... ok\ntest_unstarted_searches_are_not_completed_negative_selection (test_goal2_summary.Goal2QualityTests.test_unstarted_searches_are_not_completed_negative_selection) ... ok\ntest_actual_binding_path_is_not_a_general_numeric_scope_waiver (test_goal2_summary.Goal2RawClockTests.test_actual_binding_path_is_not_a_general_numeric_scope_waiver) ... ok\ntest_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands (test_goal2_summary.Goal2RawClockTests.test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands) ... ok\ntest_legacy_clock_whitelist_cannot_be_used_for_new_score_samples (test_goal2_summary.Goal2RawClockTests.test_legacy_clock_whitelist_cannot_be_used_for_new_score_samples) ... ok\ntest_missing_legacy_call_field_compatibility_is_bound_to_the_exact_prefix (test_goal2_summary.Goal2RawClockTests.test_missing_legacy_call_field_compatibility_is_bound_to_the_exact_prefix) ... ok\ntest_missing_or_nonboolean_new_raw_numeric_coverage_is_not_clock_history (test_goal2_summary.Goal2RawClockTests.test_missing_or_nonboolean_new_raw_numeric_coverage_is_not_clock_history) ... ok\ntest_raw_AA_cli_uses_exact_snapshot_and_raw_realtime_not_raw_monotonic (test_goal2_summary.Goal2RawClockTests.test_raw_AA_cli_uses_exact_snapshot_and_raw_realtime_not_raw_monotonic) ... ok\ntest_raw_AA_partial_duplicate_or_mixed_binary_is_not_finite_evidence (test_goal2_summary.Goal2RawClockTests.test_raw_AA_partial_duplicate_or_mixed_binary_is_not_finite_evidence) ... ok\ntest_raw_decision_uses_fresh_raw_cost_without_changing_monotonic_advisory (test_goal2_summary.Goal2RawClockTests.test_raw_decision_uses_fresh_raw_cost_without_changing_monotonic_advisory) ... ok\ntest_raw_driver_seconds_are_read_directly_and_unknown_stays_unknown (test_goal2_summary.Goal2RawClockTests.test_raw_driver_seconds_are_read_directly_and_unknown_stays_unknown) ... ok\ntest_raw_failed_legacy_warmup_does_not_update_original_first_or_previous (test_goal2_summary.Goal2RawClockTests.test_raw_failed_legacy_warmup_does_not_update_original_first_or_previous) ... ok\ntest_raw_history_checks_both_original_prefix_bytes_and_canonical_rows (test_goal2_summary.Goal2RawClockTests.test_raw_history_checks_both_original_prefix_bytes_and_canonical_rows) ... ok\ntest_raw_missing_schema_history_or_coverage_never_counts_healthy (test_goal2_summary.Goal2RawClockTests.test_raw_missing_schema_history_or_coverage_never_counts_healthy) ... ok\ntest_raw_saved_q_and_first_identity_are_independently_recomputed (test_goal2_summary.Goal2RawClockTests.test_raw_saved_q_and_first_identity_are_independently_recomputed) ... ok\ntest_raw_unknown_completed_cost_cannot_become_method_ready (test_goal2_summary.Goal2RawClockTests.test_raw_unknown_completed_cost_cannot_become_method_ready) ... ok\ntest_base_order_and_greedy_explicit_start_are_independently_replayed (test_goal2_summary.Goal2ReplayTests.test_base_order_and_greedy_explicit_start_are_independently_replayed) ... ok\ntest_clock_units_domains_and_nan_do_not_create_a_fastest_sample (test_goal2_summary.Goal2ReplayTests.test_clock_units_domains_and_nan_do_not_create_a_fastest_sample) ... ok\ntest_failed_batch_remains_failed_and_forged_metadata_is_rejected (test_goal2_summary.Goal2ReplayTests.test_failed_batch_remains_failed_and_forged_metadata_is_rejected) ... ok\ntest_final_tie_uses_original_visit_order (test_goal2_summary.Goal2ReplayTests.test_final_tie_uses_original_visit_order) ... ok\ntest_nonfinite_zero_and_invalid_recheck_contract_are_rejected (test_goal2_summary.Goal2ReplayTests.test_nonfinite_zero_and_invalid_recheck_contract_are_rejected) ... ok\ntest_raw_replay_rejects_backfilled_best_and_missing_process (test_goal2_summary.Goal2ReplayTests.test_raw_replay_rejects_backfilled_best_and_missing_process) ... ok\ntest_recheck_failure_is_ineligible_without_extra_free_exploration (test_goal2_summary.Goal2ReplayTests.test_recheck_failure_is_ineligible_without_extra_free_exploration) ... ok\ntest_recheck_recomputes_best_upward_and_preserves_random_prefix (test_goal2_summary.Goal2ReplayTests.test_recheck_recomputes_best_upward_and_preserves_random_prefix) ... ok\ntest_zero_or_one_finalist_stops_without_padding (test_goal2_summary.Goal2ReplayTests.test_zero_or_one_finalist_stops_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 79 tests in 0.440s\n\nOK\n"
+      },
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-B",
+          "-c",
+          "import py_compile; py_compile.compile('P1/scripts/summarize_v2.py',cfile='P1/.cache/goal2-raw-known-independent/summarize_v2.pyc',doraise=True); py_compile.compile('P1/tests/test_goal2_summary.py',cfile='P1/.cache/goal2-raw-known-independent/test_goal2_summary.pyc',doraise=True)"
+        ],
+        "record": {
+          "type": "task_end",
+          "at": "2026-10-02T20:48:00.632494+00:00",
+          "task": "raw-known-independent-syntax",
+          "role": "short_test",
+          "attempt_id": "92fcfac2e3c64d2680121cf93d5a8139",
+          "returncode": 0,
+          "reason": null,
+          "n4096_calls": 0,
+          "n4096_calls_known": true,
+          "driver_wall_s": 0.255265823,
+          "clock_elapsed_s": {
+            "monotonic": 0.255265823,
+            "raw": 0.261897583,
+            "realtime": 0.255267047
+          },
+          "clock_end_ns": {
+            "monotonic": 92694741707656,
+            "raw": 96955578821320,
+            "realtime": 1790974080632202413
+          },
+          "resource_s": 0.261897583,
+          "resource_wall_s": 0.261897583,
+          "clock_ratio_baselines": [
+            0.9986300261262919,
+            1.0230864323183888
+          ],
+          "stdout": ".cache/goal2-raw-known-independent/raw-known-independent-syntax.stdout.txt",
+          "stderr": ".cache/goal2-raw-known-independent/raw-known-independent-syntax.stderr.txt"
+        },
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "n4096_calls": 0,
+    "c_compilations": 0,
+    "plots_or_gui": 0,
+    "lock": "actual LOCK_EX|LOCK_NB performance_lock held around both commands",
+    "source_after_sha256": {
+      "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "tests/test_goal2_summary.py": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+      "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1"
+    },
+    "changed_protected_inputs": [],
+    "protected_manifest_before_sha256": "4c8f5275c81f8cf0c0f1cb8332f55b0d77b622025d8b22d5646ea1df8f6bbf89",
+    "protected_manifest_after_sha256": "4c8f5275c81f8cf0c0f1cb8332f55b0d77b622025d8b22d5646ea1df8f6bbf89",
+    "source_unchanged": true,
+    "protected_inputs_unchanged": true,
+    "ended_at_utc": "2026-10-02T20:48:00.668317+00:00",
+    "tests": 79,
+    "suite_reported_s": 0.44,
+    "python_syntax_checks": 2,
+    "verification_exit_code": 0
+  },
+  "final_source_sha256": {
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "tests/test_goal2_summary.py": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+    "evidence/measurement/raw_timing/numeric_clock_baselines.json": "51dc3dc9d20c1b34b68c6806ca913acdcf855bf52a709f4f38d8f19f551483ca"
+  },
+  "finite_AA_analysis_admission": {
+    "approved": true,
+    "calls": 8,
+    "protocol_path": "evidence/protocol_raw_aa.json",
+    "reviewed_draft_sha256": "26605c4f81c67724c6a16da309f75c10d816663f4e97cc0d20c7fd4363eb5f7e",
+    "scientific_rules_sha256": "ac14052beddf10ef9bb4147573106a77ded49ebbcbc7ed71a12145bf6ab92248",
+    "conditions": [
+      "execution still requires independent driver/code gate and approved frozen protocol/plan",
+      "exact original eight F128/O2 and M8/O2 A/B pairs, one actual independent process each; no added warmup or numeric rescheduling",
+      "core55 targeta752 driver483a analyzer327c tests c654 and immutable 8ced history/51dc numeric binding",
+      "strict new known coverage and complete same-source first/previous RAW/REALTIME checks with original 2pct threshold",
+      "actual global resource cap 520 calls and 57600 max-three-domain seconds; unknown cost or guard failure stops",
+      "actual AA results require another independent result audit; full formal admission remains false"
+    ],
+    "excluded": [
+      "new complete reference",
+      "online algorithm comparison or S3 selection",
+      "new-seed confirmation",
+      "Engineering PASS or Goal2 completion"
+    ]
+  },
+  "root_integration_evidence": {
+    "path": "evidence/commands/goal2_raw_integration.json",
+    "sha256": "43193520fe90b7223fdf5d76f5bc97af4b421baf9ea460c5b98b00b5f53510b4",
+    "role": "ROOT actual full-suite evidence read, not counted as this reviewer own tests",
+    "actual_tests": 221,
+    "test_returncode": 0,
+    "syntax_count": 18,
+    "syntax_returncode": 0,
+    "n4096_calls": 0
+  },
+  "s3_design_document_review": {
+    "path": "evidence/optimization_goal2.md",
+    "sha256": "51a7c980672a6203287d674ff09cd2972d8c9b09047ad8b189a43a79cf6b11b7",
+    "literature_scope_path": "evidence/literature_goal2.md",
+    "literature_scope_sha256": "1ea4edd3ad75a703c32d997a33a9724da710a44f5f1c091458b24940c6730eef",
+    "two_allocations_comparison": "4 random configurations twice vs 6 explorations plus 2 selected rechecks; only 6+2 enters formal candidate",
+    "only_six_proposals_not_six_successes": true,
+    "doc_ambiguity_corrected_by_owner": true,
+    "no_strategy_measurement_or_benefit_claim": true,
+    "no_mixed_enhancement_or_CI_inheritance": true
+  },
+  "finalized_at_utc": "2026-10-02T20:55:00.802083+00:00",
+  "immutable_after_pre_AA_gate": true,
+  "subsequent_results_review_path": "evidence/reviews/goal2_experiment_report_review.md/json"
+}

@@ -323,6 +323,9 @@ class CompleteClockGuard:
         starts={r["attempt_id"]:r for r in previous if r["type"]=="task_start"}
         for end in (r for r in previous if r["type"]=="task_end"):
             start=starts[end["attempt_id"]]
+            if self.history and end["attempt_id"] not in legacy_ends and end.get("n4096_calls") and \
+                    end.get("n4096_calls_known") is not True:
+                raise ValueError("new matrix clock history requires an explicit known call count")
             if start["boot_id"]!=boot_id or end.get("returncode")!=0 or end.get("reason") is not None or \
                     not end.get("n4096_calls_known",True) or not end.get("n4096_calls") or end.get("clock_conflict"):
                 continue

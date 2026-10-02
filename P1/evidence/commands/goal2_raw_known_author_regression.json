@@ -1,0 +1,105 @@
+{
+  "scope": "post-prefix RAW n4096 call-coverage metadata; no timing data or policy thresholds changed",
+  "original_source_sha256": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+  "source_sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+  "tests_sha256": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+  "driver_sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+  "author_14_and_79_test_source_sha256": "7f88a8752247036904d7ac2bb387102635e25650eac7aa8394f24cc2135401f1",
+  "final_documentation_change": "Move the existing cost_table docstring ahead of the nested helper; final two-source syntax check passed after this move.",
+  "reproduction": {
+    "actual_tests": 1,
+    "subcases": [
+      null,
+      1,
+      "true",
+      false
+    ],
+    "returncode": 1,
+    "observed": "All four nonowned numerical-baseline cases were falsely classified healthy before repair."
+  },
+  "regression": {
+    "raw_tests": 14,
+    "all_summary_tests": 79,
+    "syntax_sources": 2,
+    "passed": true
+  },
+  "resource_tasks": [
+    {
+      "task": "goal2-raw-known-author-reproduction",
+      "attempt_id": "574ae6d052294fdb9aa1dfdf300c1808",
+      "returncode": 1,
+      "n4096_calls": 0,
+      "clock_elapsed_s": {
+        "monotonic": 0.255240109,
+        "raw": 0.262026087,
+        "realtime": 0.255241381
+      },
+      "resource_s": 0.262026087
+    },
+    {
+      "task": "goal2-raw-known-author-related",
+      "attempt_id": "47a159fc952845f796ce23d9fd084bda",
+      "returncode": 0,
+      "n4096_calls": 0,
+      "clock_elapsed_s": {
+        "monotonic": 0.257796917,
+        "raw": 0.264634257,
+        "realtime": 0.25779684
+      },
+      "resource_s": 0.264634257
+    },
+    {
+      "task": "goal2-raw-known-author-all",
+      "attempt_id": "fd2f4779749d4f20921b6a933ee42bd8",
+      "returncode": 0,
+      "n4096_calls": 0,
+      "clock_elapsed_s": {
+        "monotonic": 0.755929489,
+        "raw": 0.775979407,
+        "realtime": 0.75593104
+      },
+      "resource_s": 0.775979407
+    },
+    {
+      "task": "goal2-raw-known-author-syntax",
+      "attempt_id": "a3c090ac3ac649d6b4ecd016ccc4b58a",
+      "returncode": 0,
+      "n4096_calls": 0,
+      "clock_elapsed_s": {
+        "monotonic": 0.255193463,
+        "raw": 0.26196275,
+        "realtime": 0.255194962
+      },
+      "resource_s": 0.26196275
+    },
+    {
+      "task": "goal2-raw-known-author-final-syntax",
+      "attempt_id": "e0d09743604c4520ad3263d1a632b277",
+      "returncode": 0,
+      "n4096_calls": 0,
+      "clock_elapsed_s": {
+        "monotonic": 0.256210468,
+        "raw": 0.263163528,
+        "realtime": 0.256211507
+      },
+      "resource_s": 0.263163528
+    }
+  ],
+  "total_resource_s": 1.827766029,
+  "new_c_compiles": 0,
+  "new_n4096_calls": 0,
+  "logs": {
+    "evidence/commands/goal2-raw-known-author-reproduction.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-reproduction.stderr.txt": "0bbe6d7966593dab8615be122587e799352189db61c5a79c8761f370793f9651",
+    "evidence/commands/goal2-raw-known-author-related.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-related.stderr.txt": "d8918c7191cfbc66b49811a9a6e8f114b87b10cbfbcc2b8b98cc522a7a7307fa",
+    "evidence/commands/goal2-raw-known-author-all.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-all.stderr.txt": "efcf3a61c3a7d6c680a742c0b5368a9916ce6470f642858af8263829a4ce5320",
+    "evidence/commands/goal2-raw-known-author-syntax.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-syntax.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-final-syntax.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-known-author-final-syntax.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "lock": "Each controlled subprocess ran inside performance_lock() with nonblocking flock; lock released after each author window.",
+  "independent_review": "PENDING; final source/tests frozen for implementation reviewer."
+}

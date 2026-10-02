@@ -1,0 +1,106 @@
+{
+  "actual_test_count": 221,
+  "tests": {
+    "type": "task_end",
+    "at": "2026-10-02T20:49:15.388817+00:00",
+    "task": "goal2-raw-integration-tests",
+    "role": "correctness",
+    "attempt_id": "71f0fa5cc2eb43cf8f4a7439639eff9c",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 18.524446999,
+    "clock_elapsed_s": {
+      "monotonic": 18.524446999,
+      "raw": 19.04854438,
+      "realtime": 19.419128369
+    },
+    "clock_end_ns": {
+      "monotonic": 92766849424301,
+      "raw": 97029576963897,
+      "realtime": 1790974155388528274
+    },
+    "resource_s": 19.419128369,
+    "resource_wall_s": 19.419128369,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-raw-integration-tests.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-integration-tests.stderr.txt"
+  },
+  "syntax": {
+    "type": "task_end",
+    "at": "2026-10-02T20:51:23.373599+00:00",
+    "task": "goal2-raw-integration-syntax",
+    "role": "correctness",
+    "attempt_id": "199176db2f4c470fa10f7a1921ec0a32",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.256277489,
+    "clock_elapsed_s": {
+      "monotonic": 0.256277489,
+      "raw": 0.253231083,
+      "realtime": 0.256278322
+    },
+    "clock_end_ns": {
+      "monotonic": 92892179353898,
+      "raw": 97158427423923,
+      "realtime": 1790974283373288826
+    },
+    "resource_s": 0.256278322,
+    "resource_wall_s": 0.256278322,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-raw-integration-syntax.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-integration-syntax.stderr.txt"
+  },
+  "syntax_count": 18,
+  "source_after_tests_and_before_syntax": {
+    "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "tests/test_clock_followup.py": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032",
+    "tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "tests/test_goal2_driver.py": "23897345fb0c006c2ed9529e2f9c99a23a8e116855767f77a8ff4e02070e1e9d",
+    "tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "tests/test_goal2_summary.py": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023"
+  },
+  "source_after_syntax": {
+    "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "tests/test_clock_followup.py": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032",
+    "tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "tests/test_goal2_driver.py": "23897345fb0c006c2ed9529e2f9c99a23a8e116855767f77a8ff4e02070e1e9d",
+    "tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "tests/test_goal2_summary.py": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023"
+  },
+  "n4096_calls": 0,
+  "note": "full actual suite includes four native GUI cleanup cases; GUI child takes the actual lock, outer test wrapper does not duplicate it; agents remained light/read-only"
+}

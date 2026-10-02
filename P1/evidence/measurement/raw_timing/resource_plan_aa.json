@@ -1,0 +1,41 @@
+{
+  "state": "fixed_before_eight_AA_protocol_approval",
+  "resource_domain": "sum per-task max positive MONOTONIC,RAW,REALTIME from exact integer boundaries",
+  "actual_calls": 46,
+  "actual_resource_s": 3571.327237781,
+  "remaining_call_cap": 474,
+  "remaining_resource_s": 54028.672762219,
+  "AA_call_upper": 8,
+  "AA_job_ids": [
+    "raw-aa-01-F-A1",
+    "raw-aa-02-F-B1",
+    "raw-aa-03-M-B1",
+    "raw-aa-04-M-A1",
+    "raw-aa-05-M-A2",
+    "raw-aa-06-M-B2",
+    "raw-aa-07-F-B2",
+    "raw-aa-08-F-A2"
+  ],
+  "no_numeric_or_warmup_scheduled_here": true,
+  "remaining_required_call_uppers": {
+    "reference": 70,
+    "main_four_algorithms": 283,
+    "candidate_new_seed_confirmation": 76,
+    "baseline_new_seed_confirmation_instead": 43,
+    "greedy_structural_starts": 32,
+    "clean_fresh": 1
+  },
+  "candidate_project_upper": 516,
+  "baseline_project_upper": 483,
+  "candidate_shared_reserve": 4,
+  "sum_target_timeout_AA_only_s": 9600,
+  "compile_timeout_each_s": 60,
+  "driver_watchdog": "per-task remaining three-domain cap; each target1200 and compile60; no unknown zero, no retries",
+  "entire_remaining_target_timeout_sum_exceeds_cap": true,
+  "completion_not_guaranteed_by_upper_count": true,
+  "ledger_snapshot": {
+    "rows": 404,
+    "bytes": 252404,
+    "sha256": "5664aee6763a95859e785979c380e4289175f03ea87b99c44f045fd56437d80f"
+  }
+}

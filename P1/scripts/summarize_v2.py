@@ -1152,6 +1152,7 @@ def formal_clock_health(batches, ledger_rows, protocol, ledger_bytes=None):
     migration = clock_history_inputs(protocol, ledger_rows, ledger_bytes) if raw else None
     legacy_ends = {row["attempt_id"] for row in ledger_rows[:migration["ledger_prefix"]["rows"]]
                    if row["type"] == "task_end"} if raw else set()
+    result["legacy_known_attempts"] = sorted(legacy_ends) if raw else None
     denominator = "realtime" if raw else "monotonic"
     starts, ended, histories, covered, process_coverage = {}, set(), {}, set(), {}
     priority = dict(complete=0, clock_unverified=1, clock_conflict=2)
@@ -1171,16 +1172,19 @@ def formal_clock_health(batches, ledger_rows, protocol, ledger_bytes=None):
             raise ValueError("formal completion changed its actual task identity")
         journal, owned = start.get("journal"), start.get("journal") in active
         history = histories.setdefault(start["boot_id"], dict(driver=[], process=[]))
-        usable = end.get("returncode") == 0 and end.get("reason") is None and \
-            end.get("n4096_calls_known", True) and end.get("n4096_calls", 0) > 0 and not end.get("clock_conflict")
-        if not owned and not usable:
-            continue
-        if owned and end.get("n4096_calls_known") is not True:
-            covered.add(journal)
+        calls_known = end.get("n4096_calls_known", not owned and (not raw or end["attempt_id"] in legacy_ends)) is True
+        if not calls_known and (owned or raw and end["attempt_id"] not in legacy_ends and
+                                (journal or end.get("n4096_calls", 0) > 0)):
+            if owned:
+                covered.add(journal)
             prior = result["states"].get(journal, "complete")
             result["states"][journal] = max((prior, "clock_unverified"), key=priority.get)
             result["attempts"].append(dict(attempt_id=end["attempt_id"], journal=journal, healthy=False,
                                            reason="actual completed clock/call coverage is unknown"))
+            continue
+        usable = end.get("returncode") == 0 and end.get("reason") is None and \
+            calls_known and end.get("n4096_calls", 0) > 0 and not end.get("clock_conflict")
+        if not owned and not usable:
             continue
         spans = clock_spans(start["clock_start_ns"], end["clock_end_ns"])
         if any(not finite_positive(value) for value in spans.values()) or \
@@ -1498,8 +1502,13 @@ def baseline_confirmation(runs, seeds):
             row["confirmation_complete"]) == sorted(seeds), quality_classes=[row["quality_class"] for row in rows])
 
 
-def cost_table(batches, ledger_rows=None):
+def cost_table(batches, ledger_rows=None, legacy_known_attempts=None):
     """Count every actual driver attempt once; common panels have no per-algorithm copies."""
+    # RAW migration admits missing old fields only in its verified physical prefix.
+    def calls_known(row):
+        fallback = legacy_known_attempts is None or row["attempt_id"] in legacy_known_attempts
+        return row.get("n4096_calls_known", fallback) is True
+
     attempts, context = {}, {}
     for batch in batches:
         roles = {task["job"]["id"]: task["job"]["role"] for task in batch["tasks"]}
@@ -1557,7 +1566,7 @@ def cost_table(batches, ledger_rows=None):
                         missing_jobs.append(dict(stage=batch["manifest"]["stage"], task=task["job"]["id"],
                                                  recorded_process_starts=recorded_starts))
                     continue
-                if any(not row.get("n4096_calls_known", True) for row in task_rows):
+                if any(not calls_known(row) for row in task_rows):
                     continue
                 if sum(row["n4096_calls"] for row in task_rows) != recorded_starts:
                     raise ValueError("actual task attempts do not match the target journal process starts")
@@ -1571,7 +1580,7 @@ def cost_table(batches, ledger_rows=None):
         if type(row["n4096_calls"]) is not int or row["n4096_calls"] < 0:
             raise ValueError("invalid actual target process count")
         target["process_runs"] += row["n4096_calls"]
-        known = row.get("n4096_calls_known", True) and row.get("driver_wall_s") is not None and \
+        known = calls_known(row) and row.get("driver_wall_s") is not None and \
             row.get("clock_elapsed_s") is not None and row.get("resource_bound_basis") is None
         if ledger_rows is not None and known:
             start, end = starts[identity]["clock_start_ns"], row["clock_end_ns"]
@@ -1586,7 +1595,7 @@ def cost_table(batches, ledger_rows=None):
                 raise ValueError("actual task costs differ from the original multi-domain boundaries")
             if row["n4096_calls"] > starts[identity]["call_upper"]:
                 raise ValueError("actual task calls exceed the reserved target-call upper bound")
-        target["process_runs_known"] = target["process_runs_known"] and row.get("n4096_calls_known", True)
+        target["process_runs_known"] = target["process_runs_known"] and calls_known(row)
         target["recorded_process_lower"] += row.get("n4096_call_recorded_lower", row["n4096_calls"])
         if not known:
             target["unknown_attempts"].append(identity)
@@ -1892,7 +1901,7 @@ def main(argv=None):
         interrupted_measurements=sum(row["type"] == "measurement" and row["status"] == "interrupted" for row in task["records"]))
         for batch in batches for task in batch["tasks"]]
     write_csv(output / "measurements.csv", samples)
-    costs = cost_table(batches, ledger_rows)
+    costs = cost_table(batches, ledger_rows, clock_health.get("legacy_known_attempts") if clock_health is not None else None)
     write_csv(output / "batch_costs.csv", costs["rows"])
     summary["costs"] = costs
     summary["measurement_clock_healthy"] = clock_health["healthy"] if clock_health is not None else None

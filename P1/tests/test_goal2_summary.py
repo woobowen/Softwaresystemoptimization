@@ -1005,6 +1005,85 @@ class Goal2FormalClockTests(unittest.TestCase):
 
 
 class Goal2RawClockTests(unittest.TestCase):
+    def test_missing_or_nonboolean_new_raw_numeric_coverage_is_not_clock_history(self):
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            data, prior, ledger, prefix = raw_history_fixture(root)
+            numeric_data, observations = raw_numeric_fixture(root)
+            numeric_data["measurement"]["clock_health"]["clock_history"] = data["measurement"]["clock_health"]["clock_history"]
+            data = numeric_data
+            declaration = data["measurement"]["clock_health"]["clock_history"]
+            history_path = root / declaration["path"]
+            history = su.load_json(history_path)
+            history["new_target_identities"][1]["source_sha256"] = observations[0][2][0]["metadata"]["target"]["source_sha256"]
+            history_path.write_text(json.dumps(history))
+            declaration["sha256"] = su.sha256(history_path)
+            processes = [dict(identity=["legacy-clock", 0, 0, 123], attempt_id="legacy-clock", q=1.0)]
+            drivers = [dict(identity="legacy-clock", q=1.0)]
+            for start, end, rows in observations:
+                guard = end["clock_guard"]
+                guard["history"] = declaration
+                guard["process_checks"][0]["baselines"] = processes[:1] + processes[-1:]
+                guard["driver_check"]["baselines"] = drivers[:1] + drivers[-1:]
+                processes.append(dict(identity=guard["process_checks"][0]["identity"], attempt_id=end["attempt_id"], q=1.0))
+                drivers.append(dict(identity=end["attempt_id"], q=1.0))
+                ledger.extend([start, end])
+            snapshot = "".join(json.dumps(row) + "\n" for row in ledger).encode()
+            self.assertTrue(su.formal_clock_health([], ledger, data, snapshot)["healthy"])
+            for value in (None, 1, "true", False):
+                changed = copy.deepcopy(ledger)
+                if value is None:
+                    del changed[-1]["n4096_calls_known"]
+                else:
+                    changed[-1]["n4096_calls_known"] = value
+                raw = "".join(json.dumps(row) + "\n" for row in changed).encode()
+                with self.subTest(value=value):
+                    health = su.formal_clock_health([], changed, data, raw)
+                    self.assertFalse(health["healthy"])
+                    self.assertFalse(health["attempts"][-1]["healthy"])
+                    self.assertEqual(health["states"][observations[-1][0]["journal"]], "clock_unverified")
+                    costs = su.cost_table([], changed, health["legacy_known_attempts"])
+                    self.assertFalse(costs["complete"])
+                    self.assertIsNone(costs["totals"]["actual_process_runs"])
+                    self.assertEqual(costs["totals"]["recorded_ledger_charged_calls"], 3)
+                    numeric = next(row for row in costs["rows"] if row["role"] == "numeric_validation_raw")
+                    self.assertEqual(numeric["unknown_attempts"], [observations[-1][1]["attempt_id"]])
+                    self.assertFalse(numeric["process_runs_known"])
+                    self.assertEqual(numeric["recorded_process_lower"], 2)
+                    self.assertEqual(numeric["domains_s"]["raw"], 70)
+
+    def test_missing_legacy_call_field_compatibility_is_bound_to_the_exact_prefix(self):
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            data, prior, ledger, prefix = raw_history_fixture(root)
+            del ledger[-1]["n4096_calls_known"]
+            prefix = "".join(json.dumps(row) + "\n" for row in ledger).encode()
+            declaration = data["measurement"]["clock_health"]["clock_history"]
+            path = root / declaration["path"]
+            history = su.load_json(path)
+            history["ledger_prefix"].update(fingerprint=su.ex.at.fingerprint(ledger), bytes=len(prefix),
+                sha256=su.hashlib.sha256(prefix).hexdigest())
+            path.write_text(json.dumps(history))
+            declaration["sha256"] = su.sha256(path)
+            current, records = formal_fixture(root, data, "current-raw", process_history=[dict(
+                identity=["legacy-clock", 0, 0, 123], attempt_id="legacy-clock", q=1.0)],
+                driver_history=[dict(identity="legacy-clock", q=1.0)])
+            ledger.extend(records)
+            snapshot = "".join(json.dumps(row) + "\n" for row in ledger).encode()
+            health = su.formal_clock_health([current], ledger, data, snapshot)
+            self.assertTrue(health["healthy"])
+            self.assertEqual(health["legacy_known_attempts"], ["legacy-clock"])
+            costs = su.cost_table([current], ledger, health["legacy_known_attempts"])
+            self.assertTrue(costs["complete"])
+            self.assertEqual(costs["totals"]["actual_process_runs"], 2)
+            changed = copy.deepcopy(ledger)
+            del changed[-1]["n4096_calls_known"]
+            altered = copy.deepcopy(current)
+            altered["driver"] = [changed[-1]]
+            self.assertFalse(su.cost_table([altered], changed, health["legacy_known_attempts"])["complete"])
+            self.assertFalse(su.formal_clock_health([current], changed, data,
+                "".join(json.dumps(row) + "\n" for row in changed).encode())["healthy"])
+
     def test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands(self):
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
             data, observations = raw_numeric_fixture(Path(directory))

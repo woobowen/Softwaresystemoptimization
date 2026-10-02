@@ -1,0 +1,65 @@
+{
+  "source_driver_sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+  "tests_sha256": "23897345fb0c006c2ed9529e2f9c99a23a8e116855767f77a8ff4e02070e1e9d",
+  "test_count": 36,
+  "start": {
+    "type": "task_start",
+    "at": "2026-10-02T20:39:19.961369+00:00",
+    "task": "goal2-raw-known-driver-author",
+    "role": "regression",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests",
+      "-p",
+      "test_goal2_driver.py",
+      "-v"
+    ],
+    "attempt_id": "3f9bca27765a4151955927898859c6d3",
+    "clock_start_ns": {
+      "monotonic": 92186900070069,
+      "raw": 96434217235632,
+      "realtime": 1790973559959525386
+    },
+    "call_upper": 0,
+    "journal": null,
+    "prior_measurement_starts": 0,
+    "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163"
+  },
+  "end": {
+    "type": "task_end",
+    "at": "2026-10-02T20:39:21.476246+00:00",
+    "task": "goal2-raw-known-driver-author",
+    "role": "regression",
+    "attempt_id": "3f9bca27765a4151955927898859c6d3",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 1.515886237,
+    "clock_elapsed_s": {
+      "monotonic": 1.515886237,
+      "raw": 1.556018573,
+      "realtime": 1.51588812
+    },
+    "clock_end_ns": {
+      "monotonic": 92188415956306,
+      "raw": 96435773254205,
+      "realtime": 1790973561475413506
+    },
+    "resource_s": 1.556018573,
+    "resource_wall_s": 1.556018573,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-raw-known-driver-author.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-known-driver-author.stderr.txt"
+  },
+  "n4096_calls": 0,
+  "scope": "driver strict literal known count after verified296; historical RAW numeric producer true unchanged"
+}

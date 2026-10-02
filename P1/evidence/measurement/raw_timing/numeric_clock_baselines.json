@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "adapter_identity": "evidence/measurement/raw_timing/numeric_adapter.json",
+  "adapter_identity_sha256": "0b0bd878ec442c6ea50adac31c6b1dd3cfd057f2100cbe3317dfe9226c5f2449",
+  "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+  "driver_sha256_at_execution": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+  "execution_protocol": {
+    "path": "evidence/protocol_raw_diagnostic.json",
+    "sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+    "commit": "75a0154b563b4123813e39a967967b0abbfb7f5c"
+  },
+  "clock_only": true,
+  "formal_scores": false,
+  "jobs": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "journal_sha256": "06e4ad6afe8cc510465f6526737a144c4dbe18b26685869faaeb585d7e3d3632",
+      "attempt_id": "4c1527651be84705b786f6ca4c27f475",
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "24",
+        "--opt",
+        "O0",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl"
+      ],
+      "metadata": {
+        "schema": 1,
+        "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+        "target": {
+          "source": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+          "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+          "n": 4096,
+          "compiler": {
+            "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+            "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+            "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+          },
+          "flags": [
+            "-std=c11",
+            "-Wall",
+            "-Wextra",
+            "-Wl,--no-as-needed",
+            "-lm"
+          ],
+          "compile_timeout": 60.0,
+          "require_checksum": true,
+          "kernel_clock": "CLOCK_MONOTONIC_RAW"
+        },
+        "blocks": [
+          24
+        ],
+        "opts": [
+          "O0"
+        ],
+        "action": "run",
+        "algorithm": "grid",
+        "seed": 0,
+        "budget": 1,
+        "min_trials": 5,
+        "patience": 3,
+        "min_relative_improvement": 0.0,
+        "repeats": 1,
+        "timeout": 1200.0,
+        "runtime_affinity": [
+          0
+        ],
+        "protocol_sha256": null,
+        "cache_dir": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build"
+      },
+      "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0"
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "journal_sha256": "879c7a47ed36ab3853e6e21125d8202c06a975b521dd9413dd238183e548232e",
+      "attempt_id": "82f0b8afb8c047889ba7148ead33ed1a",
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "128",
+        "--opt",
+        "O3",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl"
+      ],
+      "metadata": {
+        "schema": 1,
+        "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+        "target": {
+          "source": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+          "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+          "n": 4096,
+          "compiler": {
+            "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+            "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+            "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+          },
+          "flags": [
+            "-std=c11",
+            "-Wall",
+            "-Wextra",
+            "-Wl,--no-as-needed",
+            "-lm"
+          ],
+          "compile_timeout": 60.0,
+          "require_checksum": true,
+          "kernel_clock": "CLOCK_MONOTONIC_RAW"
+        },
+        "blocks": [
+          128
+        ],
+        "opts": [
+          "O3"
+        ],
+        "action": "run",
+        "algorithm": "grid",
+        "seed": 0,
+        "budget": 1,
+        "min_trials": 5,
+        "patience": 3,
+        "min_relative_improvement": 0.0,
+        "repeats": 1,
+        "timeout": 1200.0,
+        "runtime_affinity": [
+          0
+        ],
+        "protocol_sha256": null,
+        "cache_dir": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build"
+      },
+      "check": "CHECK n=4096 count=24 max_abs=2.937539e-12 max_rel=2.814528e-15 atol=1e-12 rtol=1e-11 failures=0"
+    }
+  ]
+}

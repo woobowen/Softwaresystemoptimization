@@ -324,6 +324,19 @@ os._exit(7)
         with self.assertRaisesRegex(ValueError,'completed RAW guard'):
             ex.CompleteClockGuard(previous,'same',self.directory/'direct-fixture.jsonl',0,mode=ex.RAW_GUARD,history=binding)
 
+    def test_new_raw_baseline_requires_a_literal_known_count(self):
+        binding=self.raw_history([])
+        previous=[dict(type='task_start',attempt_id='unknown',task='unknown',boot_id='same',journal=None),
+            dict(type='task_end',attempt_id='unknown',task='unknown',returncode=0,reason=None,n4096_calls=1)]
+        for value in (None,False,1,'true'):
+            with self.subTest(value=value):
+                if value is None:
+                    previous[-1].pop('n4096_calls_known',None)
+                else:
+                    previous[-1]['n4096_calls_known']=value
+                with self.assertRaisesRegex(ValueError,'explicit known call count'):
+                    ex.CompleteClockGuard(previous,'same',self.directory/'unknown.jsonl',0,mode=ex.RAW_GUARD,history=binding)
+
     def test_same_domain_raw_upper_bound_survives_shorter_monotonic(self):
         rows,metadata,job=self.trace()
         clock=metadata['target']['kernel_clock']

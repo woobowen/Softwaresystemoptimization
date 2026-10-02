@@ -41,7 +41,9 @@
 - 新RAW C为a752f644…，原计算内核仍4005ab7…；core最小双钟识别55b880…，作者及独立各76 tests通过。新driver schema2使用完整target/driver RAW/REALTIME、同boot原first/previous和原2%门；schema1仍RAW/MONO。40旧journal SHA/header与全部296行canonical prefix精确绑定在 `measurement/raw_timing/clock_history.json`，SHA8ced08…，仅供时钟，不供成绩。
 - 新driver作者首轮34 tests有三处fixture失败，完整输出保留；定位为旧冻结source identity、未按整数ns构造float和stdout舍入，修复后34项与4语法检查全部通过。独立driver检查尚在进行；生产guard和阈值未因fixture失败放宽。
 - 新RAW同源240小矩阵全元素、5 sanitizer尾块及四级冷构建实际通过，0次n4096。新四级二进制单列于 `measurement/raw_timing/raw-build-four.stdout.txt`，不把旧二进制身份覆盖为新值。
-- 有限机器协议 `protocol_raw_diagnostic.json` 尚待独立code gate，精确2大数值+8AA，不增加warm或新诊断额度；新n4096仍未启动。新大数值adapter f195ec…仅用于24点检查，之后才可执行8AA、讨论另冻结正式协议；后续候选最大516/基线483，16h真实硬上限不变。
+- 有限机器协议 `protocol_raw_diagnostic.json` SHA03218fe…及检查点75a0154…已由独立gate放行两项数值检查；s24/O0和s128/O3各24预定点实际通过，最大相对误差2.814528e-15，两项完整RAW/REALTIME保护通过。绑定文件51dc3dc…保留原执行driver a6daf…；实际累计46调用/3544.605865782秒。旧八AA计划dff23c…仍未执行。
+- RAW分析独立77项测试后发现新nonowned numeric缺known字段会被默认true；实际两项producer均true，不改其原始结果。方法owner先用合成反例复现，再作exact296历史兼容范围内的严格修补。driver同类缺口由主控修补，新36项实际通过（driver483a5c…）；修复后另冻结仅八AA的新协议，不改03218/75或未执行计划身份。剩余完整任务上界516/483、520调用/16h硬上限不变。
+- 严格known修复已由代码49项和分析79项实际独立回归关闭；主控全221项与18语法通过，431受保护文件/A1A2 tree不变。新8AA协议84dc270…、plan4c514b…及资源3b7226…已冻结，代码/方法/分析gate分别6501a2…/cfa126…/d99a48…，尚0次AA，仅准原八项、不准正式。新RAW O2/O3实际二进制两timer间113指令相同；证据在raw-kernel-assembly输出。
 - 最终报告/截图、完整正式批次、干净复现、终审、GitHub发布和真实SHA核对待后续关口。历史匹配版本的重算已完成，结束时仍需再次核对受保护清单。
 
 不确定：时钟跨时段关系、两种安排的实际价值、5%目标的可分辨程度、S3收益。timesyncd实际active、chrony不存在；不把服务存在当根因，不调整任何服务。
