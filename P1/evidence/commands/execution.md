@@ -18,7 +18,7 @@
 
 ## 图与真实截图
 
-真实图生成命令为 README 所示 summarize --reference/--runs/--plots；图可从已存raw重生成。screenshots.json记录实际窗口、执行脚本、退出0、图像SHA与capture日志。保存表截图明确只读取已有成绩；最后隔离新构建/真实运行截图随后补入。图和截图不混称。
+真实图生成命令为 README 所示 summarize --reference/--runs/--plots；图可从已存raw重生成。screenshots.json记录实际窗口、执行脚本、退出0、图像SHA与capture日志。保存表截图明确只读取已有成绩；干净目录的四级构建与一次真实运行截图已补入，执行脚本和PNG来源已独立核对。图和截图不混称。
 
 ## 最后隔离与发布
 

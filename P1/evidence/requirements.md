@@ -27,7 +27,7 @@
 | Goal F 两单项闭环 | stratified / patience；协议acceptance | 共同Random基线、两个独立因素、KEEP/REJECT/INCONCLUSIVE | 两单项及9次有界诊断已实测并独立审核；均INC，无采用 |
 | Goal G 留出seed确认、两类独立审核 | holdout_v1、reviews | 3新seed；代码审核≠实现；报告审核≠报告作者 | 三新seed实际34进程，0/3近优；两类冻结产物最终独立关口已通过 |
 | Goal G 干净隔离复现 | 最终reproduction证据 | 测试/构建/1真实4096/已存数据重生成 | 实际干净clone54/54、四冷O、一真实4096及全部表图重生成通过 |
-| Goal H 报告、图表、真实截图、证据 | report.md/images/results/evidence | 原生xterm截图能力已确认，最终画面待捕获 | 数据图、SVG和两截图已整理，三张真实截图已捕获并实际查看，最后独立复核已通过 |
+| Goal H 报告、图表、真实截图、证据 | report.md/images/results/evidence | 框架SVG、两数据图、三原生终端截图；实际查看与独立内容/来源检查 | 数据图、SVG和两截图已整理，三张真实截图已捕获并实际查看，最后独立复核已通过 |
 | Goal H GitHub内部审核后发布 | Git main | measurement dea74fe、clean复现9ba1427、首次已发布5984330；正常push无force | 已发布main，actual ls-remote同SHA、远端448 P1文件/24blob和报告六图HTTP取回匹配；见commands/publication_verified.json |
 | 根长期规则合并 | 根AGENTS.md | filename以老师为准；滚动规划/责任分离/自修复/单项优先/逐轮审核 | 已更新 |
 | 实验完整性和边界 | protocol/current_plan/异常原始记录 | 不混模拟夹具、旧异常计时或策略组合；不改其他作业 | 持续遵守 |
