@@ -1,15 +1,15 @@
 # Goal 1 交接问题的 Goal 2 闭环
 
-以下为滚动事实，尚未执行的检查明确保留待完成。旧原始数据、协议、派生结果和旧判定不改写。
+本阶段性能核心受阻，不能写成全部关闭。旧 raw、协议、派生结果和判定保持不变；报告中的旧结果按同一配置参照重新解释。
 
-| 问题 | 影响与已定位事实 | 本阶段处理及证据 | 独立审核 | 状态 |
-| --- | --- | --- | --- | --- |
-| C1 同配置跨时段误判 | 旧seed130363两个策略均返回s128/O2，确认差3.015102秒不能代表选择差 | 新统一配置参照映射；块内共同新确认按配置身份去重；独立A/A另保留。实际fixtures检查同身份质量0、面板只计一次、不回填在线曲线 | `goal2_start_review.md`、`goal2_method_analysis_review.md`，独立59项测试 | 实现及方法复核完成，正式数据待做 |
-| C2 时钟及成组变化 | 旧s128的O1/O2/O3第三轮同时加快；RAW约1.09不能作校正系数 | 七个探针、两批共41次矩阵调用含一中断；独立A/A与完整钟域重算选择M1/rho14。新A/A24.35%保留；完整process和driver分别首/前2%保护，G1—G4修复，实际两项大矩阵抽查也满足完整检查 | `goal2_followup_code_review.md`、`goal2_runner_review.md`、`goal2_method_analysis_review.md` | 诊断与保护复核完成；根因未知，正式观测待做 |
-| C3 旧收益门缺乏空间 | 5.6秒门大于三次Random观测可改善差4.826466/0/3.001831秒 | 新质量/成本两轴，5%目标/2pp风险/10%最低成本收益；不同身份风险无法支持时INCONCLUSIVE，不放宽门槛；相同身份仍可检查效率 | `goal2_protocol_review.md`与合成规则fixtures，正式数据前冻结 | 接受表已审，最终协议冻结及实测待做 |
-| C4 种子和起点不足 | 旧Greedy仅三个偏高优化级别起点；Grid前缀不代表全部枚举 | 六个全新预定主seed，纯结构平衡算法次序；另四个结构起点和三个新确认seed | 新设计和核心接口已审 | 实测待做 |
-| C5 报告冗长 | 旧完整报告已读，存在内部编号及过程叙述 | 将按老师1—4保留答案和结果，把详细流程移到evidence；连续全文阅读后修订 | 两类终审待做 | 待正式结果 |
-| C6 截图安全与视觉缺口 | 旧日志曾用TCP/-ac；启动确认无该任务遗留进程或6000—6099监听，不推断发生攻击 | 私有Unix显示/auth0600/nolisten tcp/finally精确PID清理；实际成功、失败、超时、SIGTERM四项native测试两轮通过，空auth拒绝且无遗留；最终正式图片仍须逐张查看 | `goal2_start_review.md`、`commands/screenshot_cleanup_tests.jsonl`与实际4项测试日志 | 安全工具及清理已通过，最终图片待做 |
-| C7 历史分析版本依赖 | 更新framework/runner后旧汇总按设计拒绝；不能改旧header | 起始清单含431受保护文件；固定3ac的九数据两图、2fc的七数据、c247补诊断十一数据均实际逐SHA重算一致，README给匹配提交入口 | `history_goal2.json`、`reproduction/goal2/*-comparison.json` | 历史重生成与入口修正完成，干净入口和最终保护核对待做 |
+| 问题 | 影响、定位与处理 | 证据及实际审核者 | 状态 |
+| --- | --- | --- | --- |
+| C1 同配置跨时段误判 | 实现共同 T_ref(c) 身份映射，在线、外部确认、成本分账；同 seed130363 返回 s128/O2 的选择差严格为0，不以3.015102秒确认差判策略退化。正文旧三算法统一 g_ref，独立 A/A 原样保留 | identity_quality.py / results/identity_quality_v2；measurement 分析 fixtures、implementation 原60样本与九身份分数独立重算；最终 report review | 评价逻辑与正文已修；新共同面板实测受阻 |
+| C2 时钟及成组变化 | 41次初始/追加矩阵诊断、Linux多钟/WindowsQPC两区间后，MONO正式预热及RAW首A/A先后触发完整first/previous 2%保护。RAW相对REALTIME目标/driver前值变化2.261197%/2.245563%；数值/单位/身份/计费复核正确，未确定宿主根因、未改服务 | raw_aa_result_review：review与implementation原ns独算；raw_aa_summary_v3；只读服务日志、QPC正文范围 | BLOCKED：正式可比性未建立，不扩门/删慢样本/校正旧成绩 |
+| C3 旧门不可达 | 不复用5.6秒门；5%目标、2pp质量风险、10%最低成本节约及严重回归界限先固定。相同身份可检验效率，不同身份风险不支持则不能KEEP；合成同身份/退化/成本/不足/边界反例实测 | protocol_v2、raw_formal_design、optimization_goal2；method设计及review关口、实际规则测试 | 设计和代码关闭；候选收益/非劣实测受阻 |
+| C4 种子/起点不足 | 六个预定新主seed、三个新确认seed、四结构起点与平衡算法次序已设计；保留原Grid次序，默认Greedy随机起点不变。不把旧三种起点推广为普遍优势 | protocol_v2 / resource_plan_v2 / current_plan；implementation接口及review设计实查 | BLOCKED：六组在线、新确认、起点面板未执行 |
+| C5 报告冗长 | 按老师1—4顺序重写，去恢复/审核叙述与旧跨时段gap误判；只保留必要结果和限制，README明确版本入口。须连续全文终审，不能用词表代替 | report.md、README.md；implementation独立实验/报告最终review | 文稿已修，最终连续通读待记录 |
+| C6 截图安全/视觉 | 旧TCP/-ac事实保留，不声称已遭访问。改为私有Unix/auth0600/-nolisten tcp，原生成功/失败/超时/SIGTERM清理测试真实通过；最终三截图使用同安全工具、六图逐张打开 | safe_screenshots.py、screenshot_cleanup_tests、screenshots_goal2 / images_goal2（生成后）；review代码与implementation视觉两路径 | 安全工具关闭，最终截图/逐图视觉检查待完成 |
+| C7 历史版本依赖 | 431受保护文件清单；固定3ac九数据两图、2fc七数据、c247十一数据精确重算。RAW停止保存匹配5c78049及407行快照，回退后只在该版本重算，不删hash检查/改旧header | history_goal2、reproduction/goal2各comparison；review独立407行成本及10输入/7派生SHA重算 | 历史方法已关闭，最终干净RAW入口及保护终检待完成 |
 
-本表的“待做”不是受阻或已完成；每个关口通过后填写真实结果和复核证据。
+这些待完成项只指非依赖性能的交付工作。性能阻塞的项不会在最终表中改成已完成。

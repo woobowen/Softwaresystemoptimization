@@ -1,0 +1,17 @@
+test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands (test_goal2_summary.Goal2RawClockTests.test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands) ... ERROR
+
+======================================================================
+ERROR: test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands (test_goal2_summary.Goal2RawClockTests.test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_summary.py", line 1091, in test_finite_raw_numeric_binding_matches_the_exact_two_frozen_commands
+    self.assertTrue(su.numeric_clock_baseline(start, end, rows, data))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/summarize_v2.py", line 1026, in numeric_clock_baseline
+    raise ValueError("numerical adapter changes the measured kernel or generated source")
+ValueError: numerical adapter changes the measured kernel or generated source
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (errors=1)

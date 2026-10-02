@@ -1005,6 +1005,21 @@ class Goal2FormalClockTests(unittest.TestCase):
 
 
 class Goal2RawClockTests(unittest.TestCase):
+    def setUp(self):
+        # RAW fixtures describe the frozen diagnostic candidate even when the
+        # production target uses the retained MONOTONIC timer.
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        source = Path(directory.name) / "matrix_raw_fixture.c"
+        text = su.validation.SOURCE.read_text().replace(
+            "clock_gettime(CLOCK_MONOTONIC,", "clock_gettime(CLOCK_MONOTONIC_RAW,")
+        source.write_text(text)
+        self.assertEqual(su.sha256(source),
+            "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1")
+        patcher = mock.patch.object(su.validation, "SOURCE", source)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def test_missing_or_nonboolean_new_raw_numeric_coverage_is_not_clock_history(self):
         with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
             root = Path(directory)

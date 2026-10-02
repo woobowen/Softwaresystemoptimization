@@ -1,35 +1,27 @@
-# P1 Goal 1 requirement matrix
+# P1 要求与阶段状态
 
-状态对应实际产物，不等价于最终 Engineering PASS。四批正式实验及独立原始数据审核已结束；最后两类产物审核与干净复现均已通过；GitHub阶段已发布，实际远端SHA/tree/blob与报告/六图HTTP取回已核对；证据closure后的精确SHA再于交接查询。
+Goal1 原矩阵保留在受审提交 `3ac0c4688b964c873379d012cbcf09afb7ed0937`。本表区分已实现、先前实际成果和本阶段受阻工作，不代替外部 Engineering 最终验收。
 
-| 来源 / 条目 | 代码或文档 | 实测 / 证据 | 状态 |
-|---|---|---|---|
-| PDF 1(1) 目标接口 | src/autotuner.py TargetProgram | 真实四级构建、缓存/失败测试；reviews/code_review.md | 已实现；冻结代码只读终审已做，干净54项/四构建/真实4096复现与独立最终关口已通过 |
-| PDF 1(2) 配置接口 | ConfigSpace | 20无重复、非法输入、s24检查 | 已验证 |
-| PDF 1(3) 搜索接口 | SearchStrategy、统一Evaluator | Grid/Random/Greedy +预算/seed/平局/恢复测试 | 已实现；冻结代码与候选单因素已实查，干净54项/四构建/真实4096复现与独立最终关口已通过 |
-| PDF 1 框架图、优劣 | report.md第1题、images/framework.svg | 与实际接口对应的图，实际渲染查看 | 已整理；完整报告/六图独立终审已通过 |
-| PDF 2 老师Matrix目标 | src/matrix_multiplication.original.c / matrix_multiplication.c | 原件SHA188d0111…、target_adaptation.diff、同源验证 | 已保留；small/sanitizer/full通过 |
-| PDF 3 五s四O，共20 | ConfigSpace、协议space | [8,16,24,64,128] × O0..O3 | 正式20表每3有效，已独立重算 |
-| PDF 4(1) Grid完整覆盖与分析 | experiment reference、report第4(1) | 20配置每3有效样本、预定3随机轮次；summary/grid_summary.csv | 实测与独立原始逐样本重算均已完成 |
-| PDF 4(2) 自实现另两算法比较 | Random/相邻坐标Greedy、report第4(2) | 三基础算法在线多seed、共同确认和成本 | 选择/留出实际执行与全部原始逐值审核已完成 |
-| PDF 提交1/2 重点代码/Markdown/图片 | report.md、src、images | 完整通读与relative link检查 | 报告/图/两截图已整理，真实运行图已补，最后两类通读关口已批准 |
-| PDF 提交3 OS/CPU/compiler、用户memory | environment/initial_environment.txt | 真实OS/kernel/lscpu/meminfo/GCC/Python | 已记录 |
-| PDF 提交4 project01需自建 | current_plan.md | 本阶段不访问水杉、不创建分支 | 本阶段不执行 |
-| PDF 截止 2026-10-28 24:00 | current_plan.md | 不加正式报告顶部 | 已记录 |
-| Goal A 真多代理、滚动计划、owner | current_plan、capabilities.json、reviews | 主控+3原生线程；实际spawn限制已记录 | 主控+三子代理实际执行，独立两类内部最终关口均已批准 |
-| Goal B 简洁可运行三接口/评估器 | src/autotuner.py | 框架31项（含原23+新增8）及实验/汇总23项 | 框架31项及实验23项已独立通过；干净完整54项实际通过、复现已做，最终独立关口已通过 |
-| Goal C 同源全元素和full抽查 | scripts/validate_target.py | 128/129×5s×4O×6输入=240；独立另外240+5sanitizer；full两组24点 | 全部既定正确性用例通过，full明确是抽查 |
-| Goal C 高O保留计算、目标差异 | kernel_assembly.txt、target_adaptation.diff | 原/适配O3实际汇编；单调timer边界相同 | 已核查 |
-| Goal C 错误/预算/恢复 | tests/test_autotuner.py、test_experiment.py | compile/timeout/parse/nonfinite/SIGTERM/livegroup/cache、budget0/1/20、partial repeat恢复 | 框架独立31及实验23回归通过；源码只读终审已完成 |
-| Goal D 20正式配置三重复基线 | results/reference_v1 | 60正式+warm1，20配置每3有效，失败0；median/range/MAD保留 | 60正式样本和20统计已逐项独立核对 |
-| Goal E 三基础算法在线初评 | results/selection_v1 | 共同B8/r1、预定3探索seed、真正best-so-far与wall；另3返回确认 | 三基础×三seed及共同确认已实测并逐值独立重算 |
-| Goal F 2021—2026原论文筛选 | literature.md | 原文必要章节/元数据/2025&2026检索/获取限制 | 已完成资料工作包 |
-| Goal F 两单项闭环 | stratified / patience；协议acceptance | 共同Random基线、两个独立因素、KEEP/REJECT/INCONCLUSIVE | 两单项及9次有界诊断已实测并独立审核；均INC，无采用 |
-| Goal G 留出seed确认、两类独立审核 | holdout_v1、reviews | 3新seed；代码审核≠实现；报告审核≠报告作者 | 三新seed实际34进程，0/3近优；两类冻结产物最终独立关口已通过 |
-| Goal G 干净隔离复现 | 最终reproduction证据 | 测试/构建/1真实4096/已存数据重生成 | 实际干净clone54/54、四冷O、一真实4096及全部表图重生成通过 |
-| Goal H 报告、图表、真实截图、证据 | report.md/images/results/evidence | 框架SVG、两数据图、三原生终端截图；实际查看与独立内容/来源检查 | 数据图、SVG和两截图已整理，三张真实截图已捕获并实际查看，最后独立复核已通过 |
-| Goal H GitHub内部审核后发布 | Git main | measurement dea74fe、clean复现9ba1427、首次已发布5984330；正常push无force | 已发布main，actual ls-remote同SHA、远端448 P1文件/24blob和报告六图HTTP取回匹配；见commands/publication_verified.json |
-| 根长期规则合并 | 根AGENTS.md | filename以老师为准；滚动规划/责任分离/自修复/单项优先/逐轮审核 | 已更新 |
-| 实验完整性和边界 | protocol/current_plan/异常原始记录 | 不混模拟夹具、旧异常计时或策略组合；不改其他作业 | 持续遵守 |
+| 要求 | 对应产物/证据 | 本阶段状态 |
+| --- | --- | --- |
+| 老师1 三明确接口、框架图、优缺点 | src/autotuner.py / report第1题 / images/framework.svg | 已实现；最终代码及图审核待记录 |
+| 老师2 指定Matrix目标 | original.c原件188d011…、当前C cece4f…、kernel4005ab… | 原初始化/double/n4096/六循环/尾块保留；240小全元素、5san及四个大矩阵各24点实际通过 |
+| 老师3 五s×四O共20 | ConfigSpace及所有协议，8/16/24/64/128×O0—O3 | 未扩大；24保留，末块16 |
+| 老师4 完整Grid及分析 | reference_v1原60有效样本 / grid_summary.csv / report4(1) | 旧20配置实测保留；新20配置0有效，时钟BLOCKED |
+| 老师4 另外两算法自实现与比较 | Random/Greedy及旧九真实搜索 / report4(2) | 旧结果按统一身份参照重评，未伪称新六块已执行 |
+| 正式Markdown report.md、重点代码、图片 | report.md / src链接 / images六图 | 文稿已精简，最终图与连续全文审查待记录 |
+| OS/CPU/compiler，用户memory；学生身份 | report顶部、environment实际记录 | 实际Ubuntu24.04.2/185H/GCC13.3/15.42GiB；学号姓名无班级日期字段 |
+| project01需自建，截止2026-10-28 24:00 | 老师PDF、本提示要求 | 本阶段不操作水杉；后续提交要求保留 |
+| 历史保护/固定版本可复现 | history_goal2 / reproduction/goal2 / README版本入口 | 已有三旧版本重算一致；新增RAW停止5c78049已冻结 |
+| 真多代理/测量独占 | agents_goal2 / performance.lock / primary ledger / review记录 | 主控+三原生代理；正式窗口仅一个高负载目标 |
+| 时钟、多区间A/A、M0/M1 | measurement/clocks、clock_followup、RAW stopped原ns | 原41矩阵诊断完成；新RAW八A/A首项冲突止，0有效，不授正式准入 |
+| 新协议、全部目标预算与成本 | protocol_v2、protocol_raw_aa、resource_plan、resource_ledger | 520/16h硬限、原2%门；每真实失败/暖机/数值/复现计费 |
+| 新完整20表、六主seed、共同确认 | reference_v2 plan、预定seed/面板规则 | BLOCKED / NOT_EXECUTED；不能以旧结果补齐 |
+| Greedy四结构起点 | protocol/显式start参数与测试 | 接口正确性已测；真实起点面板NOT_EXECUTED |
+| S3有限重复单因素闭环 | recheck6+2、optimization_goal2、literature_goal2 | 实现及回归已测；真实配对/选择/留出NOT_EXECUTED，无KEEP/REJECT |
+| 问题修复及两类终审 | goal2_review_closure / reviews两个最终路径 | 常规软件问题已修并回归；钟域核心依赖受阻，最终终审待记录 |
+| 干净复现/安全截图/完整图片视觉 | reproduction/goal2 / screenshots_goal2 / images_goal2 | 有限非依赖闭环进行中；fresh仅一次，仍受原live保护 |
+| GitHub main阶段发布及实际SHA | 最终publication证据 | 内部终审后正常发布，不宣称最终Engineering PASS |
+| 清理/依赖/范围 | environment/goal2_dependencies.json / A1A2 tree / protected hashes | 新系统/语言包/工具链/全局配置均0；仅精确删除旧下载包，用户输入保留 |
 
-Goal1内部阶段交付COMPLETE；Engineering为CODEX_COMPLETE，等待实际GitHub外部FINAL_REVIEW；Submission为NOT_READY。两个候选INC，无采用，不声称优化成功。新目标计时适配的旧数据不用于正式结论，见 [timing_issue.md](environment/timing_issue.md)。若最后仍有缺项，必须保留未完成状态并在交接中说明。
+Goal2：PARTIAL（性能可比性依赖阻塞）。Engineering：IN_PROGRESS，等待实际GitHub外部FINAL_REVIEW。Submission：NOT_READY，未提交水杉。

@@ -23,7 +23,10 @@ class Goal2DriverTests(unittest.TestCase):
         cls.temporary=tempfile.TemporaryDirectory(prefix="goal2-fixtures-",dir=P1/".cache")
         cls.directory=Path(cls.temporary.name)
         source=cls.directory/"small.c"
-        source.write_text((P1/"src/matrix_multiplication.c").read_text().replace("#define n 4096","#define n 128"))
+        # This fixture exercises RAW guards even when the normal target uses MONOTONIC.
+        text=(P1/"src/matrix_multiplication.c").read_text()
+        source.write_text(text.replace("CLOCK_MONOTONIC,","CLOCK_MONOTONIC_RAW,")
+            .replace("#define n 4096","#define n 128"))
         target=ex.at.TargetProgram(source,cache_dir=cls.directory/"build",compile_timeout=60.0)
         cls.protocol=dict(framework=dict(path="src/autotuner.py",sha256=ex.sha256(P1/"src/autotuner.py")),
             target=dict(path=str(source.relative_to(P1)),sha256=ex.sha256(source),n=128,
@@ -457,7 +460,11 @@ os._exit(7)
 
     def test_formal_plan_identity_fields_cannot_be_changed(self):
         protocol=ex.load_json(P1/"evidence/protocol_v2.json")
-        protocol['target']['sha256']=ex.sha256(P1/'src/matrix_multiplication.c')
+        # RAW plan identity is tested with a separate source, never by changing the target.
+        target=self.directory/'formal-raw.c'
+        target.write_text((P1/'src/matrix_multiplication.c').read_text()
+            .replace('CLOCK_MONOTONIC,','CLOCK_MONOTONIC_RAW,'))
+        protocol['target'].update(path=str(target.relative_to(P1)),sha256=ex.sha256(target))
         protocol['framework']['sha256']=ex.sha256(P1/'src/autotuner.py')
         protocol['measurement'].update(score_clock='CLOCK_MONOTONIC_RAW',cost_clock='CLOCK_MONOTONIC_RAW')
         protocol['measurement']['clock_health'].update(guard_mode=ex.RAW_GUARD,guard_schema=2,

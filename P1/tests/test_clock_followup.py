@@ -137,7 +137,8 @@ class ClockFollowupTests(unittest.TestCase):
         prototype=ex.load_json(P1/"evidence/protocol_clock_followup.json")
         prototype['target']['sha256']=ex.sha256(P1/'src/matrix_multiplication.c')
         prototype['framework']['sha256']=ex.sha256(P1/'src/autotuner.py')
-        prototype['measurement'].update(score_clock='CLOCK_MONOTONIC_RAW',cost_clock='CLOCK_MONOTONIC_RAW')
+        clock=ex.at.TargetProgram(P1/'src/matrix_multiplication.c').kernel_clock
+        prototype['measurement'].update(score_clock=clock,cost_clock=clock)
         prototype["approval"]["followup_executor_sha256"]=ex.sha256(cf.__file__)
         path=self.directory/"protocol-fixture.json"
         path.write_text(json.dumps(prototype))

@@ -1,24 +1,28 @@
-# P1 Goal 1 证据入口
+# P1 证据入口
 
-- [滚动计划与任务 owner](current_plan.md)
-- [原题与 Goal 1 逐项矩阵](requirements.md)
-- [共同基础版本快照](baseline_snapshot.json)
-- [文献筛选、原文阅读范围与借鉴限制](literature.md)
-- [两个单项的实测闭环与保留决定](optimization.md)
-- [实际代理职责和阶段调用](agents.md)
-- [测量协议](protocol_v1.md) / [机器可读协议](protocol_v1.json)（冻结状态以文件内容为准）
-- [独立代码/正确性审核与修复](reviews/code_review.md)
-- [独立实验设计、原始数据和报告审核](reviews/experiment_report_review.md)
-- [初始真实环境](environment/initial_environment.txt)、[输入哈希与起始Git状态](environment/inputs.json)、[代理/工具能力](environment/capabilities.json)
-- [局部工具与安装追踪](environment/dependencies.md)
-- [目标精确语义差异](environment/target_adaptation.diff)、[高优化汇编实查](environment/kernel_assembly.txt)
-- [旧计时异常、诊断与最小修复](environment/timing_issue.md)、[逐项异常数据](environment/timing_anomaly.json)
-- [生成器marker失败与修复](environment/validation_generation_issue.md)
+本阶段为 Goal2 PARTIAL：测量跨时段可比性受阻。当前 report 保留真实历史结果，按配置身份统一评价；新正式参照、六组在线比较、S3选择/确认及起点面板未执行。Engineering 等待外部实际 GitHub 终审，未提交水杉。
 
-数值检查原始 JSONL 位于 environment/target_*，文件名的 monotonic 表示当前新目标。旧版的验证/预试保留为前期记录，不作为当前正式性能样本。旧异常预试位于 ../results/pretest/。
+## 本阶段
 
-[完整20配置参照](../results/reference_v1/plan.json)、[在线选择与各轮返回确认](../results/selection_v1/plan.json)均已完成；原始 trial JSONL、CLI stdout/stderr、外部 driver 成本与计划在相应目录。数据行保留实际时基、完整命令和代码/协议哈希。[派生汇总](../results/summary/summary.json)、[20配置统计](../results/summary/grid_summary.csv)、[逐轮搜索表](../results/summary/search_summary.csv)、[真实在线轨迹](../results/summary/online_curves.csv)可从原始批次重生成。[九次参照冲突诊断](../results/conflict_selection_v1/plan.json)和[三留出seed](../results/holdout_v1/plan.json)均已实际结束并逐值独立审核。258有效目标测量、失败0；候选均INC无采用，基础Random留出近优0/3；原t_ref不替换。[完整成本](../results/summary/batch_costs.csv)与[有限诊断](../results/summary/reference_conflicts.csv)分开保留。
+- [滚动事实及资源边界](current_plan.md)、[逐项要求状态](requirements.md)、[C1—C7闭环](goal2_review_closure.md)
+- [431历史保护清单与起始A1/A2 tree](history_goal2.json)、[实际多代理和文件owner](agents_goal2.md)
+- [只读环境](environment/goal2.json)、[复用工具/零新增依赖/精确局部清理](environment/goal2_dependencies.json)
+- [初始诊断协议](protocol_diagnostic.json)、[有限追加设计](measurement/clock_followup_design.md)、[实际联合分析](measurement/clock_followup_analysis.md)
+- [正式MONO协议](protocol_v2.md) / [JSON](protocol_v2.json)：仅启动预热，完整时钟门停止，不可恢复为有效成绩
+- [RAW有限A/A冻结协议](protocol_raw_aa.json)、[新timer设计](measurement/raw_timing_design.md)、[未放行的正式设计](measurement/raw_formal_design.md)
+- [所有受控任务唯一成本账](measurement/resource_ledger.jsonl)、[RAW停止407行闭合快照](measurement/raw_timing/aa_ledger_snapshot.jsonl)、[精确资源安排](measurement/raw_timing/resource_plan_aa.json)
+- [RAW失败实际原始日志](../results/raw_aa_v3/raw-aa-01-F-A1.jsonl)、[派生停止汇总](../results/raw_aa_summary_v3/summary.json)、[实际重算命令及10输入/7派生哈希](measurement/raw_timing/aa_analysis_execution.json)
+- [RAW完整时钟/真实退出独立复算](reviews/goal2_raw_aa_result_review.md)、[默认恢复后的最终代码审核](reviews/goal2_final_code_review.md)、[完整实验/报告独立审核](reviews/goal2_experiment_report_review.md)
+- [S3有限重复设计及未执行结论](optimization_goal2.md)、[原文实际阅读范围](literature_goal2.md)
+- [历史共同配置评分](../results/identity_quality_v2/summary.json)：不改旧秒数/旧判定，不把确认差当同配置选择差
+- [固定版本重生成与干净复现](reproduction/goal2/)、[当前恢复源码全测试](commands/goal2_restored_integration.json)
 
-[实际执行命令与日志](commands/execution.md)、[真实截图来源](commands/screenshots.json)记录工程操作及截图方法；[源码/原始数据冻结快照](final_snapshot.json)，[干净隔离复现](reproduction/provenance.json)已经实际结束：[全部54项输出](reproduction/unittest.stderr.txt)、[真实构建/运行核对](reproduction/build-run-check.json)、[派生文件及原始数据不变比较](reproduction/comparison.json)、[实际步骤与耗时](reproduction/steps.jsonl)；两类独立最终关口已落盘批准，GitHub阶段已发布，[实际SHA/tree/blob检查](commands/publication_verified.json)、[报告与六图HTTP取回](commands/github_readback.json)均匹配。后续只更新证据closure，最后精确remote SHA于交接再次实查；最终Engineering由外部实际GitHub复核决定。
+原始时钟单位、调用顺序、目标/编译器/源码/二进制身份、stdout/stderr、实际退出及成本都保存在相应 JSONL 与 commands 目录。Linux探针、WindowsQPC核对仅支持有限区间的相对关系；[最终只读服务日志](measurement/formal_clock_drift/system_readonly_final.json)没有提供漂移根因或修正量。没有更改任何服务、时间设置或全局配置。
 
-编译缓存、可执行文件、临时下载及虚拟显示工具均在忽略的 .cache 中；测量结果与审核记录不依赖这些缓存。
+## 先前成果（保持不变）
+
+[协议说明](protocol_v1.md) / [JSON](protocol_v1.json)、[原20配置完整60样本](../results/reference_v1/plan.json)、[先前三seed真实在线搜索](../results/selection_v1/plan.json)、[独立确认冲突诊断](../results/conflict_selection_v1/plan.json)、[先前三新seed](../results/holdout_v1/plan.json)。[原派生表](../results/summary/summary.json)及[原优化判定](optimization.md)按原方法留存；当前报告采用新的同身份解释，旧gap/近优标签不作为新可比性结论。
+
+[原代码审核](reviews/code_review.md)、[原实验/报告审核](reviews/experiment_report_review.md)、[原正确性与实际环境](environment/initial_environment.txt)、[目标适配](environment/target_adaptation.diff)、[旧计时诊断](environment/timing_issue.md)、[原汇编](environment/kernel_assembly.txt)、[原文献](literature.md)、[原截图来源](commands/screenshots.json)均作为历史记录，不能冒称当前图片/计时器或本阶段终审。
+
+固定提交3ac、2fc、c247的只读重生成分别见 reproduction/goal2/*-comparison.json；RAW停止采用匹配5c78049，详细命令见[README](../README.md)。所有新增输出写到新派生目录或忽略缓存，身份检查保留，不覆盖 raw。最终图片的新来源和视觉记录将在 commands/screenshots_goal2.jsonl 及 commands/images_goal2.json 中登记，旧不安全启动记录不删改。

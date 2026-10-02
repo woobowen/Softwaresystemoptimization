@@ -1,0 +1,98 @@
+{
+  "reviewer": "implementation; independent of measurement fixture author",
+  "started_at": "2026-10-02T21:33:02.589672+00:00",
+  "ended_at": "2026-10-02T21:33:03.140334+00:00",
+  "scope": "Only 14 RAW analysis fixtures after retained MONOTONIC default rollback and two Python syntax checks; no target processes or C builds",
+  "source_before": {
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "source_after": {
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "sources_unchanged": true,
+  "protected_files": 535,
+  "protected_files_unchanged": true,
+  "actual_tests": 14,
+  "unittest_wall_s": 0.073,
+  "test_result": "PASS",
+  "syntax_files": 2,
+  "syntax_result": "PASS",
+  "actual_n4096_calls": 0,
+  "controlled_resource_s": 0.528435108,
+  "performance_lock": "Nonblocking exclusive flock on P1/.cache/performance.lock held for controlled commands; released at exit",
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:33:02.854145+00:00",
+      "task": "goal2-raw-fixture-restore-independent-related-tests",
+      "role": "independent_analysis_regression",
+      "attempt_id": "a58073ec46684322aee91794b5b6cb4e",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.256514545,
+      "clock_elapsed_s": {
+        "monotonic": 0.256514545,
+        "raw": 0.264584172,
+        "realtime": 0.256515453
+      },
+      "clock_end_ns": {
+        "monotonic": 95322646452725,
+        "raw": 99657213590125,
+        "realtime": 1790976782853810127
+      },
+      "resource_s": 0.264584172,
+      "resource_wall_s": 0.264584172,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-restore-independent-related-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-restore-independent-related-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:33:03.119256+00:00",
+      "task": "goal2-raw-fixture-restore-independent-syntax",
+      "role": "independent_analysis_regression",
+      "attempt_id": "90b58617e25646e6817674511efb4bba",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.255803185,
+      "clock_elapsed_s": {
+        "monotonic": 0.255803185,
+        "raw": 0.263850936,
+        "realtime": 0.255804981
+      },
+      "clock_end_ns": {
+        "monotonic": 95322911488553,
+        "raw": 99657486962860,
+        "realtime": 1790976783118846214
+      },
+      "resource_s": 0.263850936,
+      "resource_wall_s": 0.263850936,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-restore-independent-syntax.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-restore-independent-syntax.stderr.txt"
+    }
+  ],
+  "fixture_diff_review": "Only Goal2RawClockTests.setUp gained 15 lines: temporary source derived by the two exact MONOTONIC-to-RAW literals, asserted frozen a752 SHA, validation.SOURCE mocked with scoped cleanup. Production reader and driver unchanged. No registered results were rewritten.",
+  "performance_admission": false,
+  "full_formal_admission": false
+}

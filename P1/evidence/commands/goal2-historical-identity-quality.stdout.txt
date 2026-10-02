@@ -1,0 +1,1 @@
+{"searches": 18, "reference_configs": 20, "output": "/home/addaswsw/lab/Software_system_optimization/P1/results/identity_quality_v2"}

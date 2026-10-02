@@ -1,0 +1,173 @@
+{
+  "checked_at": "2026-10-02T21:30:45.393938+00:00",
+  "owner": "measurement",
+  "scope": "Synthetic RAW fixtures after production timer rollback; no C builds or matrix execution",
+  "fixture_previous_sha256": "c6546c10c3bb13134eab69ec9cdc83231ed6ec74c8bb6c46fcfe74880575cd1b",
+  "source_before": {
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e"
+  },
+  "source_after": {
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e"
+  },
+  "production_source_unchanged": true,
+  "performance_lock": "P1/.cache/performance.lock; nonblocking flock held for all controlled commands",
+  "lock_released": true,
+  "reproduction": {
+    "type": "task_end",
+    "at": "2026-10-02T21:29:55.629207+00:00",
+    "task": "goal2-raw-fixture-after-restore-reproduction",
+    "role": "analysis_regression",
+    "attempt_id": "d42fe3eee6a248959bb7165bf587058e",
+    "returncode": 1,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.265706781,
+    "clock_elapsed_s": {
+      "monotonic": 0.265706781,
+      "raw": 0.273181294,
+      "realtime": 0.265707441
+    },
+    "clock_end_ns": {
+      "monotonic": 95141155307432,
+      "raw": 99470428980484,
+      "realtime": 1790976595628941616
+    },
+    "resource_s": 0.273181294,
+    "resource_wall_s": 0.273181294,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-raw-fixture-after-restore-reproduction.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-fixture-after-restore-reproduction.stderr.txt"
+  },
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:30:44.349512+00:00",
+      "task": "goal2-raw-fixture-after-restore-related-tests",
+      "role": "analysis_regression",
+      "attempt_id": "a66641329b3f4ce09bdafcd2ce1c251b",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.256197044,
+      "clock_elapsed_s": {
+        "monotonic": 0.256197044,
+        "raw": 0.263392974,
+        "realtime": 0.256197329
+      },
+      "clock_end_ns": {
+        "monotonic": 95188031571238,
+        "raw": 99518524127220,
+        "realtime": 1790976644349237566
+      },
+      "resource_s": 0.263392974,
+      "resource_wall_s": 0.263392974,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-after-restore-related-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-after-restore-related-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:30:45.114072+00:00",
+      "task": "goal2-raw-fixture-after-restore-all-tests",
+      "role": "analysis_regression",
+      "attempt_id": "360a5235ae944a6094606310ef13a4b8",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.75542106,
+      "clock_elapsed_s": {
+        "monotonic": 0.75542106,
+        "raw": 0.776639005,
+        "realtime": 0.755422129
+      },
+      "clock_end_ns": {
+        "monotonic": 95188796142691,
+        "raw": 99519310172635,
+        "realtime": 1790976645113809096
+      },
+      "resource_s": 0.776639005,
+      "resource_wall_s": 0.776639005,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-after-restore-all-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-after-restore-all-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:30:45.388458+00:00",
+      "task": "goal2-raw-fixture-after-restore-syntax",
+      "role": "analysis_regression",
+      "attempt_id": "b4ad8521fad3467fb4c72317b7ad2a04",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.25521041,
+      "clock_elapsed_s": {
+        "monotonic": 0.25521041,
+        "raw": 0.262379459,
+        "realtime": 0.255211672
+      },
+      "clock_end_ns": {
+        "monotonic": 95189070526480,
+        "raw": 99519592263153,
+        "realtime": 1790976645388193228
+      },
+      "resource_s": 0.262379459,
+      "resource_wall_s": 0.262379459,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/commands/goal2-raw-fixture-after-restore-syntax.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-fixture-after-restore-syntax.stderr.txt"
+    }
+  ],
+  "expected_actual_tests": {
+    "related": 14,
+    "all": 79
+  },
+  "syntax_files": 2,
+  "actual_n4096_calls": 0,
+  "logs": {
+    "evidence/commands/goal2-raw-fixture-after-restore-reproduction.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-after-restore-reproduction.stderr.txt": "5ca7cbae22fba4755e298ab32785badbf990f62ba0a121125b40bc29be2b1f34",
+    "evidence/commands/goal2-raw-fixture-after-restore-related-tests.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-after-restore-related-tests.stderr.txt": "b77d06d0f9c7fa4d67038080032f803c796776182a5d178e3d60502f975bb5ce",
+    "evidence/commands/goal2-raw-fixture-after-restore-all-tests.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-after-restore-all-tests.stderr.txt": "5a9217468c30ad9687cfad18e3c28da2317e321a348261d3822e755ce772af7b",
+    "evidence/commands/goal2-raw-fixture-after-restore-syntax.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/commands/goal2-raw-fixture-after-restore-syntax.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "actual_tests": {
+    "related": {
+      "tests": 14,
+      "unittest_wall_s": 0.074,
+      "result": "PASS"
+    },
+    "all": {
+      "tests": 79,
+      "unittest_wall_s": 0.422,
+      "result": "PASS"
+    }
+  },
+  "reproduction_result": "Observed expected adapter identity error after default timer restore; fixed only synthetic source construction",
+  "controlled_resource_s_including_reproduction": 1.575592732
+}

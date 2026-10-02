@@ -1,0 +1,33 @@
+{
+  "at_utc": "2026-10-02T21:26:05.781962+00:00",
+  "read_only": true,
+  "command": [
+    "journalctl",
+    "-u",
+    "systemd-timesyncd",
+    "--since",
+    "2026-10-02 13:29:47 UTC",
+    "--until",
+    "2026-10-02 21:26:05 UTC",
+    "--no-pager",
+    "-n",
+    "50",
+    "-o",
+    "json"
+  ],
+  "returncode": 0,
+  "events": [
+    {
+      "__REALTIME_TIMESTAMP": "1790948312507326",
+      "__MONOTONIC_TIMESTAMP": "67254910434",
+      "MESSAGE": "Timed out waiting for reply from [2620:2d:4000:1::3f]:123 (ntp.ubuntu.com)."
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1790948312696767",
+      "__MONOTONIC_TIMESTAMP": "67255099874",
+      "MESSAGE": "Contacted time server [2620:2d:4000:1::41]:123 (ntp.ubuntu.com)."
+    }
+  ],
+  "stderr": "",
+  "scope": "service journal, no settings changed; event presence or absence does not establish correction magnitude or root cause"
+}

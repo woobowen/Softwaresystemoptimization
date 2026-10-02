@@ -24,18 +24,24 @@ taskset -c 0 python3 P1/src/autotuner.py search --algorithm random \
 
 `scripts/experiment_v2.py` 负责按冻结协议生成和串行执行批次，使用实际文件锁和资源账本；`scripts/summarize_v2.py` 从原始日志重算数据。在线搜索、完整参照、共同返回确认分别记录，确认数据不会修改在线轨迹。协议和实验记录见 [证据索引](evidence/README.md)。
 
-新结果可输出到忽略缓存中重算，无需重新运行长实验：
+本次性能扩展受时钟可比性阻塞：新的完整参照、六组在线比较、候选复核对照、确认和起点面板均未完成。原 20 配置数据保留，正文采用同一参照按配置身份重新评价；旧确认秒数和原判定不改写。`recheck` 是未获性能准入的实验入口，CLI 缺省仍是原 `grid`；目标恢复原 `CLOCK_MONOTONIC`，并不表示时钟问题已解决。
+
+配置身份评价可从已验证的旧派生表重生成，输出必须使用新目录：
 
 ```bash
-python3 P1/scripts/summarize_v2.py \
-  --protocol P1/evidence/protocol_v2.json \
-  --reference P1/results/reference_v2 \
-  --runs P1/results/comparison_v2 \
-  --runs P1/results/confirmation_v2 \
-  --runs P1/results/greedy_starts_v2 \
-  --ledger P1/evidence/measurement/resource_ledger.jsonl \
-  --output-dir P1/.cache/recomputed \
-  --plots --image-dir P1/.cache/recomputed-images
+python3 P1/scripts/identity_quality.py --output-dir P1/.cache/identity-quality
+```
+
+RAW 失败批次必须用其匹配提交重算，不能在已恢复 MONOTONIC 的工作树冒充旧构建。下列分析只读取原始日志和已闭合的成本快照，不启动目标程序；应得到 47 次累计矩阵调用、RAW A/A 一次启动但零有效、七项未启动，以及 `formal_admission=false`。
+
+```bash
+mkdir -p P1/.cache
+git worktree add --detach P1/.cache/reproduce-raw-stop 5c78049a22fa3422f2b23dddd634f2e7a3d73f9d
+python3 P1/.cache/reproduce-raw-stop/P1/scripts/summarize_v2.py \
+  --protocol P1/.cache/reproduce-raw-stop/P1/evidence/protocol_raw_aa.json \
+  --raw-aa P1/.cache/reproduce-raw-stop/P1/results/raw_aa_v3 \
+  --ledger P1/.cache/reproduce-raw-stop/P1/evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl \
+  --output-dir P1/.cache/reproduce-raw-stop/P1/.cache/derived
 ```
 
 旧结果须使用匹配提交的脚本，不能由更新后的源码冒充旧版本。以下只读 detached worktree 将新派生输出放到各自缓存，保留旧日志和身份检查：
@@ -69,4 +75,4 @@ python3 P1/.cache/reproduce-followup/P1/scripts/summarize_v2.py \
   --output-dir P1/.cache/reproduce-followup/P1/.cache/derived
 ```
 
-原始日志中的绝对路径是测量出处；分析核对哈希和计划，允许在新 checkout 只读重算。正式批次的执行恢复要求原测量目录及冻结环境一致。在新机器上重新测量须另建协议和批次。图中误差线表示已测样本的最小值与最大值，在线时间轴不含共同返回确认；完整搜索及项目成本分别保存。
+原始日志中的绝对路径是测量出处；分析核对哈希和计划，允许在新 checkout 只读重算。已经触发时钟停止条件的批次不得继续恢复；其他正式批次的执行恢复要求原测量目录及冻结环境一致。在新机器上重新测量须另建协议和批次。图中误差线表示已测样本的最小值与最大值，在线时间轴不含共同返回确认；完整搜索及项目成本分别保存。

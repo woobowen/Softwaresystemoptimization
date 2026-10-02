@@ -1,0 +1,120 @@
+{
+  "tests": {
+    "type": "task_end",
+    "at": "2026-10-02T21:36:48.114093+00:00",
+    "task": "goal2-restored-integration-tests-r1",
+    "role": "correctness_test",
+    "attempt_id": "8d97c18e5ca842918ff4973ed4d58a55",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 18.515042281,
+    "clock_elapsed_s": {
+      "monotonic": 18.515042281,
+      "raw": 19.05214007,
+      "realtime": 19.446820762
+    },
+    "clock_end_ns": {
+      "monotonic": 95541291258157,
+      "raw": 99882352749208,
+      "realtime": 1790977008113740073
+    },
+    "resource_s": 19.446820762,
+    "resource_wall_s": 19.446820762,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-restored-integration-tests-r1.stdout.txt",
+    "stderr": "evidence/commands/goal2-restored-integration-tests-r1.stderr.txt"
+  },
+  "syntax": {
+    "type": "task_end",
+    "at": "2026-10-02T21:36:48.397790+00:00",
+    "task": "goal2-restored-syntax",
+    "role": "correctness_test",
+    "attempt_id": "edbe848e267a4742a95f4b3ece1e277d",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.262903601,
+    "clock_elapsed_s": {
+      "monotonic": 0.262903601,
+      "raw": 0.270530096,
+      "realtime": 0.262905261
+    },
+    "clock_end_ns": {
+      "monotonic": 95541574924972,
+      "raw": 99882644644052,
+      "realtime": 1790977008397407625
+    },
+    "resource_s": 0.270530096,
+    "resource_wall_s": 0.270530096,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-restored-syntax.stdout.txt",
+    "stderr": "evidence/commands/goal2-restored-syntax.stderr.txt"
+  },
+  "identity_quality": {
+    "type": "task_end",
+    "at": "2026-10-02T21:36:48.661936+00:00",
+    "task": "goal2-historical-identity-quality",
+    "role": "historical_analysis",
+    "attempt_id": "b0c58fb52965454daae1145a3a5917a5",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.255250061,
+    "clock_elapsed_s": {
+      "monotonic": 0.255250061,
+      "raw": 0.262654721,
+      "realtime": 0.255251948
+    },
+    "clock_end_ns": {
+      "monotonic": 95541839191569,
+      "raw": 99882916574970,
+      "realtime": 1790977008661673874
+    },
+    "resource_s": 0.262654721,
+    "resource_wall_s": 0.262654721,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/commands/goal2-historical-identity-quality.stdout.txt",
+    "stderr": "evidence/commands/goal2-historical-identity-quality.stderr.txt"
+  },
+  "prior_failure_log": "goal2-restored-integration-tests.stderr.txt",
+  "repair": "two test fixtures retain explicit RAW source or use actual target clock; production guard unchanged",
+  "test_count": 221,
+  "syntax_count": 19,
+  "same_config_common_quality": true,
+  "independent_confirmation_not_backfilled": true,
+  "source_sha256": {
+    "P1/scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "P1/scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "P1/scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "P1/scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "P1/scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "P1/scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "P1/src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "P1/tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "P1/tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "P1/tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+    "P1/tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023"
+  },
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+}
