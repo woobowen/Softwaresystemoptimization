@@ -9,10 +9,12 @@ import json
 import math
 from pathlib import Path
 import random
+import re
 import statistics
 import struct
 
 import experiment_v2 as ex
+import validate_target as validation
 from experiment import load_json, read_records, sha256
 
 INITIAL_DIAGNOSTIC_COMMIT = "2fc0c334039bb6696c4d83acbe029ce65ca66ab9"
@@ -311,14 +313,57 @@ def check_trials(task, tolerance=.005):
         raise ValueError("invalid or hidden compilation/build-check cost")
 
 
+def locked_panel(job, directory, reference, protocol, manifest, grid):
+    """Rebuild a saved external panel without the live execution/resume entry points."""
+    block_jobs = [item for item in manifest["jobs"] if item["action"] == "search" and item["block"] == job["block"]]
+    if job["depends_on"] != [item["id"] for item in block_jobs]:
+        raise ValueError("common panel omits a block search or changes its locked dependency order")
+    dependencies, configs = {}, []
+    for item in block_jobs:
+        path = directory / (item["id"] + ".jsonl")
+        rows = read_records(path)
+        expected = ex.common_metadata(protocol, item, Path(manifest["measurement_root"]))
+        if not rows or rows[0].get("metadata") != expected or rows[0].get("fingerprint") != ex.at.fingerprint(expected):
+            raise ValueError("common panel dependency differs from the frozen search identity")
+        ex.validate_trace(rows, expected, item)
+        summary = next((row for row in reversed(rows) if row["type"] == "summary"), None)
+        if not summary or not summary["best"] or summary["failed_trials"]:
+            raise ValueError("common panel requires every search to lock a valid eligible return")
+        check_trials(dict(records=rows, summary=summary))
+        dependencies[item["id"]] = sha256(path)
+        configs.append(summary["best"]["config"])
+    winner = min(grid, key=lambda cell: (cell["median_s"], protocol["space"]["blocks"].index(cell["s"]),
+                                        protocol["space"]["opts"].index(cell["opt"])))
+    fixed = dict(s=winner["s"], opt=winner["opt"])
+    unique = sorted({config_key(config) for config in configs + [fixed]})
+    jobs = []
+    for round_id in range(1, protocol["return_confirmation"]["repeats"] + 1):
+        order = unique.copy()
+        random.Random(protocol["return_confirmation"]["order_seed"] + 100 * job["block"] + round_id).shuffle(order)
+        for s, opt in order:
+            jobs.append(dict(id=f"{job['id']}-r{round_id}-s{s}-{opt}", action="run", role="shared_confirmation",
+                block=job["block"], seed=job["seed"], round=round_id, repeats=1, config=dict(s=s, opt=opt)))
+    expected = dict(schema=2, block=job["block"], seed=job["seed"], protocol_sha256=protocol["protocol_sha256"],
+        dependencies_sha256=dependencies, reference_manifest_sha256=sha256(reference / "plan.json"),
+        reference_config=fixed, configs=[dict(s=s, opt=opt) for s, opt in unique], jobs=jobs)
+    expected["fingerprint"] = ex.at.fingerprint(expected)
+    saved = load_json(directory / (job["id"] + ".json"))
+    if ex.at.fingerprint(saved) != ex.at.fingerprint(expected):
+        raise ValueError("common panel identity, locked returns, source hashes, or order differs from raw")
+    return saved
+
+
 def read_batch(directory, protocol_path, reference=None):
     directory = Path(directory).resolve()
     manifest = load_json(directory / "plan.json")
     protocol = load_json(protocol_path)
+    actual_protocol_path = str(Path(protocol_path).resolve().relative_to(ex.P1.resolve()))
+    if manifest.get("protocol") != actual_protocol_path:
+        raise ValueError("batch protocol path differs from the actual specified protocol input")
     protocol.update(protocol_sha256=sha256(protocol_path), measurement_root=manifest["measurement_root"],
-                    protocol_path=manifest["protocol"])
+                    protocol_path=actual_protocol_path)
     ex.freeze_check(protocol, manifest, protocol_path)
-    flat_jobs, panels = [], []
+    flat_jobs, panels, reference_grid = [], [], None
     for job in manifest["jobs"]:
         if job["action"] != "panel":
             flat_jobs.append(job)
@@ -328,10 +373,15 @@ def read_batch(directory, protocol_path, reference=None):
             continue
         if reference is None:
             raise ValueError("shared panel requires its frozen reference input")
-        expected = ex.panel(job, directory, reference, protocol, historical=True)
-        saved = load_json(path)
-        if saved["jobs"] != expected:
-            raise ValueError("common panel jobs differ from frozen returns and order")
+        if reference_grid is None:
+            reference = Path(reference).resolve()
+            if reference == directory:
+                raise ValueError("common panel cannot use its own search batch as the reference")
+            ref_batch = read_batch(reference, protocol_path)
+            reference_grid, complete = reference_table(samples_from_batches([ref_batch]), protocol)
+            if not complete:
+                raise ValueError("common panel requires all twenty configurations and three valid reference rounds")
+        saved = locked_panel(job, directory, reference, protocol, manifest, reference_grid)
         panels.append(saved)
         flat_jobs.extend(saved["jobs"])
     if len({job["id"] for job in flat_jobs}) != len(flat_jobs):
@@ -347,12 +397,19 @@ def read_batch(directory, protocol_path, reference=None):
         path = directory / (job["id"] + ".jsonl")
         rows = read_records(path) if path.exists() else []
         summary = next((row for row in reversed(rows) if row["type"] == "summary"), None)
-        if summary and summary.get("failed_trials", 0) > 0:
-            expected = ex.common_metadata(protocol, job, Path(manifest["measurement_root"]))
-            if rows[0].get("metadata") != expected or rows[0].get("fingerprint") != ex.at.fingerprint(expected):
-                raise ValueError("failed journal settings differ from its frozen job")
-            ex.validate_trace(rows, expected, job)
-            state = "failed"
+        formal = protocol["measurement"].get("clock_health", {}).get("guard_mode") == "complete_target_and_driver"
+        if formal or (summary and summary.get("failed_trials", 0) > 0):
+            if not rows:
+                state = "pending"
+            else:
+                expected = ex.common_metadata(protocol, job, Path(manifest["measurement_root"]))
+                if rows[0].get("metadata") != expected or rows[0].get("fingerprint") != ex.at.fingerprint(expected):
+                    raise ValueError("journal settings differ from its frozen job")
+                if summary is not None:
+                    ex.validate_trace(rows, expected, job)
+                # Clock validity belongs to the specified, once-read resource
+                # ledger; runtime resume uses a different live entry point.
+                state = "partial" if summary is None else "failed" if summary.get("failed_trials", 0) else "complete"
         else:
             state = ex.validate_task(job, directory, protocol, historical=True)
         task = dict(job=job, records=rows, state=state, summary=summary)
@@ -508,6 +565,8 @@ def search_tables(batches, grid, panels, protocol):
             gap = cell.get("gap_ref_pct") if cell else None
             panel_gap = 100 * (panel["median_s"] / panel_ref["median_s"] - 1) if panel and panel_ref and \
                 panel["complete"] and panel_ref["complete"] else None
+            search_valid = task["state"] == "complete"
+            panel_complete = bool(panel and panel_ref and panel["complete"] and panel_ref["complete"])
             runs.append(dict(stage=batch["manifest"]["stage"], block=job.get("block"), seed=job["seed"],
                 algorithm=job["algorithm"], state=task["state"], returned_s=config["s"] if config else None,
                 returned_opt=config["opt"] if config else None, online_score_s=best["score"] if best else None,
@@ -515,10 +574,10 @@ def search_tables(batches, grid, panels, protocol):
                 gap_ref_low_pct=ref_bounds[0], gap_ref_high_pct=ref_bounds[1],
                 panel_median_s=panel["median_s"] if panel else None, panel_gap_pct=panel_gap,
                 panel_gap_low_pct=conf_bounds[0], panel_gap_high_pct=conf_bounds[1],
-                confirmation_complete=bool(panel and panel_ref and panel["complete"] and panel_ref["complete"]),
-                point_near_optimal=at_most(gap, protocol["acceptance"]["epsilon_pct"]) if gap is not None else None,
+                panel_complete=panel_complete, confirmation_complete=search_valid and panel_complete,
+                point_near_optimal=at_most(gap, protocol["acceptance"]["epsilon_pct"]) if search_valid and gap is not None else None,
                 quality_class=classify(gap, ref_bounds, conf_bounds, protocol["acceptance"]["epsilon_pct"],
-                    protocol["measurement"]["clock_health"]["resolution_pp"], same_ref),
+                    protocol["measurement"]["clock_health"]["resolution_pp"], same_ref) if search_valid else "uncertain",
                 proposals=summary["proposals"] if summary else None,
                 distinct_configs=summary["distinct_configs"] if summary else None,
                 process_runs=summary["process_runs"] if summary else None,
@@ -532,7 +591,7 @@ def search_tables(batches, grid, panels, protocol):
                 journal=f"{batch['path'].name}/{job['id']}.jsonl"))
             for trial in (row for row in task["records"] if row["type"] == "trial"):
                 curves.append(dict(stage=batch["manifest"]["stage"], block=job.get("block"), seed=job["seed"],
-                    algorithm=job["algorithm"], step=trial["trial_id"] + 1, **trial["config"],
+                    algorithm=job["algorithm"], state=task["state"], step=trial["trial_id"] + 1, **trial["config"],
                     actual_calls=sum(row["type"] == "measurement_start" and row["trial_id"] <= trial["trial_id"]
                         for row in task["records"]),
                     phase=trial.get("phase", "explore"), observed_score_s=trial["score"],
@@ -866,6 +925,244 @@ def joint_diagnostic(batch, protocol, ledger_rows, ledger_bytes, initial):
         arrangement_variance_causal_effect_proven=False, effective_samples=effective)
 
 
+def numeric_clock_baseline(start, end, rows, protocol):
+    """The two frozen correctness adapters may supply clocks, never scores."""
+    declaration = protocol["measurement"]["clock_health"].get("numeric_baseline_identity")
+    if not declaration:
+        raise ValueError("nonformal target is not a declared clock-only numerical baseline")
+    path = ex.P1 / declaration["path"]
+    if sha256(path) != declaration["sha256"]:
+        raise ValueError("numerical clock baseline declaration changed")
+    binding = load_json(path)
+    expected_ids = {"goal2-n4096-O0-s24": dict(s=24, opt="O0"), "goal2-n4096-O3-s128": dict(s=128, opt="O3")}
+    if binding.get("schema") != 1 or binding.get("clock_only") is not True or binding.get("formal_scores") is not False or \
+            binding["framework_sha256"] != protocol["framework"]["sha256"] or len(binding["jobs"]) != 2 or \
+            {job["id"]: job["config"] for job in binding["jobs"]} != expected_ids:
+        raise ValueError("numerical baseline scope differs from the two approved jobs")
+    job = next((item for item in binding["jobs"] if item["id"] == start["task"]), None)
+    if job is None or start["role"] != "numeric_validation" or end["role"] != "numeric_validation" or \
+            job["role"] != "numeric_validation" or start["attempt_id"] != job["attempt_id"] or \
+            end["attempt_id"] != job["attempt_id"] or start["journal"] != job["journal"] or \
+            start["prior_measurement_starts"] != 0 or end["n4096_calls"] != 1 or \
+            sha256(ex.P1 / job["journal"]) != job["journal_sha256"]:
+        raise ValueError("numerical clock baseline does not match its unique actual attempt and journal")
+    adapter_path = ex.P1 / binding["adapter_identity"]
+    if sha256(adapter_path) != binding["adapter_identity_sha256"]:
+        raise ValueError("numerical adapter identity changed")
+    adapter = load_json(adapter_path)
+    if adapter["measured_source_sha256"] != protocol["target"]["sha256"] or \
+            sha256(validation.__file__) != adapter["validation_script_sha256"] or adapter["formal_scores"] is not False:
+        raise ValueError("numerical adapter is not derived from the frozen source and validation script")
+    text = validation.validation_source(4096)
+    for before, after in adapter["transformations"]:
+        if text.count(before) != 1:
+            raise ValueError("numerical input adapter replacement does not match its source")
+        text = text.replace(before, after, 1)
+    source = adapter["outputs"]["4096"]
+    kernel_sha = hashlib.sha256(validation.kernel(text).encode()).hexdigest()
+    if hashlib.sha256(text.encode()).hexdigest() != source["source_sha256"] or \
+            kernel_sha != source["kernel_sha256"] or kernel_sha != hashlib.sha256(validation.kernel(validation.SOURCE.read_text()).encode()).hexdigest():
+        raise ValueError("numerical adapter changes the measured kernel or generated source")
+    root, config = Path(binding["measurement_root"]), job["config"]
+    command = ["taskset", "-c", "0", "/usr/bin/python3", "-B", str(root / protocol["framework"]["path"]), "run",
+        "--target", str(root / source["source"]), "--compiler", "gcc", "--cflag=-Wl,--no-as-needed", "--cflag=-lm",
+        "--cache-dir", str(root / ".cache/validation-goal2/build"), "--s", str(config["s"]), "--opt", config["opt"],
+        "--repeats", "1", "--timeout", "1200", "--compile-timeout", "60", "--output", str(root / job["journal"])]
+    metadata = rows[0]["metadata"]
+    if start["command"] != command or job["command"] != command or metadata != job["metadata"] or \
+            metadata["target"]["source_sha256"] != source["source_sha256"] or \
+            metadata["target"]["compiler"] != protocol["target"]["compiler_identity"] or \
+            metadata["target"]["flags"] != protocol["target"]["common_flags"] + adapter["validation_only_flags"] or \
+            metadata["blocks"] != [config["s"]] or metadata["opts"] != [config["opt"]]:
+        raise ValueError("numerical baseline command, compiler, build flags, or configuration differs")
+    summary = next((row for row in reversed(rows) if row["type"] == "summary"), None)
+    if not summary or summary["failed_trials"] or summary["process_runs"] != 1:
+        raise ValueError("numerical baseline did not complete its independent element check")
+    check_trials(dict(records=rows, summary=summary))
+    measurements = [row for row in rows if row["type"] == "measurement"]
+    lines = [line for row in measurements for line in row["stdout"].splitlines() if line.startswith("CHECK ")]
+    match = re.fullmatch(r"CHECK n=4096 count=24 max_abs=([-+0-9.eE]+) max_rel=([-+0-9.eE]+) atol=1e-12 rtol=1e-11 failures=0", job["check"])
+    if lines != [job["check"]] or not match or any(not math.isfinite(float(value)) or float(value) < 0 for value in match.groups()):
+        raise ValueError("numerical baseline lacks the successful 24-element CHECK footer")
+    return True
+
+
+def formal_clock_health(batches, ledger_rows, protocol):
+    """Verify whole target/driver checks by actual attempt, before scoring samples."""
+    active = {}
+    for batch in batches:
+        for task in batch["tasks"]:
+            path = batch["path"] / (task["job"]["id"] + ".jsonl")
+            journal = str(path.resolve().relative_to(ex.P1.resolve()))
+            if journal in active:
+                raise ValueError("duplicate formal journal cannot be counted as a new clock observation")
+            active[journal] = task["records"]
+    result = dict(healthy=False, attempts=[], missing_jobs=[], states={})
+    if ledger_rows is None or protocol["measurement"]["clock_health"].get("guard_mode") != "complete_target_and_driver":
+        result["missing_jobs"] = sorted(active)
+        result["states"] = dict.fromkeys(active, "clock_unverified")
+        return result
+    starts, ended, histories, covered, process_coverage = {}, set(), {}, set(), {}
+    priority = dict(complete=0, clock_unverified=1, clock_conflict=2)
+    for end in ledger_rows:
+        if end["type"] == "task_start":
+            if end["attempt_id"] in starts:
+                raise ValueError("duplicate formal global attempt start")
+            starts[end["attempt_id"]] = end
+            continue
+        if end["type"] != "task_end":
+            continue
+        if end["attempt_id"] not in starts or end["attempt_id"] in ended:
+            raise ValueError("formal clock completion has no unique earlier attempt start")
+        ended.add(end["attempt_id"])
+        start = starts[end["attempt_id"]]
+        if end["task"] != start["task"]:
+            raise ValueError("formal completion changed its actual task identity")
+        journal, owned = start.get("journal"), start.get("journal") in active
+        history = histories.setdefault(start["boot_id"], dict(driver=[], process=[]))
+        usable = end.get("returncode") == 0 and end.get("reason") is None and \
+            end.get("n4096_calls_known", True) and end.get("n4096_calls", 0) > 0 and not end.get("clock_conflict")
+        if not owned and not usable:
+            continue
+        if owned and end.get("n4096_calls_known") is not True:
+            covered.add(journal)
+            prior = result["states"].get(journal, "complete")
+            result["states"][journal] = max((prior, "clock_unverified"), key=priority.get)
+            result["attempts"].append(dict(attempt_id=end["attempt_id"], journal=journal, healthy=False,
+                                           reason="actual completed clock/call coverage is unknown"))
+            continue
+        spans = clock_spans(start["clock_start_ns"], end["clock_end_ns"])
+        if any(not finite_positive(value) for value in spans.values()) or \
+                spans != end.get("clock_elapsed_s") or spans["monotonic"] != end.get("driver_wall_s") or \
+                max(spans.values()) != end.get("resource_wall_s") or max(spans.values()) != end.get("resource_s"):
+            raise ValueError("formal clock resource costs differ from the original multi-domain boundaries")
+        rows = active[journal] if owned else read_records(ex.P1 / journal) if journal else []
+        actual = []
+        if journal and rows:
+            metadata = rows[0]["metadata"]
+            if rows[0].get("fingerprint") != ex.at.fingerprint(metadata) or \
+                    metadata["target"]["n"] != 4096 or metadata["target"]["kernel_clock"] != "CLOCK_MONOTONIC" or \
+                    metadata["target"]["compiler"] != protocol["target"]["compiler_identity"] or \
+                    metadata.get("framework_sha256") != protocol["framework"]["sha256"] or \
+                    metadata.get("runtime_affinity") != protocol["measurement"]["cpu_affinity"]:
+                raise ValueError("clock baseline target/header identity differs from the frozen computation")
+            if metadata["target"]["source_sha256"] != protocol["target"]["sha256"] or \
+                    metadata["target"]["flags"] != protocol["target"]["common_flags"]:
+                if owned:
+                    raise ValueError("formal score target cannot use numerical validation adapters")
+                numeric_clock_baseline(start, end, rows, protocol)
+            keys = [(row["run_id"], row["trial_id"], row["repeat"], row["pid"]) for row in rows if row["type"] == "measurement_start"]
+            offset, count = start["prior_measurement_starts"], end["n4096_calls"]
+            if len(set(keys)) != len(keys) or type(offset) is not int or offset < 0 or type(count) is not int or count < 0 or \
+                    count > start["call_upper"]:
+                raise ValueError("formal physical process starts or attempt allocation are invalid")
+            selected = set(keys[offset:offset + count])
+            if len(selected) != count:
+                raise ValueError("clock checks do not match actual attempt process starts")
+            actual = [row for row in rows if row["type"] == "measurement" and
+                (row["run_id"], row["trial_id"], row["repeat"], row["pid"]) in selected]
+            if len({(row["run_id"], row["trial_id"], row["repeat"], row["pid"]) for row in actual}) != len(actual):
+                raise ValueError("formal attempt has duplicate target process completions")
+            if owned:
+                previous = process_coverage.setdefault(journal, set())
+                if previous & selected:
+                    raise ValueError("formal attempts reuse the same physical target process starts")
+                previous.update(selected)
+        if not owned:
+            # These fields establish clock history only; old scores still require
+            # their pinned analysis version rather than this driver's dispatcher.
+            if journal and len(actual) != end["n4096_calls"]:
+                raise ValueError("prior successful attempt lacks complete target process observations")
+            for row in actual:
+                target = clock_spans(row["clock_start_ns"], row["clock_end_ns"], target_process=True)
+                raw_deltas = dict(zip(("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME"), target.values()))
+                if row["status"] != "ok" or row["returncode"] != 0 or row.get("clock_unit") != "ns" or \
+                        row.get("clock_read_order") != ["CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME"] or \
+                        row.get("process_wall_clock") != "CLOCK_MONOTONIC" or row["clock_deltas_s"] != raw_deltas or \
+                        row["process_wall_s"] != target["monotonic"] or \
+                        any(not finite_positive(value) for value in target.values()):
+                    raise ValueError("successful prior target has invalid complete clock fields")
+                if target["monotonic"] >= 10:
+                    history["process"].append(dict(identity=[row["run_id"], row["trial_id"], row["repeat"], row["pid"]],
+                        attempt_id=end["attempt_id"], q=target["raw"] / target["monotonic"]))
+            if spans["monotonic"] >= 10:
+                history["driver"].append(dict(identity=end["attempt_id"], q=spans["raw"] / spans["monotonic"]))
+            continue
+        covered.add(journal)
+        guard = end.get("clock_guard")
+        if not isinstance(guard, dict) or type(end.get("clock_conflict")) is not bool or \
+                set(guard) != {"schema", "mode", "threshold_fraction", "boot_id", "process_checks", "driver_check", "complete", "error"} or \
+                type(guard.get("schema")) is not int or guard["schema"] != 1 or guard.get("mode") != "complete_target_and_driver" or \
+                guard.get("threshold_fraction") != .02 or guard.get("boot_id") != start["boot_id"]:
+            prior = result["states"].get(journal, "complete")
+            result["states"][journal] = max((prior, "clock_unverified"), key=priority.get)
+            result["attempts"].append(dict(attempt_id=end["attempt_id"], journal=journal, healthy=False,
+                                           reason="missing mandatory completed-clock identity"))
+            continue
+        local_history, checks = list(history["process"]), []
+        all_valid = len(actual) == end["n4096_calls"] and bool(actual)
+        for row in actual:
+            if row.get("status") != "ok" or row.get("returncode") != 0 or row.get("clock_unit") != "ns":
+                all_valid = False
+                continue
+            target = clock_spans(row["clock_start_ns"], row["clock_end_ns"], target_process=True)
+            expected_deltas = dict(zip(("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME"), target.values()))
+            if row.get("clock_read_order") != list(expected_deltas) or row.get("process_wall_clock") != "CLOCK_MONOTONIC" or \
+                    row["clock_deltas_s"] != expected_deltas or \
+                    row["process_wall_s"] != target["monotonic"] or any(not finite_positive(value) for value in target.values()):
+                raise ValueError("formal target clock observations differ from their original nanoseconds")
+            q = target["raw"] / target["monotonic"]
+            baselines = local_history[:1] + local_history[-1:]
+            identity = [row["run_id"], row["trial_id"], row["repeat"], row["pid"]]
+            check = dict(source="target_process", identity=identity, clock_elapsed_s=target, q=q,
+                         baselines=baselines, conflict=any(abs(q / ref["q"] - 1) > .02 for ref in baselines))
+            checks.append(check)
+            if not check["conflict"] and target["monotonic"] >= 10:
+                local_history.append(dict(identity=identity, attempt_id=end["attempt_id"], q=q))
+        driver_q = spans["raw"] / spans["monotonic"] if finite_positive(spans["monotonic"]) else None
+        refs = history["driver"][:1] + history["driver"][-1:]
+        driver = dict(source="driver", identity=end["attempt_id"], clock_elapsed_s=spans, q=driver_q,
+            baselines=refs, conflict=any(abs(driver_q / ref["q"] - 1) > .02 for ref in refs)) if driver_q else None
+        saved_checks = guard.get("process_checks")
+        if not isinstance(saved_checks, list) or len(saved_checks) > len(checks) or \
+                ex.at.fingerprint(saved_checks) != ex.at.fingerprint(checks[:len(saved_checks)]) or \
+                (guard.get("driver_check") is not None and ex.at.fingerprint(guard["driver_check"]) != ex.at.fingerprint(driver)):
+            raise ValueError("formal completed-clock checks differ from raw sources and first/previous identities")
+        conflict = any(check["conflict"] for check in saved_checks) or bool(guard.get("driver_check") and driver and driver["conflict"])
+        if end["clock_conflict"] != conflict or type(guard.get("complete")) is not bool or \
+                guard["complete"] != (len(saved_checks) == end["n4096_calls"]) or \
+                (guard.get("error") is not None and not isinstance(guard["error"], str)):
+            raise ValueError("formal completed-clock coverage or flags differ from actual processes")
+        healthy = bool(usable and all_valid and guard["complete"] and guard.get("driver_check") is not None and
+                       not conflict and guard.get("error") is None)
+        result["attempts"].append(dict(attempt_id=end["attempt_id"], journal=journal, healthy=healthy,
+                                       conflict=conflict, complete=guard["complete"]))
+        state = "complete" if healthy else "clock_conflict" if conflict else "clock_unverified"
+        prior_state = result["states"].get(journal, "complete")
+        result["states"][journal] = max((state, prior_state), key=priority.get)
+        if healthy:
+            history["process"] = local_history
+            if spans["monotonic"] >= 10:
+                history["driver"].append(dict(identity=end["attempt_id"], q=driver_q))
+    result["missing_jobs"] = sorted(set(active) - covered)
+    for identity, start in starts.items():
+        if identity not in ended and start.get("journal") in active:
+            journal = start["journal"]
+            result["states"][journal] = max((result["states"].get(journal, "complete"), "clock_unverified"), key=priority.get)
+            result["attempts"].append(dict(attempt_id=identity, journal=journal, healthy=False,
+                                           reason="formal attempt has no completed clock observation"))
+    for journal, rows in active.items():
+        actual_count = sum(row["type"] == "measurement_start" for row in rows)
+        if len(process_coverage.get(journal, set())) != actual_count:
+            result["states"][journal] = max((result["states"].get(journal, "complete"), "clock_unverified"), key=priority.get)
+            result["attempts"].append(dict(journal=journal, healthy=False,
+                                           reason="formal attempts do not cover every physical process start"))
+    for journal in result["missing_jobs"]:
+        result["states"][journal] = "clock_unverified"
+    result["healthy"] = not result["missing_jobs"] and bool(result["attempts"]) and all(row["healthy"] for row in result["attempts"])
+    return result
+
+
 def paired_rows(runs, grid, panels, protocol, stage):
     reference = min(grid, key=lambda row: row["median_s"])
     indexed = {config_key(row): row for row in grid}
@@ -920,6 +1217,8 @@ def decision(pairs, protocol, expected_count, project_cost_complete=True, projec
             row["wall_saving_fraction"] is None or None in (row["gain_ref_low_pp"], row["gain_ref_high_pp"],
             row["gain_panel_low_pp"], row["gain_panel_high_pp"]) for row in pairs):
         return dict(decision="INCONCLUSIVE", reasons=["missing valid paired searches/panels or known actual cost"])
+    if rules.get("different_identity_risk_supported") is not True and any(not row["same_config"] for row in pairs):
+        return dict(decision="INCONCLUSIVE", reasons=["diagnostic evidence does not support the 2pp risk limit for different configuration identities"])
     if any(row["baseline_calls"] != protocol["online"]["budget"] or
             row["candidate_calls"] != protocol["online"]["budget"] for row in pairs):
         return dict(decision="INCONCLUSIVE", reasons=["incomplete equal-call-budget comparison"])
@@ -1283,7 +1582,7 @@ def plot_results(directory, samples, grid, runs, curves, aa, pairs):
         colors = dict(grid="#377eb8", random="#4daf4a", greedy="#e41a1c", recheck="#984ea3")
         for name, color in colors.items():
             selected = [row for row in curves if row["stage"] == "comparison" and row["algorithm"] == name and
-                        row["best_so_far_s"] is not None]
+                        row.get("state", "complete") == "complete" and row["best_so_far_s"] is not None]
             for index, seed in enumerate(sorted({row["seed"] for row in selected})):
                 rows = [row for row in selected if row["seed"] == seed]
                 for ax, key in ((axes[0], "actual_calls"), (axes[1], "tuning_elapsed_s")):
@@ -1331,6 +1630,14 @@ def main(argv=None):
     if len({path.resolve() for path in directories}) != len(directories):
         raise ValueError("duplicate batches cannot be counted as new evidence")
     batches = [read_batch(path, args.protocol, args.reference) for path in directories]
+    clock_health = formal_clock_health(batches, ledger_rows, protocol) if args.reference or args.runs else None
+    if clock_health is not None:
+        for batch in batches:
+            for task in batch["tasks"]:
+                journal = str((batch["path"] / (task["job"]["id"] + ".jsonl")).resolve().relative_to(ex.P1.resolve()))
+                state = clock_health["states"].get(journal)
+                if state in ("clock_conflict", "clock_unverified"):
+                    task["state"] = state
     raw_inputs = batches + ([dict(path=args.clocks)] if args.clocks else []) + \
         ([dict(path=args.initial_derived)] if args.initial_derived else [])
     output = safe_destination(args.output_dir, raw_inputs)
@@ -1350,9 +1657,9 @@ def main(argv=None):
     costs = cost_table(batches, ledger_rows)
     write_csv(output / "batch_costs.csv", costs["rows"])
     summary["costs"] = costs
-    active_tasks = {task["job"]["id"] for batch in batches for task in batch["tasks"]}
-    summary["measurement_clock_healthy"] = not any(row["type"] == "task_end" and row["task"] in active_tasks and
-        row.get("clock_conflict") for row in ledger_rows or [])
+    summary["measurement_clock_healthy"] = clock_health["healthy"] if clock_health is not None else None
+    if clock_health is not None:
+        summary["measurement_clock_health"] = clock_health
     if args.clocks:
         summary["clocks"] = clock_table(args.clocks, protocol)
         write_csv(output / "clock_summary.csv", summary["clocks"]["intervals"])

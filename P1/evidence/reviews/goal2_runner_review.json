@@ -1,0 +1,205 @@
+{
+  "reviewer": "/root/review",
+  "author": "/root",
+  "at_utc": "2026-10-02T16:59:32.407785+00:00",
+  "state": "FORMAL_COMPLETE_GUARD_AND_PLAN_IDENTITY_CODE_GATE_APPROVED_PROTOCOL_GATE_PENDING",
+  "initial_source_sha256": "3e67b166ed1e95840d969311050bce0b5eba686e073cafc840e78f3d216d2d81",
+  "matching_diagnostic_checkpoint": "c247e900d3f9c4d46e4abf06092939a0a9480429",
+  "formal_admission": false,
+  "n4096_runs_by_reviewer": 0,
+  "findings": [
+    {
+      "id": "G1",
+      "severity": "high",
+      "path": "usage and CompleteClockGuard.__init__",
+      "status": "CLOSED_BY_STATIC_FIX_REVIEW_AND_INDEPENDENT29_FIXTURES",
+      "required": "derive runtime resource and driver baseline from original integerns; saved-fields-onlytamperfixturesreject"
+    },
+    {
+      "id": "G2",
+      "severity": "medium",
+      "path": "CompleteClockGuard previous target baseline coverage",
+      "status": "CLOSED_BY_STATIC_FIX_REVIEW_AND_INDEPENDENT29_FIXTURES",
+      "required": "unique fullstarts+completions equalactualcalls forsuccessfulpreviousattempts; missing/duplicatefixturesreject"
+    },
+    {
+      "id": "G3",
+      "severity": "high",
+      "path": "validate_task formal clock_guard record validation",
+      "status": "CLOSED_BY_ACTUAL_SMALL_POSITIVE_AND_MISSING_OR_FORGED_STRUCTURED_CHECK_REJECTION",
+      "required": "reject metadata-only healthy shell; require each raw-ns process check/driver check, identity coverage/threshold/boot"
+    },
+    {
+      "id": "G4",
+      "severity": "medium",
+      "path": "freeze_check manifest source identity fields",
+      "status": "CLOSED_BY_STATIC_FIELD_BINDING_FIX_AND_INDEPENDENT30_FIXTURES",
+      "at_utc": "2026-10-02T17:31:21.515737+00:00",
+      "evidence": "freeze_check compares protocol/driver bytes and expected jobs, but does not compare saved manifest target_sha256/framework_sha256/schema/protocol fields with generated expected plan",
+      "impact": "A redundant plan source SHA can differ from the actual frozen protocol without detection; current computation still uses checked protocol identities, no actual tampering observed",
+      "required": "precise identity-field equality to generated plan with historical measurement_root retained, plus independent single-field corruption fixtures before formal freeze"
+    }
+  ],
+  "independent_complete_guard_first_regression": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_goal2_driver.py",
+      "-v"
+    ],
+    "cwd": "P1",
+    "started_at_utc": "2026-10-02T17:04:45.210676+00:00",
+    "finished_at_utc": "2026-10-02T17:04:46.589815+00:00",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok\ntest_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_complete_clock_check_rejects_nan_zero_and_wrong_unit (test_goal2_driver.Goal2DriverTests.test_complete_clock_check_rejects_nan_zero_and_wrong_unit) ... ok\ntest_complete_processes_are_checked_individually_before_driver_average (test_goal2_driver.Goal2DriverTests.test_complete_processes_are_checked_individually_before_driver_average) ... ok\ntest_completed_baseline_requires_unique_complete_target_rows (test_goal2_driver.Goal2DriverTests.test_completed_baseline_requires_unique_complete_target_rows) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_failed_attempt_cannot_be_a_formal_clock_baseline (test_goal2_driver.Goal2DriverTests.test_failed_attempt_cannot_be_a_formal_clock_baseline) ... ok\ntest_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt (test_goal2_driver.Goal2DriverTests.test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt) ... ok\ntest_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_partial_live_json_is_not_a_finished_clock_sample (test_goal2_driver.Goal2DriverTests.test_partial_live_json_is_not_a_finished_clock_sample) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_real_small_guard_records_all_calls_and_complete_driver (test_goal2_driver.Goal2DriverTests.test_real_small_guard_records_all_calls_and_complete_driver) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_calls_cannot_be_reduced_below_physical_starts (test_goal2_driver.Goal2DriverTests.test_resource_calls_cannot_be_reduced_below_physical_starts) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_saved_raw_seconds_and_resource_charge_cannot_be_tampered (test_goal2_driver.Goal2DriverTests.test_saved_raw_seconds_and_resource_charge_cannot_be_tampered) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_unfinished_call_and_missing_fields_are_not_healthy (test_goal2_driver.Goal2DriverTests.test_unfinished_call_and_missing_fields_are_not_healthy) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 1.302s\n\nOK\n",
+    "source_before": {
+      "scripts/experiment_v2.py": "e289ac061be8aa9b943b352750e5f6d3531ac11c19516ab8704b13168fe995fb",
+      "tests/test_goal2_driver.py": "7aa92ad32a08786ea868c0f9410a6b0582dfb8b0eeb319bd14ca5e8d01398d0d",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_after": {
+      "scripts/experiment_v2.py": "e289ac061be8aa9b943b352750e5f6d3531ac11c19516ab8704b13168fe995fb",
+      "tests/test_goal2_driver.py": "7aa92ad32a08786ea868c0f9410a6b0582dfb8b0eeb319bd14ca5e8d01398d0d",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_unchanged": true,
+    "clock_start_ns": {
+      "monotonic": 79584809305086,
+      "raw": 83559607861924,
+      "realtime": 1790960685210674851
+    },
+    "clock_end_ns": {
+      "monotonic": 79586188112445,
+      "raw": 83561002059232,
+      "realtime": 1790960686589482991
+    },
+    "elapsed_s": {
+      "monotonic": 1.378807359,
+      "raw": 1.394197308,
+      "realtime": 1.37880814
+    },
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  },
+  "independent_current_actual_resource_ns_review": {
+    "at_utc": "2026-10-02T17:05:24.700027+00:00",
+    "ledger_sha256": "c19cc1cad7c0bed24ee2f29db3db39f9a9b30633ca96da8984d3da99ab9c42e0",
+    "completed_unique_attempts": 60,
+    "unfinished_attempts": 0,
+    "actual_n4096_calls": 41,
+    "resource_s_from_original_ns": 2762.457140968,
+    "all_saved_resource_fields_exact": true,
+    "unknown_calls_or_times": 0
+  },
+  "current_source_sha256": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+  "independent_complete_guard_G3_regression": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_goal2_driver.py",
+      "-v"
+    ],
+    "cwd": "P1",
+    "started_at_utc": "2026-10-02T17:13:09.719369+00:00",
+    "finished_at_utc": "2026-10-02T17:13:11.054198+00:00",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok\ntest_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_complete_clock_check_rejects_nan_zero_and_wrong_unit (test_goal2_driver.Goal2DriverTests.test_complete_clock_check_rejects_nan_zero_and_wrong_unit) ... ok\ntest_complete_processes_are_checked_individually_before_driver_average (test_goal2_driver.Goal2DriverTests.test_complete_processes_are_checked_individually_before_driver_average) ... ok\ntest_completed_baseline_requires_unique_complete_target_rows (test_goal2_driver.Goal2DriverTests.test_completed_baseline_requires_unique_complete_target_rows) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_failed_attempt_cannot_be_a_formal_clock_baseline (test_goal2_driver.Goal2DriverTests.test_failed_attempt_cannot_be_a_formal_clock_baseline) ... ok\ntest_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt (test_goal2_driver.Goal2DriverTests.test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt) ... ok\ntest_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_partial_live_json_is_not_a_finished_clock_sample (test_goal2_driver.Goal2DriverTests.test_partial_live_json_is_not_a_finished_clock_sample) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_real_small_guard_records_all_calls_and_complete_driver (test_goal2_driver.Goal2DriverTests.test_real_small_guard_records_all_calls_and_complete_driver) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_calls_cannot_be_reduced_below_physical_starts (test_goal2_driver.Goal2DriverTests.test_resource_calls_cannot_be_reduced_below_physical_starts) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_saved_raw_seconds_and_resource_charge_cannot_be_tampered (test_goal2_driver.Goal2DriverTests.test_saved_raw_seconds_and_resource_charge_cannot_be_tampered) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_unfinished_call_and_missing_fields_are_not_healthy (test_goal2_driver.Goal2DriverTests.test_unfinished_call_and_missing_fields_are_not_healthy) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 1.260s\n\nOK\n",
+    "source_before": {
+      "scripts/experiment_v2.py": "138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb",
+      "tests/test_goal2_driver.py": "73f57e5c1739d63d690a800e416e96f5caa7d27bc0208486f714c1adaac17a50",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_after": {
+      "scripts/experiment_v2.py": "138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb",
+      "tests/test_goal2_driver.py": "73f57e5c1739d63d690a800e416e96f5caa7d27bc0208486f714c1adaac17a50",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_unchanged": true,
+    "clock_start_ns": {
+      "monotonic": 80082715703014,
+      "raw": 84064163661970,
+      "realtime": 1790961189719368001
+    },
+    "clock_end_ns": {
+      "monotonic": 80084050297565,
+      "raw": 84065518358373,
+      "realtime": 1790961191053963667
+    },
+    "elapsed_s": {
+      "monotonic": 1.334594551,
+      "raw": 1.354696403,
+      "realtime": 1.334595666
+    },
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  },
+  "code_gate_passed": true,
+  "independent_G4_frozen_plan_identity_regression": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_goal2_driver.py",
+      "-v"
+    ],
+    "cwd": "P1",
+    "started_at_utc": "2026-10-02T17:34:27.078091+00:00",
+    "finished_at_utc": "2026-10-02T17:34:28.428087+00:00",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok\ntest_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_complete_clock_check_rejects_nan_zero_and_wrong_unit (test_goal2_driver.Goal2DriverTests.test_complete_clock_check_rejects_nan_zero_and_wrong_unit) ... ok\ntest_complete_processes_are_checked_individually_before_driver_average (test_goal2_driver.Goal2DriverTests.test_complete_processes_are_checked_individually_before_driver_average) ... ok\ntest_completed_baseline_requires_unique_complete_target_rows (test_goal2_driver.Goal2DriverTests.test_completed_baseline_requires_unique_complete_target_rows) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_failed_attempt_cannot_be_a_formal_clock_baseline (test_goal2_driver.Goal2DriverTests.test_failed_attempt_cannot_be_a_formal_clock_baseline) ... ok\ntest_formal_plan_identity_fields_cannot_be_changed (test_goal2_driver.Goal2DriverTests.test_formal_plan_identity_fields_cannot_be_changed) ... ok\ntest_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt (test_goal2_driver.Goal2DriverTests.test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt) ... ok\ntest_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_partial_live_json_is_not_a_finished_clock_sample (test_goal2_driver.Goal2DriverTests.test_partial_live_json_is_not_a_finished_clock_sample) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_real_small_guard_records_all_calls_and_complete_driver (test_goal2_driver.Goal2DriverTests.test_real_small_guard_records_all_calls_and_complete_driver) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_calls_cannot_be_reduced_below_physical_starts (test_goal2_driver.Goal2DriverTests.test_resource_calls_cannot_be_reduced_below_physical_starts) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_saved_raw_seconds_and_resource_charge_cannot_be_tampered (test_goal2_driver.Goal2DriverTests.test_saved_raw_seconds_and_resource_charge_cannot_be_tampered) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_unfinished_call_and_missing_fields_are_not_healthy (test_goal2_driver.Goal2DriverTests.test_unfinished_call_and_missing_fields_are_not_healthy) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 1.275s\n\nOK\n",
+    "source_before": {
+      "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+      "tests/test_goal2_driver.py": "decad7355b4915c05baeb30be279318ff1690efb4564dffdb868c23ed6230a77",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_after": {
+      "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+      "tests/test_goal2_driver.py": "decad7355b4915c05baeb30be279318ff1690efb4564dffdb868c23ed6230a77",
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+    },
+    "source_unchanged": true,
+    "clock_start_ns": {
+      "monotonic": 81338987096086,
+      "raw": 85341876102310,
+      "realtime": 1790962467078104243
+    },
+    "clock_end_ns": {
+      "monotonic": 81340337075845,
+      "raw": 85343252123840,
+      "realtime": 1790962468428084202
+    },
+    "elapsed_s": {
+      "monotonic": 1.349979759,
+      "raw": 1.37602153,
+      "realtime": 1.349979959
+    },
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  }
+}

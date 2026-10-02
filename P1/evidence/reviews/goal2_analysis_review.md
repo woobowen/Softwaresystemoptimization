@@ -46,3 +46,7 @@
 ## 初始阶段代码的固定 Git 身份
 
 主控在新 driver 改动前创建普通本地检查点 `2fc0c334039bb6696c4d83acbe029ce65ca66ab9`。审核者实际读取该提交 blob 并重算 SHA，确认 runner `22a839…`、analysis `963524…`、诊断 protocol `8c0d51…`、原 plan `cbfc028…` 与账本 `9812d4…` 均已保存在 Git。158 个差异路径全部位于 P1；此次尚未 push，不算远端发布完成。后续干净复现可从该固定提交取匹配脚本重算初始诊断，不必放宽哈希检查或修改旧 header；README 的真实固定版本入口和全重算仍须交付关实测。
+
+## 固定版本历史重生成的实际产物复核
+
+2026-10-02，独立读取主控两个忽略 detached worktree 的真实 HEAD，分别为 `3ac0c4688b964c873379d012cbcf09afb7ed0937` 与 `2fc0c334039bb6696c4d83acbe029ce65ca66ab9`；对 summarize/experiment/autotuner 的实际源码 bytes 与各固定 Git 对象逐一比较，全部一致。直接计算实际重生成文件 SHA：Goal1九个数据文件和两张图片共11项、初始诊断七个数据文件，全部与保存的原始派生 SHA 一致，stderr均为空、实际作者日志退出0、两个任务 n4096调用均0。此复核不重复启动作者分析，也不取消任何身份检查。证据入口 `../reproduction/goal2/goal1-comparison.json` 和 `initial-comparison.json`；独立检查结果在配套 JSON。最终还需README的固定版本入口和全431历史保护项核对。

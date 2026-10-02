@@ -80,12 +80,39 @@ def usage(ledger=LEDGER):
             ends[key] = row
     if starts.keys() != ends.keys():
         raise ValueError("unfinished resource attempt: inspect owned PIDs and recover explicitly")
+    for key,row in ends.items():
+        resource_span(starts[key],row)
+    journals={s["journal"] for s in starts.values() if s.get("journal")}
+    for journal in journals:
+        members=[key for key,s in starts.items() if s.get("journal")==journal]
+        recorded=sum(r["type"]=="measurement_start" for r in read_records(P1/journal))
+        charged=sum(ends[key]["n4096_calls"] for key in members)
+        known=all(ends[key].get("n4096_calls_known",True) for key in members)
+        if known and recorded!=charged or not known and recorded>charged:
+            raise ValueError("resource target calls differ from physical journal starts")
     calls = sum(row["n4096_calls"] for row in ends.values())
     cost = sum(row["resource_s"] for row in ends.values())
     if any(type(row["n4096_calls"]) is not int or row["n4096_calls"] < 0 or
            not math.isfinite(row["resource_s"]) or row["resource_s"] < 0 for row in ends.values()):
         raise ValueError("invalid cumulative resource cost")
     return calls, cost
+
+
+def resource_span(start, end):
+    begin,finish=start["clock_start_ns"],end["clock_end_ns"]
+    if set(begin)!=set(CLOCKS) or set(finish)!=set(CLOCKS) or \
+            any(type(v) is not int for v in [*begin.values(),*finish.values()]):
+        raise ValueError("resource boundaries must be three integer nanosecond domains")
+    spans=elapsed(begin,finish)
+    if end["resource_s"]!=max(spans.values()) or end.get("resource_wall_s")!=max(spans.values()):
+        raise ValueError("charged resource duration differs from its raw boundaries")
+    if end.get("n4096_calls_known",True):
+        if end.get("clock_elapsed_s")!=spans or end.get("driver_wall_s")!=spans["monotonic"]:
+            raise ValueError("known driver clock fields differ from raw boundaries")
+    elif end.get("driver_wall_s") is not None or end.get("clock_elapsed_s") is not None or \
+            end.get("resource_bound_basis")!="same-boot multi-domain span including downtime":
+        raise ValueError("unknown recovered cost must retain its explicit conservative bound")
+    return spans
 
 
 def recover_resource(evidence_path, ledger=LEDGER):
@@ -187,8 +214,148 @@ def matrix_clock_baselines(rows,boot_id):
         starts[r["attempt_id"]]["boot_id"]==boot_id]
 
 
+def measurement_key(row):
+    return row["run_id"], row["trial_id"], row["repeat"], row["pid"]
+
+
+def attempt_measurements(rows, offset, count, complete=False):
+    all_starts=[r for r in rows if r["type"]=="measurement_start"]
+    if len({measurement_key(r) for r in all_starts})!=len(all_starts):
+        raise ValueError("duplicate physical target process start")
+    starts=all_starts[offset:offset+count]
+    keys={measurement_key(r) for r in starts}
+    results=[r for r in rows if r["type"]=="measurement" and measurement_key(r) in keys]
+    if len(starts)!=count or len(keys)!=len(starts) or len({measurement_key(r) for r in results})!=len(results):
+        raise ValueError("attempt has missing or duplicate target process identities")
+    if complete and len(results)!=count:
+        raise ValueError("completed attempt is missing target process clock boundaries")
+    return results
+
+
+def process_clock_span(row):
+    names=["CLOCK_MONOTONIC","CLOCK_MONOTONIC_RAW","CLOCK_REALTIME"]
+    if row.get("status")!="ok" or row.get("returncode")!=0 or row.get("clock_unit")!="ns" or \
+            row.get("clock_read_order")!=names or row.get("process_wall_clock")!="CLOCK_MONOTONIC":
+        raise ValueError("complete process clock check requires valid target units/domain")
+    begin,end=row["clock_start_ns"],row["clock_end_ns"]
+    if set(begin)!=set(names) or set(end)!=set(names) or any(type(v) is not int for v in [*begin.values(),*end.values()]):
+        raise ValueError("target clock boundaries must be three integer nanosecond domains")
+    spans=elapsed(dict(zip(CLOCKS,(begin[n] for n in names))),dict(zip(CLOCKS,(end[n] for n in names))))
+    if min(spans.values())<=0 or row["clock_deltas_s"]!={n:spans[k] for n,k in zip(names,CLOCKS)} or \
+            row["process_wall_s"]!=spans["monotonic"]:
+        raise ValueError("target clock deltas differ from raw boundaries")
+    return spans
+
+
+def complete_clock_check(source, identity, spans, baselines):
+    if set(spans)!=set(CLOCKS) or any(not math.isfinite(v) or v<=0 for v in spans.values()) or \
+            any(not math.isfinite(r["q"]) or r["q"]<=0 for r in baselines):
+        raise ValueError("complete interval must have positive clock durations")
+    q=spans["raw"]/spans["monotonic"]
+    # Keep first and previous explicitly, even when they refer to the same run.
+    refs=baselines[:1]+baselines[-1:] if baselines else []
+    return dict(source=source,identity=identity,clock_elapsed_s=spans,q=q,baselines=refs,
+                conflict=any(abs(q/ref["q"]-1)>.02 for ref in refs))
+
+
+class CompleteClockGuard:
+    """Compare whole intervals by source; prefix samples never gate formal runs."""
+    def __init__(self, previous, boot_id, journal, offset):
+        self.boot_id,self.journal,self.offset=boot_id,Path(journal),offset
+        self.process_baselines,self.driver_baselines=[],[]
+        self.checks,self.seen=[],set()
+        self.error=None
+        starts={r["attempt_id"]:r for r in previous if r["type"]=="task_start"}
+        for end in (r for r in previous if r["type"]=="task_end"):
+            start=starts[end["attempt_id"]]
+            if start["boot_id"]!=boot_id or end.get("returncode")!=0 or end.get("reason") is not None or \
+                    not end.get("n4096_calls_known",True) or not end.get("n4096_calls") or end.get("clock_conflict"):
+                continue
+            driver_spans=resource_span(start,end)
+            if (end.get("driver_wall_s") or 0)>=10 and end.get("clock_elapsed_s"):
+                self.driver_baselines.append(dict(identity=end["attempt_id"],q=driver_spans["raw"]/driver_spans["monotonic"]))
+            if start.get("journal"):
+                rows=read_records(P1/start["journal"])
+                for row in attempt_measurements(rows,start["prior_measurement_starts"],end["n4096_calls"],complete=True):
+                    spans=process_clock_span(row)
+                    if spans["monotonic"]>=10:
+                        self.process_baselines.append(dict(identity=list(measurement_key(row)),attempt_id=end["attempt_id"],
+                            q=spans["raw"]/spans["monotonic"]))
+
+    def inspect(self, rows, attempt):
+        count=sum(r["type"]=="measurement_start" for r in rows)-self.offset
+        for row in attempt_measurements(rows,self.offset,count):
+            key=measurement_key(row)
+            if key in self.seen:
+                continue
+            check=complete_clock_check("target_process",list(key),process_clock_span(row),self.process_baselines)
+            self.checks.append(check)
+            self.seen.add(key)
+            if check["conflict"]:
+                self.error="complete target process RAW/MONOTONIC changed >2% relative to first or previous"
+                return False
+            if check["clock_elapsed_s"]["monotonic"]>=10:
+                self.process_baselines.append(dict(identity=list(key),attempt_id=attempt,q=check["q"]))
+        return True
+
+    def poll(self, attempt):
+        if not self.journal.exists():
+            return True
+        # A running writer may have only flushed part of its final JSON line.
+        lines=self.journal.read_bytes().splitlines(keepends=True)
+        rows=[json.loads(line) for line in lines if line.endswith(b"\n")]
+        return self.inspect(rows,attempt)
+
+    def finish(self, rows, attempt, spans, calls):
+        try:
+            self.inspect(rows,attempt)
+            attempt_measurements(rows,self.offset,calls,complete=True)
+            driver=complete_clock_check("driver",attempt,spans,self.driver_baselines)
+            if driver["conflict"] and self.error is None:
+                self.error="complete driver RAW/MONOTONIC changed >2% relative to first or previous"
+            complete=len(self.checks)==calls
+            if not complete and self.error is None:
+                self.error="complete clock checks do not cover all actual target calls"
+        except (ValueError,KeyError,TypeError) as error:
+            self.error=str(error)
+            driver=None
+            complete=False
+        conflict=any(c["conflict"] for c in self.checks) or bool(driver and driver["conflict"])
+        return dict(clock_conflict=conflict,clock_guard=dict(schema=1,mode="complete_target_and_driver",
+            threshold_fraction=.02,boot_id=self.boot_id,process_checks=self.checks,driver_check=driver,
+            complete=complete,error=self.error))
+
+
+def validate_complete_clock_record(record, ledger_rows, journal_rows, journal_path):
+    matches=[(i,r) for i,r in enumerate(ledger_rows) if r["type"]=="task_end" and r["attempt_id"]==record["attempt_id"]]
+    if len(matches)!=1:
+        raise ValueError("formal clock record lacks its unique primary resource end")
+    index,end=matches[0]
+    fields=lambda r:{k:v for k,v in r.items() if k not in ("type","at")}
+    if fields(end)!=fields(record) or end.get("returncode")!=0 or end.get("reason") is not None or \
+            end.get("n4096_calls_known") is not True:
+        raise ValueError("formal batch clock record differs from its valid primary end")
+    starts=[r for r in ledger_rows[:index] if r["type"]=="task_start" and r["attempt_id"]==end["attempt_id"]]
+    if len(starts)!=1 or starts[0]["task"]!=end["task"] or \
+            starts[0].get("journal")!=str(Path(journal_path).resolve().relative_to(P1)):
+        raise ValueError("formal resource start does not identify this task journal")
+    start=starts[0]
+    spans=resource_span(start,end)
+    count=start["prior_measurement_starts"]+end["n4096_calls"]
+    keys={measurement_key(r) for r in [r for r in journal_rows if r["type"]=="measurement_start"][:count]}
+    prefix=[r for r in journal_rows if r["type"] not in ("measurement_start","measurement") or measurement_key(r) in keys]
+    guard=CompleteClockGuard(ledger_rows[:index],start["boot_id"],journal_path,start["prior_measurement_starts"])
+    expected=guard.finish(prefix,end["attempt_id"],spans,end["n4096_calls"])
+    if end.get("clock_conflict") is not False or expected["clock_conflict"] or \
+            expected["clock_guard"]["complete"] is not True or expected["clock_guard"]["error"] is not None or \
+            end.get("clock_guard")!=expected["clock_guard"]:
+        raise ValueError("formal clock fields lack exact raw source/identity/check coverage")
+    return True
+
+
 def controlled(command, directory, task, role, call_upper=0, journal=None,
-               direct_calls=None, ledger=LEDGER, time_limit=None, diagnostic_observer=None):
+               direct_calls=None, ledger=LEDGER, time_limit=None, diagnostic_observer=None,
+               complete_clock_guard=False):
     """Caller holds the performance lock. Unknown starts block future work."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
@@ -211,6 +378,9 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
     argv = list(map(str, command))
     if diagnostic_observer is not None:
         diagnostic_observer.validate(task, argv, call_upper, journal)
+    if complete_clock_guard and (journal is None or diagnostic_observer is not None):
+        raise ValueError("formal complete-clock guard needs a target journal and no diagnostic observer")
+    guard=CompleteClockGuard(previous_rows,boot_id,journal,prior_count) if complete_clock_guard else None
     append(ledger, "task_start", task=task, role=role, command=argv,
            attempt_id=attempt, clock_start_ns=before, call_upper=call_upper,
            journal=str(Path(journal).resolve().relative_to(P1)) if journal else None,
@@ -228,7 +398,12 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
                 spans = elapsed(before, current)
                 if diagnostic_observer is not None:
                     diagnostic_observer.sample("interval", current, clock_baselines)
-                if diagnostic_observer is None and call_upper>0 and spans["monotonic"] >= 10 and clock_baselines and any(
+                if guard is not None and not guard.poll(attempt):
+                    reason=guard.error
+                    stop(child)
+                    cleanup_recorded_children(journal)
+                    break
+                if guard is None and diagnostic_observer is None and call_upper>0 and spans["monotonic"] >= 10 and clock_baselines and any(
                         abs((spans["raw"] / spans["monotonic"]) / baseline - 1) > .02
                         for baseline in (clock_baselines[0], clock_baselines[-1])):
                     reason = "RAW/MONOTONIC changed >2% relative to first or previous long interval"
@@ -270,6 +445,10 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
         if calls > call_upper:
             reason = "actual calls exceeded the reserved upper bound"
         observation = {}
+        if guard is not None:
+            observation=guard.finish(rows,attempt,spans,calls)
+            if guard.error:
+                reason=reason or guard.error
         if diagnostic_observer is not None:
             try:
                 observation = diagnostic_observer.finish(after, rows, stdout, code, clock_baselines)
@@ -329,6 +508,18 @@ def validate_task(job, directory, protocol, historical=False):
             raise ValueError(f"invalid measurement hidden by summary: {path}")
         if row.get("process_wall_clock") != "CLOCK_MONOTONIC" or row["kernel_s"] > row["process_wall_s"] + .005:
             raise ValueError(f"invalid same-domain time guard: {path}")
+    if protocol["measurement"].get("clock_health",{}).get("guard")=="completed_per_target_process_and_driver_first_and_previous_same_boot":
+        ledger=Path(directory)/"driver.jsonl"
+        attempts=[r for r in read_records(ledger) if r["type"]=="task_end" and r["task"]==job["id"]] if ledger.exists() else []
+        if not attempts or sum(r["n4096_calls"] for r in attempts)!=summary["process_runs"]:
+            raise ValueError("formal summary lacks its complete clock/resource attempt coverage")
+        for record in attempts:
+            guard=record.get("clock_guard",{})
+            if record.get("clock_conflict") is not False or record.get("returncode")!=0 or record.get("reason") is not None or \
+                    guard.get("schema")!=1 or guard.get("mode")!="complete_target_and_driver" or \
+                    guard.get("complete") is not True or guard.get("error") is not None:
+                raise ValueError("formal summary belongs to a failed or incomplete clock check")
+            validate_complete_clock_record(record,read_records(LEDGER),rows,path)
     return "failed" if summary["failed_trials"] else "complete"
 
 
@@ -480,8 +671,14 @@ def freeze_check(protocol, manifest, protocol_path, execute=False):
             protocol["measurement"]["process_clock"]!="CLOCK_MONOTONIC":
         raise ValueError("formal target/space/flags/clock/affinity differs from this assignment")
     expected = plan(protocol,manifest["stage"],manifest.get("algorithms"))
+    if any(manifest.get(key)!=expected[key] for key in ("schema","protocol","target_sha256","framework_sha256","driver_sha256")):
+        raise ValueError("batch manifest identity differs from the exact frozen plan")
     if manifest["jobs"] != expected["jobs"]:
         raise ValueError("planned jobs differ from the frozen protocol")
+    if manifest["stage"]!="diagnostic" and (protocol["measurement"]["clock_health"]["guard"]!=
+            "completed_per_target_process_and_driver_first_and_previous_same_boot" or
+            protocol["measurement"]["clock_health"]["raw_monotonic_ratio_change_fraction"]!=.02):
+        raise ValueError("formal complete-clock guard differs from the reviewed mode/threshold")
     for key in ("target", "framework"):
         if sha256(P1 / protocol[key]["path"]) != protocol[key]["sha256"]:
             raise ValueError(f"{key} changed after freeze; historical analysis needs the matching checkout")
@@ -622,7 +819,8 @@ def execute(directory, manifest, protocol, protocol_path, reference=None, max_jo
                 upper = max(0, job.get("budget", 1) * job.get("repeats", 1) - already)
                 print(json.dumps(dict(task=job["id"], role=job["role"], state="running")), flush=True)
                 record = controlled(command(job, directory, protocol, protocol_path), directory,
-                    job["id"], job["role"], upper, journal=path)
+                    job["id"], job["role"], upper, journal=path,
+                    complete_clock_guard=manifest["stage"]!="diagnostic")
                 append(Path(directory) / "driver.jsonl", "task_end", **{k:v for k,v in record.items() if k not in ("type", "at")})
                 if validate_task(job, directory, protocol) != "complete":
                     raise ValueError("task did not complete its valid frozen job")

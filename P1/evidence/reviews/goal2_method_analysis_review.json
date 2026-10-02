@@ -3,7 +3,7 @@
   "role": "independent_method_analysis_review",
   "reviewer_authored_under_review": false,
   "started_at_utc": "2026-10-02T14:26:56Z",
-  "state": "ANALYSIS_REGRESSION_PASSED_PERFORMANCE_GATE_PENDING",
+  "state": "METHOD_ANALYSIS_CODE_GATE_REVIEWED_PROTOCOL_FREEZE_AND_REAL_EXPERIMENTS_PENDING",
   "source_snapshot": {
     "scripts/summarize_v2.py": "5b710a0ca02e907b690d2bbac691577e9d0b5b5e89de6220881b495a7dc7295d",
     "tests/test_goal2_summary.py": "df6ff9be996cf416b4a838c85d8e869793ba6e1a85ee13044cb2e3b7a31e9693",
@@ -13,8 +13,9 @@
     "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
   },
   "latest_static_snapshot": {
-    "scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
-    "tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7"
+    "scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests/test_goal2_summary.py": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
   },
   "executed_by_reviewer": {
     "tests": 37,
@@ -163,6 +164,676 @@
       "resolution_pp": null,
       "performance_gate": false,
       "n4096_calls_spawned_by_reviewer": 0
+    },
+    "current_analysis_test_run": {
+      "reviewer": "/root/implementation",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "started_at_utc": "2026-10-02T16:37:28.018903+00:00",
+      "ended_at_utc": "2026-10-02T16:37:28.134404+00:00",
+      "exit_code": 0,
+      "tests": 43,
+      "suite_reported_s": 0.014,
+      "clock_start_ns": {
+        "monotonic": 77955383563204,
+        "raw": 81922505930735,
+        "realtime": 1790959048018919998
+      },
+      "clock_end_ns": {
+        "monotonic": 77955499043897,
+        "raw": 81922619117102,
+        "realtime": 1790959048134400664
+      },
+      "elapsed_s": {
+        "monotonic": 0.115480693,
+        "raw": 0.113186367,
+        "realtime": 0.115480666
+      },
+      "source_sha256_before": {
+        "scripts/summarize_v2.py": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+        "tests/test_goal2_summary.py": "e2818f35365c88c19d6c22332b0cb0688b8b7c3e0d1fea1b2d3c2f16b7235bf2"
+      },
+      "source_sha256_after": {
+        "scripts/summarize_v2.py": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+        "tests/test_goal2_summary.py": "e2818f35365c88c19d6c22332b0cb0688b8b7c3e0d1fea1b2d3c2f16b7235bf2"
+      },
+      "source_unchanged": true,
+      "exclusive_nonblocking_lock_acquired": true,
+      "n4096_calls": 0,
+      "c_compilations": 0,
+      "plots": 0
+    },
+    "current_analysis_tests": 43,
+    "previous_analysis_tests": 37,
+    "overlapping_versions_are_not_unique_test_cases": true,
+    "joint_independent_raw_recount": {
+      "reviewer": "/root/implementation",
+      "checked_at_utc": "2026-10-02T16:47:32.846753+00:00",
+      "independent_of_author_analysis_functions": true,
+      "initial_fixed_commit": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+      "initial_inputs_checked": 32,
+      "initial_raw_matches_git": true,
+      "raw_files_hashed": 159,
+      "raw_unchanged": true,
+      "ordinary_initial_valid": 26,
+      "original_interrupted": 1,
+      "followup_valid_formal_target": 10,
+      "followup_valid_diagnostic_kernel": 2,
+      "global_calls": 41,
+      "global_attempts": 57,
+      "mono_driver_s": 2743.5990474280015,
+      "resource_max_domain_s": 2755.910424768,
+      "partial_aa": [
+        {
+          "method": "M0",
+          "tier": "F",
+          "a_samples": [
+            58.778687,
+            61.583714
+          ],
+          "b_samples": [
+            60.847298,
+            58.235882,
+            51.987427
+          ],
+          "a_median_s": 60.1812005,
+          "b_median_s": 58.235882,
+          "paired_difference_s": [
+            2.068611000000004,
+            -3.347832000000004
+          ],
+          "paired_difference_pct": [
+            3.5193215527254074,
+            -5.436229455079644
+          ],
+          "signed_median_difference_pct": -3.2324355177992925,
+          "complete": false
+        },
+        {
+          "method": "M0",
+          "tier": "M",
+          "a_samples": [
+            84.766418,
+            95.408348,
+            86.904335
+          ],
+          "b_samples": [
+            85.556702,
+            83.758797
+          ],
+          "a_median_s": 86.904335,
+          "b_median_s": 84.6577495,
+          "paired_difference_s": [
+            0.7902839999999998,
+            -11.649551000000002
+          ],
+          "paired_difference_pct": [
+            0.9323078863613166,
+            -12.210200935456928
+          ],
+          "signed_median_difference_pct": -2.585124781174619,
+          "complete": false
+        },
+        {
+          "method": "M1",
+          "tier": "F",
+          "a_samples": [
+            63.237171,
+            55.668694,
+            49.826942
+          ],
+          "b_samples": [
+            64.870026,
+            54.526001,
+            56.695389
+          ],
+          "a_median_s": 55.668694,
+          "b_median_s": 56.695389,
+          "paired_difference_s": [
+            1.6328549999999993,
+            -1.1426930000000013,
+            6.868446999999996
+          ],
+          "paired_difference_pct": [
+            2.58211266281978,
+            -2.0526671597505097,
+            13.784604722481264
+          ],
+          "signed_median_difference_pct": 1.8442951077673797,
+          "complete": true
+        },
+        {
+          "method": "M1",
+          "tier": "M",
+          "a_samples": [
+            84.853203,
+            83.857307,
+            84.139397
+          ],
+          "b_samples": [
+            87.179337,
+            83.895874,
+            84.750038
+          ],
+          "a_median_s": 84.139397,
+          "b_median_s": 84.750038,
+          "paired_difference_s": [
+            2.3261340000000104,
+            0.03856700000000046,
+            0.6106410000000011
+          ],
+          "paired_difference_pct": [
+            2.7413626330640817,
+            0.045991221730989906,
+            0.7257491992722409
+          ],
+          "signed_median_difference_pct": 0.7257491992722409,
+          "complete": true
+        }
+      ],
+      "filled_aa": [
+        {
+          "method": "M0",
+          "tier": "F",
+          "a_samples": [
+            58.778687,
+            61.583714,
+            35.371246
+          ],
+          "b_samples": [
+            60.847298,
+            58.235882,
+            51.987427
+          ],
+          "a_median_s": 58.778687,
+          "b_median_s": 58.235882,
+          "paired_difference_s": [
+            2.068611000000004,
+            -3.347832000000004,
+            16.616180999999997
+          ],
+          "paired_difference_pct": [
+            3.5193215527254074,
+            -5.436229455079644,
+            46.976521550866494
+          ],
+          "signed_median_difference_pct": -0.9234724824663032,
+          "complete": true
+        },
+        {
+          "method": "M0",
+          "tier": "M",
+          "a_samples": [
+            84.766418,
+            95.408348,
+            86.904335
+          ],
+          "b_samples": [
+            85.556702,
+            83.758797,
+            65.152481
+          ],
+          "a_median_s": 86.904335,
+          "b_median_s": 83.758797,
+          "paired_difference_s": [
+            0.7902839999999998,
+            -11.649551000000002,
+            -21.75185400000001
+          ],
+          "paired_difference_pct": [
+            0.9323078863613166,
+            -12.210200935456928,
+            -25.029653584024324
+          ],
+          "signed_median_difference_pct": -3.619540958457368,
+          "complete": true
+        },
+        {
+          "method": "M1",
+          "tier": "F",
+          "a_samples": [
+            63.237171,
+            55.668694,
+            49.826942
+          ],
+          "b_samples": [
+            64.870026,
+            54.526001,
+            56.695389
+          ],
+          "a_median_s": 55.668694,
+          "b_median_s": 56.695389,
+          "paired_difference_s": [
+            1.6328549999999993,
+            -1.1426930000000013,
+            6.868446999999996
+          ],
+          "paired_difference_pct": [
+            2.58211266281978,
+            -2.0526671597505097,
+            13.784604722481264
+          ],
+          "signed_median_difference_pct": 1.8442951077673797,
+          "complete": true
+        },
+        {
+          "method": "M1",
+          "tier": "M",
+          "a_samples": [
+            84.853203,
+            83.857307,
+            84.139397
+          ],
+          "b_samples": [
+            87.179337,
+            83.895874,
+            84.750038
+          ],
+          "a_median_s": 84.139397,
+          "b_median_s": 84.750038,
+          "paired_difference_s": [
+            2.3261340000000104,
+            0.03856700000000046,
+            0.6106410000000011
+          ],
+          "paired_difference_pct": [
+            2.7413626330640817,
+            0.045991221730989906,
+            0.7257491992722409
+          ],
+          "signed_median_difference_pct": 0.7257491992722409,
+          "complete": true
+        }
+      ],
+      "new_aa": [
+        {
+          "method": "followup",
+          "tier": "F",
+          "a_samples": [
+            36.219837,
+            41.888515
+          ],
+          "b_samples": [
+            36.487453,
+            39.956944
+          ],
+          "a_median_s": 39.054176,
+          "b_median_s": 38.222198500000005,
+          "paired_difference_s": [
+            0.26761600000000385,
+            -1.9315709999999982
+          ],
+          "paired_difference_pct": [
+            0.738865832002511,
+            -4.611218612070633
+          ],
+          "signed_median_difference_pct": -2.130316358486206,
+          "complete": true
+        },
+        {
+          "method": "followup",
+          "tier": "M",
+          "a_samples": [
+            68.213715,
+            81.377769
+          ],
+          "b_samples": [
+            84.824883,
+            82.608643
+          ],
+          "a_median_s": 74.79574199999999,
+          "b_median_s": 83.716763,
+          "paired_difference_s": [
+            16.611168000000006,
+            1.230874
+          ],
+          "paired_difference_pct": [
+            24.351654209127904,
+            1.51254330897177
+          ],
+          "signed_median_difference_pct": 11.927177619282148,
+          "complete": true
+        }
+      ],
+      "new_max_abs_pair_difference_pct": 24.351654209127904,
+      "complete_clock_intervals_checked": 80,
+      "complete_clock_conflicts": [],
+      "clock_trace_points_checked": 360,
+      "clock_trace_prefix_conflicts": 0,
+      "completed_followup_jobs": [
+        "clock-followup-01-M-B3",
+        "clock-followup-02-F-A3",
+        "clock-followup-03-multiclock-F",
+        "clock-followup-04-multiclock-M",
+        "clock-followup-05-F-A1",
+        "clock-followup-06-F-B1",
+        "clock-followup-07-M-B1",
+        "clock-followup-08-M-A1",
+        "clock-followup-09-M-A2",
+        "clock-followup-10-M-B2",
+        "clock-followup-11-F-B2",
+        "clock-followup-12-F-A2"
+      ],
+      "selected_arrangement": "M1",
+      "resolution_pp": 14,
+      "new_AA_exceeds_resolution": true,
+      "formal_admission": false,
+      "author_summary_values_match_independent_arithmetic": true,
+      "n4096_calls_spawned_by_reviewer": 0
+    },
+    "formal_reader_independent_test_run": {
+      "role": "independent method/analysis reviewer",
+      "started_utc": "2026-10-02T17:29:21.777506+00:00",
+      "ended_utc": "2026-10-02T17:29:21.871061+00:00",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "cwd": "/home/addaswsw/lab/Software_system_optimization",
+      "flock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+      "returncode": 0,
+      "source_before": {
+        "P1/scripts/summarize_v2.py": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd",
+        "P1/tests/test_goal2_summary.py": "f06a30eb44293c2ee3b8fe8519489a6afe6b7600b0e144688780992cf67f36ef",
+        "P1/scripts/experiment_v2.py": "138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb"
+      },
+      "source_after": {
+        "P1/scripts/summarize_v2.py": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd",
+        "P1/tests/test_goal2_summary.py": "f06a30eb44293c2ee3b8fe8519489a6afe6b7600b0e144688780992cf67f36ef",
+        "P1/scripts/experiment_v2.py": "138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb"
+      },
+      "source_unchanged": true,
+      "n4096_calls": 0,
+      "timing": {
+        "CLOCK_MONOTONIC_start_ns": 81038802753653,
+        "CLOCK_MONOTONIC_end_ns": 81038896283756,
+        "CLOCK_MONOTONIC_elapsed_s": 0.093530103,
+        "CLOCK_MONOTONIC_RAW_start_ns": 85036579874800,
+        "CLOCK_MONOTONIC_RAW_end_ns": 85036674986667,
+        "CLOCK_MONOTONIC_RAW_elapsed_s": 0.095111867,
+        "CLOCK_REALTIME_start_ns": 1790962161777523907,
+        "CLOCK_REALTIME_end_ns": 1790962161871055435,
+        "CLOCK_REALTIME_elapsed_s": 0.093531528
+      },
+      "known_open": "AS9/S4: read_batch panel path still imports runtime panel/reference_best/live LEDGER; 53 passing direct-task fixtures do not close it.",
+      "tests": 53,
+      "suite_reported_s": 0.026,
+      "test_failures": 0,
+      "test_errors": 0,
+      "log": "P1/evidence/commands/goal2_formal_analysis_independent_tests.log",
+      "c_compilations": 0,
+      "plots": 0,
+      "fixture_data_are_formal_measurements": false
+    },
+    "latest_analysis_version_tests": 59,
+    "saved_panel_independent_test_run": {
+      "reviewer": "/root/implementation",
+      "started_utc": "2026-10-02T18:01:40.429606+00:00",
+      "ended_utc": "2026-10-02T18:01:40.944906+00:00",
+      "source_before": {
+        "P1/scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+        "P1/tests/test_goal2_summary.py": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b",
+        "P1/scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+      },
+      "source_after": {
+        "P1/scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+        "P1/tests/test_goal2_summary.py": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b",
+        "P1/scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+      },
+      "source_unchanged": true,
+      "test_command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "controlled_primary_ledger_record": {
+        "type": "task_end",
+        "at": "2026-10-02T18:01:40.942131+00:00",
+        "task": "goal2-formal-panel-independent-59",
+        "role": "analysis_regression",
+        "attempt_id": "3cd71d353fc9427fb6916d7d498b0403",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.50528785,
+        "clock_elapsed_s": {
+          "monotonic": 0.50528785,
+          "raw": 0.516258607,
+          "realtime": 0.50528825
+        },
+        "clock_end_ns": {
+          "monotonic": 82941712057750,
+          "raw": 86975512680349,
+          "realtime": 1790964100941860734
+        },
+        "resource_s": 0.516258607,
+        "resource_wall_s": 0.516258607,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": ".cache/independent-analysis-59/goal2-formal-panel-independent-59.stdout.txt",
+        "stderr": ".cache/independent-analysis-59/goal2-formal-panel-independent-59.stderr.txt"
+      },
+      "n4096_calls": 0,
+      "py_compile_sources": 3,
+      "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+      "known_clean_clone_gap": "numeric baseline fixture TemporaryDirectory(dir=P1/.cache) relies on pre-existing cache; must be fixed by owner and independently rechecked",
+      "tests": 59,
+      "suite_reported_s": 0.345,
+      "test_failures": 0,
+      "test_errors": 0,
+      "log": "P1/evidence/commands/goal2_formal_panel_independent_tests.log",
+      "py_compile_exit": 0,
+      "fixture_data_are_formal_measurements": false
+    },
+    "numeric_independent_raw_recount": {
+      "reviewer": "/root/implementation",
+      "checked_utc": "2026-10-02T18:06:13.576503+00:00",
+      "imports_author_functions": false,
+      "raw_and_identity_files_read": 39,
+      "raw_hashes_unchanged": true,
+      "ledger_snapshot_sha256": "c4b4ae3fed2c689d6bc8278b75bb1c2bcf6fba6f500239731650e5e07df1d683",
+      "numeric_jobs": [
+        {
+          "task": "goal2-n4096-O0-s24",
+          "config": {
+            "s": 24,
+            "opt": "O0"
+          },
+          "attempt_id": "6ebc8c18ac6e482ab3f2afcc1d9a6555",
+          "valid_check_elements": 24,
+          "max_abs_error": 2.937539e-12,
+          "max_rel_error": 2.814528e-15,
+          "process_clock_elapsed_s": {
+            "monotonic": 225.600983835,
+            "raw": 229.56141475,
+            "realtime": 229.547167149
+          },
+          "process_q": 1.0175550250166312,
+          "driver_clock_elapsed_s": {
+            "monotonic": 225.843456469,
+            "raw": 229.807998985,
+            "realtime": 229.789640417
+          },
+          "driver_q": 1.0175543829251665,
+          "first_previous_process": [
+            {
+              "identity": [
+                "e68dcc091e74490694a8b3532e8c215d",
+                0,
+                0,
+                248077
+              ],
+              "attempt_id": "d30f547b4da1406eac53b6b92250e447",
+              "q": 0.9981160219083189
+            },
+            {
+              "identity": [
+                "409683d581b04d49a0a0ba7bfe7c86a0",
+                0,
+                0,
+                299225
+              ],
+              "attempt_id": "c5b664ef49ef49e2a16e8faa2c043d6a",
+              "q": 1.000393132614509
+            }
+          ],
+          "first_previous_driver": [
+            {
+              "identity": "a754f5ea5bc94becb31302b4966a852d",
+              "q": 0.9986300261262919
+            },
+            {
+              "identity": "c5b664ef49ef49e2a16e8faa2c043d6a",
+              "q": 1.0002454449461908
+            }
+          ],
+          "clock_only": true,
+          "formal_score_used": false
+        },
+        {
+          "task": "goal2-n4096-O3-s128",
+          "config": {
+            "s": 128,
+            "opt": "O3"
+          },
+          "attempt_id": "5fa6da79df0a4b178193737082b6bf0b",
+          "valid_check_elements": 24,
+          "max_abs_error": 2.937539e-12,
+          "max_rel_error": 2.814528e-15,
+          "process_clock_elapsed_s": {
+            "monotonic": 40.114005628,
+            "raw": 40.818841643,
+            "realtime": 40.711662383
+          },
+          "process_q": 1.0175708210627565,
+          "driver_clock_elapsed_s": {
+            "monotonic": 40.571010017,
+            "raw": 41.283948982,
+            "realtime": 41.168667399
+          },
+          "driver_q": 1.0175726205657998,
+          "first_previous_process": [
+            {
+              "identity": [
+                "e68dcc091e74490694a8b3532e8c215d",
+                0,
+                0,
+                248077
+              ],
+              "attempt_id": "d30f547b4da1406eac53b6b92250e447",
+              "q": 0.9981160219083189
+            },
+            {
+              "identity": [
+                "a03074680b044116bcec67e1e2c0a6a6",
+                0,
+                0,
+                327120
+              ],
+              "attempt_id": "6ebc8c18ac6e482ab3f2afcc1d9a6555",
+              "q": 1.0175550250166312
+            }
+          ],
+          "first_previous_driver": [
+            {
+              "identity": "a754f5ea5bc94becb31302b4966a852d",
+              "q": 0.9986300261262919
+            },
+            {
+              "identity": "6ebc8c18ac6e482ab3f2afcc1d9a6555",
+              "q": 1.0175543829251665
+            }
+          ],
+          "clock_only": true,
+          "formal_score_used": false
+        }
+      ],
+      "numeric_actual_processes": 2,
+      "n4096_calls_spawned_by_reviewer": 0,
+      "formal_scoring_samples_added": 0
+    },
+    "final_fixture_related_regression": {
+      "reviewer": "/root/implementation",
+      "checked_utc": "2026-10-02T18:10:14.747026+00:00",
+      "selector": "test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "source_before": {
+        "P1/scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+        "P1/tests/test_goal2_summary.py": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+        "P1/scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+      },
+      "source_after": {
+        "P1/scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+        "P1/tests/test_goal2_summary.py": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+        "P1/scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+      },
+      "source_unchanged": true,
+      "controlled_primary_ledger_record": {
+        "type": "task_end",
+        "at": "2026-10-02T18:10:14.735246+00:00",
+        "task": "goal2-numeric-fixture-independent-final",
+        "role": "analysis_regression",
+        "attempt_id": "10b40859670948f7ae6b126422640863",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.265324297,
+        "clock_elapsed_s": {
+          "monotonic": 0.265324297,
+          "raw": 0.269485125,
+          "realtime": 0.265325591
+        },
+        "clock_end_ns": {
+          "monotonic": 83444940961426,
+          "raw": 87489041307146,
+          "realtime": 1790964614734939353
+        },
+        "resource_s": 0.269485125,
+        "resource_wall_s": 0.269485125,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": ".cache/independent-analysis-59/goal2-numeric-fixture-independent-final.stdout.txt",
+        "stderr": ".cache/independent-analysis-59/goal2-numeric-fixture-independent-final.stderr.txt"
+      },
+      "n4096_calls": 0,
+      "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+      "scope": "one fixture for ignored cache creation and pinned numeric-history prefix; not a repeat of all 59, not clean clone",
+      "suite_reported_s": 0.01,
+      "log": "P1/evidence/commands/goal2_formal_panel_independent_tests.log",
+      "is_full_59_rerun": false
     }
   },
   "findings": [
@@ -236,6 +907,117 @@
       "fix": "after clock_complete append, global end binds canonical whole trace SHA; resume verifies hash then independently rederives ns costs and ratios",
       "state": "CLOSED_STATIC_AND_PEER_INDEPENDENT_REGRESSION",
       "regression_evidence": "evidence/reviews/goal2_followup_code_review.json"
+    },
+    {
+      "id": "AS6",
+      "severity": "coverage",
+      "owner": "/root/measurement",
+      "function": "test_goal2_summary.test_partial_shared_panel_cannot_confirm_same_reference_identity",
+      "line_at_initial_review": 211,
+      "issue": "new partial same-ref fixture does not yet exercise absent reference anchor, duplicate panel rounds and complete baseline searches with incomplete confirmation",
+      "state": "CLOSED_INDEPENDENT_REGRESSION",
+      "observed_wrong_classification": false,
+      "fix": "same fixture adds missing anchor, duplicate rounds and partial baseline confirmation",
+      "regression_evidence": "evidence/commands/goal2_joint_independent_tests.log"
+    },
+    {
+      "id": "AS7",
+      "severity": "medium",
+      "owner": "/root/measurement",
+      "function": "summarize_v2.main",
+      "line_at_initial_review": 1025,
+      "issue": "resource ledger SHA and parsed cost rows use separate reads; concurrent append can detach reported identity from analyzed snapshot",
+      "suggested_fix": "single immutable bytes snapshot for hash and parse, or reject changed identity before writing derived summary",
+      "state": "CLOSED_INDEPENDENT_REGRESSION",
+      "observed_wrong_snapshot": false,
+      "fix": "record_snapshot obtains raw bytes, parsed records and SHA from the same read; append-after-read fixture",
+      "regression_evidence": "evidence/commands/goal2_joint_independent_tests.log"
+    },
+    {
+      "id": "AS8",
+      "severity": "high",
+      "owner": "/root and /root/measurement",
+      "function": "summarize_v2.main measurement_clock_healthy plus future formal complete guard",
+      "state": "CLOSED_INDEPENDENT_SCHEMA_AND_CLI_REGRESSION",
+      "issue": "legacy absence of clock_conflict is treated healthy and predicate uses task labels; future formal missing complete checks cannot pass",
+      "actual_formal_error": false,
+      "required_fix": "strict required new schema, exact attempt/journal matches, independent raw interval/unit/check replay, missing or conflicted complete observations block KEEP",
+      "author_acknowledged": true,
+      "fix": "specified once-read ledger; exact attempt/journal/source/boot and integer three-domain nanosecond replay; all physical starts and first/previous checks; failed whole attempts excluded; incomplete/missing/conflicted health blocks valid samples and KEEP",
+      "regression_evidence": [
+        "P1/evidence/commands/goal2_formal_analysis_independent_tests.log",
+        "P1/evidence/commands/goal2_formal_panel_independent_tests.log"
+      ],
+      "tested_analysis_sha256": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd"
+    },
+    {
+      "id": "AS9",
+      "severity": "high",
+      "owner": "/root/measurement",
+      "function": "summarize_v2.read_batch:331 -> experiment_v2.panel:765,774 -> validate_task:524 / reference_best:748",
+      "state": "CLOSED_INDEPENDENT_CLI_REGRESSION",
+      "discovered_by": "/root/review (S4); independently read by /root/implementation",
+      "issue": "saved common panel analysis still reconstructs through runtime panel/reference_best and the live ex.LEDGER instead of exclusively using the specified snapshot; direct-task-only test does not cover it",
+      "actual_formal_error": false,
+      "required_fix": "read-only frozen panel/reference reconstruction without runtime resume/live ledger; test the saved panel plus real reference entry with runtime panel/reference_best/validate_task made unavailable",
+      "author_acknowledged": true,
+      "fix": "locked_panel and read-only recursive reference validation reconstruct all saved fields/hash/order without runtime panel/reference_best/validate_task; saved 20x3 synthetic-reference CLI with unavailable runtime entry points passed",
+      "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log"
+    },
+    {
+      "id": "AS10",
+      "severity": "high",
+      "owner": "/root/measurement",
+      "function": "summarize_v2.search_tables:502-524",
+      "state": "CLOSED_INDEPENDENT_REGRESSION",
+      "issue": "clock_conflict search still supplies its summary.best to classify; a healthy complete reference and common panel can produce near_optimal_observed for this invalid search even though its valid samples are zero and KEEP is blocked",
+      "actual_formal_error": false,
+      "required_fix": "preserve descriptive returned identity/reference gap but do not give invalid search a near/valid confirmation classification; add clock-invalid search plus healthy reference/panel fixture",
+      "regression_executed": true,
+      "fix": "noncomplete search preserves descriptive identity/reference gap but quality_class uncertain, point_near null, confirmation_complete false; panel_complete remains separate; invalid trajectories kept in CSV and excluded from performance plots",
+      "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log"
+    },
+    {
+      "id": "AS11",
+      "severity": "high",
+      "owner": "/root/measurement and /root",
+      "function": "summarize_v2.read_batch:360-365 / experiment_v2.freeze_check:662",
+      "state": "CLOSED_INDEPENDENT_PROTOCOL_PATH_REGRESSION",
+      "issue": "copying the manifest protocol value into the expected protocol made a path identity check self-referential",
+      "fix": "resolve the actual CLI protocol input relative to P1 and compare before update/freeze; tampering manifest protocol alone rejects",
+      "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log",
+      "actual_formal_error": false
+    },
+    {
+      "id": "AS12",
+      "severity": "boundary_scope",
+      "owner": "/root/measurement",
+      "function": "summarize_v2.numeric_clock_baseline:928 / formal_clock_health:1053",
+      "state": "CLOSED_INDEPENDENT_NUMERIC_SCOPE_REGRESSION_AND_RAW_RECOUNT",
+      "issue": "the two actual numerical-validation adapters use different source/extra validation link flags; admitting generic alternate targets into clock history would weaken source identity",
+      "fix": "strict immutable declaration of exactly O0/s24 and O3/s128 clock-only jobs; bind unique attempt/role/command/journal SHA and adapter/source/kernel/compiler/check footer; reject adapters for owned formal scores",
+      "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log",
+      "actual_numerical_jobs_checked": 2,
+      "full_matrix_element_verification_claimed": false,
+      "scoring_samples_added": 0
+    },
+    {
+      "id": "AS13",
+      "severity": "low_test_reproduction",
+      "owner": "/root/measurement",
+      "function": "test_goal2_summary.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples:495,502",
+      "state": "CLOSED_RELATED_INDEPENDENT_REGRESSION_CLEAN_CLONE_PENDING",
+      "issue": "numeric positive fixture required existing ignored .cache and used a growing live ledger with fixed last-numeric baselines; future formal attempts could stale the fixture previous identity",
+      "fix": "create ignored cache inside the test and slice the read ledger at its unique last-numeric completion; production reader/raw remain unchanged",
+      "independent_59_tests_sha256": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b",
+      "cache_only_author_59_tests_sha256": "d92fc6a530de3eef7b2b9a693041a0c74b2b75384f4fecf09a3d49085733fe9b",
+      "latest_static_tests_sha256": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+      "latest_tests_executed_by_this_reviewer": true,
+      "clean_clone_executed_by_this_reviewer": false,
+      "latest_parent_regression_pending": false,
+      "independent_final_selector": "test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples",
+      "independent_final_tests": 1,
+      "regression_evidence": "P1/evidence/commands/goal2_formal_panel_independent_tests.log"
     }
   ],
   "observations": {
@@ -314,10 +1096,10 @@
     ]
   },
   "remaining": [
-    "completed-source clock and arrangement gate after finite followup",
-    "final S3 phase plot actual visual inspection",
-    "final formal protocol/source approval before any reference/search experiment",
-    "new real reference/main/confirmation and experiment/report final review"
+    "freeze exact protocol/source before formal performance execution; full clean reproduction still required at delivery",
+    "final S3 phase plot and all formal images actual visual inspection",
+    "new complete reference/main/S3 evaluation/necessary confirmation and experiment/report final review",
+    "final report/README rewrite and clean reproduction/publication review"
   ],
   "followup_code_crosscheck": {
     "checked_at_utc": "2026-10-02T15:52:38Z",
@@ -388,6 +1170,123 @@
         "state": "PENDING_REPORT_REWRITE",
         "issue": "generic score observe snippet only base algorithms; S3 consumes fresh score inside evaluator, avoiding duplicated feedback"
       }
+    ],
+    "additional_substantive_suggestions": [
+      {
+        "id": "RS1",
+        "suggestion": "six-block base algorithm distributions plus actual costs and severe examples; link detailed round CSV"
+      },
+      {
+        "id": "RS2",
+        "suggestion": "separate structural Greedy start panel and its path/cost/stop reason from random seed counts"
+      },
+      {
+        "id": "RS3",
+        "suggestion": "charge internal rechecks in search cost and shared external confirmation once in project ledger"
+      },
+      {
+        "id": "RS4",
+        "suggestion": "retain small full-element versus large sampled correctness, tail and tolerance; move detailed case/error counts to evidence"
+      }
     ]
+  },
+  "followup_running_static_analysis": {
+    "checked_at_utc": "2026-10-02T16:18:39Z",
+    "source_checkpoint": "09afaea660f5f9a62ddacd72dcca35b98f17dd1b",
+    "root_holds_performance_lock": true,
+    "tests_executed_by_this_reviewer": 0,
+    "new_38th_fixture_executed_by_this_reviewer": false,
+    "compilations": 0,
+    "plots_or_gui": 0,
+    "n4096_calls": 0,
+    "partial_panel_same_reference_class": "uncertain",
+    "required_panel_rounds": [
+      1,
+      2,
+      3
+    ],
+    "baseline_confirmation_requires_complete_search_and_panel": true,
+    "cost_complete_is_not_measurement_health": true,
+    "formal_complete_clock_conflict_or_missing_required_fields_must_block_keep": true,
+    "future_formal_guard_not_yet_implemented_or_executed": true
+  },
+  "joint_method_boundary": {
+    "finite_clock_intervals_rechecked": 80,
+    "followup_timeline_points_rechecked": 360,
+    "complete_clock_conflicts": 0,
+    "new_prefix_conflicts": 0,
+    "selected_arrangement": "M1",
+    "resolution_pp": 14,
+    "new_max_abs_aa_pair_difference_pct": 24.351654209127904,
+    "rho_is_noise_bound": false,
+    "five_percent_resolution_guaranteed": false,
+    "supports_coarse_configuration_and_actual_cost_comparison_design": true,
+    "formal_execution_approved": false,
+    "formal_complete_guard_implemented_and_reviewed": true,
+    "unchanged_thresholds": {
+      "clock_ratio_fraction": 0.02,
+      "near_optimal_pct": 5,
+      "quality_risk_pp": 2,
+      "useful_cost_saving_fraction": 0.1
+    },
+    "same_configuration_selection_quality_gain_pp": 0,
+    "different_configuration_insufficient_risk_resolution": "uncertain/INCONCLUSIVE",
+    "interrupted_original_counterfactual_finish_proven": false,
+    "M1_causal_variance_reduction_proven": false
+  },
+  "joint_checkpoint_cost_addition": {
+    "happened_after_independent_window_returned": true,
+    "role": "screenshot_validation",
+    "new_calls": 0,
+    "mono_driver_s": 2.75671459,
+    "max_domain_resource_s": 2.757842945,
+    "method_values_unchanged": true,
+    "raw_benchmark_values_unchanged": true,
+    "ledger_sha256": "a59afd3fd4f1f46bcf148927589cd0e6197b263feeaa89c3ac1ba8e8b3386542",
+    "summary_sha256": "5c446acce299d85d7bc13ea3d43df921263bca30636462c9ab828775f40d1a53",
+    "regeneration_evidence": "evidence/commands/goal2_joint_checkpoint_regeneration.json"
+  },
+  "formal_reader_boundary": {
+    "reviewed_driver_sha256": "138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb",
+    "typed_ns_recomputed": true,
+    "first_previous_individual_process_not_driver_average": true,
+    "unknown_cost_is_zero": false,
+    "actual_cost_complete_distinct_from_clock_health": true,
+    "different_identity_risk_supported": false,
+    "different_identity_decision": "INCONCLUSIVE",
+    "same_identity_gain_pp": 0,
+    "minimum_actual_driver_saving_fraction": 0.1,
+    "required_independent_holdout_seeds": 3,
+    "actual_formal_samples_in_this_review": 0,
+    "formal_execution_approved": false,
+    "unresolved": [],
+    "protocol_state_at_read": "draft",
+    "strict_saved_panel_snapshot_dependency_closed": true,
+    "invalid_clock_search_near_classification_closed": true,
+    "numeric_only_scoring_isolated": true,
+    "actual_protocol_input_path_checked": true,
+    "production_analyzer_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "full_parent_regression_pending": false,
+    "clean_clone_pending": true,
+    "production_analysis_code_gate_reviewed": true,
+    "protocol_freeze_pending": true
+  },
+  "parent_combined_regression_read": {
+    "performed_by": "/root",
+    "independent_reviewer_read_actual_outputs": true,
+    "nongui_tests": 174,
+    "nongui_suite_s": 11.514,
+    "native_screenshot_tests": 4,
+    "native_suite_s": 2.685,
+    "failures": 0,
+    "sixteen_python_syntax_checks_reported_by_parent": true,
+    "latest_fixture_author_related_case_tests": 1,
+    "latest_fixture_author_related_case_suite_s": 0.01,
+    "evidence_sha256": {
+      "goal2-all-nongui-tests.stderr.txt": "d6d64a1d9fd63acf175cf6d6539d3a5e6a31b8b2d24a915455b0862d2ef64163",
+      "goal2-all-native-screenshot-tests.stderr.txt": "1128a55b081bca4d0e5bfdd00effe3df665e81358992ab235dd8be5ed7e79c61",
+      "formal-summary-numeric-prefix-regression.stderr.txt": "fd447875638afae223cf4c9a5fb9bc603974fbdf7ec133f9b1597f4f21876b05"
+    },
+    "these_are_not_additional_distinct_analysis_cases": true
   }
 }

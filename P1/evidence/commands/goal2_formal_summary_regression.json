@@ -1,0 +1,290 @@
+[
+  {
+    "author": "/root/measurement",
+    "source_sha256": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd",
+    "tests_sha256": "f06a30eb44293c2ee3b8fe8519489a6afe6b7600b0e144688780992cf67f36ef",
+    "commands": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T17:20:52.169472+00:00",
+        "task": "formal-summary-regression-1",
+        "role": "short_test",
+        "attempt_id": "1ef530417ee14864945a9fe0ba1fe5e8",
+        "returncode": 1,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254986859,
+        "clock_elapsed_s": {
+          "monotonic": 0.254986859,
+          "raw": 0.26394196,
+          "realtime": 0.254987668
+        },
+        "clock_end_ns": {
+          "monotonic": 80537734454210,
+          "raw": 84526701646435,
+          "realtime": 1790961652169221797
+        },
+        "resource_s": 0.26394196,
+        "resource_wall_s": 0.26394196,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0002454449461908
+        ],
+        "stdout": "evidence/commands/formal-summary-regression-1.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-regression-1.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T17:22:00.152134+00:00",
+        "task": "formal-summary-regression-2",
+        "role": "short_test",
+        "attempt_id": "ccdcdb3a209c4804b1917c767dad6bd7",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.26388331,
+        "clock_elapsed_s": {
+          "monotonic": 0.26388331,
+          "raw": 0.267883751,
+          "realtime": 0.263884179
+        },
+        "clock_end_ns": {
+          "monotonic": 80604567688128,
+          "raw": 84594779531998,
+          "realtime": 1790961720151855783
+        },
+        "resource_s": 0.267883751,
+        "resource_wall_s": 0.267883751,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0002454449461908
+        ],
+        "stdout": "evidence/commands/formal-summary-regression-2.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-regression-2.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T17:22:00.413456+00:00",
+        "task": "formal-summary-syntax-1",
+        "role": "short_test",
+        "attempt_id": "7ac3a04f42a84d8da0d9efc87f60ca1b",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254538225,
+        "clock_elapsed_s": {
+          "monotonic": 0.254538225,
+          "raw": 0.258398559,
+          "realtime": 0.254546042
+        },
+        "clock_end_ns": {
+          "monotonic": 80604828842267,
+          "raw": 84595044645683,
+          "realtime": 1790961720413016471
+        },
+        "resource_s": 0.258398559,
+        "resource_wall_s": 0.258398559,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0002454449461908
+        ],
+        "stdout": "evidence/commands/formal-summary-syntax-1.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-syntax-1.stderr.txt"
+      }
+    ],
+    "n4096_calls": 0,
+    "first_failure": "synthetic fixture omitted required boundary_read_order; repaired in test fixture",
+    "source_after_sha256": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd",
+    "tests_after_sha256": "f06a30eb44293c2ee3b8fe8519489a6afe6b7600b0e144688780992cf67f36ef"
+  },
+  {
+    "author": "/root/measurement",
+    "source_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_sha256": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b",
+    "commands": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T17:52:57.885782+00:00",
+        "task": "formal-summary-regression-3",
+        "role": "short_test",
+        "attempt_id": "3ef17bc5a0f14402bbd155be6a0a9776",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.505339581,
+        "clock_elapsed_s": {
+          "monotonic": 0.505339581,
+          "raw": 0.515684625,
+          "realtime": 0.505340615
+        },
+        "clock_end_ns": {
+          "monotonic": 82429161202882,
+          "raw": 86452526353223,
+          "realtime": 1790963577885493737
+        },
+        "resource_s": 0.515684625,
+        "resource_wall_s": 0.515684625,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/formal-summary-regression-3.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-regression-3.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T17:52:58.147160+00:00",
+        "task": "formal-summary-syntax-2",
+        "role": "short_test",
+        "attempt_id": "6aeec04c8e1d400ab4124e4a77ed7a7d",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254214171,
+        "clock_elapsed_s": {
+          "monotonic": 0.254214171,
+          "raw": 0.259418992,
+          "realtime": 0.254215755
+        },
+        "clock_end_ns": {
+          "monotonic": 82429422581354,
+          "raw": 86452793081926,
+          "realtime": 1790963578146872353
+        },
+        "resource_s": 0.259418992,
+        "resource_wall_s": 0.259418992,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/formal-summary-syntax-2.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-syntax-2.stderr.txt"
+      }
+    ],
+    "n4096_calls": 0,
+    "purpose": "S4/AS9 saved-panel full CLI snapshot; AS10 invalid score labels; protocol path; AS12 exact numerical clock baseline",
+    "source_after_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_after_sha256": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b"
+  },
+  {
+    "author": "/root/measurement",
+    "source_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_sha256": "d92fc6a530de3eef7b2b9a693041a0c74b2b75384f4fecf09a3d49085733fe9b",
+    "commands": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T18:04:24.073764+00:00",
+        "task": "formal-summary-regression-4",
+        "role": "short_test",
+        "attempt_id": "327d67de913e4f73852fb429ea38b254",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.505106742,
+        "clock_elapsed_s": {
+          "monotonic": 0.505106742,
+          "raw": 0.519091836,
+          "realtime": 0.50510785
+        },
+        "clock_end_ns": {
+          "monotonic": 83101591520944,
+          "raw": 87138568335773,
+          "realtime": 1790964264073502371
+        },
+        "resource_s": 0.519091836,
+        "resource_wall_s": 0.519091836,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/formal-summary-regression-4.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-regression-4.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T18:04:24.336089+00:00",
+        "task": "formal-summary-syntax-3",
+        "role": "short_test",
+        "attempt_id": "9a1593c1e5474c26ae791a7ab07ebeaf",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.254715766,
+        "clock_elapsed_s": {
+          "monotonic": 0.254715766,
+          "raw": 0.261768828,
+          "realtime": 0.25471725
+        },
+        "clock_end_ns": {
+          "monotonic": 83101853863577,
+          "raw": 87138837941589,
+          "realtime": 1790964264335845249
+        },
+        "resource_s": 0.261768828,
+        "resource_wall_s": 0.261768828,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/formal-summary-syntax-3.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-syntax-3.stderr.txt"
+      }
+    ],
+    "n4096_calls": 0,
+    "purpose": "Clean clone fixture creates ignored .cache before P1-local temporary journal; production analyzer unchanged",
+    "source_after_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_after_sha256": "d92fc6a530de3eef7b2b9a693041a0c74b2b75384f4fecf09a3d49085733fe9b"
+  },
+  {
+    "author": "/root/measurement",
+    "source_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_sha256": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+    "commands": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T18:07:45.147029+00:00",
+        "task": "formal-summary-numeric-prefix-regression",
+        "role": "short_test",
+        "attempt_id": "ae06a0f032924a2db4c3eb4a70c4436e",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.255392132,
+        "clock_elapsed_s": {
+          "monotonic": 0.255392132,
+          "raw": 0.266236821,
+          "realtime": 0.255393086
+        },
+        "clock_end_ns": {
+          "monotonic": 83298598707597,
+          "raw": 87339679547842,
+          "realtime": 1790964465146735696
+        },
+        "resource_s": 0.266236821,
+        "resource_wall_s": 0.266236821,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/formal-summary-numeric-prefix-regression.stdout.txt",
+        "stderr": "evidence/commands/formal-summary-numeric-prefix-regression.stderr.txt"
+      }
+    ],
+    "n4096_calls": 0,
+    "purpose": "Pin synthetic-after-numeric fixture ledger to numeric completion prefix so future actual formal samples cannot change its historical previous clock baseline",
+    "fixture_diff": [
+      "mkdir P1/.cache before temporary journal",
+      "ledger = ledger[:ledger.index(last) + 1]"
+    ],
+    "source_after_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "tests_after_sha256": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d"
+  }
+]

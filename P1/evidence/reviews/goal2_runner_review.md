@@ -63,3 +63,36 @@ OK
 | K4 | 查询 `adjtimex` 的 modes=0；保存 `offset_raw`、按 STA_NANO 得到的 `offset_unit`、`frequency_scaled_ppm`，不将 RAW 当准确真值 | 关闭单位与只读约束缺口 |
 
 有限诊断放行条件：主控将 `protocol_diagnostic.json` 从 draft 按已审设计冻结，并记录被审 runner 身份；总初始 n4096 上界为 30。主控仅有此有限诊断与必要小规模数值检查的进入依据，不能将本文件解释成正式性能比较、S3 KEEP 或最终 Engineering PASS。正式关还依赖真实诊断可比性、分析器复核、精确剩余资源计划和协议审核。
+
+## 正式完整区间守卫初稿的独立审查
+
+2026-10-02，在原匹配诊断checkpoint保存后，只读新 CompleteClockGuard 改动，尚未运行该版测试或正式目标。逐目标process和driver分来源完整区间检查、tuple按attempt切片、prefix不作为完整平均门的方向符合方法关。以下初稿问题已交源码owner修复，必须复核后才能冻结。
+
+| ID | 严重性/位置 | 问题与影响 | 必须的最小修正/回归 | 状态 |
+| --- | --- | --- | --- | --- |
+| G1 | 高；usage、CompleteClockGuard.__init__ | runtime余额和driver baseline相信保存resource_s/clock_elapsed_s；单改该派生字段而保留原ns可改变16小时余额或2%基准 | known actual end从start/end三域整数ns重算、验证driver/elapsed/maxresource一致，driverq用核验ns；仅改RAW秒和仅降resource fixtures拒绝 | 初稿待修复 |
+| G2 | 中；previous process baseline构造 | 正常成功旧attempt缺completion或有重复tuple时默默少建/重复建基准 | 成功任务完整唯一start+measurement覆盖实际calls；缺旧completion与重复旧completion fixtures拒；live仍允许正在运行的start | 初稿待修复 |
+
+未知硬退出保留明确保守upper-bound，不伪称实际秒数；计费已知/clock健康/正式结果资格分别验证。无作者文件修改，无测试/编译/目标调用。
+
+### 首轮修复与独立29项回归
+
+owner修复G1/G2后，审核者于2026-10-02 17:04 UTC持非阻塞独占performance.lock实际运行 `python3 -B -m unittest discover -s tests -p test_goal2_driver.py -v`：29/29通过，unittest1.302秒；外层MONO1.378807359、RAW1.394197308、REAL1.378808140秒。前后runner SHA `e289ac061be8aa9b943b352750e5f6d3531ac11c19516ab8704b13168fe995fb`、tests SHA `7aa92ad32a08786ea868c0f9410a6b0582dfb8b0eeb319bd14ca5e8d01398d0d`和core32f均未改变。只运行低成本小目标/合成fixtures，n4096为0；工程测试时间单列，不伪称受控大目标成本。锁已释放。G1/G2以最小原ns核对、整journalstart唯一性与精确attempt覆盖关闭。
+
+再次不调用作者函数独立重算当前真实全局ledger60个唯一完成attempt：41次n4096、2762.457140968秒资源max，全部saved时间与原ns一致，无未结束或未知成本。详细原始测试stderr、三域起止、来源SHA和ledger快照SHA在配套JSON。
+
+**G3仍待关闭（高）**：validate_task的正式分支只检查schema/mode/complete/error与顶层clock_conflict，缺process_checks/driver_check/threshold/boot的“健康”空壳仍可恢复跳过job。必须拒绝缺失逐实际进程或driver structured check，核对来源身份、实际ns/q和覆盖；后续分析健康检查也须独立重算，不能只相信布尔元数据。本轮29通过不代表此未覆盖问题通过，更不授予正式执行。
+
+### G3修复后最终代码关
+
+审核者再次完整读取受影响入口。新的 `validate_complete_clock_record` 将batch end关联唯一primary start/end，核原journal相对路径，原ns资源差，经当时ledger前缀和精确目标attempt范围重放整个structured guard；缺process_checks/driver_check/threshold/boot或同时在primary与batch改伪q均拒绝。实际小目标正例通过，恢复不再依赖健康布尔空壳。
+
+2026-10-02 17:13 UTC独占flock独立29/29通过（unittest1.260秒，外MONO1.334594551/RAW1.354696403/REAL1.334595666）；runner `138fad8839d7df5dde25eaeb11c255b9b45582e9121399194d71a5ef11b285fb`、tests `73f57e5c1739d63d690a800e416e96f5caa7d27bc0208486f714c1adaac17a50`和core32f前后不变，锁已释放，n4096=0。G1/G2/G3均关闭；前一轮stderr/ns/源身份仍保留在配套JSON，未覆盖。
+
+**该源码的正式完整区间守卫代码关通过**。范围为原CLOCK_MONOTONIC内核不变、逐目标process与完整driver分来源first/previous原2%硬停、原ns计费/预算与恢复、防缺structured checks/伪q恢复、owned子进程清理及既有新策略日志契约；未知/失败成本不会伪称成功。此结论允许继续核对正式protocol、准确job上界/剩余成本预测和分析健康契约，未直接授予正式执行、S3 KEEP或最终Engineering PASS。任何影响来源/计费/钟域的源码变化需要回原关复核。
+
+## G4：正式计划冗余身份字段尚待绑定
+
+完整时钟保护的29项独立回归已通过；在正式plan关继续发现中等证据风险：`freeze_check`核对protocol/driver实际SHA和expected jobs，但没有逐项核对manifest保存的target/framework SHA、schema和protocol路径。单独修改这些冗余计划身份字段不会改变实际计算，却会造成计划声称的源码与真实冻结身份不一致。没有观察到实际篡改；已请root在正式冻结前按生成plan精准比较身份字段并添加单字段损坏反例，历史measurement_root应保留原目录而非要求等于新clone。此项不改变计算/计时语义，也不撤销已完成的完整保护回归；正式计划准入仍pending。
+
+G4原角色复核：expected schema/protocol/target/framework/driver字段已精准比较，历史measurement_root保持原路径。独立持非阻塞锁实际运行30项driver测试，exit=0；MONOTONIC 1.349979759s，RAW 1.37602153s，源码测试前后相同，新driver SHA `b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f`。G4关闭；正式协议/分析路径最终关仍pending，未授予正式target准入或候选KEEP。

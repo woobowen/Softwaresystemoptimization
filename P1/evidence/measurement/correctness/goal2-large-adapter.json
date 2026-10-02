@@ -1,0 +1,38 @@
+{
+  "validation_script_sha256": "189128c2c7e13db73c1dc516401c72a0eb053cacce74ae0db70ebd72dfc21a36",
+  "measured_source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "transformations": [
+    [
+      "    if (argc != 4) {",
+      "    if (argc != 2) {"
+    ],
+    [
+      "    srand((unsigned)strtoul(argv[2], NULL, 10));\n    int mode = atoi(argv[3]);",
+      "    srand(1U);\n    int mode = 0;"
+    ]
+  ],
+  "input": "original uniform rand default seed 1, mode 0; no formal input change",
+  "outputs": {
+    "129": {
+      "source": ".cache/validation-goal2/verify_129_default.c",
+      "source_sha256": "624bd9803cb8bd04bd6a3d52bf3269524ed08848bfcadb00304151496173a76e",
+      "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab"
+    },
+    "4096": {
+      "source": ".cache/validation-goal2/verify_4096_default.c",
+      "source_sha256": "140a1efa2dbde5d7f77193fc5933c09d5faacc4649bd06cac328f62e19823928",
+      "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab"
+    }
+  },
+  "formal_scores": false,
+  "large_checks": "24 predetermined elements, independent long-double unblocked dot products",
+  "tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-11
+  },
+  "validation_only_flags": [
+    "-Wl,--no-as-needed",
+    "-lm"
+  ],
+  "reason": "math-library reference; keep library before source with the existing CLI flag interface"
+}

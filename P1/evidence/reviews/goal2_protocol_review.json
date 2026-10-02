@@ -1,0 +1,340 @@
+{
+  "reviewer": "/root/review",
+  "author": "/root/measurement",
+  "at_utc": "2026-10-02T16:45:06.632145+00:00",
+  "state": "FROZEN_FORMAL_PROTOCOL_AND_EXACT_RESOURCE_PLAN_APPROVED_LIMITED_SCOPE",
+  "protocol_draft_sha256": "d61748778de45d30ec07aa6250ca6189f5401b3d6a65a7af610bc4636e972462",
+  "analysis_sha256": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+  "joint_summary_sha256": "33d1edc6ceec12e2ec768e47b22a5683eda3bb3e93eabde930355f7adc7afcac",
+  "formal_admission": true,
+  "conditions": [
+    "independent complete process and driver same-boot first/previous q hardstop at original2%",
+    "per-sample process checks not hidden by search driver average",
+    "prefix/local retained; no RAW-as-truth or rescaling",
+    "resource/backward/timeout/unknown hardstop unchanged",
+    "structured actual ns-derived checks must be required and independently replayed",
+    "any clock-conflicting compared batch cannot KEEP even when journal has summary",
+    "matching followup checkpoint before new driver change",
+    "exact formal plans and remaining cost forecast before execution",
+    "actual new-guard independent regression and final frozen source/compiler/protocol identities"
+  ],
+  "scope": {
+    "space": {
+      "blocks": [
+        8,
+        16,
+        24,
+        64,
+        128
+      ],
+      "opts": [
+        "O0",
+        "O1",
+        "O2",
+        "O3"
+      ]
+    },
+    "n": 4096,
+    "timer": "CLOCK_MONOTONIC",
+    "R": 8,
+    "main_seeds": [
+      700001,
+      804730,
+      909459,
+      1014188,
+      1118917,
+      1223646
+    ],
+    "holdout_seeds": [
+      1328375,
+      1433104,
+      1537833
+    ],
+    "S3": "same Random first6 plus2 eligible-finalist rechecks; no other factor",
+    "arrangement": "M1",
+    "rho_pp": 14,
+    "additional_independent_AA_max_pair_pct": 24.351654209127904,
+    "quality_target_pct": 5,
+    "risk_pp": 2,
+    "useful_cost_saving_fraction": 0.1,
+    "normal_calls_upper_keep": 505,
+    "normal_calls_upper_baseline": 472,
+    "reserve_calls": 15,
+    "hard_caps": {
+      "n4096_calls": 520,
+      "controlled_max_domains_s": 57600
+    }
+  },
+  "limitations": [
+    "rho14 finite initial descriptor, not overall noise bound or CI",
+    "new same-config24.35% retained; no5%/2pp precision guarantee",
+    "only two diagnosed tiers coarse ranking supported",
+    "replacement delay broke continuous schedule balance; no causal variance claim",
+    "original interrupted completion counterfactual and host-clock root cause unknown",
+    "cost acceptance means finite paired median+new holdout check, not all-seed or future-run guarantee",
+    "no formal data, candidate decision or final Engineering PASS yet"
+  ],
+  "diagnostic_precision_gate_added_before_any_formal_data": {
+    "at_utc": "2026-10-02T16:54:55.916564+00:00",
+    "agreed_by": [
+      "/root",
+      "/root/measurement",
+      "/root/review"
+    ],
+    "different_identity_risk_supported": false,
+    "rule": "Any Random/S3 pair with different configuration identity is INCONCLUSIVE; report all common ref/panel/coarse values, no quality-route KEEP in this environment",
+    "same_identity_efficiency_route": "All pairs have identical config identity, quality difference0; median actual paired driver saving>=10%; then3newseed one-read confirmation must satisfy same rules",
+    "reason": "Additional same-config A/A24.351654% exceeds finite initialrho14; fine2pp noninferiority cannot be established by treatingrho14asnoisebound",
+    "frozen_goals_unchanged": [
+      "epsilon5%",
+      "risk2pp",
+      "cost10%",
+      "main6seed",
+      "newconfirmation3seed",
+      "rho14",
+      "S3sixplustwo"
+    ]
+  },
+  "formal_complete_guard_code_gate": {
+    "at_utc": "2026-10-02T18:09:38.166329+00:00",
+    "driver_sha256": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "review": "evidence/reviews/goal2_runner_review.json",
+    "independent_regression_tests": 30,
+    "n4096_calls_by_reviewer": 0,
+    "state": "COMPLETE_CLOCK_AND_EXACT_PLAN_IDENTITY_APPROVED_PROTOCOL_FREEZE_PENDING",
+    "formal_admission": false
+  },
+  "resource_plan_independent_recount": {
+    "at_utc": "2026-10-02T17:26:37.523990+00:00",
+    "path": "evidence/measurement/resource_plan_v2.json",
+    "sha256": "87a8818caccbf501da390f5db766b487d00baa673cd1210afa3e19a5cbb1ac66",
+    "snapshot_ledger_sha256": "dac5ca496c7dfcae44b3236f4029b2408c303f14878bdac8be1b64595b2e82c7",
+    "actual_n4096_calls": 41,
+    "actual_controlled_max_domains_s": 2763.997018229,
+    "stage_recounts": {
+      "reference": {
+        "entries": 70,
+        "actual_sum_call_upper": 70,
+        "all_job_ids_unique": true
+      },
+      "comparison": {
+        "entries": 31,
+        "actual_sum_call_upper": 283,
+        "all_job_ids_unique": true
+      },
+      "confirmation_candidate": {
+        "entries": 10,
+        "actual_sum_call_upper": 76,
+        "all_job_ids_unique": true
+      },
+      "confirmation_baseline": {
+        "entries": 7,
+        "actual_sum_call_upper": 43,
+        "all_job_ids_unique": true
+      },
+      "greedy_starts": {
+        "entries": 4,
+        "actual_sum_call_upper": 32,
+        "all_job_ids_unique": true
+      }
+    },
+    "reserved_numeric_and_fresh_calls": 3,
+    "candidate_project_upper": 505,
+    "baseline_project_upper": 472,
+    "hard_call_cap": 520,
+    "candidate_reserve": 15,
+    "baseline_reserve": 48,
+    "remaining_hard_controlled_s": 54836.002981771,
+    "nominal_candidate_s": 42411.8574822,
+    "nominal_baseline_s": 39353.4072753,
+    "nominal_formula": "reference70=3*sum(old20medians)+10*old_s128_O2; remaining nonreference calls each old20median_mean+1s scenario",
+    "both_1_5x_scenarios_exceed_remaining_hard_cap": true,
+    "timeout_worst_cases_exceed_hard_cap": true,
+    "meaning": "precise call safety upper and cost scenarios; no guaranteed completion within16h",
+    "documentation_pending": [],
+    "forecast_documentation_closure": {
+      "at_utc": "2026-10-02T18:09:38.166329+00:00",
+      "path": "evidence/measurement/resource_plan_v2.json",
+      "eight_extra_builds_explained": true,
+      "nonreference_1s_scenario_explicit": true,
+      "state": "INITIAL41_SNAPSHOT_DOCUMENTATION_CLOSED_NEW43_SNAPSHOT_PENDING_RECOUNT"
+    }
+  },
+  "formal_analyzer_pending_finding": {
+    "id": "S4",
+    "severity": "medium",
+    "source_sha256": "7132888f230ef504fcd6d300a0390d906c920428a8c16f5288eca1bf553f8cbd",
+    "state": "CLOSED_STATIC_RECONSTRUCTION_AND_OTHER_CONTEXT_INDEPENDENT59_FIXTURES",
+    "path": "scripts/summarize_v2.py:329 -> scripts/experiment_v2.py:765/748 -> validate_task:524",
+    "issue": "existing panel reconstruction indirectly reads runtime live LEDGER rather than the specified once-read snapshot",
+    "required_fix": "analysis-side readonly reconstruction of frozen dependency returns/reference winner/config-set/order and full panel identity, with actual existing panel+reference fixture where runtime validate_task must never be called",
+    "fixed_source_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "independent_test_reviewer": "/root/implementation",
+    "independent_test_evidence": "evidence/reviews/goal2_method_analysis_review.md/json",
+    "additional_closures": [
+      "all formal pending/partial/completed tasks avoid runtime live restore entry point",
+      "actual protocol path derived from explicit input rather than saved plan self-injection",
+      "noncomplete clock searches never inherit near-optimal classification",
+      "only2exact numeric adapters are bound clock-only baselines; excluded from formal score samples"
+    ]
+  },
+  "method_scope_gate_after_analyzer_closure": {
+    "at_utc": "2026-10-02T18:09:38.166329+00:00",
+    "state": "METHOD_SCOPE_READY_FINAL_FROZEN_PROTOCOL_AND_PLAN_IDENTITIES_PENDING",
+    "source_sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+    "core_sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "driver_sha256": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+    "numeric_identity_sha256": "170903811396626eebb0898ce5a8ed478fc20681ca095a155d8a5023843df5c3",
+    "primary_data_review": "evidence/reviews/goal2_code_gate.json:independent_actual_large_numeric_review",
+    "independent_tests_actually_run_by_this_reviewer": [
+      "core72",
+      "driver30",
+      "initialanalysis37",
+      "finitefollowup13"
+    ],
+    "final_analyzer59_independent_tests_run_by": "/root/implementation",
+    "whole_suite178_run_by": "/root; actual outputs and zero-call primary records read at final gate",
+    "formal_admission": false,
+    "candidate_keep": false,
+    "remaining_prerequisites": [
+      "final explicit approved/frozen protocol bytes and UTC",
+      "final resource43 snapshot recount",
+      "exact actual new formal plan identities and jobs",
+      "final unique owner analysis59 evidence and limited fixture-prefix correction recheck"
+    ]
+  },
+  "last_reviewed_at_utc": "2026-10-02T18:22:21.300082+00:00",
+  "final_frozen_protocol_gate": {
+    "at_utc": "2026-10-02T18:22:21.300082+00:00",
+    "state": "APPROVED_FOR_SERIAL_FORMAL_EXECUTION_UNDER_FROZEN_LIMITATIONS",
+    "formal_admission": true,
+    "protocol_frozen_at_utc": "2026-10-02T18:12:04+00:00",
+    "protocol_json_sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+    "protocol_md_sha256": "dcf635a1abe3b6e6c72c64f4658dcafd519f4008463e6b5b5aa15533fa3df41c",
+    "resource_plan_sha256": "632f574048caecbded6692ff6e755fd13128ef8762793aa401a4c15b14d9c447",
+    "reference_plan_sha256": "62db9f54de38d611e8f2cd59701b836106ab4bca1a532e4497e8180a5beca54c",
+    "source_actual_sha256": {
+      "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+      "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+      "scripts/summarize_v2.py": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb",
+      "tests/test_goal2_summary.py": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d"
+    },
+    "compiler_actual_sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+    "numeric_binding_actual_sha256": "170903811396626eebb0898ce5a8ed478fc20681ca095a155d8a5023843df5c3",
+    "reference_plan_rebuilt_without_project_helpers": {
+      "all70job_dictionaries_exact_match": true,
+      "total": 70,
+      "reference": 60,
+      "anchors": 9,
+      "warmup": 1,
+      "configurations": 20,
+      "each_config_reference_samples": 3,
+      "orders": "Random(505063+round-1) complete shuffle; anchors at0,10,20"
+    },
+    "main_seed_order_rebuilt_without_project_helpers": {
+      "main_seeds": [
+        700001,
+        804730,
+        909459,
+        1014188,
+        1118917,
+        1223646
+      ],
+      "confirmation_seeds": [
+        1328375,
+        1433104,
+        1537833
+      ],
+      "first_accepted_layout": 396,
+      "random_before_s3_count": 3,
+      "algorithm_position_min": 1,
+      "algorithm_position_max": 2
+    },
+    "resource_snapshot_recomputed_without_project_helpers": {
+      "ledger_prefix_sha256": "d3dff7ecf874e6642704e0ac19ec016cb1e4c919a062990e7677ac6203c4a6f0",
+      "completed_attempts": 80,
+      "actual_n4096_calls": 43,
+      "raw_ns_max_domain_sum_s": 3056.820306963,
+      "remaining_at_snapshot_s": 54543.179693037,
+      "stage_upper_calls": {
+        "reference": 70,
+        "comparison": 283,
+        "confirmation_candidate": 76,
+        "confirmation_baseline": 43,
+        "greedy_starts": 32
+      },
+      "completed_numeric_calls": 2,
+      "remaining_numeric_calls": 0,
+      "remaining_fresh_calls": 1,
+      "candidate_future_calls": 462,
+      "baseline_future_calls": 429,
+      "candidate_total_calls": 505,
+      "baseline_total_calls": 472,
+      "candidate_reserve": 15,
+      "baseline_reserve": 48,
+      "double_counted_numeric_calls": false,
+      "nominal_candidate_s": 42226.496863600005,
+      "nominal_baseline_s": 39168.046656700004,
+      "worst_timeout_and_1_5x_scenarios_exceed_cap": true,
+      "completion_guaranteed": false
+    },
+    "live_preflight_ledger": {
+      "sha256": "d0f709a6c3cb31ec2d2803278e8586a02c0099b6d49e180caa0b9fc4ade85863",
+      "all_started_attempts_completed": true,
+      "actual_n4096_calls": 43,
+      "raw_ns_max_domain_sum_s": 3057.081356074,
+      "reference_execute_max_jobs0_returncode": 0,
+      "reference_preflight_new_target_calls": 0
+    },
+    "actual_test_evidence_read": {
+      "parent_nongui": 174,
+      "parent_nongui_suite_s": 11.514,
+      "parent_native_screenshot": 4,
+      "parent_native_suite_s": 2.685,
+      "parent_combined": 178,
+      "parent_python_syntax_files": 16,
+      "parent_python_syntax_returncode": 0,
+      "logs_sha256": {
+        "goal2-all-nongui-tests.stderr.txt": "d6d64a1d9fd63acf175cf6d6539d3a5e6a31b8b2d24a915455b0862d2ef64163",
+        "goal2-all-native-screenshot-tests.stderr.txt": "1128a55b081bca4d0e5bfdd00effe3df665e81358992ab235dd8be5ed7e79c61",
+        "goal2-all-python-syntax.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "goal2-all-python-syntax.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "independent_analyzer59_run_by": "/root/implementation",
+      "independent_analyzer59_tests_sha256": "044eac327e7874e926638717896fdfb2f8ac66c3c47ffcb9beed9d57d186fb8b",
+      "latest_fixture_only_independent_tests": 1,
+      "latest_fixture_tests_sha256": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d",
+      "this_reviewer_did_not_rerun_these_178_or_59": true
+    },
+    "decision_scope": {
+      "quality_target_pct": 5,
+      "quality_risk_pp": 2,
+      "minimum_cost_saving_fraction": 0.1,
+      "different_identity_risk_supported": false,
+      "any_distinct_random_s3_identity_decision": "INCONCLUSIVE",
+      "same_identity_quality_gain_pp": 0,
+      "same_identity_efficiency_route_requires_main_and3newseeds": true,
+      "rho_pp": 14,
+      "rho_is_noise_bound_or_confidence_interval": false,
+      "new_AA_max_pair_pct": 24.351654209127904,
+      "root_cause_known": false,
+      "original_interrupted_counterfactual_known": false
+    },
+    "remaining_prerequisites_to_begin_reference": [],
+    "still_required_after_admission": [
+      "new20configurations each3valid samples",
+      "sixblock baseline+S3 true online experiments and common panels",
+      "single-factor decision and required3newseed confirmation",
+      "fourstructuralGreedy starts",
+      "finalplots and real screenshot visual review",
+      "full code and experiment/report final review",
+      "clean clone178tests/fourcoldbuilds/freshn4096/rawregeneration",
+      "historicalraw protection and publicationremoteSHA"
+    ],
+    "candidate_keep_granted": false,
+    "goal2_complete": false,
+    "final_engineering_pass_granted": false,
+    "review_n4096_calls": 0
+  }
+}

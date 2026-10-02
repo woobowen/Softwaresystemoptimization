@@ -1,0 +1,1 @@
+{"output": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/followup-reproduction/P1/.cache/derived", "actual_process_runs": 41, "charged_process_upper": 41, "recorded_ledger_charged_calls": 41, "missing_job_raw_starts": 0, "costs_complete": true}

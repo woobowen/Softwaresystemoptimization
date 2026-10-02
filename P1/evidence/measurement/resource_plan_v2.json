@@ -1,0 +1,841 @@
+{
+  "state": "frozen_call_plan_before_formal_measurement",
+  "protocol_snapshot_sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+  "driver_sha256": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f",
+  "ledger_sha256": "d3dff7ecf874e6642704e0ac19ec016cb1e4c919a062990e7677ac6203c4a6f0",
+  "actual_n4096_calls": 43,
+  "actual_resource_s": 3056.820306963,
+  "cap_calls": 520,
+  "cap_resource_s": 57600,
+  "resource_domain": "sum max(MONOTONIC,RAW,REALTIME) per controlled task",
+  "stages": {
+    "reference": {
+      "entries": 70,
+      "expanded_job_upper": 70,
+      "call_upper": 70,
+      "jobs": [
+        {
+          "id": "warmup-reference",
+          "role": "warmup",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r1-00",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-01",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-02",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-03",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-04",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-05",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-06",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-07",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-08",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-09",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-10",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r1-10",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-11",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-12",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-13",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-14",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-15",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-16",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-17",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-18",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-19",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r1-20",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r1-20",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r2-00",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-01",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-02",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-03",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-04",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-05",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-06",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-07",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-08",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-09",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-10",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r2-10",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-11",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-12",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-13",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-14",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-15",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-16",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-17",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-18",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-19",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r2-20",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r2-20",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r3-00",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-01",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-02",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-03",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-04",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-05",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-06",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-07",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-08",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-09",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-10",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r3-10",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-11",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-12",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-13",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-14",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-15",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-16",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-17",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-18",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-19",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "ref-r3-20",
+          "role": "reference",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "anchor-r3-20",
+          "role": "anchor",
+          "action": "run",
+          "call_upper": 1
+        }
+      ]
+    },
+    "comparison": {
+      "entries": 31,
+      "expanded_job_upper": 115,
+      "call_upper": 283,
+      "jobs": [
+        {
+          "id": "warmup-comparison",
+          "role": "warmup",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "b1-recheck-seed700001",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b1-grid-seed700001",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b1-greedy-seed700001",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b1-random-seed700001",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b1",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        },
+        {
+          "id": "b2-random-seed804730",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b2-recheck-seed804730",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b2-greedy-seed804730",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b2-grid-seed804730",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b2",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        },
+        {
+          "id": "b3-recheck-seed909459",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b3-greedy-seed909459",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b3-random-seed909459",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b3-grid-seed909459",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b3",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        },
+        {
+          "id": "b4-greedy-seed1014188",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b4-random-seed1014188",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b4-grid-seed1014188",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b4-recheck-seed1014188",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b4",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        },
+        {
+          "id": "b5-grid-seed1118917",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b5-random-seed1118917",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b5-recheck-seed1118917",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b5-greedy-seed1118917",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b5",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        },
+        {
+          "id": "b6-grid-seed1223646",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b6-recheck-seed1223646",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b6-random-seed1223646",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b6-greedy-seed1223646",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b6",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 15
+        }
+      ]
+    },
+    "confirmation_candidate": {
+      "entries": 10,
+      "expanded_job_upper": 34,
+      "call_upper": 76,
+      "jobs": [
+        {
+          "id": "warmup-confirmation",
+          "role": "warmup",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "b1-random-seed1328375",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b1-recheck-seed1328375",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b1",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 9
+        },
+        {
+          "id": "b2-recheck-seed1433104",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b2-random-seed1433104",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b2",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 9
+        },
+        {
+          "id": "b3-random-seed1537833",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "b3-recheck-seed1537833",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b3",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 9
+        }
+      ]
+    },
+    "confirmation_baseline": {
+      "entries": 7,
+      "expanded_job_upper": 22,
+      "call_upper": 43,
+      "jobs": [
+        {
+          "id": "warmup-confirmation",
+          "role": "warmup",
+          "action": "run",
+          "call_upper": 1
+        },
+        {
+          "id": "b1-random-seed1328375",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b1",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 6
+        },
+        {
+          "id": "b2-random-seed1433104",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b2",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 6
+        },
+        {
+          "id": "b3-random-seed1537833",
+          "role": "search",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "panel-b3",
+          "role": "shared_confirmation",
+          "action": "panel",
+          "call_upper": 6
+        }
+      ]
+    },
+    "greedy_starts": {
+      "entries": 4,
+      "expanded_job_upper": 4,
+      "call_upper": 32,
+      "jobs": [
+        {
+          "id": "start-1",
+          "role": "start_panel",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "start-2",
+          "role": "start_panel",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "start-3",
+          "role": "start_panel",
+          "action": "search",
+          "call_upper": 8
+        },
+        {
+          "id": "start-4",
+          "role": "start_panel",
+          "action": "search",
+          "call_upper": 8
+        }
+      ]
+    }
+  },
+  "reserved_numeric_and_fresh_calls": 1,
+  "forecasts": {
+    "candidate": {
+      "remaining_call_upper": 462,
+      "project_call_upper": 505,
+      "call_reserve": 15,
+      "nominal_kernel_and_process_overhead_s": 42226.496863600005,
+      "slow_scenario_1_5x_s": 63339.745295400004,
+      "target_timeout_sum_s": 554400,
+      "compiler_timeout_sum_s": 27960,
+      "maximum_executable_resource_remaining_s": 54543.179693037004
+    },
+    "baseline": {
+      "remaining_call_upper": 429,
+      "project_call_upper": 472,
+      "call_reserve": 48,
+      "nominal_kernel_and_process_overhead_s": 39168.046656700004,
+      "slow_scenario_1_5x_s": 58752.06998505001,
+      "target_timeout_sum_s": 514800,
+      "compiler_timeout_sum_s": 25980,
+      "maximum_executable_resource_remaining_s": 54543.179693037004
+    }
+  },
+  "forecast_basis": {
+    "old_table": "results/summary/grid_summary.csv",
+    "sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+    "old_uniform_config_median_mean_s": 91.6803093,
+    "reference_uses_each_old_config_median": true,
+    "other_roles_uniform_cost_scenario_only": true,
+    "new_diagnostic_fast_s_range": [
+      35.371246,
+      64.870026
+    ],
+    "new_diagnostic_medium_s_range": [
+      65.152481,
+      95.408348
+    ],
+    "corrected_measurements": false,
+    "eight_additional_builds": {
+      "small_validation_adapter_O0_O3": 2,
+      "full_validation_adapter_O0_O3": 2,
+      "clean_four_level_reproduction": 4,
+      "completed_validation_builds": 4,
+      "remaining_clean_reproduction_builds": 4
+    },
+    "per_call_build_timeout": "conservative cache-miss scenario; actual build/check/compile costs recorded separately",
+    "nonreference_process_overhead_scenario_s": 1.0,
+    "scenario_warning": "The old table plus a fixed overhead is only a planning scenario; diagnostic drift is not a calibration factor or a measured bound."
+  },
+  "notes": [
+    "Timeout sums exceed the hard 16h cap; they are theoretical sequential upper costs, not a guarantee of completion.",
+    "The ledger enforces the stricter remaining cap before and during each actual job.",
+    "Costs of unknown dynamic returns cannot be predicted exactly; panels deduplicate only after locked searches.",
+    "No new formal measurements, seed replacement or strategy feedback was used in this forecast.",
+    "The numeric validation two n4096 calls are already included in actual43; only the single fresh reproduction remains reserved. Source/control costs after this snapshot remain in the append-only primary ledger."
+  ],
+  "completed_numeric_calls": 2,
+  "remaining_numeric_calls": 0,
+  "remaining_fresh_reproduction_calls": 1,
+  "frozen_at_utc": "2026-10-02T18:14:10.994778+00:00",
+  "reference_manifest_sha256": "62db9f54de38d611e8f2cd59701b836106ab4bca1a532e4497e8180a5beca54c"
+}

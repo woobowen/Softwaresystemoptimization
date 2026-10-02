@@ -1,0 +1,6 @@
+test_numeric_baselines_match_runtime_history_and_never_enter_score_samples (test_goal2_summary.Goal2FormalClockTests.test_numeric_baselines_match_runtime_history_and_never_enter_score_samples) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK

@@ -122,5 +122,81 @@
       "driver_monotonic_s": 2659.654210890996
     }
   ],
-  "scope": "Read-only raw analysis; no compiler,target,tests or plots executed; C7 regeneration and final images remain pending."
+  "scope": "Read-only raw analysis; no compiler,target,tests or plots executed; C7 regeneration and final images remain pending.",
+  "independent_actual_secure_screenshot_cleanup_review": {
+    "at_utc": "2026-10-02T16:54:22.591010+00:00",
+    "source_sha256": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "raw_path": "evidence/commands/screenshot_cleanup_tests.jsonl",
+    "raw_sha256": "904f62b9f48994967601fcf91a9d590294fda3c09b5b9c16f7a9ab725e0f6d6a",
+    "method": "Read four actual integration capture logs, independently recompute raw ns, inspect only recorded owned /proc PIDs/private auth paths and display listeners; no additional GUI launched",
+    "actual_native_cases": [
+      {
+        "test": "test_goal2_screenshots.ScreenshotCleanupTests.test_failed_terminal_command_cleans_display",
+        "display": 259,
+        "actual_command": "exit 7\n",
+        "expected_result_code": 7,
+        "expected_error": "ValueError: real screenshot command failed",
+        "empty_authority_rejected": true,
+        "all_recorded_owned_pids_absent_now": true,
+        "actual_authorization_directory_absent_now": true,
+        "no_own_tcp_or_unix_listener_now": true,
+        "elapsed_s": {
+          "monotonic": 0.63229062,
+          "raw": 0.632548834,
+          "realtime": 0.632289967
+        }
+      },
+      {
+        "test": "test_goal2_screenshots.ScreenshotCleanupTests.test_real_terminal_capture_and_private_authorization",
+        "display": 217,
+        "actual_command": "printf 'P1 private Unix display test\\n'\n",
+        "expected_result_code": 0,
+        "expected_error": null,
+        "empty_authority_rejected": true,
+        "all_recorded_owned_pids_absent_now": true,
+        "actual_authorization_directory_absent_now": true,
+        "no_own_tcp_or_unix_listener_now": true,
+        "elapsed_s": {
+          "monotonic": 0.901037696,
+          "raw": 0.901405928,
+          "realtime": 0.901037278
+        }
+      },
+      {
+        "test": "test_goal2_screenshots.ScreenshotCleanupTests.test_sigterm_cleans_its_shell_and_display",
+        "display": 200,
+        "actual_command": "sleep 30\n",
+        "expected_result_code": null,
+        "expected_error": "KeyboardInterrupt: ",
+        "empty_authority_rejected": true,
+        "all_recorded_owned_pids_absent_now": true,
+        "actual_authorization_directory_absent_now": true,
+        "no_own_tcp_or_unix_listener_now": true,
+        "elapsed_s": {
+          "monotonic": 0.289182012,
+          "raw": 0.289300131,
+          "realtime": 0.289181866
+        }
+      },
+      {
+        "test": "test_goal2_screenshots.ScreenshotCleanupTests.test_timeout_cleans_its_shell_and_display",
+        "display": 463,
+        "actual_command": "sleep 30\n",
+        "expected_result_code": null,
+        "expected_error": "ValueError: terminal command did not finish: ",
+        "empty_authority_rejected": true,
+        "all_recorded_owned_pids_absent_now": true,
+        "actual_authorization_directory_absent_now": true,
+        "no_own_tcp_or_unix_listener_now": true,
+        "elapsed_s": {
+          "monotonic": 0.523366097,
+          "raw": 0.523579717,
+          "realtime": 0.523365537
+        }
+      }
+    ],
+    "security_execution_gate_closed": true,
+    "final_formal_image_visual_review_pending": true,
+    "reviewer_n4096_calls": 0
+  }
 }

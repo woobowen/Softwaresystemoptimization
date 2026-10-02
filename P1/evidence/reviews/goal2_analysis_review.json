@@ -376,5 +376,39 @@
     "n4096_calls": 0,
     "controlled_measurement_cost": false,
     "engineering_test_cost": true
+  },
+  "independent_history_actual_checkout_and_derived_hash_review": {
+    "at_utc": "2026-10-02T16:47:06.908587+00:00",
+    "method": "Read actual fixed checkout HEAD, source bytes against Git object and regenerated output SHA; did not rerun authors analysis",
+    "records": [
+      {
+        "phase": "goal1",
+        "commit": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+        "actual_checkout_identity_verified": true,
+        "actual_source_bytes_match_fixed_commit": {
+          "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+          "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+          "P1/src/autotuner.py": "0a71c2fdb0d3d41be261c9aecc86b87487990dbc3bfd4e6b34e79b7fbd75ab49"
+        },
+        "actual_regenerated_data_and_images_sha_verified": 11,
+        "recorded_exit_code": 0,
+        "matrix_runs": 0,
+        "regeneration_stdout_sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de"
+      },
+      {
+        "phase": "initial",
+        "commit": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+        "actual_checkout_identity_verified": true,
+        "actual_source_bytes_match_fixed_commit": {
+          "P1/scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+          "P1/scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+          "P1/src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+        },
+        "actual_regenerated_data_and_images_sha_verified": 7,
+        "recorded_exit_code": 0,
+        "matrix_runs": 0,
+        "regeneration_stdout_sha256": "cdcddc22aee4a9895e1c6151049cb767c77f79152115667c6c4b44bfcd86bd46"
+      }
+    ]
   }
 }

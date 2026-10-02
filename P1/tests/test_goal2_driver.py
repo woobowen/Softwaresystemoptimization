@@ -137,9 +137,11 @@ class Goal2DriverTests(unittest.TestCase):
 
     def test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt(self):
         path=self.directory/"resource-fixture.jsonl"
-        ex.append(path,"task_start",attempt_id="1",task="x")
+        ex.append(path,"task_start",attempt_id="1",task="x",clock_start_ns=dict(monotonic=0,raw=0,realtime=0))
         with self.assertRaises(ValueError): ex.usage(path)
-        ex.append(path,"task_end",attempt_id="1",task="x",n4096_calls=1,resource_s=2.0)
+        ex.append(path,"task_end",attempt_id="1",task="x",n4096_calls=1,resource_s=2.0,resource_wall_s=2.0,
+            driver_wall_s=2.0,clock_elapsed_s=dict(monotonic=2.0,raw=2.0,realtime=2.0),
+            clock_end_ns=dict(monotonic=2000000000,raw=2000000000,realtime=2000000000))
         self.assertEqual(ex.usage(path),(1,2.0))
         ex.append(path,"task_end",attempt_id="1",task="x",n4096_calls=1,resource_s=2.0)
         with self.assertRaises(ValueError): ex.usage(path)
@@ -220,6 +222,137 @@ os._exit(7)
         stat=Path(f"/proc/{pid}/stat")
         self.assertTrue(not stat.exists() or stat.read_text().split(")",1)[1].split()[0]=="Z")
         self.assertEqual(ex.usage(ledger)[0],1)
+
+    def clock_row(self,q=1.0,trial=0):
+        row=copy.deepcopy(next(r for r in self.rows["random"] if r["type"]=="measurement"))
+        row.update(trial_id=trial,pid=1000+trial,process_wall_s=40.0,
+            clock_start_ns=dict(CLOCK_MONOTONIC=1,CLOCK_MONOTONIC_RAW=2,CLOCK_REALTIME=3),
+            clock_end_ns=dict(CLOCK_MONOTONIC=40000000001,CLOCK_MONOTONIC_RAW=2+round(40e9*q),CLOCK_REALTIME=40000000003),
+            clock_deltas_s=dict(CLOCK_MONOTONIC=40.0,CLOCK_MONOTONIC_RAW=40*q,CLOCK_REALTIME=40.0))
+        start=dict(type="measurement_start",run_id=row["run_id"],trial_id=trial,repeat=row["repeat"],pid=row["pid"])
+        return start,row
+
+    def test_complete_clock_check_rejects_nan_zero_and_wrong_unit(self):
+        for value in (0,float("nan"),float("inf")):
+            with self.assertRaises(ValueError):
+                ex.complete_clock_check("driver","fixture",dict(monotonic=40,raw=value,realtime=40),[])
+        _,row=self.clock_row(); row["clock_unit"]="us"
+        with self.assertRaises(ValueError): ex.process_clock_span(row)
+
+    def test_complete_processes_are_checked_individually_before_driver_average(self):
+        path=self.directory/"guard-journal-fixture.jsonl"
+        guard=ex.CompleteClockGuard([],"fixture-boot",path,0)
+        start1,row1=self.clock_row(); start2,row2=self.clock_row(1.03,1)
+        result=guard.finish([start1,row1,start2,row2],"fixture",dict(monotonic=80,raw=80,realtime=80),2)
+        self.assertTrue(result["clock_conflict"])
+        self.assertTrue(result["clock_guard"]["process_checks"][1]["conflict"])
+        self.assertFalse(result["clock_guard"]["driver_check"]["conflict"])
+
+    def test_failed_attempt_cannot_be_a_formal_clock_baseline(self):
+        path=self.directory/"baseline-fixture.jsonl"
+        start,row=self.clock_row(1.2)
+        path.write_text(json.dumps(start)+'\n'+json.dumps(row)+'\n')
+        previous=[dict(type="task_start",attempt_id="failed",boot_id="same",journal=str(path.relative_to(P1)),prior_measurement_starts=0),
+            dict(type="task_end",attempt_id="failed",n4096_calls=1,n4096_calls_known=True,returncode=1,reason="failed",
+                 driver_wall_s=40,clock_elapsed_s=dict(monotonic=40,raw=48,realtime=40))]
+        guard=ex.CompleteClockGuard(previous,"same",path,0)
+        self.assertEqual(guard.process_baselines,[])
+        self.assertEqual(guard.driver_baselines,[])
+
+    def test_unfinished_call_and_missing_fields_are_not_healthy(self):
+        path=self.directory/"unfinished-clock-fixture.jsonl"
+        start,row=self.clock_row()
+        for rows in ([start],[start,{k:v for k,v in row.items() if k!="clock_end_ns"}]):
+            guard=ex.CompleteClockGuard([],"boot",path,0)
+            result=guard.finish(rows,"fixture",dict(monotonic=40,raw=40,realtime=40),1)
+            self.assertFalse(result["clock_guard"]["complete"])
+            self.assertIsNotNone(result["clock_guard"]["error"])
+
+    def test_partial_live_json_is_not_a_finished_clock_sample(self):
+        path=self.directory/"live-clock-fixture.jsonl"
+        start,row=self.clock_row()
+        path.write_text(json.dumps(start)+'\n'+json.dumps(row)[:30])
+        guard=ex.CompleteClockGuard([],"boot",path,0)
+        self.assertTrue(guard.poll("fixture"))
+        self.assertEqual(guard.checks,[])
+        path.write_text(json.dumps(start)+'\n'+json.dumps(row)+'\n')
+        self.assertTrue(guard.poll("fixture"))
+        self.assertEqual(len(guard.checks),1)
+
+    def test_real_small_guard_records_all_calls_and_complete_driver(self):
+        job=dict(id="guarded-small",action="search",role="fixture",algorithm="random",budget=8,repeats=1,seed=7)
+        path=self.directory/(job["id"]+".jsonl")
+        ledger=self.directory/"guarded-small-ledger.jsonl"
+        record=ex.controlled(ex.command(job,self.directory,self.protocol,self.protocol_path),self.directory,
+            job["id"],job["role"],call_upper=8,journal=path,ledger=ledger,complete_clock_guard=True,time_limit=60)
+        self.assertEqual(record["n4096_calls"],8)  # This private fixture ledger counts small processes only.
+        self.assertFalse(record["clock_conflict"])
+        self.assertTrue(record["clock_guard"]["complete"])
+        self.assertEqual(len(record["clock_guard"]["process_checks"]),8)
+        self.assertEqual(record["clock_guard"]["driver_check"]["identity"],record["attempt_id"])
+        rows=ex.read_records(path); resources=ex.read_records(ledger)
+        self.assertTrue(ex.validate_complete_clock_record(record,resources,rows,path))
+        for field in ("process_checks","driver_check","threshold_fraction","boot_id"):
+            changed=copy.deepcopy(record); changed["clock_guard"].pop(field)
+            altered=copy.deepcopy(resources); altered[-1]=changed
+            with self.assertRaises(ValueError): ex.validate_complete_clock_record(changed,altered,rows,path)
+        changed=copy.deepcopy(record);changed["clock_guard"]["process_checks"][0]["q"]+=.1
+        altered=copy.deepcopy(resources);altered[-1]=changed
+        with self.assertRaises(ValueError): ex.validate_complete_clock_record(changed,altered,rows,path)
+
+    def test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt(self):
+        protocol=copy.deepcopy(self.protocol)
+        protocol["measurement"]["clock_health"]={"guard":"completed_per_target_process_and_driver_first_and_previous_same_boot"}
+        job=dict(id="random",action="search",role="fixture",algorithm="random",budget=8,repeats=1,seed=7)
+        with self.assertRaises(ValueError): ex.validate_task(job,self.directory,protocol)
+        directory=self.directory/"summary-clock-fixture"; directory.mkdir(exist_ok=True)
+        (directory/"random.jsonl").write_text((self.directory/"random.jsonl").read_text())
+        record=dict(type="task_end",task="random",n4096_calls=8,returncode=0,reason=None,clock_conflict=True,
+            clock_guard=dict(schema=1,mode="complete_target_and_driver",complete=True,error=None))
+        (directory/"driver.jsonl").write_text(json.dumps(record)+'\n')
+        with self.assertRaises(ValueError): ex.validate_task(job,directory,protocol)
+
+    def test_saved_raw_seconds_and_resource_charge_cannot_be_tampered(self):
+        start=dict(type="task_start",task="fixture",attempt_id="fixture",clock_start_ns=dict(monotonic=0,raw=0,realtime=0))
+        end=dict(type="task_end",task="fixture",attempt_id="fixture",n4096_calls=1,resource_s=40,resource_wall_s=40,
+            driver_wall_s=40,clock_elapsed_s=dict(monotonic=40,raw=40,realtime=40),
+            clock_end_ns=dict(monotonic=40000000000,raw=40000000000,realtime=40000000000))
+        path=self.directory/"boundary-cost-fixture.jsonl"
+        for field in ("saved_raw","resource"):
+            altered=copy.deepcopy(end)
+            if field=="saved_raw": altered["clock_elapsed_s"]["raw"]=39
+            else: altered["resource_s"]=1
+            path.write_text(json.dumps(start)+'\n'+json.dumps(altered)+'\n')
+            with self.assertRaises(ValueError): ex.usage(path)
+
+    def test_completed_baseline_requires_unique_complete_target_rows(self):
+        start,row=self.clock_row()
+        for rows in ([start],[start,row,row],[start,start,row]):
+            with self.assertRaises(ValueError): ex.attempt_measurements(rows,0,1,complete=True)
+
+    def test_resource_calls_cannot_be_reduced_below_physical_starts(self):
+        journal=self.directory/"physical-starts-fixture.jsonl"
+        a,_=self.clock_row(trial=0); b,_=self.clock_row(trial=1)
+        journal.write_text(json.dumps(a)+'\n'+json.dumps(b)+'\n')
+        start=dict(type="task_start",task="fixture",attempt_id="fixture",journal=str(journal.relative_to(P1)),
+            clock_start_ns=dict(monotonic=0,raw=0,realtime=0))
+        end=dict(type="task_end",task="fixture",attempt_id="fixture",n4096_calls=1,resource_s=40,resource_wall_s=40,
+            driver_wall_s=40,clock_elapsed_s=dict(monotonic=40,raw=40,realtime=40),
+            clock_end_ns=dict(monotonic=40000000000,raw=40000000000,realtime=40000000000))
+        path=self.directory/"physical-count-ledger.jsonl"
+        path.write_text(json.dumps(start)+'\n'+json.dumps(end)+'\n')
+        with self.assertRaises(ValueError): ex.usage(path)
+
+    def test_formal_plan_identity_fields_cannot_be_changed(self):
+        source=P1/"evidence/protocol_v2.json"
+        protocol=ex.load_json(source)
+        protocol.update(protocol_sha256=ex.sha256(source),protocol_path=str(source.relative_to(P1)),measurement_root=str(P1))
+        manifest=ex.plan(protocol,"reference")
+        ex.freeze_check(protocol,manifest,source)
+        for key in ("schema","protocol","target_sha256","framework_sha256"):
+            altered=copy.deepcopy(manifest)
+            altered[key]=0 if key=="schema" else "wrong-identity"
+            with self.assertRaises(ValueError): ex.freeze_check(protocol,altered,source)
 
 
 if __name__=="__main__": unittest.main()

@@ -32,3 +32,7 @@
 5. 正式入口前需要独立代码测试、诊断结果审核、新协议目标/编译/源码/规则身份及精确调用上限。批准初始有限诊断不等于批准正式优化。
 
 起点与历史保护关口可继续；C1–C7 尚未在本记录中关闭。最终代码、实测、报告、图片、干净复现和发布审核均等待真实产物。
+
+## 新本地截图机制的实际清理复核
+
+2026-10-02 16:57 UTC，读取 `../commands/screenshot_cleanup_tests.jsonl` 四个真实 native 用例：成功截图、命令退出7、超时和SIGTERM。四个 Xvfb 都为 `-nolisten tcp -auth`，受限授权的 Unix socket可连接，空授权的 xdpyinfo全部退出1；四个 finally 都记录 own shell/Xvfb/xterm停止、auth/temp/socket/lock移除和监听为空。审核者独立从原始三域ns重算每项时间，并再次实际检查所有记录的12个 owned PID不存在、四个私有auth目录不存在、相应 display的 TCP/Unix监听均不存在。没有重跑 GUI、没有按进程名杀用户会话；WSLg X0保持原样。父任务总成本2.757842945秒已单独计账，内部 capture子项不重复相加。截图启动/授权/清理安全关关闭；最终正式图片逐张实际查看、来源与固定SHA链接仍待收口。详细原始SHA和每用例检查在配套JSON。

@@ -48,5 +48,127 @@
   "sources_unchanged": true,
   "stdout": "",
   "stderr": "test_cli_invalid_arguments_and_list (test_autotuner.LogicTests.test_cli_invalid_arguments_and_list) ... ok\ntest_greedy_mid_neighborhood_budget_and_failed_feedback (test_autotuner.LogicTests.test_greedy_mid_neighborhood_budget_and_failed_feedback) ... ok\ntest_greedy_seeded_start_ties_and_no_improvement (test_autotuner.LogicTests.test_greedy_seeded_start_ties_and_no_improvement) ... ok\ntest_journal_resume_fingerprint_and_truncated_tail (test_autotuner.LogicTests.test_journal_resume_fingerprint_and_truncated_tail) ... ok\ntest_parser_rejects_missing_nonfinite_nonpositive_and_malformed (test_autotuner.LogicTests.test_parser_rejects_missing_nonfinite_nonpositive_and_malformed) ... ok\ntest_patience_plateau_min_trials_and_small_budgets (test_autotuner.LogicTests.test_patience_plateau_min_trials_and_small_budgets) ... ok\ntest_patience_threshold_equality_small_improvement_and_failures (test_autotuner.LogicTests.test_patience_threshold_equality_small_improvement_and_failures) ... ok\ntest_random_without_replacement_and_seed_reproducible (test_autotuner.LogicTests.test_random_without_replacement_and_seed_reproducible) ... ok\ntest_space_complete_stable_and_checked (test_autotuner.LogicTests.test_space_complete_stable_and_checked) ... ok\ntest_stratified_complete_blind_balanced_prefix_and_seed (test_autotuner.LogicTests.test_stratified_complete_blind_balanced_prefix_and_seed) ... ok\ntest_budget_zero_one_twenty_and_independent_search_runs (test_autotuner.ProcessTests.test_budget_zero_one_twenty_and_independent_search_runs) ... ok\ntest_build_action_interrupt_stops_further_compilation (test_autotuner.ProcessTests.test_build_action_interrupt_stops_further_compilation) ... ok\ntest_build_action_resume_refuses_unrecorded_live_compiler (test_autotuner.ProcessTests.test_build_action_resume_refuses_unrecorded_live_compiler) ... ok\ntest_build_cache_identity_and_binary_corruption (test_autotuner.ProcessTests.test_build_cache_identity_and_binary_corruption) ... ok\ntest_cache_hit_log_failure_is_not_swallowed_or_recompiled (test_autotuner.ProcessTests.test_cache_hit_log_failure_is_not_swallowed_or_recompiled) ... ok\ntest_candidate_real_fixture_budget_seed_and_random_prefix (test_autotuner.ProcessTests.test_candidate_real_fixture_budget_seed_and_random_prefix) ... ok\ntest_candidate_resume_reconstructs_order_and_patience (test_autotuner.ProcessTests.test_candidate_resume_reconstructs_order_and_patience) ... ok\ntest_cli_candidate_options_and_runtime_affinity_are_fingerprinted (test_autotuner.ProcessTests.test_cli_candidate_options_and_runtime_affinity_are_fingerprinted) ... ok\ntest_cli_real_run_and_fingerprint_rejects_changed_repeats (test_autotuner.ProcessTests.test_cli_real_run_and_fingerprint_rejects_changed_repeats) ... ok\ntest_cli_sigterm_records_interrupt_and_stops_target (test_autotuner.ProcessTests.test_cli_sigterm_records_interrupt_and_stops_target) ... ok\ntest_compile_failure_is_recorded_and_consumes_attempt_budget (test_autotuner.ProcessTests.test_compile_failure_is_recorded_and_consumes_attempt_budget) ... ok\ntest_compile_timeout (test_autotuner.ProcessTests.test_compile_timeout) ... ok\ntest_declared_checksum_output_is_required (test_autotuner.ProcessTests.test_declared_checksum_output_is_required) ... ok\ntest_greedy_resume_reconstructs_moves_from_own_feedback (test_autotuner.ProcessTests.test_greedy_resume_reconstructs_moves_from_own_feedback) ... ok\ntest_monotonic_clock_overrun_is_preserved_and_excluded (test_autotuner.ProcessTests.test_monotonic_clock_overrun_is_preserved_and_excluded) ... ok\ntest_monotonic_mini_target_and_clock_detection (test_autotuner.ProcessTests.test_monotonic_mini_target_and_clock_detection) ... ok\ntest_orphan_process_on_resume_is_failed_without_rerun (test_autotuner.ProcessTests.test_orphan_process_on_resume_is_failed_without_rerun) ... ok\ntest_resume_preserves_completed_repeat_and_replays_search (test_autotuner.ProcessTests.test_resume_preserves_completed_repeat_and_replays_search) ... ok\ntest_resume_refuses_live_group_and_marks_unknown_hard_exit_costs (test_autotuner.ProcessTests.test_resume_refuses_live_group_and_marks_unknown_hard_exit_costs) ... ok\ntest_start_log_failure_cleans_spawned_process (test_autotuner.ProcessTests.test_start_log_failure_cleans_spawned_process) ... ok\ntest_timeout_nonzero_and_bad_output_are_not_best (test_autotuner.ProcessTests.test_timeout_nonzero_and_bad_output_are_not_best) ... ok\ntest_actual_cli_metadata_and_completed_setting_tampering (test_experiment.ExperimentTests.test_actual_cli_metadata_and_completed_setting_tampering) ... ok\ntest_clear_cost_rejection_survives_reference_uncertainty (test_experiment.ExperimentTests.test_clear_cost_rejection_survives_reference_uncertainty) ... ok\ntest_clone_historical_analysis_and_strict_resume (test_experiment.ExperimentTests.test_clone_historical_analysis_and_strict_resume) ... ok\ntest_complete_framework_summary_does_not_hide_torn_driver_cost (test_experiment.ExperimentTests.test_complete_framework_summary_does_not_hide_torn_driver_cost) ... ok\ntest_complete_legal_driver_row_without_newline_preserved (test_experiment.ExperimentTests.test_complete_legal_driver_row_without_newline_preserved) ... ok\ntest_complete_states_required_for_keep_and_raw_output_protected (test_experiment.ExperimentTests.test_complete_states_required_for_keep_and_raw_output_protected) ... ok\ntest_conflict_cap_interleaving_and_original_reference_unchanged (test_experiment.ExperimentTests.test_conflict_cap_interleaving_and_original_reference_unchanged) ... ok\ntest_end_to_end_driver_wall_sums_attempts_and_confirmation (test_experiment.ExperimentTests.test_end_to_end_driver_wall_sums_attempts_and_confirmation) ... ok\ntest_exit_spawn_and_process_start_completion_rejected (test_experiment.ExperimentTests.test_exit_spawn_and_process_start_completion_rejected) ... ok\ntest_frozen_driver_and_compiler_identity (test_experiment.ExperimentTests.test_frozen_driver_and_compiler_identity) ... ok\ntest_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost (test_experiment.ExperimentTests.test_hard_driver_recovery_does_not_use_internal_wall_as_actual_cost) ... ok\ntest_hard_recovery_torn_tail_unknown_cost_and_no_zero (test_experiment.ExperimentTests.test_hard_recovery_torn_tail_unknown_cost_and_no_zero) ... ok\ntest_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds (test_experiment.ExperimentTests.test_machine_rounding_at_two_pp_twelve_pp_and_five_point_six_seconds) ... ok\ntest_negative_and_overflowed_acceptance_numbers_rejected (test_experiment.ExperimentTests.test_negative_and_overflowed_acceptance_numbers_rejected) ... ok\ntest_partial_resume_reserves_remaining_processes (test_experiment.ExperimentTests.test_partial_resume_reserves_remaining_processes) ... ok\ntest_plan_counts_seed_rotation_and_single_baseline (test_experiment.ExperimentTests.test_plan_counts_seed_rotation_and_single_baseline) ... ok\ntest_popen_pid_log_failure_cleans_child_without_fake_completion (test_experiment.ExperimentTests.test_popen_pid_log_failure_cleans_child_without_fake_completion) ... ok\ntest_raw_checksum_duplicate_repeat_and_summary_count_rejected (test_experiment.ExperimentTests.test_raw_checksum_duplicate_repeat_and_summary_count_rejected) ... ok\ntest_raw_stdout_repeat_counts_and_clock_rejection (test_experiment.ExperimentTests.test_raw_stdout_repeat_counts_and_clock_rejection) ... ok\ntest_robust_gain_count_and_risk_endpoints (test_experiment.ExperimentTests.test_robust_gain_count_and_risk_endpoints) ... ok\ntest_same_configuration_conflict_only_three_diagnostic_runs (test_experiment.ExperimentTests.test_same_configuration_conflict_only_three_diagnostic_runs) ... ok\ntest_summary_cli_and_relocated_clone_produce_identical_tables (test_experiment.ExperimentTests.test_summary_cli_and_relocated_clone_produce_identical_tables) ... ok\ntest_warmup_kept_in_raw_and_excluded_from_three_reference_samples (test_experiment.ExperimentTests.test_warmup_kept_in_raw_and_excluded_from_three_reference_samples) ... ok\ntest_actual_subprocess_clock_units_and_fields (test_goal2_search.Goal2ClockTests.test_actual_subprocess_clock_units_and_fields) ... ok\ntest_ns_time_domains_remain_separate_and_children_cpu_is_not_wall (test_goal2_search.Goal2ClockTests.test_ns_time_domains_remain_separate_and_children_cpu_is_not_wall) ... ok\ntest_actual_rechecks_cost_calls_and_log_only_online_samples (test_goal2_search.Goal2ProcessTests.test_actual_rechecks_cost_calls_and_log_only_online_samples) ... ok\ntest_cli_rejects_incomplete_start_and_recheck_free_repeats (test_goal2_search.Goal2ProcessTests.test_cli_rejects_incomplete_start_and_recheck_free_repeats) ... ok\ntest_interrupt_between_finalist_calls_resumes_without_double_counting (test_goal2_search.Goal2ProcessTests.test_interrupt_between_finalist_calls_resumes_without_double_counting) ... ok\ntest_lost_completion_is_failed_and_not_given_a_free_call (test_goal2_search.Goal2ProcessTests.test_lost_completion_is_failed_and_not_given_a_free_call) ... ok\ntest_recheck_call_budget_repeats_and_mismatch_refused (test_goal2_search.Goal2ProcessTests.test_recheck_call_budget_repeats_and_mismatch_refused) ... ok\ntest_same_domain_guard_and_unmatched_domains_not_compared (test_goal2_search.Goal2ProcessTests.test_same_domain_guard_and_unmatched_domains_not_compared) ... ok\ntest_schema_two_options_and_resume_fingerprints (test_goal2_search.Goal2ProcessTests.test_schema_two_options_and_resume_fingerprints) ... ok\ntest_explicit_greedy_start_changes_only_diagnostic_start (test_goal2_search.Goal2StrategyTests.test_explicit_greedy_start_changes_only_diagnostic_start) ... ok\ntest_failures_consume_slots_and_invalidate_rechecked_candidate (test_goal2_search.Goal2StrategyTests.test_failures_consume_slots_and_invalidate_rechecked_candidate) ... ok\ntest_feedback_contract_nonfinite_and_no_external_observation (test_goal2_search.Goal2StrategyTests.test_feedback_contract_nonfinite_and_no_external_observation) ... ok\ntest_finalists_and_final_ties_follow_visit_order (test_goal2_search.Goal2StrategyTests.test_finalists_and_final_ties_follow_visit_order) ... ok\ntest_no_valid_finalists_or_one_finalist_do_not_fill_budget (test_goal2_search.Goal2StrategyTests.test_no_valid_finalists_or_one_finalist_do_not_fill_budget) ... ok\ntest_recheck_can_raise_best_and_replace_first_sample_winner (test_goal2_search.Goal2StrategyTests.test_recheck_can_raise_best_and_replace_first_sample_winner) ... ok\ntest_restore_replays_fresh_scores_instead_of_aggregates (test_goal2_search.Goal2StrategyTests.test_restore_replays_fresh_scores_instead_of_aggregates) ... ok\ntest_same_random_prefix_and_no_free_exploration (test_goal2_search.Goal2StrategyTests.test_same_random_prefix_and_no_free_exploration) ... ok\ntest_small_space_and_minimum_budget (test_goal2_search.Goal2StrategyTests.test_small_space_and_minimum_budget) ... ok\n\n----------------------------------------------------------------------\nRan 72 tests in 10.753s\n\nOK\n",
-  "n4096_calls": 0
+  "n4096_calls": 0,
+  "independent_large_numeric_adapter_source_review": {
+    "at_utc": "2026-10-02T17:38:39.234256+00:00",
+    "method": "independent text/hash extraction only, no project helper import, no build or target invocation",
+    "adapter_path": "evidence/measurement/correctness/goal2-large-adapter.json",
+    "adapter_sha256": "c4092f5d8255588034b5753405b05ffe8b036293a9ff25ab03cd874860e36f3d",
+    "formal_source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "outputs": {
+      "129": {
+        "source": ".cache/validation-goal2/verify_129_default.c",
+        "source_sha256": "624bd9803cb8bd04bd6a3d52bf3269524ed08848bfcadb00304151496173a76e",
+        "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+        "exact_original_kernel": true,
+        "explicit_default_seed1_mode0": true
+      },
+      "4096": {
+        "source": ".cache/validation-goal2/verify_4096_default.c",
+        "source_sha256": "140a1efa2dbde5d7f77193fc5933c09d5faacc4649bd06cac328f62e19823928",
+        "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+        "exact_original_kernel": true,
+        "explicit_default_seed1_mode0": true
+      }
+    },
+    "checker": "24 preset large elements with independent long-double unblocked dot products; full-elements only for n<=129",
+    "validation_only_extra_flags": [
+      "-Wl,--no-as-needed",
+      "-lm"
+    ],
+    "formal_scores": false,
+    "large_actual_results": "PASSED_TWO_24_ELEMENT_SPOT_CHECKS",
+    "n4096_calls_by_reviewer": 0
+  },
+  "independent_actual_large_numeric_review": {
+    "at_utc": "2026-10-02T17:46:15.857889+00:00",
+    "method": "stdlib independent raw journal/ledger ns, binary/source/command identities and whole-clock first/previous replay; no project author helper import or target invocation",
+    "cases": [
+      {
+        "task": "goal2-n129-O0-s24",
+        "n": 129,
+        "s": 24,
+        "opt": "O0",
+        "journal": "evidence/measurement/correctness/goal2-n129-O0-s24.jsonl",
+        "journal_sha256": "cecf678a57a55862d6825fdd5f32d3353aef8b4d0201494a935ee0cdd2614a0f",
+        "count": 16641,
+        "max_abs": 4.110601e-14,
+        "max_rel": 1.155377e-15,
+        "failures": 0,
+        "kernel_s": 0.005981,
+        "process_wall_s": 0.016102127,
+        "resource_s": 0.268502711,
+        "actual_n4096_calls": 0,
+        "binary_sha256": "0384159142f97ce6b68f3b4feb4d19e150d3d1dfaa1c29ad6797fbfb18880a38"
+      },
+      {
+        "task": "goal2-n129-O3-s128",
+        "n": 129,
+        "s": 128,
+        "opt": "O3",
+        "journal": "evidence/measurement/correctness/goal2-n129-O3-s128.jsonl",
+        "journal_sha256": "b7ac3a3dece2c7ce3bf5eae81b6876d62ef546cfe09081887955c91c8a0f66e2",
+        "count": 16641,
+        "max_abs": 4.110601e-14,
+        "max_rel": 1.155377e-15,
+        "failures": 0,
+        "kernel_s": 0.000879,
+        "process_wall_s": 0.004469558,
+        "resource_s": 0.258830677,
+        "actual_n4096_calls": 0,
+        "binary_sha256": "8c388f5fa7f9e84eee0ff5996c9be9524786583338ab8ca8a716b70579f5c013"
+      },
+      {
+        "task": "goal2-n4096-O0-s24",
+        "n": 4096,
+        "s": 24,
+        "opt": "O0",
+        "journal": "evidence/measurement/correctness/goal2-n4096-O0-s24.jsonl",
+        "journal_sha256": "597cb4c72523a114577348ed367979deafcbaa875b9136cad2c0454fbbf0b927",
+        "count": 24,
+        "max_abs": 2.937539e-12,
+        "max_rel": 2.814528e-15,
+        "failures": 0,
+        "kernel_s": 224.947815,
+        "process_wall_s": 225.600983835,
+        "resource_s": 229.807998985,
+        "actual_n4096_calls": 1,
+        "binary_sha256": "ffbe086ece5e29d6c5b46c29a00a68069a31e16d39b26c39e8d0610f8e6c3982",
+        "exact_raw_guard_reconstruction": true,
+        "process_q": 1.0175550250166312,
+        "driver_q": 1.0175543829251665
+      },
+      {
+        "task": "goal2-n4096-O3-s128",
+        "n": 4096,
+        "s": 128,
+        "opt": "O3",
+        "journal": "evidence/measurement/correctness/goal2-n4096-O3-s128.jsonl",
+        "journal_sha256": "dfe0ec8ffd05252e593b91e72ada60f124d0e36b3de2623adcecbab808e49d7a",
+        "count": 24,
+        "max_abs": 2.937539e-12,
+        "max_rel": 2.814528e-15,
+        "failures": 0,
+        "kernel_s": 39.603188,
+        "process_wall_s": 40.114005628,
+        "resource_s": 41.283948982,
+        "actual_n4096_calls": 1,
+        "binary_sha256": "3b63ea767dc0d2bb3bf97619182983637380c736c9b3db0d148ac49aa7d4376c",
+        "exact_raw_guard_reconstruction": true,
+        "process_q": 1.0175708210627565,
+        "driver_q": 1.0175726205657998
+      }
+    ],
+    "binding_sha256": "170903811396626eebb0898ce5a8ed478fc20681ca095a155d8a5023843df5c3",
+    "numeric_n4096_actual_calls": 2,
+    "numeric_n4096_controlled_resource_s": 271.091947967,
+    "numeric_smoke_actual_calls": 2,
+    "numeric_smoke_controlled_resource_s": 0.527333388,
+    "project_ledger_sha256": "4124f970a4320e4d3df79102fa0b0f65ec6ffffcc496ba172267609b01e6f5d5",
+    "project_actual_n4096_calls": 43,
+    "project_controlled_resource_s": 3038.248625664,
+    "project_unfinished_attempts": 0,
+    "formal_scores": false,
+    "n4096_calls_by_reviewer": 0
+  }
 }

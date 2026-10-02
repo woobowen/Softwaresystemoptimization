@@ -32,7 +32,7 @@
       "id": "F4",
       "severity": "high",
       "path": "scripts/clock_followup.py:query_reader identity freeze",
-      "status": "CODE_CLOSED_ACTUAL_IDENTITY_PROTOCOL_BINDING_REQUIRED"
+      "status": "CLOSED_BY_CODE_FIXTURES_AND_ACTUAL_R1_FROZEN_IDENTITY_REVIEW"
     },
     {
       "id": "CF1",
@@ -419,5 +419,850 @@
   },
   "current_frozen_protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
   "current_frozen_plan_sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e",
-  "current_executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797"
+  "current_executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+  "independent_actual_twelve_run_data_review": {
+    "reviewer": "/root/review",
+    "at_utc": "2026-10-02T16:31:41.029852+00:00",
+    "method": "Independent Python standard-library raw ns/identity replay; does not import author analysis or runner functions; read-only data review, no tests/build/target launched",
+    "protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+    "plan_sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e",
+    "ledger_sha256": "d3662379619fa5a643f000444819c80e032717e0219bd8031292c21332297748",
+    "initial_matching_commit": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+    "initial_nonledger_inputs_unchanged": 31,
+    "initial_ledger_is_exact_prefix": true,
+    "actual_n4096_calls_all": 41,
+    "controlled_resource_s_all": 2755.910424768,
+    "actual_n4096_calls_followup": 12,
+    "controlled_resource_s_followup": 696.28810654,
+    "unknown_call_attempts": [],
+    "raw_sha256": {
+      "results/clock_followup_v2_r1/clock-followup-01-M-B3.jsonl": "f52bde137d1ab91de1e30e44ed4603f42c3732ea83b3e2e26eae3ee930deb643",
+      "results/clock_followup_v2_r1/clock-followup-01-M-B3.clocks.jsonl": "6ffa370d725d852905204cde79042562b100e05112f5f2cd4824b2b6ddda9006",
+      "results/clock_followup_v2_r1/clock-followup-01-M-B3.stdout.txt": "e0780db20423d580fb6df53d574c61aec78e572f00676c360a6501e21826c2b7",
+      "results/clock_followup_v2_r1/clock-followup-01-M-B3.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-02-F-A3.jsonl": "0b031e9915cb3b90ac60ff03151d856008a7900f2ac701c8cb663be0860b1da8",
+      "results/clock_followup_v2_r1/clock-followup-02-F-A3.clocks.jsonl": "84e209616d90f5ea9c11d6b5cbdfad30510b8e7abeba7dc775de0586d96a3c22",
+      "results/clock_followup_v2_r1/clock-followup-02-F-A3.stdout.txt": "ba3278a04d2eaef6d93f50ab276c1a1d7d51031e7c11147cc9f6d3009d3e46bf",
+      "results/clock_followup_v2_r1/clock-followup-02-F-A3.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-03-multiclock-F.clocks.jsonl": "cda2fbc8adaacd805d8e4d60048f9438acd1e481653e1b3284f9ad4a4e3ff401",
+      "results/clock_followup_v2_r1/clock-followup-03-multiclock-F.stdout.txt": "b7f2860fa395711372d9d61f0ca3393cf0c2faf65424c49867a398847bbce63c",
+      "results/clock_followup_v2_r1/clock-followup-03-multiclock-F.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-04-multiclock-M.clocks.jsonl": "6278d526fa72e1cb23c78a39ec89eddd3ddbe5a40660f834d66bbbb2ca8d2f48",
+      "results/clock_followup_v2_r1/clock-followup-04-multiclock-M.stdout.txt": "f69030b6b6263f0c1382545760e14891de432e1da30b3a8c31fb94dba29d145d",
+      "results/clock_followup_v2_r1/clock-followup-04-multiclock-M.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-05-F-A1.jsonl": "b11645064fd24db68493c936c144809af363defc6d458d216ca13740805b03f5",
+      "results/clock_followup_v2_r1/clock-followup-05-F-A1.clocks.jsonl": "8522c20053dbf420c9d7b46a8121e9b5cc067fc81702e61e9dd817a8749821c5",
+      "results/clock_followup_v2_r1/clock-followup-05-F-A1.stdout.txt": "8582286c5d857603d9c629919dab9f54e61851679b0ad4dd4626d8311ebb64f1",
+      "results/clock_followup_v2_r1/clock-followup-05-F-A1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-06-F-B1.jsonl": "feb03b6ee982a6a73ff746fb8d702d8d16ea8b9b3852d732b8d5325283365378",
+      "results/clock_followup_v2_r1/clock-followup-06-F-B1.clocks.jsonl": "1a6d15c1b548d7b38ba0d4b6a1a55937a0c0997fe8595dcd635cd8638e7e3f8d",
+      "results/clock_followup_v2_r1/clock-followup-06-F-B1.stdout.txt": "26ed906b38a8295e69260aebf13a6b4ec17f032dee3295695ce9537e978399b1",
+      "results/clock_followup_v2_r1/clock-followup-06-F-B1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-07-M-B1.jsonl": "08bf1173d97e2b98a062af4b0cf9abf621836a025e45073b705600cf9adc2f03",
+      "results/clock_followup_v2_r1/clock-followup-07-M-B1.clocks.jsonl": "82e8d8d2d7abc6bc488661d1fdbdce53949991df63143670df17abdecd06bf2a",
+      "results/clock_followup_v2_r1/clock-followup-07-M-B1.stdout.txt": "4ef63a9d2729e057556398087796eee3c4f310ad1b5bf3ac0c9c6ffc37ea4a04",
+      "results/clock_followup_v2_r1/clock-followup-07-M-B1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-08-M-A1.jsonl": "51473a0ccab4eab71d2c2293bfab3a6e9b7f6af652283f7de92ae55ca28c9274",
+      "results/clock_followup_v2_r1/clock-followup-08-M-A1.clocks.jsonl": "1f481d1de3715dad4ceb463fbfa0b0ba9ee11e84960089924324da8b42832d04",
+      "results/clock_followup_v2_r1/clock-followup-08-M-A1.stdout.txt": "acf3d10f6f44d284ff31a228001986c7eb8485f91fbfcafbf53c74e183281d4a",
+      "results/clock_followup_v2_r1/clock-followup-08-M-A1.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-09-M-A2.jsonl": "d857afd4b74b206e696dc467e42f61c695ce54ee3cac15bc4a2048a46401f5b6",
+      "results/clock_followup_v2_r1/clock-followup-09-M-A2.clocks.jsonl": "e17557ea618ee4b68a1adf644b593064a89ffec2ce578a8c6dd983570d5e2826",
+      "results/clock_followup_v2_r1/clock-followup-09-M-A2.stdout.txt": "7e133a03098d71eeb8095887a641349915b824f08707ff9670922ac8d42af157",
+      "results/clock_followup_v2_r1/clock-followup-09-M-A2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-10-M-B2.jsonl": "80b38aa8bdeaac73f346e6176a1a75ab5b94ba4a68245bad029d13085f6829af",
+      "results/clock_followup_v2_r1/clock-followup-10-M-B2.clocks.jsonl": "191e6ae2a60b5ee567bf47a201c6f6753bde6ce88203cffe1bb5d89baee6d01d",
+      "results/clock_followup_v2_r1/clock-followup-10-M-B2.stdout.txt": "ec4f3a849bb35069186705ea889d316291423db1a81318f9fe00534b2f1125f6",
+      "results/clock_followup_v2_r1/clock-followup-10-M-B2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-11-F-B2.jsonl": "63f9f2858723cf9b65bf679bb6fa6387d9a39a4fb787bae7b8fd5ac9b5fea147",
+      "results/clock_followup_v2_r1/clock-followup-11-F-B2.clocks.jsonl": "2fb83dd3fdbf04b475c52fc1ef0198dd8859beb686fe17db0b5c630ff1debd7b",
+      "results/clock_followup_v2_r1/clock-followup-11-F-B2.stdout.txt": "789e44812dfdafc2b686daab731b440cf2a96639e421aebfa0093b04cf24462e",
+      "results/clock_followup_v2_r1/clock-followup-11-F-B2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "results/clock_followup_v2_r1/clock-followup-12-F-A2.jsonl": "68c05ad710cdd1f1d146ee0a1ca30f1f1c16da6bad496617f1a5979eb8b84f1e",
+      "results/clock_followup_v2_r1/clock-followup-12-F-A2.clocks.jsonl": "b558b403c462280f9cf0979c2aabba8185716a943acdce01d3a48326c2a3319d",
+      "results/clock_followup_v2_r1/clock-followup-12-F-A2.stdout.txt": "25aa7135160c99b997ea484f12448b099e8a4168b9bfa80cb32222bac36bb7dd",
+      "results/clock_followup_v2_r1/clock-followup-12-F-A2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "followup": [
+      {
+        "task": "clock-followup-01-M-B3",
+        "role": "aa_replacement",
+        "kernel_s": 65.152481,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 66.107531187,
+              "raw": 67.062926237,
+              "realtime": 67.033404914
+            },
+            "ratio": 1.014452136282286,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0096390068033583
+            ],
+            "relative_changes": [
+              0.01584381576965832,
+              0.004767178611855272
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 65.759726718,
+              "raw": 66.710065101,
+              "realtime": 66.685600537
+            },
+            "ratio": 1.0144516778038841,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0096708540223052
+            ],
+            "relative_changes": [
+              0.016366490004170675,
+              0.004735031978523763
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.014389329341036,
+          1.0145268520505586
+        ],
+        "local_q_range": [
+          1.0142755229555107,
+          1.014615494575016
+        ],
+        "timeline_sample_count": 34,
+        "resource_s": 67.062926237,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 66.62115299999999
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-02-F-A3",
+        "role": "aa_replacement",
+        "kernel_s": 35.371246,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 36.145577839,
+              "raw": 36.667785894,
+              "realtime": 36.603799684
+            },
+            "ratio": 1.014447356667696,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.014452136282286
+            ],
+            "relative_changes": [
+              0.01583902959813832,
+              -4.711523017397745e-06
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 35.894427907,
+              "raw": 36.413395669,
+              "realtime": 36.352650082
+            },
+            "ratio": 1.0144581705925113,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0144516778038841
+            ],
+            "relative_changes": [
+              0.016372995048158367,
+              6.40029364551431e-06
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0143596611307741,
+          1.0145419894337904
+        ],
+        "local_q_range": [
+          1.0142627513078286,
+          1.014623293866727
+        ],
+        "timeline_sample_count": 19,
+        "resource_s": 36.667785894,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 36.353559
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-03-multiclock-F",
+        "role": "clock_matrix_diagnostic",
+        "kernel_s": 38.29611819,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 38.94658466,
+              "raw": 39.604444975,
+              "realtime": 39.855006089
+            },
+            "ratio": 1.0168913480024773,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.014447356667696
+            ],
+            "relative_changes": [
+              0.01828637373044084,
+              0.002409184980095347
+            ],
+            "conflict": false
+          },
+          {
+            "source": "diagnostic_kernel",
+            "elapsed_s": {
+              "monotonic": 38.29611819,
+              "raw": 38.944863624,
+              "realtime": 39.204538897
+            },
+            "ratio": 1.016940240020708,
+            "baseline_ratios": [
+              0.9986041374886797,
+              1.0017941036874336
+            ],
+            "relative_changes": [
+              0.01836173298674737,
+              0.015119011259423498
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0117220404940142,
+          1.0168913480024773
+        ],
+        "local_q_range": [
+          1.0117216272513976,
+          1.0377400745140173
+        ],
+        "timeline_sample_count": 21,
+        "resource_s": 39.855006089,
+        "cpu_observations": [
+          {
+            "scope": "kernel_PROCESS_CPUTIME_ID",
+            "cpu_s": 38.931999748
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-04-multiclock-M",
+        "role": "clock_matrix_diagnostic",
+        "kernel_s": 67.922707172,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 68.559765598,
+              "raw": 69.490887472,
+              "realtime": 69.545102481
+            },
+            "ratio": 1.0135811706163003,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0168913480024773
+            ],
+            "relative_changes": [
+              0.014971655266569739,
+              -0.0032551927919136636
+            ],
+            "conflict": false
+          },
+          {
+            "source": "diagnostic_kernel",
+            "elapsed_s": {
+              "monotonic": 67.922707172,
+              "raw": 68.8322206,
+              "realtime": 68.908043377
+            },
+            "ratio": 1.0133904178126594,
+            "baseline_ratios": [
+              0.9986041374886797,
+              1.016940240020708
+            ],
+            "relative_changes": [
+              0.014806948788700813,
+              -0.003490689096909194
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0084765852336943,
+          1.0246779656469485
+        ],
+        "local_q_range": [
+          0.9987711736891215,
+          1.0246779656469485
+        ],
+        "timeline_sample_count": 36,
+        "resource_s": 69.545102481,
+        "cpu_observations": [
+          {
+            "scope": "kernel_PROCESS_CPUTIME_ID",
+            "cpu_s": 68.799219654
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-05-F-A1",
+        "role": "clock_followup_aa",
+        "kernel_s": 36.219837,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 36.922331132,
+              "raw": 37.467330533,
+              "realtime": 37.401603615
+            },
+            "ratio": 1.0147606985878437,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0135811706163003
+            ],
+            "relative_changes": [
+              0.016152801377425918,
+              0.0011637232475680825
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 36.753100961,
+              "raw": 37.295578944,
+              "realtime": 37.232372614
+            },
+            "ratio": 1.0147600602075901,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0144581705925113
+            ],
+            "relative_changes": [
+              0.01667545449019947,
+              0.00029758705073312797
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0143011965280795,
+          1.0149289450713628
+        ],
+        "local_q_range": [
+          1.0143008160118148,
+          1.015343930439867
+        ],
+        "timeline_sample_count": 20,
+        "resource_s": 37.467330533,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 37.27700099999999
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-06-F-B1",
+        "role": "clock_followup_aa",
+        "kernel_s": 36.487453,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 37.19773036,
+              "raw": 37.696183934,
+              "realtime": 37.850447496
+            },
+            "ratio": 1.0134001071886902,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0147606985878437
+            ],
+            "relative_changes": [
+              0.014790343446503096,
+              -0.0013408002507850902
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 37.028336573,
+              "raw": 37.525093749,
+              "realtime": 37.681052919
+            },
+            "ratio": 1.0134155952434067,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0147600602075901
+            ],
+            "relative_changes": [
+              0.015328451802463006,
+              -0.0013249092242636484
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0134001071886902,
+          1.0152470936952593
+        ],
+        "local_q_range": [
+          1.0074206958792358,
+          1.0152603856311326
+        ],
+        "timeline_sample_count": 20,
+        "resource_s": 37.850447496,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 37.497199
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-07-M-B1",
+        "role": "clock_followup_aa",
+        "kernel_s": 84.824883,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 85.482783026,
+              "raw": 86.754189073,
+              "realtime": 86.443759298
+            },
+            "ratio": 1.0148732411603083,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0134001071886902
+            ],
+            "relative_changes": [
+              0.016265498341787366,
+              0.001453654840934293
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 85.351503685,
+              "raw": 86.621399769,
+              "realtime": 86.31247943
+            },
+            "ratio": 1.0148784266143303,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0134155952434067
+            ],
+            "relative_changes": [
+              0.01679404431757625,
+              0.0014434664098219585
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0129207095926085,
+          1.0163766457557335
+        ],
+        "local_q_range": [
+          1.0129207095926085,
+          1.0190522290410506
+        ],
+        "timeline_sample_count": 44,
+        "resource_s": 86.754189073,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 86.56246600000001
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-08-M-A1",
+        "role": "clock_followup_aa",
+        "kernel_s": 68.213715,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 69.086669697,
+              "raw": 70.064425681,
+              "realtime": 70.224202937
+            },
+            "ratio": 1.0141525997459169,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0148732411603083
+            ],
+            "relative_changes": [
+              0.015543868313110165,
+              -0.0007100802200357137
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 68.992411313,
+              "raw": 69.9687907,
+              "realtime": 70.129943857
+            },
+            "ratio": 1.014151982347311,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0148784266143303
+            ],
+            "relative_changes": [
+              0.01606622886218445,
+              -0.00071579437296998
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.014132753694064,
+          1.0146614570280432
+        ],
+        "local_q_range": [
+          1.0108838488795415,
+          1.0148115604103394
+        ],
+        "timeline_sample_count": 36,
+        "resource_s": 70.224202937,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 69.915078
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-09-M-A2",
+        "role": "clock_followup_aa",
+        "kernel_s": 81.377769,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 82.225390029,
+              "raw": 83.425753245,
+              "realtime": 83.17047414
+            },
+            "ratio": 1.0145984496464735,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0141525997459169
+            ],
+            "relative_changes": [
+              0.015990329854314034,
+              0.00043962802113628463
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 81.914567345,
+              "raw": 83.110437777,
+              "realtime": 82.859651179
+            },
+            "ratio": 1.0145989958899906,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.014151982347311
+            ],
+            "relative_changes": [
+              0.016514086158197827,
+              0.00044077569285505547
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0144772959251418,
+          1.014601838062965
+        ],
+        "local_q_range": [
+          1.0143980673736108,
+          1.0150321084868255
+        ],
+        "timeline_sample_count": 42,
+        "resource_s": 83.425753245,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 83.057145
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-10-M-B2",
+        "role": "clock_followup_aa",
+        "kernel_s": 82.608643,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 83.386081292,
+              "raw": 83.570110807,
+              "realtime": 83.841939274
+            },
+            "ratio": 1.002206957230135,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.0145984496464735
+            ],
+            "relative_changes": [
+              0.003581838128499104,
+              -0.012213198650812163
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 83.126143524,
+              "raw": 83.310583563,
+              "realtime": 83.582001261
+            },
+            "ratio": 1.0022187970135623,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0145989958899906
+            ],
+            "relative_changes": [
+              0.004110519233424537,
+              -0.012202061037492551
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          1.0016551680949355,
+          1.0147024405039171
+        ],
+        "local_q_range": [
+          0.923076979758142,
+          1.0204365043190948
+        ],
+        "timeline_sample_count": 43,
+        "resource_s": 83.841939274,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 83.27937
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-11-F-B2",
+        "role": "clock_followup_aa",
+        "kernel_s": 39.956944,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 40.818038667,
+              "raw": 40.937445778,
+              "realtime": 40.818040253
+            },
+            "ratio": 1.002925351508781,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.002206957230135
+            ],
+            "relative_changes": [
+              0.004301217938690316,
+              0.000716812304547787
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 40.518684174,
+              "raw": 40.638902863,
+              "realtime": 40.518684697
+            },
+            "ratio": 1.0029669939054224,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0022187970135623
+            ],
+            "relative_changes": [
+              0.004860128372480066,
+              0.0007465404700945921
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          0.9948665203888263,
+          1.0125994713795663
+        ],
+        "local_q_range": [
+          0.9656978744601363,
+          1.0346528794958798
+        ],
+        "timeline_sample_count": 22,
+        "resource_s": 40.937445778,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 40.623137
+          }
+        ]
+      },
+      {
+        "task": "clock-followup-12-F-A2",
+        "role": "clock_followup_aa",
+        "kernel_s": 41.888515,
+        "complete_clock_checks": [
+          {
+            "source": "driver",
+            "elapsed_s": {
+              "monotonic": 42.645510378,
+              "raw": 42.655977503,
+              "realtime": 42.645512192
+            },
+            "ratio": 1.0002454449461908,
+            "baseline_ratios": [
+              0.9986300261262919,
+              1.002925351508781
+            ],
+            "relative_changes": [
+              0.001617634937500556,
+              -0.00267208976077693
+            ],
+            "conflict": false
+          },
+          {
+            "source": "formal_target_process",
+            "elapsed_s": {
+              "monotonic": 42.402182838,
+              "raw": 42.418852519,
+              "realtime": 42.402183731
+            },
+            "ratio": 1.000393132614509,
+            "baseline_ratios": [
+              0.9981160219083189,
+              1.0029669939054224
+            ],
+            "relative_changes": [
+              0.002281408830444809,
+              -0.0025662472509599965
+            ],
+            "conflict": false
+          }
+        ],
+        "prefix_flag_count": 0,
+        "prefix_q_range": [
+          0.9934961713573709,
+          1.0102346096763972
+        ],
+        "local_q_range": [
+          0.9668147366736891,
+          1.0291299187159688
+        ],
+        "timeline_sample_count": 23,
+        "resource_s": 42.655977503,
+        "cpu_observations": [
+          {
+            "scope": "whole_process_RUSAGE_CHILDREN",
+            "cpu_s": 42.395164
+          }
+        ]
+      }
+    ],
+    "new_aa": [
+      {
+        "tier": "F",
+        "a": {
+          "1": 36.219837,
+          "2": 41.888515
+        },
+        "b": {
+          "1": 36.487453,
+          "2": 39.956944
+        },
+        "median_signed_pct": -2.130316358486206,
+        "paired_signed_s": [
+          0.26761600000000385,
+          -1.9315709999999982
+        ],
+        "paired_signed_pct": [
+          0.738865832002511,
+          -4.611218612070633
+        ]
+      },
+      {
+        "tier": "M",
+        "a": {
+          "1": 68.213715,
+          "2": 81.377769
+        },
+        "b": {
+          "1": 84.824883,
+          "2": 82.608643
+        },
+        "median_signed_pct": 11.927177619282148,
+        "paired_signed_s": [
+          16.611168000000006,
+          1.230874
+        ],
+        "paired_signed_pct": [
+          24.351654209127904,
+          1.51254330897177
+        ]
+      }
+    ],
+    "complete_clock_conflicts": 0,
+    "prefix_flags": 0,
+    "formal_admission": false,
+    "clock_absolute_accuracy_proven": false,
+    "environment_stability_proven": false,
+    "interrupted_original_completion_counterfactual_proven": false,
+    "new_M_AA_pair_exceeds_initial_rho14": true
+  },
+  "author_joint_summary_independent_comparison": {
+    "analysis_sha256": "f1797c96a5d4e23a5bc5874f5911d3a8ac158846464bd936e498bcaedf8a8e43",
+    "complete_intervals_independently_exact": 24,
+    "followup_prefix_flags_independently_exact": true,
+    "new_AA_values_independently_exact": true,
+    "initial_M1_rho": 14,
+    "large_new_AA_flag": true,
+    "formal_admission": false,
+    "rootcause_and_counterfactual_not_claimed": true
+  }
 }

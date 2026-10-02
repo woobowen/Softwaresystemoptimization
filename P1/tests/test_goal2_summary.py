@@ -20,6 +20,9 @@ def protocol(rho=1):
     data["state"] = "approved"
     data["acceptance"]["state"] = "frozen"
     data["measurement"]["clock_health"]["resolution_pp"] = rho
+    # Fine-resolution synthetic fixtures exercise the mathematical decision table;
+    # the real protocol explicitly rejects different identities after diagnostics.
+    data["acceptance"]["different_identity_risk_supported"] = True
     return data
 
 
@@ -88,6 +91,150 @@ def synthetic_task():
     return dict(records=records, summary=summary)
 
 
+def formal_fixture(root, proto, name="formal-fixture", ratios=(1.0,), driver_ratio=1.0,
+                   boot="fixture-boot", process_history=(), driver_history=(), directory=None):
+    """Serialized clock boundaries; no process, compiler, or results/ is used."""
+    task = synthetic_task()
+    for row in task["records"]:
+        row["run_id"] = name
+    meta = task["records"][0]["metadata"]
+    meta.update(framework_sha256=proto["framework"]["sha256"], runtime_affinity=[0])
+    meta["target"].update(n=4096, source_sha256=proto["target"]["sha256"],
+        compiler=proto["target"]["compiler_identity"], flags=proto["target"]["common_flags"])
+    task["records"][0]["fingerprint"] = su.ex.at.fingerprint(meta)
+    base = task["records"][5]
+    base.update(build_key=task["records"][3]["build_key"])
+    build = task["records"][3]
+    build.update(source_sha256=meta["target"]["source_sha256"], compiler=meta["target"]["compiler"],
+                 flags=[*meta["target"]["flags"], "-O2"])
+    build["build_key"] = su.ex.at.fingerprint(dict(meta["target"], flags=build["flags"]))
+    base["build_key"] = build["build_key"]
+    names = ["CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME"]
+    records = [row for row in task["records"] if row["type"] not in ("measurement_start", "measurement")]
+    history, checks = list(process_history), []
+    for index, ratio in enumerate(ratios):
+        measurement = copy.deepcopy(base)
+        measurement.update(trial_id=index, pid=123 + index, clock_read_order=names,
+            boundary_read_order=dict(start=[*names, "RUSAGE_CHILDREN"], end=["RUSAGE_CHILDREN", *names]),
+            process_wall_s=30.0, clock_start_ns=dict.fromkeys(names, 100000000000),
+            clock_end_ns=dict(zip(names, (130000000000, 100000000000 + round(30e9 * ratio), 130000000000))))
+        spans = dict(monotonic=30.0, raw=(measurement["clock_end_ns"][names[1]] - 100000000000) / 1e9, realtime=30.0)
+        measurement["clock_deltas_s"] = dict(zip(names, spans.values()))
+        identity = [measurement["run_id"], index, 0, measurement["pid"]]
+        records[4:4] = [dict(type="measurement_start", run_id=identity[0], trial_id=index, repeat=0,
+            pid=identity[3], config=measurement["config"], spawned=True, command=measurement["command"]), measurement]
+        q = spans["raw"] / 30.0
+        refs = history[:1] + history[-1:]
+        conflict = any(abs(q / ref["q"] - 1) > .02 for ref in refs)
+        checks.append(dict(source="target_process", identity=identity, clock_elapsed_s=spans, q=q,
+                           baselines=refs, conflict=conflict))
+        if not conflict:
+            history.append(dict(identity=identity, attempt_id=name, q=q))
+    # Insertion above reverses multiple rows; the fixture journal must preserve
+    # physical process order, independently of the saved check list.
+    prefix = [row for row in records if row["type"] not in ("measurement_start", "measurement")]
+    processes = sorted((row for row in records if row["type"] in ("measurement_start", "measurement")),
+                       key=lambda row: (row["trial_id"], row["type"] == "measurement"))
+    records = prefix[:4] + processes + prefix[4:]
+    duration = 35.0 * len(ratios)
+    for row in records:
+        if row["type"] == "session_end":
+            row["wall_s"] = duration
+        elif row["type"] == "summary":
+            row["tuning_wall_s"] = duration
+    ns = dict(monotonic=round(duration * 1e9), raw=round(duration * driver_ratio * 1e9), realtime=round(duration * 1e9))
+    spans = {key: value / 1e9 for key, value in ns.items()}
+    refs = list(driver_history[:1]) + list(driver_history[-1:])
+    q = spans["raw"] / spans["monotonic"]
+    driver = dict(source="driver", identity=name, clock_elapsed_s=spans, q=q, baselines=refs,
+                  conflict=any(abs(q / ref["q"] - 1) > .02 for ref in refs))
+    conflict = any(row["conflict"] for row in checks) or driver["conflict"]
+    batch_path = directory or root / "raw" / name
+    batch_path.mkdir(parents=True, exist_ok=True)
+    journal = batch_path / (name + ".jsonl")
+    journal.write_text("".join(json.dumps(row) + "\n" for row in records))
+    start = dict(type="task_start", attempt_id=name, task=name, role="search", call_upper=len(ratios),
+        clock_start_ns=dict.fromkeys(spans, 0), prior_measurement_starts=0, boot_id=boot,
+        journal=str(journal.relative_to(root)))
+    end = dict(type="task_end", attempt_id=name, task=name, role="search", n4096_calls=len(ratios),
+        n4096_calls_known=True, driver_wall_s=spans["monotonic"], clock_elapsed_s=spans,
+        clock_end_ns=ns, resource_wall_s=max(spans.values()), resource_s=max(spans.values()),
+        returncode=-15 if conflict else 0, reason="clock conflict" if conflict else None, clock_conflict=conflict,
+        clock_guard=dict(schema=1, mode="complete_target_and_driver", threshold_fraction=.02, boot_id=boot,
+            process_checks=checks, driver_check=driver, complete=True, error="clock conflict" if conflict else None))
+    task.update(records=records, job=dict(id=name, role="search", action="search", algorithm="grid", seed=7), state="complete")
+    batch = dict(path=batch_path, manifest=dict(stage="comparison"), tasks=[task], driver=[end])
+    return batch, [start, end]
+
+
+def shared_panel_fixture(root):
+    """Actual saved files for a 20x3 synthetic reference and locked grid return."""
+    data = protocol()
+    proto = root / "protocol.json"
+    proto.write_text(json.dumps(data))
+    runtime = dict(data, protocol_sha256=su.sha256(proto))
+    reference, comparison = root / "raw/reference", root / "raw/comparison"
+    history, drivers, ledger, tasks = [], [], [], {}
+
+    def save(job, directory):
+        batch, records = formal_fixture(root, data, job["id"], process_history=history, driver_history=drivers, directory=directory)
+        task = batch["tasks"][0]
+        metadata = su.ex.common_metadata(runtime, job, root)
+        config = job.get("config", dict(s=8, opt="O0"))
+        build = next(row for row in task["records"] if row["type"] == "build")
+        build.update(opt=config["opt"], config=config, compiler=metadata["target"]["compiler"],
+            flags=[*metadata["target"]["flags"], "-" + config["opt"]], source_sha256=metadata["target"]["source_sha256"],
+            binary_sha256="synthetic-" + config["opt"])
+        build["build_key"] = su.ex.at.fingerprint(dict(metadata["target"], flags=build["flags"]))
+        for row in task["records"]:
+            if row["type"] == "header":
+                row.update(metadata=metadata, fingerprint=su.ex.at.fingerprint(metadata))
+            if "config" in row:
+                row["config"] = config
+            if row["type"] in ("measurement_start", "measurement"):
+                row["command"] = [build["binary"], str(config["s"])]
+            if row["type"] == "measurement":
+                row.update(build_key=build["build_key"], binary_sha256=build["binary_sha256"])
+            if row["type"] == "trial":
+                row["best_so_far"]["config"] = config
+            if row["type"] == "summary":
+                row["best"]["config"] = config
+        for row in records:
+            row["role"] = job["role"]
+        path = directory / (job["id"] + ".jsonl")
+        path.write_text("".join(json.dumps(row) + "\n" for row in task["records"]))
+        ledger.extend(records)
+        history.append(dict(identity=[job["id"], 0, 0, 123], attempt_id=job["id"], q=1.0))
+        drivers.append(dict(identity=job["id"], q=1.0))
+        tasks[job["id"]] = task
+
+    ref_jobs = [dict(id=f"ref-r{round_id}-s{s}-{opt}", action="run", role="reference", config=dict(s=s, opt=opt),
+        repeats=1, seed=0, round=round_id) for round_id in (1, 2, 3) for s in data["space"]["blocks"] for opt in data["space"]["opts"]]
+    for job in ref_jobs:
+        save(job, reference)
+    reference_manifest = dict(stage="reference", protocol="protocol.json", measurement_root=str(root), jobs=ref_jobs)
+    (reference / "plan.json").write_text(json.dumps(reference_manifest))
+    search = dict(id="search-grid", action="search", role="search", algorithm="grid", seed=7, block=1, budget=1, repeats=1)
+    panel = dict(id="panel-b1", action="panel", role="shared_confirmation", block=1, seed=7, depends_on=[search["id"]])
+    save(search, comparison)
+    comparison_manifest = dict(stage="comparison", protocol="protocol.json", measurement_root=str(root), jobs=[search, panel])
+    (comparison / "plan.json").write_text(json.dumps(comparison_manifest))
+    config = dict(s=8, opt="O0")  # All equal medians must choose the canonical first cell.
+    jobs = [dict(id=f"panel-b1-r{round_id}-s8-O0", action="run", role="shared_confirmation", block=1,
+        seed=7, round=round_id, repeats=1, config=config) for round_id in (1, 2, 3)]
+    saved = dict(schema=2, block=1, seed=7, protocol_sha256=runtime["protocol_sha256"],
+        dependencies_sha256={search["id"]: su.sha256(comparison / (search["id"] + ".jsonl"))},
+        reference_manifest_sha256=su.sha256(reference / "plan.json"), reference_config=config, configs=[config], jobs=jobs)
+    saved["fingerprint"] = su.ex.at.fingerprint(saved)
+    (comparison / "panel-b1.json").write_text(json.dumps(saved))
+    for job in jobs:
+        save(job, comparison)
+    ledger_path = root / "snapshot-ledger.jsonl"
+    ledger_path.write_text("".join(json.dumps(row) + "\n" for row in ledger))
+    return dict(protocol=data, protocol_path=proto, reference=reference, comparison=comparison,
+                ledger_path=ledger_path, panel=saved, tasks=tasks)
+
+
 class Goal2ReplayTests(unittest.TestCase):
     def test_failed_batch_remains_failed_and_forged_metadata_is_rejected(self):
         task = synthetic_task()
@@ -105,7 +252,8 @@ class Goal2ReplayTests(unittest.TestCase):
             proto.write_text(json.dumps(protocol()))
             journal = raw / "fixture-failure.jsonl"
             journal.write_text("".join(json.dumps(row) + "\n" for row in task["records"]))
-            with mock.patch.object(su.ex, "freeze_check"), mock.patch.object(su.ex, "common_metadata", return_value=meta):
+            with mock.patch.object(su.ex, "P1", Path(directory)), mock.patch.object(su.ex, "freeze_check"), \
+                    mock.patch.object(su.ex, "common_metadata", return_value=meta):
                 batch = su.read_batch(raw, proto)
                 self.assertEqual(batch["tasks"][0]["state"], "failed")
                 self.assertFalse(su.samples_from_batches([batch])[0]["valid"])
@@ -303,6 +451,285 @@ class Goal2QualityTests(unittest.TestCase):
                              project_cost_complete=True, project_clock_healthy=False)
         self.assertEqual(result["decision"], "INCONCLUSIVE")
         self.assertIn("clock", result["reasons"][0])
+
+    def test_real_diagnostic_gate_blocks_different_identities_before_gain(self):
+        data = protocol()
+        data["acceptance"]["different_identity_risk_supported"] = False
+        self.assertEqual(su.decision([paired(100, .5, False)] * 6, data, 6)["decision"], "INCONCLUSIVE")
+        self.assertEqual(su.decision([paired(0, .1, True)] * 6, data, 6)["decision"], "KEEP")
+        different = [paired() for _ in range(3)]
+        different[1]["same_config"] = False
+        self.assertEqual(su.decision(different, data, 3)["decision"], "INCONCLUSIVE")
+        self.assertFalse(su.final_retention(dict(decision="KEEP"), dict(decision="INCONCLUSIVE"))["retained"])
+
+
+class Goal2FormalClockTests(unittest.TestCase):
+    def test_only_frozen_numeric_adapters_can_supply_clock_baselines(self):
+        data = protocol()
+        binding = json.loads((P1 / data["measurement"]["clock_health"]["numeric_baseline_identity"]["path"]).read_text())
+        ledger = su.read_records(P1 / "evidence/measurement/resource_ledger.jsonl")
+        for job in binding["jobs"]:
+            start = next(row for row in ledger if row["type"] == "task_start" and row["attempt_id"] == job["attempt_id"])
+            end = next(row for row in ledger if row["type"] == "task_end" and row["attempt_id"] == job["attempt_id"])
+            rows = su.read_records(P1 / job["journal"])
+            self.assertTrue(su.numeric_clock_baseline(start, end, rows, data))
+            for field, value in (("role", "unrelated"), ("task", "unapproved-job"), ("attempt_id", "other-attempt")):
+                changed = dict(start, **{field: value})
+                with self.subTest(job=job["id"], field=field), self.assertRaises(ValueError):
+                    su.numeric_clock_baseline(changed, end, rows, data)
+            bad_rows = copy.deepcopy(rows)
+            measurement = next(row for row in bad_rows if row["type"] == "measurement")
+            measurement["stdout"] = measurement["stdout"].replace("count=24", "count=23")
+            with self.assertRaises(ValueError):
+                su.numeric_clock_baseline(start, end, bad_rows, data)
+            missing = copy.deepcopy(data)
+            missing["measurement"]["clock_health"].pop("numeric_baseline_identity")
+            with self.assertRaises(ValueError):
+                su.numeric_clock_baseline(start, end, rows, missing)
+
+    def test_numeric_baselines_match_runtime_history_and_never_enter_score_samples(self):
+        data = protocol()
+        ledger = su.read_records(P1 / "evidence/measurement/resource_ledger.jsonl")
+        numeric = [row for row in ledger if row["type"] == "task_end" and row.get("role") == "numeric_validation" and row.get("n4096_calls") == 1]
+        last = numeric[-1]
+        ledger = ledger[:ledger.index(last) + 1]
+        previous_process = last["clock_guard"]["process_checks"][0]
+        previous_driver = last["clock_guard"]["driver_check"]
+        process_history = [previous_process["baselines"][0], dict(identity=previous_process["identity"],
+            attempt_id=last["attempt_id"], q=previous_process["q"])]
+        driver_history = [previous_driver["baselines"][0], dict(identity=last["attempt_id"], q=previous_driver["q"])]
+        start = next(row for row in ledger if row["type"] == "task_start" and row["attempt_id"] == last["attempt_id"])
+        (P1 / ".cache").mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(prefix="summary-unit-only-", dir=P1 / ".cache") as directory:
+            batch, current = formal_fixture(P1, data, "synthetic-after-numeric", ratios=(1.01757,), driver_ratio=1.01757,
+                boot=start["boot_id"], process_history=process_history, driver_history=driver_history, directory=Path(directory))
+            health = su.formal_clock_health([batch], ledger + current, data)
+            self.assertTrue(health["healthy"])
+            samples = su.samples_from_batches([batch])
+            self.assertEqual(len(samples), 1)
+            self.assertEqual(samples[0]["source_sha256"], data["target"]["sha256"])
+            self.assertTrue(all(row["source_sha256"] != "140a1efa2dbde5d7f77193fc5933c09d5faacc4649bd06cac328f62e19823928" for row in samples))
+
+    def test_saved_reference_and_panel_cli_uses_only_specified_ledger_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            fixture = shared_panel_fixture(root)
+            with mock.patch.object(su.ex, "freeze_check"), \
+                    mock.patch.object(su.ex, "validate_task", side_effect=AssertionError("live runtime")), \
+                    mock.patch.object(su.ex, "panel", side_effect=AssertionError("runtime panel")), \
+                    mock.patch.object(su.ex, "reference_best", side_effect=AssertionError("runtime reference")), \
+                    mock.patch("builtins.print"):
+                result = su.main(["--protocol", str(fixture["protocol_path"]), "--reference", str(fixture["reference"]),
+                    "--runs", str(fixture["comparison"]), "--ledger", str(fixture["ledger_path"]),
+                    "--output-dir", str(root / "derived")])
+            self.assertEqual(result, 0)
+            summary = json.loads((root / "derived/summary.json").read_text())
+            self.assertTrue(summary["reference_complete"])
+            self.assertTrue(summary["measurement_clock_healthy"])
+            self.assertEqual(summary["costs"]["totals"]["actual_process_runs"], 64)
+            self.assertEqual(summary["resource_ledger_sha256"], su.sha256(fixture["ledger_path"]))
+            panel = json.loads((fixture["comparison"] / "panel-b1.json").read_text())
+            self.assertEqual(panel["reference_config"], dict(s=8, opt="O0"))
+
+    def test_saved_panel_whole_identity_and_full_reference_are_reconstructed(self):
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            fixture = shared_panel_fixture(Path(directory))
+            path = fixture["comparison"] / "panel-b1.json"
+            for field in ("schema", "seed", "protocol_sha256", "dependencies_sha256", "reference_manifest_sha256",
+                          "reference_config", "configs", "jobs"):
+                changed = copy.deepcopy(fixture["panel"])
+                changes = dict(schema=3, seed=8, protocol_sha256="other-protocol", dependencies_sha256={},
+                    reference_manifest_sha256="other-reference", reference_config=dict(s=128, opt="O3"),
+                    configs=[dict(s=128, opt="O3")], jobs=list(reversed(changed["jobs"])))
+                changed[field] = changes[field]
+                changed.pop("fingerprint")
+                changed["fingerprint"] = su.ex.at.fingerprint(changed)
+                path.write_text(json.dumps(changed))
+                with self.subTest(field=field), mock.patch.object(su.ex, "freeze_check"), self.assertRaises(ValueError):
+                    su.read_batch(fixture["comparison"], fixture["protocol_path"], fixture["reference"])
+            path.write_text(json.dumps(fixture["panel"]))
+            (fixture["reference"] / "ref-r3-s128-O3.jsonl").unlink()
+            with mock.patch.object(su.ex, "freeze_check"), self.assertRaises(ValueError):
+                su.read_batch(fixture["comparison"], fixture["protocol_path"], fixture["reference"])
+
+    def test_clock_invalid_search_does_not_inherit_near_label_from_healthy_panel(self):
+        data = protocol()
+        task = synthetic_task()
+        task.update(job=dict(id="search", action="search", role="search", algorithm="grid", seed=7, block=1),
+                    state="clock_conflict")
+        grid = [dict(s=8, opt="O2", gap_ref_pct=0, **su.describe([1, 1, 1]))]
+        panel = dict(stage="comparison", block=1, seed=7, s=8, opt="O2", complete=True, **su.describe([1, 1, 1]))
+        batch = dict(path=Path("synthetic-only"), manifest=dict(stage="comparison"), tasks=[task], driver=[])
+        runs, curves = su.search_tables([batch], grid, [panel], data)
+        self.assertEqual(runs[0]["returned_s"], 8)
+        self.assertEqual(runs[0]["gap_ref_pct"], 0)
+        self.assertEqual(runs[0]["quality_class"], "uncertain")
+        self.assertIsNone(runs[0]["point_near_optimal"])
+        self.assertTrue(runs[0]["panel_complete"])
+        self.assertFalse(runs[0]["confirmation_complete"])
+        self.assertEqual(curves[0]["state"], "clock_conflict")
+
+    def test_manifest_protocol_path_cannot_be_self_injected(self):
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            fixture = shared_panel_fixture(Path(directory))
+            path = fixture["reference"] / "plan.json"
+            manifest = json.loads(path.read_text())
+            manifest["protocol"] = "other-protocol.json"
+            path.write_text(json.dumps(manifest))
+            with mock.patch.object(su.ex, "freeze_check"), self.assertRaises(ValueError):
+                su.read_batch(fixture["reference"], fixture["protocol_path"])
+
+    def test_complete_health_requires_every_process_and_intra_attempt_previous(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data, ratios=(1.0, 1.01))
+            health = su.formal_clock_health([batch], ledger, data)
+            self.assertTrue(health["healthy"])
+            refs = ledger[-1]["clock_guard"]["process_checks"][1]["baselines"]
+            self.assertEqual(len(refs), 2)
+            self.assertEqual(refs[0], refs[1])
+            self.assertEqual(refs[0]["identity"], ["formal-fixture", 0, 0, 123])
+
+    def test_missing_mandatory_guard_fields_never_become_healthy(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data)
+            self.assertTrue(su.cost_table([batch], ledger)["complete"])
+            for field in ("schema", "mode", "threshold_fraction", "boot_id", "process_checks", "driver_check", "complete", "error"):
+                changed = copy.deepcopy(ledger)
+                changed[-1]["clock_guard"].pop(field)
+                with self.subTest(field=field):
+                    self.assertFalse(su.formal_clock_health([batch], changed, data)["healthy"])
+            for field in ("clock_guard", "clock_conflict", "n4096_calls_known"):
+                changed = copy.deepcopy(ledger)
+                changed[-1].pop(field)
+                with self.subTest(field=field):
+                    self.assertFalse(su.formal_clock_health([batch], changed, data)["healthy"])
+
+    def test_saved_healthy_flags_cannot_hide_forged_raw_clock_checks(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data)
+            for field in ("q", "identity", "clock_elapsed_s", "baselines"):
+                changed = copy.deepcopy(ledger)
+                check = changed[-1]["clock_guard"]["process_checks"][0]
+                check[field] = {"q": 1.01, "identity": ["other-run", 0, 0, 123],
+                    "clock_elapsed_s": dict(monotonic=30, raw=30.1, realtime=30),
+                    "baselines": [dict(identity=["invented", 0, 0, 1], attempt_id="invented", q=1)]}[field]
+                with self.subTest(field=field), self.assertRaises(ValueError):
+                    su.formal_clock_health([batch], changed, data)
+            changed = copy.deepcopy(batch)
+            row = next(row for row in changed["tasks"][0]["records"] if row["type"] == "measurement")
+            row["clock_end_ns"]["CLOCK_MONOTONIC_RAW"] += 1
+            with self.assertRaises(ValueError):
+                su.formal_clock_health([changed], ledger, data)
+            changed = copy.deepcopy(ledger)
+            changed[-1]["clock_end_ns"]["raw"] += 1
+            with self.assertRaises(ValueError):
+                su.formal_clock_health([batch], changed, data)
+
+    def test_process_conflict_is_not_hidden_by_healthy_whole_driver(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data, ratios=(1.0, 1.03), driver_ratio=1.0)
+            self.assertFalse(ledger[-1]["clock_guard"]["driver_check"]["conflict"])
+            health = su.formal_clock_health([batch], ledger, data)
+            self.assertFalse(health["healthy"])
+            state = health["states"][ledger[0]["journal"]]
+            self.assertEqual(state, "clock_conflict")
+            batch["tasks"][0]["state"] = state
+            samples = su.samples_from_batches([batch])
+            self.assertEqual(len(samples), 2)
+            self.assertTrue(all(not row["valid"] for row in samples))
+            self.assertTrue(su.cost_table([batch], ledger)["complete"])
+            self.assertEqual(su.cost_table([batch], ledger)["totals"]["actual_process_runs"], 2)
+            self.assertEqual(su.decision([paired()] * 6, data, 6, True, health["healthy"])["decision"], "INCONCLUSIVE")
+
+    def test_previous_successful_attempt_first_and_previous_identities_are_exact(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            first, a = formal_fixture(root, data, "first")
+            ph = [dict(identity=["first", 0, 0, 123], attempt_id="first", q=1.0)]
+            dh = [dict(identity="first", q=1.0)]
+            second, b = formal_fixture(root, data, "previous", ratios=(1.01,), driver_ratio=1.01,
+                process_history=ph, driver_history=dh)
+            ph += [dict(identity=["previous", 0, 0, 123], attempt_id="previous", q=1.01)]
+            dh += [dict(identity="previous", q=1.01)]
+            current, c = formal_fixture(root, data, "current", ratios=(1.015,), driver_ratio=1.015,
+                process_history=ph, driver_history=dh)
+            self.assertTrue(su.formal_clock_health([current], a + b + c, data)["healthy"])
+            c[-1]["clock_guard"]["process_checks"][0]["baselines"][1]["attempt_id"] = "first"
+            with self.assertRaises(ValueError):
+                su.formal_clock_health([current], a + b + c, data)
+
+    def test_failed_whole_attempt_and_other_boot_are_excluded_from_baselines(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            failed, a = formal_fixture(root, data, "failed", ratios=(1.0, 1.03))
+            other, b = formal_fixture(root, data, "other-boot", boot="other-boot")
+            current, c = formal_fixture(root, data, "current", ratios=(1.03,), driver_ratio=1.03)
+            health = su.formal_clock_health([current], a + b + c, data)
+            self.assertTrue(health["healthy"])
+            self.assertEqual(c[-1]["clock_guard"]["process_checks"][0]["baselines"], [])
+
+    def test_missing_duplicate_or_reused_physical_process_is_rejected(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data, ratios=(1.0, 1.01))
+            for kind in ("measurement_start", "measurement"):
+                changed = copy.deepcopy(batch)
+                rows = changed["tasks"][0]["records"]
+                rows.append(copy.deepcopy(next(row for row in rows if row["type"] == kind)))
+                with self.subTest(kind=kind), self.assertRaises(ValueError):
+                    su.formal_clock_health([changed], ledger, data)
+            changed = copy.deepcopy(batch)
+            changed["tasks"][0]["records"] = [row for row in changed["tasks"][0]["records"] if
+                row["type"] != "measurement" or row["trial_id"] == 0]
+            with self.assertRaises(ValueError):
+                su.formal_clock_health([changed], ledger, data)
+            reused = copy.deepcopy(ledger)
+            for row in reused:
+                row["attempt_id"] = "reused-attempt"
+            with self.assertRaises(ValueError):
+                su.formal_clock_health([batch], ledger + reused, data)
+
+    def test_incomplete_guard_or_resource_attempt_cannot_be_healthy(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            batch, ledger = formal_fixture(Path(directory), data, ratios=(1.0, 1.01))
+            changed = copy.deepcopy(ledger)
+            changed[-1]["clock_guard"].update(process_checks=changed[-1]["clock_guard"]["process_checks"][:1],
+                                               complete=False, error="incomplete target coverage")
+            self.assertFalse(su.formal_clock_health([batch], changed, data)["healthy"])
+            self.assertFalse(su.formal_clock_health([batch], ledger[:1], data)["healthy"])
+            self.assertFalse(su.formal_clock_health([batch], None, data)["healthy"])
+            changed = copy.deepcopy(ledger)
+            changed[-1].update(n4096_calls_known=False, driver_wall_s=None, clock_elapsed_s=None,
+                resource_bound_basis="same-boot multi-domain span including downtime")
+            self.assertFalse(su.formal_clock_health([batch], changed, data)["healthy"])
+            unknown = copy.deepcopy(batch)
+            unknown["driver"] = [changed[-1]]
+            self.assertFalse(su.cost_table([unknown], changed)["complete"])
+
+    def test_formal_summary_read_uses_trace_then_snapshot_health_not_live_runtime(self):
+        data = protocol()
+        with tempfile.TemporaryDirectory() as directory, mock.patch.object(su.ex, "P1", Path(directory)):
+            root = Path(directory)
+            batch, ledger = formal_fixture(root, data)
+            task = batch["tasks"][0]
+            job = dict(id=task["job"]["id"], action="run", role="reference", config=dict(s=8, opt="O2"), repeats=1, seed=7)
+            proto = root / "protocol.json"
+            proto.write_text(json.dumps(data))
+            raw = batch["path"]
+            (raw / "plan.json").write_text(json.dumps(dict(measurement_root=str(root), protocol="protocol.json", stage="reference", jobs=[job])))
+            metadata = task["records"][0]["metadata"]
+            with mock.patch.object(su.ex, "freeze_check"), mock.patch.object(su.ex, "common_metadata", return_value=metadata), \
+                    mock.patch.object(su.ex, "validate_task", side_effect=AssertionError("live runtime must not be called")):
+                loaded = su.read_batch(raw, proto)
+            self.assertEqual(loaded["tasks"][0]["state"], "complete")
+            self.assertTrue(su.formal_clock_health([loaded], ledger, data)["healthy"])
 
 
 class Goal2DiagnosticAndCostTests(unittest.TestCase):

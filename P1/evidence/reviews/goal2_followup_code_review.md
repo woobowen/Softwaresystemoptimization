@@ -74,3 +74,13 @@ F4 的 protocol binding 条件已实核关闭；**允许主控按该冻结 plan 
 r1 协议 SHA `7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86`、plan SHA `1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e` 与 executor `7431540d…` 实核一致。approved/formal_admission=false；全部 target/core/runner/design/query/多钟 identity 和 approval 路径正确；12 jobs 与原设计完全相同，10run/2clock_matrix、2replacement/2multi/8新AA。旧协议02446与旧plan a10f8bb SHA仍不变。
 
 **F5 闭环关闭；允许主控按 r1 冻结 plan 串行执行且仅执行这十二次有限补诊断。** 旧错误没有追认有效，修复没有增一次矩阵额度；原数据、失败成本及多个版本有固定Git依据。完整 q/AA/排序及正式比较准入仍待真实数据独立审核，未授予最终 Engineering PASS。
+
+## 十二项真实结束后的独立数据复核（2026-10-02 16:31 UTC）
+
+审核者直接用 Python 标准库读取全局 ledger、十份 journal、两份多时钟 stdout 和十二份 clocks.jsonl，从整数 ns 重算全部 driver/process/kernel 完整区间、每条 prefix/local 区间、first/previous 比率和标志，并核对全 trace SHA、实际二进制、编译器、源文件/协议身份和 CPU 差值。未调用作者的统计或 runner 函数，未启动测试、编译或目标程序。原初始固定清单的31份非 ledger 输入 SHA 全部不变；固定 `2fc0c334` 的 ledger 原字节是当前 ledger 的完整前缀。
+
+十二项全部实际完成，共12个 n4096 调用，逐任务 max(MONO,RAW,REAL) 成本合计696.288106540秒；全 Goal 在这次读到的 ledger 快照中为41次、2755.910424768秒。十个普通样本和两次内核诊断分开，CPU 字段分别是整个子进程 RUSAGE_CHILDREN 与内核 PROCESS_CPUTIME_ID，未代替 wall 时间。全部实际完整同来源比率均在原 first/previous 2%范围内，十二项 prefix 标志也全部为 false；局部 RAW/MONO 曾到0.923077，仍不能声称各时间域或宿主机已校准。
+
+新独立 A/A 的 F 两对为+0.738866%和−4.611219%；M 两对为+24.351654%和+1.512543%，其中第一对差16.611168秒。完整时间域关系检查通过并不证明目标运行耗时稳定。原缺标签补齐后 M0 的 D/P 为3.619541/46.976522%，M1为1.844295/13.784605%，按既定表选 M1 的初始描述尺度 rho14；新增 M 的24.35%观测必须单列，rho14不是全阶段误差上界，也不保证能支持5%或2pp结论。补标签前的修复/阅读等待打断了原连续平衡，不能把 M0/M1 差异解释成安排的因果方差收益。
+
+这份复核只关闭精确十二项的执行、身份、原始时钟和计费可重算关。正式 protocol、逐目标与完整 driver 的同性质 hard-stop 规则、其代码测试和方法准入仍需新审核；原 interrupted 若继续运行是否稳定尚未被证明，系统时钟最终根因仍未确定。详细原始路径、快照 SHA、每项 q 与成本见配套 JSON `independent_actual_twelve_run_data_review`。

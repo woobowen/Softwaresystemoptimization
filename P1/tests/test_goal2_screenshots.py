@@ -17,6 +17,7 @@ import safe_screenshots as ss
 
 class ScreenshotCleanupTests(unittest.TestCase):
     def setUp(self):
+        (P1/".cache").mkdir(exist_ok=True)
         self.temporary=tempfile.TemporaryDirectory(prefix="screenshot-test-",dir=P1/".cache")
         self.directory=Path(self.temporary.name)
         self.evidence=self.directory/"captures.jsonl"

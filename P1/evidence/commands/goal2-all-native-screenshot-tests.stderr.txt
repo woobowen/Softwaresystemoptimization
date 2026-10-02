@@ -1,0 +1,9 @@
+test_failed_terminal_command_cleans_display (test_goal2_screenshots.ScreenshotCleanupTests.test_failed_terminal_command_cleans_display) ... ok
+test_real_terminal_capture_and_private_authorization (test_goal2_screenshots.ScreenshotCleanupTests.test_real_terminal_capture_and_private_authorization) ... ok
+test_sigterm_cleans_its_shell_and_display (test_goal2_screenshots.ScreenshotCleanupTests.test_sigterm_cleans_its_shell_and_display) ... ok
+test_timeout_cleans_its_shell_and_display (test_goal2_screenshots.ScreenshotCleanupTests.test_timeout_cleans_its_shell_and_display) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.685s
+
+OK

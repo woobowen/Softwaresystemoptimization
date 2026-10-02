@@ -1,0 +1,318 @@
+{
+  "schema": 2,
+  "state": "approved",
+  "approval": {
+    "frozen_at_utc": "2026-10-02T18:12:04+00:00",
+    "code_evidence": "evidence/reviews/goal2_runner_review.md",
+    "method_evidence": "evidence/reviews/goal2_protocol_review.md",
+    "core_code_evidence": "evidence/reviews/goal2_code_gate.md",
+    "analysis_evidence": "evidence/reviews/goal2_method_analysis_review.md",
+    "regression_evidence": "evidence/commands/goal2_formal_summary_regression.json"
+  },
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build",
+    "warmup": {
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "score_clock": "CLOCK_MONOTONIC",
+    "process_clock": "CLOCK_MONOTONIC",
+    "cost_clock": "CLOCK_MONOTONIC",
+    "resource_clock": "max_positive_MONOTONIC_RAW_REALTIME_per_task",
+    "clock_health": {
+      "status": "approved_complete_source_guard_for_coarse_ranking_and_same_identity_cost_only",
+      "timer": "CLOCK_MONOTONIC",
+      "kernel_over_process_tolerance_s": 0.005,
+      "raw_monotonic_ratio_change_fraction": 0.02,
+      "resolution_pp": 14,
+      "guard": "completed_per_target_process_and_driver_first_and_previous_same_boot",
+      "diagnostic_evidence": "results/clock_followup_summary_v2/summary.json",
+      "resolution_scope": "initial_selected_M1_finite_descriptor_not_a_goal_noise_bound",
+      "additional_AA_max_pair_pct": 24.351654209127904,
+      "additional_AA_exceeds_resolution": true,
+      "original_interrupted_complete_counterfactual_known": false,
+      "guard_mode": "complete_target_and_driver",
+      "guard_schema": 1,
+      "numeric_baseline_identity": {
+        "path": "evidence/measurement/correctness/numeric_clock_baselines.json",
+        "sha256": "170903811396626eebb0898ce5a8ed478fc20681ca095a155d8a5023843df5c3",
+        "use": "only the two explicitly bound validation processes may supply clock history; never reference or search scores"
+      }
+    },
+    "arrangement": "M1",
+    "performance_lock": ".cache/performance.lock"
+  },
+  "reference": {
+    "rounds": 3,
+    "order_seed": 505063,
+    "anchor": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "anchor_after_positions": [
+      0,
+      10,
+      20
+    ],
+    "reference_best_rule": "minimum_complete_config_median_then_canonical_order",
+    "replace_reference": false
+  },
+  "online": {
+    "budget": 8,
+    "repeats": 1,
+    "algorithms": [
+      "grid",
+      "random",
+      "greedy",
+      "recheck"
+    ],
+    "seed_rule": "700001+104729*i",
+    "seeds": [
+      700001,
+      804730,
+      909459,
+      1014188,
+      1118917,
+      1223646
+    ],
+    "order_seed": 505057,
+    "orders": [
+      [
+        "recheck",
+        "grid",
+        "greedy",
+        "random"
+      ],
+      [
+        "random",
+        "recheck",
+        "greedy",
+        "grid"
+      ],
+      [
+        "recheck",
+        "greedy",
+        "random",
+        "grid"
+      ],
+      [
+        "greedy",
+        "random",
+        "grid",
+        "recheck"
+      ],
+      [
+        "grid",
+        "random",
+        "recheck",
+        "greedy"
+      ],
+      [
+        "grid",
+        "recheck",
+        "random",
+        "greedy"
+      ]
+    ],
+    "grid_order": "block_major_then_opt_major",
+    "search_measurements_shared": false,
+    "order_generation": "permutations([grid,random,greedy,recheck]); six rng.choice(permutations) calls per proposed layout with replacement; random.Random(505057); reject on position max-min>1 or Random before S3 count!=3; accept first (layout396)"
+  },
+  "strategy_options": {
+    "recheck": {
+      "explore_calls": 6,
+      "finalists": 2,
+      "rechecks_per_finalist": 1,
+      "selection": "initial_valid_score_then_visit_order",
+      "return": "rechecked_finalist_median_then_initial_visit_order",
+      "failed_recheck": "ineligible_no_free_retry"
+    }
+  },
+  "return_confirmation": {
+    "mode": "shared_panel_after_all_block_searches_locked",
+    "repeats": 3,
+    "config_set": "distinct_returns_union_reference_best",
+    "deduplicate_by": "target_build_binary_s",
+    "order_seed": 505071,
+    "order_rule": "canonical_then_shuffle_seed_plus_100_block_plus_round",
+    "online_feedback": false,
+    "shared_actual_cost_count": 1
+  },
+  "holdout": {
+    "seeds": [
+      1328375,
+      1433104,
+      1537833
+    ],
+    "candidate_if_selection_keep": "recheck",
+    "baseline": "random",
+    "keep_orders": [
+      [
+        "random",
+        "recheck"
+      ],
+      [
+        "recheck",
+        "random"
+      ],
+      [
+        "random",
+        "recheck"
+      ]
+    ],
+    "failed_selection_orders": [
+      [
+        "random"
+      ],
+      [
+        "random"
+      ],
+      [
+        "random"
+      ]
+    ],
+    "retune_after_reading": false
+  },
+  "greedy_start_panel": {
+    "budget": 8,
+    "starts": [
+      {
+        "s": 8,
+        "opt": "O0"
+      },
+      {
+        "s": 16,
+        "opt": "O1"
+      },
+      {
+        "s": 24,
+        "opt": "O2"
+      },
+      {
+        "s": 128,
+        "opt": "O3"
+      }
+    ],
+    "counts_as_random_seeds": false
+  },
+  "acceptance": {
+    "state": "frozen",
+    "primary_quality": "g_ref_config_identity",
+    "supporting_quality": "same_block_shared_panel",
+    "epsilon_pct": 5,
+    "quality_loss_pp": 2,
+    "quality_gain_median_pp": 2,
+    "quality_gain_seed_pp": 5,
+    "minimum_improving_seeds": 2,
+    "severe_regression_pp": 10,
+    "quality_cost_increase_fraction": 0.1,
+    "efficiency_wall_saving_fraction": 0.1,
+    "descriptive_bounds_are_confidence_intervals": false,
+    "additional_confirmation_batches": 1,
+    "additional_confirmation_runs_max": 12,
+    "candidate_keep_requires_holdout": true,
+    "missing_or_invalid_decision": "INCONCLUSIVE",
+    "primary_route": "efficiency_with_quality_risk_bound",
+    "secondary_route": "quality_with_cost_bound",
+    "gain_definition": "100*(T_Random-T_S3)/T_reference_best; positive means S3 better",
+    "interval_rule": "numerator endpoints crossed with anchor min/max; min/max four corners, not confidence intervals",
+    "conflict_rule": "max(0,L_ref-U_panel,L_panel-U_ref)>rho_pp",
+    "supported_gain_interval": "[min(L_ref,L_panel)-rho,max(U_ref,U_panel)+rho], same_config=[0,0]",
+    "risk_rule": "all supported_gain_low>=-2pp; any supported_gain_high<-2pp rejects; crossing is inconclusive",
+    "quality_rule": "median supported_gain_low>=2pp and at least two blocks supported_gain_low>=5pp; median paired driver saving>=-0.10",
+    "efficiency_rule": "all risk bounds supported; median of paired (1-driver_S3/driver_Random)>=0.10",
+    "reference_conflict_action": "INCONCLUSIVE; no automatic reference refresh",
+    "range_rule": "finite observed sensitivity plus diagnostic rho; no population guarantee",
+    "different_identity_risk_supported": false,
+    "different_identity_rule": "any distinct configuration identity in main or holdout pairs is INCONCLUSIVE; quality gains remain descriptive"
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true,
+    "unknown_cost_is_zero": false
+  },
+  "resources": {
+    "max_process_runs": 520,
+    "max_wall_s": 57600,
+    "normal_process_upper_bound": 505,
+    "shared_failure_or_diagnostic_reserve": 15,
+    "diagnostic_matrix_runs": 28,
+    "diagnostic_multiclock_matrix_runs": 2,
+    "reference_process_upper_bound": 70,
+    "comparison_process_upper_bound": 283,
+    "confirmation_keep_process_upper_bound": 76,
+    "greedy_start_process_upper_bound": 32,
+    "full_validation_process_upper_bound": 2,
+    "fresh_reproduction_process_upper_bound": 1,
+    "short_clock_probes_count_as_matrix_runs": false,
+    "short_clock_probes_count_as_controlled_wall": true,
+    "confirmation_baseline_process_upper_bound": 43,
+    "stop_before_task": "used_calls+reserved_actual_calls<=520 and remaining max-positive-domain wall cap; no fake zero for unknown",
+    "initial_diagnostic_actual_processes": 29,
+    "additional_clock_followup_process_upper_bound": 12,
+    "diagnostic_completed_or_planned_process_upper_bound": 41,
+    "normal_baseline_confirmation_process_upper_bound": 472,
+    "plan": "evidence/measurement/resource_plan_v2.json"
+  },
+  "execution": {
+    "driver": {
+      "path": "scripts/experiment_v2.py",
+      "sha256": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+    },
+    "analysis": {
+      "path": "scripts/summarize_v2.py",
+      "sha256": "3e528fe3fcf6e7c3e185800816483ffe4a40229d9557d4d92cdac170e89f1cfb"
+    },
+    "analysis_tests": {
+      "path": "tests/test_goal2_summary.py",
+      "sha256": "32826fa75cd3eaa25e1a7c680da822ed3a69f99b494cb94165efd1c90bccf41d"
+    }
+  }
+}
