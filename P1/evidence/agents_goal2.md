@@ -4,10 +4,10 @@
 
 | 角色 | 原生任务名 | 文件责任 | 独立检查任务 |
 | --- | --- | --- | --- |
-| 主控、集成与测量 owner | `/root` | `experiment_v2.py`、`clock_diagnostics.py`、driver tests、当前计划、历史保护、报告/README、截图、复现和发布 | 接收并修复独立审核问题，不单独授予结论 |
+| 主控、集成与测量 owner | `/root` | `experiment_v2.py`、`clock_diagnostics.py`、`clock_followup.py`、`safe_screenshots.py`及各自tests、当前计划、历史保护、报告/README、截图、复现和发布 | 接收并修复独立审核问题，不单独授予结论 |
 | 方法、文献和分析 owner | `/root/measurement` | `measurement/design.md`、新协议、`literature_goal2.md`、`summarize_v2.py`及分析fixtures | 交叉审查非本人实现的核心与编排 |
 | 搜索实现 owner | `/root/implementation` | `src/autotuner.py`、`test_goal2_search.py`、搜索测试日志；审核仅`goal2_method_analysis_review.*`及`goal2_experiment_report_review.*` | 检查非本人编写的实验、完整报告与图片 |
-| 独立审核 | `/root/review` | 已创建的起点/核心/设计/runner审核；新增仅`goal2_analysis_review.*`、`goal2_protocol_review.*`、`goal2_final_code_review.*` | 读真实代码、原始结果、协议、完整报告和图片；实际执行回归 |
+| 独立审核 | `/root/review` | 已创建的起点/核心/设计/runner审核；新增仅`goal2_analysis_review.*`、`goal2_followup_code_review.*`、`goal2_protocol_review.*`、`goal2_final_code_review.*` | 读真实代码、原始结果、协议、完整报告和图片；实际执行回归 |
 
 所有文件只有一个修改 owner。建议通过消息送给 owner，由其修复后交回审核。代理消息不作为证据聊天归档；审核文件记录角色、对象、具体问题和回归。
 

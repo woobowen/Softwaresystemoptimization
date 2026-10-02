@@ -1,6 +1,8 @@
 """Synthetic clock fixtures only; never performance results."""
 
 import copy
+from contextlib import redirect_stdout
+import io
 import json
 import math
 from pathlib import Path
@@ -130,6 +132,27 @@ class ClockFollowupTests(unittest.TestCase):
     def test_query_identity_cannot_authorize_another_source_or_clock_change(self):
         for identity in (dict(readonly_modes=1),dict(readonly_modes=0,source_sha256="another source")):
             with self.assertRaises(ValueError): cf.query_reader(self.directory,identity)
+
+    def test_cli_check_supplies_runtime_protocol_path_to_real_freeze_check(self):
+        prototype=ex.load_json(P1/"evidence/protocol_clock_followup.json")
+        prototype["approval"]["followup_executor_sha256"]=ex.sha256(cf.__file__)
+        path=self.directory/"protocol-fixture.json"
+        path.write_text(json.dumps(prototype))
+        runtime=dict(prototype,protocol_sha256=ex.sha256(path),protocol_path=str(path.relative_to(P1)),measurement_root=str(P1))
+        (self.directory/"plan.json").write_text(json.dumps(ex.plan(runtime,"diagnostic")))
+        original_lock=ex.performance_lock
+        output=io.StringIO()
+        with mock.patch.object(sys,"argv",[cf.__file__,"check","--protocol",str(path),"--directory",str(self.directory)]), \
+                mock.patch.object(ex,"performance_lock",side_effect=lambda:original_lock(self.directory/"fixture-lock")), \
+                mock.patch.object(cf.cd,"check_identity"),mock.patch.object(cf,"query_reader",return_value=self.timex), \
+                redirect_stdout(output):
+            # Only the cache availability checks are isolated; the parser and freeze_check are real.
+            cf.main()
+        row=json.loads(output.getvalue())
+        self.assertEqual(row["state"],"checked")
+        self.assertEqual(row["jobs"],12)
+        self.assertEqual(row["n4096_calls"],0)
+        self.assertEqual(row["protocol_sha256"],ex.sha256(path))
 
     def test_multi_attempt_baselines_select_only_that_attempts_processes(self):
         boot=Path("/proc/sys/kernel/random/boot_id").read_text().strip()

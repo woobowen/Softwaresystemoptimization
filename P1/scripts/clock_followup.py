@@ -232,9 +232,9 @@ def completed_job(job, directory, protocol, protocol_path, end):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action",choices=("build","execute"))
-    parser.add_argument("--protocol",type=Path,default=ex.P1/"evidence/protocol_clock_followup.json")
-    parser.add_argument("--directory",type=Path,default=ex.P1/"results/clock_followup_v2")
+    parser.add_argument("action",choices=("build","check","execute"))
+    parser.add_argument("--protocol",type=Path,default=ex.P1/"evidence/protocol_clock_followup_r1.json")
+    parser.add_argument("--directory",type=Path,default=ex.P1/"results/clock_followup_v2_r1")
     args=parser.parse_args()
     protocol=ex.load_json(args.protocol)
     cache=ex.P1/".cache/clock_followup"
@@ -259,7 +259,8 @@ def main():
         directory=args.directory.resolve()
         directory.relative_to(ex.P1)
         manifest=ex.load_json(directory/"plan.json")
-        protocol.update(protocol_sha256=ex.sha256(args.protocol),measurement_root=str(ex.P1))
+        protocol.update(protocol_sha256=ex.sha256(args.protocol),measurement_root=str(ex.P1),
+            protocol_path=str(args.protocol.resolve().relative_to(ex.P1)))
         ex.freeze_check(protocol,manifest,args.protocol,execute=True)
         if ex.sha256(__file__)!=protocol["approval"]["followup_executor_sha256"] or \
                 ex.sha256(ex.P1/protocol["design"])!=protocol["design_sha256"]:
@@ -275,6 +276,10 @@ def main():
         if compiled_query["compiler"]!=protocol["target"]["compiler_identity"]:
             raise ValueError("read-only query compiler differs from this protocol")
         read_timex=query_reader(cache,compiled_query)
+        if args.action=="check":
+            print(json.dumps(dict(state="checked",jobs=len(manifest["jobs"]),
+                protocol_sha256=protocol["protocol_sha256"],n4096_calls=0)),flush=True)
+            return
         for job in manifest["jobs"]:
             path=directory/(job["id"]+".jsonl") if job["action"]=="run" else None
             old=[r for r in ex.read_records(ex.LEDGER) if r["type"]=="task_end" and r["task"]==job["id"]]

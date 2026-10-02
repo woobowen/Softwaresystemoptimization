@@ -2,7 +2,7 @@
   "reviewer": "/root/review",
   "author": "/root",
   "at_utc": "2026-10-02T15:40:51+00:00",
-  "state": "FINITE_TWELVE_RUN_DIAGNOSTIC_GATE_APPROVED_FORMAL_COMPARISON_NOT_ALLOWED",
+  "state": "R1_FINITE_TWELVE_RUN_DIAGNOSTIC_GATE_APPROVED_FORMAL_NOT_ALLOWED",
   "source_snapshot": {
     "scripts/clock_followup.py": "5694e73c6b61fcbf0d06eed72dde7bccaf9544ebe0e90426b4eede3e88ea7bfd",
     "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
@@ -40,9 +40,18 @@
       "path": "scripts/clock_followup.py:whole raw clock trace recovery identity",
       "reported_by": "/root/implementation",
       "status": "CLOSED_BY_HASH_BINDING_AND_INDEPENDENT_FIXTURES"
+    },
+    {
+      "id": "F5",
+      "severity": "high",
+      "path": "scripts/clock_followup.py:main runtime protocol fields",
+      "status": "CLOSED_BY_FIXTURE_AND_ACTUAL_DEFAULT_CLI_CHECK",
+      "reported_by": "/root",
+      "at_utc": "2026-10-02T16:00:26.417846+00:00",
+      "actual_n4096_calls": 0
     }
   ],
-  "independent_fixture_tests": 12,
+  "independent_fixture_tests": 13,
   "n4096_runs_by_reviewer": 0,
   "finite_followup_allowed": true,
   "formal_comparison_allowed": false,
@@ -318,5 +327,97 @@
     "exact_jobs_match": true,
     "approval_evidence_paths_exist": true,
     "measurement_root_matches": true
-  }
+  },
+  "independent_cli_repair_regression": {
+    "at_utc": "2026-10-02T16:05:29.053018+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_clock_followup.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "tests_count": 13,
+    "unittest_reported_s": 0.309,
+    "stdout": "",
+    "stderr": "test_cli_check_supplies_runtime_protocol_path_to_real_freeze_check (test_clock_followup.ClockFollowupTests.test_cli_check_supplies_runtime_protocol_path_to_real_freeze_check) ... ok\ntest_clock_backwards_and_incomplete_summary_hard_fail (test_clock_followup.ClockFollowupTests.test_clock_backwards_and_incomplete_summary_hard_fail) ... ok\ntest_complete_target_conflict_is_visible_even_with_summary (test_clock_followup.ClockFollowupTests.test_complete_target_conflict_is_visible_even_with_summary) ... ok\ntest_completed_resume_checks_command_cost_reason_and_raw_trace (test_clock_followup.ClockFollowupTests.test_completed_resume_checks_command_cost_reason_and_raw_trace) ... ok\ntest_failed_interrupted_unknown_and_other_boot_excluded_from_baseline (test_clock_followup.ClockFollowupTests.test_failed_interrupted_unknown_and_other_boot_excluded_from_baseline) ... ok\ntest_matrix_raw_ns_recomputed_and_cpu_not_wall_reference (test_clock_followup.ClockFollowupTests.test_matrix_raw_ns_recomputed_and_cpu_not_wall_reference) ... ok\ntest_multi_attempt_baselines_select_only_that_attempts_processes (test_clock_followup.ClockFollowupTests.test_multi_attempt_baselines_select_only_that_attempts_processes) ... ok\ntest_nonpositive_nan_and_two_percent_boundary (test_clock_followup.ClockFollowupTests.test_nonpositive_nan_and_two_percent_boundary) ... ok\ntest_observer_cannot_disable_task_timeout_or_known_cost_record (test_clock_followup.ClockFollowupTests.test_observer_cannot_disable_task_timeout_or_known_cost_record) ... ok\ntest_query_identity_cannot_authorize_another_source_or_clock_change (test_clock_followup.ClockFollowupTests.test_query_identity_cannot_authorize_another_source_or_clock_change) ... ok\ntest_query_is_readonly_and_cap_is_checked_before_spawn (test_clock_followup.ClockFollowupTests.test_query_is_readonly_and_cap_is_checked_before_spawn) ... ok\ntest_scope_rejects_formal_other_job_command_calls_and_existing_trace (test_clock_followup.ClockFollowupTests.test_scope_rejects_formal_other_job_command_calls_and_existing_trace) ... ok\ntest_short_prefix_conflict_does_not_become_complete_conflict (test_clock_followup.ClockFollowupTests.test_short_prefix_conflict_does_not_become_complete_conflict) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.309s\n\nOK\n",
+    "clock_start_ns": {
+      "monotonic": 76053799562498,
+      "raw": 80003639018534,
+      "realtime": 1790957129053014569
+    },
+    "clock_end_ns": {
+      "monotonic": 76054189849966,
+      "raw": 80004027725921,
+      "realtime": 1790957129443301929
+    },
+    "elapsed_s": {
+      "monotonic": 0.390287468,
+      "raw": 0.388707387,
+      "realtime": 0.39028736
+    },
+    "source_before": {
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "f9a614be9bdfdf31f88c6d5918255e77c4476f1ed243bae74a06420292fee75d",
+      "evidence/protocol_clock_followup.json": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed"
+    },
+    "source_after": {
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+      "tests/test_clock_followup.py": "f9a614be9bdfdf31f88c6d5918255e77c4476f1ed243bae74a06420292fee75d",
+      "evidence/protocol_clock_followup.json": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed"
+    },
+    "source_unchanged": true,
+    "exclusive_nonblocking_lock_acquired": true,
+    "n4096_calls": 0,
+    "engineering_test_cost": true,
+    "controlled_target_cost": false
+  },
+  "r1_gate_source_sha256": {
+    "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "scripts/experiment_v2.py": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+    "tests/test_clock_followup.py": "f9a614be9bdfdf31f88c6d5918255e77c4476f1ed243bae74a06420292fee75d",
+    "evidence/protocol_clock_followup.json": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed"
+  },
+  "r1_code_gate_passed": true,
+  "r1_actual_cli_and_identity_independent_review": {
+    "at_utc": "2026-10-02T16:13:38.353104+00:00",
+    "protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+    "plan_sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e",
+    "executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "actual_default_cli_check_exit_code": 0,
+    "actual_cli_output": {
+      "state": "checked",
+      "jobs": 12,
+      "protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+      "n4096_calls": 0
+    },
+    "actual_cli_cost_s": {
+      "monotonic": 0.090826092,
+      "raw": 0.09211758,
+      "realtime": 0.090825844
+    },
+    "actual_cli_resource_max_s": 0.09211758,
+    "cost_category": "engineering preflight; no target/build",
+    "ledger_before_after_current_same": true,
+    "ledger_sha256": "128a4c1c04a99abfe4beadffd9cef31c5376f2c635184e6d839f1adab49b2450",
+    "exact_jobs_match": true,
+    "action_counts": {
+      "run": 10,
+      "clock_matrix": 2
+    },
+    "old_protocol_and_plan_unchanged": true,
+    "source_and_all_approval_paths_verified": true,
+    "n4096_calls": 0
+  },
+  "current_frozen_protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+  "current_frozen_plan_sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e",
+  "current_executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797"
 }

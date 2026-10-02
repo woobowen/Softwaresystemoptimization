@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "P1/scripts/clock_followup.py",
+    "check"
+  ],
+  "exit_code": 0,
+  "clock_start_ns": {
+    "monotonic": 76376681492204,
+    "raw": 80330145873939,
+    "realtime": 1790957455686824414
+  },
+  "clock_end_ns": {
+    "monotonic": 76376772318296,
+    "raw": 80330237991519,
+    "realtime": 1790957455777650258
+  },
+  "elapsed_s": {
+    "monotonic": 0.090826092,
+    "raw": 0.09211758,
+    "realtime": 0.090825844
+  },
+  "stdout": "{\"state\": \"checked\", \"jobs\": 12, \"protocol_sha256\": \"7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86\", \"n4096_calls\": 0}\n",
+  "stderr": "",
+  "n4096_calls": 0,
+  "ledger_before_sha256": "128a4c1c04a99abfe4beadffd9cef31c5376f2c635184e6d839f1adab49b2450",
+  "ledger_after_sha256": "128a4c1c04a99abfe4beadffd9cef31c5376f2c635184e6d839f1adab49b2450",
+  "protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+  "plan_sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e",
+  "executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+  "cost_category": "engineering preflight; no target/build"
+}

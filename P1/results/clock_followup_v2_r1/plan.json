@@ -1,0 +1,207 @@
+{
+  "schema": 2,
+  "stage": "diagnostic",
+  "protocol": "evidence/protocol_clock_followup_r1.json",
+  "protocol_sha256": "7e8e6b77cd2e208ba562e7ca2e4602126a310871815494fde0c1440a78e48c86",
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "framework_sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+  "driver_sha256": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "algorithms": null,
+  "jobs": [
+    {
+      "id": "clock-followup-01-M-B3",
+      "action": "run",
+      "role": "aa_replacement",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 3,
+      "method": "M0",
+      "block": 4,
+      "replacement_for": {
+        "batch": "results/diagnostic_v2",
+        "job": "diagnostic-b4-05-M-B3"
+      }
+    },
+    {
+      "id": "clock-followup-02-F-A3",
+      "action": "run",
+      "role": "aa_replacement",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 3,
+      "method": "M0",
+      "block": 4,
+      "replacement_for": {
+        "batch": "results/diagnostic_v2",
+        "job": "diagnostic-b4-06-F-A3"
+      }
+    },
+    {
+      "id": "clock-followup-03-multiclock-F",
+      "action": "clock_matrix",
+      "role": "clock_matrix_diagnostic",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "direct_calls": 1,
+      "multiclock_identity": "multiclock_identity"
+    },
+    {
+      "id": "clock-followup-04-multiclock-M",
+      "action": "clock_matrix",
+      "role": "clock_matrix_diagnostic",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "direct_calls": 1,
+      "multiclock_identity": "multiclock_identity"
+    },
+    {
+      "id": "clock-followup-05-F-A1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-06-F-B1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-07-M-B1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-08-M-A1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-09-M-A2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-10-M-B2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-11-F-B2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-12-F-A2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    }
+  ]
+}

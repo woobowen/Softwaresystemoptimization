@@ -1,0 +1,352 @@
+{
+  "schema": 2,
+  "state": "approved",
+  "approval": {
+    "frozen_at_utc": "2026-10-02T16:10:02.272430+00:00",
+    "code_evidence": "evidence/reviews/goal2_followup_code_review.json",
+    "method_evidence": "evidence/reviews/goal2_design_review.md",
+    "core_code_evidence": "evidence/reviews/goal2_code_gate.md",
+    "runner_regression": "evidence/reviews/goal2_followup_code_review.json",
+    "runner_sha256": "7fa4c97cac4b749ef249489d909cb79f7c8021f6bdfc1e5e1ea486c2ead5e439",
+    "clock_diagnostics_sha256": "12e22003e861028292445951c8bb4bffc80c3d61a9479611eddc73db230999ff",
+    "followup_executor_sha256": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "state": "FINITE_DIAGNOSTIC_ONLY",
+    "execution_admission": "real_cli_check_and_independent_identity_review_required_before_targets"
+  },
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build",
+    "warmup": {
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "score_clock": "CLOCK_MONOTONIC",
+    "process_clock": "CLOCK_MONOTONIC",
+    "cost_clock": "CLOCK_MONOTONIC",
+    "resource_clock": "max_positive_MONOTONIC_RAW_REALTIME_per_task",
+    "clock_health": {
+      "status": "clock_relation_followup_pending",
+      "timer": "CLOCK_MONOTONIC",
+      "kernel_over_process_tolerance_s": 0.005,
+      "raw_monotonic_ratio_change_fraction": 0.02,
+      "resolution_pp": null,
+      "diagnostic_ratio_action": "record_conflict_and_complete_this_finite_task",
+      "completed_interval_sources": [
+        "driver",
+        "formal_target_process",
+        "diagnostic_kernel"
+      ],
+      "interrupted_is_completed_baseline": false,
+      "raw_is_absolute_standard": false
+    },
+    "arrangement": "exact_clock_followup_12",
+    "performance_lock": ".cache/performance.lock",
+    "formal_admission": false,
+    "clock_sampling_period_s": 2
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true,
+    "unknown_cost_is_zero": false
+  },
+  "resources": {
+    "max_process_runs": 520,
+    "max_wall_s": 57600,
+    "normal_process_upper_bound": 494,
+    "shared_failure_or_diagnostic_reserve": 26,
+    "diagnostic_matrix_runs": 28,
+    "diagnostic_multiclock_matrix_runs": 2,
+    "reference_process_upper_bound": 70,
+    "comparison_process_upper_bound": 283,
+    "confirmation_keep_process_upper_bound": 76,
+    "greedy_start_process_upper_bound": 32,
+    "full_validation_process_upper_bound": 2,
+    "fresh_reproduction_process_upper_bound": 1,
+    "short_clock_probes_count_as_matrix_runs": false,
+    "short_clock_probes_count_as_controlled_wall": true,
+    "additional_followup_process_upper_bound": 12,
+    "additional_batches_allowed": 1,
+    "possible_process_total_after_followup": 41,
+    "normal_process_upper_after_followup": 505,
+    "shared_reserve_after_followup_if_all_jobs_start": 15
+  },
+  "diagnostic_jobs": [
+    {
+      "id": "clock-followup-01-M-B3",
+      "action": "run",
+      "role": "aa_replacement",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 3,
+      "method": "M0",
+      "block": 4,
+      "replacement_for": {
+        "batch": "results/diagnostic_v2",
+        "job": "diagnostic-b4-05-M-B3"
+      }
+    },
+    {
+      "id": "clock-followup-02-F-A3",
+      "action": "run",
+      "role": "aa_replacement",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 3,
+      "method": "M0",
+      "block": 4,
+      "replacement_for": {
+        "batch": "results/diagnostic_v2",
+        "job": "diagnostic-b4-06-F-A3"
+      }
+    },
+    {
+      "id": "clock-followup-03-multiclock-F",
+      "action": "clock_matrix",
+      "role": "clock_matrix_diagnostic",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "direct_calls": 1,
+      "multiclock_identity": "multiclock_identity"
+    },
+    {
+      "id": "clock-followup-04-multiclock-M",
+      "action": "clock_matrix",
+      "role": "clock_matrix_diagnostic",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "direct_calls": 1,
+      "multiclock_identity": "multiclock_identity"
+    },
+    {
+      "id": "clock-followup-05-F-A1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-06-F-B1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-07-M-B1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-08-M-A1",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-09-M-A2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-10-M-B2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-11-F-B2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    },
+    {
+      "id": "clock-followup-12-F-A2",
+      "action": "run",
+      "role": "clock_followup_aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "seed": 0,
+      "repeats": 1,
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "method": "followup_interleaved",
+      "block": 1
+    }
+  ],
+  "diagnostic_design": "evidence/measurement/design.md",
+  "diagnostic_design_sha256": "cf1362b3ec150fa6f1fcde86df04b7a6cda5926c61ef5df3f322bd574ebc259b",
+  "purpose": "one_finite_clock_relation_followup",
+  "parent_protocol_sha256": "8c0d51f459a6caf88580613b2cbb58698a31fbfd15e18f770aa5c9c1b646821d",
+  "parent_batch": "results/diagnostic_v2",
+  "design": "evidence/measurement/clock_followup_design.md",
+  "design_sha256": "9264fb4120a645fbc61d859612c084156205a48e537742d23847963fa546dcbb",
+  "multiclock_identity": {
+    "path": "evidence/measurement/clocks/identity.json",
+    "sha256": "c4820f1fe6ed2dde60845073c9c565cbaa2b9b555a21d71436c34bbbfe362727",
+    "binary": ".cache/clock_goal2/matrix_multiclock",
+    "binary_sha256": "4d63efa53dded3338f622bc255b9f756ff8322de7f5f092fa21626b619c48bb3",
+    "variant_sha256": "c9525ba7d8e514d67a03a3ec47abfa43db57beacabf38606cf0a65387e8bde59",
+    "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab"
+  },
+  "readonly_query_identity": {
+    "path": "evidence/measurement/clock_followup/timex_identity.json",
+    "sha256": "db9f23021422f2b69ccbb3c216b942139e574d61a820671764e3b8b61d0e7552"
+  },
+  "repair_of_protocol_sha256": "02446a7f6d7047d5c4876665f0f0b991860c023b874ce53123bb9edf57fb62ed",
+  "repair_of_plan": {
+    "path": "results/clock_followup_v2/plan.json",
+    "sha256": "a10f8bb4dd7a549ea06cae72a056f550beb8c506c90df8fcb91a4489a03e5de3"
+  },
+  "repair": {
+    "reason": "missing_protocol_path_runtime_field_before_any_matrix_task_start",
+    "source_change": "supply_runtime_protocol_path_and_add_readonly_check_cli_with_r1_default",
+    "zero_call_failure_evidence": {
+      "path": "evidence/measurement/clock_followup/launch-runtime-field-reproduction.stderr.txt",
+      "sha256": "9975034a5a89fd705dab62d37e0cd1e6af89e5e68b529db9d075ff72c076c31a"
+    },
+    "failed_launch_matrix_calls": 0,
+    "old_protocol_and_plan_are_immutable": true,
+    "same_finite_job_sequence": true,
+    "additional_process_budget": 0,
+    "batch": "results/clock_followup_v2_r1"
+  }
+}
