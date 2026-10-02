@@ -1,0 +1,309 @@
+{
+  "review_actor": "/root/review",
+  "scope": "clean independent tests, syntax, four cold builds; no n4096",
+  "clone": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2",
+  "clone_commit": "9668bc75a9d23376aed8ef9e84e24a9e81a41219",
+  "git_status_before": "",
+  "python_files": [
+    "P1/scripts/clock_diagnostics.py",
+    "P1/scripts/clock_followup.py",
+    "P1/scripts/experiment.py",
+    "P1/scripts/experiment_v2.py",
+    "P1/scripts/host_clock_probe.py",
+    "P1/scripts/identity_quality.py",
+    "P1/scripts/safe_screenshots.py",
+    "P1/scripts/summarize.py",
+    "P1/scripts/summarize_v2.py",
+    "P1/scripts/validate_target.py",
+    "P1/src/autotuner.py",
+    "P1/tests/test_autotuner.py",
+    "P1/tests/test_clock_followup.py",
+    "P1/tests/test_experiment.py",
+    "P1/tests/test_goal2_driver.py",
+    "P1/tests/test_goal2_screenshots.py",
+    "P1/tests/test_goal2_search.py",
+    "P1/tests/test_goal2_summary.py",
+    "P1/tests/test_host_clock_probe.py"
+  ],
+  "source_hashes_before": {
+    "P1/scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "P1/scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "P1/scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "P1/scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "P1/scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "P1/scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "P1/src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "P1/tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "P1/tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "P1/tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+    "P1/tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "P1/src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "screenshot_log_before_sha256": "a5a78ec25bc5d6cd7fbb82156196a81178e51681663c9e0e1c4edc60eb905c2d",
+  "screenshot_log_before_bytes": 46768,
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:46:33.470087+00:00",
+      "task": "goal2-clean-independent-tests",
+      "role": "independent_reproduction",
+      "attempt_id": "0f03e6d53d1f4ecbb0d2c0f25ac2a9de",
+      "returncode": 1,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 18.514826036,
+      "clock_elapsed_s": {
+        "monotonic": 18.514826036,
+        "raw": 19.118786384,
+        "realtime": 18.514826314
+      },
+      "clock_end_ns": {
+        "monotonic": 96110646346303,
+        "raw": 100468316255768,
+        "realtime": 1790977593469729883
+      },
+      "resource_s": 19.118786384,
+      "resource_wall_s": 19.118786384,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-tests.stdout.txt",
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-tests.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:48:06.883012+00:00",
+      "task": "goal2-clean-independent-syntax",
+      "role": "independent_reproduction",
+      "attempt_id": "e6c1b675667249ca9cfb7ec5928e0cf6",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.257818531,
+      "clock_elapsed_s": {
+        "monotonic": 0.257818531,
+        "raw": 0.265326958,
+        "realtime": 0.257819084
+      },
+      "clock_end_ns": {
+        "monotonic": 96201256078161,
+        "raw": 100561502593849,
+        "realtime": 1790977686882711962
+      },
+      "resource_s": 0.265326958,
+      "resource_wall_s": 0.265326958,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-syntax.stdout.txt",
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-syntax.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:48:07.900306+00:00",
+      "task": "goal2-clean-independent-cold-build",
+      "role": "independent_reproduction",
+      "attempt_id": "094b1ac22d664615873b7e5ae7935b15",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 1.006081879,
+      "clock_elapsed_s": {
+        "monotonic": 1.006081879,
+        "raw": 1.035380327,
+        "realtime": 1.006083232
+      },
+      "clock_end_ns": {
+        "monotonic": 96202273170984,
+        "raw": 100562549304766,
+        "realtime": 1790977687899805121
+      },
+      "resource_s": 1.035380327,
+      "resource_wall_s": 1.035380327,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-cold-build.stdout.txt",
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-cold-build.stderr.txt"
+    }
+  ],
+  "started_at_utc": "2026-10-02T21:46:14.926921+00:00",
+  "preflight_error": "Reviewer evidence timestamp call ex.utc unavailable; corrected to datetime UTC before any controlled task or target started",
+  "test_execution": {
+    "tests": 221,
+    "errors": 2,
+    "failures": 0,
+    "skipped": 0,
+    "state": "FAILED",
+    "reported_unittest_s": 18.177,
+    "stderr": "evidence/reproduction/goal2/goal2-clean-independent-tests.stderr.txt"
+  },
+  "screenshot_new_rows": 4,
+  "native_host_rows": 5,
+  "cold_build_cache_existed_before": false,
+  "source_hashes_after": {
+    "P1/scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "P1/scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "P1/scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "P1/scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "P1/scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "P1/scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "P1/src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "P1/tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "P1/tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "P1/tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+    "P1/tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "P1/src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "source_hashes_unchanged": true,
+  "git_status_after": " M P1/evidence/commands/screenshot_cleanup_tests.jsonl\n",
+  "ended_at_utc": "2026-10-02T21:48:07.962768+00:00",
+  "build_execution": {
+    "count": 4,
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "cached": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "process_measurement_starts": 0,
+    "journal_sha256": "b6bfa951fd30f371059895dae4133a39e34b7ba615f2d4438447b883b8e68acc",
+    "identities": [
+      {
+        "opt": "O0",
+        "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/25d52d5efb6121a73a79eb5ebd6b0ff275c57161b40cd0644b1fe6edba384a4f",
+        "binary_sha256": "fc94eb28bd61575ae77bf2e963e52b19b0bfa32b36f5f4fbad2d02d00b1cb190",
+        "build_key": "25d52d5efb6121a73a79eb5ebd6b0ff275c57161b40cd0644b1fe6edba384a4f",
+        "compiler": {
+          "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+          "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+        },
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O0"
+        ],
+        "compile_domains_s": {
+          "CLOCK_MONOTONIC": 0.354546341,
+          "CLOCK_MONOTONIC_RAW": 0.36487213,
+          "CLOCK_REALTIME": 0.35454777
+        }
+      },
+      {
+        "opt": "O1",
+        "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/252bae715e6f67014d0e8dbf62e04370e0cba5ac8bc93133d7354fca1618c10c",
+        "binary_sha256": "5ebe9775efe700caa5e6971e0f29fb2cfeb68ce5db8ed3427a285ceae231ceab",
+        "build_key": "252bae715e6f67014d0e8dbf62e04370e0cba5ac8bc93133d7354fca1618c10c",
+        "compiler": {
+          "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+          "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+        },
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O1"
+        ],
+        "compile_domains_s": {
+          "CLOCK_MONOTONIC": 0.141119416,
+          "CLOCK_MONOTONIC_RAW": 0.14522899,
+          "CLOCK_REALTIME": 0.141119511
+        }
+      },
+      {
+        "opt": "O2",
+        "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/305299a1fcf40412030f27b5207eea930abdbe16697eae85d9b1e26e77aa8588",
+        "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c",
+        "build_key": "305299a1fcf40412030f27b5207eea930abdbe16697eae85d9b1e26e77aa8588",
+        "compiler": {
+          "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+          "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+        },
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2"
+        ],
+        "compile_domains_s": {
+          "CLOCK_MONOTONIC": 0.145575858,
+          "CLOCK_MONOTONIC_RAW": 0.149815836,
+          "CLOCK_REALTIME": 0.145576717
+        }
+      },
+      {
+        "opt": "O3",
+        "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/203eb352b9588c18252c5de59583756d167f47bb0427359d26bdc60225ef5688",
+        "binary_sha256": "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828",
+        "build_key": "203eb352b9588c18252c5de59583756d167f47bb0427359d26bdc60225ef5688",
+        "compiler": {
+          "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+          "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+        },
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O3"
+        ],
+        "compile_domains_s": {
+          "CLOCK_MONOTONIC": 0.141261362,
+          "CLOCK_MONOTONIC_RAW": 0.145375302,
+          "CLOCK_REALTIME": 0.141261632
+        }
+      }
+    ],
+    "stdout": "evidence/reproduction/goal2/goal2-clean-independent-cold-build.stdout.txt"
+  },
+  "syntax_execution": {
+    "count": 19,
+    "state": "PASSED",
+    "stdout": "evidence/reproduction/goal2/goal2-clean-independent-syntax.stdout.txt"
+  },
+  "independent_primitive_checks": {
+    "all_primary_three_ns_recomputed": true,
+    "binary_hashes_match": true,
+    "source_compile_flags_match": true,
+    "native_screenshot_cleanup_verified": true,
+    "native_windows_cleanup_verified": true,
+    "all_recorded_screenshot_PIDs_absent": true
+  },
+  "controlled_resource_total_s": 20.419493669,
+  "overall_state": "TEST_FIXTURE_REPAIR_REQUIRED",
+  "updated_at_utc": "2026-10-02T21:49:52.275774+00:00"
+}

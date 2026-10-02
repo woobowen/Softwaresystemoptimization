@@ -1,0 +1,56 @@
+{
+  "checkpoint": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/scripts/identity_quality.py",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/identity-quality"
+  ],
+  "resource": {
+    "type": "task_end",
+    "at": "2026-10-02T21:53:43.885033+00:00",
+    "task": "clean-identity-quality",
+    "role": "historical_analysis",
+    "attempt_id": "40cc4e24bb884df4a01171a7655f8d80",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.265872392,
+    "clock_elapsed_s": {
+      "monotonic": 0.265872392,
+      "raw": 0.273564001,
+      "realtime": 0.265873535
+    },
+    "clock_end_ns": {
+      "monotonic": 96528576332982,
+      "raw": 100898661761359,
+      "realtime": 1790978023884763156
+    },
+    "resource_s": 0.273564001,
+    "resource_wall_s": 0.273564001,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "stdout": "evidence/reproduction/goal2/clean-identity-quality.stdout.txt",
+    "stderr": "evidence/reproduction/goal2/clean-identity-quality.stderr.txt"
+  },
+  "files": [
+    {
+      "file": "search_choices.csv",
+      "original_sha256": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+      "regenerated_sha256": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+      "equal": true
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd",
+      "regenerated_sha256": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd",
+      "equal": true
+    }
+  ],
+  "all_equal": true,
+  "n4096_calls": 0
+}

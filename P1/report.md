@@ -122,3 +122,5 @@ taskset -c 0 python3 P1/src/autotuner.py search --algorithm random \
 `--target` 输入源码，`--blocks` 与 `--opts` 输入候选值，`--algorithm` 选择规则。四级构建、单配置运行、测试和重生成入口见 [README](README.md)。性能实验需要稳定且可比的测量条件。
 
 ![最终源码的构建与复现记录](images/build-run.png)
+
+四级构建完成；这次单次大矩阵复现被时钟变化保护中止，未得到完整输出。

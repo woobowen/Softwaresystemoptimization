@@ -1,0 +1,8 @@
+{
+  "checkpoint": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+  "file": "P1/evidence/commands/screenshot_cleanup_tests.jsonl",
+  "saved_four_rows_sha256": "44eef140e90158342c5d42fa31c5377e59f0e232210fa7c2250ad15a6bb308ad",
+  "original_sha256": "a5a78ec25bc5d6cd7fbb82156196a81178e51681663c9e0e1c4edc60eb905c2d",
+  "only_task_generated_append_restored_after_copy": true,
+  "clean_status_empty": true
+}

@@ -1,0 +1,1 @@
+{"image": "images/saved-search-results.png", "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1", "stopped": true, "tcp_listeners": []}

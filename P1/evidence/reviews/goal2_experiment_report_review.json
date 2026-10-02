@@ -1,7 +1,7 @@
 {
   "reviewer": "/root/implementation",
   "role": "independent_experiment_report_review",
-  "state": "CLOCK_BLOCKED_ADAPTATION_FEASIBILITY_REVIEW_PENDING_EVIDENCE",
+  "state": "PARTIAL_STAGE_DELIVERY_REVIEW_APPROVED_PERFORMANCE_CLOCK_BLOCKED",
   "checked_at_utc": "2026-10-02T18:31:32.557313+00:00",
   "source_checkpoint": "6463e2a3ab507debf02204d555c1f2083257235e",
   "input_sha256": {
@@ -20,11 +20,16 @@
     "protocol_json": true
   },
   "executed_by_reviewer": {
-    "tests": 0,
+    "scope": "This continuing experiment/report audit only; earlier independent method and RAW gates have their own immutable records",
+    "tests": 14,
+    "syntax_checks": 2,
     "compilations": 0,
     "plots": 0,
-    "gui": 0,
-    "n4096": 0
+    "gui_processes": 0,
+    "images_actually_opened": 6,
+    "n4096": 0,
+    "raw_recalculation_uses_only_standard_library": true,
+    "image_open_scope": "6 unique final formal images actually opened; two additional actual opens after ER9 recapture. SVG source fully read and its actual gdk-pixbuf rendering opened. No own GUI/plot."
   },
   "teacher_requirements": {
     "interfaces_and_diagram": "present; final explanation/visual pending",
@@ -41,41 +46,88 @@
       "id": "ER1",
       "path": "report.md:27-36 / src/autotuner.py:561-569",
       "scope": "code explanation",
-      "state": "OWNER_REVISION_REQUIRED_BEFORE_FINAL_REVIEW",
+      "state": "CLOSED",
       "finding": "The report search snippet is the three-base-algorithm path; S3 passes strategy to Evaluator and observes the fresh score inside evaluate.",
-      "recommendation": "Label the snippet as the base search loop or show the actual S3 branch. Remove the recovery narrative from the formal report; retain the budget/failure behavior briefly."
+      "recommendation": "Label the snippet as the base search loop or show the actual S3 branch. Remove the recovery narrative from the formal report; retain the budget/failure behavior briefly.",
+      "current_finding": "Report removes most restore workflow narrative and retains failure/budget explanation; base-only observe snippet needs explicit label at lines25-29.",
+      "closed_evidence": "Current report explicitly labels the displayed path as the three base algorithms; no claim this is S3 observe contract."
     },
     {
       "id": "ER2",
       "path": "report.md:64-80",
       "scope": "reference method and results",
-      "state": "WAIT_ACTUAL_REFERENCE_THEN_REVISE",
+      "state": "HISTORICAL_TABLE_RETAINED_ACCURATELY_NEW_REFERENCE_CLOCK_BLOCKED",
       "finding": "Current table is explicitly Goal1 data and its warmup is s128/O3; frozen new protocol uses s128/O2 and three full rounds plus nine anchors.",
-      "recommendation": "Use the new complete 20-cell table and derived min/max/MAD link after it finishes. State the exact warmup once; keep only result-supported O/block/tail/assembly explanations."
+      "recommendation": "Use the new complete 20-cell table and derived min/max/MAD link after it finishes. State the exact warmup once; keep only result-supported O/block/tail/assembly explanations.",
+      "current_finding": "New report explains old three complete rounds and current performance blocker; old20 values match independent raw recomputation. Minimum wording tracked separately."
     },
     {
       "id": "ER3",
       "path": "report.md:87-109,119-127",
       "scope": "quality and actual cost",
-      "state": "WAIT_ACTUAL_COMPARISON_THEN_REVISE",
+      "state": "HISTORICAL_IDENTITY_MAPPING_FIXED_NEW_COMPARISON_CLOCK_BLOCKED",
       "finding": "Three old seeds, per-algorithm 3-run confirmation, old t_confirm/39.499706 gap, and search+3 costs cannot describe six-block shared-panel identity evaluation.",
-      "recommendation": "Use common g_ref, independent same-block panel and near/worse/uncertain classes; charge actual search including rechecks, with shared external evaluation cost recorded once. Link per-round details and keep relevant severe cases/start sensitivity."
+      "recommendation": "Use common g_ref, independent same-block panel and near/worse/uncertain classes; charge actual search including rechecks, with shared external evaluation cost recorded once. Link per-round details and keep relevant severe cases/start sensitivity.",
+      "current_finding": "Nine old primary rows share exact g_ref by config identity; separate old confirmation time not used as choice-quality superiority. New sixseed/common-panel main comparison was not executed."
     },
     {
       "id": "ER4",
       "path": "report.md:45,76,111-131,148",
       "scope": "conciseness and measurement limits",
-      "state": "OWNER_REVISION_REQUIRED_BEFORE_FINAL_REVIEW",
+      "state": "CLOSED",
       "finding": "Timer unification alone is insufficient; long old S1/S2 and holdout narration plus repeated screenshot disclaimers dominate the answer.",
-      "recommendation": "Explain independent same-configuration variation and fine-order limits once. Move old enhancement/holdout details to evidence, keep a short historical negative conclusion, and use one source caption instead of repeated process narration."
+      "recommendation": "Explain independent same-configuration variation and fine-order limits once. Move old enhancement/holdout details to evidence, keep a short historical negative conclusion, and use one source caption instead of repeated process narration.",
+      "current_finding": "122 lines; one direct clock limitation, brief old enhancements, explicit S3/newseeds not executed. No repeated screenshot defense. Final visual audit remains pending.",
+      "closed_evidence": "Final full prose continuously read, limits stated once; all6 final images actually opened and sources approved."
     },
     {
       "id": "ER5",
       "path": "README.md:3 / scripts/safe_screenshots.py:89-95",
       "scope": "actual local dependencies",
-      "state": "OWNER_REVISION_AND_CLEAN_REPRODUCTION_REQUIRED",
+      "state": "CLOSED",
       "finding": "README lists xauth as required but native Xauthority is generated with struct; the actual script requires ss and uses an ignored local xterm fallback when PATH lacks xterm.",
-      "recommendation": "Remove unused xauth, list ss/iproute2, and give a concrete local-tool check/reuse step for a clean clone. Verify all documented commands in the final clean reproduction without assuming an ignored cache exists."
+      "recommendation": "Remove unused xauth, list ss/iproute2, and give a concrete local-tool check/reuse step for a clean clone. Verify all documented commands in the final clean reproduction without assuming an ignored cache exists.",
+      "current_finding": "README lists ss/iproute2 and local xterm reuse; removes xauth necessity. Native final screenshots/clean dependency replay not yet reviewed here.",
+      "closed_evidence": "README exact ss/iproute2 and local xterm dependencies; actual clean peer221/0skip includes native screenshot cleanup. Five final captures authenticated, no TCP, all own resources removed."
+    },
+    {
+      "id": "ER6",
+      "path": "README.md live summarize_v2 example",
+      "scope": "matching source/version reproduction after timer restoration",
+      "state": "CLOSED_MATCHING_REPLAY_ACTUAL",
+      "finding": "The live example specifies old protocol_v2 and unexecuted search directories while default current source/core may differ from the old frozen hashes.",
+      "recommendation": "Replace with explicit matching fixed checkpoints and actual saved batches/snapshots; preserve identity checks and execute the documented flow in a clean clone.",
+      "current_finding": "README references exact5c/3ac/2fc/c247 detached checkouts; no live-head attempt to treat restored source as old RAW input.",
+      "closed_evidence": "README exact5c/3ac/2fc/c247; actual fixed files verified. a39 summary-only analysis identity difference disclosed; full fresh reproduction remains PARTIAL."
+    },
+    {
+      "id": "ER7",
+      "path": "report.md:71",
+      "scope": "numeric wording",
+      "state": "CLOSED",
+      "finding": "The minimum observed raw sample is not39.499706; this is the minimum configuration median. Raw s128/O3 has33.005756.",
+      "recommendation": "Replace 观测最小值对应 with 最小中位数对应.",
+      "closed_evidence": "Current report explicitly says 最小中位数 corresponding to s128/O2, not global raw minimum."
+    },
+    {
+      "id": "ER8",
+      "path": "evidence/README.md:1-24",
+      "scope": "current evidence navigation",
+      "state": "CLOSED",
+      "finding": "The evidence index is still titled Goal1 and links only historical54-tests/258-call/old judgments/publication; new Goal2 blocked result and delivery evidence are absent.",
+      "recommendation": "Add current Goal2 stage section with accurate performance blockage and new frozen diagnostics/audits/reproduction links; retain old judged files as history.",
+      "closed_evidence": "Current evidence index separates accurate Goal2 PARTIAL links and unchanged historical inputs/decisions/publication."
+    },
+    {
+      "id": "ER9",
+      "severity": "major_delivery_provenance",
+      "path": ".cache/goal2-capture/view_choices.py:4,15-16 and view_reproduction.py:11,14-16",
+      "scope": "source of real terminal status summaries",
+      "state": "CLOSED",
+      "finding": "Actual figures match raw today, but script hardcodes20/3/reference39.499706 and RAW1/0/7;reproduction script hardcodes221/0/19,config/CPU/count/command instead of reading loaded records. Source summary is loaded but unused forAA counters.",
+      "recommendation": "Derive displayed values from actual validated identity/grid/rawAA/clean/fresh input fields; archive exact viewer source and input SHA in image evidence, keep temporary script ignored; recapture only these two views with0new target calls and independently reopen.",
+      "honesty_boundary": "Actual native screenshots are real and current numbers accurate; finding is hand-entered summary provenance and reproducibility, not a claim that target output was fabricated.",
+      "closed_evidence": "Owner replaced constants by stored input fields; exact viewer full text/source/inputSHA saved and independently matched; two actual recaptures reopened. Five safe captures fully clean, 0new matrix calls."
     }
   ],
   "historical_readme_fixed_revision": {
@@ -85,15 +137,14 @@
     "old_CR1": "STATIC_DOCUMENT_FIX_CLEAN_REPRODUCTION_PENDING"
   },
   "current_report_data_are_goal1": true,
-  "formal_goal2_data_reviewed": false,
-  "final_images_opened_by_this_reviewer": false,
-  "final_report_approved": false,
+  "formal_goal2_data_reviewed": true,
+  "final_images_opened_by_this_reviewer": true,
+  "final_report_approved": true,
   "final_engineering_pass_assigned": false,
   "remaining": [
-    "method decision on finite new four-clock probes and, only if justified, separately reviewed minimal timer adaptation plus new protocol/batch",
-    "otherwise report actual blocked scope without relabeling historical measurements",
-    "final report/README, final image visual review and clean reproduction of completed scope",
-    "publication and fixed-commit remote readback"
+    "Clock comparability hard dependency: new20 reference, sixseed online/shared panels, S3 selection/holdout, retained-baseline newseed confirmation and Greedy start panel are BLOCKED/NOT_EXECUTED.",
+    "Fresh correctness-only n4096 was genuinely interrupted; no complete fresh output/score. Clean regression/four cold builds/history replays do not erase this PARTIAL.",
+    "ROOT must still perform normal authorized main publication and actual remote SHA/content readback; this audit has not yet inspected published final remote content."
   ],
   "formal_reference_start_failure": {
     "task": "warmup-reference",
@@ -172,5 +223,879 @@
     "kind": "SyntaxError unmatched closing parenthesis in reviewer-only serialization command",
     "attempted_write_occurred": false,
     "corrected_without_source_raw_or_protocol_changes": true
-  }
+  },
+  "historical_review_state_before_RAW_stop": "CLOCK_BLOCKED_ADAPTATION_FEASIBILITY_REVIEW_PENDING_EVIDENCE",
+  "current_checked_at_utc": "2026-10-02T22:24:37.715050+00:00",
+  "raw_AA_first_failure_independent_recalculation": {
+    "task": "raw-aa-01-F-A1",
+    "attempt_id": "b69d6ddb29d842fea528038ed310ba8c",
+    "protocol_sha256": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+    "plan_sha256": "4c514b38eecfabd15011dfab5ff970ba949e5b927fdabee3421981d8a39de063",
+    "journal_sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+    "target_source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "driver_sha256_at_execution": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "kernel_raw_s": 40.539898,
+    "process_domains_s": {
+      "monotonic": 40.099409014,
+      "raw": 41.25733453,
+      "realtime": 40.960162684
+    },
+    "driver_domains_s": {
+      "monotonic": 40.587241403,
+      "raw": 41.760444408,
+      "realtime": 41.447995734
+    },
+    "resource_s": 41.760444408,
+    "process_raw_realtime_q": 1.007255143205671,
+    "driver_raw_realtime_q": 1.0075383301041911,
+    "process_first_previous_change_pct": [
+      0.9156377277261152,
+      2.261197379404245
+    ],
+    "driver_first_previous_change_pct": [
+      0.8920546986190159,
+      2.2455634319477724
+    ],
+    "complete_guard_recomputed": true,
+    "reason": "complete target process RAW/REALTIME changed >2% relative to first or previous",
+    "call_count": 1,
+    "valid_AA_samples": 0,
+    "pending_AA_jobs": 7,
+    "scope": "target process exit 0 and parse status ok; completed guard prohibits formal measurement, numerical accuracy is supported separately and not inferred solely from exit code; no finished AA method or formal experiment"
+  },
+  "default_recommendation": {
+    "timer": "Restore only two measured-C clock literals to CLOCK_MONOTONIC; exact prior cece source if no other edits",
+    "framework": "retain minimal dual-clock core55 compatibility; do not change algorithms or global clocks",
+    "algorithm": "preserve public CLI grid default and all three base methods; Random is enhancement-selection baseline; recheck remains experimental and NOT_EXECUTED",
+    "history": "freeze actual RAW stop data together with matching RAW source before restoring C; 2dc is pre-AA source freeze and does not by itself include later actual logs",
+    "limitations": "restoring historical semantics is not clock calibration; keep full formal performance blocked",
+    "implementation_status": "Owner restored the two timer literals; actual measured-C cece SHA verified; core55 untouched. Independent 14 RAW analysis fixtures and two syntax checks passed; final independent code and clean correctness reproduction remain pending."
+  },
+  "blocked_dependencies": {
+    "new_complete_20_config_reference": "NOT_EXECUTED_CLOCK_BLOCKED",
+    "new_six_seed_three_algorithm_comparison": "NOT_EXECUTED_CLOCK_BLOCKED",
+    "S3_main_selection": "NOT_EXECUTED_CLOCK_BLOCKED",
+    "S3_candidate_confirmation": "NOT_EXECUTED_DEPENDENCY_BLOCKED_NOT_NOT_REQUIRED",
+    "final_baseline_new_seed_confirmation": "NOT_EXECUTED_CLOCK_BLOCKED",
+    "greedy_start_panel": "NOT_EXECUTED_CLOCK_BLOCKED",
+    "RAW_AA": "PARTIAL_ONE_INVALID_SEVEN_UNSTARTED"
+  },
+  "formal_admission": false,
+  "review_arithmetic_harness_errors": [
+    {
+      "error": "AssertionError in first pure-read RAW stop calculation, before writing evidence",
+      "cause": "reviewer success-only assumption guard.error is None; actual conflict guard correctly preserves its reason string",
+      "fix": "require nonempty guard.error exactly matching end.reason; retain all original failure fields",
+      "n4096_calls": 0,
+      "raw_or_author_source_changed": false
+    },
+    {
+      "error": "AssertionError before review write while locating original MONO-derived summary",
+      "cause": "Reviewer searched results/ rather than its existing evidence/measurement/formal_clock_drift/analysis_after_fix placement",
+      "fix": "Read actual file path and independently verify all ten CSV hashes and one JSON identity-only difference",
+      "raw_or_author_source_changed": false,
+      "n4096_calls": 0
+    },
+    {
+      "scope": "final raw cost review",
+      "attempts": 2,
+      "before_review_record_writing": true,
+      "error": "Audit initially counted failed tasks only by nonzero returncode; diagnostic assertion exposed rc0 warmup with actual clock-guard reason.",
+      "correction": "Count failed tasks as nonzero returncode OR reason non-null; matches saved explicit cost policy. Complete third raw integer-ns recomputation succeeds, all35 role rows exact.",
+      "production_or_raw_or_protocol_modified": false,
+      "new_matrix_calls": 0
+    }
+  ],
+  "goal1_table_identity_independent_recalculation": {
+    "scope": "independent standard-library recomputation of historical Goal1, not new Goal2 samples or confidence intervals",
+    "reference_valid_calls": 60,
+    "configs": 20,
+    "samples_per_config": 3,
+    "failed_reference_calls": 0,
+    "target_sha256s": [
+      "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+    ],
+    "minimum_median_s": 39.499706,
+    "all_saved_median_min_max_MAD_samples_exact": true,
+    "main_three_algorithm_rows": [
+      {
+        "algorithm": "grid",
+        "seed": 104729,
+        "s": 16,
+        "opt": "O1",
+        "T_ref_s": 44.326172,
+        "g_ref_pct": 12.218992212245826,
+        "independent_old_confirm_s": 44.19418,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 917.9619044230021
+      },
+      {
+        "algorithm": "random",
+        "seed": 104729,
+        "s": 16,
+        "opt": "O1",
+        "T_ref_s": 44.326172,
+        "g_ref_pct": 12.218992212245826,
+        "independent_old_confirm_s": 48.896767,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 933.893057471003
+      },
+      {
+        "algorithm": "greedy",
+        "seed": 104729,
+        "s": 16,
+        "opt": "O3",
+        "T_ref_s": 44.371098,
+        "g_ref_pct": 12.332729767659533,
+        "independent_old_confirm_s": 43.45359,
+        "search_calls": 7,
+        "search_driver_monotonic_s": 394.5358746419988
+      },
+      {
+        "algorithm": "greedy",
+        "seed": 130363,
+        "s": 128,
+        "opt": "O1",
+        "T_ref_s": 41.177814,
+        "g_ref_pct": 4.248406304593755,
+        "independent_old_confirm_s": 39.124683,
+        "search_calls": 7,
+        "search_driver_monotonic_s": 409.3794927220006
+      },
+      {
+        "algorithm": "grid",
+        "seed": 130363,
+        "s": 16,
+        "opt": "O3",
+        "T_ref_s": 44.371098,
+        "g_ref_pct": 12.332729767659533,
+        "independent_old_confirm_s": 44.844345,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 902.535877495
+      },
+      {
+        "algorithm": "random",
+        "seed": 130363,
+        "s": 128,
+        "opt": "O2",
+        "T_ref_s": 39.499706,
+        "g_ref_pct": 0.0,
+        "independent_old_confirm_s": 33.191216,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 596.0096751889978
+      },
+      {
+        "algorithm": "grid",
+        "seed": 155921,
+        "s": 16,
+        "opt": "O3",
+        "T_ref_s": 44.371098,
+        "g_ref_pct": 12.332729767659533,
+        "independent_old_confirm_s": 42.672432,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 876.7863584579973
+      },
+      {
+        "algorithm": "random",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "T_ref_s": 42.501537,
+        "g_ref_pct": 7.599628716223861,
+        "independent_old_confirm_s": 32.911858,
+        "search_calls": 8,
+        "search_driver_monotonic_s": 957.1933075710003
+      },
+      {
+        "algorithm": "greedy",
+        "seed": 155921,
+        "s": 128,
+        "opt": "O3",
+        "T_ref_s": 42.501537,
+        "g_ref_pct": 7.599628716223861,
+        "independent_old_confirm_s": 33.041843,
+        "search_calls": 5,
+        "search_driver_monotonic_s": 188.7109313660003
+      }
+    ]
+  },
+  "current_document_continuous_read": {
+    "checked_at_utc": "2026-10-02T22:24:37.715050+00:00",
+    "input_sha256": {
+      "report.md": "279f46ffca5fec400e96722b24193d21990324add0b4a48d3a46dfbd4a2676c2",
+      "README.md": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206",
+      "evidence/goal2_stage_result.md": "56ec9ea6d2ff06e2151d595f1aca36f095f7e04f1bd34909c87fe9ff6e43725e",
+      "evidence/current_plan.md": "c72cb5306d85916cb83c7a1ea66985f8e5e9d7ed58ec1edc5456772575346272",
+      "evidence/goal2_review_closure.md": "cbc6ea52a28dd4f5cdb6761dfe31f42aefe5a479f01e0606df80400c422b551b",
+      "evidence/requirements.md": "9f15b986fc5e3b696381d4919e92b43883cf0232d5992599980b9862653b6ac7",
+      "evidence/README.md": "55464286621be41b8e27e0466425f727a27ad36170be28375990dace1accd648",
+      "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+      "tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a"
+    },
+    "report_lines": 126,
+    "readme_lines": 78,
+    "stage_result_lines": 151,
+    "read_from_start_to_end": true,
+    "report_requirement_order": "1 interfaces; 2 original Matrix target; 3 parameter values; 4 full Grid and Random/Greedy analysis",
+    "data_scope": "Every performance table/curve in the report is explicitly historical Goal1; new20/sixseed/S3/new confirmations/Greedy panel are NOT_EXECUTED due clock dependency",
+    "quality_mapping": "Actual18-row identity output independently recalculated; same config gives identical g_ref; separate confirmations never backfill online paths",
+    "prose": "Final full report is concise teacher-order coursework, with necessary measurement limit and one fresh-interruption sentence. Internal stage process stays in evidence. README gives matching fixed-version reproduction, not a duplicated report.",
+    "report_images_final_visual_checked": true,
+    "all_six_relative_image_links_exist_and_match_manifest": true,
+    "fresh_run_is_described_as_incomplete": true,
+    "formal_performance_admission": false
+  },
+  "matching_RAW_stop_checkpoint": {
+    "commit": "5c78049a22fa3422f2b23dddd634f2e7a3d73f9d",
+    "target_source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "actual_AA_journal_sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+    "current_journal_bytes_match_fixed_checkpoint": true,
+    "README_fixed_replay_command_present": true,
+    "actual_fixed_replay_after_report_revision": "PENDING_ROOT_CLEAN_REPRODUCTION"
+  },
+  "post_default_restore_independent_regression": {
+    "record": "evidence/commands/goal2_raw_fixture_restore_independent_regression.json",
+    "sha256": "bc538dc82d5a23554520153c5d8f85906d2b617c15db43cef1f1807cf184477f",
+    "tests": 14,
+    "unittest_wall_s": 0.073,
+    "syntax_files": 2,
+    "controlled_resource_s": 0.528435108,
+    "n4096_calls": 0,
+    "source_sha256": {
+      "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+      "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+    },
+    "protected_files": 535,
+    "protected_files_unchanged": true,
+    "lock_released": true,
+    "scope": "14 relevant fixtures only, not another whole79 suite; production analyzer unchanged"
+  },
+  "goal1_search_cost_trajectory_independent_recalculation": {
+    "rows": [
+      {
+        "stage": "selection",
+        "algorithm": "grid",
+        "seed": 104729,
+        "config": {
+          "s": 16,
+          "opt": "O1"
+        },
+        "first_config": {
+          "s": 8,
+          "opt": "O0"
+        },
+        "g_ref_pct": 12.218992212245826,
+        "online_score_s": 45.099396,
+        "separate_confirmation_s": 44.19418,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 1053.2004124470004,
+        "journal_sha256": "792ed0baece3fffc849f18116fcda651ebd0e7c97e8a35e10d438671dfb4c835",
+        "confirmation_journal_sha256": "b2625d92f32158e6ab1428357a7484db0b618903002d741808a0ab109bff8faf",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 104729,
+        "config": {
+          "s": 16,
+          "opt": "O1"
+        },
+        "first_config": {
+          "s": 8,
+          "opt": "O1"
+        },
+        "g_ref_pct": 12.218992212245826,
+        "online_score_s": 43.431442,
+        "separate_confirmation_s": 48.896767,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 1082.7939203470014,
+        "journal_sha256": "e54e0ca85f834e8efabab53ad28e5a5a09e1ae77d88f25bbabaa9039a726052e",
+        "confirmation_journal_sha256": "c1795a95e307b07db44094824565dfac088a85110abbfce15936b70ca65e87aa",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 104729,
+        "config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 16,
+          "opt": "O2"
+        },
+        "g_ref_pct": 12.332729767659533,
+        "online_score_s": 44.572552,
+        "separate_confirmation_s": 43.45359,
+        "search_calls": 7,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 526.5218778229973,
+        "journal_sha256": "b7a85201e6deeeb29482f930d3331b3ce996643d78f151cbec9567a81722d816",
+        "confirmation_journal_sha256": "5824683ab9e6d2c0714899771d21c49326f9b0b3becf5aee1251ce39a2f3a42c",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 130363,
+        "config": {
+          "s": 128,
+          "opt": "O1"
+        },
+        "first_config": {
+          "s": 128,
+          "opt": "O3"
+        },
+        "g_ref_pct": 4.248406304593755,
+        "online_score_s": 37.570213,
+        "separate_confirmation_s": 39.124683,
+        "search_calls": 7,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 529.634615283001,
+        "journal_sha256": "181d460bbf46e9b9eb5fe2a2bcc1fa382c057b9170c00742aa15435da5b104e0",
+        "confirmation_journal_sha256": "6eddfc0853eb41123ad78493346a2366ccff9b8d8ba1176c770b29cc06ec81eb",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "grid",
+        "seed": 130363,
+        "config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 8,
+          "opt": "O0"
+        },
+        "g_ref_pct": 12.332729767659533,
+        "online_score_s": 44.95208,
+        "separate_confirmation_s": 44.844345,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 1040.768084649997,
+        "journal_sha256": "3d0044597411f150078752bd6df7e18c2af7b861e831fba2ba95e0c039bafca9",
+        "confirmation_journal_sha256": "fc89ba542a374112a6e9dd0fd510bf0298c1aeb6b075f0f00e0b13a29d9f20e0",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 130363,
+        "config": {
+          "s": 128,
+          "opt": "O2"
+        },
+        "first_config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "g_ref_pct": 0.0,
+        "online_score_s": 34.116451,
+        "separate_confirmation_s": 33.191216,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 697.4588555859991,
+        "journal_sha256": "fbef3183a1b0e76926cd53c74de83e592867ac7c626ea8db303841777d5476d4",
+        "confirmation_journal_sha256": "0defcac44487f755c09cafe8661d4e3dfcc2114de2ea52283246f55a5f62d05b",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "grid",
+        "seed": 155921,
+        "config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 8,
+          "opt": "O0"
+        },
+        "g_ref_pct": 12.332729767659533,
+        "online_score_s": 42.053825,
+        "separate_confirmation_s": 42.672432,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 1006.0731047899972,
+        "journal_sha256": "dc162eff7e2c7fdd631bcfa51e053ff387d213fc61becc0d87c001083d579297",
+        "confirmation_journal_sha256": "def73b1539448e0c24b14b5658c267b679f742f09032b30e77cccd3b729acdf7",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "random",
+        "seed": 155921,
+        "config": {
+          "s": 128,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 8,
+          "opt": "O2"
+        },
+        "g_ref_pct": 7.599628716223861,
+        "online_score_s": 32.570972,
+        "separate_confirmation_s": 32.911858,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 1057.6429054590008,
+        "journal_sha256": "2260e72a35e9796e3a2439c63345bc7a36577fa51cf1391f0fd26e5b3839e860",
+        "confirmation_journal_sha256": "c13502be7849f3d2bd467b7755ef4801d8f8633e6c76f26e1b5d79b66a59d5ff",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "selection",
+        "algorithm": "greedy",
+        "seed": 155921,
+        "config": {
+          "s": 128,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 64,
+          "opt": "O3"
+        },
+        "g_ref_pct": 7.599628716223861,
+        "online_score_s": 32.670555,
+        "separate_confirmation_s": 33.041843,
+        "search_calls": 5,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 289.012570881001,
+        "journal_sha256": "d78c4bf40bc1e8859625e09f1e8fad02e2b69f6b9848b780b983ba10d341bc19",
+        "confirmation_journal_sha256": "28e1099c4625d4958d6edc2203c6ae5909d83502a35995d6bc9a97d3dbf59871",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "holdout",
+        "algorithm": "random",
+        "seed": 196613,
+        "config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "g_ref_pct": 12.332729767659533,
+        "online_score_s": 45.317799,
+        "separate_confirmation_s": 44.424389,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 998.7936697080004,
+        "journal_sha256": "7212003dde1fde0fe80ec97a7591126aae8f7d49f2b02458f36407786cde4bc2",
+        "confirmation_journal_sha256": "2ca7e7c45e77124e4d83a6b30502b7a3c04e998576b0c1b9b9dbd42ac526bd4c",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "holdout",
+        "algorithm": "random",
+        "seed": 229939,
+        "config": {
+          "s": 64,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 16,
+          "opt": "O1"
+        },
+        "g_ref_pct": 4.083032921814667,
+        "online_score_s": 41.704674,
+        "separate_confirmation_s": 42.496933,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 618.0513908630019,
+        "journal_sha256": "28865700dd996c5e613c731c76c01d872d0afaf066c152d30ce062ded3b9154b",
+        "confirmation_journal_sha256": "d73374f433e44af55db988fe9c2361b51572aa9c9c39e4854d6d6ce784c425c4",
+        "trajectory_recomputed_without_confirmation": true
+      },
+      {
+        "stage": "holdout",
+        "algorithm": "random",
+        "seed": 262147,
+        "config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "first_config": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "g_ref_pct": 12.332729767659533,
+        "online_score_s": 42.843807,
+        "separate_confirmation_s": 44.296986,
+        "search_calls": 8,
+        "confirmation_calls": 3,
+        "total_driver_monotonic_s": 993.8773217689959,
+        "journal_sha256": "350858aaca779146c7ceb4abcdd3fe68726c93428bfd7c69ef302d52eea739b4",
+        "confirmation_journal_sha256": "ad5ab84699fc75f72e27dc0a6f4ae219448999a9f1c1394c1224f09e82309422",
+        "trajectory_recomputed_without_confirmation": true
+      }
+    ],
+    "actual_historical_searches": 12,
+    "independent_confirmations": 12,
+    "actual_target_calls": 127,
+    "scope": "Recomputed original raw trial scores, prefix best and summary return, actual starts, independent confirmation medians and joins to saved old driver durations with standard library only. Old driver lacks end-ns so saved MONOTONIC durations are verified as recorded, not newly reconstructed endpoints.",
+    "old_same_s128_O2_Random_S1_binary_SHA_match": true,
+    "same_binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c",
+    "new_matrix_calls": 0,
+    "author_analysis_functions_imported": false,
+    "historical_raw_changed": false
+  },
+  "identity_quality_actual_output_review": {
+    "rows": 18,
+    "configs_returned": 6,
+    "input_sha256": {
+      "grid_summary.csv": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "search_summary.csv": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc"
+    },
+    "derived_SHA256": {
+      "results/identity_quality_v2/search_choices.csv": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+      "results/identity_quality_v2/summary.json": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd"
+    },
+    "CSV_JSON_all_rows_and_costs_match_historical_inputs": true,
+    "same_config_gap_identical": true,
+    "observed_5pct_membership_not_guaranteed_near": true,
+    "historical_judgments_unchanged": true,
+    "actual_CLI_executor": "root; commands/goal2_restored_integration.json; not run again by this reviewer",
+    "actual_new_matrix_calls_by_reviewer": 0
+  },
+  "current_image_visual_review": [
+    {
+      "path": "images/grid_median.png",
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T21:41:46.942673+00:00",
+      "visual_pass": true,
+      "findings": "Actual view_image original: all20 cells, s24, fourO, seconds and three runs, readable labels/colors and no crop; values match old60raw median rounding.",
+      "data_scope": "historical Goal1, not new Goal2 online results"
+    },
+    {
+      "path": "images/online_search.png",
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T21:41:46.942673+00:00",
+      "visual_pass": true,
+      "findings": "Actual view_image original: three old seeds/r1, count and internal window axes, real primary trajectory matching prior raw replay; historical S1/S2 curves labeled, not S3; no privacy/crop/CI confusion.",
+      "data_scope": "historical Goal1, not new Goal2 online results"
+    },
+    {
+      "path": "images/interfaces-kernel.png",
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:05:51.709235+00:00",
+      "visual_pass": true,
+      "findings": "Actual open original: all5 API line matches core55; exact restored MONO starts/ends and six loops visible; fresh_score restore branch shown; no clipping/password/unrelated window.",
+      "provenance_complete": true
+    },
+    {
+      "path": "images/saved-search-results.png",
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:24:37.715050+00:00",
+      "visual_pass": true,
+      "findings": "Actually reopened final original bitmap after ER9. All12 historical base/holdout rows, shared g_ref, separate confirmation/cost and RAW1-start/0-valid/7-unstarted match saved input fields. Header now derives20/[3]/39.499706 from actual grid/identity tables. Readable/no clipping/privacy; no new strategy performance claimed.",
+      "provenance_complete": true
+    },
+    {
+      "path": "images/build-run.png",
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:24:37.715050+00:00",
+      "visual_pass": true,
+      "findings": "Actually reopened final original bitmap after ER9. Cold four real builds/uncached/rc0, clean221/0skip/19syntax, exact restored source SHA, recorded command/config/call/role, fresh driver130/incomplete/11.231500658 all derive from saved records. Viewer exit0 is visibly distinct from the target interruption. Readable wrap/no clipping/privacy; no performance score/clock admission inferred.",
+      "provenance_complete": true
+    },
+    {
+      "path": "images/framework.svg",
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:05:51.709235+00:00",
+      "visual_pass": true,
+      "render_path": ".cache/goal2-capture/framework-view.png",
+      "render_sha256": "fcfa5bbd160ec3c7b8e1fb37ae843ccf8f7161c26c75a522e2192cd671428193",
+      "findings": "Actual open of root gdk-pixbuf rendered SVG and full SVG source read:3input interfaces,20configs,Evaluator+search freshfeedback/build reuse/Journal/result connections, readablefont/no clipping/privacy. Vector diagram distinct from real terminal screenshots.",
+      "provenance_complete": true
+    }
+  ],
+  "final_all_images_visual_review_complete": true,
+  "initial_lightweight_read_execution": {
+    "tests": 0,
+    "compilations": 0,
+    "plots": 0,
+    "gui": 0,
+    "n4096": 0
+  },
+  "retained_default_source_checkpoint": "9668bc75a9d23376aed8ef9e84e24a9e81a41219",
+  "source_checkpoint_scope": "Original6463 formal-reference freeze remains historical; final production identity is recorded below, compatible with clean source checkpoint5e6719. Final report/images/evidence are bound by exact file SHA; publication SHA is to be supplied and actually checked by ROOT.",
+  "final_clean_reproduction_read_review": {
+    "independent_code_auditor": "/root/review",
+    "reviewer_reexecuted_tests": false,
+    "clean_record": "evidence/reproduction/goal2/clean_regression_r1.json",
+    "clean_record_sha256": "27b2b44fe9dd8b36d280b31882a9c029a0199d392adf35acf9219e041ca75ab4",
+    "clone_commit": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+    "tests": 221,
+    "skipped": 0,
+    "syntax_files": 19,
+    "full_log_and_actual_clone_source_hashes_independently_verified": true,
+    "cold_builds": 4,
+    "cold_builds_all_uncached_binary_hashes_verified": true,
+    "replays": [
+      {
+        "record": "evidence/reproduction/goal2/raw-stop-comparison.json",
+        "sha256": "490772290568a75776dfa3b163990401b577a9ec00e6e039568f5bac9382daf3",
+        "files": 7,
+        "actual_regenerated_files_independently_verified": true,
+        "byte_equal": true,
+        "n4096_calls": 0
+      },
+      {
+        "record": "evidence/reproduction/goal2/identity-quality-comparison.json",
+        "sha256": "59ddd9a0268339789f9e0c9fb6015a8a9e8b4f977d9970e2a22ea37a8f14cea5",
+        "files": 2,
+        "actual_regenerated_files_independently_verified": true,
+        "byte_equal": true,
+        "n4096_calls": 0
+      },
+      {
+        "record": "evidence/reproduction/goal2/mono-stop-comparison.json",
+        "sha256": "281f54f34684863438ec0ec5f054aae42374bcfb7f6f859cf24c96f732aada04",
+        "files": 11,
+        "actual_regenerated_files_independently_verified": true,
+        "CSV_byte_equal": true,
+        "JSON_nonidentity_values_equal": true,
+        "JSON_changed_keys": [
+          "analysis_sha256"
+        ],
+        "byte_equal": false,
+        "n4096_calls": 0,
+        "explanation": "Original after-fix output came from an intermediate uncommitted analyzer; matching checkpoint has later source edits. CSV and all nonidentity JSON values match; original metadata and raw were not edited."
+      }
+    ],
+    "fixture_relocation_fix": {
+      "tests_sha256": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+      "production_unchanged": true,
+      "scope": "frozen numeric_binding.measurement_root instead of live checkout root in synthetic command; author79 and peer clean221 actual PASS. Earlier own14 remains937."
+    },
+    "full_fresh_n4096_complete": false,
+    "overall_clean_reproduction_state": "PARTIAL_CLOCK_GUARD_INTERRUPTED_FRESH_TARGET"
+  },
+  "fresh_n4096_independent_raw_recalculation": {
+    "check_record": "evidence/reproduction/goal2/clean-fresh-n4096-check.json",
+    "check_record_sha256": "e1942e95f976683ffab0b411faca390d41a8f960b39eb1a33c3fd2f24d24e610",
+    "journal_sha256": "33ee5ef3132b61b0e0ba3f3b1ede1e2853c0d61f09d12363a07bfae5b931d3bb",
+    "attempt": "f0b43b0495e14c77abd0bc06dc93044b",
+    "source": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "framework": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "measurement_calls": 1,
+    "valid_measurements": 0,
+    "target_returncode": -9,
+    "driver_returncode": 130,
+    "target_kernel_s": null,
+    "target_checksum": null,
+    "target_domains_s": {
+      "CLOCK_MONOTONIC": 10.191789979,
+      "CLOCK_MONOTONIC_RAW": 10.487202553,
+      "CLOCK_REALTIME": 11.093271358
+    },
+    "driver_domains_s": {
+      "monotonic": 10.330020054,
+      "raw": 10.629440178,
+      "realtime": 11.231500658
+    },
+    "resource_s": 11.231500658,
+    "driver_raw_monotonic_q": 1.0289854349202407,
+    "first_previous_q": [
+      0.9986300261262919,
+      1.0230864323183888
+    ],
+    "first_previous_changes_pct": [
+      3.0397051960973087,
+      0.5765888800308261
+    ],
+    "unchanged_guard_recomputed": true,
+    "fresh_full_result_validated": false,
+    "formal_score": false,
+    "no_repeated_fresh_target_attempts": true,
+    "standalone_reviewer_new_target_calls": 0
+  },
+  "all_six_images_actually_opened": true,
+  "image_source_derivation_all_approved": true,
+  "current_screenshot_cleanup_independent_check": {
+    "record": "evidence/commands/screenshots_goal2.jsonl",
+    "sha256": "57df401f3583228919e872bc903c5fb2de9e9430fbe4b7f88f4d4782d6cdf1e9",
+    "actual_captures": 5,
+    "final_terminal_images": 3,
+    "latest_two_image_SHA_match": true,
+    "local_Unix_private_authority_no_TCP": true,
+    "empty_authority_rejected": true,
+    "recorded_PIDs_and_sockets_removed": true,
+    "authorization_files_absent": true,
+    "cookies_not_recorded": true,
+    "all_five_records_checked_and_PID_auth_display_socket_paths_actually_absent": true
+  },
+  "historical_review_state_before_final_delivery": "CLOCK_BLOCKED_STAGE_PARTIAL_SIX_VISUALS_READABLE_ER9_TWO_VIEW_SCRIPTS_FIX_PENDING",
+  "final_review_checked_at_utc": "2026-10-02T22:24:37.715050+00:00",
+  "current_document_continuous_read_history": {
+    "checked_at_utc": "2026-10-02T21:41:46.942673+00:00",
+    "input_sha256": {
+      "report.md": "23584d704448ce99e40cb3488058323c5bbd66e26e0946d4647aa28677921d5a",
+      "README.md": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206",
+      "scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+      "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "tests/test_goal2_summary.py": "937052b8e8619dfafeba56694d09684cd42ffe78d34458c18014a775ad44821e",
+      "evidence/README.md": "7ea0ffb6f2c7d8c94b5fa5377786bc4bbedbb82c5238f3ebcd55948c3b328aa8",
+      "results/identity_quality_v2/search_choices.csv": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+      "results/identity_quality_v2/summary.json": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd"
+    },
+    "report_lines": 124,
+    "readme_lines": 78,
+    "read_from_start_to_end": true,
+    "report_requirement_order": "1 interfaces; 2 target; 3 parameter values; 4 full Grid and Random/Greedy comparison",
+    "data_scope": "All report performance values remain actual historical Goal1; no new20 or sixseed/S3 data claimed",
+    "quality_mapping": "Nine primary rows agree with reviewer prior independent recomputation from 60 old raw; same config gets same g_ref",
+    "prose": "Report substantially shorter and directly answers teacher; one necessary clock limitation; no new-performance claim",
+    "report_images_final_visual_checked": false,
+    "identity_helper_actual_CLI_and_derived_output": "ROOT_ACTUAL_CLI_VERIFIED_AND_18_ROWS_INDEPENDENTLY_RECALCULATED",
+    "open_numeric_wording": null,
+    "open_code_wording": null
+  },
+  "final_report_approval_scope": "Accurate historical results and honest Goal2 PARTIAL stage; not completed Goal2 performance and not final Engineering acceptance",
+  "final_stage_review_complete": true,
+  "allowed_partial_stage_publication": true,
+  "full_goal2_complete": false,
+  "final_source_identity": {
+    "clean_code_checkpoint": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+    "production_sha256": {
+      "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+      "tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a"
+    },
+    "restored_target_MONOTONIC": true,
+    "public_default_algorithm": "grid",
+    "enhancement_baseline": "random",
+    "S3": "experimental entry; performance NOT_EXECUTED",
+    "core_written_by_this_reviewer": "Minimal dual-clock compatibility was authored here; independent code approval is /root/review, not this report audit."
+  },
+  "historical_pre_ER9_image_open_records": [
+    {
+      "path": "images/saved-search-results.png",
+      "sha256": "8faa3a9df894e03e9caf67831ac7fa8009f501ed699f24c39ae28655b20f76ea",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:05:51.709235+00:00",
+      "visual_pass": true,
+      "findings": "Actual open original: twelve historical base/holdout rows match independent raw and identity recalculation, confirm column separate;1invalid/7unstarted accurate. Readability passes, source-view status counters were constants and require owner ER9 fix.",
+      "provenance_complete": false
+    },
+    {
+      "path": "images/build-run.png",
+      "sha256": "76ead1509ac910269b77374696b67c8abecfcffd4ada186ad429bfcf5eb26580",
+      "tool": "view_image",
+      "detail": "original",
+      "checked_at_utc": "2026-10-02T22:05:51.709235+00:00",
+      "visual_pass": true,
+      "findings": "Actual open original: four cold actualrc0/uncached, sourcecece, clean221/19, freshdriver130/incomplete and11.231500658 stated correctly. No score claimed; source-view test counts/config/command were constants and require owner ER9 fix.",
+      "provenance_complete": false
+    }
+  ],
+  "ER9_source_derivation_independent_review": {
+    "state": "CLOSED",
+    "manifest": "evidence/commands/screenshot_views_goal2.json",
+    "manifest_sha256": "358702c6d511ab01cc8059f664dd509bbefed075eb5e873b8fc8ed29658c9ba1",
+    "image_manifest": "evidence/commands/images_goal2.json",
+    "image_manifest_sha256": "efa779adb2ffae726300e06c61d9d0b88f6fe84abaa5c4d41984fa76c2028985",
+    "viewer_sha256": {
+      "view_choices.py": "ead65a4d0a53c243c759a94f5999f99052f502d54f83714d9be1be70ad693604",
+      "view_reproduction.py": "d682334cd10d78596fc49f7badf39c5c74347f8975cf2ff660a5a6d4c7ce1df4"
+    },
+    "exact_full_text_matches_current_cache_files_and_embedded_image_manifest": true,
+    "input_SHA_count": 7,
+    "all_input_SHA_actually_checked": true,
+    "previous_constant_source_full_text_preserved": true,
+    "actual_two_recaptures_added_matrix_calls": 0,
+    "actual_two_recaptures_added_resource_s": 2.366576756,
+    "final_reopened_image_sha256": {
+      "P1/images/saved-search-results.png": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "P1/images/build-run.png": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650"
+    }
+  },
+  "final_cost_independent_raw_ns_recalculation": {
+    "ledger": "evidence/measurement/resource_ledger.jsonl",
+    "ledger_sha256": "68861959f1e1e98b758f0c7143bb18683acb86ffe85f867e449ac84fc56f24e7",
+    "cost_file": "evidence/measurement/costs_goal2.json",
+    "cost_file_sha256": "fbed2c0c6445e8a3e4543ad6d256cce3f74828a8aca7eb24542138343ac61287",
+    "ledger_rows": 494,
+    "unique_closed_attempts": 165,
+    "role_rows": 35,
+    "n4096_calls": 48,
+    "physical_journal_measurement_starts": 44,
+    "direct_multiclock_calls": 4,
+    "calls_known": true,
+    "unfinished_attempts": 0,
+    "missing_jobs": 0,
+    "resource_s": "3713.432874365",
+    "resource_time_domain": "Sum of each physical attempt max integer-ns delta(MONOTONIC,RAW,REALTIME); not host absolute calibration",
+    "summed_complete_driver_domains_s": {
+      "monotonic": "3673.644522868",
+      "raw": "3705.070817618",
+      "realtime": "3707.391909056"
+    },
+    "failed_tasks_including_guard_reason": 14,
+    "all_35_role_counts_costs_match_stage_table_exact_Decimal": true,
+    "per_end_delta_and_resource_fields_recomputed_from_start_end_ns": true,
+    "matrix_call_cap": 520,
+    "resource_cap_s": 57600,
+    "no_algorithm_search_internal_recheck_common_confirmation_newvalid_reference_formalanchor_calls": true,
+    "kernel_costs_are_subcosts_not_added_again": true,
+    "reviewer_added_target_calls": 0
+  },
+  "final_history_protection_check": {
+    "manifest": "evidence/history_goal2.json",
+    "manifest_sha256": "927a1a688d2343315b32497db82f26be8d884e42749e008817a93ad050d49dbc",
+    "protected_files": 431,
+    "all_actual_SHA_unchanged": true,
+    "A1_A2_HEAD_trees_and_worktree_unchanged": true,
+    "historical_original_protocol_raw_results_judgments_unchanged": true
+  },
+  "Reviewer_Notes": [
+    "Independently recheck complete integer-ns first/previous2% failures; Windows QPC supports only two finite intervals and does not establish long-term stable timing.",
+    "Common config identity must remain separate from independent cross-time confirmations and actual cost; distinct-config5%/2pp conclusions and S3 benefits remain unsupported.",
+    "Inspect fixed-version replays and explicit a39 analysis-SHA-only difference, final six image hashes/viewer inputs, and the failed fresh raw; approve only a truthful partial stage."
+  ],
+  "scope_confirmation": {
+    "other_assignments_modified": false,
+    "space_expanded": false,
+    "kernel_or_initialization_changed": false,
+    "enhancements_mixed": false,
+    "Shuishan_submitted": false,
+    "final_Engineering_PASS_declared": false
+  },
+  "remote_publication_reviewed_by_this_auditor": false
 }

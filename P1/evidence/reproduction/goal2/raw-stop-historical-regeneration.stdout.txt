@@ -1,0 +1,1 @@
+{"output": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/.cache/derived", "actual_process_runs": 47, "charged_process_upper": 47, "recorded_ledger_charged_calls": 47, "missing_job_raw_starts": 0, "costs_complete": true}

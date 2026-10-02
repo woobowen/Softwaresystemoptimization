@@ -4,7 +4,7 @@
 
 ## 本阶段
 
-- [滚动事实及资源边界](current_plan.md)、[逐项要求状态](requirements.md)、[C1—C7闭环](goal2_review_closure.md)
+- [完整阶段交接事实](goal2_stage_result.md)、[滚动事实及资源边界](current_plan.md)、[逐项要求状态](requirements.md)、[C1—C7闭环](goal2_review_closure.md)
 - [431历史保护清单与起始A1/A2 tree](history_goal2.json)、[实际多代理和文件owner](agents_goal2.md)
 - [只读环境](environment/goal2.json)、[复用工具/零新增依赖/精确局部清理](environment/goal2_dependencies.json)
 - [初始诊断协议](protocol_diagnostic.json)、[有限追加设计](measurement/clock_followup_design.md)、[实际联合分析](measurement/clock_followup_analysis.md)
@@ -25,4 +25,4 @@
 
 [原代码审核](reviews/code_review.md)、[原实验/报告审核](reviews/experiment_report_review.md)、[原正确性与实际环境](environment/initial_environment.txt)、[目标适配](environment/target_adaptation.diff)、[旧计时诊断](environment/timing_issue.md)、[原汇编](environment/kernel_assembly.txt)、[原文献](literature.md)、[原截图来源](commands/screenshots.json)均作为历史记录，不能冒称当前图片/计时器或本阶段终审。
 
-固定提交3ac、2fc、c247的只读重生成分别见 reproduction/goal2/*-comparison.json；RAW停止采用匹配5c78049，详细命令见[README](../README.md)。所有新增输出写到新派生目录或忽略缓存，身份检查保留，不覆盖 raw。最终图片的新来源和视觉记录将在 commands/screenshots_goal2.jsonl 及 commands/images_goal2.json 中登记，旧不安全启动记录不删改。
+固定提交3ac、2fc、c247的只读重生成分别见 reproduction/goal2/*-comparison.json；RAW停止采用匹配5c78049，详细命令见[README](../README.md)。所有新增输出写到新派生目录或忽略缓存，身份检查保留，不覆盖 raw。[最终三张安全终端截图](commands/screenshots_goal2.jsonl)与[六图SHA/内容/实际视觉记录](commands/images_goal2.json)已保存；旧不安全启动记录不删改。干净复现221/19通过、四冷构建通过，唯一大矩阵复现被原保护中止，见[实际检查](reproduction/goal2/clean-fresh-n4096-check.json)。RAW七派生及历史各版本数据实际重算见对应comparison；MONO停批十CSV全等、JSON仅中间分析源码身份差已说明。完整受控成本见[costs_goal2.json](measurement/costs_goal2.json)。

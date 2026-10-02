@@ -1,0 +1,86 @@
+{
+  "images": [
+    {
+      "path": "P1/images/framework.svg",
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "bytes": 3416,
+      "content": "三输入、搜索反馈、统一评估与日志的框架图",
+      "kind": "framework_diagram",
+      "root_visual_review": "actually opened final bitmap with view_image; SVG rendered and opened",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    },
+    {
+      "path": "P1/images/grid_median.png",
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "bytes": 70249,
+      "content": "历史20配置三重复中位数热力图",
+      "kind": "data_plot",
+      "root_visual_review": "actually opened final bitmap with view_image",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    },
+    {
+      "path": "P1/images/online_search.png",
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "bytes": 212522,
+      "content": "历史三seed真实在线预算/内部时间曲线，含两个旧单项",
+      "kind": "data_plot",
+      "root_visual_review": "actually opened final bitmap with view_image",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    },
+    {
+      "path": "P1/images/interfaces-kernel.png",
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3",
+      "bytes": 106472,
+      "content": "最终接口位置与MONOTONIC六层乘法源码终端",
+      "kind": "actual_xterm_screenshot",
+      "root_visual_review": "actually opened final bitmap with view_image",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    },
+    {
+      "path": "P1/images/saved-search-results.png",
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "bytes": 94813,
+      "content": "历史身份评分、单列确认/成本与新RAW停止事实终端",
+      "kind": "actual_xterm_screenshot",
+      "root_visual_review": "actually opened final bitmap with view_image",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    },
+    {
+      "path": "P1/images/build-run.png",
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650",
+      "bytes": 95426,
+      "content": "四级冷构建、干净221项测试及中断的唯一新鲜运行终端",
+      "kind": "actual_xterm_screenshot",
+      "root_visual_review": "actually opened final bitmap with view_image",
+      "independent_visual_review": "final code and experiment/report reviewers each must bind their own actual view records"
+    }
+  ],
+  "checked_at_utc": "2026-10-02T22:11:44.644343+00:00",
+  "capture_evidence": "P1/evidence/commands/screenshots_goal2.jsonl",
+  "capture_inputs": "P1/evidence/commands/screenshot_views_goal2.json",
+  "safe_capture_records": 5,
+  "all_own_processes_absent": true,
+  "no_unauthenticated_tcp": true,
+  "fixed_commit_links": "Use the exact final publication SHA reported in the handoff; hashes above bind the images.",
+  "capture_inputs_bound": {
+    "view_choices.py": {
+      "text": "import csv,json\nfrom pathlib import Path\nroot=Path('results/identity_quality_v2')\ni=json.loads((root/'summary.json').read_text())\ngrid=list(csv.DictReader(Path('results/summary/grid_summary.csv').open()))\nprint('Stored historical n=%s results; one shared T_ref for each returned configuration' % i['n'])\nprint('Reference: %s configurations, valid counts=%s; minimum median = %.6f s' %\n      (len(grid), sorted({int(r['valid_runs']) for r in grid}), i['reference_min_s']))\nprint('Algorithm   Seed     Return     Gap_ref(%)   Separate_confirm(s)  Calls   Full_MONO(s)')\nfor r in csv.DictReader((root/'search_choices.csv').open()):\n    if r['algorithm'] in ('grid','random','greedy'):\n        print('%-10s %7s  s%3s/%s  %10.2f %21.6f  %2s+%s %14.2f' %\n          (r['algorithm'],r['seed'],r['s'],r['opt'],float(r['gap_ref_pct']),\n           float(r['separate_confirmation_s']),r['search_process_runs'],r['confirmation_process_runs'],\n           float(r['total_driver_monotonic_s'])))\ns=json.loads(Path('results/raw_aa_summary_v3/summary.json').read_text())\nprint('')\ntasks=s['tasks']\nprint('New RAW A/A: %s process starts, %s valid samples, %s tasks not started.' %\n      (sum(r['actual_process_starts'] for r in tasks),\n       sum(r['valid_measurements'] for r in tasks),\n       sum(r['actual_process_starts']==0 for r in tasks)))\nprint('Clock healthy=%s; formal admission=%s; method evidence ready=%s' %\n      (s['raw_aa']['clock_healthy'],s['raw_aa']['formal_admission'],\n       s['raw_aa']['formal_method_evidence_ready']))\n",
+      "sha256": "ead65a4d0a53c243c759a94f5999f99052f502d54f83714d9be1be70ad693604",
+      "input_sha256": {
+        "P1/results/identity_quality_v2/search_choices.csv": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+        "P1/results/identity_quality_v2/summary.json": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd",
+        "P1/results/summary/grid_summary.csv": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+        "P1/results/raw_aa_summary_v3/summary.json": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66"
+      }
+    },
+    "view_reproduction.py": {
+      "text": "import json,shlex,textwrap\nfrom pathlib import Path\nroot=Path('evidence/reproduction/goal2')\nb=json.loads((root/'goal2-clean-independent-cold-build.stdout.txt').read_text())\nprint('Clean cold builds of the final MONOTONIC target (no performance score)')\nfor r in b['builds']:\n    print('%s: %-30s cached=%s rc=%s binary=%s' %\n        (r['opt'],' '.join(r['flags']),r['cached'],r['compile']['returncode'],r['binary_sha256'][:16]))\nprint('Source SHA256: '+b['builds'][0]['source_sha256'])\nc=json.loads((root/'clean_regression_r1.json').read_text())\nprint('Independent clean tests: %s, %s tests, %s skipped; Python syntax: %s, %s files.' %\n      (c['test_execution']['state'],c['test_execution']['tests'],c['test_execution']['skipped'],\n       c['syntax_execution']['state'],c['syntax_execution']['count']))\nf=json.loads((root/'clean-fresh-n4096-check.json').read_text())\nprint('')\ncfg=f['measurement']['config']\nprint('Stored fresh attempt: s%s/%s, n4096 calls=%s; role=%s' %\n      (cfg['s'],cfg['opt'],f['resource']['n4096_calls'],f['role']))\n# Only shorten checkout prefixes for display; the complete argv remains in the input JSON.\ncheckout=Path.cwd()/'.cache/clean-goal2'\ndisplay=[arg.replace(str(checkout)+'/', '').replace(str(Path.cwd().parent)+'/', '')\n         for arg in f['command']]\nprint('Recorded command (checkout prefixes shortened):')\nfor line in textwrap.wrap(shlex.join(display),width=125):print('  '+line)\nprint('Driver return code: %s; live-guard reason: %s' % (f['resource']['returncode'],f['resource']['reason']))\nprint('Complete target result: %s; charged resource = %.9f s' % (f['complete'],f['resource']['resource_s']))\nprint('No benchmark result or clock admission is inferred from this interrupted attempt.')\n",
+      "sha256": "d682334cd10d78596fc49f7badf39c5c74347f8975cf2ff660a5a6d4c7ce1df4",
+      "input_sha256": {
+        "P1/evidence/reproduction/goal2/goal2-clean-independent-cold-build.stdout.txt": "a62af1f82b73581f5d42f46b53196c156e92708721f79bc8f4a5c40650cd010b",
+        "P1/evidence/reproduction/goal2/clean_regression_r1.json": "27b2b44fe9dd8b36d280b31882a9c029a0199d392adf35acf9219e041ca75ab4",
+        "P1/evidence/reproduction/goal2/clean-fresh-n4096-check.json": "e1942e95f976683ffab0b411faca390d41a8f960b39eb1a33c3fd2f24d24e610"
+      }
+    }
+  }
+}

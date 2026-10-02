@@ -1,0 +1,115 @@
+{
+  "reviewer": "/root/review",
+  "at_utc": "2026-10-02T22:12:58.734825+00:00",
+  "state": "ER9_CLOSED_VISUAL_ADDENDUM_ACCEPTABLE_FOR_TRUTHFUL_PARTIAL_PUBLICATION",
+  "scope": "New two screenshots/readers and append-only0call costs; original final review unchanged",
+  "frozen_original_review": {
+    "md_sha256": "872a6bf51f837dfadccb6e8791c8530e19396ec9619090ed599fd54a08a98670",
+    "json_sha256": "116d1d54aadd4c90965e302d69b5bab84f6a22ae060318e43407e1a0d1701132",
+    "bytes_unchanged": true
+  },
+  "finding": {
+    "id": "ER9",
+    "reported_by": "/root/implementation",
+    "state": "CLOSED",
+    "problem": "Correct known display numbers were literal constants in saved-data viewers.",
+    "repair": "Viewers now derive reference counts/minimum, RAW-AA starts/valid/unstarted/status, clean test/syntax counts/status and complete fresh argv/config/call count/failure/resource from stored fields. Prior viewer text retained; numerical data, source and thresholds unchanged.",
+    "independent_static_and_primitive_checks": true
+  },
+  "viewer_evidence_sha256": "358702c6d511ab01cc8059f664dd509bbefed075eb5e873b8fc8ed29658c9ba1",
+  "viewers": [
+    {
+      "name": "view_choices.py",
+      "sha256": "ead65a4d0a53c243c759a94f5999f99052f502d54f83714d9be1be70ad693604",
+      "input_sha256": {
+        "P1/results/identity_quality_v2/search_choices.csv": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+        "P1/results/identity_quality_v2/summary.json": "ddfa73547a013608cbcbc690c90a0d51ec2b3e7bfed51ce9b8f6abcf3c86a1bd",
+        "P1/results/summary/grid_summary.csv": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+        "P1/results/raw_aa_summary_v3/summary.json": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66"
+      }
+    },
+    {
+      "name": "view_reproduction.py",
+      "sha256": "d682334cd10d78596fc49f7badf39c5c74347f8975cf2ff660a5a6d4c7ce1df4",
+      "input_sha256": {
+        "P1/evidence/reproduction/goal2/goal2-clean-independent-cold-build.stdout.txt": "a62af1f82b73581f5d42f46b53196c156e92708721f79bc8f4a5c40650cd010b",
+        "P1/evidence/reproduction/goal2/clean_regression_r1.json": "27b2b44fe9dd8b36d280b31882a9c029a0199d392adf35acf9219e041ca75ab4",
+        "P1/evidence/reproduction/goal2/clean-fresh-n4096-check.json": "e1942e95f976683ffab0b411faca390d41a8f960b39eb1a33c3fd2f24d24e610"
+      }
+    }
+  ],
+  "images": [
+    {
+      "path": "images/saved-search-results.png",
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "actually_viewed": true,
+      "view_tool": "functions.view_image",
+      "capture_at_utc": "2026-10-02T22:10:06.833824+00:00",
+      "capture_command_sha256": "157e653aca00eff9691fec0d3b6d964e0153cc9d18aabaa5e03b58b3b0cd2499",
+      "safe_cleanup_verified": true
+    },
+    {
+      "path": "images/build-run.png",
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650",
+      "actually_viewed": true,
+      "view_tool": "functions.view_image",
+      "capture_at_utc": "2026-10-02T22:10:07.755698+00:00",
+      "capture_command_sha256": "1b39134bfcf967452cda804f55c30604a20a68a92f6dfe4ccbbc54cd12534fb9",
+      "safe_cleanup_verified": true
+    }
+  ],
+  "display_values_independently_confirmed": {
+    "raw_AA": {
+      "starts": 1,
+      "valid": 0,
+      "unstarted": 7
+    },
+    "tests": 221,
+    "skipped": 0,
+    "syntax": 19,
+    "fresh_complete": false,
+    "fresh_driver_returncode": 130
+  },
+  "production_sources_unchanged": true,
+  "ledger_update": {
+    "old_rows": 488,
+    "new_rows": 494,
+    "old_prefix_sha256_matches": true,
+    "ledger_sha256": "68861959f1e1e98b758f0c7143bb18683acb86ffe85f867e449ac84fc56f24e7",
+    "new_attempts": [
+      {
+        "task": "goal2-capture-saved-search-results-derived",
+        "attempt_id": "bbf84d48895b40899f2c89b402150dd9",
+        "n4096": 0,
+        "domains_s": {
+          "monotonic": 1.256874622,
+          "raw": 1.313746595,
+          "realtime": 1.256875527
+        },
+        "resource_s": 1.313746595
+      },
+      {
+        "task": "goal2-capture-build-run-derived",
+        "attempt_id": "6984cbf6248947bca48490213aa5bd34",
+        "n4096": 0,
+        "domains_s": {
+          "monotonic": 1.007252298,
+          "raw": 1.052830161,
+          "realtime": 1.007253761
+        },
+        "resource_s": 1.052830161
+      }
+    ],
+    "added_calls": 0,
+    "actual_calls": 48,
+    "added_resource_s": 2.3665767559999997,
+    "updated_resource_s": 3713.432874365,
+    "cost_summary_sha256": "fbed2c0c6445e8a3e4543ad6d256cce3f74828a8aca7eb24542138343ac61287",
+    "cost_summary_matches": true
+  },
+  "PARTIAL_publication_allowed": true,
+  "performance_admission": false,
+  "Goal2_complete": false,
+  "Engineering_PASS": false,
+  "external_image_approval_claim": false
+}

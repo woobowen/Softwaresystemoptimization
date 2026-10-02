@@ -1,0 +1,420 @@
+{
+  "checked_at_utc": "2026-10-02T22:16:39.880928+00:00",
+  "links": [
+    {
+      "document": "P1/report.md",
+      "label": "框架设计图",
+      "target": "images/framework.svg",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "TargetProgram",
+      "target": "src/autotuner.py",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "三个接口与原计算循环",
+      "target": "images/interfaces-kernel.png",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "原始附件",
+      "target": "src/matrix_multiplication.original.c",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "运行目标",
+      "target": "src/matrix_multiplication.c",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "分块与优化级别的耗时",
+      "target": "images/grid_median.png",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "配置统计表",
+      "target": "results/summary/grid_summary.csv",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "配置选择与分账表",
+      "target": "results/identity_quality_v2/search_choices.csv",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "先前的真实在线轨迹",
+      "target": "images/online_search.png",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "保存数据中的配置选择",
+      "target": "images/saved-search-results.png",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "README",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "P1/report.md",
+      "label": "最终源码的构建与复现记录",
+      "target": "images/build-run.png",
+      "exists": true
+    },
+    {
+      "document": "P1/README.md",
+      "label": "report.md",
+      "target": "report.md",
+      "exists": true
+    },
+    {
+      "document": "P1/README.md",
+      "label": "证据索引",
+      "target": "evidence/README.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "完整阶段交接事实",
+      "target": "goal2_stage_result.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "滚动事实及资源边界",
+      "target": "current_plan.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "逐项要求状态",
+      "target": "requirements.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "C1—C7闭环",
+      "target": "goal2_review_closure.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "431历史保护清单与起始A1/A2 tree",
+      "target": "history_goal2.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "实际多代理和文件owner",
+      "target": "agents_goal2.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "只读环境",
+      "target": "environment/goal2.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "复用工具/零新增依赖/精确局部清理",
+      "target": "environment/goal2_dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "初始诊断协议",
+      "target": "protocol_diagnostic.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "有限追加设计",
+      "target": "measurement/clock_followup_design.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "实际联合分析",
+      "target": "measurement/clock_followup_analysis.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "正式MONO协议",
+      "target": "protocol_v2.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "JSON",
+      "target": "protocol_v2.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "RAW有限A/A冻结协议",
+      "target": "protocol_raw_aa.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "新timer设计",
+      "target": "measurement/raw_timing_design.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "未放行的正式设计",
+      "target": "measurement/raw_formal_design.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "所有受控任务唯一成本账",
+      "target": "measurement/resource_ledger.jsonl",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "RAW停止407行闭合快照",
+      "target": "measurement/raw_timing/aa_ledger_snapshot.jsonl",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "精确资源安排",
+      "target": "measurement/raw_timing/resource_plan_aa.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "RAW失败实际原始日志",
+      "target": "../results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "派生停止汇总",
+      "target": "../results/raw_aa_summary_v3/summary.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "实际重算命令及10输入/7派生哈希",
+      "target": "measurement/raw_timing/aa_analysis_execution.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "RAW完整时钟/真实退出独立复算",
+      "target": "reviews/goal2_raw_aa_result_review.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "默认恢复后的最终代码审核",
+      "target": "reviews/goal2_final_code_review.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "完整实验/报告独立审核",
+      "target": "reviews/goal2_experiment_report_review.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "S3有限重复设计及未执行结论",
+      "target": "optimization_goal2.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原文实际阅读范围",
+      "target": "literature_goal2.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "历史共同配置评分",
+      "target": "../results/identity_quality_v2/summary.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "固定版本重生成与干净复现",
+      "target": "reproduction/goal2/",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "当前恢复源码全测试",
+      "target": "commands/goal2_restored_integration.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "最终只读服务日志",
+      "target": "measurement/formal_clock_drift/system_readonly_final.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "协议说明",
+      "target": "protocol_v1.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "JSON",
+      "target": "protocol_v1.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原20配置完整60样本",
+      "target": "../results/reference_v1/plan.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "先前三seed真实在线搜索",
+      "target": "../results/selection_v1/plan.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "独立确认冲突诊断",
+      "target": "../results/conflict_selection_v1/plan.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "先前三新seed",
+      "target": "../results/holdout_v1/plan.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原派生表",
+      "target": "../results/summary/summary.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原优化判定",
+      "target": "optimization.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原代码审核",
+      "target": "reviews/code_review.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原实验/报告审核",
+      "target": "reviews/experiment_report_review.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原正确性与实际环境",
+      "target": "environment/initial_environment.txt",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "目标适配",
+      "target": "environment/target_adaptation.diff",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "旧计时诊断",
+      "target": "environment/timing_issue.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原汇编",
+      "target": "environment/kernel_assembly.txt",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原文献",
+      "target": "literature.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "原截图来源",
+      "target": "commands/screenshots.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "README",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "最终三张安全终端截图",
+      "target": "commands/screenshots_goal2.jsonl",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "六图SHA/内容/实际视觉记录",
+      "target": "commands/images_goal2.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "实际检查",
+      "target": "reproduction/goal2/clean-fresh-n4096-check.json",
+      "exists": true
+    },
+    {
+      "document": "P1/evidence/README.md",
+      "label": "costs_goal2.json",
+      "target": "measurement/costs_goal2.json",
+      "exists": true
+    }
+  ],
+  "all_links_exist": true,
+  "protected_historical_files_unchanged": 431,
+  "assignment_trees_unchanged": {
+    "A1": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+    "A2": "139b6e7469d63b27cfa100d1e005061548d36ce8"
+  },
+  "raw_stop_inputs_unchanged": true,
+  "changed_paths_P1_only": true,
+  "changed_path_count": 608,
+  "files_over_2MB": [],
+  "secret_pattern_hits": [],
+  "forbidden_outputs": [],
+  "untracked_user_inputs_preserved": [
+    "P1_Goal1_Codex_Prompt.md",
+    "P1_Goal2_Codex_Prompt.md",
+    "matrix_multiplication.c"
+  ],
+  "caches_binaries_authority_official_inputs_not_in_changed_paths": true,
+  "formal_report_word_scan_is_not_a_substitute_for_continuous_review": true
+}

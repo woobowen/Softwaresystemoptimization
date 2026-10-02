@@ -1,0 +1,3093 @@
+{
+  "rows": [
+    {
+      "stage": "goal",
+      "role": "correctness_small",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 3.26511312,
+      "conservative_resource_s": 3.286546387,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 3.26511312,
+        "raw": 3.286546387,
+        "realtime": 3.265114406
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "correctness_sanitizer",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.503538603,
+      "conservative_resource_s": 0.506945202,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 0.503538603,
+        "raw": 0.506945202,
+        "realtime": 0.503539481
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "diagnostic_build",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 1.019499293,
+      "conservative_resource_s": 1.020492,
+      "failed_tasks": 0,
+      "tasks": 3,
+      "domains_s": {
+        "monotonic": 1.019499293,
+        "raw": 1.01965848,
+        "realtime": 1.019502438
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "clock_probe",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 140.573375154,
+      "conservative_resource_s": 142.56888442300001,
+      "failed_tasks": 0,
+      "tasks": 9,
+      "domains_s": {
+        "monotonic": 140.573375154,
+        "raw": 141.932387553,
+        "realtime": 141.970600856
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "clock_matrix_diagnostic",
+      "process_runs": 4,
+      "process_runs_known": true,
+      "recorded_process_lower": 4,
+      "full_driver_wall_s": 245.879863662,
+      "conservative_resource_s": 247.92162629,
+      "failed_tasks": 0,
+      "tasks": 4,
+      "domains_s": {
+        "monotonic": 245.879863662,
+        "raw": 247.541623357,
+        "realtime": 247.77362453299997
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "aa",
+      "process_runs": 23,
+      "process_runs_known": true,
+      "recorded_process_lower": 23,
+      "full_driver_wall_s": 1607.8042576490002,
+      "conservative_resource_s": 1610.23187487,
+      "failed_tasks": 1,
+      "tasks": 23,
+      "domains_s": {
+        "monotonic": 1607.8042576490002,
+        "raw": 1609.68798842,
+        "realtime": 1609.506019882
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "diagnostic_anchor",
+      "process_runs": 4,
+      "process_runs_known": true,
+      "recorded_process_lower": 4,
+      "full_driver_wall_s": 221.681567481,
+      "conservative_resource_s": 222.168510356,
+      "failed_tasks": 0,
+      "tasks": 4,
+      "domains_s": {
+        "monotonic": 221.681567481,
+        "raw": 221.885072536,
+        "realtime": 222.105259859
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "diagnostic_preflight",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.374852005,
+      "conservative_resource_s": 0.376610473,
+      "failed_tasks": 2,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 0.374852005,
+        "raw": 0.376610473,
+        "realtime": 0.374853796
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "aa_replacement",
+      "process_runs": 2,
+      "process_runs_known": true,
+      "recorded_process_lower": 2,
+      "full_driver_wall_s": 102.253109026,
+      "conservative_resource_s": 103.73071213099999,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 102.253109026,
+        "raw": 103.73071213099999,
+        "realtime": 103.63720459800001
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "clock_followup_aa",
+      "process_runs": 8,
+      "process_runs_known": true,
+      "recorded_process_lower": 8,
+      "full_driver_wall_s": 477.76453458099996,
+      "conservative_resource_s": 483.157285839,
+      "failed_tasks": 0,
+      "tasks": 8,
+      "domains_s": {
+        "monotonic": 477.76453458099996,
+        "raw": 482.57141655399994,
+        "realtime": 482.395979205
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "historical_analysis",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 2.810501484,
+      "conservative_resource_s": 2.853854154,
+      "failed_tasks": 0,
+      "tasks": 7,
+      "domains_s": {
+        "monotonic": 2.810501484,
+        "raw": 2.849047714,
+        "realtime": 2.810509467
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "screenshot_validation",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 2.75671459,
+      "conservative_resource_s": 2.757842945,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 2.75671459,
+        "raw": 2.757842945,
+        "realtime": 2.756715988
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "correctness_test",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 43.404865840999996,
+      "conservative_resource_s": 45.612367033,
+      "failed_tasks": 1,
+      "tasks": 7,
+      "domains_s": {
+        "monotonic": 43.404865840999996,
+        "raw": 44.712737645000004,
+        "realtime": 44.851222042
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "short_test",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 17.422537461999998,
+      "conservative_resource_s": 17.847737384000002,
+      "failed_tasks": 2,
+      "tasks": 21,
+      "domains_s": {
+        "monotonic": 17.422537461999998,
+        "raw": 17.847737384000002,
+        "realtime": 17.422568936999998
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "numeric_smoke",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.5185725539999999,
+      "conservative_resource_s": 0.527333388,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 0.5185725539999999,
+        "raw": 0.527333388,
+        "realtime": 0.518574823
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "numeric_validation",
+      "process_runs": 2,
+      "process_runs_known": true,
+      "recorded_process_lower": 2,
+      "full_driver_wall_s": 266.414466486,
+      "conservative_resource_s": 271.091947967,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 266.414466486,
+        "raw": 271.091947967,
+        "realtime": 270.958307816
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "analysis_regression",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 5.101414248,
+      "conservative_resource_s": 5.236394003999999,
+      "failed_tasks": 2,
+      "tasks": 14,
+      "domains_s": {
+        "monotonic": 5.101414248,
+        "raw": 5.236394003999999,
+        "realtime": 5.101427725000001
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "regression",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 16.566045723,
+      "conservative_resource_s": 17.259628615,
+      "failed_tasks": 0,
+      "tasks": 4,
+      "domains_s": {
+        "monotonic": 16.566045723,
+        "raw": 16.781852952,
+        "realtime": 17.211090384
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "preflight",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.255891551,
+      "conservative_resource_s": 0.261049111,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 0.255891551,
+        "raw": 0.261049111,
+        "realtime": 0.255892541
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "warmup",
+      "process_runs": 1,
+      "process_runs_known": true,
+      "recorded_process_lower": 1,
+      "full_driver_wall_s": 33.558745205,
+      "conservative_resource_s": 34.217699605,
+      "failed_tasks": 1,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 33.558745205,
+        "raw": 34.217699605,
+        "realtime": 34.158560932
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "analysis",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.765057161,
+      "conservative_resource_s": 0.7774816920000001,
+      "failed_tasks": 0,
+      "tasks": 3,
+      "domains_s": {
+        "monotonic": 0.765057161,
+        "raw": 0.7774816920000001,
+        "realtime": 0.765059994
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "clock_bridge_validation",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 7.514252053,
+      "conservative_resource_s": 7.683091736,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 7.514252053,
+        "raw": 7.683091736,
+        "realtime": 7.514254269
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "correctness",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 47.192056012,
+      "conservative_resource_s": 50.188920665,
+      "failed_tasks": 1,
+      "tasks": 18,
+      "domains_s": {
+        "monotonic": 47.192056012,
+        "raw": 48.330814303000004,
+        "realtime": 49.708215411
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "clock_host_probe",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 59.788104834,
+      "conservative_resource_s": 61.29844101,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 59.788104834,
+        "raw": 61.169250493,
+        "realtime": 61.29844101
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "independent_correctness",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 5.281971487,
+      "conservative_resource_s": 6.135233638000001,
+      "failed_tasks": 1,
+      "tasks": 3,
+      "domains_s": {
+        "monotonic": 5.281971487,
+        "raw": 5.419241521,
+        "realtime": 6.023551431
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "independent_syntax",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.510331831,
+      "conservative_resource_s": 0.526903822,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 0.510331831,
+        "raw": 0.526903822,
+        "realtime": 0.5103350870000001
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "numeric_validation_raw",
+      "process_runs": 2,
+      "process_runs_known": true,
+      "recorded_process_lower": 2,
+      "full_driver_wall_s": 266.356993863,
+      "conservative_resource_s": 273.946509646,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 266.356993863,
+        "raw": 273.239573479,
+        "realtime": 273.946509646
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "environment",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.256465224,
+      "conservative_resource_s": 0.263254089,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 0.256465224,
+        "raw": 0.263254089,
+        "realtime": 0.256465181
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "aa_raw_timer",
+      "process_runs": 1,
+      "process_runs_known": true,
+      "recorded_process_lower": 1,
+      "full_driver_wall_s": 40.587241403,
+      "conservative_resource_s": 41.760444408,
+      "failed_tasks": 1,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 40.587241403,
+        "raw": 41.760444408,
+        "realtime": 41.447995734
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "analysis_reproduction",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.266315103,
+      "conservative_resource_s": 0.27409479,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 0.266315103,
+        "raw": 0.27409479,
+        "realtime": 0.266315751
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "independent_analysis_regression",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.5123177299999999,
+      "conservative_resource_s": 0.528435108,
+      "failed_tasks": 0,
+      "tasks": 2,
+      "domains_s": {
+        "monotonic": 0.5123177299999999,
+        "raw": 0.528435108,
+        "realtime": 0.512320434
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "independent_reproduction",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 38.313507518,
+      "conservative_resource_s": 39.926873142,
+      "failed_tasks": 1,
+      "tasks": 5,
+      "domains_s": {
+        "monotonic": 38.313507518,
+        "raw": 39.389840406999994,
+        "realtime": 39.273944240000006
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "correctness_reproduction",
+      "process_runs": 1,
+      "process_runs_known": true,
+      "recorded_process_lower": 1,
+      "full_driver_wall_s": 10.330020054,
+      "conservative_resource_s": 11.231500658,
+      "failed_tasks": 1,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 10.330020054,
+        "raw": 10.629440178,
+        "realtime": 11.231500658
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "screenshot_capture",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 5.783942977000001,
+      "conservative_resource_s": 5.992149593,
+      "failed_tasks": 0,
+      "tasks": 5,
+      "domains_s": {
+        "monotonic": 5.783942977000001,
+        "raw": 5.992149593,
+        "realtime": 5.783949389000001
+      },
+      "unknown_attempts": []
+    },
+    {
+      "stage": "goal",
+      "role": "image_review",
+      "process_runs": 0,
+      "process_runs_known": true,
+      "recorded_process_lower": 0,
+      "full_driver_wall_s": 0.2564799,
+      "conservative_resource_s": 0.264198191,
+      "failed_tasks": 0,
+      "tasks": 1,
+      "domains_s": {
+        "monotonic": 0.2564799,
+        "raw": 0.264198191,
+        "realtime": 0.256481112
+      },
+      "unknown_attempts": []
+    }
+  ],
+  "unfinished_attempts": [],
+  "missing_jobs": [],
+  "complete": true,
+  "totals": {
+    "actual_process_runs": 48,
+    "charged_process_upper": 48,
+    "recorded_ledger_charged_calls": 48,
+    "missing_job_raw_starts": 0
+  },
+  "input_ledger_sha256": "68861959f1e1e98b758f0c7143bb18683acb86ffe85f867e449ac84fc56f24e7",
+  "resource_s": 3713.432874365,
+  "resource_clock": "sum of per-task max(MONOTONIC,RAW,REALTIME); not host absolute calibration",
+  "caps": {
+    "n4096_calls": 520,
+    "resource_s": 57600
+  },
+  "kernel_totals_by_clock": {
+    "CLOCK_MONOTONIC": 2669.7553130000006,
+    "CLOCK_MONOTONIC_RAW": 311.60281
+  },
+  "separate_cost_categories": {
+    "new_online_search": 0,
+    "new_search_internal_rechecks": 0,
+    "new_common_external_confirmation": 0,
+    "new_valid_full_reference_samples": 0,
+    "new_formal_reference_anchors": 0
+  },
+  "manual_reading_editing_review_time": "outside controlled ledger; no precise active-work-time sampling",
+  "instrumented_target_processes": [
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-01-F-A1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 58.778687,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 59.359744412,
+        "CLOCK_MONOTONIC_RAW": 59.247911954,
+        "CLOCK_REALTIME": 59.35974474
+      },
+      "pid": 248077
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-02-F-A2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 61.583714,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 62.082108358,
+        "CLOCK_MONOTONIC_RAW": 62.102768285,
+        "CLOCK_REALTIME": 62.082109436
+      },
+      "pid": 248299
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-03-M-B1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 85.556702,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 86.052354989,
+        "CLOCK_MONOTONIC_RAW": 86.03740654,
+        "CLOCK_REALTIME": 86.052355345
+      },
+      "pid": 248512
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-04-M-B2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 83.758797,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 84.284115699,
+        "CLOCK_MONOTONIC_RAW": 84.328479904,
+        "CLOCK_REALTIME": 84.284117238
+      },
+      "pid": 248795
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-05-F-B1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 60.847298,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 61.520609303,
+        "CLOCK_MONOTONIC_RAW": 61.543828089,
+        "CLOCK_REALTIME": 61.520609481
+      },
+      "pid": 249114
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-06-M-A1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 84.766418,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 85.284871094,
+        "CLOCK_MONOTONIC_RAW": 85.295589976,
+        "CLOCK_REALTIME": 85.284872162
+      },
+      "pid": 249317
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-01-F-anchor-before.jsonl",
+      "role": "diagnostic_anchor",
+      "status": "ok",
+      "kernel_s": 58.34605,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 58.848674652,
+        "CLOCK_MONOTONIC_RAW": 59.034341586,
+        "CLOCK_REALTIME": 59.272360287
+      },
+      "pid": 249604
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-02-F-A1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 63.237171,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 63.748369664,
+        "CLOCK_MONOTONIC_RAW": 63.976968082,
+        "CLOCK_REALTIME": 63.748371169
+      },
+      "pid": 249928
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-03-F-B1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 64.870026,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 65.430125828,
+        "CLOCK_MONOTONIC_RAW": 65.793695028,
+        "CLOCK_REALTIME": 65.855895074
+      },
+      "pid": 250140
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-04-M-B1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 87.179337,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 87.730513358,
+        "CLOCK_MONOTONIC_RAW": 87.724090682,
+        "CLOCK_REALTIME": 87.730513753
+      },
+      "pid": 250378
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-05-M-A1.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 84.853203,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 85.377928965,
+        "CLOCK_MONOTONIC_RAW": 85.492055184,
+        "CLOCK_REALTIME": 85.377929867
+      },
+      "pid": 250692
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-06-F-B2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 54.526001,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 55.0403923,
+        "CLOCK_MONOTONIC_RAW": 54.999766183,
+        "CLOCK_REALTIME": 55.040392856
+      },
+      "pid": 250984
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-07-F-A2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 55.668694,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 56.17402555,
+        "CLOCK_MONOTONIC_RAW": 56.122332969,
+        "CLOCK_REALTIME": 56.174027051
+      },
+      "pid": 251161
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-08-F-anchor-after.jsonl",
+      "role": "diagnostic_anchor",
+      "status": "ok",
+      "kernel_s": 52.575882,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 53.102003724,
+        "CLOCK_MONOTONIC_RAW": 53.141743626,
+        "CLOCK_REALTIME": 53.102004929
+      },
+      "pid": 251352
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-01-F-anchor-before.jsonl",
+      "role": "diagnostic_anchor",
+      "status": "ok",
+      "kernel_s": 51.774479,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 52.293575807,
+        "CLOCK_MONOTONIC_RAW": 52.317881027,
+        "CLOCK_REALTIME": 52.293576758
+      },
+      "pid": 251538
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-02-M-A2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 83.857307,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 84.37066055,
+        "CLOCK_MONOTONIC_RAW": 84.303725786,
+        "CLOCK_REALTIME": 84.370661073
+      },
+      "pid": 251699
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-03-M-B2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 83.895874,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 84.395578688,
+        "CLOCK_MONOTONIC_RAW": 84.844545414,
+        "CLOCK_REALTIME": 84.808055069
+      },
+      "pid": 251986
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-04-F-A3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 49.826942,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 50.336843366,
+        "CLOCK_MONOTONIC_RAW": 50.346087303,
+        "CLOCK_REALTIME": 50.336844896
+      },
+      "pid": 252298
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-05-F-B3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 56.695389,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 57.270764879,
+        "CLOCK_MONOTONIC_RAW": 57.298496764,
+        "CLOCK_REALTIME": 57.270765593
+      },
+      "pid": 252477
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-06-M-B3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 84.750038,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 85.260484634,
+        "CLOCK_MONOTONIC_RAW": 85.68895314,
+        "CLOCK_REALTIME": 85.688188803
+      },
+      "pid": 252668
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-07-M-A3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 84.139397,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 84.65766166,
+        "CLOCK_MONOTONIC_RAW": 84.635873509,
+        "CLOCK_REALTIME": 84.6576632
+      },
+      "pid": 252947
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-08-F-anchor-after.jsonl",
+      "role": "diagnostic_anchor",
+      "status": "ok",
+      "kernel_s": 56.336506,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 56.851476029,
+        "CLOCK_MONOTONIC_RAW": 56.803298587,
+        "CLOCK_REALTIME": 56.851477217
+      },
+      "pid": 253220
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-01-M-A2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 95.408348,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 95.961269023,
+        "CLOCK_MONOTONIC_RAW": 95.948398006,
+        "CLOCK_REALTIME": 95.961272038
+      },
+      "pid": 253422
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-02-M-A3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 86.904335,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 87.484367586,
+        "CLOCK_MONOTONIC_RAW": 87.526351878,
+        "CLOCK_REALTIME": 87.484368652
+      },
+      "pid": 254902
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-03-F-B2.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 58.235882,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 58.77231497,
+        "CLOCK_MONOTONIC_RAW": 58.878126701,
+        "CLOCK_REALTIME": 58.772316121
+      },
+      "pid": 255503
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-04-F-B3.jsonl",
+      "role": "aa",
+      "status": "ok",
+      "kernel_s": 51.987427,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 52.529764365,
+        "CLOCK_MONOTONIC_RAW": 53.037772048,
+        "CLOCK_REALTIME": 52.965538897
+      },
+      "pid": 256090
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-05-M-B3.jsonl",
+      "role": "aa",
+      "status": "interrupted",
+      "kernel_s": null,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 10.337017907,
+        "CLOCK_MONOTONIC_RAW": 10.180219294,
+        "CLOCK_REALTIME": 10.337018265
+      },
+      "pid": 256568
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-01-M-B3.jsonl",
+      "role": "aa_replacement",
+      "status": "ok",
+      "kernel_s": 65.152481,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 65.759726718,
+        "CLOCK_MONOTONIC_RAW": 66.710065101,
+        "CLOCK_REALTIME": 66.685600537
+      },
+      "pid": 292864
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-02-F-A3.jsonl",
+      "role": "aa_replacement",
+      "status": "ok",
+      "kernel_s": 35.371246,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 35.894427907,
+        "CLOCK_MONOTONIC_RAW": 36.413395669,
+        "CLOCK_REALTIME": 36.352650082
+      },
+      "pid": 293729
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-05-F-A1.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 36.219837,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 36.753100961,
+        "CLOCK_MONOTONIC_RAW": 37.295578944,
+        "CLOCK_REALTIME": 37.232372614
+      },
+      "pid": 295106
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-06-F-B1.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 36.487453,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 37.028336573,
+        "CLOCK_MONOTONIC_RAW": 37.525093749,
+        "CLOCK_REALTIME": 37.681052919
+      },
+      "pid": 295468
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-07-M-B1.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 84.824883,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 85.351503685,
+        "CLOCK_MONOTONIC_RAW": 86.621399769,
+        "CLOCK_REALTIME": 86.31247943
+      },
+      "pid": 295795
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-08-M-A1.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 68.213715,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 68.992411313,
+        "CLOCK_MONOTONIC_RAW": 69.9687907,
+        "CLOCK_REALTIME": 70.129943857
+      },
+      "pid": 296691
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-09-M-A2.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 81.377769,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 81.914567345,
+        "CLOCK_MONOTONIC_RAW": 83.110437777,
+        "CLOCK_REALTIME": 82.859651179
+      },
+      "pid": 297417
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-10-M-B2.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 82.608643,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 83.126143524,
+        "CLOCK_MONOTONIC_RAW": 83.310583563,
+        "CLOCK_REALTIME": 83.582001261
+      },
+      "pid": 298146
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-11-F-B2.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 39.956944,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 40.518684174,
+        "CLOCK_MONOTONIC_RAW": 40.638902863,
+        "CLOCK_REALTIME": 40.518684697
+      },
+      "pid": 298873
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-12-F-A2.jsonl",
+      "role": "clock_followup_aa",
+      "status": "ok",
+      "kernel_s": 41.888515,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 42.402182838,
+        "CLOCK_MONOTONIC_RAW": 42.418852519,
+        "CLOCK_REALTIME": 42.402183731
+      },
+      "pid": 299225
+    },
+    {
+      "journal": "evidence/measurement/correctness/goal2-n4096-O0-s24.jsonl",
+      "role": "numeric_validation",
+      "status": "ok",
+      "kernel_s": 224.947815,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 225.600983835,
+        "CLOCK_MONOTONIC_RAW": 229.56141475,
+        "CLOCK_REALTIME": 229.547167149
+      },
+      "pid": 327120
+    },
+    {
+      "journal": "evidence/measurement/correctness/goal2-n4096-O3-s128.jsonl",
+      "role": "numeric_validation",
+      "status": "ok",
+      "kernel_s": 39.603188,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 40.114005628,
+        "CLOCK_MONOTONIC_RAW": 40.818841643,
+        "CLOCK_REALTIME": 40.711662383
+      },
+      "pid": 328562
+    },
+    {
+      "journal": "results/reference_v2/warmup-reference.jsonl",
+      "role": "warmup",
+      "status": "ok",
+      "kernel_s": 32.74292,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 33.337630412,
+        "CLOCK_MONOTONIC_RAW": 33.990309693,
+        "CLOCK_REALTIME": 33.937446023
+      },
+      "pid": 346738
+    },
+    {
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "role": "numeric_validation_raw",
+      "status": "ok",
+      "kernel_s": 226.104004,
+      "kernel_clock": "CLOCK_MONOTONIC_RAW",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 221.153215912,
+        "CLOCK_MONOTONIC_RAW": 226.99208287,
+        "CLOCK_REALTIME": 227.026423184
+      },
+      "pid": 396082
+    },
+    {
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "role": "numeric_validation_raw",
+      "status": "ok",
+      "kernel_s": 44.958908,
+      "kernel_clock": "CLOCK_MONOTONIC_RAW",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 44.457529158,
+        "CLOCK_MONOTONIC_RAW": 45.480431077,
+        "CLOCK_REALTIME": 46.173835603
+      },
+      "pid": 397545
+    },
+    {
+      "journal": "results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "role": "aa_raw_timer",
+      "status": "ok",
+      "kernel_s": 40.539898,
+      "kernel_clock": "CLOCK_MONOTONIC_RAW",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 40.099409014,
+        "CLOCK_MONOTONIC_RAW": 41.25733453,
+        "CLOCK_REALTIME": 40.960162684
+      },
+      "pid": 412292
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-fresh-n4096.jsonl",
+      "role": "correctness_reproduction",
+      "status": "interrupted",
+      "kernel_s": null,
+      "kernel_clock": "CLOCK_MONOTONIC",
+      "process_clock_deltas_s": {
+        "CLOCK_MONOTONIC": 10.191789979,
+        "CLOCK_MONOTONIC_RAW": 10.487202553,
+        "CLOCK_REALTIME": 11.093271358
+      },
+      "pid": 434866
+    }
+  ],
+  "instrumented_build_events": [
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-01-F-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-02-F-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-03-M-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-04-M-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-05-F-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b1-06-M-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-01-F-anchor-before.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-02-F-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-03-F-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-04-M-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-05-M-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-06-F-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-07-F-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b2-08-F-anchor-after.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-01-F-anchor-before.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-02-M-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-03-M-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-04-F-A3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-05-F-B3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-06-M-B3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-07-M-A3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b3-08-F-anchor-after.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-01-M-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-02-M-A3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-03-F-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-04-F-B3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/diagnostic_v2/diagnostic-b4-05-M-B3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-01-M-B3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-02-F-A3.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-05-F-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-06-F-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-07-M-B1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-08-M-A1.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-09-M-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-10-M-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-11-F-B2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "results/clock_followup_v2_r1/clock-followup-12-F-A2.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "evidence/measurement/correctness/goal2-n4096-O0-s24.jsonl",
+      "opt": "O0",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Wl,--no-as-needed",
+          "-lm",
+          "-O0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-goal2/verify_4096_default.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-goal2/build/compile-hbfg7828"
+        ],
+        "started_at": "2026-10-02T17:35:49.309761+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 327115,
+        "ended_at": "2026-10-02T17:35:49.444404+00:00",
+        "process_wall_s": 0.134625141,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 81419514272897,
+          "CLOCK_MONOTONIC_RAW": 85423735615921,
+          "CLOCK_REALTIME": 1790962549309770353
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 81419648898038,
+          "CLOCK_MONOTONIC_RAW": 85423872515274,
+          "CLOCK_REALTIME": 1790962549444395883
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.134625141,
+          "CLOCK_MONOTONIC_RAW": 0.136899353,
+          "CLOCK_REALTIME": 0.13462553
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.00079,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.022293,
+          "system": 0.016534
+        },
+        "child_user_cpu_s": 0.021503,
+        "child_system_cpu_s": 0.016534
+      },
+      "binary_sha256": "ffbe086ece5e29d6c5b46c29a00a68069a31e16d39b26c39e8d0610f8e6c3982"
+    },
+    {
+      "journal": "evidence/measurement/correctness/goal2-n4096-O3-s128.jsonl",
+      "opt": "O3",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Wl,--no-as-needed",
+          "-lm",
+          "-O3",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-goal2/verify_4096_default.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-goal2/build/compile-ctqkgkw8"
+        ],
+        "started_at": "2026-10-02T17:39:39.110492+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 328557,
+        "ended_at": "2026-10-02T17:39:39.270116+00:00",
+        "process_wall_s": 0.159602781,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 81645368822512,
+          "CLOCK_MONOTONIC_RAW": 85653554914916,
+          "CLOCK_REALTIME": 1790962779110502724
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 81645528425293,
+          "CLOCK_MONOTONIC_RAW": 85653717263679,
+          "CLOCK_REALTIME": 1790962779270106914
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.159602781,
+          "CLOCK_MONOTONIC_RAW": 0.162348763,
+          "CLOCK_REALTIME": 0.15960419
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.0007689999999999999,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.062390999999999995,
+          "system": 0.007909
+        },
+        "child_user_cpu_s": 0.061621999999999996,
+        "child_system_cpu_s": 0.007909
+      },
+      "binary_sha256": "3b63ea767dc0d2bb3bf97619182983637380c736c9b3db0d148ac49aa7d4376c"
+    },
+    {
+      "journal": "results/reference_v2/warmup-reference.jsonl",
+      "opt": "O2",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build/compile-axxgvbo3"
+        ],
+        "started_at": "2026-10-01T21:05:10.632776+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 42350,
+        "ended_at": "2026-10-01T21:05:10.762228+00:00",
+        "process_wall_s": 0.12945792000027723
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "opt": "O0",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Wl,--no-as-needed",
+          "-lm",
+          "-O0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build/compile-8z8rhxde"
+        ],
+        "started_at": "2026-10-02T20:26:33.078662+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 396065,
+        "ended_at": "2026-10-02T20:26:33.214537+00:00",
+        "process_wall_s": 0.135858909,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 91440497005596,
+          "CLOCK_MONOTONIC_RAW": 95668054744213,
+          "CLOCK_REALTIME": 1790972793078671117
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 91440632864505,
+          "CLOCK_MONOTONIC_RAW": 95668193947693,
+          "CLOCK_REALTIME": 1790972793214530806
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.135858909,
+          "CLOCK_MONOTONIC_RAW": 0.13920348,
+          "CLOCK_REALTIME": 0.135859689
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.0010199999999999999,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.024031999999999998,
+          "system": 0.021157
+        },
+        "child_user_cpu_s": 0.023011999999999998,
+        "child_system_cpu_s": 0.021157
+      },
+      "binary_sha256": "c779e927daaa93337f645ce22f91c15aa80571579c469775b372f565523075a5"
+    },
+    {
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "opt": "O3",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Wl,--no-as-needed",
+          "-lm",
+          "-O3",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build/compile-5nw3o78e"
+        ],
+        "started_at": "2026-10-02T20:30:20.414818+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 397540,
+        "ended_at": "2026-10-02T20:30:20.563552+00:00",
+        "process_wall_s": 0.148716974,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 91661959954301,
+          "CLOCK_MONOTONIC_RAW": 95895363541847,
+          "CLOCK_REALTIME": 1790973020414826708
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 91662108671275,
+          "CLOCK_MONOTONIC_RAW": 95895515365807,
+          "CLOCK_REALTIME": 1790973020563544452
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.148716974,
+          "CLOCK_MONOTONIC_RAW": 0.15182396,
+          "CLOCK_REALTIME": 0.148717744
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.00104,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.048977,
+          "system": 0.019478
+        },
+        "child_user_cpu_s": 0.047937,
+        "child_system_cpu_s": 0.019478
+      },
+      "binary_sha256": "c2baf59c12e002e781b440aa3bc87273f2015a11d3de2e719c791baf97bdda97"
+    },
+    {
+      "journal": "results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "opt": "O2",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/compile-cupwxwog"
+        ],
+        "started_at": "2026-10-02T21:05:30.728713+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 412287,
+        "ended_at": "2026-10-02T21:05:30.973713+00:00",
+        "process_wall_s": 0.244979521,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 93716594862952,
+          "CLOCK_MONOTONIC_RAW": 98005288911870,
+          "CLOCK_REALTIME": 1790975130728722158
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 93716839842473,
+          "CLOCK_MONOTONIC_RAW": 98005542838584,
+          "CLOCK_REALTIME": 1790975130973702347
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.244979521,
+          "CLOCK_MONOTONIC_RAW": 0.253926714,
+          "CLOCK_REALTIME": 0.244980189
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.0,
+          "system": 0.000887
+        },
+        "child_cpu_end_s": {
+          "user": 0.035838,
+          "system": 0.038727
+        },
+        "child_user_cpu_s": 0.035838,
+        "child_system_cpu_s": 0.03784
+      },
+      "binary_sha256": "93cf81cccc36d45beff38e5df62c43400df48a3a39465a6cb8aeb279ddc7ed91"
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-build.jsonl",
+      "opt": "O0",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/compile-mpxix6ut"
+        ],
+        "started_at": "2026-10-02T21:48:06.992195+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 431587,
+        "ended_at": "2026-10-02T21:48:07.346764+00:00",
+        "process_wall_s": 0.354546341,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 96201365573161,
+          "CLOCK_MONOTONIC_RAW": 100561615276443,
+          "CLOCK_REALTIME": 1790977686992206013
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 96201720119502,
+          "CLOCK_MONOTONIC_RAW": 100561980148573,
+          "CLOCK_REALTIME": 1790977687346753783
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.354546341,
+          "CLOCK_MONOTONIC_RAW": 0.36487213,
+          "CLOCK_REALTIME": 0.35454777
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.001179,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.011545,
+          "system": 0.028227
+        },
+        "child_user_cpu_s": 0.010366,
+        "child_system_cpu_s": 0.028227
+      },
+      "binary_sha256": "fc94eb28bd61575ae77bf2e963e52b19b0bfa32b36f5f4fbad2d02d00b1cb190"
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-build.jsonl",
+      "opt": "O1",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O1",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/compile-m8vrq8hx"
+        ],
+        "started_at": "2026-10-02T21:48:07.348933+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 431601,
+        "ended_at": "2026-10-02T21:48:07.490071+00:00",
+        "process_wall_s": 0.141119416,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 96201722311181,
+          "CLOCK_MONOTONIC_RAW": 100561982403059,
+          "CLOCK_REALTIME": 1790977687348944442
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 96201863430597,
+          "CLOCK_MONOTONIC_RAW": 100562127632049,
+          "CLOCK_REALTIME": 1790977687490063953
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.141119416,
+          "CLOCK_MONOTONIC_RAW": 0.14522899,
+          "CLOCK_REALTIME": 0.141119511
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.011545,
+          "system": 0.028227
+        },
+        "child_cpu_end_s": {
+          "user": 0.042023,
+          "system": 0.037207
+        },
+        "child_user_cpu_s": 0.030477999999999998,
+        "child_system_cpu_s": 0.008979999999999998
+      },
+      "binary_sha256": "5ebe9775efe700caa5e6971e0f29fb2cfeb68ce5db8ed3427a285ceae231ceab"
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-build.jsonl",
+      "opt": "O2",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/compile-rprauqka"
+        ],
+        "started_at": "2026-10-02T21:48:07.491865+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 431606,
+        "ended_at": "2026-10-02T21:48:07.637457+00:00",
+        "process_wall_s": 0.145575858,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 96201865240720,
+          "CLOCK_MONOTONIC_RAW": 100562129494300,
+          "CLOCK_REALTIME": 1790977687491873379
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 96202010816578,
+          "CLOCK_MONOTONIC_RAW": 100562279310136,
+          "CLOCK_REALTIME": 1790977687637450096
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.145575858,
+          "CLOCK_MONOTONIC_RAW": 0.149815836,
+          "CLOCK_REALTIME": 0.145576717
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.042023,
+          "system": 0.037207
+        },
+        "child_cpu_end_s": {
+          "user": 0.079454,
+          "system": 0.047549999999999995
+        },
+        "child_user_cpu_s": 0.037431,
+        "child_system_cpu_s": 0.010342999999999998
+      },
+      "binary_sha256": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-build.jsonl",
+      "opt": "O3",
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O3",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/compile-hfswyznp"
+        ],
+        "started_at": "2026-10-02T21:48:07.639347+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 431611,
+        "ended_at": "2026-10-02T21:48:07.780625+00:00",
+        "process_wall_s": 0.141261362,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 96202012723952,
+          "CLOCK_MONOTONIC_RAW": 100562281272362,
+          "CLOCK_REALTIME": 1790977687639356857
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 96202153985314,
+          "CLOCK_MONOTONIC_RAW": 100562426647664,
+          "CLOCK_REALTIME": 1790977687780618489
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.141261362,
+          "CLOCK_MONOTONIC_RAW": 0.145375302,
+          "CLOCK_REALTIME": 0.141261632
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.079454,
+          "system": 0.047549999999999995
+        },
+        "child_cpu_end_s": {
+          "user": 0.109189,
+          "system": 0.06457299999999999
+        },
+        "child_user_cpu_s": 0.029734999999999998,
+        "child_system_cpu_s": 0.017022999999999996
+      },
+      "binary_sha256": "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828"
+    },
+    {
+      "journal": "evidence/reproduction/goal2/clean-fresh-n4096.jsonl",
+      "opt": "O3",
+      "cached": true,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O3",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clean-goal2/P1/.cache/clean-build/compile-hfswyznp"
+        ],
+        "started_at": "2026-10-02T21:48:07.639347+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 431611,
+        "ended_at": "2026-10-02T21:48:07.780625+00:00",
+        "process_wall_s": 0.141261362,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 96202012723952,
+          "CLOCK_MONOTONIC_RAW": 100562281272362,
+          "CLOCK_REALTIME": 1790977687639356857
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 96202153985314,
+          "CLOCK_MONOTONIC_RAW": 100562426647664,
+          "CLOCK_REALTIME": 1790977687780618489
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.141261362,
+          "CLOCK_MONOTONIC_RAW": 0.145375302,
+          "CLOCK_REALTIME": 0.141261632
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.079454,
+          "system": 0.047549999999999995
+        },
+        "child_cpu_end_s": {
+          "user": 0.109189,
+          "system": 0.06457299999999999
+        },
+        "child_user_cpu_s": 0.029734999999999998,
+        "child_system_cpu_s": 0.017022999999999996
+      },
+      "binary_sha256": "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828"
+    }
+  ],
+  "build_cost_scope": "Target journals retain actual compile events; small tests/probes/cold-build-only tasks are additionally charged in their complete controlled task. Do not sum these subcosts again.",
+  "cost_table_source_sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+  "direct_multiclock_kernel_observations": [
+    {
+      "attempt_id": "a754f5ea5bc94becb31302b4966a852d",
+      "stdout": "evidence/measurement/clocks/matrix-multiclock-fast.stdout.txt",
+      "stdout_sha256": "6f35871f45886ebeba075c8dbf6a065d76a3a8d6baeebf5578af454c8230a9e8",
+      "clock_order": [
+        "MONOTONIC",
+        "RAW",
+        "REALTIME",
+        "PROCESS_CPU"
+      ],
+      "kernel_clock_deltas_s": {
+        "MONOTONIC": 54.08746448,
+        "RAW": 54.011965816,
+        "REALTIME": 54.087465054,
+        "PROCESS_CPU": 53.993551783
+      },
+      "already_in_driver_resource_bill": true
+    },
+    {
+      "attempt_id": "3153478705584600a67608ace763b1b7",
+      "stdout": "evidence/measurement/clocks/matrix-multiclock-medium.stdout.txt",
+      "stdout_sha256": "c554f008e8edcad37fc61557818d13ce1b577dfb77e16d12094af74e8bd2e500",
+      "clock_order": [
+        "MONOTONIC",
+        "RAW",
+        "REALTIME",
+        "PROCESS_CPU"
+      ],
+      "kernel_clock_deltas_s": {
+        "MONOTONIC": 82.817987634,
+        "RAW": 82.966571691,
+        "REALTIME": 82.817987603,
+        "PROCESS_CPU": 82.94498206
+      },
+      "already_in_driver_resource_bill": true
+    },
+    {
+      "attempt_id": "4fe7a7a1042f40ada4150e18bd81dc34",
+      "stdout": "results/clock_followup_v2_r1/clock-followup-03-multiclock-F.stdout.txt",
+      "stdout_sha256": "b7f2860fa395711372d9d61f0ca3393cf0c2faf65424c49867a398847bbce63c",
+      "clock_order": [
+        "MONOTONIC",
+        "RAW",
+        "REALTIME",
+        "PROCESS_CPU"
+      ],
+      "kernel_clock_deltas_s": {
+        "MONOTONIC": 38.29611819,
+        "RAW": 38.944863624,
+        "REALTIME": 39.204538897,
+        "PROCESS_CPU": 38.931999748
+      },
+      "already_in_driver_resource_bill": true
+    },
+    {
+      "attempt_id": "496aa57c967b47268b3721b9d54801e7",
+      "stdout": "results/clock_followup_v2_r1/clock-followup-04-multiclock-M.stdout.txt",
+      "stdout_sha256": "f69030b6b6263f0c1382545760e14891de432e1da30b3a8c31fb94dba29d145d",
+      "clock_order": [
+        "MONOTONIC",
+        "RAW",
+        "REALTIME",
+        "PROCESS_CPU"
+      ],
+      "kernel_clock_deltas_s": {
+        "MONOTONIC": 67.922707172,
+        "RAW": 68.8322206,
+        "REALTIME": 68.908043377,
+        "PROCESS_CPU": 68.799219654
+      },
+      "already_in_driver_resource_bill": true
+    }
+  ],
+  "kernel_cost_scope": "kernel_totals_by_clock covers journal-instrumented completed measurements only; four direct multi-clock kernel intervals are separate observations, never added again to driver resource cost. Interrupted kernels remain null.",
+  "updated_at_utc": "2026-10-02T22:11:44.641328+00:00"
+}

@@ -1,0 +1,469 @@
+{
+  "reviewer": "/root/review",
+  "state": "ACCEPTABLE_FOR_TRUTHFUL_PARTIAL_STAGE_PUBLICATION",
+  "begun_at_utc": "2026-10-02T21:27:45.007766+00:00",
+  "scope": "Code/correctness/reproduction for truthful PARTIAL Goal2 deliverable, not full performance completion or Engineering PASS",
+  "raw_summary_independent_check": {
+    "ledger_snapshot_path": "evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl",
+    "ledger_snapshot_sha256": "31a5a58c68db0d8c7dbebd6f89aea5e2c762014605f47dee7e2c164ab869b6cf",
+    "rows": 407,
+    "closed_attempts": 136,
+    "all_cost_ns_recomputed": true,
+    "role_costs_match": true,
+    "actual_calls": 47,
+    "actual_resource_s": 3613.087682189,
+    "summary_path": "results/raw_aa_summary_v3/summary.json",
+    "summary_sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66",
+    "producer_input_and_seven_derived_hashes_verified": true,
+    "observed_AA_runs": 1,
+    "invalid_AA_runs": 1,
+    "valid_AA_runs": 0,
+    "unstarted_jobs": 7,
+    "AA_D_P_null": true,
+    "rank_comparisons_empty": true,
+    "measurement_healthy": false,
+    "cost_complete": true
+  },
+  "findings": [
+    {
+      "id": "FC1",
+      "severity": "major",
+      "state": "CLOSED",
+      "path": "P1/README.md",
+      "evidence": "Current README recommends protocol_v2/reference_v2/comparison_v2 regeneration even though formal warmup guard stopped and those formal datasets have no valid samples; current-source identity differs from frozen protocols.",
+      "required": "Use matching fixed commits and actual closed snapshots for each historical/RAW summary; state no new formal ref/search or S3 result and remove executable-looking uncompleted batch regeneration as current entry.",
+      "current_readme_sha256": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206",
+      "repair": "Full updated README read: exact matching5c RAW/3ac Goal1/2fc initial/c247 combined readonly commands; blocked new formal/S3 and restored timer limitations explicit.",
+      "actual_fixed_replay_verified": true
+    },
+    {
+      "id": "FC2",
+      "severity": "blocking_environment_for_performance",
+      "state": "CONFIRMED_UNRESOLVED_SCOPE_GAP",
+      "path": "P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "evidence": "Complete RAW/RT relative previous changed 2.261197379 percent target, 2.245563432 percent driver; valid0; main/ref not executed.",
+      "required": "No completed Goal2/performanceKEEP/EngineeringPASS claim; restore reliable default timer without calling it calibration; preserve old/current failures and all dependent NOT_EXECUTED labels."
+    },
+    {
+      "id": "FC3",
+      "severity": "major_test_reproducibility",
+      "state": "CLOSED",
+      "path": "P1/tests/test_goal2_summary.py:341",
+      "evidence": "Independent clean clone9668 ran221:219 passed, two RAW numeric fixture errors. Frozen actual command root differs from clone P1; replace(str(P1), temporary root) does not rewrite command. Production strict command rejection is correct.",
+      "required": "Author fix fixture relocation using frozen actual measurement root without weakening command/identity checks, checkpoint then independent clean full221 regression; preserve original errors.",
+      "repair": "Fixture only uses frozen actual numeric binding measurement_root instead of clone P1 to relocate synthetic command; production/raw untouched.",
+      "independent_regression": {
+        "clone_commit": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+        "tests": 221,
+        "skipped": 0,
+        "syntax": 19,
+        "metadata_path": "evidence/reproduction/goal2/clean_regression_r1.json",
+        "metadata_sha256": "27b2b44fe9dd8b36d280b31882a9c029a0199d392adf35acf9219e041ca75ab4",
+        "resource_s": 19.507379473
+      }
+    }
+  ],
+  "pending": [],
+  "performance_admission": false,
+  "Engineering_PASS": false,
+  "Goal2_complete": false,
+  "final_code_delivery_approval": true,
+  "updated_at_utc": "2026-10-02T22:08:15.094925+00:00",
+  "production_C_reversion_checked": {
+    "source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "byte_identical_to_Goal1_3ac": true,
+    "teacher_kernel_identical": true,
+    "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+    "teacher_original_sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "timer": "CLOCK_MONOTONIC",
+    "clock_calibration_claim": false
+  },
+  "final_source_read_so_far": [
+    "src/matrix_multiplication.c full and byte/kernel comparison",
+    "src/autotuner.py full Goal1 diff and current process/clock recognition/measurement guard/S3/Journal/Evaluator/search/CLI paths",
+    "scripts/validate_target.py changed kernel boundary extraction",
+    "scripts/safe_screenshots.py complete current 238 lines",
+    "scripts/identity_quality.py complete initial 82 lines",
+    "README.md complete current 76 lines, pending final owner revision",
+    "scripts/experiment_v2.py and summarize_v2.py current identity/complete guards/cost/panel/replay/CLI paths plus all earlier independent gates"
+  ],
+  "fresh_reproduction_scope": {
+    "requested_by": "root",
+    "approved_scope_only": true,
+    "calls": 1,
+    "config": {
+      "s": 128,
+      "opt": "O3"
+    },
+    "purpose": "clean functional correctness/reproduction only",
+    "formal_grade": false,
+    "guard_unchanged": true,
+    "controlled_complete_clock_guard": false,
+    "existing_live_RAW_MONOTONIC_guard_remains": true,
+    "outcome_if_guard": "PARTIAL; record actual call/cost and no rerun",
+    "pending_actual_execution": false,
+    "actual_state": "PARTIAL_CLOCK_GUARD_STOP",
+    "journal_sha256": "33ee5ef3132b61b0e0ba3f3b1ede1e2853c0d61f09d12363a07bfae5b931d3bb",
+    "check_path": "evidence/reproduction/goal2/clean-fresh-n4096-check.json",
+    "check_sha256": "e1942e95f976683ffab0b411faca390d41a8f960b39eb1a33c3fd2f24d24e610",
+    "actual_calls": 1,
+    "controller_returncode": 130,
+    "target_returncode": -9,
+    "kernel": null,
+    "checksum": null,
+    "known_resource_s": 11.231500658,
+    "primary_domains_s": {
+      "monotonic": 10.330020054,
+      "raw": 10.629440178,
+      "realtime": 11.231500658
+    },
+    "target_domains_s": {
+      "CLOCK_MONOTONIC": 10.191789979,
+      "CLOCK_MONOTONIC_RAW": 10.487202553,
+      "CLOCK_REALTIME": 11.093271358
+    },
+    "owned_PIDs_absent": [
+      434864,
+      434866
+    ],
+    "driver_closing_RAW_MONOTONIC_ratio": 1.0289854349202407,
+    "exact_live_trigger_clock_sample_saved": false,
+    "limit": "Closing interrupted ns verify domains/cost; exact live decision prefix not separately persisted, so not treated as complete kernel time or new clock admission."
+  },
+  "historical_identity_quality_script": {
+    "path": "scripts/identity_quality.py",
+    "read_in_full": true,
+    "input": "exact immutable Goal1 grid_summary/search_summary SHA, no source or old score rewriting",
+    "status": "ACTUAL_CLEAN_RECALCULATION_AND_INDEPENDENT_ALL19_CHOICE_MAPPING_VERIFIED",
+    "limits": "common noisy T_ref identity mapping only; observation within5pct is not a near-optimality proof; no new runtime/seed or missing v2 formal completion",
+    "same_config_gap_equal": true,
+    "reference_configs": 20,
+    "choices": 18,
+    "reproduction": "evidence/reproduction/goal2/identity-quality-comparison.json"
+  },
+  "independent_clean_regression": {
+    "path": "evidence/reproduction/goal2/clean_regression.json",
+    "clone_commit": "9668bc75a9d23376aed8ef9e84e24a9e81a41219",
+    "tests": {
+      "tests": 221,
+      "errors": 2,
+      "failures": 0,
+      "skipped": 0,
+      "state": "FAILED",
+      "reported_unittest_s": 18.177,
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-tests.stderr.txt"
+    },
+    "syntax": {
+      "count": 19,
+      "state": "PASSED",
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-syntax.stdout.txt"
+    },
+    "cold_builds": {
+      "count": 4,
+      "cached": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "journal_sha256": "b6bfa951fd30f371059895dae4133a39e34b7ba615f2d4438447b883b8e68acc"
+    },
+    "actual_n4096": 0,
+    "resource_s": 20.419493669,
+    "source_unchanged": true,
+    "native_GUI_cases": 4,
+    "native_Windows_cases": 5,
+    "scope_state": "PENDING_TEST_FIXTURE_REPAIR"
+  },
+  "independent_clean_regression_r1": {
+    "path": "evidence/reproduction/goal2/clean_regression_r1.json",
+    "sha256": "27b2b44fe9dd8b36d280b31882a9c029a0199d392adf35acf9219e041ca75ab4",
+    "clone_commit": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+    "actual_tests": 221,
+    "skipped": 0,
+    "syntax": 19,
+    "n4096": 0,
+    "resource_s": 19.507379473,
+    "cold_builds_reused": 4,
+    "native_GUI": 4,
+    "native_Windows": 5,
+    "production_source_unchanged": true
+  },
+  "historical_preservation_and_reproduction": {
+    "protected_files": 431,
+    "changed_protected_files": [],
+    "A1_A2_trees": {
+      "A1": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+      "A2": "139b6e7469d63b27cfa100d1e005061548d36ce8"
+    },
+    "A1_A2_diff_empty": true,
+    "fixed_reproductions": [
+      {
+        "path": "evidence/reproduction/goal2/goal1-comparison.json",
+        "evidence_sha256": "f728da13f1d6a1e3226a5c732362191651340d041aeceeb18f8215f88843ade1",
+        "commit": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+        "data_files": 9,
+        "image_files": 2,
+        "actual_driver_attempt": "eb0a9d16fc2147928ba4e137c720e9b6",
+        "fresh_matrix_calls": 0
+      },
+      {
+        "path": "evidence/reproduction/goal2/initial-comparison.json",
+        "evidence_sha256": "5fd6da0b0a2e094813779303e8c0e93e5ec30185aee28c5fcf0db52fa251a2b7",
+        "commit": "2fc0c334039bb6696c4d83acbe029ce65ca66ab9",
+        "data_files": 7,
+        "image_files": 0,
+        "actual_driver_attempt": "4b18f221859f48338a60ea5aca7e3606",
+        "fresh_matrix_calls": 0
+      },
+      {
+        "path": "evidence/reproduction/goal2/followup-comparison.json",
+        "evidence_sha256": "4c49e9b96a93eb4018df147439dab917e1ea3d9ea99a69b0e5ed5f15460db137",
+        "commit": "c247e900d3f9c4d46e4abf06092939a0a9480429",
+        "data_files": 11,
+        "image_files": 0,
+        "actual_driver_attempt": "a2663138f4574a46ae87d4c372f43eab",
+        "fresh_matrix_calls": 0
+      }
+    ],
+    "reviewer_performed_new_replay": false,
+    "checks": "Independent actual regenerated bytes/Git detached HEAD/raw-preservation verification; author real driver records also read.",
+    "final_fixed_reproductions": [
+      {
+        "evidence": "raw-stop-comparison.json",
+        "evidence_sha256": "490772290568a75776dfa3b163990401b577a9ec00e6e039568f5bac9382daf3",
+        "commit": "5c78049a22fa3422f2b23dddd634f2e7a3d73f9d",
+        "files": 7,
+        "identity_only_differences": {}
+      },
+      {
+        "evidence": "mono-stop-comparison.json",
+        "evidence_sha256": "281f54f34684863438ec0ec5f054aae42374bcfb7f6f859cf24c96f732aada04",
+        "commit": "a39f348e6cf0c7466900ec739a797753f4d93f0b",
+        "files": 11,
+        "identity_only_differences": {
+          "summary.json": {
+            "analysis_sha256": [
+              "8111d72ec9684d0b0f8fb00579f44cb6f94f7794b44f64619ffe3d1e610f0289",
+              "eded9312ef779c74eb9fcf4c1d9009950adc110a31f0ff750771f0c3ffdcb147"
+            ]
+          }
+        }
+      },
+      {
+        "evidence": "identity-quality-comparison.json",
+        "evidence_sha256": "59ddd9a0268339789f9e0c9fb6015a8a9e8b4f977d9970e2a22ea37a8f14cea5",
+        "commit": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+        "files": 2,
+        "identity_only_differences": {}
+      }
+    ]
+  },
+  "formal_image_visual_crosscheck": {
+    "at_utc": "2026-10-02T21:59:09.267926+00:00",
+    "images": {
+      "framework.svg": {
+        "path": "images/framework.svg",
+        "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png",
+        "rendered_png_sha256": "fcfa5bbd160ec3c7b8e1fb37ae843ccf8f7161c26c75a522e2192cd671428193"
+      },
+      "interfaces-kernel.png": {
+        "path": "images/interfaces-kernel.png",
+        "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png"
+      },
+      "build-run.png": {
+        "path": "images/build-run.png",
+        "sha256": "76ead1509ac910269b77374696b67c8abecfcffd4ada186ad429bfcf5eb26580",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png"
+      },
+      "saved-search-results.png": {
+        "path": "images/saved-search-results.png",
+        "sha256": "8faa3a9df894e03e9caf67831ac7fa8009f501ed699f24c39ae28655b20f76ea",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png"
+      },
+      "grid_median.png": {
+        "path": "images/grid_median.png",
+        "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png"
+      },
+      "online_search.png": {
+        "path": "images/online_search.png",
+        "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+        "actually_viewed": true,
+        "viewer": "functions.view_image; framework SVG via existing final rendered .cache/goal2-capture/framework-view.png"
+      }
+    },
+    "findings": "All six actually opened. Interface/kernel screenshot matches final MONOTONIC C and core lines; build screenshot explicitly shows fresh interrupted/null-result implication; stored choices separate noisy reference and confirmations; two old data graphs readable and match reproduced data; framework arrows/labels readable.",
+    "external_viewer_approval_claim": false
+  },
+  "final_report_read": {
+    "path": "report.md",
+    "sha256": "23584d704448ce99e40cb3488058323c5bbd66e26e0946d4647aa28677921d5a",
+    "read_continuously": true,
+    "scope": "Secondary consistency check; separate independent experiment/report owner remains /root/implementation",
+    "result": "Existing20 table/historical3 algorithms/same-identity/common-quality and blockednew6/S3 accurately separated; full24-check vs all-element limitation explicit; no final acceptance claimed."
+  },
+  "file_hygiene_independent_check": {
+    "at_utc": "2026-10-02T22:02:12.786089+00:00",
+    "scope": "Tracked and nonignored P1 candidates only; user untracked root attachments excluded",
+    "files": 1040,
+    "forbidden_binary_archive_cache_candidates": [],
+    "private_key_or_token_pattern_candidates": [],
+    "files_above5MiB": [],
+    "formal_local_links": [
+      {
+        "document": "P1/report.md",
+        "target": "images/framework.svg",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "src/autotuner.py",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "images/interfaces-kernel.png",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "src/matrix_multiplication.original.c",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "src/matrix_multiplication.c",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "images/grid_median.png",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "results/summary/grid_summary.csv",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "results/identity_quality_v2/search_choices.csv",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "images/online_search.png",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "images/saved-search-results.png",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "README.md",
+        "exists": true
+      },
+      {
+        "document": "P1/report.md",
+        "target": "images/build-run.png",
+        "exists": true
+      },
+      {
+        "document": "P1/README.md",
+        "target": "report.md",
+        "exists": true
+      },
+      {
+        "document": "P1/README.md",
+        "target": "evidence/README.md",
+        "exists": true
+      }
+    ],
+    "broken_links": [],
+    "publishing_performed_by_reviewer": false
+  },
+  "final_cost_primitive_check": {
+    "at_utc": "2026-10-02T22:04:42.450049+00:00",
+    "ledger_sha256": "041ba697785117e14f51726105830820d9337f23d18c80e5eca0fe3eba2d2c5f",
+    "ledger_rows": 488,
+    "closed_unique_attempts": 163,
+    "open_attempts": 0,
+    "actual_n4096": 48,
+    "resource_max3_sum_s": 3711.066297609,
+    "cost_json_sha256": "5abd278dd6040c4a01e528d4d9795a7b0b491b324a77c91081fa26c72535b4d7",
+    "role_aggregates_and_failures_match": true,
+    "calls_cap": 520,
+    "controlled_seconds_cap": 57600,
+    "matrix_search_reference_confirmation_calls": 0,
+    "fresh_success": false
+  },
+  "Goal2_status": "PARTIAL",
+  "uncompleted_required_scope": [
+    {
+      "item": "New complete20 reference",
+      "state": "BLOCKED",
+      "valid_samples": 0
+    },
+    {
+      "item": "Six new online algorithm blocks",
+      "state": "NOT_EXECUTED"
+    },
+    {
+      "item": "S3 real matched-budget selection and new-seed confirmation",
+      "state": "NOT_EXECUTED"
+    },
+    {
+      "item": "Final baseline new-seed stability confirmation",
+      "state": "NOT_EXECUTED"
+    },
+    {
+      "item": "Greedy explicit-start performance panel",
+      "state": "NOT_EXECUTED"
+    },
+    {
+      "item": "Clean fresh4096 complete target result",
+      "state": "PARTIAL_CLOCK_GUARD_STOP",
+      "actual_calls": 1,
+      "successful_calls": 0
+    }
+  ],
+  "delivery_boundaries": [
+    "Code approval is for reliable default and reproducible actual failures/diagnostics with truthful PARTIAL scope.",
+    "No performance admission, candidate KEEP, proven nonregression, complete Goal2, external Engineering PASS or Shuishan submission.",
+    "No production edits after checked source/test identities; later docs/status-only changes remain subject to final independent experiment/report and publication checks.",
+    "Remote publication performed and verified by parent; reviewer has not pushed."
+  ],
+  "final_source_sha256": {
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023"
+  }
+}

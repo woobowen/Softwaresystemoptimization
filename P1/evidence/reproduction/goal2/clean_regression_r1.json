@@ -1,0 +1,148 @@
+{
+  "reviewer": "/root/review",
+  "clone_commit": "5e6719cdad69e85db6e71ed0e2f4dcb346d3e17b",
+  "scope": "Independent full clean tests and19syntax after minimal fixture root repair; no n4096/no repeated cold build",
+  "started_at_utc": "2026-10-02T21:51:32.097294+00:00",
+  "git_status_before": "",
+  "source_hashes_before": {
+    "P1/scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "P1/scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "P1/scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "P1/scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "P1/scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "P1/scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "P1/src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "P1/tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "P1/tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "P1/tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+    "P1/tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "P1/src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "screenshot_log_before_bytes": 46768,
+  "screenshot_log_before_sha256": "a5a78ec25bc5d6cd7fbb82156196a81178e51681663c9e0e1c4edc60eb905c2d",
+  "records": [
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:51:51.345623+00:00",
+      "task": "goal2-clean-independent-tests-r1",
+      "role": "independent_reproduction",
+      "attempt_id": "9d608b2743b24ab19c51f417a99c1369",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 18.278511294,
+      "clock_elapsed_s": {
+        "monotonic": 18.278511294,
+        "raw": 18.701911999,
+        "realtime": 19.238944734
+      },
+      "clock_end_ns": {
+        "monotonic": 96419063783024,
+        "raw": 100785740801462,
+        "realtime": 1790977911345295608
+      },
+      "resource_s": 19.238944734,
+      "resource_wall_s": 19.238944734,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-tests-r1.stdout.txt",
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-tests-r1.stderr.txt"
+    },
+    {
+      "type": "task_end",
+      "at": "2026-10-02T21:51:51.612939+00:00",
+      "task": "goal2-clean-independent-syntax-r1",
+      "role": "independent_reproduction",
+      "attempt_id": "ef7986e6698548ae96200ec6fed92097",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.256269778,
+      "clock_elapsed_s": {
+        "monotonic": 0.256269778,
+        "raw": 0.268434739,
+        "realtime": 0.256270876
+      },
+      "clock_end_ns": {
+        "monotonic": 96419331148731,
+        "raw": 100786020857876,
+        "realtime": 1790977911612661295
+      },
+      "resource_s": 0.268434739,
+      "resource_wall_s": 0.268434739,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0230864323183888
+      ],
+      "stdout": "evidence/reproduction/goal2/goal2-clean-independent-syntax-r1.stdout.txt",
+      "stderr": "evidence/reproduction/goal2/goal2-clean-independent-syntax-r1.stderr.txt"
+    }
+  ],
+  "screenshot_new_rows": 4,
+  "source_hashes_after": {
+    "P1/scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "P1/scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+    "P1/scripts/experiment.py": "9041accdee31d1fb7d822d1b43af4e090dc7c9308376c211533b3b552501a052",
+    "P1/scripts/experiment_v2.py": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+    "P1/scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "P1/scripts/identity_quality.py": "bde26d08a542bf471d0578c69ab24a6c7f0164100c67ccdff42aae85798ff32c",
+    "P1/scripts/safe_screenshots.py": "60a5977fc532f0e3b2dad15147a7b9dc2ae19a018c56f9190119f0003329dd99",
+    "P1/scripts/summarize.py": "2630b8cead860d347b4cb67d5b04fade268969b5137f7c5462b8ed312340417c",
+    "P1/scripts/summarize_v2.py": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+    "P1/scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "P1/src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "P1/tests/test_autotuner.py": "ff3c73a7716fa3ee71baad096581fd27d045970fec586b12b8a20d0b587e0d9f",
+    "P1/tests/test_clock_followup.py": "ebb7e3e51f9d0126982a6bf01aea92d5d7556e0649083dfb994c4c8b5a8a8631",
+    "P1/tests/test_experiment.py": "b6079145abf4a0bdce908c5550c02ef32a5a52a503dd8afe7d06e3bc8150ba32",
+    "P1/tests/test_goal2_driver.py": "06baacfa12766e8fb9d7b010d288b4096d4feef6cbbe0690fd3f1ce1b4c6cb8f",
+    "P1/tests/test_goal2_screenshots.py": "5b31d573116c611d84f840fd37f9d20e798d520ae0a1057ad9852f0f13eb2221",
+    "P1/tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "P1/tests/test_goal2_summary.py": "c7256271493ed84ad9f429c5f2e31c3d2d5b28986e3d1e05fa1dd1515a9ab34a",
+    "P1/tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "P1/src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "source_hashes_unchanged": true,
+  "git_status_after": " M P1/evidence/commands/screenshot_cleanup_tests.jsonl\n",
+  "ended_at_utc": "2026-10-02T21:51:51.631837+00:00",
+  "test_execution": {
+    "state": "PASSED",
+    "tests": 221,
+    "unittest_s": 17.892,
+    "skipped": 0,
+    "stderr_sha256": "65c0c27791949fd7475f3aa232e53fb3f6ff985b2b271d5207d254054927de11"
+  },
+  "syntax_execution": {
+    "state": "PASSED",
+    "count": 19
+  },
+  "native_host_rows": 5,
+  "independent_primitive_checks": {
+    "primary_three_ns_recomputed": true,
+    "all_actual_calls_zero": true,
+    "screenshot4_cleanup": true,
+    "Windows5_cleanup": true
+  },
+  "state": "PASSED",
+  "resource_total_s": 19.507379473,
+  "cold_build_reused_from": {
+    "clone_commit": "9668bc75a9d23376aed8ef9e84e24a9e81a41219",
+    "journal_sha256": "b6bfa951fd30f371059895dae4133a39e34b7ba615f2d4438447b883b8e68acc",
+    "production_source_unchanged": true,
+    "reason": "Only numeric fixture command relocation changed; four compiler levels source/framework unchanged"
+  },
+  "updated_at_utc": "2026-10-02T21:52:58.912759+00:00"
+}

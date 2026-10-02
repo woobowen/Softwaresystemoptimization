@@ -1,0 +1,10 @@
+{
+  "scope": "only private clean clone test-generated append; original bytes restored after exact delta preservation",
+  "checkpoint": "9668bc75a9d23376aed8ef9e84e24a9e81a41219",
+  "file": "P1/evidence/commands/screenshot_cleanup_tests.jsonl",
+  "original_sha256": "a5a78ec25bc5d6cd7fbb82156196a81178e51681663c9e0e1c4edc60eb905c2d",
+  "saved_four_rows_sha256": "bde82c37fd074d204e95bf3ea6a45ce5ceb776f1b9dc9f679f92d5a526ee62cc",
+  "before_rows": 24,
+  "after_rows": 20,
+  "clean_status_empty": true
+}

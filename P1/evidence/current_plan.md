@@ -4,11 +4,11 @@
 
 ## 当前状态（RAW A/A 停止后）
 
-Goal 2 性能核心受阻，阶段结果将为 PARTIAL；Engineering 尚待外部最终验收，Submission 为 NOT_READY。21:06 首个 RAW A/A 完整目标与 driver 的 RAW/REALTIME 比值相对前一有效区间变化 2.261197% / 2.245563%，实际触发原 2% 停止规则。1 项启动、0 个有效 A/A、7 项未启动；未计算 D/P、排序或新 rho，没有新正式准入。累计 n4096=47，停止点已知受控成本 3613.087682189 秒。
+Goal 2 性能核心受阻，阶段结果为 PARTIAL；Engineering 尚待外部最终验收，Submission 为 NOT_READY。21:06 首个 RAW A/A 完整目标与 driver 的 RAW/REALTIME 比值相对前一有效区间变化 2.261197% / 2.245563%，实际触发原 2% 停止规则。1 项启动、0 个有效 A/A、7 项未启动；未计算 D/P、排序或新 rho，没有新正式准入。回退后的唯一 fresh 也触发原保护。最新实际 n4096=48，受控成本3713.432874365秒（含全部失败及五次安全拍摄，逐任务三域max）。47/3613.087682189是RAW停止快照，不是最终总账。
 
 匹配 RAW 停止版本为 `5c78049a22fa3422f2b23dddd634f2e7a3d73f9d`，含原始数据、407行闭合快照与七派生文件。随后只还原目标两处 timer literal 到 Goal1 源 SHA cece4fd…；框架支持双钟、严格 known 计费及 S3 实验入口保留，CLI 缺省 Grid 不改。回退不是时钟修复。剩余依赖阻塞包括新20配置参照、六组比较、S3配对、三个新种子确认与起点面板；不以未执行替换为 REJECT 或 NOT_REQUIRED。
 
-下一有限闭环：回退后的必要 fixture 回归、匹配版本重算、干净测试/四冷构建/唯一 fresh correctness-only n4096 尝试、报告与六图真实查看、两类终审和 GitHub 如实阶段发布。fresh 保持现有 live clock guard，若中断记录 PARTIAL，不追加尝试或解除保护。只继续不依赖性能准入的工作。
+回退后的必要 fixture 回归、匹配版本重算、干净221测试/19语法/四冷构建、唯一 fresh correctness-only n4096 尝试、报告及六图真实查看均已执行。fresh 因原保护中断，保留PARTIAL、不追加尝试或解除保护。两类独立阶段终审完成后仅继续 GitHub 如实阶段发布和实际远端核对；不再安排性能诊断。
 
 ## 硬边界与历史
 
@@ -57,3 +57,14 @@ Goal 2 性能核心受阻，阶段结果将为 PARTIAL；Engineering 尚待外�
 不确定：时钟跨时段关系、两种安排的实际价值、5%目标的可分辨程度、S3收益。timesyncd实际active、chrony不存在；不把服务存在当根因，不调整任何服务。
 
 Goal1旧滚动记录留在受审提交的Git历史，不复制成多份最终文件。
+
+## 最终非依赖闭环
+
+- RAW停止匹配5c78049的7个CSV/JSON全部逐SHA重生相同。MONO停止a39匹配版10个CSV及JSON全部非身份值相同，原after_fix由中间未提交8111分析器产生，a39是eded；summary仅analysis_sha256不同，不伪称11文件字节全等。
+- 默认回退后主控完整221测试及19语法通过。首轮两处timer假定fixture错误、clean clone首轮两处旧绝对路径fixture错误均保存现场后最小测试修补，生产严格身份/2%门不改。作者14/79及独立clean新检查点5e6719c完整221/0skip/19语法回归通过。
+- 干净副本四级cold真实cachedFalse，生产源码Ccece/core55未变。唯一fresh correctness-only n4096仍原live guard，于>=10秒触发比值变化保护：CLI130、C−9/interrupted、kernel/checksum空，真实1调用与11.231500658秒计入，不重试、不填成绩。总n4096=48。
+- 三个最终安全原生终端截图已捕获，private Unix/auth0600/nolisten tcp、空授权拒绝、全部本任务PID/display/auth清理实际核对。框架SVG渲染后及5PNG逐张实际打开，独立两类review也实际看图。两张历史数据图保持原SHA，正式图片ZIP仅6图在忽略缓存。
+- 431历史保护文件及A1/A2 tree终检不变，raw停止10个绑定输入不变；正式report/README/evidence索引相对链接全部有效，未新增依赖或全局配置。唯一成本账已闭合，48调用/3711.066297609受控秒（逐任务三域max，非宿主绝对校准）；搜索/内部复核/共同外确认/新有效参照/正式锚点均0。
+- 两类独立阶段终审完成后，将如实PARTIAL版本正常提交/推GitHub main，再真实核对remote SHA和关键blob/图片。不操作水杉、不以软件交付审核代替最终Engineering验收。
+
+- ER9来源修补：两viewer已从实际字段派生并重拍，保留旧全文/新SHA/输入SHA。额外0目标调用/2.366576756秒，末账48调用/3713.432874365秒，五次安全capture均清理；原3711.066297609是修补前checkpoint。最后交接事实见goal2_stage_result.md。
