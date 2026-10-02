@@ -21,7 +21,7 @@ Goal1 原矩阵保留在受审提交 `3ac0c4688b964c873379d012cbcf09afb7ed0937`�
 | S3有限重复单因素闭环 | recheck6+2、optimization_goal2、literature_goal2 | 实现及回归已测；真实配对/选择/留出NOT_EXECUTED，无KEEP/REJECT |
 | 问题修复及两类终审 | goal2_review_closure / reviews两个最终路径 | 常规软件问题已修并实际回归、两类阶段终审；钟域核心依赖仍受阻 |
 | 干净复现/安全截图/完整图片视觉 | reproduction/goal2 / screenshots_goal2 / images_goal2 | 干净221/19及四冷通过，3安全终端/6图实际查看；唯一fresh被原live guard止为PARTIAL |
-| GitHub main阶段发布及实际SHA | 最终publication证据 | 内部终审后正常main发布，精确实际SHA见最终交接；不宣称最终Engineering PASS |
+| GitHub main阶段发布及实际SHA | [实际发布checkpoint](commands/goal2_publication_checkpoint.json) | 两类内部终审后正常main发布95298a0；实际remote SHA相同，24blob及24HTTP内容一致。记录随后正常入库，最终SHA另作实际核对，不宣称最终Engineering PASS |
 | 清理/依赖/范围 | environment/goal2_dependencies.json / A1A2 tree / protected hashes | 新系统/语言包/工具链/全局配置均0；仅精确删除旧下载包，用户输入保留 |
 
 Goal2：PARTIAL（性能可比性依赖阻塞）。Engineering：IN_PROGRESS，等待实际GitHub外部FINAL_REVIEW。Submission：NOT_READY，未提交水杉。

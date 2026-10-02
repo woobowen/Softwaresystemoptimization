@@ -1,0 +1,354 @@
+{
+  "checked_at_utc": "2026-10-02T22:26:27.829815+00:00",
+  "repository": "https://github.com/woobowen/Softwaresystemoptimization",
+  "branch": "main",
+  "local_sha": "95298a0d407dde693d1c362bed544ae41946ccae",
+  "actual_remote_sha": "95298a0d407dde693d1c362bed544ae41946ccae",
+  "local_remote_match": true,
+  "actual_query_before": "95298a0d407dde693d1c362bed544ae41946ccae\trefs/heads/main",
+  "actual_query_after": "95298a0d407dde693d1c362bed544ae41946ccae\trefs/heads/main",
+  "fetched_remote_sha": "95298a0d407dde693d1c362bed544ae41946ccae",
+  "critical_remote_blobs": [
+    {
+      "path": "P1/report.md",
+      "blob": "0c843290241dbab33243a7ae62e402358ab033c5",
+      "bytes": 9196,
+      "sha256": "279f46ffca5fec400e96722b24193d21990324add0b4a48d3a46dfbd4a2676c2",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/report.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/report.md"
+    },
+    {
+      "path": "P1/README.md",
+      "blob": "ebfe3d4ada2c788a72928275d1c1796a31e4beb6",
+      "bytes": 6105,
+      "sha256": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/README.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/README.md"
+    },
+    {
+      "path": "P1/src/autotuner.py",
+      "blob": "9679295071c0da5971fbc1109337fb2879e5a835",
+      "bytes": 38454,
+      "sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/autotuner.py",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/autotuner.py"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.c",
+      "blob": "4d15ecd649d31a7bd7ad50fa41f43c2a5ea1bc7f",
+      "bytes": 1785,
+      "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/matrix_multiplication.c",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/matrix_multiplication.c"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.original.c",
+      "blob": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "bytes": 1357,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/matrix_multiplication.original.c",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/src/matrix_multiplication.original.c"
+    },
+    {
+      "path": "P1/scripts/experiment_v2.py",
+      "blob": "46cc028aaf9203cc4408fc89443f7e7b6d79f354",
+      "bytes": 57863,
+      "sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/scripts/experiment_v2.py",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/scripts/experiment_v2.py"
+    },
+    {
+      "path": "P1/scripts/summarize_v2.py",
+      "blob": "9c4ed0fb8860b0ac699a96b2793f8a095b3dbdef",
+      "bytes": 130610,
+      "sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/scripts/summarize_v2.py",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/scripts/summarize_v2.py"
+    },
+    {
+      "path": "P1/evidence/protocol_v2.json",
+      "blob": "bb413e5d33c3a9397b7131b1223a2297f5b4ace8",
+      "bytes": 9900,
+      "sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/protocol_v2.json",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/protocol_v2.json"
+    },
+    {
+      "path": "P1/evidence/protocol_raw_aa.json",
+      "blob": "ae6273f16bc0e3b6655383710851ec585d2c0635",
+      "bytes": 12352,
+      "sha256": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/protocol_raw_aa.json",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/protocol_raw_aa.json"
+    },
+    {
+      "path": "P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "blob": "94a6817a07a8f5ce1623d2371dd412ccc2f35c9a",
+      "bytes": 10754,
+      "sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl"
+    },
+    {
+      "path": "P1/results/raw_aa_summary_v3/summary.json",
+      "blob": "321e6c63af5fd5c970af57ce5b23d24eb9db27b0",
+      "bytes": 25032,
+      "sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/raw_aa_summary_v3/summary.json",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/raw_aa_summary_v3/summary.json"
+    },
+    {
+      "path": "P1/results/summary/grid_summary.csv",
+      "blob": "8237704c43a2320efde62ec6dd7fd5ae6d9e0e30",
+      "bytes": 2671,
+      "sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/summary/grid_summary.csv",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/summary/grid_summary.csv"
+    },
+    {
+      "path": "P1/results/identity_quality_v2/search_choices.csv",
+      "blob": "581c73fb8a9cc65d0367041b83655f442f896fdc",
+      "bytes": 3788,
+      "sha256": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/identity_quality_v2/search_choices.csv",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/results/identity_quality_v2/search_choices.csv"
+    },
+    {
+      "path": "P1/evidence/goal2_stage_result.md",
+      "blob": "7a587e230ef471e45b7fadb5bc26c6bb3be1f1aa",
+      "bytes": 13093,
+      "sha256": "56ec9ea6d2ff06e2151d595f1aca36f095f7e04f1bd34909c87fe9ff6e43725e",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/goal2_stage_result.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/goal2_stage_result.md"
+    },
+    {
+      "path": "P1/evidence/measurement/costs_goal2.json",
+      "blob": "4203e7098527977298ecd8c63133cc60366b82f6",
+      "bytes": 96159,
+      "sha256": "fbed2c0c6445e8a3e4543ad6d256cce3f74828a8aca7eb24542138343ac61287",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/measurement/costs_goal2.json",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/measurement/costs_goal2.json"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_review.md",
+      "blob": "f330a381d83bdb347facd27642008f17b0d70300",
+      "bytes": 5565,
+      "sha256": "872a6bf51f837dfadccb6e8791c8530e19396ec9619090ed599fd54a08a98670",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_final_code_review.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_final_code_review.md"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_visual_addendum.md",
+      "blob": "8c4e4edbe24101a3a64e7b22bd22566e16bee879",
+      "bytes": 1663,
+      "sha256": "1d16b4aafe561bb6dce07abc1cdb5dd3322cdf97c1abeb2dbc85b010050dc4d6",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_final_code_visual_addendum.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_final_code_visual_addendum.md"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_experiment_report_review.md",
+      "blob": "2b853c843e2a4551ded6486d26a0ff5ba508fd3f",
+      "bytes": 25502,
+      "sha256": "c9ba17ec825e3428b3110ce5c94b95f9b44260ba4c2681ee734d059356834525",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_experiment_report_review.md",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/evidence/reviews/goal2_experiment_report_review.md"
+    },
+    {
+      "path": "P1/images/framework.svg",
+      "blob": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/framework.svg",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/framework.svg"
+    },
+    {
+      "path": "P1/images/grid_median.png",
+      "blob": "8bf2d638bf4c9b0ea166ed39ea733446c4583d22",
+      "bytes": 70249,
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/grid_median.png",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/grid_median.png"
+    },
+    {
+      "path": "P1/images/online_search.png",
+      "blob": "f2c9a2c79416d0ba51ca36d89b941ca78b5c211b",
+      "bytes": 212522,
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/online_search.png",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/online_search.png"
+    },
+    {
+      "path": "P1/images/interfaces-kernel.png",
+      "blob": "05936cec577777ccd9526f55c79669925c5eb637",
+      "bytes": 106472,
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/interfaces-kernel.png",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/interfaces-kernel.png"
+    },
+    {
+      "path": "P1/images/saved-search-results.png",
+      "blob": "ff183f6b3fbb574ea56a7e2606bb8fdc3c9c6e79",
+      "bytes": 94813,
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/saved-search-results.png",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/saved-search-results.png"
+    },
+    {
+      "path": "P1/images/build-run.png",
+      "blob": "44656881c5143ef5a1f9e3a9aefc50ae24f6f273",
+      "bytes": 95426,
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650",
+      "fetched_remote_blob_matches_local": true,
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/build-run.png",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/build-run.png"
+    }
+  ],
+  "public_http_readbacks": [
+    {
+      "path": "P1/report.md",
+      "http_readback_matches": true,
+      "sha256": "279f46ffca5fec400e96722b24193d21990324add0b4a48d3a46dfbd4a2676c2"
+    },
+    {
+      "path": "P1/README.md",
+      "http_readback_matches": true,
+      "sha256": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206"
+    },
+    {
+      "path": "P1/src/autotuner.py",
+      "http_readback_matches": true,
+      "sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.c",
+      "http_readback_matches": true,
+      "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.original.c",
+      "http_readback_matches": true,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+    },
+    {
+      "path": "P1/scripts/experiment_v2.py",
+      "http_readback_matches": true,
+      "sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84"
+    },
+    {
+      "path": "P1/scripts/summarize_v2.py",
+      "http_readback_matches": true,
+      "sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf"
+    },
+    {
+      "path": "P1/evidence/protocol_v2.json",
+      "http_readback_matches": true,
+      "sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b"
+    },
+    {
+      "path": "P1/evidence/protocol_raw_aa.json",
+      "http_readback_matches": true,
+      "sha256": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1"
+    },
+    {
+      "path": "P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "http_readback_matches": true,
+      "sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5"
+    },
+    {
+      "path": "P1/results/raw_aa_summary_v3/summary.json",
+      "http_readback_matches": true,
+      "sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66"
+    },
+    {
+      "path": "P1/results/summary/grid_summary.csv",
+      "http_readback_matches": true,
+      "sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec"
+    },
+    {
+      "path": "P1/results/identity_quality_v2/search_choices.csv",
+      "http_readback_matches": true,
+      "sha256": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df"
+    },
+    {
+      "path": "P1/evidence/goal2_stage_result.md",
+      "http_readback_matches": true,
+      "sha256": "56ec9ea6d2ff06e2151d595f1aca36f095f7e04f1bd34909c87fe9ff6e43725e"
+    },
+    {
+      "path": "P1/evidence/measurement/costs_goal2.json",
+      "http_readback_matches": true,
+      "sha256": "fbed2c0c6445e8a3e4543ad6d256cce3f74828a8aca7eb24542138343ac61287"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_review.md",
+      "http_readback_matches": true,
+      "sha256": "872a6bf51f837dfadccb6e8791c8530e19396ec9619090ed599fd54a08a98670"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_visual_addendum.md",
+      "http_readback_matches": true,
+      "sha256": "1d16b4aafe561bb6dce07abc1cdb5dd3322cdf97c1abeb2dbc85b010050dc4d6"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_experiment_report_review.md",
+      "http_readback_matches": true,
+      "sha256": "c9ba17ec825e3428b3110ce5c94b95f9b44260ba4c2681ee734d059356834525"
+    },
+    {
+      "path": "P1/images/framework.svg",
+      "http_readback_matches": true,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4"
+    },
+    {
+      "path": "P1/images/grid_median.png",
+      "http_readback_matches": true,
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61"
+    },
+    {
+      "path": "P1/images/online_search.png",
+      "http_readback_matches": true,
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb"
+    },
+    {
+      "path": "P1/images/interfaces-kernel.png",
+      "http_readback_matches": true,
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3"
+    },
+    {
+      "path": "P1/images/saved-search-results.png",
+      "http_readback_matches": true,
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1"
+    },
+    {
+      "path": "P1/images/build-run.png",
+      "http_readback_matches": true,
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650"
+    }
+  ],
+  "remote_P1_tree_paths": 1048,
+  "publication_scope": "reviewed PARTIAL Goal 2 stage; no Engineering PASS or Shuishan",
+  "verifier_sha256": "9d7ce39f0f34dce605cde63265dbd7198347593c296019c4a3b5c29997e03b49"
+}

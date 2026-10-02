@@ -1,0 +1,264 @@
+{
+  "reviewer": "/root/implementation",
+  "role": "independent_publication_receipt_review",
+  "checked_at_utc": "2026-10-02T22:32:24.392778+00:00",
+  "state": "PUBLISHED_CHECKPOINT_VERIFIED_RECEIPT_INCORPORATION_APPROVED_FINAL_NEXT_COMMIT_PENDING",
+  "repository": "https://github.com/woobowen/Softwaresystemoptimization",
+  "branch": "main",
+  "actually_queried_remote_sha": "95298a0d407dde693d1c362bed544ae41946ccae",
+  "actual_ls_remote_before": "95298a0d407dde693d1c362bed544ae41946ccae\trefs/heads/main",
+  "actual_ls_remote_after": "95298a0d407dde693d1c362bed544ae41946ccae\trefs/heads/main",
+  "local_HEAD_during_check": "95298a0d407dde693d1c362bed544ae41946ccae",
+  "remote_query_command": [
+    "git",
+    "ls-remote",
+    "https://github.com/woobowen/Softwaresystemoptimization.git",
+    "refs/heads/main"
+  ],
+  "receipt": {
+    "path": "P1/evidence/commands/goal2_publication_checkpoint.json",
+    "sha256": "fb6d4162d5bff5c154c78e009b8a438ea87c20bc4408b1fe1cf187b2e92a492e",
+    "recorded_checked_at_utc": "2026-10-02T22:26:27.829815+00:00",
+    "local_remote_match_reverified": true,
+    "currently_absent_from_checked_commit": true,
+    "verifier_sha256_is_producer_record": "9d7ce39f0f34dce605cde63265dbd7198347593c296019c4a3b5c29997e03b49"
+  },
+  "actual_independent_checks": {
+    "critical_git_blobs": 24,
+    "git_blob_size_object_id_SHA256_and_local_bytes_all_match": true,
+    "fresh_public_raw_HTTP_reads": 24,
+    "all_fresh_HTTP_status": 200,
+    "all_fresh_HTTP_bytes_SHA256_match_git_receipt_and_local": true,
+    "final_images": 6,
+    "final_image_hashes_match_previously_actually_opened_final_manifest": true,
+    "remote_P1_tree_paths": 1048,
+    "receipt_public_fixed_links_are_to_exact_checked_commit": true,
+    "receipt_and_three_docs_do_not_claim_future_commit_SHA": true,
+    "next_commit_remote_SHA_has_not_yet_been_queried": true
+  },
+  "checked_paths": [
+    {
+      "path": "P1/report.md",
+      "blob": "0c843290241dbab33243a7ae62e402358ab033c5",
+      "bytes": 9196,
+      "sha256": "279f46ffca5fec400e96722b24193d21990324add0b4a48d3a46dfbd4a2676c2"
+    },
+    {
+      "path": "P1/README.md",
+      "blob": "ebfe3d4ada2c788a72928275d1c1796a31e4beb6",
+      "bytes": 6105,
+      "sha256": "7e19d92166d5762b62021d20f4180789926b4641e66c89c23ec9e1bd485d6206"
+    },
+    {
+      "path": "P1/src/autotuner.py",
+      "blob": "9679295071c0da5971fbc1109337fb2879e5a835",
+      "bytes": 38454,
+      "sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.c",
+      "blob": "4d15ecd649d31a7bd7ad50fa41f43c2a5ea1bc7f",
+      "bytes": 1785,
+      "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835"
+    },
+    {
+      "path": "P1/src/matrix_multiplication.original.c",
+      "blob": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "bytes": 1357,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+    },
+    {
+      "path": "P1/scripts/experiment_v2.py",
+      "blob": "46cc028aaf9203cc4408fc89443f7e7b6d79f354",
+      "bytes": 57863,
+      "sha256": "483a5c26decb3ead1430dabc3e3c53d976625b824797c8ad3a20acd9967daa84"
+    },
+    {
+      "path": "P1/scripts/summarize_v2.py",
+      "blob": "9c4ed0fb8860b0ac699a96b2793f8a095b3dbdef",
+      "bytes": 130610,
+      "sha256": "327c9923cb40a89a368024a431a6d2bb56cd271df11c5aa539f347d3d0e40bbf"
+    },
+    {
+      "path": "P1/evidence/protocol_v2.json",
+      "blob": "bb413e5d33c3a9397b7131b1223a2297f5b4ace8",
+      "bytes": 9900,
+      "sha256": "8ff12729a65650da1e45ff0b29be79b863d733765ae4da16a45451a904aaa78b"
+    },
+    {
+      "path": "P1/evidence/protocol_raw_aa.json",
+      "blob": "ae6273f16bc0e3b6655383710851ec585d2c0635",
+      "bytes": 12352,
+      "sha256": "84dc270fdf5e59feec2b5967001b7507526862f6d90f4844a675c82b79be58b1"
+    },
+    {
+      "path": "P1/results/raw_aa_v3/raw-aa-01-F-A1.jsonl",
+      "blob": "94a6817a07a8f5ce1623d2371dd412ccc2f35c9a",
+      "bytes": 10754,
+      "sha256": "7df967ca5bfead784182ebb687f35ef00e78be3e22eef591871f16602a65f3f5"
+    },
+    {
+      "path": "P1/results/raw_aa_summary_v3/summary.json",
+      "blob": "321e6c63af5fd5c970af57ce5b23d24eb9db27b0",
+      "bytes": 25032,
+      "sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66"
+    },
+    {
+      "path": "P1/results/summary/grid_summary.csv",
+      "blob": "8237704c43a2320efde62ec6dd7fd5ae6d9e0e30",
+      "bytes": 2671,
+      "sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec"
+    },
+    {
+      "path": "P1/results/identity_quality_v2/search_choices.csv",
+      "blob": "581c73fb8a9cc65d0367041b83655f442f896fdc",
+      "bytes": 3788,
+      "sha256": "b4f5773de2ee92891767b740d99c26c00d70da11a2d5585c6998e1f1c05b91df"
+    },
+    {
+      "path": "P1/evidence/goal2_stage_result.md",
+      "blob": "7a587e230ef471e45b7fadb5bc26c6bb3be1f1aa",
+      "bytes": 13093,
+      "sha256": "56ec9ea6d2ff06e2151d595f1aca36f095f7e04f1bd34909c87fe9ff6e43725e"
+    },
+    {
+      "path": "P1/evidence/measurement/costs_goal2.json",
+      "blob": "4203e7098527977298ecd8c63133cc60366b82f6",
+      "bytes": 96159,
+      "sha256": "fbed2c0c6445e8a3e4543ad6d256cce3f74828a8aca7eb24542138343ac61287"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_review.md",
+      "blob": "f330a381d83bdb347facd27642008f17b0d70300",
+      "bytes": 5565,
+      "sha256": "872a6bf51f837dfadccb6e8791c8530e19396ec9619090ed599fd54a08a98670"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_final_code_visual_addendum.md",
+      "blob": "8c4e4edbe24101a3a64e7b22bd22566e16bee879",
+      "bytes": 1663,
+      "sha256": "1d16b4aafe561bb6dce07abc1cdb5dd3322cdf97c1abeb2dbc85b010050dc4d6"
+    },
+    {
+      "path": "P1/evidence/reviews/goal2_experiment_report_review.md",
+      "blob": "2b853c843e2a4551ded6486d26a0ff5ba508fd3f",
+      "bytes": 25502,
+      "sha256": "c9ba17ec825e3428b3110ce5c94b95f9b44260ba4c2681ee734d059356834525"
+    },
+    {
+      "path": "P1/images/framework.svg",
+      "blob": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4"
+    },
+    {
+      "path": "P1/images/grid_median.png",
+      "blob": "8bf2d638bf4c9b0ea166ed39ea733446c4583d22",
+      "bytes": 70249,
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61"
+    },
+    {
+      "path": "P1/images/online_search.png",
+      "blob": "f2c9a2c79416d0ba51ca36d89b941ca78b5c211b",
+      "bytes": 212522,
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb"
+    },
+    {
+      "path": "P1/images/interfaces-kernel.png",
+      "blob": "05936cec577777ccd9526f55c79669925c5eb637",
+      "bytes": 106472,
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3"
+    },
+    {
+      "path": "P1/images/saved-search-results.png",
+      "blob": "ff183f6b3fbb574ea56a7e2606bb8fdc3c9c6e79",
+      "bytes": 94813,
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1"
+    },
+    {
+      "path": "P1/images/build-run.png",
+      "blob": "44656881c5143ef5a1f9e3a9aefc50ae24f6f273",
+      "bytes": 95426,
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650"
+    }
+  ],
+  "six_final_images": [
+    {
+      "path": "P1/images/framework.svg",
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/framework.svg",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/framework.svg"
+    },
+    {
+      "path": "P1/images/grid_median.png",
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/grid_median.png",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/grid_median.png"
+    },
+    {
+      "path": "P1/images/online_search.png",
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/online_search.png",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/online_search.png"
+    },
+    {
+      "path": "P1/images/interfaces-kernel.png",
+      "sha256": "ddd5b247064b2dc3457ca4f579287c0bb2aa25f3e3770197389be97f8f18ffd3",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/interfaces-kernel.png",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/interfaces-kernel.png"
+    },
+    {
+      "path": "P1/images/saved-search-results.png",
+      "sha256": "859ffe04805f0863792be1d26576f0160ed592812cc17934cfefbafeee68fbe1",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/saved-search-results.png",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/saved-search-results.png"
+    },
+    {
+      "path": "P1/images/build-run.png",
+      "sha256": "1590672fa5d2ce761d7bdc1d77c342c5daaf06c39d4d4c664a6477cd37d20650",
+      "raw": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/build-run.png",
+      "webpage": "https://github.com/woobowen/Softwaresystemoptimization/blob/95298a0d407dde693d1c362bed544ae41946ccae/P1/images/build-run.png"
+    }
+  ],
+  "three_document_diff_review": {
+    "paths": [
+      "P1/evidence/README.md",
+      "P1/evidence/current_plan.md",
+      "P1/evidence/requirements.md"
+    ],
+    "after_sha256": {
+      "P1/evidence/README.md": "3c989ddb30f6ea5eda36929f22b7ff747fa5981f735acdbdb1c2dfe4ddf27618",
+      "P1/evidence/current_plan.md": "f7696f8fa202622244cb65c83e96948ca136fe44d5e6b6354b78b36955b444b5",
+      "P1/evidence/requirements.md": "07e601fd5f6471ac952cea9306162570f189b468726b63c971496a955c9fa20c"
+    },
+    "diff_sha256": "fe480bd1cdec08df12beafa36a76a348a2d46ccc4093834dbe7d04885b6ebb14",
+    "diff_text": "diff --git a/P1/evidence/README.md b/P1/evidence/README.md\nindex 817e0d0..593529b 100644\n--- a/P1/evidence/README.md\n+++ b/P1/evidence/README.md\n@@ -5,6 +5,7 @@\n ## 本阶段\n \n - [完整阶段交接事实](goal2_stage_result.md)、[滚动事实及资源边界](current_plan.md)、[逐项要求状态](requirements.md)、[C1—C7闭环](goal2_review_closure.md)\n+- [实际GitHub阶段发布核对](commands/goal2_publication_checkpoint.json)：核对提交95298a0，24个远端blob及24个raw内容与本地一致；记录随后另提交，最终SHA见最后交接，不把记录自身当作自我SHA证明。\n - [431历史保护清单与起始A1/A2 tree](history_goal2.json)、[实际多代理和文件owner](agents_goal2.md)\n - [只读环境](environment/goal2.json)、[复用工具/零新增依赖/精确局部清理](environment/goal2_dependencies.json)\n - [初始诊断协议](protocol_diagnostic.json)、[有限追加设计](measurement/clock_followup_design.md)、[实际联合分析](measurement/clock_followup_analysis.md)\ndiff --git a/P1/evidence/current_plan.md b/P1/evidence/current_plan.md\nindex a94be65..41a21e3 100644\n--- a/P1/evidence/current_plan.md\n+++ b/P1/evidence/current_plan.md\n@@ -68,3 +68,7 @@ Goal1旧滚动记录留在受审提交的Git历史，不复制成多份最终文\n - 两类独立阶段终审完成后，将如实PARTIAL版本正常提交/推GitHub main，再真实核对remote SHA和关键blob/图片。不操作水杉、不以软件交付审核代替最终Engineering验收。\n \n - ER9来源修补：两viewer已从实际字段派生并重拍，保留旧全文/新SHA/输入SHA。额外0目标调用/2.366576756秒，末账48调用/3713.432874365秒，五次安全capture均清理；原3711.066297609是修补前checkpoint。最后交接事实见goal2_stage_result.md。\n+\n+## 实际GitHub阶段发布\n+\n+两类独立终审已经冻结允许如实PARTIAL发布。于2026-10-02T22:26:27.829815+00:00核对已正常push到main，提交95298a0d407dde693d1c362bed544ae41946ccae；随后actual ls-remote前后均同SHA，fetch后的24关键blob和24个public raw HTTP内容与本地逐SHA相同，P1远端树1048路径，记录在commands/goal2_publication_checkpoint.json。此是已发生的发布checkpoint；核对记录随后另commit/push并再次actual查询最终SHA。源/数据/报告和已冻结审核不再改动，累计48/3713.432874365不变。\ndiff --git a/P1/evidence/requirements.md b/P1/evidence/requirements.md\nindex 4439dbd..183ab2d 100644\n--- a/P1/evidence/requirements.md\n+++ b/P1/evidence/requirements.md\n@@ -21,7 +21,7 @@ Goal1 原矩阵保留在受审提交 `3ac0c4688b964c873379d012cbcf09afb7ed0937`\n | S3有限重复单因素闭环 | recheck6+2、optimization_goal2、literature_goal2 | 实现及回归已测；真实配对/选择/留出NOT_EXECUTED，无KEEP/REJECT |\n | 问题修复及两类终审 | goal2_review_closure / reviews两个最终路径 | 常规软件问题已修并实际回归、两类阶段终审；钟域核心依赖仍受阻 |\n | 干净复现/安全截图/完整图片视觉 | reproduction/goal2 / screenshots_goal2 / images_goal2 | 干净221/19及四冷通过，3安全终端/6图实际查看；唯一fresh被原live guard止为PARTIAL |\n-| GitHub main阶段发布及实际SHA | 最终publication证据 | 内部终审后正常main发布，精确实际SHA见最终交接；不宣称最终Engineering PASS |\n+| GitHub main阶段发布及实际SHA | [实际发布checkpoint](commands/goal2_publication_checkpoint.json) | 两类内部终审后正常main发布95298a0；实际remote SHA相同，24blob及24HTTP内容一致。记录随后正常入库，最终SHA另作实际核对，不宣称最终Engineering PASS |\n | 清理/依赖/范围 | environment/goal2_dependencies.json / A1A2 tree / protected hashes | 新系统/语言包/工具链/全局配置均0；仅精确删除旧下载包，用户输入保留 |\n \n Goal2：PARTIAL（性能可比性依赖阻塞）。Engineering：IN_PROGRESS，等待实际GitHub外部FINAL_REVIEW。Submission：NOT_READY，未提交水杉。\n",
+    "only_published_checkpoint_reference_added_or_updated": true,
+    "PARTIAL_preserved": true,
+    "Engineering_IN_PROGRESS_external_review_preserved": true,
+    "Submission_NOT_READY_preserved": true,
+    "unexecuted_performance_not_upgraded": true
+  },
+  "frozen_prior_audits_unchanged": {
+    "goal2_experiment_report_review.md": "c9ba17ec825e3428b3110ce5c94b95f9b44260ba4c2681ee734d059356834525",
+    "goal2_experiment_report_review.json": "9462a3c08906682caed44f6f95c68f67160314588200ab1389b3bbb11f0ec09a"
+  },
+  "remaining": "ROOT to normally commit/push this receipt and reviewed references plus new publication-review files, then actually query final remote SHA and read back final key content. Keep final receipt in ignored cache to avoid a commit-record self-reference cycle.",
+  "approved_scope": "Commit real published-checkpoint verification evidence and reviewed navigational references; no approval of missing performance or final Engineering PASS.",
+  "allowed_receipt_incorporation": true,
+  "full_goal2_complete": false,
+  "formal_performance_admission": false,
+  "Engineering_final_PASS_assigned": false,
+  "Shuishan_submitted": false,
+  "executed_by_reviewer": {
+    "network_read_queries": "actual git ls-remote and24public raw HTTP",
+    "tests": 0,
+    "compilations": 0,
+    "GUI": 0,
+    "n4096": 0,
+    "remote_mutations": 0,
+    "fetches": 0,
+    "Git_object_writes": 0
+  },
+  "scope_note": "Git object checks use existing immutable local object IDs for the actually queried remote commit; fresh24HTTP independently verify that exact commit content on GitHub. No frozen review/report/source/results altered."
+}

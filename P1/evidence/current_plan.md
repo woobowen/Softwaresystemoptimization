@@ -68,3 +68,7 @@ Goal1旧滚动记录留在受审提交的Git历史，不复制成多份最终文
 - 两类独立阶段终审完成后，将如实PARTIAL版本正常提交/推GitHub main，再真实核对remote SHA和关键blob/图片。不操作水杉、不以软件交付审核代替最终Engineering验收。
 
 - ER9来源修补：两viewer已从实际字段派生并重拍，保留旧全文/新SHA/输入SHA。额外0目标调用/2.366576756秒，末账48调用/3713.432874365秒，五次安全capture均清理；原3711.066297609是修补前checkpoint。最后交接事实见goal2_stage_result.md。
+
+## 实际GitHub阶段发布
+
+两类独立终审已经冻结允许如实PARTIAL发布。于2026-10-02T22:26:27.829815+00:00核对已正常push到main，提交95298a0d407dde693d1c362bed544ae41946ccae；随后actual ls-remote前后均同SHA，fetch后的24关键blob和24个public raw HTTP内容与本地逐SHA相同，P1远端树1048路径，记录在commands/goal2_publication_checkpoint.json。此是已发生的发布checkpoint；核对记录随后另commit/push并再次actual查询最终SHA。源/数据/报告和已冻结审核不再改动，累计48/3713.432874365不变。

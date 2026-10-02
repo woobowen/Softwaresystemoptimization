@@ -5,6 +5,7 @@
 ## 本阶段
 
 - [完整阶段交接事实](goal2_stage_result.md)、[滚动事实及资源边界](current_plan.md)、[逐项要求状态](requirements.md)、[C1—C7闭环](goal2_review_closure.md)
+- [实际GitHub阶段发布核对](commands/goal2_publication_checkpoint.json)：核对提交95298a0，24个远端blob及24个raw内容与本地一致；记录随后另提交，最终SHA见最后交接，不把记录自身当作自我SHA证明。
 - [431历史保护清单与起始A1/A2 tree](history_goal2.json)、[实际多代理和文件owner](agents_goal2.md)
 - [只读环境](environment/goal2.json)、[复用工具/零新增依赖/精确局部清理](environment/goal2_dependencies.json)
 - [初始诊断协议](protocol_diagnostic.json)、[有限追加设计](measurement/clock_followup_design.md)、[实际联合分析](measurement/clock_followup_analysis.md)
