@@ -1,0 +1,244 @@
+{
+  "state": "frozen_before_two_numeric_calls",
+  "frozen_at_utc": "2026-10-02T20:24:08.320078+00:00",
+  "protocol": {
+    "path": "evidence/protocol_raw_diagnostic.json",
+    "sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796"
+  },
+  "aa_plan_sha256": "dff23cf65a61c286e4e196a34fbe9f6b334e0914cf3b39354d30a62d0ccfd253",
+  "driver_sha256": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+  "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+  "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+  "ledger_snapshot": {
+    "rows": 359,
+    "sha256": "a60bad267987befe76463be4850dec7206fb9a08e9d4751c3f7414b57ffa82da",
+    "fingerprint": "79128b6e3b1c4ebc8265d7d22cfeb728d3089f7853a6929ab4e211c2332ce154"
+  },
+  "actual_n4096_calls": 44,
+  "actual_resource_s": 3270.659356136,
+  "resource_domain": "sum max positive MONOTONIC,RAW,REALTIME per controlled task",
+  "cap_calls": 520,
+  "cap_resource_s": 57600,
+  "finite_numeric_jobs": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "call_upper": 1,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "24",
+        "--opt",
+        "O0",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl"
+      ]
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "call_upper": 1,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "128",
+        "--opt",
+        "O3",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl"
+      ]
+    }
+  ],
+  "finite_aa_jobs": [
+    {
+      "id": "raw-aa-01-F-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-02-F-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-03-M-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-04-M-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-05-M-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-06-M-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-07-F-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-08-F-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    }
+  ],
+  "finite_stage_call_upper": 10,
+  "remaining_formal_stages": {
+    "reference": 70,
+    "comparison_with_S3": 283,
+    "candidate_confirmation": 76,
+    "baseline_confirmation": 43,
+    "greedy_starts": 32,
+    "fresh_reproduction": 1
+  },
+  "candidate_project_call_upper": 516,
+  "baseline_project_call_upper": 483,
+  "shared_candidate_reserve": 4,
+  "remaining_hard_resource_s": 54329.340643864,
+  "finite_target_timeout_sum_s": 12000,
+  "all_remaining_candidate_target_timeout_sum_s": 566400,
+  "scenarios": {
+    "old_frozen_plan_path": "evidence/measurement/resource_plan_v2.json",
+    "old_plan_sha256": "632f574048caecbded6692ff6e755fd13128ef8762793aa401a4c15b14d9c447",
+    "additional_diagnostic_numeric_scenario_s": 918.2409014509999,
+    "candidate_nominal_s": 43144.737765051,
+    "baseline_nominal_s": 40086.287558151
+  },
+  "limitations": [
+    "Old MONOTONIC results are uncorrected planning inputs only, not new RAW scores or guaranteed costs.",
+    "The absolute sum of individual timeouts exceeds 16h; actual stricter remaining cap stops each controlled task.",
+    "After new AA, update a separate formal resource plan from actual new costs; never overwrite this frozen plan.",
+    "No formal, search, extra warmup, automatic retry or seed replacement is authorized by this finite stage."
+  ]
+}

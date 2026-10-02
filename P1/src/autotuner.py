@@ -160,8 +160,9 @@ class TargetProgram:
         self.require_checksum = bool(re.search(r'printf\s*\(\s*"checksum=', source_text))
         code = re.sub(r'//[^\n]*|/\*.*?\*/|"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'',
                       " ", source_text, flags=re.S)
-        self.kernel_clock = "CLOCK_MONOTONIC" if re.search(
-            r"\bclock_gettime\s*\(\s*CLOCK_MONOTONIC\s*,", code) else "unknown"
+        clocks = set(re.findall(r"\bclock_gettime\s*\(\s*(CLOCK_[A-Z_]+)\s*,", code))
+        self.kernel_clock = next(iter(clocks)) if len(clocks) == 1 and clocks <= {
+            "CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW"} else "unknown"
         match = re.search(r"^\s*#\s*define\s+n\s+(\d+)\b", source_text, re.M)
         self.n = int(match[1]) if match else None
 
@@ -268,11 +269,12 @@ class TargetProgram:
                     raise ValueError("missing checksum output for this target")
             except ValueError as exc:
                 result.update(status="parse_error", error=str(exc), kernel_s=None)
-            if result["status"] == "ok" and self.kernel_clock == \
-                    result.get("process_wall_clock", "CLOCK_MONOTONIC") and \
-                    self.kernel_clock != "unknown" and \
-                    result["kernel_s"] > result["process_wall_s"] + .005:
-                result.update(status="clock_error", error="kernel elapsed exceeds process wall time + 0.005 s")
+            if result["status"] == "ok" and self.kernel_clock != "unknown":
+                wall = result.get("clock_deltas_s", {}).get(self.kernel_clock)
+                if type(wall) not in (int, float) or not math.isfinite(wall) or wall <= 0:
+                    result.update(status="clock_error", error="missing or invalid same-domain process interval")
+                elif result["kernel_s"] > wall + .005:
+                    result.update(status="clock_error", error="kernel elapsed exceeds same-domain process time + 0.005 s")
         return result
 
 

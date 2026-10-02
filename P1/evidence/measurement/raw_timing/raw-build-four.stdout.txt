@@ -1,0 +1,378 @@
+{
+  "target": {
+    "source": "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+    "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "n": 4096,
+    "compiler": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "compile_timeout": 60,
+    "require_checksum": true,
+    "kernel_clock": "CLOCK_MONOTONIC_RAW"
+  },
+  "builds": [
+    {
+      "build_key": "e0725a33727f7aff78173874e52c7d7c7ceb4b0f87ac79034c4621751c1bac89",
+      "opt": "O0",
+      "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/e0725a33727f7aff78173874e52c7d7c7ceb4b0f87ac79034c4621751c1bac89",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O0"
+      ],
+      "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O0",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/compile-wg6bjj74"
+        ],
+        "started_at": "2026-10-02T19:55:19.199611+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 383845,
+        "ended_at": "2026-10-02T19:55:19.322440+00:00",
+        "process_wall_s": 0.122811272,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 89611560849326,
+          "CLOCK_MONOTONIC_RAW": 93793592412671,
+          "CLOCK_REALTIME": 1790970919199619441
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 89611683660598,
+          "CLOCK_MONOTONIC_RAW": 93793718119343,
+          "CLOCK_REALTIME": 1790970919322431679
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.122811272,
+          "CLOCK_MONOTONIC_RAW": 0.125706672,
+          "CLOCK_REALTIME": 0.122812238
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.0008089999999999999,
+          "system": 0.0
+        },
+        "child_cpu_end_s": {
+          "user": 0.013977,
+          "system": 0.011628
+        },
+        "child_user_cpu_s": 0.013168,
+        "child_system_cpu_s": 0.011628
+      },
+      "status": "ok",
+      "compile_wall_s": 0.122811272,
+      "binary_sha256": "5736635a5a5059cfa86a23a93483c81e16ff93ea19c3eb52bb88cd7993a46686"
+    },
+    {
+      "build_key": "39a50eaa1725ad050ff032dc46866b4fd6643b6f14e9a24b73006e15d7b084b6",
+      "opt": "O1",
+      "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/39a50eaa1725ad050ff032dc46866b4fd6643b6f14e9a24b73006e15d7b084b6",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O1"
+      ],
+      "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O1",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/compile-en3qnq0y"
+        ],
+        "started_at": "2026-10-02T19:55:19.322989+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 383850,
+        "ended_at": "2026-10-02T19:55:19.458042+00:00",
+        "process_wall_s": 0.135037437,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 89611684227335,
+          "CLOCK_MONOTONIC_RAW": 93793718698285,
+          "CLOCK_REALTIME": 1790970919322997290
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 89611819264772,
+          "CLOCK_MONOTONIC_RAW": 93793856919445,
+          "CLOCK_REALTIME": 1790970919458035745
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.135037437,
+          "CLOCK_MONOTONIC_RAW": 0.13822116,
+          "CLOCK_REALTIME": 0.135038455
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.013977,
+          "system": 0.011628
+        },
+        "child_cpu_end_s": {
+          "user": 0.048777,
+          "system": 0.014959
+        },
+        "child_user_cpu_s": 0.0348,
+        "child_system_cpu_s": 0.0033310000000000006
+      },
+      "status": "ok",
+      "compile_wall_s": 0.135037437,
+      "binary_sha256": "bc86613a1d949d634b18ebe27b014881036259432bf584465291b301f5151863"
+    },
+    {
+      "build_key": "a7375bdb69b3572824899a64e1b1f3f2e1d9e78bad18c64bb992d91f58047ee6",
+      "opt": "O2",
+      "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/a7375bdb69b3572824899a64e1b1f3f2e1d9e78bad18c64bb992d91f58047ee6",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O2"
+      ],
+      "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/compile-c2x45x8v"
+        ],
+        "started_at": "2026-10-02T19:55:19.458530+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 383855,
+        "ended_at": "2026-10-02T19:55:19.597607+00:00",
+        "process_wall_s": 0.139061718,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 89611819768464,
+          "CLOCK_MONOTONIC_RAW": 93793857434027,
+          "CLOCK_REALTIME": 1790970919458538599
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 89611958830182,
+          "CLOCK_MONOTONIC_RAW": 93793999773913,
+          "CLOCK_REALTIME": 1790970919597600857
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.139061718,
+          "CLOCK_MONOTONIC_RAW": 0.142339886,
+          "CLOCK_REALTIME": 0.139062258
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.048777,
+          "system": 0.014959
+        },
+        "child_cpu_end_s": {
+          "user": 0.078697,
+          "system": 0.027007
+        },
+        "child_user_cpu_s": 0.029920000000000002,
+        "child_system_cpu_s": 0.012048
+      },
+      "status": "ok",
+      "compile_wall_s": 0.139061718,
+      "binary_sha256": "93cf81cccc36d45beff38e5df62c43400df48a3a39465a6cb8aeb279ddc7ed91"
+    },
+    {
+      "build_key": "32c46fa1002c086a3727e11eddbab78953d14b4754010e1930937e2aeb2e89d9",
+      "opt": "O3",
+      "binary": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/32c46fa1002c086a3727e11eddbab78953d14b4754010e1930937e2aeb2e89d9",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O3"
+      ],
+      "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "cached": false,
+      "compile": {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O3",
+          "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+          "-o",
+          "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_raw/compile-7f7x1a0_"
+        ],
+        "started_at": "2026-10-02T19:55:19.598084+00:00",
+        "spawned": true,
+        "stdout": "",
+        "stderr": "",
+        "returncode": 0,
+        "status": "ok",
+        "error": null,
+        "pid": 383860,
+        "ended_at": "2026-10-02T19:55:19.739504+00:00",
+        "process_wall_s": 0.141404153,
+        "process_wall_clock": "CLOCK_MONOTONIC",
+        "clock_unit": "ns",
+        "clock_read_order": [
+          "CLOCK_MONOTONIC",
+          "CLOCK_MONOTONIC_RAW",
+          "CLOCK_REALTIME"
+        ],
+        "clock_start_ns": {
+          "CLOCK_MONOTONIC": 89611959322430,
+          "CLOCK_MONOTONIC_RAW": 93794000277056,
+          "CLOCK_REALTIME": 1790970919598092347
+        },
+        "clock_end_ns": {
+          "CLOCK_MONOTONIC": 89612100726583,
+          "CLOCK_MONOTONIC_RAW": 93794145015104,
+          "CLOCK_REALTIME": 1790970919739497794
+        },
+        "clock_deltas_s": {
+          "CLOCK_MONOTONIC": 0.141404153,
+          "CLOCK_MONOTONIC_RAW": 0.144738048,
+          "CLOCK_REALTIME": 0.141405447
+        },
+        "boundary_read_order": {
+          "start": [
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME",
+            "RUSAGE_CHILDREN"
+          ],
+          "end": [
+            "RUSAGE_CHILDREN",
+            "CLOCK_MONOTONIC",
+            "CLOCK_MONOTONIC_RAW",
+            "CLOCK_REALTIME"
+          ]
+        },
+        "child_cpu_start_s": {
+          "user": 0.078697,
+          "system": 0.027007
+        },
+        "child_cpu_end_s": {
+          "user": 0.112616,
+          "system": 0.037599
+        },
+        "child_user_cpu_s": 0.03391899999999999,
+        "child_system_cpu_s": 0.010592
+      },
+      "status": "ok",
+      "compile_wall_s": 0.141404153,
+      "binary_sha256": "274315f7f0e9f8000cfea414a657e0f26948f0ddf89f3019afc93f2f16d483a7"
+    }
+  ]
+}

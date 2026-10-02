@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "use": "clock_baselines_only",
+  "fixed_commit": "a39f348e6cf0c7466900ec739a797753f4d93f0b",
+  "ledger_prefix": {
+    "rows": 296,
+    "fingerprint": "19f0ce3a381a1ab1e58dc273a3bf845355bdc53b61710f6896054abd494b7f56",
+    "bytes": 190041,
+    "sha256": "b8fda62b67ed5cb486fc4090c12e2d39a9d1a561200fbb95f239cd81c99d2b79"
+  },
+  "legacy_target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096,
+    "framework_sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "kernel_clock": "CLOCK_MONOTONIC"
+  },
+  "legacy_numeric_binding": {
+    "path": "evidence/measurement/correctness/numeric_clock_baselines.json",
+    "sha256": "170903811396626eebb0898ce5a8ed478fc20681ca095a155d8a5023843df5c3",
+    "use": "only the two explicitly bound validation processes may supply clock history; never reference or search scores"
+  },
+  "legacy_diagnostic_identity_files": [
+    {
+      "path": "evidence/measurement/clocks/identity.json",
+      "sha256": "c4820f1fe6ed2dde60845073c9c565cbaa2b9b555a21d71436c34bbbfe362727"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/plan.json",
+      "sha256": "1a24136fe224880c98cf819f56e64eea64cd315a084aeda431809b914b7fc19e"
+    }
+  ],
+  "legacy_journals": [
+    {
+      "path": "evidence/measurement/correctness/goal2-n4096-O0-s24.jsonl",
+      "sha256": "597cb4c72523a114577348ed367979deafcbaa875b9136cad2c0454fbbf0b927",
+      "metadata_fingerprint": "dfcaf3697a86086d75d28ed1c235e128beb126ed4e868ad8ebecb98573c6f2ce"
+    },
+    {
+      "path": "evidence/measurement/correctness/goal2-n4096-O3-s128.jsonl",
+      "sha256": "dfe0ec8ffd05252e593b91e72ada60f124d0e36b3de2623adcecbab808e49d7a",
+      "metadata_fingerprint": "04d76152f2b3788f01f823223dc36520c6eac79486b8411c5b482c16b7004ad5"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-01-M-B3.jsonl",
+      "sha256": "f52bde137d1ab91de1e30e44ed4603f42c3732ea83b3e2e26eae3ee930deb643",
+      "metadata_fingerprint": "4905b42b991d88fc39955a8620b475091e48c8b4307589edcde1e814d9d92c7f"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-02-F-A3.jsonl",
+      "sha256": "0b031e9915cb3b90ac60ff03151d856008a7900f2ac701c8cb663be0860b1da8",
+      "metadata_fingerprint": "b08c155a4404c177667ef546dfb4526d1edd78882cddc04bab7cfc44db36456b"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-05-F-A1.jsonl",
+      "sha256": "b11645064fd24db68493c936c144809af363defc6d458d216ca13740805b03f5",
+      "metadata_fingerprint": "b08c155a4404c177667ef546dfb4526d1edd78882cddc04bab7cfc44db36456b"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-06-F-B1.jsonl",
+      "sha256": "feb03b6ee982a6a73ff746fb8d702d8d16ea8b9b3852d732b8d5325283365378",
+      "metadata_fingerprint": "b08c155a4404c177667ef546dfb4526d1edd78882cddc04bab7cfc44db36456b"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-07-M-B1.jsonl",
+      "sha256": "08bf1173d97e2b98a062af4b0cf9abf621836a025e45073b705600cf9adc2f03",
+      "metadata_fingerprint": "4905b42b991d88fc39955a8620b475091e48c8b4307589edcde1e814d9d92c7f"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-08-M-A1.jsonl",
+      "sha256": "51473a0ccab4eab71d2c2293bfab3a6e9b7f6af652283f7de92ae55ca28c9274",
+      "metadata_fingerprint": "4905b42b991d88fc39955a8620b475091e48c8b4307589edcde1e814d9d92c7f"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-09-M-A2.jsonl",
+      "sha256": "d857afd4b74b206e696dc467e42f61c695ce54ee3cac15bc4a2048a46401f5b6",
+      "metadata_fingerprint": "4905b42b991d88fc39955a8620b475091e48c8b4307589edcde1e814d9d92c7f"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-10-M-B2.jsonl",
+      "sha256": "80b38aa8bdeaac73f346e6176a1a75ab5b94ba4a68245bad029d13085f6829af",
+      "metadata_fingerprint": "4905b42b991d88fc39955a8620b475091e48c8b4307589edcde1e814d9d92c7f"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-11-F-B2.jsonl",
+      "sha256": "63f9f2858723cf9b65bf679bb6fa6387d9a39a4fb787bae7b8fd5ac9b5fea147",
+      "metadata_fingerprint": "b08c155a4404c177667ef546dfb4526d1edd78882cddc04bab7cfc44db36456b"
+    },
+    {
+      "path": "results/clock_followup_v2_r1/clock-followup-12-F-A2.jsonl",
+      "sha256": "68c05ad710cdd1f1d146ee0a1ca30f1f1c16da6bad496617f1a5979eb8b84f1e",
+      "metadata_fingerprint": "b08c155a4404c177667ef546dfb4526d1edd78882cddc04bab7cfc44db36456b"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-01-F-A1.jsonl",
+      "sha256": "9d1b95146a8c000f16bf1a6f55f4733e92390debe1b1d4afe773acc60a1f4fd1",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-02-F-A2.jsonl",
+      "sha256": "064e4e2cc79875c9c3ba0abe18c3c7b6bb816c5e3217fadae47f509340317caa",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-03-M-B1.jsonl",
+      "sha256": "5565599d07f7972a999f595a32b516f5e2fa24fae8d7ead4322a69689a1e3a22",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-04-M-B2.jsonl",
+      "sha256": "26e77fe805d9ce656943fa0541150e3558e092017f1fd12cdbad01882b090c2e",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-05-F-B1.jsonl",
+      "sha256": "c5bb98f3e917e4ef3c0cb12e331025104a85c5b0dca07d6b27aa06d5650e8be3",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b1-06-M-A1.jsonl",
+      "sha256": "bdbfec3902e9ff77ef2b84d89479a2aab2fafc3bc69d373afa0fdc75e6947c4e",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-01-F-anchor-before.jsonl",
+      "sha256": "ec18ac86ffe80e8739a09ba36ed8b8151e6079e13ab102231e17f94dc129f89c",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-02-F-A1.jsonl",
+      "sha256": "3efc5f9495a9604af36d56fc5f4510bac4833f3dce98cd2c6bcaba372e6a1237",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-03-F-B1.jsonl",
+      "sha256": "d6195b17cc8c2af265ecc06f91c720da928f273e365ca24a58f801131d6066cb",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-04-M-B1.jsonl",
+      "sha256": "d1655c7e82507b55fecb1519e88f817725b39168286dfa1c72d7a957ce5e555c",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-05-M-A1.jsonl",
+      "sha256": "7d25327713d41caca6c1505da1d2570eebcb8ad43322d2c7aab375554be13ed9",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-06-F-B2.jsonl",
+      "sha256": "40f57b2e44d6630a29e0fe548059a0a0f0114bf27cb88aec17a70a6fda9863db",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-07-F-A2.jsonl",
+      "sha256": "1b78b5c5117b7777ee39d5990e4ac1d49087f594bba70bb6c912680d38cea94a",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b2-08-F-anchor-after.jsonl",
+      "sha256": "a5fc2b2f90bbb7393f10b4bcc8d8e9364ea26c9915b79ef4d10b59d9c5708e80",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-01-F-anchor-before.jsonl",
+      "sha256": "e91aab3b2fe34abedd73a8e32cae451f9739563edae1c2234b198a9bbf86973c",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-02-M-A2.jsonl",
+      "sha256": "40bd3e1ebf7249a40b4b0d275ab39836b8c70d290f2f7bad39f3f6a0070f1921",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-03-M-B2.jsonl",
+      "sha256": "8b14bd78c2051e4bd5eef447d8ee86d448d8f0105f0e1c6c2c7f5ff32c4955c7",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-04-F-A3.jsonl",
+      "sha256": "038bcba12965fe9f30c07fd72045b8c167ecbe2b17f7c4a722cc497f46b65fde",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-05-F-B3.jsonl",
+      "sha256": "6fd8e40a28768eaba59f708f67a24bd753732241fc83dfe6b63cac465e363df7",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-06-M-B3.jsonl",
+      "sha256": "394b327d093bde4d132ffdcdb7141605adf1299d8d0b825971a4c2bdc635be3f",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-07-M-A3.jsonl",
+      "sha256": "6a298eaa13c483d6fbc7d5acef076da3db17661df11d980a902a28f3754f67b5",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b3-08-F-anchor-after.jsonl",
+      "sha256": "abebcfa4e2771f8d973e01ee83286aa6626d8a9b6b857cab669e05ad3006244a",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b4-01-M-A2.jsonl",
+      "sha256": "8d21e26764b41df940a549c85ff09bc8a44bc0a2a6d08df1f0f37d23c7bc56a7",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b4-02-M-A3.jsonl",
+      "sha256": "f1b4ce93af60238238c334c05a34b56ec52bd3c300431bc3616103349bd5c5a2",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b4-03-F-B2.jsonl",
+      "sha256": "ff251f4500bae6b931bfa327bbdab85b2d23623f9a1be06fc15e8e45c05e5bbb",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b4-04-F-B3.jsonl",
+      "sha256": "9b2144d506b29946a05529b1617580907621b92fe9446e91f0a4774bf6d1f0a2",
+      "metadata_fingerprint": "cca25e2792171fae5390d421b489bcc502e9084c1188a335f49ee522a3ebaf36"
+    },
+    {
+      "path": "results/diagnostic_v2/diagnostic-b4-05-M-B3.jsonl",
+      "sha256": "c775a63138754784ce05d51590536dd40e2a8408d07c34d222e307697307fdcc",
+      "metadata_fingerprint": "72f3fc2c12c544c1b4e65e11ddba5b2960e735700f52d54a4729b0b0d41984ae"
+    },
+    {
+      "path": "results/reference_v2/warmup-reference.jsonl",
+      "sha256": "348dd486037b3656e1b64ff6d15c67298e1ffb454c9ed4a5239bf3909cd2002f",
+      "metadata_fingerprint": "9cedb1f1e09698f8737d39d67a510ca05dec529818bd5062b668a9c44ed6e7ba"
+    }
+  ],
+  "new_target_identities": [
+    {
+      "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "n": 4096,
+      "kernel_clock": "CLOCK_MONOTONIC_RAW",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "runtime_affinity": [
+        0
+      ],
+      "source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra"
+      ]
+    },
+    {
+      "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "n": 4096,
+      "kernel_clock": "CLOCK_MONOTONIC_RAW",
+      "compiler": {
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+      },
+      "runtime_affinity": [
+        0
+      ],
+      "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Wl,--no-as-needed",
+        "-lm"
+      ]
+    }
+  ],
+  "baseline_filter": "same boot, completed actual matrix; returncode=0, reason=null, known cost/calls, no clock_conflict; first and previous remain original physical order",
+  "ratio": "raw/realtime"
+}

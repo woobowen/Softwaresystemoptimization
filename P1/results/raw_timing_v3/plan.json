@@ -1,0 +1,125 @@
+{
+  "schema": 2,
+  "stage": "raw_aa",
+  "protocol": "evidence/protocol_raw_diagnostic.json",
+  "protocol_sha256": "03218fe910a46abc18dbaa9e8d1070941bbff07236a662fa05536c3200330796",
+  "target_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+  "framework_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+  "driver_sha256": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "algorithms": null,
+  "jobs": [
+    {
+      "id": "raw-aa-01-F-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-02-F-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-03-M-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-04-M-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-05-M-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-06-M-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-07-F-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-08-F-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "schema": 3,
+  "state": "approved",
+  "scope": "two numeric validation calls and eight independent RAW AA calls only; no formal or search admission",
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096,
+    "binaries": [
+      {
+        "opt": "O0",
+        "binary_sha256": "5736635a5a5059cfa86a23a93483c81e16ff93ea19c3eb52bb88cd7993a46686",
+        "build_key": "e0725a33727f7aff78173874e52c7d7c7ceb4b0f87ac79034c4621751c1bac89",
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O0"
+        ]
+      },
+      {
+        "opt": "O1",
+        "binary_sha256": "bc86613a1d949d634b18ebe27b014881036259432bf584465291b301f5151863",
+        "build_key": "39a50eaa1725ad050ff032dc46866b4fd6643b6f14e9a24b73006e15d7b084b6",
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O1"
+        ]
+      },
+      {
+        "opt": "O2",
+        "binary_sha256": "93cf81cccc36d45beff38e5df62c43400df48a3a39465a6cb8aeb279ddc7ed91",
+        "build_key": "a7375bdb69b3572824899a64e1b1f3f2e1d9e78bad18c64bb992d91f58047ee6",
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O2"
+        ]
+      },
+      {
+        "opt": "O3",
+        "binary_sha256": "274315f7f0e9f8000cfea414a657e0f26948f0ddf89f3019afc93f2f16d483a7",
+        "build_key": "32c46fa1002c086a3727e11eddbab78953d14b4754010e1930937e2aeb2e89d9",
+        "flags": [
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-O3"
+        ]
+      }
+    ]
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build_raw",
+    "warmup": {
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "score_clock": "CLOCK_MONOTONIC_RAW",
+    "process_clock": "CLOCK_MONOTONIC",
+    "cost_clock": "CLOCK_MONOTONIC_RAW",
+    "resource_clock": "max_positive_MONOTONIC_RAW_REALTIME_per_task",
+    "clock_health": {
+      "timer": "CLOCK_MONOTONIC_RAW",
+      "kernel_over_process_tolerance_s": 0.005,
+      "guard": "completed_per_target_process_and_driver_first_and_previous_same_boot",
+      "guard_mode": "complete_raw_realtime_target_and_driver",
+      "guard_schema": 2,
+      "raw_realtime_ratio_change_fraction": 0.02,
+      "clock_history": {
+        "path": "evidence/measurement/raw_timing/clock_history.json",
+        "sha256": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3"
+      },
+      "raw_monotonic_use": "record full intervals as diagnostics; old protocol and stopped result remain unchanged",
+      "numeric_binding_path": "evidence/measurement/raw_timing/numeric_clock_baselines.json"
+    },
+    "arrangement": "M1",
+    "performance_lock": ".cache/performance.lock"
+  },
+  "approval": {
+    "code_evidence": "evidence/reviews/goal2_raw_timing_review.md",
+    "method_evidence": "evidence/reviews/goal2_raw_timing_review.md",
+    "frozen_at_utc": "2026-10-02T20:24:08.310633+00:00",
+    "gate_json": "evidence/reviews/goal2_raw_timing_review.json",
+    "gate_json_sha256": "155de5f7722579e30b658c724e424c6e92c2fb065421beea3c1f4210006d16f5",
+    "code_evidence_sha256": "15320f3320a16b04a22173da8ac23503b2c44a4ae46888f3592544ef61c2e73c",
+    "method_evidence_sha256": "15320f3320a16b04a22173da8ac23503b2c44a4ae46888f3592544ef61c2e73c",
+    "numeric_execution_approved": true,
+    "aa_execution_requires_new_independent_result_and_analysis_gate": true,
+    "full_formal_execution_approved": false
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true,
+    "unknown_cost_is_zero": false
+  },
+  "resources": {
+    "max_process_runs": 520,
+    "max_wall_s": 57600,
+    "this_stage_n4096_calls": 10,
+    "aa_calls": 8,
+    "numeric_calls": 2,
+    "project_candidate_upper": 516,
+    "project_baseline_upper": 483,
+    "automatic_retries": 0
+  },
+  "execution": {
+    "driver": {
+      "path": "scripts/experiment_v2.py",
+      "sha256": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c"
+    },
+    "regression": [
+      {
+        "path": "tests/test_goal2_driver.py",
+        "sha256": "4296651b6c9461f293d556f9c953fd5d6b1a10ea24975cc612873b15a57f8e01"
+      },
+      {
+        "path": "tests/test_clock_followup.py",
+        "sha256": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032"
+      }
+    ],
+    "analysis": {
+      "path": "scripts/summarize_v2.py",
+      "sha256": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71"
+    },
+    "analysis_tests": {
+      "path": "tests/test_goal2_summary.py",
+      "sha256": "895ba1efeb7acbd55969aaf6ac851a474c62dd75b0b972fd26adb4872811738d"
+    }
+  },
+  "method": {
+    "path": "evidence/measurement/raw_timing_design.md",
+    "sha256": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+  },
+  "raw_aa_jobs": [
+    {
+      "id": "raw-aa-01-F-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-02-F-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-03-M-B1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-04-M-A1",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-05-M-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-06-M-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-07-F-B2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "raw-aa-08-F-A2",
+      "action": "run",
+      "role": "aa_raw_timer",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "repeats": 1,
+      "seed": 0
+    }
+  ],
+  "aa_decision": {
+    "statistics": "two A and two B independent samples per tier; medians/ranges; signed pair B-A seconds and percent, D=abs(medianB/medianA-1)*100, P=maxabs(pairB/pairA-1)*100",
+    "coarse_sort": "all four paired M/F-1 positive; min positive gap >max(P_F,P_M)",
+    "no_5pct_claim": true,
+    "different_identity_risk_supported": false,
+    "epsilon_pct": 5,
+    "quality_loss_pp": 2,
+    "minimum_useful_saving_fraction": 0.1,
+    "no_selection": true,
+    "no_retries": true
+  },
+  "numeric_validation_jobs": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl",
+      "call_upper": 1,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "24",
+        "--opt",
+        "O0",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O0-s24.jsonl"
+      ]
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "role": "numeric_validation_raw",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "journal": "evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl",
+      "call_upper": 1,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+        "run",
+        "--target",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/verify_4096_default.c",
+        "--compiler",
+        "gcc",
+        "--cflag=-Wl,--no-as-needed",
+        "--cflag=-lm",
+        "--cache-dir",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/validation-raw/build",
+        "--s",
+        "128",
+        "--opt",
+        "O3",
+        "--repeats",
+        "1",
+        "--timeout",
+        "1200",
+        "--compile-timeout",
+        "60",
+        "--output",
+        "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/raw_timing/goal2-raw-n4096-O3-s128.jsonl"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Author: /root/measurement
+This wrapper failed before controlled() entered and before any fixture, compiler,
+or n4096 process started. The outer tool reported 0.100556783 seconds; its clock
+domain is not the three-domain resource ledger, so this is not assigned a measured
+controlled cost. Actual target calls: 0. No raw experiment input was modified.
+
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+TypeError: controlled() got an unexpected keyword argument 'timeout'
+
+The actual signature uses time_limit. The corrected wrapper records the fixture
+and syntax child costs through controlled() and the nonblocking performance lock.

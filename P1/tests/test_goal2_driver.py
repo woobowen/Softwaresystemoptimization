@@ -29,7 +29,7 @@ class Goal2DriverTests(unittest.TestCase):
             target=dict(path=str(source.relative_to(P1)),sha256=ex.sha256(source),n=128,
                 compiler="gcc",compiler_identity=target.metadata()["compiler"],common_flags=list(ex.at.COMMON_FLAGS)),
             space=dict(blocks=list(ex.at.BLOCKS),opts=list(ex.at.OPTS)),
-            measurement=dict(compile_timeout_s=60,timeout_s=1200,cpu_affinity=sorted(os.sched_getaffinity(0)),
+            measurement=dict(compile_timeout_s=60,timeout_s=1200,score_clock=target.kernel_clock,cpu_affinity=sorted(os.sched_getaffinity(0)),
                 cache_dir=str((cls.directory/"build").relative_to(P1))))
         cls.protocol_path=cls.directory/"protocol.json"
         cls.protocol_path.write_text(json.dumps(cls.protocol))
@@ -81,7 +81,7 @@ class Goal2DriverTests(unittest.TestCase):
 
     def test_raw_output_checksum_and_clock_units_fail(self):
         for change in (dict(stdout="nan\nchecksum=1\n"),dict(checksum=1),dict(clock_unit="us"),
-                dict(process_wall_clock="RAW"),dict(kernel_clock="CLOCK_MONOTONIC_RAW"),
+                dict(process_wall_clock="RAW"),dict(kernel_clock="unknown"),
                 dict(kernel_unit="ms"),dict(clock_read_order=["CLOCK_REALTIME"]),dict(boundary_read_order={})):
             rows,metadata,job=self.trace()
             next(r for r in rows if r["type"]=="measurement").update(change)
@@ -239,6 +239,105 @@ os._exit(7)
         _,row=self.clock_row(); row["clock_unit"]="us"
         with self.assertRaises(ValueError): ex.process_clock_span(row)
 
+    def raw_history(self, previous, journals=()):
+        marker=self.directory/"legacy-binding-fixture.json"
+        marker.write_text('{"synthetic": true}\n')
+        metadata=self.rows["random"][0]["metadata"]
+        target=metadata["target"]
+        identity=dict(framework_sha256=metadata["framework_sha256"],
+            source_sha256=target["source_sha256"],n=target["n"],kernel_clock=target["kernel_clock"],
+            compiler=target["compiler"],flags=target["flags"],runtime_affinity=metadata["runtime_affinity"])
+        entries=[]
+        for path in journals:
+            header=ex.read_records(path)[0]
+            entries.append(dict(path=str(path.relative_to(P1)),sha256=ex.sha256(path),
+                metadata_fingerprint=header["fingerprint"]))
+        path=self.directory/"raw-history-fixture.json"
+        path.write_text(json.dumps(dict(schema=1,use="clock_baselines_only",
+            ledger_prefix=dict(rows=len(previous),fingerprint=ex.at.fingerprint(previous)),
+            legacy_journals=entries,legacy_numeric_binding=dict(path=str(marker.relative_to(P1)),sha256=ex.sha256(marker)),
+            legacy_diagnostic_identity_files=[],new_target_identities=[identity])))
+        return dict(path=str(path.relative_to(P1)),sha256=ex.sha256(path))
+
+    def test_raw_guard_keeps_physical_first_and_ignores_failed_previous(self):
+        path=self.directory/"raw-history-journal-fixture.jsonl"
+        start,row=self.clock_row()
+        path.write_text(''.join(json.dumps(r)+'\n' for r in [self.rows['random'][0],start,row]))
+        previous=[]
+        for name,q,failed in (("first",1.0,False),("failed",1.5,True),("previous",1.005,False)):
+            previous.append(dict(type="task_start",attempt_id=name,task=name,boot_id="same",
+                journal=str(path.relative_to(P1)),prior_measurement_starts=0,
+                clock_start_ns=dict(monotonic=0,raw=0,realtime=0)))
+            spans=dict(monotonic=40.0,raw=round(40e9*q)/1e9,realtime=40.0)
+            previous.append(dict(type="task_end",attempt_id=name,task=name,n4096_calls=1,n4096_calls_known=True,
+                returncode=0,reason="clock conflict" if failed else None,clock_conflict=failed,
+                driver_wall_s=40.0,clock_elapsed_s=spans,resource_s=max(spans.values()),resource_wall_s=max(spans.values()),
+                clock_end_ns={k:round(v*1e9) for k,v in spans.items()}))
+        binding=self.raw_history(previous,[path])
+        guard=ex.CompleteClockGuard(previous,"same",path,0,mode=ex.RAW_GUARD,history=binding)
+        self.assertEqual([r["identity"] for r in guard.driver_baselines],["first","previous"])
+        new_start,new=self.clock_row(1.09,1)
+        new["clock_end_ns"]["CLOCK_REALTIME"]=3+round(40e9*1.09)
+        new["clock_deltas_s"]["CLOCK_REALTIME"]=43.6
+        result=guard.finish([self.rows['random'][0],new_start,new],"new",dict(monotonic=40,raw=43.6,realtime=43.6),1)
+        self.assertFalse(result["clock_conflict"])
+        self.assertEqual(result['clock_guard']['schema'],2)
+        self.assertEqual(result['clock_guard']['history'],binding)
+        self.assertEqual(result['clock_guard']['driver_check']['q'],1)
+        refs=result['clock_guard']['driver_check']['baselines']
+        self.assertEqual([r['identity'] for r in refs],["first","previous"])
+
+    def test_raw_guard_does_not_lose_realtime_conflict(self):
+        path=self.directory/"raw-rt-fixture.jsonl"
+        binding=self.raw_history([])
+        guard=ex.CompleteClockGuard([],"same",path,0,mode=ex.RAW_GUARD,history=binding)
+        start,row=self.clock_row();start2,row2=self.clock_row(1.03,1)
+        result=guard.finish([self.rows['random'][0],start,row,start2,row2],"fixture",dict(monotonic=80,raw=80,realtime=80),2)
+        self.assertTrue(result['clock_conflict'])
+        self.assertTrue(result['clock_guard']['process_checks'][1]['conflict'])
+        self.assertFalse(result['clock_guard']['driver_check']['conflict'])
+
+    def test_raw_clock_history_rejects_changed_prefix_raw_and_identity(self):
+        path=self.directory/"raw-scope-fixture.jsonl"
+        path.write_text(json.dumps(self.rows['random'][0])+'\n')
+        prefix=[dict(type="synthetic",n=1)]
+        binding=self.raw_history(prefix,[path])
+        with self.assertRaises(ValueError): ex.load_clock_history(binding,[dict(type="synthetic",n=2)])
+        path.write_text(path.read_text()+"{}\n")
+        with self.assertRaises(ValueError): ex.load_clock_history(binding,prefix)
+        binding=self.raw_history([])
+        history=ex.load_clock_history(binding,[])
+        changed=copy.deepcopy(self.rows['random'][0])
+        changed['metadata']['target']['source_sha256']='different-source'
+        changed['fingerprint']=ex.at.fingerprint(changed['metadata'])
+        with self.assertRaises(ValueError): ex.check_clock_header([changed],history)
+        with self.assertRaises(ValueError): ex.CompleteClockGuard([],"same",path,0,mode="unreviewed",history=binding)
+
+    def test_raw_history_cannot_accept_new_unguarded_direct_matrix(self):
+        binding=self.raw_history([])
+        previous=[dict(type='task_start',attempt_id='direct',task='direct',boot_id='same',journal=None,
+            clock_start_ns=dict(monotonic=0,raw=0,realtime=0)),
+            dict(type='task_end',attempt_id='direct',task='direct',returncode=0,reason=None,n4096_calls=1,
+            n4096_calls_known=True,clock_conflict=False,driver_wall_s=40,
+            clock_elapsed_s=dict(monotonic=40,raw=40,realtime=40),resource_s=40,resource_wall_s=40,
+            clock_end_ns=dict(monotonic=40000000000,raw=40000000000,realtime=40000000000))]
+        with self.assertRaisesRegex(ValueError,'completed RAW guard'):
+            ex.CompleteClockGuard(previous,'same',self.directory/'direct-fixture.jsonl',0,mode=ex.RAW_GUARD,history=binding)
+
+    def test_same_domain_raw_upper_bound_survives_shorter_monotonic(self):
+        rows,metadata,job=self.trace()
+        clock=metadata['target']['kernel_clock']
+        self.assertEqual(clock,'CLOCK_MONOTONIC_RAW')
+        row=next(r for r in rows if r['type']=='measurement')
+        row['clock_end_ns']['CLOCK_MONOTONIC']=row['clock_start_ns']['CLOCK_MONOTONIC']+1
+        row['clock_deltas_s']['CLOCK_MONOTONIC']=1e-9
+        row['process_wall_s']=1e-9
+        ex.validate_trace(rows,metadata,job)
+        delta=row['clock_deltas_s']['CLOCK_MONOTONIC_RAW']
+        row['kernel_s']=float(f"{delta+.006:.9f}")
+        row['stdout']=f"{row['kernel_s']:.9f}\nchecksum={row['checksum']:.17g}\n"
+        with self.assertRaisesRegex(ValueError,'same-domain'): ex.validate_trace(rows,metadata,job)
+
     def test_complete_processes_are_checked_individually_before_driver_average(self):
         path=self.directory/"guard-journal-fixture.jsonl"
         guard=ex.CompleteClockGuard([],"fixture-boot",path,0)
@@ -344,8 +443,14 @@ os._exit(7)
         with self.assertRaises(ValueError): ex.usage(path)
 
     def test_formal_plan_identity_fields_cannot_be_changed(self):
-        source=P1/"evidence/protocol_v2.json"
-        protocol=ex.load_json(source)
+        protocol=ex.load_json(P1/"evidence/protocol_v2.json")
+        protocol['target']['sha256']=ex.sha256(P1/'src/matrix_multiplication.c')
+        protocol['framework']['sha256']=ex.sha256(P1/'src/autotuner.py')
+        protocol['measurement'].update(score_clock='CLOCK_MONOTONIC_RAW',cost_clock='CLOCK_MONOTONIC_RAW')
+        protocol['measurement']['clock_health'].update(guard_mode=ex.RAW_GUARD,guard_schema=2,
+            raw_realtime_ratio_change_fraction=.02)
+        source=self.directory/'current-plan-fixture.json'
+        source.write_text(json.dumps(protocol))
         protocol.update(protocol_sha256=ex.sha256(source),protocol_path=str(source.relative_to(P1)),measurement_root=str(P1))
         manifest=ex.plan(protocol,"reference")
         ex.freeze_check(protocol,manifest,source)
@@ -353,6 +458,13 @@ os._exit(7)
             altered=copy.deepcopy(manifest)
             altered[key]=0 if key=="schema" else "wrong-identity"
             with self.assertRaises(ValueError): ex.freeze_check(protocol,altered,source)
+        protocol['measurement'].update(score_clock='CLOCK_MONOTONIC',cost_clock='CLOCK_MONOTONIC')
+        protocol['measurement']['clock_health'].update(guard_mode='complete_target_and_driver',guard_schema=1,
+            raw_monotonic_ratio_change_fraction=.02)
+        source.write_text(json.dumps(protocol))
+        protocol['protocol_sha256']=ex.sha256(source)
+        with self.assertRaisesRegex(ValueError,'target timer boundaries'):
+            ex.freeze_check(protocol,ex.plan(protocol,'reference'),source)
 
 
 if __name__=="__main__": unittest.main()

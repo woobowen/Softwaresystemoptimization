@@ -264,20 +264,88 @@ class Goal2ProcessTests(unittest.TestCase):
         self.assertEqual(result["eligible_configs"], 1)
         self.assertIsNotNone(result["best"])
 
-    def test_same_domain_guard_and_unmatched_domains_not_compared(self):
-        self.target.kernel_clock = "CLOCK_MONOTONIC"
-        self.target.build("O0")
+    def test_same_domain_guard_uses_matching_delta_and_keeps_monotonic_wall(self):
+        build = self.target.build("O0")
         fixture = dict(command=["test-only clock-domain fixture"], started_at=at.now(), ended_at=at.now(),
             spawned=True, stdout="1.0\nchecksum=1\n", stderr="", returncode=0, status="ok", error=None,
-            process_wall_s=.01, process_wall_clock="CLOCK_MONOTONIC_RAW")
+            process_wall_clock="CLOCK_MONOTONIC")
         config = at.Config(8, "O0")
-        with mock.patch.object(at, "process", return_value=fixture.copy()):
-            result = self.target.measure(self.target.build("O0"), config, 2)
+        cases = [("CLOCK_MONOTONIC_RAW", .01, 2, "ok"),
+                 ("CLOCK_MONOTONIC_RAW", 2, .01, "clock_error"),
+                 ("CLOCK_MONOTONIC", 2, .01, "ok"),
+                 ("CLOCK_MONOTONIC", .01, 2, "clock_error"),
+                 ("CLOCK_MONOTONIC_RAW", 2, .995, "ok"),
+                 ("CLOCK_MONOTONIC_RAW", 2, .9949, "clock_error")]
+        for clock, mono, raw, expected in cases:
+            self.target.kernel_clock = clock
+            fixture.update(process_wall_s=mono,
+                clock_deltas_s={"CLOCK_MONOTONIC": mono, "CLOCK_MONOTONIC_RAW": raw})
+            with self.subTest(clock=clock, mono=mono, raw=raw), \
+                    mock.patch.object(at, "process", return_value=fixture.copy()):
+                result = self.target.measure(build, config, 2)
+            self.assertEqual(result["status"], expected)
+            self.assertEqual(result["process_wall_s"], mono)
+            self.assertEqual(result["process_wall_clock"], "CLOCK_MONOTONIC")
+            self.assertEqual(result["kernel_clock"], clock)
+
+    def test_known_clock_requires_a_finite_positive_matching_process_interval(self):
+        build = self.target.build("O0")
+        fixture = dict(command=["test-only invalid clock fixture"], started_at=at.now(), ended_at=at.now(),
+            spawned=True, stdout="1.0\nchecksum=1\n", stderr="", returncode=0, status="ok", error=None,
+            process_wall_s=10, process_wall_clock="CLOCK_MONOTONIC")
+        for clock in ("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW"):
+            self.target.kernel_clock = clock
+            for value in (None, 0, -1, float("nan"), float("inf"), True, "1"):
+                data = dict(fixture, clock_deltas_s={clock: value})
+                with self.subTest(clock=clock, value=value), mock.patch.object(at, "process", return_value=data):
+                    result = self.target.measure(build, at.Config(8, "O0"), 2)
+                self.assertEqual(result["status"], "clock_error")
+                self.assertEqual(result["kernel_s"], 1)
+                self.assertEqual(result["stdout"], fixture["stdout"])
+            for data in (fixture.copy(), dict(fixture, clock_deltas_s={})):
+                with self.subTest(clock=clock, missing=True), mock.patch.object(at, "process", return_value=data):
+                    result = self.target.measure(build, at.Config(8, "O0"), 2)
+                self.assertEqual(result["status"], "clock_error")
+
+    def test_unknown_clock_does_not_invent_a_wall_time_comparison(self):
+        self.assertEqual(self.target.kernel_clock, "unknown")
+        build = self.target.build("O0")
+        fixture = dict(command=["test-only unknown clock fixture"], started_at=at.now(), ended_at=at.now(),
+            spawned=True, stdout="1.0\nchecksum=1\n", stderr="", returncode=0, status="ok", error=None,
+            process_wall_s=.01, process_wall_clock="CLOCK_MONOTONIC", clock_deltas_s={})
+        with mock.patch.object(at, "process", return_value=fixture):
+            result = self.target.measure(build, at.Config(8, "O0"), 2)
         self.assertEqual(result["status"], "ok")
-        fixture["process_wall_clock"] = "CLOCK_MONOTONIC"
-        with mock.patch.object(at, "process", return_value=fixture.copy()):
-            result = self.target.measure(self.target.build("O0"), config, 2)
-        self.assertEqual(result["status"], "clock_error")
+        self.assertEqual(result["kernel_clock"], "unknown")
+
+    def test_actual_raw_timer_source_and_process_use_the_same_domain(self):
+        self.source.write_text('#define _POSIX_C_SOURCE 200809L\n#include <stdio.h>\n#include <time.h>\n'
+            'int main(void) { struct timespec start, end, delay = {0, 20000000};\n'
+            'clock_gettime(CLOCK_MONOTONIC_RAW, &start); nanosleep(&delay, 0);\n'
+            'clock_gettime(CLOCK_MONOTONIC_RAW, &end);\n'
+            'printf("%.9f\\nchecksum=1\\n", (end.tv_sec-start.tv_sec) + 1e-9*(end.tv_nsec-start.tv_nsec));\n'
+            'return 0; }\n/* clock_gettime(CLOCK_REALTIME, &fake); */\n'
+            'const char *clock_text = "clock_gettime(CLOCK_MONOTONIC, &fake)";\n')
+        target = at.TargetProgram(self.source, cache_dir=self.target.cache_dir)
+        self.assertEqual(target.metadata()["kernel_clock"], "CLOCK_MONOTONIC_RAW")
+        result = target.measure(target.build("O0"), at.Config(8, "O0"), 2)
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["kernel_clock"], "CLOCK_MONOTONIC_RAW")
+        self.assertGreater(result["kernel_s"], 0)
+        self.assertLessEqual(result["kernel_s"], result["clock_deltas_s"]["CLOCK_MONOTONIC_RAW"] + .005)
+        self.assertEqual(result["process_wall_clock"], "CLOCK_MONOTONIC")
+        self.assertEqual(result["process_wall_s"], result["clock_deltas_s"]["CLOCK_MONOTONIC"])
+
+    def test_mixed_and_unsupported_literal_clocks_are_unknown(self):
+        for begin, end in (("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW"),
+                           ("CLOCK_MONOTONIC", "CLOCK_REALTIME"),
+                           ("CLOCK_REALTIME", "CLOCK_REALTIME")):
+            self.source.write_text('#define _POSIX_C_SOURCE 200809L\n#include <time.h>\n'
+                'int main(void) { struct timespec start, end;\n'
+                f'clock_gettime({begin}, &start); clock_gettime({end}, &end); return 0; }}\n')
+            with self.subTest(begin=begin, end=end):
+                target = at.TargetProgram(self.source, cache_dir=self.target.cache_dir)
+                self.assertEqual(target.metadata()["kernel_clock"], "unknown")
 
     def test_schema_two_options_and_resume_fingerprints(self):
         for algorithm, extra in (("recheck", []), ("greedy", ["--start-s", "8", "--start-opt", "O0"])):

@@ -1,0 +1,275 @@
+{
+  "reviewer": "/root/review",
+  "at_utc": "2026-10-02T19:28:22.872534+00:00",
+  "state": "FINITE_RELATIVE_SCREEN_MET_SUPPORTS_NEW_RAW_AA_DESIGN_ONLY",
+  "standalone_recalculation": "Integer differences and Fraction, no import/call of author host_clock_probe functions",
+  "source_hashes": {
+    "scripts/host_clock_probe.py": "7fe379a843ebd360c31ec4e7ecd23c669138ee5c80bba85065d18e21ddeb24a7",
+    "tests/test_host_clock_probe.py": "bccb33e16220df5606703c31468f9c33bdeca6df84be0d94d29144917648f023",
+    "evidence/measurement/formal_clock_drift_design.md": "ac920bb167e07760d841c430491df6edcdad45fe3be25af33e2acfe8f3924ea6"
+  },
+  "probe_source_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9",
+  "probe_binary_sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+  "compiler_identity": {
+    "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+    "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+  },
+  "input_hashes": {
+    "evidence/measurement/formal_clock_drift/host-qpc-two-intervals.stdout.txt": "3e13770e3e3b3cb927de2760c7f21f00c4c43dbf709be7dc0f5e3bbd306213d3",
+    "evidence/measurement/formal_clock_drift/host-qpc-two-intervals.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/measurement/formal_clock_drift/host_identity.json": "72ead2d3c9c8f2b16afd2077b0ac19758de74a0f6c47bb436832cc73cf6f1eb1",
+    "evidence/reviews/goal2_host_clock_review.json": "4a46cc745d3b52476b2878d90fa2bb5ba72365c7c5707851cb5321d06ad12a17",
+    "evidence/measurement/clocks/identity.json": "c4820f1fe6ed2dde60845073c9c565cbaa2b9b555a21d71436c34bbbfe362727"
+  },
+  "actual_attempt_id": "2740d26f0aca4b12aea965b60903b08f",
+  "actual_start": {
+    "type": "task_start",
+    "at": "2026-10-02T19:22:19.974053+00:00",
+    "task": "host-qpc-two-intervals",
+    "role": "clock_host_probe",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/addaswsw/lab/Software_system_optimization/P1/scripts/host_clock_probe.py",
+      "--probe",
+      "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe"
+    ],
+    "attempt_id": "2740d26f0aca4b12aea965b60903b08f",
+    "clock_start_ns": {
+      "monotonic": 87678737228816,
+      "raw": 91814436846972,
+      "realtime": 1790968939972636081
+    },
+    "call_upper": 0,
+    "journal": null,
+    "prior_measurement_starts": 0,
+    "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163"
+  },
+  "actual_end": {
+    "type": "task_end",
+    "at": "2026-10-02T19:23:21.271531+00:00",
+    "task": "host-qpc-two-intervals",
+    "role": "clock_host_probe",
+    "attempt_id": "2740d26f0aca4b12aea965b60903b08f",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 59.788104834,
+    "clock_elapsed_s": {
+      "monotonic": 59.788104834,
+      "raw": 61.169250493,
+      "realtime": 61.29844101
+    },
+    "clock_end_ns": {
+      "monotonic": 87738525333650,
+      "raw": 91875606097465,
+      "realtime": 1790969001271077091
+    },
+    "resource_s": 61.29844101,
+    "resource_wall_s": 61.29844101,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0175726205657998
+    ],
+    "stdout": "evidence/measurement/formal_clock_drift/host-qpc-two-intervals.stdout.txt",
+    "stderr": "evidence/measurement/formal_clock_drift/host-qpc-two-intervals.stderr.txt"
+  },
+  "all_nine_endpoint_brackets_ms": [
+    9.306721,
+    0.250604,
+    0.180218,
+    0.157281,
+    0.164162,
+    0.169061,
+    0.438595,
+    0.243866,
+    0.419037
+  ],
+  "original_five_handshakes_preserved": true,
+  "seq_frequency_PID_and_four_domain_order_verified": true,
+  "intervals": [
+    {
+      "mode": "idle",
+      "endpoint_sequences": [
+        5,
+        6
+      ],
+      "delta_ticks": 409477802,
+      "host_elapsed_s": 40.9477802,
+      "host_bounds_s": [
+        40.94778,
+        40.9477804
+      ],
+      "endpoint_bracket_ms": [
+        0.169061,
+        0.438595
+      ],
+      "domains": {
+        "MONOTONIC": {
+          "lower_s": 40.003795646,
+          "upper_s": 40.004389364,
+          "host_to_linux_ratio_bounds": [
+            1.0235821781309067,
+            1.0235973796675064
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9769466197000509,
+            0.9769611286374987
+          ],
+          "bracket_width_fraction": 1.4499394035528206e-05
+        },
+        "RAW": {
+          "lower_s": 40.947447219,
+          "upper_s": 40.948054875,
+          "host_to_linux_ratio_bounds": [
+            0.9999932872269308,
+            1.0000081367953957
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999918632708111,
+            1.0000067128181307
+          ],
+          "bracket_width_fraction": 1.4839778787324837e-05
+        },
+        "REALTIME": {
+          "lower_s": 40.777490741,
+          "upper_s": 40.778083536,
+          "host_to_linux_ratio_bounds": [
+            1.0041614624642716,
+            1.0041760700794857
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9958412969558662,
+            0.995855783536983
+          ],
+          "bracket_width_fraction": 1.4476853131100864e-05
+        }
+      },
+      "RAW_entire_bound_inside_preregistered_screen": true,
+      "inner_C_elapsed_s": {
+        "MONOTONIC": 40.000070483,
+        "RAW": 40.943632651,
+        "REALTIME": 40.773764491,
+        "PROCESS_CPU": 2.0508e-05
+      },
+      "inner_C_CPU_to_RAW": 5.008837436289161e-07,
+      "readonly_timex": {
+        "adjtimex_readonly": true,
+        "returncode": 0,
+        "offset_raw": 0,
+        "offset_unit": "ns",
+        "frequency_scaled_ppm": -1468527,
+        "tick_us": 9753,
+        "status": 8192,
+        "precision_us": 1
+      }
+    },
+    {
+      "mode": "work",
+      "endpoint_sequences": [
+        7,
+        8
+      ],
+      "delta_ticks": 193217319,
+      "host_elapsed_s": 19.3217319,
+      "host_bounds_s": [
+        19.3217317,
+        19.3217321
+      ],
+      "endpoint_bracket_ms": [
+        0.243866,
+        0.419037
+      ],
+      "domains": {
+        "MONOTONIC": {
+          "lower_s": 18.900162865,
+          "upper_s": 18.90081321,
+          "host_to_linux_ratio_bounds": [
+            1.0222698613717478,
+            1.0223050583220463
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9781816023109026,
+            0.9782152812938604
+          ],
+          "bracket_width_fraction": 3.3658732217477875e-05
+        },
+        "RAW": {
+          "lower_s": 19.321393218,
+          "upper_s": 19.322056121,
+          "host_to_linux_ratio_bounds": [
+            0.9999832098096616,
+            1.00001753921139
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999824610962286,
+            1.0000167904722537
+          ],
+          "bracket_width_fraction": 3.4308673954843564e-05
+        },
+        "REALTIME": {
+          "lower_s": 19.636803759,
+          "upper_s": 19.637454408,
+          "host_to_linux_ratio_bounds": [
+            0.9839224218455026,
+            0.9839550436584876
+          ],
+          "linux_to_host_ratio_bounds": [
+            1.0163065949454915,
+            1.0163402904512953
+          ],
+          "bracket_width_fraction": 3.367446579672291e-05
+        }
+      },
+      "RAW_entire_bound_inside_preregistered_screen": true,
+      "inner_C_elapsed_s": {
+        "MONOTONIC": 18.898152574,
+        "RAW": 19.319335621,
+        "REALTIME": 19.634793172,
+        "PROCESS_CPU": 19.313557374
+      },
+      "inner_C_CPU_to_RAW": 0.9997009086071407,
+      "readonly_timex": {
+        "adjtimex_readonly": true,
+        "returncode": 0,
+        "offset_raw": 0,
+        "offset_unit": "ns",
+        "frequency_scaled_ppm": 1656775,
+        "tick_us": 9849,
+        "status": 8192,
+        "precision_us": 1
+      }
+    }
+  ],
+  "lifecycle": {
+    "host_pid": 70576,
+    "host_start_utc_ticks": 639265657398411510,
+    "host_query_state": "absent",
+    "bridge_exit_code": 0,
+    "Linux_owned_PIDs_confirmed_absent": [
+      369384,
+      369385
+    ],
+    "both_C_workloads_exit_zero": true
+  },
+  "actual_n4096_calls_added": 0,
+  "actual_resource_s": 61.29844101,
+  "total_calls_after": 44,
+  "total_resource_s_after": 3228.9117972169997,
+  "supports_proposing_separately_reviewed_RAW_AA": true,
+  "new_RAW_AA_execution_approved": false,
+  "formal_v2_continue_admission": false,
+  "new_full_formal_admission": false,
+  "old_first_and_2_percent_unchanged": true,
+  "old_RAW_REALTIME_counterexample_retained": true,
+  "limits": [
+    "QPC and RAW can share TSC/Hyper-V hardware basis; relative coherence does not identify absolute truth",
+    "Two approximately41s/19s intervals do not establish multi-hour clock stability or performance dispersion",
+    "Parent bridge CPU and inner C CPU have different boundaries; no CPU/QPC same-interval inference",
+    "Old MONOTONIC v2 complete warmup conflict remains; no posthoc rebaselining or calibration"
+  ],
+  "goal2_complete": false,
+  "engineering_pass": false
+}

@@ -5,7 +5,7 @@
 ## 硬边界与历史
 
 - 受审起点和启动时真实远端为 `3ac0c4688b964c873379d012cbcf09afb7ed0937`。A1/A2 tree与431受保护P1文件登记在 `history_goal2.json`。旧raw、协议、派生数值和判定不改写；用户未跟踪提示词/原C保留。
-- 正式n4096/double/原初始化/六循环/尾块，20配置8/16/24/64/128 × O0—O3，公共编译参数不变。旧目标SHA保持cece4fd…。
+- 正式n4096/double/原初始化/六循环/尾块，20配置8/16/24/64/128 × O0—O3，公共编译参数不变。历史目标SHA cece4fd…已由固定提交保留；新RAW候选仅改两处计时literal。
 - 主控加三个实际原生代理，责任见 `agents_goal2.md`。性能只有主控，非阻塞 `.cache/performance.lock`；他人仅读写文本，短测试窗口单独安排。
 - 所有实际n4096含失败/预热/复现上限520；受控时间逐任务max(MONO/RAW/REALTIME)累计上限16小时。项目总账是 `measurement/resource_ledger.jsonl`，不能重复加批次副本。
 - 不改其他作业、全局服务、配置空间或计算内核；不混合增强、不操作水杉、不授予最终Engineering PASS。
@@ -37,6 +37,11 @@
 - 原分析CLI已真实重算这次停止，44调用/已知完整成本/时钟不健康/参照不完整。未执行主实验却将候选确认标NOT_REQUIRED的标签问题已修：无搜索的两阶段NOT_EXECUTED，只有完整有效但未获选才NOT_REQUIRED；Random单独确认不代表S3确认。作者65项、独立65项及真实closed CLI通过，旧失败输出和raw/protocol/snapshot哈希不变，不把未执行策略当REJECT。
 - 新只读桥执行前后使用实际flock、原probe身份及750秒限制。QPC源7fe379…、测试bccb33…、方法ac920…保存于本次旧C/runner检查点；新的RAW有限设计另文件编写，旧QPC冻结输入不追加更改。若另获准并完成八次A/A及两次必要数值抽查，累计将为54调用，后续全任务上界516或483；这些调用尚未执行，精确计划和两类审核待做。
 - 未新增任何系统/语言包、工具链或全局配置；精确删除无人使用且来源已存的883484字节旧xterm下载包，保留已解压截图工具及其他缓存，详情 `environment/goal2_dependencies.json`。
+- 停止版本已保存为 `a39f348e6cf0c7466900ec739a797753f4d93f0b`，其账本前296行完整闭合且SHA b8fda62…；新时钟迁移仅借用这些原始边界。原旧warmup失败不改成有效baseline。独立QPC结果审核及新有限设计10a4…条件审核已完成，均不直接授予正式准入。
+- 新RAW C为a752f644…，原计算内核仍4005ab7…；core最小双钟识别55b880…，作者及独立各76 tests通过。新driver schema2使用完整target/driver RAW/REALTIME、同boot原first/previous和原2%门；schema1仍RAW/MONO。40旧journal SHA/header与全部296行canonical prefix精确绑定在 `measurement/raw_timing/clock_history.json`，SHA8ced08…，仅供时钟，不供成绩。
+- 新driver作者首轮34 tests有三处fixture失败，完整输出保留；定位为旧冻结source identity、未按整数ns构造float和stdout舍入，修复后34项与4语法检查全部通过。独立driver检查尚在进行；生产guard和阈值未因fixture失败放宽。
+- 新RAW同源240小矩阵全元素、5 sanitizer尾块及四级冷构建实际通过，0次n4096。新四级二进制单列于 `measurement/raw_timing/raw-build-four.stdout.txt`，不把旧二进制身份覆盖为新值。
+- 有限机器协议 `protocol_raw_diagnostic.json` 尚待独立code gate，精确2大数值+8AA，不增加warm或新诊断额度；新n4096仍未启动。新大数值adapter f195ec…仅用于24点检查，之后才可执行8AA、讨论另冻结正式协议；后续候选最大516/基线483，16h真实硬上限不变。
 - 最终报告/截图、完整正式批次、干净复现、终审、GitHub发布和真实SHA核对待后续关口。历史匹配版本的重算已完成，结束时仍需再次核对受保护清单。
 
 不确定：时钟跨时段关系、两种安排的实际价值、5%目标的可分辨程度、S3收益。timesyncd实际active、chrony不存在；不把服务存在当根因，不调整任何服务。

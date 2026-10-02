@@ -27,6 +27,7 @@ CLOCKS = {"monotonic": time.CLOCK_MONOTONIC,
           "raw": time.CLOCK_MONOTONIC_RAW, "realtime": time.CLOCK_REALTIME}
 LEDGER = P1 / "evidence/measurement/resource_ledger.jsonl"
 MAX_CALLS, MAX_SECONDS = 520, 16 * 3600
+RAW_GUARD = "complete_raw_realtime_target_and_driver"
 
 
 def clocks():
@@ -247,11 +248,58 @@ def process_clock_span(row):
     return spans
 
 
-def complete_clock_check(source, identity, spans, baselines):
+def load_clock_history(binding, previous):
+    """Bind old clocks to their fixed journals; never import old kernel scores."""
+    path = P1 / binding["path"]
+    if sha256(path) != binding["sha256"]:
+        raise ValueError("clock-only history declaration changed")
+    history = load_json(path)
+    count = history["ledger_prefix"]["rows"]
+    if history.get("schema") != 1 or history.get("use") != "clock_baselines_only" or \
+            type(count) is not int or count < 0 or len(previous) < count or \
+            at.fingerprint(previous[:count]) != history["ledger_prefix"]["fingerprint"]:
+        raise ValueError("clock history differs from its frozen physical ledger prefix")
+    journals = history["legacy_journals"]
+    if len({entry["path"] for entry in journals}) != len(journals):
+        raise ValueError("duplicate clock-only journal declaration")
+    for entry in [history["legacy_numeric_binding"], *history["legacy_diagnostic_identity_files"]]:
+        if sha256(P1 / entry["path"]) != entry["sha256"]:
+            raise ValueError("fixed legacy clock source/adapter binding changed")
+    for entry in journals:
+        raw = P1 / entry["path"]
+        if sha256(raw) != entry["sha256"]:
+            raise ValueError("legacy clock-only raw journal changed")
+        header = read_records(raw)[0]
+        if header.get("fingerprint") != entry["metadata_fingerprint"] or \
+                at.fingerprint(header["metadata"]) != entry["metadata_fingerprint"]:
+            raise ValueError("legacy clock-only header identity changed")
+    return history
+
+
+def check_clock_header(rows, history, legacy_path=None):
+    header = rows[0] if rows else {}
+    metadata = header.get("metadata", {})
+    if header.get("fingerprint") != at.fingerprint(metadata):
+        raise ValueError("clock baseline header lacks its original fingerprint")
+    if legacy_path is not None:
+        entries = [entry for entry in history["legacy_journals"] if entry["path"] == legacy_path]
+        if len(entries) != 1 or header["fingerprint"] != entries[0]["metadata_fingerprint"]:
+            raise ValueError("clock baseline journal is outside the fixed legacy scope")
+        return
+    target = metadata.get("target", {})
+    identity = dict(framework_sha256=metadata.get("framework_sha256"),
+        source_sha256=target.get("source_sha256"), n=target.get("n"),
+        kernel_clock=target.get("kernel_clock"), compiler=target.get("compiler"),
+        flags=target.get("flags"), runtime_affinity=metadata.get("runtime_affinity"))
+    if identity not in history["new_target_identities"]:
+        raise ValueError("new clock baseline source/build identity is not frozen")
+
+
+def complete_clock_check(source, identity, spans, baselines, denominator="monotonic"):
     if set(spans)!=set(CLOCKS) or any(not math.isfinite(v) or v<=0 for v in spans.values()) or \
             any(not math.isfinite(r["q"]) or r["q"]<=0 for r in baselines):
         raise ValueError("complete interval must have positive clock durations")
-    q=spans["raw"]/spans["monotonic"]
+    q=spans["raw"]/spans[denominator]
     # Keep first and previous explicitly, even when they refer to the same run.
     refs=baselines[:1]+baselines[-1:] if baselines else []
     return dict(source=source,identity=identity,clock_elapsed_s=spans,q=q,baselines=refs,
@@ -260,8 +308,15 @@ def complete_clock_check(source, identity, spans, baselines):
 
 class CompleteClockGuard:
     """Compare whole intervals by source; prefix samples never gate formal runs."""
-    def __init__(self, previous, boot_id, journal, offset):
+    def __init__(self, previous, boot_id, journal, offset, mode="complete_target_and_driver", history=None):
         self.boot_id,self.journal,self.offset=boot_id,Path(journal),offset
+        if mode not in ("complete_target_and_driver", RAW_GUARD):
+            raise ValueError("unsupported completed clock guard mode")
+        self.mode,self.history_binding=mode,history
+        self.denominator="realtime" if mode==RAW_GUARD else "monotonic"
+        self.history=load_clock_history(history,previous) if mode==RAW_GUARD else None
+        legacy_ends={r["attempt_id"] for r in previous[:self.history["ledger_prefix"]["rows"]]
+                     if r["type"]=="task_end"} if self.history else set()
         self.process_baselines,self.driver_baselines=[],[]
         self.checks,self.seen=[],set()
         self.error=None
@@ -271,28 +326,37 @@ class CompleteClockGuard:
             if start["boot_id"]!=boot_id or end.get("returncode")!=0 or end.get("reason") is not None or \
                     not end.get("n4096_calls_known",True) or not end.get("n4096_calls") or end.get("clock_conflict"):
                 continue
+            if self.history and end["attempt_id"] not in legacy_ends:
+                saved=end.get("clock_guard",{})
+                if not start.get("journal") or saved.get("mode")!=RAW_GUARD or saved.get("schema")!=2 or \
+                        saved.get("history")!=history or saved.get("complete") is not True or saved.get("error") is not None:
+                    raise ValueError("new matrix clock history needs its completed RAW guard and exact target journal")
             driver_spans=resource_span(start,end)
             if (end.get("driver_wall_s") or 0)>=10 and end.get("clock_elapsed_s"):
-                self.driver_baselines.append(dict(identity=end["attempt_id"],q=driver_spans["raw"]/driver_spans["monotonic"]))
+                self.driver_baselines.append(dict(identity=end["attempt_id"],q=driver_spans["raw"]/driver_spans[self.denominator]))
             if start.get("journal"):
                 rows=read_records(P1/start["journal"])
+                if self.history:
+                    check_clock_header(rows,self.history,start["journal"] if end["attempt_id"] in legacy_ends else None)
                 for row in attempt_measurements(rows,start["prior_measurement_starts"],end["n4096_calls"],complete=True):
                     spans=process_clock_span(row)
                     if spans["monotonic"]>=10:
                         self.process_baselines.append(dict(identity=list(measurement_key(row)),attempt_id=end["attempt_id"],
-                            q=spans["raw"]/spans["monotonic"]))
+                            q=spans["raw"]/spans[self.denominator]))
 
     def inspect(self, rows, attempt):
+        if rows and self.history:
+            check_clock_header(rows,self.history)
         count=sum(r["type"]=="measurement_start" for r in rows)-self.offset
         for row in attempt_measurements(rows,self.offset,count):
             key=measurement_key(row)
             if key in self.seen:
                 continue
-            check=complete_clock_check("target_process",list(key),process_clock_span(row),self.process_baselines)
+            check=complete_clock_check("target_process",list(key),process_clock_span(row),self.process_baselines,self.denominator)
             self.checks.append(check)
             self.seen.add(key)
             if check["conflict"]:
-                self.error="complete target process RAW/MONOTONIC changed >2% relative to first or previous"
+                self.error=f"complete target process RAW/{self.denominator.upper()} changed >2% relative to first or previous"
                 return False
             if check["clock_elapsed_s"]["monotonic"]>=10:
                 self.process_baselines.append(dict(identity=list(key),attempt_id=attempt,q=check["q"]))
@@ -310,9 +374,9 @@ class CompleteClockGuard:
         try:
             self.inspect(rows,attempt)
             attempt_measurements(rows,self.offset,calls,complete=True)
-            driver=complete_clock_check("driver",attempt,spans,self.driver_baselines)
+            driver=complete_clock_check("driver",attempt,spans,self.driver_baselines,self.denominator)
             if driver["conflict"] and self.error is None:
-                self.error="complete driver RAW/MONOTONIC changed >2% relative to first or previous"
+                self.error=f"complete driver RAW/{self.denominator.upper()} changed >2% relative to first or previous"
             complete=len(self.checks)==calls
             if not complete and self.error is None:
                 self.error="complete clock checks do not cover all actual target calls"
@@ -321,7 +385,8 @@ class CompleteClockGuard:
             driver=None
             complete=False
         conflict=any(c["conflict"] for c in self.checks) or bool(driver and driver["conflict"])
-        return dict(clock_conflict=conflict,clock_guard=dict(schema=1,mode="complete_target_and_driver",
+        fields=dict(schema=2,mode=self.mode,history=self.history_binding) if self.history else dict(schema=1,mode=self.mode)
+        return dict(clock_conflict=conflict,clock_guard=dict(**fields,
             threshold_fraction=.02,boot_id=self.boot_id,process_checks=self.checks,driver_check=driver,
             complete=complete,error=self.error))
 
@@ -344,7 +409,9 @@ def validate_complete_clock_record(record, ledger_rows, journal_rows, journal_pa
     count=start["prior_measurement_starts"]+end["n4096_calls"]
     keys={measurement_key(r) for r in [r for r in journal_rows if r["type"]=="measurement_start"][:count]}
     prefix=[r for r in journal_rows if r["type"] not in ("measurement_start","measurement") or measurement_key(r) in keys]
-    guard=CompleteClockGuard(ledger_rows[:index],start["boot_id"],journal_path,start["prior_measurement_starts"])
+    saved=end.get("clock_guard",{})
+    guard=CompleteClockGuard(ledger_rows[:index],start["boot_id"],journal_path,start["prior_measurement_starts"],
+        mode=saved.get("mode","complete_target_and_driver"),history=saved.get("history"))
     expected=guard.finish(prefix,end["attempt_id"],spans,end["n4096_calls"])
     if end.get("clock_conflict") is not False or expected["clock_conflict"] or \
             expected["clock_guard"]["complete"] is not True or expected["clock_guard"]["error"] is not None or \
@@ -355,7 +422,7 @@ def validate_complete_clock_record(record, ledger_rows, journal_rows, journal_pa
 
 def controlled(command, directory, task, role, call_upper=0, journal=None,
                direct_calls=None, ledger=LEDGER, time_limit=None, diagnostic_observer=None,
-               complete_clock_guard=False):
+               complete_clock_guard=False, clock_history=None):
     """Caller holds the performance lock. Unknown starts block future work."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
@@ -380,7 +447,8 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
         diagnostic_observer.validate(task, argv, call_upper, journal)
     if complete_clock_guard and (journal is None or diagnostic_observer is not None):
         raise ValueError("formal complete-clock guard needs a target journal and no diagnostic observer")
-    guard=CompleteClockGuard(previous_rows,boot_id,journal,prior_count) if complete_clock_guard else None
+    mode="complete_target_and_driver" if complete_clock_guard is True else complete_clock_guard
+    guard=CompleteClockGuard(previous_rows,boot_id,journal,prior_count,mode=mode,history=clock_history) if mode else None
     append(ledger, "task_start", task=task, role=role, command=argv,
            attempt_id=attempt, clock_start_ns=before, call_upper=call_upper,
            journal=str(Path(journal).resolve().relative_to(P1)) if journal else None,
@@ -473,7 +541,7 @@ def common_metadata(protocol, job, root=P1):
         target=dict(source=str((root / target["path"]).resolve()),
             source_sha256=target["sha256"], n=target["n"], compiler=target["compiler_identity"],
             flags=target["common_flags"], compile_timeout=float(measurement["compile_timeout_s"]),
-            require_checksum=True, kernel_clock="CLOCK_MONOTONIC"),
+            require_checksum=True, kernel_clock=measurement.get("score_clock","CLOCK_MONOTONIC")),
         blocks=protocol["space"]["blocks"] if config is None else [config["s"]],
         opts=protocol["space"]["opts"] if config is None else [config["opt"]],
         action=job["action"], algorithm=job.get("algorithm", "grid"), seed=job.get("seed", 0),
@@ -506,7 +574,8 @@ def validate_task(job, directory, protocol, historical=False):
     for row in (r for r in rows if r["type"] == "measurement"):
         if row["status"] != "ok" or row["returncode"] != 0 or at.TargetProgram.parse(row["stdout"]) != row["kernel_s"]:
             raise ValueError(f"invalid measurement hidden by summary: {path}")
-        if row.get("process_wall_clock") != "CLOCK_MONOTONIC" or row["kernel_s"] > row["process_wall_s"] + .005:
+        if row.get("process_wall_clock") != "CLOCK_MONOTONIC" or \
+                row["kernel_s"] > row["clock_deltas_s"][expected["target"]["kernel_clock"]] + .005:
             raise ValueError(f"invalid same-domain time guard: {path}")
     if protocol["measurement"].get("clock_health",{}).get("guard")=="completed_per_target_process_and_driver_first_and_previous_same_boot":
         ledger=Path(directory)/"driver.jsonl"
@@ -516,7 +585,9 @@ def validate_task(job, directory, protocol, historical=False):
         for record in attempts:
             guard=record.get("clock_guard",{})
             if record.get("clock_conflict") is not False or record.get("returncode")!=0 or record.get("reason") is not None or \
-                    guard.get("schema")!=1 or guard.get("mode")!="complete_target_and_driver" or \
+                    guard.get("schema")!=protocol["measurement"]["clock_health"].get("guard_schema",1) or \
+                    guard.get("mode")!=protocol["measurement"]["clock_health"].get("guard_mode","complete_target_and_driver") or \
+                    guard.get("history")!=protocol["measurement"]["clock_health"].get("clock_history") or \
                     guard.get("complete") is not True or guard.get("error") is not None:
                 raise ValueError("formal summary belongs to a failed or incomplete clock check")
             validate_complete_clock_record(record,read_records(LEDGER),rows,path)
@@ -588,7 +659,7 @@ def validate_trace(rows, metadata, job):
                     deltas = {n:(row["clock_end_ns"][n]-v)/1e9 for n,v in row["clock_start_ns"].items()}
                     if deltas != row["clock_deltas_s"] or any(v < 0 or not math.isfinite(v) for v in deltas.values()) or \
                             row["process_wall_s"] != deltas["CLOCK_MONOTONIC"] or \
-                            row["kernel_s"] > row["process_wall_s"]+.005:
+                            row["kernel_s"] > deltas[metadata["target"]["kernel_clock"]]+.005:
                         raise ValueError("clock fields or same-domain guard are invalid")
                 completions[key] = row
         elif kind == "trial":
@@ -667,7 +738,7 @@ def freeze_check(protocol, manifest, protocol_path, execute=False):
     if protocol["target"]["n"]!=4096 or protocol["target"]["common_flags"]!=list(at.COMMON_FLAGS) or \
             protocol["space"]!=dict(blocks=list(at.BLOCKS),opts=list(at.OPTS)) or \
             protocol["measurement"]["cpu_affinity"]!=[0] or \
-            protocol["measurement"]["score_clock"]!="CLOCK_MONOTONIC" or \
+            protocol["measurement"]["score_clock"] not in ("CLOCK_MONOTONIC","CLOCK_MONOTONIC_RAW") or \
             protocol["measurement"]["process_clock"]!="CLOCK_MONOTONIC":
         raise ValueError("formal target/space/flags/clock/affinity differs from this assignment")
     expected = plan(protocol,manifest["stage"],manifest.get("algorithms"))
@@ -675,13 +746,24 @@ def freeze_check(protocol, manifest, protocol_path, execute=False):
         raise ValueError("batch manifest identity differs from the exact frozen plan")
     if manifest["jobs"] != expected["jobs"]:
         raise ValueError("planned jobs differ from the frozen protocol")
-    if manifest["stage"]!="diagnostic" and (protocol["measurement"]["clock_health"]["guard"]!=
-            "completed_per_target_process_and_driver_first_and_previous_same_boot" or
-            protocol["measurement"]["clock_health"]["raw_monotonic_ratio_change_fraction"]!=.02):
-        raise ValueError("formal complete-clock guard differs from the reviewed mode/threshold")
+    if manifest["stage"]!="diagnostic":
+        health=protocol["measurement"]["clock_health"]
+        raw=protocol["measurement"]["score_clock"]=="CLOCK_MONOTONIC_RAW"
+        if health["guard"]!="completed_per_target_process_and_driver_first_and_previous_same_boot" or \
+                health.get("guard_mode")!=(RAW_GUARD if raw else "complete_target_and_driver") or \
+                health.get("guard_schema")!=(2 if raw else 1) or \
+                health.get("raw_realtime_ratio_change_fraction" if raw else "raw_monotonic_ratio_change_fraction")!=.02 or \
+                protocol["measurement"]["cost_clock"]!=("CLOCK_MONOTONIC_RAW" if raw else "CLOCK_MONOTONIC"):
+            raise ValueError("formal complete-clock guard differs from the reviewed mode/threshold")
+        if raw and execute:
+            load_clock_history(health["clock_history"],read_records(LEDGER))
     for key in ("target", "framework"):
         if sha256(P1 / protocol[key]["path"]) != protocol[key]["sha256"]:
             raise ValueError(f"{key} changed after freeze; historical analysis needs the matching checkout")
+    target_text=(P1/protocol["target"]["path"]).read_text()
+    clock=protocol["measurement"]["score_clock"]
+    if any(target_text.count(f"clock_gettime({clock}, &{boundary})")!=1 for boundary in ("start","end")):
+        raise ValueError("frozen score clock differs from the two target timer boundaries")
     if execute:
         if protocol["state"] != "approved" or not all((P1 / protocol["approval"][key]).is_file()
                 for key in ("code_evidence", "method_evidence")):
@@ -699,7 +781,9 @@ def plan(protocol, stage, algorithms=None):
     jobs = []
     def run(name, role, config, **fields):
         jobs.append(dict(id=name, action="run", role=role, config={k:config[k] for k in ("s","opt")}, repeats=1, seed=0, **fields))
-    if stage == "diagnostic":
+    if stage == "raw_aa":
+        jobs = protocol["raw_aa_jobs"]
+    elif stage == "diagnostic":
         jobs = protocol["diagnostic_jobs"]
     elif stage == "reference":
         run("warmup-reference", "warmup", protocol["measurement"]["warmup"])
@@ -820,7 +904,9 @@ def execute(directory, manifest, protocol, protocol_path, reference=None, max_jo
                 print(json.dumps(dict(task=job["id"], role=job["role"], state="running")), flush=True)
                 record = controlled(command(job, directory, protocol, protocol_path), directory,
                     job["id"], job["role"], upper, journal=path,
-                    complete_clock_guard=manifest["stage"]!="diagnostic")
+                    complete_clock_guard=(protocol["measurement"]["clock_health"].get("guard_mode")
+                        if manifest["stage"]!="diagnostic" else False),
+                    clock_history=protocol["measurement"]["clock_health"].get("clock_history"))
                 append(Path(directory) / "driver.jsonl", "task_end", **{k:v for k,v in record.items() if k not in ("type", "at")})
                 if validate_task(job, directory, protocol) != "complete":
                     raise ValueError("task did not complete its valid frozen job")
@@ -838,7 +924,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("plan", "execute", "status", "usage", "recover"))
     parser.add_argument("--protocol", type=Path, default=P1 / "evidence/protocol_v2.json")
-    parser.add_argument("--stage", choices=("diagnostic", "reference", "comparison", "confirmation", "starts"))
+    parser.add_argument("--stage", choices=("diagnostic", "raw_aa", "reference", "comparison", "confirmation", "starts"))
     parser.add_argument("--directory", type=Path)
     parser.add_argument("--reference", type=Path)
     parser.add_argument("--algorithms")

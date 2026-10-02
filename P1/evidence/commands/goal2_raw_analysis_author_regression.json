@@ -1,0 +1,73 @@
+{
+  "source_before": {
+    "scripts/summarize_v2.py": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+    "tests/test_goal2_summary.py": "895ba1efeb7acbd55969aaf6ac851a474c62dd75b0b972fd26adb4872811738d",
+    "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c"
+  },
+  "source_after": {
+    "scripts/summarize_v2.py": "abbd3889d054c5e3d6d25e2b2e52a7646f2cdc54c50dfdc0e12c2dab07ea3c71",
+    "tests/test_goal2_summary.py": "895ba1efeb7acbd55969aaf6ac851a474c62dd75b0b972fd26adb4872811738d",
+    "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c"
+  },
+  "test_record": {
+    "type": "task_end",
+    "at": "2026-10-02T20:19:24.415000+00:00",
+    "task": "goal2-raw-analysis-author-tests",
+    "role": "correctness",
+    "attempt_id": "6d58b1d928bd44f78690737f43cf55e2",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.768482217,
+    "clock_elapsed_s": {
+      "monotonic": 0.768482217,
+      "raw": 0.786656961,
+      "realtime": 0.768482571
+    },
+    "clock_end_ns": {
+      "monotonic": 91022555309205,
+      "raw": 95239402852310,
+      "realtime": 1790972364414668884
+    },
+    "resource_s": 0.786656961,
+    "resource_wall_s": 0.786656961,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0175726205657998
+    ],
+    "stdout": "evidence/commands/goal2-raw-analysis-author-tests.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-analysis-author-tests.stderr.txt"
+  },
+  "fixture_only": true,
+  "syntax_record": {
+    "type": "task_end",
+    "at": "2026-10-02T20:19:25.482414+00:00",
+    "task": "goal2-raw-analysis-author-syntax",
+    "role": "correctness",
+    "attempt_id": "a2701ae2910f4c56b531605f26f69449",
+    "returncode": 0,
+    "reason": null,
+    "n4096_calls": 0,
+    "n4096_calls_known": true,
+    "driver_wall_s": 0.256133776,
+    "clock_elapsed_s": {
+      "monotonic": 0.256133776,
+      "raw": 0.262192939,
+      "realtime": 1.058753169
+    },
+    "clock_end_ns": {
+      "monotonic": 91022819988451,
+      "raw": 95239673791542,
+      "realtime": 1790972365481966075
+    },
+    "resource_s": 1.058753169,
+    "resource_wall_s": 1.058753169,
+    "clock_ratio_baselines": [
+      0.9986300261262919,
+      1.0175726205657998
+    ],
+    "stdout": "evidence/commands/goal2-raw-analysis-author-syntax.stdout.txt",
+    "stderr": "evidence/commands/goal2-raw-analysis-author-syntax.stderr.txt"
+  }
+}

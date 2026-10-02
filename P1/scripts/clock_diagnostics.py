@@ -79,6 +79,10 @@ static long long diagnostic_read(clockid_t id) {
 
 def diagnostic_source(text):
     before = kernel(text)
+    # The diagnostic still reads all four domains in the original fixed order.
+    for boundary in ("start", "end"):
+        text = text.replace(f"clock_gettime(CLOCK_MONOTONIC_RAW, &{boundary})",
+                            f"clock_gettime(CLOCK_MONOTONIC, &{boundary})", 1)
     text = text.replace("int main(int argc, const char *argv[]){", MATRIX_CLOCKS + "\nint main(int argc, const char *argv[]){", 1)
     for boundary in ("start", "end"):
         marker = f"    if (clock_gettime(CLOCK_MONOTONIC, &{boundary}) != 0) return 1;"

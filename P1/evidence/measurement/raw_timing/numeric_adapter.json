@@ -1,0 +1,32 @@
+{
+  "validation_script_sha256": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+  "measured_source_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+  "transformations": [
+    [
+      "    if (argc != 4) {",
+      "    if (argc != 2) {"
+    ],
+    [
+      "    srand((unsigned)strtoul(argv[2], NULL, 10));\n    int mode = atoi(argv[3]);",
+      "    srand(1U);\n    int mode = 0;"
+    ]
+  ],
+  "input": "original uniform rand default seed 1, mode 0; no formal input change",
+  "outputs": {
+    "4096": {
+      "source": ".cache/validation-raw/verify_4096_default.c",
+      "source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+      "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab"
+    }
+  },
+  "formal_scores": false,
+  "large_checks": "24 predetermined elements, independent long-double unblocked dot products",
+  "tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-11
+  },
+  "validation_only_flags": [
+    "-Wl,--no-as-needed",
+    "-lm"
+  ]
+}

@@ -1,0 +1,75 @@
+test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok
+test_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok
+test_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok
+test_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok
+test_complete_clock_check_rejects_nan_zero_and_wrong_unit (test_goal2_driver.Goal2DriverTests.test_complete_clock_check_rejects_nan_zero_and_wrong_unit) ... ok
+test_complete_processes_are_checked_individually_before_driver_average (test_goal2_driver.Goal2DriverTests.test_complete_processes_are_checked_individually_before_driver_average) ... ok
+test_completed_baseline_requires_unique_complete_target_rows (test_goal2_driver.Goal2DriverTests.test_completed_baseline_requires_unique_complete_target_rows) ... ok
+test_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok
+test_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok
+test_failed_attempt_cannot_be_a_formal_clock_baseline (test_goal2_driver.Goal2DriverTests.test_failed_attempt_cannot_be_a_formal_clock_baseline) ... ok
+test_formal_plan_identity_fields_cannot_be_changed (test_goal2_driver.Goal2DriverTests.test_formal_plan_identity_fields_cannot_be_changed) ... ERROR
+test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt (test_goal2_driver.Goal2DriverTests.test_formal_summary_cannot_hide_a_clock_conflict_or_missing_attempt) ... ok
+test_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok
+test_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok
+test_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok
+test_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok
+test_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok
+test_partial_live_json_is_not_a_finished_clock_sample (test_goal2_driver.Goal2DriverTests.test_partial_live_json_is_not_a_finished_clock_sample) ... ok
+test_raw_clock_history_rejects_changed_prefix_raw_and_identity (test_goal2_driver.Goal2DriverTests.test_raw_clock_history_rejects_changed_prefix_raw_and_identity) ... ok
+test_raw_guard_does_not_lose_realtime_conflict (test_goal2_driver.Goal2DriverTests.test_raw_guard_does_not_lose_realtime_conflict) ... ok
+test_raw_guard_keeps_physical_first_and_ignores_failed_previous (test_goal2_driver.Goal2DriverTests.test_raw_guard_keeps_physical_first_and_ignores_failed_previous) ... ERROR
+test_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok
+test_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok
+test_real_small_guard_records_all_calls_and_complete_driver (test_goal2_driver.Goal2DriverTests.test_real_small_guard_records_all_calls_and_complete_driver) ... ok
+test_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok
+test_resource_calls_cannot_be_reduced_below_physical_starts (test_goal2_driver.Goal2DriverTests.test_resource_calls_cannot_be_reduced_below_physical_starts) ... ok
+test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok
+test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok
+test_same_domain_raw_upper_bound_survives_shorter_monotonic (test_goal2_driver.Goal2DriverTests.test_same_domain_raw_upper_bound_survives_shorter_monotonic) ... FAIL
+test_saved_raw_seconds_and_resource_charge_cannot_be_tampered (test_goal2_driver.Goal2DriverTests.test_saved_raw_seconds_and_resource_charge_cannot_be_tampered) ... ok
+test_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok
+test_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok
+test_unfinished_call_and_missing_fields_are_not_healthy (test_goal2_driver.Goal2DriverTests.test_unfinished_call_and_missing_fields_are_not_healthy) ... ok
+test_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok
+
+======================================================================
+ERROR: test_formal_plan_identity_fields_cannot_be_changed (test_goal2_driver.Goal2DriverTests.test_formal_plan_identity_fields_cannot_be_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_driver.py", line 439, in test_formal_plan_identity_fields_cannot_be_changed
+    ex.freeze_check(protocol,manifest,source)
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 757, in freeze_check
+    raise ValueError(f"{key} changed after freeze; historical analysis needs the matching checkout")
+ValueError: target changed after freeze; historical analysis needs the matching checkout
+
+======================================================================
+ERROR: test_raw_guard_keeps_physical_first_and_ignores_failed_previous (test_goal2_driver.Goal2DriverTests.test_raw_guard_keeps_physical_first_and_ignores_failed_previous)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_driver.py", line 277, in test_raw_guard_keeps_physical_first_and_ignores_failed_previous
+    guard=ex.CompleteClockGuard(previous,"same",path,0,mode=ex.RAW_GUARD,history=binding)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 329, in __init__
+    driver_spans=resource_span(start,end)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py", line 109, in resource_span
+    raise ValueError("charged resource duration differs from its raw boundaries")
+ValueError: charged resource duration differs from its raw boundaries
+
+======================================================================
+FAIL: test_same_domain_raw_upper_bound_survives_shorter_monotonic (test_goal2_driver.Goal2DriverTests.test_same_domain_raw_upper_bound_survives_shorter_monotonic)
+----------------------------------------------------------------------
+ValueError: parsed output differs from raw target output
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_driver.py", line 328, in test_same_domain_raw_upper_bound_survives_shorter_monotonic
+    with self.assertRaisesRegex(ValueError,'same-domain'): ex.validate_trace(rows,metadata,job)
+AssertionError: "same-domain" does not match "parsed output differs from raw target output"
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.275s
+
+FAILED (failures=1, errors=2)

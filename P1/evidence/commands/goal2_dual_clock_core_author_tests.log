@@ -1,0 +1,117 @@
+{
+  "author": "/root/implementation",
+  "purpose": "Minimal dual MONOTONIC/RAW detection and same-domain guard; no performance admission",
+  "started_at_utc": "2026-10-02T19:38:13.868203+00:00",
+  "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+  "old_core_sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+  "source_before_sha256": {
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "scripts/validate_target.py": "189128c2c7e13db73c1dc516401c72a0eb053cacce74ae0db70ebd72dfc21a36",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+  },
+  "n4096_calls": 0,
+  "compile_scope": "only existing and new tiny C test fixtures",
+  "plots_or_gui": 0,
+  "primary_controlled_records": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import sys,unittest; sys.path.insert(0,'P1/tests'); suite=unittest.defaultTestLoader.loadTestsFromNames(['test_autotuner','test_experiment','test_goal2_search']); result=unittest.TextTestRunner(verbosity=2).run(suite); sys.exit(not result.wasSuccessful())"
+      ],
+      "record": {
+        "type": "task_end",
+        "at": "2026-10-02T19:38:23.922364+00:00",
+        "task": "goal2-dual-clock-core-author-tests",
+        "role": "short_test",
+        "attempt_id": "194f991324564ed39de262fe7fbe1f7a",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 10.010800595,
+        "clock_elapsed_s": {
+          "monotonic": 10.010800595,
+          "raw": 10.249613897,
+          "realtime": 10.010801479
+        },
+        "clock_end_ns": {
+          "monotonic": 88620417966875,
+          "raw": 92778550490937,
+          "realtime": 1790969903922111753
+        },
+        "resource_s": 10.249613897,
+        "resource_wall_s": 10.249613897,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-dual-clock-core-author-tests.stdout.txt",
+        "stderr": "evidence/commands/goal2-dual-clock-core-author-tests.stderr.txt"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import py_compile; py_compile.compile('P1/src/autotuner.py',cfile='P1/.cache/goal2-dual-clock-core-author/autotuner.pyc',doraise=True); py_compile.compile('P1/tests/test_goal2_search.py',cfile='P1/.cache/goal2-dual-clock-core-author/test_goal2_search.pyc',doraise=True)"
+      ],
+      "record": {
+        "type": "task_end",
+        "at": "2026-10-02T19:38:24.187789+00:00",
+        "task": "goal2-dual-clock-core-author-syntax",
+        "role": "short_test",
+        "attempt_id": "9e26ffb7a94147c3a9ab9e1e581bedd3",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.256054944,
+        "clock_elapsed_s": {
+          "monotonic": 0.256054944,
+          "raw": 0.262179552,
+          "realtime": 0.256057092
+        },
+        "clock_end_ns": {
+          "monotonic": 88620683157196,
+          "raw": 92778822023313,
+          "realtime": 1790969904187303026
+        },
+        "resource_s": 0.262179552,
+        "resource_wall_s": 0.262179552,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-dual-clock-core-author-syntax.stdout.txt",
+        "stderr": "evidence/commands/goal2-dual-clock-core-author-syntax.stderr.txt"
+      }
+    }
+  ],
+  "tests": 76,
+  "suite_reported_s": 9.866,
+  "test_failures": 0,
+  "test_errors": 0,
+  "syntax_checks": 2,
+  "verification_exit_code": 0,
+  "protected_input_files": 515,
+  "protected_manifest_before_sha256": "e80ae38964de95a1478c3a235a9ebb2df33f2ff6aca432900a0e7450cdf6b688",
+  "protected_manifest_after_sha256": "e80ae38964de95a1478c3a235a9ebb2df33f2ff6aca432900a0e7450cdf6b688",
+  "changed_protected_inputs": [],
+  "protected_inputs_unchanged": true,
+  "source_after_sha256": {
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "src/matrix_multiplication.c": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+    "scripts/validate_target.py": "189128c2c7e13db73c1dc516401c72a0eb053cacce74ae0db70ebd72dfc21a36",
+    "scripts/experiment_v2.py": "b1b5028c29236788796bfad5059fa35cd34a65566a89d6f73eb100cb502ac23f"
+  },
+  "ended_at_utc": "2026-10-02T19:38:24.218806+00:00",
+  "source_unchanged_during_execution": true
+}

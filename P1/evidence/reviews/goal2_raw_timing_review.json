@@ -1,0 +1,523 @@
+{
+  "reviewer": "/root/review",
+  "state": "FINITE_RAW_CODE_AND_METHOD_APPROVED_TWO_NUMERIC_CALLS_CONDITIONAL_ON_EXACT_FREEZE_AA_PENDING_NUMERIC_AND_ANALYSIS",
+  "method_design_sha256": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d",
+  "method_static_approved": true,
+  "finite_matrix_call_upper": 10,
+  "whole_goal_candidate_call_upper": 516,
+  "whole_goal_baseline_call_upper": 483,
+  "formal_v2_continue_admission": false,
+  "full_formal_admission": false,
+  "finite_AA_execution_admission": false,
+  "goal2_complete": false,
+  "engineering_pass": false,
+  "findings": [
+    {
+      "id": "RAW1",
+      "severity": "test regression blocker",
+      "location": "P1/tests/test_clock_followup.py:136",
+      "problem": "CLI fixture copies fixed old source/framework identities; production correctly rejects new RAW target. 46/47 pass, no n4096.",
+      "status": "CLOSED_OWNER_FIX_AND_INDEPENDENT19_REGRESSION",
+      "evidence": "evidence/commands/goal2-raw-driver-independent-tests.stderr.txt",
+      "required_fix": "Update only temporary fixture source/framework identities to actual bytes; preserve real freeze_check and original frozen protocol.",
+      "fix": "Temporary copied CLI fixture binds current target/framework/RAW clocks; original frozen protocol and production identity checks unchanged.",
+      "regression": "evidence/commands/goal2-raw-driver-independent-r1-tests.stderr.txt"
+    },
+    {
+      "id": "RAW2",
+      "severity": "bounded-scope limitation",
+      "location": "P1/scripts/experiment_v2.py:333",
+      "problem": "Future success n4096 driver without a journal could enter the driver baseline without a new frozen target header. The fixed historical direct scope is bound by prefix; all ten new approved matrix jobs must use a journal.",
+      "status": "CLOSED_MINIMAL_PRODUCTION_REJECTION_AND_INDEPENDENT_NEGATIVE_FIXTURE",
+      "required_boundary": "No future direct n4096 task admitted; numeric and AA always complete RAW guard plus frozen target journal. Re-review before any new direct path.",
+      "fix": "New successful n4096 baseline after frozen legacy cutoff requires target journal plus completed schema2 RAW mode/exact history binding/no error. Fixed four old direct diagnostic drivers remain.",
+      "regression": "test_raw_history_cannot_accept_new_unguarded_direct_matrix"
+    }
+  ],
+  "core_independent_regression": {
+    "reviewer": "/root/review",
+    "started_at_utc": "2026-10-02T19:49:37.039481+00:00",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-c",
+      "import sys,unittest;sys.path.insert(0,'P1/tests');suite=unittest.defaultTestLoader.loadTestsFromNames(['test_autotuner','test_experiment','test_goal2_search']);result=unittest.TextTestRunner(verbosity=2).run(suite);sys.exit(not result.wasSuccessful())"
+    ],
+    "syntax_command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "py_compile",
+      "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_search.py"
+    ],
+    "source_sha256": {
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+    },
+    "C_exactly_two_clock_literal_replacements": true,
+    "n4096_calls": 0,
+    "records": [
+      {
+        "type": "task_end",
+        "at": "2026-10-02T19:49:48.413373+00:00",
+        "task": "goal2-raw-core-independent-tests",
+        "role": "correctness",
+        "attempt_id": "78159efcea9645ca887c1cc362d2ac32",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 10.541286467,
+        "clock_elapsed_s": {
+          "monotonic": 10.541286467,
+          "raw": 10.672214731,
+          "realtime": 11.360129635
+        },
+        "clock_end_ns": {
+          "monotonic": 89288423281320,
+          "raw": 93462697682664,
+          "realtime": 1790970588413087598
+        },
+        "resource_s": 11.360129635,
+        "resource_wall_s": 11.360129635,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-raw-core-independent-tests.stdout.txt",
+        "stderr": "evidence/commands/goal2-raw-core-independent-tests.stderr.txt"
+      },
+      {
+        "type": "task_end",
+        "at": "2026-10-02T19:49:48.676940+00:00",
+        "task": "goal2-raw-core-independent-syntax",
+        "role": "correctness",
+        "attempt_id": "3c865c5af2ae41aab0330f7c97c6c6d0",
+        "returncode": 0,
+        "reason": null,
+        "n4096_calls": 0,
+        "n4096_calls_known": true,
+        "driver_wall_s": 0.255383116,
+        "clock_elapsed_s": {
+          "monotonic": 0.255383116,
+          "raw": 0.266458445,
+          "realtime": 0.255384596
+        },
+        "clock_end_ns": {
+          "monotonic": 89288686798135,
+          "raw": 93462972626194,
+          "realtime": 1790970588676604442
+        },
+        "resource_s": 0.266458445,
+        "resource_wall_s": 0.266458445,
+        "clock_ratio_baselines": [
+          0.9986300261262919,
+          1.0175726205657998
+        ],
+        "stdout": "evidence/commands/goal2-raw-core-independent-syntax.stdout.txt",
+        "stderr": "evidence/commands/goal2-raw-core-independent-syntax.stderr.txt"
+      }
+    ],
+    "usage_before": [
+      44,
+      3239.423590666
+    ],
+    "usage_after": [
+      44,
+      3251.050178746
+    ],
+    "finished_at_utc": "2026-10-02T19:49:48.695448+00:00",
+    "test_reported_s": 10.235
+  },
+  "updated_at_utc": "2026-10-02T20:16:28.243708+00:00",
+  "core_correctness_approved": true,
+  "C_exactly_two_clock_literals_changed": true,
+  "new_C_sha256": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+  "old_C_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+  "core_source_sha256": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+  "core_tests_sha256": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+  "actual_independent_tests": 76,
+  "syntax_exit_code": 0,
+  "core_resource_s": 11.62658808,
+  "method_baseline_independent_check": {
+    "source_snapshot_sha256": "b8fda62b67ed5cb486fc4090c12e2d39a9d1a561200fbb95f239cd81c99d2b79",
+    "exact_append_only_prefix_lines": 296,
+    "ratio": "RAW/REALTIME",
+    "complete_processes": 39,
+    "complete_drivers": 43,
+    "eligible_processes": 38,
+    "eligible_drivers": 42,
+    "failed_warmup_is_descriptive_only": true,
+    "first_process_identity": [
+      "e68dcc091e74490694a8b3532e8c215d",
+      0,
+      0,
+      248077
+    ],
+    "first_process_attempt": "d30f547b4da1406eac53b6b92250e447",
+    "first_process_q_integer_ratio": 0.9981160163930988,
+    "first_driver_attempt": "a754f5ea5bc94becb31302b4966a852d",
+    "first_driver_q": 0.9986300042296413,
+    "last_eligible_attempt": "5fa6da79df0a4b178193737082b6bf0b",
+    "max_process_first_change_percent": 0.548023382844609,
+    "max_process_previous_change_percent": 0.7750097628132391,
+    "max_driver_first_change_percent": 0.4967920204882903,
+    "max_driver_previous_change_percent": 0.8020871138576635,
+    "old_first_not_reselected": true,
+    "interrupted_and_clock_failed_attempts_not_promoted": true
+  },
+  "additional_readonly_clock_counterexample": {
+    "source": "0call independent core regression",
+    "clock_elapsed_s": {
+      "monotonic": 10.541286467,
+      "raw": 10.672214731,
+      "realtime": 11.360129635
+    },
+    "RAW_REALTIME": 0.939444801590946,
+    "matrix_baseline_eligible": false,
+    "meaning": "Retain as further evidence REALTIME is not a universal standard; strict future matrix ratio guard must actually pass"
+  },
+  "approved_method_scope": {
+    "AA_order": [
+      "F-A1",
+      "F-B1",
+      "M-B1",
+      "M-A1",
+      "M-A2",
+      "M-B2",
+      "F-B2",
+      "F-A2"
+    ],
+    "F": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "M": {
+      "s": 8,
+      "opt": "O2"
+    },
+    "fresh_A_B_labels_not_identity_dedup": true,
+    "AA_calls": 8,
+    "new_numeric_call_upper": 2,
+    "extra_warmup_calls": 0,
+    "total_call_upper": 10,
+    "guard_ratio": "RAW/REALTIME",
+    "threshold_fraction": 0.02,
+    "preserve_raw_monotonic_observations": true,
+    "preserve_old_first_previous": true,
+    "coarse_sort_rule": "All four M/F pair gaps positive and min positive gap > max(P_F,P_M)",
+    "near_optimal_target_percent": 5,
+    "quality_risk_pp": 2,
+    "minimum_useful_driver_saving_percent": 10,
+    "different_identity_risk_supported": false,
+    "whole_goal_selected_route": 516,
+    "whole_goal_baseline_route": 483,
+    "whole_goal_limit": 520,
+    "controlled_seconds_limit": 57600
+  },
+  "execution_prerequisites": [
+    "Minimal RAW C source and unchanged original body confirmed; four O builds and small all-element/tail/sanitizer regressions",
+    "Strict new driver target/process same-domain check and per-process/per-driver RAW/REALTIME first/previous guard",
+    "Clock-only legacy baseline migration must bind exact old versions and metadata/fingerprints; no old score relabeling or arbitrary source acceptance",
+    "New precise fixed10 jobs/protocol/source/compiler/binaries and actual resource plan frozen and independently reviewed",
+    "Actual relevant independent new driver regression before n4096; two required new numeric checks retain24point scope and never become formal samples"
+  ],
+  "new_numeric_execution_admission": false,
+  "driver_independent_regression": {
+    "reviewer": "/root/review",
+    "started_at": "2026-10-02T20:06:10.613099+00:00",
+    "source_sha256_before": {
+      "scripts/experiment_v2.py": "70c0df6f925b26cc6ce7ecdd8115f4ca8238eea6e54b405623de11effc16944d",
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+      "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "tests/test_goal2_driver.py": "bdf1dc29faa8386fbc4128b027ee8fe7086214a7c243f73268c709148c236d43",
+      "tests/test_clock_followup.py": "f9a614be9bdfdf31f88c6d5918255e77c4476f1ed243bae74a06420292fee75d",
+      "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+      "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+    },
+    "test_command": [
+      "/usr/bin/python3",
+      "-B",
+      "-c",
+      "import sys,unittest;sys.path.insert(0,'P1/tests');suite=unittest.defaultTestLoader.loadTestsFromNames(['test_goal2_driver','test_clock_followup']);r=unittest.TextTestRunner(verbosity=2).run(suite);print('ACTUAL_TEST_COUNT',r.testsRun);sys.exit(not r.wasSuccessful())"
+    ],
+    "usage_before": {
+      "n4096_calls": 44,
+      "resource_s": 3259.025118568
+    },
+    "error": "ValueError: task goal2-raw-driver-independent-tests failed (1); inspect its raw output",
+    "usage_after": {
+      "n4096_calls": 44,
+      "resource_s": 3261.77364445
+    },
+    "source_sha256_after": {
+      "scripts/experiment_v2.py": "70c0df6f925b26cc6ce7ecdd8115f4ca8238eea6e54b405623de11effc16944d",
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+      "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "tests/test_goal2_driver.py": "bdf1dc29faa8386fbc4128b027ee8fe7086214a7c243f73268c709148c236d43",
+      "tests/test_clock_followup.py": "f9a614be9bdfdf31f88c6d5918255e77c4476f1ed243bae74a06420292fee75d",
+      "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+      "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+    },
+    "source_unchanged": true,
+    "finished_at": "2026-10-02T20:06:13.401686+00:00",
+    "test_primary": {
+      "type": "task_end",
+      "at": "2026-10-02T20:06:13.383171+00:00",
+      "task": "goal2-raw-driver-independent-tests",
+      "role": "independent_correctness",
+      "attempt_id": "c7574d5563e34a2ab6caf3773f929c1f",
+      "returncode": 1,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 2.006948074,
+      "clock_elapsed_s": {
+        "monotonic": 2.006948074,
+        "raw": 2.032533765,
+        "realtime": 2.748525882
+      },
+      "clock_end_ns": {
+        "monotonic": 90250347183079,
+        "raw": 94447614943431,
+        "realtime": 1790971573382889109
+      },
+      "resource_s": 2.748525882,
+      "resource_wall_s": 2.748525882,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0175726205657998
+      ],
+      "stdout": "evidence/commands/goal2-raw-driver-independent-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-driver-independent-tests.stderr.txt"
+    },
+    "actual_tests": 47,
+    "passed_tests": 46,
+    "test_reported_s": 1.724,
+    "syntax_executed": false
+  },
+  "independent_history_build_correctness_check": {
+    "reviewer": "/root/review",
+    "at_utc": "2026-10-02T20:08:08.506923+00:00",
+    "clock_history_sha256": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+    "fixed_commit": "a39f348e6cf0c7466900ec739a797753f4d93f0b",
+    "exact_legacy_journals_verified": 40,
+    "exact_additional_bindings_verified": 3,
+    "ledger_prefix_sha256": "b8fda62b67ed5cb486fc4090c12e2d39a9d1a561200fbb95f239cd81c99d2b79",
+    "ledger_prefix_rows": 296,
+    "fixed_commit_legacy_bytes_equal": true,
+    "four_cold_builds": 4,
+    "four_binary_bytes_match": true,
+    "checks": {
+      "small": {
+        "valid_checks": 240,
+        "builds": 8,
+        "all_elements_per_run": true,
+        "stderr_empty": true,
+        "raw_sha256": "38b32c5df20b306a40a7ccb8ddb72d856e2836f492e555a1818bff26432bfbb1"
+      },
+      "sanitizer": {
+        "valid_checks": 5,
+        "builds": 1,
+        "all_elements_per_run": true,
+        "stderr_empty": true,
+        "raw_sha256": "c9f1177a5137c08082c04c567b36943960a22630a192d4e2a7a3cdfb3142fcc1"
+      }
+    },
+    "numeric_source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+    "numeric_kernel_unchanged": true,
+    "big_numeric_checks_not_executed": true
+  },
+  "driver_independent_repaired_regression": {
+    "reviewer": "/root/review",
+    "started_at": "2026-10-02T20:13:44.945017+00:00",
+    "source_sha256_before": {
+      "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+      "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "tests/test_goal2_driver.py": "4296651b6c9461f293d556f9c953fd5d6b1a10ea24975cc612873b15a57f8e01",
+      "tests/test_clock_followup.py": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032",
+      "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+      "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+    },
+    "test_command": [
+      "/usr/bin/python3",
+      "-B",
+      "-c",
+      "import sys,unittest;sys.path.insert(0,'P1/tests');suite=unittest.defaultTestLoader.loadTestsFromNames(['test_goal2_driver.Goal2DriverTests.test_raw_guard_keeps_physical_first_and_ignores_failed_previous', 'test_goal2_driver.Goal2DriverTests.test_raw_guard_does_not_lose_realtime_conflict', 'test_goal2_driver.Goal2DriverTests.test_raw_clock_history_rejects_changed_prefix_raw_and_identity', 'test_goal2_driver.Goal2DriverTests.test_raw_history_cannot_accept_new_unguarded_direct_matrix', 'test_goal2_driver.Goal2DriverTests.test_same_domain_raw_upper_bound_survives_shorter_monotonic', 'test_goal2_driver.Goal2DriverTests.test_formal_plan_identity_fields_cannot_be_changed', 'test_clock_followup']);r=unittest.TextTestRunner(verbosity=2).run(suite);print('ACTUAL_TEST_COUNT',r.testsRun);sys.exit(not r.wasSuccessful())"
+    ],
+    "usage_before": {
+      "n4096_calls": 44,
+      "resource_s": 3266.469752393
+    },
+    "test_primary": {
+      "type": "task_end",
+      "at": "2026-10-02T20:13:46.224797+00:00",
+      "task": "goal2-raw-driver-independent-r1-tests",
+      "role": "independent_correctness",
+      "attempt_id": "05ba5930fbee4085be56bfe9f0ce6d34",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 1.268154018,
+      "clock_elapsed_s": {
+        "monotonic": 1.268154018,
+        "raw": 1.300187483,
+        "realtime": 1.268155232
+      },
+      "clock_end_ns": {
+        "monotonic": 90692560641347,
+        "raw": 94901038860478,
+        "realtime": 1790972026224511236
+      },
+      "resource_s": 1.300187483,
+      "resource_wall_s": 1.300187483,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0175726205657998
+      ],
+      "stdout": "evidence/commands/goal2-raw-driver-independent-r1-tests.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-driver-independent-r1-tests.stderr.txt"
+    },
+    "syntax_command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "py_compile",
+      "/home/addaswsw/lab/Software_system_optimization/P1/scripts/experiment_v2.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/scripts/clock_diagnostics.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/scripts/validate_target.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_goal2_driver.py",
+      "/home/addaswsw/lab/Software_system_optimization/P1/tests/test_clock_followup.py"
+    ],
+    "syntax_primary": {
+      "type": "task_end",
+      "at": "2026-10-02T20:13:46.493045+00:00",
+      "task": "goal2-raw-driver-independent-r1-syntax",
+      "role": "independent_syntax",
+      "attempt_id": "7a03ca2f7e204693a4d451ae31e76f46",
+      "returncode": 0,
+      "reason": null,
+      "n4096_calls": 0,
+      "n4096_calls_known": true,
+      "driver_wall_s": 0.255407022,
+      "clock_elapsed_s": {
+        "monotonic": 0.255407022,
+        "raw": 0.261860071,
+        "realtime": 0.255408976
+      },
+      "clock_end_ns": {
+        "monotonic": 90692828702618,
+        "raw": 94901313693450,
+        "realtime": 1790972026492572941
+      },
+      "resource_s": 0.261860071,
+      "resource_wall_s": 0.261860071,
+      "clock_ratio_baselines": [
+        0.9986300261262919,
+        1.0175726205657998
+      ],
+      "stdout": "evidence/commands/goal2-raw-driver-independent-r1-syntax.stdout.txt",
+      "stderr": "evidence/commands/goal2-raw-driver-independent-r1-syntax.stderr.txt"
+    },
+    "usage_after": {
+      "n4096_calls": 44,
+      "resource_s": 3268.031799947
+    },
+    "source_sha256_after": {
+      "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+      "scripts/clock_followup.py": "7431540dcd8f697bf11a9979126f41dd035cc8649b848fb4f26d554133b16797",
+      "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+      "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+      "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+      "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+      "tests/test_goal2_driver.py": "4296651b6c9461f293d556f9c953fd5d6b1a10ea24975cc612873b15a57f8e01",
+      "tests/test_clock_followup.py": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032",
+      "evidence/measurement/raw_timing/clock_history.json": "8ced08e3ac7fb86cc7d6f7a67c040981bbee90a3224005720d2b6fa7ad3faba3",
+      "evidence/measurement/raw_timing_design.md": "10a4db6ea5e0d370c0fedffdd7aae5ccbed7315729ebff55e3a47be1bfa4f42d"
+    },
+    "source_unchanged": true,
+    "finished_at": "2026-10-02T20:13:46.510732+00:00",
+    "actual_tests": 19,
+    "passed_tests": 19,
+    "test_reported_s": 1.016,
+    "syntax_files": 5,
+    "syntax_exit_code": 0,
+    "controlled_resource_s": 1.562047554
+  },
+  "frozen_at_utc": "2026-10-02T20:16:28.243708+00:00",
+  "driver_correctness_approved": true,
+  "necessary_numeric_execution_admission": true,
+  "numeric_admission_type": "Only two fixed n4096 24-point numeric jobs, conditional on exact protocol/source/plan/resource freeze and owned serial execution; not formal scores",
+  "code_sha256": {
+    "src/autotuner.py": "55b88052a5d33eec30b88a40a1800452365d0b2e0694f2d96f39caca3236266c",
+    "src/matrix_multiplication.c": "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1",
+    "scripts/experiment_v2.py": "a6dafecd1f1abb00d9515829f5e1cf55d97bb2f024b8475d74f82a609fa94e4c",
+    "scripts/clock_diagnostics.py": "4d544302eced8aaeef74ff69cef9a35a94428d291da667356ea3899011858b22",
+    "scripts/validate_target.py": "b84e93d9ad7afe793299761bcc592c4607f6d38fda80a07e178bba6c88d35490",
+    "tests/test_goal2_search.py": "e542045704279538818758ffe9a5d0f0fdfd2e3eabbdcdad9471543d2de601e2",
+    "tests/test_goal2_driver.py": "4296651b6c9461f293d556f9c953fd5d6b1a10ea24975cc612873b15a57f8e01",
+    "tests/test_clock_followup.py": "2c0a09137309b490af4b5f463678dbddfde2f422e44ece1f864c7e13741aa032"
+  },
+  "additional_timer_preflight_check": {
+    "location": "P1/scripts/experiment_v2.py:765",
+    "behavior": "Both exact target timer literals must match frozen score clock; wrong domain rejected before execution.",
+    "independent_regression": "test_formal_plan_identity_fields_cannot_be_changed"
+  },
+  "approved_numeric_jobs": [
+    {
+      "id": "goal2-raw-n4096-O0-s24",
+      "s": 24,
+      "opt": "O0",
+      "call_upper": 1,
+      "role": "numeric_validation_raw"
+    },
+    {
+      "id": "goal2-raw-n4096-O3-s128",
+      "s": 128,
+      "opt": "O3",
+      "call_upper": 1,
+      "role": "numeric_validation_raw"
+    }
+  ],
+  "numeric_source_sha256": "f195ec9a183e9b12800661c6c401900c4f75537c833158fdf6153cb59522dcad",
+  "numeric_prelaunch_conditions": [
+    "Protocol state approved, frozen source/compiler/method/history/gate identities exact; no modification of old v2/protocols/raw.",
+    "Generate exact eight-AA plan and ten-call resource plan; normal source/protocol checkpoint before target launch.",
+    "Both numeric tasks use one actual target process each with frozen journal and complete RAW_GUARD/history8ced; no full validation wrapper or extra warmup.",
+    "Real nonblocking performance lock and primary cumulative ledger; all costs/failed starts count, max520calls/max57600s in three-domain max resource clock.",
+    "Numeric input default seed1/mode0, verified same six-loop kernel4005, validation-only mathlib flags; scores never enter reference/search."
+  ],
+  "AA_prelaunch_conditions": [
+    "Two new numeric jobs complete with CHECK n4096 count24 failures0, valid default input/source, exact raw SHA and clock/resource coverage; independent review of actual raw.",
+    "Additional independent strict RAW analysis gate with target/driver schema2/history binding/physical first+previous/2% guards/cost RAW source; full formal admission remains false.",
+    "Exactly fixed eight fresh AA labels, no warmup/retries/extra samples; all samples retained and both configurations use same frozen O2 binary.",
+    "Old MONOTONIC warmup conflict and stopped state persist; original first/previous not reset, same boot or stop.",
+    "Only after all eight valid, all health/cost criteria and predeclared coarse-ranking criterion can another formal protocol be reviewed; 5%,2pp,10%,different_identity_risk_supported=false unchanged."
+  ],
+  "resource_snapshot_at_independent_gate": {
+    "n4096_calls": 44,
+    "controlled_resource_s": 3268.031799947,
+    "remaining_resource_s": 54331.968200053,
+    "maximum_fixed_new_matrix_calls": 10,
+    "fixed_target_timeouts_sum_s": 12000,
+    "project_candidate_call_upper": 516,
+    "project_baseline_call_upper": 483,
+    "worst_case_entire_goal_completion_guaranteed": false
+  },
+  "result_review_policy": "Frozen gate files remain unchanged after protocol binding. Numeric and AA actual results belong in separately delegated result review files."
+}

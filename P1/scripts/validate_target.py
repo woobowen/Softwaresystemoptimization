@@ -12,7 +12,8 @@ SOURCE = ROOT / "src/matrix_multiplication.c"
 
 def kernel(text):
     start = text.index("    for(int ih")
-    endings = ("    gettimeofday(&end", "    if (clock_gettime(CLOCK_MONOTONIC, &end)")
+    endings = ("    gettimeofday(&end", "    if (clock_gettime(CLOCK_MONOTONIC, &end)",
+               "    if (clock_gettime(CLOCK_MONOTONIC_RAW, &end)")
     found = [text.index(marker, start) for marker in endings if marker in text[start:]]
     assert len(found) == 1, "Unexpected timer boundary"
     return "\n".join(line.rstrip() for line in text[start:found[0]].splitlines())
