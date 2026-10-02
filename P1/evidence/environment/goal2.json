@@ -1,0 +1,212 @@
+{
+  "at_utc": "2026-10-02T13:34:06.791358+00:00",
+  "boot_id": "7e948113-2ef4-46b6-98e1-a890cad45163",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "commands": {
+    "os": {
+      "command": [
+        "cat",
+        "/etc/os-release"
+      ],
+      "returncode": 0,
+      "stdout": "PRETTY_NAME=\"Ubuntu 24.04.2 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.2 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "stderr": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stdout": "Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    "cpu": {
+      "command": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  22\nOn-line CPU(s) list:                     0-21\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) Ultra 9 185H\nCPU family:                              6\nModel:                                   170\nThread(s) per core:                      2\nCore(s) per socket:                      11\nSocket(s):                               1\nStepping:                                4\nBogoMIPS:                                6143.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               528 KiB (11 instances)\nL1i cache:                               704 KiB (11 instances)\nL2 cache:                                22 MiB (11 instances)\nL3 cache:                                24 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-21\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+      "stderr": ""
+    },
+    "memory": {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "returncode": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:     16561389568  3989655552 12111360000     4161536   707444736 12571734016\nSwap:     4294967296           0  4294967296\n",
+      "stderr": ""
+    },
+    "gcc": {
+      "command": [
+        "gcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    "python": {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "Python 3.12.3\n",
+      "stderr": ""
+    },
+    "clocksource": {
+      "command": [
+        "cat",
+        "/sys/devices/system/clocksource/clocksource0/current_clocksource"
+      ],
+      "returncode": 0,
+      "stdout": "tsc\n",
+      "stderr": ""
+    },
+    "available_clocksources": {
+      "command": [
+        "cat",
+        "/sys/devices/system/clocksource/clocksource0/available_clocksource"
+      ],
+      "returncode": 0,
+      "stdout": "tsc hyperv_clocksource_tsc_page hyperv_clocksource_msr acpi_pm \n",
+      "stderr": ""
+    },
+    "services": {
+      "command": [
+        "systemctl",
+        "show",
+        "systemd-timesyncd.service",
+        "chrony.service",
+        "chronyd.service",
+        "--property=Id,LoadState,ActiveState,SubState"
+      ],
+      "returncode": 0,
+      "stdout": "Id=systemd-timesyncd.service\nLoadState=loaded\nActiveState=active\nSubState=running\n\nId=chrony.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\n\nId=chronyd.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\n",
+      "stderr": ""
+    },
+    "sync": {
+      "command": [
+        "timedatectl",
+        "show",
+        "--property=NTPSynchronized,NTP,Timezone"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "sync_status": {
+      "command": [
+        "timedatectl",
+        "timesync-status"
+      ],
+      "returncode": 0,
+      "stdout": "       Server: 2620:2d:4000:1::3f (ntp.ubuntu.com)\nPoll interval: 32s (min: 32s; max 34min 8s)\n         Leap: normal\n      Version: 4\n      Stratum: 2\n    Reference: 91EE5050\n    Precision: 1us (-25)\nRoot distance: 4.791ms (max: 5s)\n       Offset: +221.095ms\n        Delay: 221.281ms\n       Jitter: 25.509ms\n Packet count: 1542\n",
+      "stderr": ""
+    },
+    "sync_journal": {
+      "command": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "--since",
+        "2026-10-02 00:00:00",
+        "-n",
+        "15",
+        "--no-pager"
+      ],
+      "returncode": 0,
+      "stdout": "Oct 02 00:53:07 LAPTOP-KI0GT6AJ systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...\nOct 02 00:53:07 LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\nOct 02 00:53:07 LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\n-- Boot 7e9481132ef446b698e1a890cad45163 --\nOct 02 01:52:05 LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\nOct 02 01:52:05 LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\nOct 02 01:52:08 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\nOct 02 01:52:08 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Initial clock synchronization to Fri 2026-10-02 01:52:08.245836 CST.\nOct 02 11:23:06 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\nOct 02 13:48:11 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).\nOct 02 13:48:14 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\nOct 02 21:08:33 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server [2620:2d:4000:1::3f]:123 (ntp.ubuntu.com).\n",
+      "stderr": ""
+    },
+    "screenshot_processes": {
+      "command": [
+        "bash",
+        "-c",
+        "ps -eo pid,ppid,comm | awk '$3 ~ /^(Xvfb|xterm|ffmpeg|Xorg|Xwayland)$/ { print }'"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "x_tcp": {
+      "command": [
+        "bash",
+        "-c",
+        "ss -lntp | awk 'NR==1 || $4 ~ /:60[0-9][0-9]$/ {print}'"
+      ],
+      "returncode": 0,
+      "stdout": "State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                               \n",
+      "stderr": ""
+    },
+    "x_unix": {
+      "command": [
+        "bash",
+        "-c",
+        "ss -lx | rg 'X11'"
+      ],
+      "returncode": 0,
+      "stdout": "u_str LISTEN 0      1                                                        /tmp/.X11-unix/X0 1141             * 0          \n",
+      "stderr": ""
+    },
+    "optional_hardware": {
+      "command": [
+        "bash",
+        "-c",
+        "for p in /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor /sys/class/thermal/thermal_zone0/temp /proc/sys/kernel/perf_event_paranoid; do if test -r \"$p\"; then printf '%s: ' \"$p\"; cat \"$p\"; else printf '%s unavailable\\n' \"$p\"; fi; done"
+      ],
+      "returncode": 0,
+      "stdout": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor unavailable\n/sys/class/thermal/thermal_zone0/temp unavailable\n/proc/sys/kernel/perf_event_paranoid: 2\n",
+      "stderr": ""
+    },
+    "matplotlib": {
+      "command": [
+        "python3",
+        "-c",
+        "import matplotlib;print(matplotlib.__version__)"
+      ],
+      "returncode": 0,
+      "stdout": "3.6.3\n",
+      "stderr": ""
+    }
+  },
+  "tools": {
+    "gcc": "/usr/bin/gcc",
+    "python3": "/usr/bin/python3",
+    "taskset": "/usr/bin/taskset",
+    "flock": "/usr/bin/flock",
+    "Xvfb": "/usr/bin/Xvfb",
+    "xauth": "/usr/bin/xauth",
+    "xterm": null,
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "pdftotext": "/usr/bin/pdftotext",
+    "git": "/usr/bin/git"
+  },
+  "global_changes": [],
+  "installed_this_goal": []
+}

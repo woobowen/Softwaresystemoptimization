@@ -1,0 +1,553 @@
+{
+  "schema": 2,
+  "state": "approved",
+  "approval": {
+    "frozen_at_utc": "2026-10-02T14:25:38.808158+00:00",
+    "code_evidence": "evidence/reviews/goal2_runner_review.md",
+    "method_evidence": "evidence/reviews/goal2_design_review.md",
+    "core_code_evidence": "evidence/reviews/goal2_code_gate.md",
+    "runner_regression": "evidence/reviews/goal2_runner_regression.json",
+    "runner_sha256": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+    "clock_diagnostics_sha256": "12e22003e861028292445951c8bb4bffc80c3d61a9479611eddc73db230999ff"
+  },
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build",
+    "warmup": {
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "score_clock": "CLOCK_MONOTONIC",
+    "process_clock": "CLOCK_MONOTONIC",
+    "cost_clock": "CLOCK_MONOTONIC",
+    "resource_clock": "max_positive_MONOTONIC_RAW_REALTIME_per_task",
+    "clock_health": {
+      "status": "diagnostic_pending",
+      "timer": "CLOCK_MONOTONIC",
+      "kernel_over_process_tolerance_s": 0.005,
+      "raw_monotonic_ratio_change_fraction": 0.02,
+      "resolution_pp": null
+    },
+    "arrangement": "pre_registered_M0_M1_M1_M0",
+    "performance_lock": ".cache/performance.lock"
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true,
+    "unknown_cost_is_zero": false
+  },
+  "resources": {
+    "max_process_runs": 520,
+    "max_wall_s": 57600,
+    "normal_process_upper_bound": 494,
+    "shared_failure_or_diagnostic_reserve": 26,
+    "diagnostic_matrix_runs": 28,
+    "diagnostic_multiclock_matrix_runs": 2,
+    "reference_process_upper_bound": 70,
+    "comparison_process_upper_bound": 283,
+    "confirmation_keep_process_upper_bound": 76,
+    "greedy_start_process_upper_bound": 32,
+    "full_validation_process_upper_bound": 2,
+    "fresh_reproduction_process_upper_bound": 1,
+    "short_clock_probes_count_as_matrix_runs": false,
+    "short_clock_probes_count_as_controlled_wall": true
+  },
+  "diagnostic_jobs": [
+    {
+      "id": "diagnostic-b1-01-F-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-02-F-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b1-03-M-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-04-M-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b1-05-F-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-06-M-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-01-F-anchor-before",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b2-02-F-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-03-F-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-04-M-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-05-M-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-06-F-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b2-07-F-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b2-08-F-anchor-after",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b3-01-F-anchor-before",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b3-02-M-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b3-03-M-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b3-04-F-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-05-F-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-06-M-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-07-M-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-08-F-anchor-after",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b4-01-M-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b4-02-M-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-03-F-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b4-04-F-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-05-M-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-06-F-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 3
+    }
+  ],
+  "diagnostic_design": "evidence/measurement/design.md",
+  "diagnostic_design_sha256": "cf1362b3ec150fa6f1fcde86df04b7a6cda5926c61ef5df3f322bd574ebc259b"
+}

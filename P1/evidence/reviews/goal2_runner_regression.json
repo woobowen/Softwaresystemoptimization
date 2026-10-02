@@ -1,0 +1,48 @@
+{
+  "role": "independent review agent /root/review",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_goal2_driver.py",
+    "-v"
+  ],
+  "cwd": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "lock": "P1/.cache/performance.lock LOCK_EX|LOCK_NB",
+  "source_sha256_before": {
+    "scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+    "scripts/clock_diagnostics.py": "12e22003e861028292445951c8bb4bffc80c3d61a9479611eddc73db230999ff",
+    "tests/test_goal2_driver.py": "776f932a224b26f8d79cda93f68e28ac1b80cd6cfc3dd3466396ac396c115d3d",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+  },
+  "source_sha256_after": {
+    "scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+    "scripts/clock_diagnostics.py": "12e22003e861028292445951c8bb4bffc80c3d61a9479611eddc73db230999ff",
+    "tests/test_goal2_driver.py": "776f932a224b26f8d79cda93f68e28ac1b80cd6cfc3dd3466396ac396c115d3d",
+    "src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964"
+  },
+  "start_ns": {
+    "CLOCK_MONOTONIC": 69942495569004,
+    "CLOCK_MONOTONIC_RAW": 73874724008447,
+    "CLOCK_REALTIME": 1790951000092463121
+  },
+  "end_ns": {
+    "CLOCK_MONOTONIC": 69943601551895,
+    "CLOCK_MONOTONIC_RAW": 73875836750774,
+    "CLOCK_REALTIME": 1790951001198445882
+  },
+  "elapsed_s": {
+    "CLOCK_MONOTONIC": 1.105982891,
+    "CLOCK_MONOTONIC_RAW": 1.112742327,
+    "CLOCK_REALTIME": 1.105982761
+  },
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_clock_boundaries_reject_extra_domain_and_noninteger_units (test_goal2_driver.Goal2DriverTests.test_clock_boundaries_reject_extra_domain_and_noninteger_units) ... ok\ntest_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_guard_uses_only_same_boot_matrix_intervals (test_goal2_driver.Goal2DriverTests.test_clock_guard_uses_only_same_boot_matrix_intervals) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_hard_exit_driver_cleans_its_recorded_separate_child (test_goal2_driver.Goal2DriverTests.test_hard_exit_driver_cleans_its_recorded_separate_child) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 1.021s\n\nOK\n",
+  "n4096_calls": 0,
+  "scope": "Low-cost independent regression, not formal performance approval"
+}

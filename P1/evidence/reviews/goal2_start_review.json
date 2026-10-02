@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "reviewer": "/root/review",
+  "at_utc": "2026-10-02T13:37:02.084122+00:00",
+  "baseline_commit": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+  "protected_files": 431,
+  "changed_protected_files": [],
+  "actual_raw_checks": {
+    "calls": 258,
+    "reference_configs": 20,
+    "all_source_compiler_clock_fingerprints_verified": true,
+    "raw_stdout_checksum_exit_start_completion_checked": true,
+    "old_scores_and_best_recomputed": true,
+    "binaries": {
+      "O3": [
+        "2e68698c2ed43aed4a615156c3edaf08bc22fc1c28d3165bad4884c0a7012828"
+      ],
+      "O2": [
+        "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+      ],
+      "O1": [
+        "5ebe9775efe700caa5e6971e0f29fb2cfeb68ce5db8ed3427a285ceae231ceab"
+      ],
+      "O0": [
+        "fc94eb28bd61575ae77bf2e963e52b19b0bfa32b36f5f4fbad2d02d00b1cb190"
+      ]
+    }
+  },
+  "C1": {
+    "same_config": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "same_binary": "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c",
+    "random_confirmation_s": 33.191216,
+    "S1_confirmation_s": 36.206318,
+    "apparent_delta_s": 3.015102000000006,
+    "holdout_config": {
+      "s": 64,
+      "opt": "O3"
+    },
+    "identity_reference_gap_pct": 4.083032921814667,
+    "old_confirmation_gap_pct": 7.587972933266873
+  },
+  "C2": {
+    "s128_samples": {
+      "O1": [
+        43.836937,
+        41.177814,
+        33.823772
+      ],
+      "O2": [
+        40.385387,
+        39.499706,
+        34.484921
+      ],
+      "O3": [
+        46.76086,
+        42.501537,
+        33.005756
+      ]
+    },
+    "clock_probe_ratio": [
+      1.0910095966385336,
+      1.0910096889661212,
+      1.0910094508275296,
+      1.0910097532727994,
+      1.0910094765295433
+    ]
+  },
+  "C3": {
+    "old_absolute_floor_s": 5.6,
+    "random_identity_headroom_s": [
+      4.826465999999996,
+      0.0,
+      3.0018309999999957
+    ]
+  },
+  "C4": {
+    "greedy_starts": [
+      {
+        "s": 16,
+        "opt": "O2"
+      },
+      {
+        "s": 128,
+        "opt": "O3"
+      },
+      {
+        "s": 64,
+        "opt": "O3"
+      }
+    ]
+  },
+  "historical_costs": [
+    {
+      "stage": "reference",
+      "calls": 61,
+      "kernel_s": 5533.803465000001,
+      "process_monotonic_s": 5563.930275264998,
+      "driver_monotonic_s": 5569.810459629005
+    },
+    {
+      "stage": "selection",
+      "calls": 154,
+      "kernel_s": 11935.717976000007,
+      "process_monotonic_s": 12011.861293886017,
+      "driver_monotonic_s": 12016.120602788997
+    },
+    {
+      "stage": "conflict_selection",
+      "calls": 9,
+      "kernel_s": 359.013015,
+      "process_monotonic_s": 363.32093909000105,
+      "driver_monotonic_s": 364.22182902099667
+    },
+    {
+      "stage": "holdout",
+      "calls": 34,
+      "kernel_s": 2642.373157,
+      "process_monotonic_s": 2658.7066166160002,
+      "driver_monotonic_s": 2659.654210890996
+    }
+  ],
+  "scope": "Read-only raw analysis; no compiler,target,tests or plots executed; C7 regeneration and final images remain pending."
+}

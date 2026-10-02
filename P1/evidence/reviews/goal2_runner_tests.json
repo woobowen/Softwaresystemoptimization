@@ -1,0 +1,52 @@
+{
+  "reviewer": "/root/review",
+  "author": "/root",
+  "scope": "independent driver/clock fixtures; outstanding R3/R5 static defects are not passed by existing tests",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_goal2_driver.py",
+    "-v"
+  ],
+  "cwd": "P1",
+  "started_at": "2026-10-02T14:08:11.219557+00:00",
+  "ended_at": "2026-10-02T14:08:12.030255+00:00",
+  "exit_code": 0,
+  "clock_start_ns": {
+    "CLOCK_MONOTONIC": 69033622661099,
+    "CLOCK_MONOTONIC_RAW": 72965876183461,
+    "CLOCK_REALTIME": 1790950091219554966
+  },
+  "clock_end_ns": {
+    "CLOCK_MONOTONIC": 69034433144415,
+    "CLOCK_MONOTONIC_RAW": 72966686356526,
+    "CLOCK_REALTIME": 1790950092030039145
+  },
+  "clock_deltas_s": {
+    "CLOCK_MONOTONIC": 0.810483316,
+    "CLOCK_MONOTONIC_RAW": 0.810173065,
+    "CLOCK_REALTIME": 0.810484179
+  },
+  "source_before": {
+    "P1/scripts/experiment_v2.py": "48267dbaeb843ed3f2911171c7a4e075e666942f9eb3b3b66f6b4a4a353ca5b2",
+    "P1/scripts/clock_diagnostics.py": "0221772207d1a5721e59ce58c224b7ce36ea6ff5d4a33e1b2b43526d05558007",
+    "P1/src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "P1/tests/test_goal2_driver.py": "fdd3bbbab195337ac9622ffca7976e124b7f277f2e4d0740736941ae3454b5c5"
+  },
+  "source_after": {
+    "P1/scripts/experiment_v2.py": "48267dbaeb843ed3f2911171c7a4e075e666942f9eb3b3b66f6b4a4a353ca5b2",
+    "P1/scripts/clock_diagnostics.py": "0221772207d1a5721e59ce58c224b7ce36ea6ff5d4a33e1b2b43526d05558007",
+    "P1/src/autotuner.py": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+    "P1/tests/test_goal2_driver.py": "fdd3bbbab195337ac9622ffca7976e124b7f277f2e4d0740736941ae3454b5c5"
+  },
+  "sources_unchanged": true,
+  "performance_lock": "P1/.cache/performance.lock held via flock -n",
+  "stdout": "",
+  "stderr": "test_clock_deltas_and_same_domain_guard_fail (test_goal2_driver.Goal2DriverTests.test_clock_deltas_and_same_domain_guard_fail) ... ok\ntest_clock_probe_has_fixed_statement_order_and_identical_kernel (test_goal2_driver.Goal2DriverTests.test_clock_probe_has_fixed_statement_order_and_identical_kernel) ... ok\ntest_direct_task_existing_output_is_preserved (test_goal2_driver.Goal2DriverTests.test_direct_task_existing_output_is_preserved) ... ok\ntest_duplicate_measurement_and_run_identity_fail (test_goal2_driver.Goal2DriverTests.test_duplicate_measurement_and_run_identity_fail) ... ok\ntest_hard_exit_recovery_preserves_unknown_actual_cost (test_goal2_driver.Goal2DriverTests.test_hard_exit_recovery_preserves_unknown_actual_cost) ... ok\ntest_historical_root_comes_from_frozen_manifest (test_goal2_driver.Goal2DriverTests.test_historical_root_comes_from_frozen_manifest) ... ok\ntest_metadata_rehash_does_not_bypass_frozen_job (test_goal2_driver.Goal2DriverTests.test_metadata_rehash_does_not_bypass_frozen_job) ... ok\ntest_owned_lock_rejects_a_second_runner (test_goal2_driver.Goal2DriverTests.test_owned_lock_rejects_a_second_runner) ... ok\ntest_raw_output_checksum_and_clock_units_fail (test_goal2_driver.Goal2DriverTests.test_raw_output_checksum_and_clock_units_fail) ... ok\ntest_real_small_base_and_recheck_traces (test_goal2_driver.Goal2DriverTests.test_real_small_base_and_recheck_traces) ... ok\ntest_recheck_eligibility_and_fresh_recovery_cannot_change (test_goal2_driver.Goal2DriverTests.test_recheck_eligibility_and_fresh_recovery_cannot_change) ... ok\ntest_resource_clocks_do_not_cross_compare_kernel_or_go_backwards (test_goal2_driver.Goal2DriverTests.test_resource_clocks_do_not_cross_compare_kernel_or_go_backwards) ... ok\ntest_resource_ledger_cannot_forget_unknown_or_duplicate_attempt (test_goal2_driver.Goal2DriverTests.test_resource_ledger_cannot_forget_unknown_or_duplicate_attempt) ... ok\ntest_summary_best_cannot_be_backfilled_from_confirmation (test_goal2_driver.Goal2DriverTests.test_summary_best_cannot_be_backfilled_from_confirmation) ... ok\ntest_summary_counts_and_budget_are_recomputed (test_goal2_driver.Goal2DriverTests.test_summary_counts_and_budget_are_recomputed) ... ok\ntest_wrong_trial_score_and_proposal_fail (test_goal2_driver.Goal2DriverTests.test_wrong_trial_score_and_proposal_fail) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.722s\n\nOK\n",
+  "n4096_calls": 0
+}

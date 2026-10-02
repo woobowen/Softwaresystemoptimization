@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 import random
 import re
+import resource
 import shutil
 import signal
 import statistics
@@ -24,7 +25,7 @@ import uuid
 BLOCKS = (8, 16, 24, 64, 128)
 OPTS = ("O0", "O1", "O2", "O3")
 COMMON_FLAGS = ("-std=c11", "-Wall", "-Wextra")
-ALGORITHMS = ("grid", "random", "greedy", "stratified", "patience")
+ALGORITHMS = ("grid", "random", "greedy", "stratified", "patience", "recheck")
 
 
 def now():
@@ -38,6 +39,12 @@ def digest(value):
 def fingerprint(value):
     return digest(json.dumps(value, sort_keys=True, separators=(",", ":"),
                              allow_nan=False).encode())
+
+
+def clock_readings_ns():
+    """Read these time domains in the same fixed order at each boundary."""
+    return {name: time.clock_gettime_ns(getattr(time, name)) for name in
+            ("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME")}
 
 
 @dataclass(frozen=True)
@@ -79,7 +86,8 @@ def process(command, timeout, on_start=None):
     """Record a real subprocess; terminate its whole group on timeout/interrupt."""
     result = dict(command=list(map(str, command)), started_at=now(), spawned=False,
                   stdout="", stderr="", returncode=None, status="ok", error=None)
-    start = time.monotonic()
+    clocks_start = clock_readings_ns()
+    cpu_start = resource.getrusage(resource.RUSAGE_CHILDREN)
     child = None
     try:
         child = subprocess.Popen(result["command"], stdout=subprocess.PIPE,
@@ -113,7 +121,19 @@ def process(command, timeout, on_start=None):
     finally:
         if child:
             result["returncode"] = child.returncode
-        result.update(ended_at=now(), process_wall_s=time.monotonic() - start)
+        cpu_end = resource.getrusage(resource.RUSAGE_CHILDREN)
+        clocks_end = clock_readings_ns()
+        deltas = {name: (clocks_end[name] - value) / 1e9 for name, value in clocks_start.items()}
+        result.update(ended_at=now(), process_wall_s=deltas["CLOCK_MONOTONIC"],
+            process_wall_clock="CLOCK_MONOTONIC", clock_unit="ns",
+            clock_read_order=list(clocks_start), clock_start_ns=clocks_start,
+            clock_end_ns=clocks_end, clock_deltas_s=deltas,
+            boundary_read_order=dict(start=[*clocks_start, "RUSAGE_CHILDREN"],
+                                     end=["RUSAGE_CHILDREN", *clocks_end]),
+            child_cpu_start_s=dict(user=cpu_start.ru_utime, system=cpu_start.ru_stime),
+            child_cpu_end_s=dict(user=cpu_end.ru_utime, system=cpu_end.ru_stime),
+            child_user_cpu_s=cpu_end.ru_utime - cpu_start.ru_utime,
+            child_system_cpu_s=cpu_end.ru_stime - cpu_start.ru_stime)
     return result
 
 
@@ -237,7 +257,8 @@ class TargetProgram:
         if digest(binary.read_bytes()) != build["binary_sha256"]:
             raise ValueError("cached binary changed before measurement")
         result = process([str(binary), str(config.s)], timeout, on_start)
-        result.update(kernel_s=None, checksum=None, build_key=build["build_key"],
+        result.update(kernel_s=None, kernel_clock=self.kernel_clock, kernel_unit="s",
+                      checksum=None, build_key=build["build_key"],
                       binary_sha256=build["binary_sha256"])
         if result["status"] == "ok":
             try:
@@ -247,7 +268,9 @@ class TargetProgram:
                     raise ValueError("missing checksum output for this target")
             except ValueError as exc:
                 result.update(status="parse_error", error=str(exc), kernel_s=None)
-            if result["status"] == "ok" and self.kernel_clock == "CLOCK_MONOTONIC" and \
+            if result["status"] == "ok" and self.kernel_clock == \
+                    result.get("process_wall_clock", "CLOCK_MONOTONIC") and \
+                    self.kernel_clock != "unknown" and \
                     result["kernel_s"] > result["process_wall_s"] + .005:
                 result.update(status="clock_error", error="kernel elapsed exceeds process wall time + 0.005 s")
         return result
@@ -255,20 +278,27 @@ class TargetProgram:
 
 class SearchStrategy:
     """Propose configurations using only this search's observed feedback."""
-    def __init__(self, name, space, seed=0, min_trials=5, patience=3, min_relative_improvement=0.0):
+    def __init__(self, name, space, seed=0, min_trials=5, patience=3,
+                 min_relative_improvement=0.0, *, budget=None, start=None):
         if name not in ALGORITHMS:
             raise ValueError("unknown search algorithm")
         if type(min_trials) is not int or min_trials < 1 or type(patience) is not int or patience < 1:
             raise ValueError("min_trials and patience must be positive integers")
         if not math.isfinite(min_relative_improvement) or not 0 <= min_relative_improvement < 1:
             raise ValueError("min_relative_improvement must be finite and in [0, 1)")
+        if start is not None:
+            if name != "greedy":
+                raise ValueError("an explicit start is only supported by greedy")
+            space.check(start)
+        if name == "recheck" and (type(budget) is not int or budget < 4):
+            raise ValueError("recheck requires a call budget of at least 4")
         self.name, self.space, self.scores = name, space, {}
         self.min_trials, self.patience = min_trials, patience
         self.min_relative_improvement = min_relative_improvement
         self.stale, self.best_score = 0, None
         self.order = list(space.configs)
         rng = random.Random(seed)
-        if name in ("random", "patience"):
+        if name in ("random", "patience", "recheck"):
             rng.shuffle(self.order)
         elif name == "stratified":
             blocks = {opt: list(space.blocks) for opt in space.opts}
@@ -279,9 +309,18 @@ class SearchStrategy:
                 opts = list(space.opts)
                 rng.shuffle(opts)
                 self.order.extend(Config(blocks[opt][i], opt) for opt in opts)
-        self.current = rng.choice(space.configs) if name == "greedy" else None
+        self.current = (start if start is not None else rng.choice(space.configs)) if name == "greedy" else None
+        if name == "recheck":
+            self.budget = budget
+            self.explore_count = min(len(space.configs), budget - 2)
+            self.first_scores, self.config_samples = {}, {}
+            self.finalists, self.rechecked = None, set()
 
     def suggest(self):
+        if self.name == "recheck":
+            if len(self.first_scores) < self.explore_count:
+                return next(c for c in self.order if c not in self.first_scores)
+            return next((c for c in self.finalists if c not in self.rechecked), None)
         if self.name == "patience" and len(self.scores) >= self.min_trials and self.stale >= self.patience:
             return None
         if self.name != "greedy":
@@ -304,6 +343,22 @@ class SearchStrategy:
             raise ValueError("feedback does not match next proposed configuration")
         if score is not None and (not math.isfinite(score) or score <= 0):
             raise ValueError("invalid feedback score")
+        if self.name == "recheck":
+            samples = self.config_samples.setdefault(config, [])
+            if config in self.first_scores:
+                self.rechecked.add(config)
+                if score is not None:
+                    samples.append(score)
+                self.scores[config] = statistics.median(samples) if score is not None else None
+            else:
+                self.first_scores[config] = score
+                if score is not None:
+                    samples.append(score)
+                self.scores[config] = score
+                if len(self.first_scores) == self.explore_count:
+                    valid = [c for c in self.order if self.first_scores.get(c) is not None]
+                    self.finalists = sorted(valid, key=lambda c: self.first_scores[c])[:2]
+            return
         self.scores[config] = score
         if self.name == "patience":
             significant = score is not None and (self.best_score is None or
@@ -311,6 +366,17 @@ class SearchStrategy:
             self.stale = 0 if significant else self.stale + 1
             if score is not None and (self.best_score is None or score < self.best_score):
                 self.best_score = score
+
+    def best(self, require_review=False):
+        """S3's updated online scores can rise when a candidate is remeasured."""
+        if self.name != "recheck":
+            raise ValueError("aggregate best is only used by recheck")
+        candidates = [c for c in self.order if self.scores.get(c) is not None and
+                      (not (require_review or self.rechecked) or c in self.rechecked)]
+        if not candidates:
+            return None
+        winner = min(candidates, key=lambda c: self.scores[c])
+        return dict(config=asdict(winner), score=self.scores[winner])
 
 
 class Journal:
@@ -378,8 +444,13 @@ class Evaluator:
         self.repeats, self.timeout = repeats, timeout
         self.session_started = None
 
-    def evaluate(self, config, trial_id):
+    def evaluate(self, config, trial_id, strategy=None):
         self.space.check(config)
+        if strategy is not None:
+            if strategy.name != "recheck" or self.repeats != 1:
+                raise ValueError("aggregate scoring requires recheck with one process per trial")
+            if config != strategy.suggest():
+                raise ValueError("evaluation does not match next proposed configuration")
         records = [r for r in self.journal.records if r.get("trial_id") == trial_id]
         completed = next((r for r in records if r["type"] == "trial"), None)
         if completed:
@@ -424,11 +495,23 @@ class Evaluator:
         valid = not interrupted_build and build is not None and build["status"] == "ok" and \
             len(measurements) == self.repeats and len(samples) == self.repeats
         score = statistics.median(samples) if valid else None
-        previous = [r for r in self.journal.records if r["type"] == "trial" and r["score"] is not None]
-        candidates = [dict(config=r["config"], score=r["score"]) for r in previous]
-        if valid:
-            candidates.append(dict(config=asdict(config), score=score))
-        best = min(candidates, key=lambda r: r["score"]) if candidates else None
+        scoring = {}
+        if strategy is not None:
+            phase = "recheck" if config in strategy.first_scores else "explore"
+            fresh_score = score
+            strategy.observe(config, fresh_score)
+            score = strategy.scores[config]
+            best = strategy.best()
+            scoring = dict(phase=phase, fresh_score=fresh_score,
+                config_samples=list(strategy.config_samples[config]),
+                return_eligible=config in strategy.rechecked and score is not None,
+                finalists=[asdict(c) for c in strategy.finalists] if strategy.finalists is not None else None)
+        else:
+            previous = [r for r in self.journal.records if r["type"] == "trial" and r["score"] is not None]
+            candidates = [dict(config=r["config"], score=r["score"]) for r in previous]
+            if valid:
+                candidates.append(dict(config=asdict(config), score=score))
+            best = min(candidates, key=lambda r: r["score"]) if candidates else None
         wall = time.monotonic() - trial_started
         prior_wall = sum((r.get("compile_wall_s") or 0) for r in records if r["type"] == "build") + sum(
             (r.get("process_wall_s") or 0) for r in records if r["type"] == "measurement")
@@ -443,7 +526,7 @@ class Evaluator:
                 r["type"] == "session_end" for r in self.journal.records) > 1
             cost.update(tuning_elapsed_s=None if unknown else elapsed, tuning_elapsed_recorded_s=elapsed)
         return emit("trial", dict(score=score, samples=samples, status="ok" if valid else "failed",
-                                  best_so_far=best, **cost))
+                                  best_so_far=best, **scoring, **cost))
 
     @staticmethod
     def ensure_stopped(start):
@@ -460,13 +543,16 @@ class Evaluator:
 def search(strategy, evaluator, budget, session_started=None):
     if type(budget) is not int or budget < 0:
         raise ValueError("budget must be a nonnegative integer")
+    if strategy.name == "recheck" and (budget != strategy.budget or evaluator.repeats != 1):
+        raise ValueError("recheck needs its declared call budget and repeats=1")
     journal = evaluator.journal
     final = next((r for r in journal.records if r["type"] == "summary"), None)
     if final:
         return final
     trials = [r for r in journal.records if r["type"] == "trial"]
     for trial in trials:
-        strategy.observe(Config(**trial["config"]), trial["score"])
+        strategy.observe(Config(**trial["config"]), trial["fresh_score"] if strategy.name == "recheck"
+                         else trial["score"])
     session_started = session_started or dict(monotonic=time.monotonic(), at=now())
     start = session_started["monotonic"]
     evaluator.session_started = start
@@ -476,8 +562,11 @@ def search(strategy, evaluator, budget, session_started=None):
             config = strategy.suggest()
             if config is None:
                 break
-            trial = evaluator.evaluate(config, trial_id)
-            strategy.observe(config, trial["score"])
+            if strategy.name == "recheck":
+                evaluator.evaluate(config, trial_id, strategy)
+            else:
+                trial = evaluator.evaluate(config, trial_id)
+                strategy.observe(config, trial["score"])
     finally:
         journal.append("session_end", ended_at=now(), wall_s=time.monotonic() - start)
     trials = [r for r in journal.records if r["type"] == "trial"]
@@ -492,8 +581,16 @@ def search(strategy, evaluator, budget, session_started=None):
     stop_reason = "budget" if len(trials) >= budget else (
         "patience" if strategy.name == "patience" and len(strategy.scores) >= strategy.min_trials and
         strategy.stale >= strategy.patience else
-        "local_optimum" if strategy.name == "greedy" else "space_exhausted")
-    return journal.append("summary", best=trials[-1]["best_so_far"] if trials else None,
+        "local_optimum" if strategy.name == "greedy" else
+        "candidate_exhausted" if strategy.name == "recheck" else "space_exhausted")
+    scoring = {}
+    if strategy.name == "recheck":
+        scoring = dict(exploration_trials=sum(r["phase"] == "explore" for r in trials),
+            recheck_trials=sum(r["phase"] == "recheck" for r in trials),
+            eligible_configs=sum(c in strategy.rechecked and score is not None for c, score in strategy.scores.items()),
+            finalists=[asdict(c) for c in strategy.finalists] if strategy.finalists is not None else None)
+    return journal.append("summary", best=strategy.best(require_review=True) if strategy.name == "recheck" else
+        trials[-1]["best_so_far"] if trials else None,
         stop_reason=stop_reason,
         proposals=len([r for r in journal.records if r["type"] == "trial_start"]),
         attempted_trials=len(trials), completed_configs=sum(r["status"] == "ok" for r in trials),
@@ -508,7 +605,7 @@ def search(strategy, evaluator, budget, session_started=None):
         compile_wall_recorded_s=compile_wall,
         cached_builds=sum(r["cached"] for r in builds),
         incomplete_sessions=incomplete_sessions, tuning_wall_s=None if incomplete_sessions else tuning_wall,
-        tuning_wall_recorded_s=tuning_wall)
+        tuning_wall_recorded_s=tuning_wall, **scoring)
 
 
 def main(argv=None):
@@ -534,6 +631,8 @@ def main(argv=None):
     parser.add_argument("--budget", type=int, default=20)
     parser.add_argument("--repeats", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--start-s", type=int, help="explicit Greedy start for the separate diagnostic panel")
+    parser.add_argument("--start-opt", choices=OPTS)
     parser.add_argument("--timeout", type=float, default=1800)
     args = parser.parse_args(argv)
     journal = None
@@ -550,6 +649,15 @@ def main(argv=None):
             raise ValueError("min_trials >= 1, patience >= 1, finite min_relative_improvement in [0, 1) required")
         if args.resume and args.output is None:
             raise ValueError("--resume requires --output")
+        if (args.start_s is None) != (args.start_opt is None):
+            raise ValueError("an explicit Greedy start needs both --start-s and --start-opt")
+        explicit_start = Config(args.start_s, args.start_opt) if args.start_s is not None else None
+        if explicit_start is not None:
+            if args.action != "search" or args.algorithm != "greedy":
+                raise ValueError("an explicit start is only supported for greedy search")
+            space.check(explicit_start)
+        if args.action == "search" and args.algorithm == "recheck" and (args.budget < 4 or args.repeats != 1):
+            raise ValueError("recheck requires budget >= 4 and repeats=1")
         if args.action == "list":
             print(json.dumps([asdict(c) for c in space.configs]))
             return 0
@@ -570,6 +678,12 @@ def main(argv=None):
             runtime_affinity=sorted(os.sched_getaffinity(0)),
             protocol_sha256=digest(args.protocol.read_bytes()) if args.protocol else None,
             cache_dir=str(target.cache_dir))
+        if args.action == "search" and args.algorithm == "recheck":
+            metadata.update(schema=2, recheck=dict(exploration_trials=min(len(space.configs), args.budget - 2),
+                finalist_limit=2, rechecks_per_finalist=1, return_rule="successful_finalists_only",
+                score="median_of_online_samples", tie_rule="random_visit_order"))
+        if explicit_start is not None:
+            metadata.update(schema=2, greedy_start=asdict(explicit_start))
         output = args.output or Path(__file__).resolve().parents[1] / "results" / (args.action + "-" + uuid.uuid4().hex + ".jsonl")
         journal = Journal(output, metadata, args.resume, target.compiler_info["probe"])
         if args.action == "build":
@@ -590,7 +704,8 @@ def main(argv=None):
             code = int(any(r["status"] != "ok" for r in result["builds"]))
         else:
             strategy = SearchStrategy(metadata["algorithm"], space, args.seed,
-                                      args.min_trials, args.patience, args.min_relative_improvement)
+                                      args.min_trials, args.patience, args.min_relative_improvement,
+                                      budget=metadata["budget"], start=explicit_start)
             result = search(strategy, Evaluator(target, space, journal, args.repeats, args.timeout),
                             metadata["budget"], session_started)
             result = dict(result, output=str(output))
