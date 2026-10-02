@@ -1,0 +1,70 @@
+{
+  "checked_at_utc": "2026-10-02T04:39:16.481600+00:00",
+  "published_stage_commit": "59843301a3a9bb2077a1d36f04cc7d8141e39fc6",
+  "note": "Actual GitHub raw HTTP read-back; file/image byte integrity, not a browser rendering claim.",
+  "files": [
+    {
+      "file": "P1/report.md",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/report.md",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 13687,
+      "sha256": "1e0ddf846a060ca6c17e58e14e6627d9d5c8508a794fd09796aea4f1ea01e4bc",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/framework.svg",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/framework.svg",
+      "http_status": 200,
+      "content_type": "image/svg+xml",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/grid_median.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/grid_median.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 70249,
+      "sha256": "59aaf38a61417defc3e4b319ff1e072790b62b766f1aa892168245164592ae61",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/online_search.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/online_search.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 212522,
+      "sha256": "a5558d226537d69ed871beeb4e71e8ad53a61734806b8b3e9bb8bf8dc76954bb",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/interfaces-kernel.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/interfaces-kernel.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 128330,
+      "sha256": "b39b7b7a331a1eb359966c6eba837bf9b6e5214b5718181aba9ece3977761fac",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/saved-search-results.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/saved-search-results.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 116913,
+      "sha256": "c32ff46f82d4ca98b68aba86ebfa690089dff30d3b7acb0664393b7ab6aea833",
+      "matches_reviewed_local_file": true
+    },
+    {
+      "file": "P1/images/build-run.png",
+      "url": "https://raw.githubusercontent.com/woobowen/Softwaresystemoptimization/59843301a3a9bb2077a1d36f04cc7d8141e39fc6/P1/images/build-run.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 128917,
+      "sha256": "6a956955836ad8c8c222bbe5efe05e93e77eefd88df596f4b5e7ce180c545dc8",
+      "matches_reviewed_local_file": true
+    }
+  ]
+}

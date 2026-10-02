@@ -1,6 +1,6 @@
 # P1 Goal 1 requirement matrix
 
-状态对应实际产物，不等价于最终 Engineering PASS。四批正式实验及独立原始数据审核已结束；最后两类产物审核与干净复现均已通过；GitHub发布/实际远端实查待完成。
+状态对应实际产物，不等价于最终 Engineering PASS。四批正式实验及独立原始数据审核已结束；最后两类产物审核与干净复现均已通过；GitHub阶段已发布，实际远端SHA/tree/blob与报告/六图HTTP取回已核对；证据closure后的精确SHA再于交接查询。
 
 | 来源 / 条目 | 代码或文档 | 实测 / 证据 | 状态 |
 |---|---|---|---|
@@ -28,8 +28,8 @@
 | Goal G 留出seed确认、两类独立审核 | holdout_v1、reviews | 3新seed；代码审核≠实现；报告审核≠报告作者 | 三新seed实际34进程，0/3近优；两类冻结产物最终独立关口已通过 |
 | Goal G 干净隔离复现 | 最终reproduction证据 | 测试/构建/1真实4096/已存数据重生成 | 实际干净clone54/54、四冷O、一真实4096及全部表图重生成通过 |
 | Goal H 报告、图表、真实截图、证据 | report.md/images/results/evidence | 原生xterm截图能力已确认，最终画面待捕获 | 数据图、SVG和两截图已整理，三张真实截图已捕获并实际查看，最后独立复核已通过 |
-| Goal H GitHub内部审核后发布 | Git main | 初始fetch/ls-remote匹配；当前仅本地基础checkpoint | 待最终发布和远端实查 |
+| Goal H GitHub内部审核后发布 | Git main | measurement dea74fe、clean复现9ba1427、首次已发布5984330；正常push无force | 已发布main，actual ls-remote同SHA、远端448 P1文件/24blob和报告六图HTTP取回匹配；见commands/publication_verified.json |
 | 根长期规则合并 | 根AGENTS.md | filename以老师为准；滚动规划/责任分离/自修复/单项优先/逐轮审核 | 已更新 |
 | 实验完整性和边界 | protocol/current_plan/异常原始记录 | 不混模拟夹具、旧异常计时或策略组合；不改其他作业 | 持续遵守 |
 
-新目标计时适配的旧数据不用于正式结论，见 [timing_issue.md](environment/timing_issue.md)。若最后仍有缺项，必须保留未完成状态并在交接中说明。
+Goal1内部阶段交付COMPLETE；Engineering为CODEX_COMPLETE，等待实际GitHub外部FINAL_REVIEW；Submission为NOT_READY。两个候选INC，无采用，不声称优化成功。新目标计时适配的旧数据不用于正式结论，见 [timing_issue.md](environment/timing_issue.md)。若最后仍有缺项，必须保留未完成状态并在交接中说明。

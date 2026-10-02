@@ -54,7 +54,15 @@ t_ref=39.499706秒（O2/s128），原参照20表每配置3有效，全部快慢�
 
 实验/报告审核已连续通读§13实际文稿、现有五图和全部表/链接；最后新增真实运行图及“只继续尚未开始repeat、失败不重跑”的一句均由原审核者复核关闭。最终代码/隔离复现与实验/报告两独立关口已实际落盘批准，分别见 reviews/code_review.md:271与reviews/experiment_report_review.md §14；不以测试自动替代审核，也不授予最终Engineering PASS。
 
-下一步：两独立关口落盘并关闭问题 → 检查完整最终文稿/文件/links/secret/范围 → 安全正常commit/push GitHub main → 实际ls-remote核对local/remote SHA及远端文件树。当前已fetch确认远端仍起始9b0ca66；尚未push，不称远端完成。用户本次已授权发布，剩余步骤不反复请求确认。
+## 阶段发布与交接
+
+完整经审核阶段已于实际push发布GitHub main，首次已发布local/remote SHA均为 `59843301a3a9bb2077a1d36f04cc7d8141e39fc6`；随后实际 `git ls-remote origin refs/heads/main`、fetch及远端tree/24关键blob逐bytes检查通过，448个P1文件存在，原附件/提示词未误发布，其他作业diff为空。报告与全部六图通过GitHub原始HTTP真实取回（全部200、bytes同），不是浏览器渲染截图声明。
+
+发布检查见 commands/publication_verified.json、github_readback.json。此一次证据closure提交仅更新内部计划/矩阵/索引和已发生发布记录，不改code/protocol/report/images/raw/derived；最后closure后的实际remote SHA在交接再次查询，不递归写入它自身。measurement checkpoint仍dea74fe，clean复现checkpoint仍9ba1427，正式已审核report SHA仍1e0ddf84…。
+
+Goal 1：COMPLETE（既定实现/正确性/20×3/三算法在线/两单项/有限诊断/三新seed/独立审核/干净复现/真实图片/阶段发布均已结束）；Engineering：CODEX_COMPLETE，等待ChatGPT FINAL_REVIEW；Submission：NOT_READY，未提交水杉。两候选没有可确认收益，不声称优化成功；本阶段结束不等于整个P1或最终Engineering PASS。
+
+后续只等待外部验收；优先核对测量波动与时基限制、有限seed/起点选择的结论边界。没有授权或实施新候选/组合/未来作业。最后精确SHA与任务结束时间以实际最终交接为准。
 
 ## 已解决问题与限制
 
