@@ -1,0 +1,461 @@
+{
+  "schema": 2,
+  "stage": "diagnostic",
+  "protocol": "evidence/protocol_diagnostic.json",
+  "protocol_sha256": "8c0d51f459a6caf88580613b2cbb58698a31fbfd15e18f770aa5c9c1b646821d",
+  "target_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "framework_sha256": "32f4dd734a15b7d295ee011b566bf113b722e8128fd147525e8c77856dfdf964",
+  "driver_sha256": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "algorithms": null,
+  "jobs": [
+    {
+      "id": "diagnostic-b1-01-F-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-02-F-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b1-03-M-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-04-M-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b1-05-F-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b1-06-M-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 1,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-01-F-anchor-before",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b2-02-F-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-03-F-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-04-M-B1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-05-M-A1",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "diagnostic-b2-06-F-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b2-07-F-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b2-08-F-anchor-after",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 2,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b3-01-F-anchor-before",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b3-02-M-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b3-03-M-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b3-04-F-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-05-F-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-06-M-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-07-M-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "M",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b3-08-F-anchor-after",
+      "action": "run",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 3,
+      "method": "M1",
+      "tier": "F",
+      "label": null,
+      "pair": null
+    },
+    {
+      "id": "diagnostic-b4-01-M-A2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b4-02-M-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "A",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-03-F-B2",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "diagnostic-b4-04-F-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-05-M-B3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "M",
+      "label": "B",
+      "pair": 3
+    },
+    {
+      "id": "diagnostic-b4-06-F-A3",
+      "action": "run",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "block": 4,
+      "method": "M0",
+      "tier": "F",
+      "label": "A",
+      "pair": 3
+    }
+  ]
+}

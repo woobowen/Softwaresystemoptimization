@@ -1,0 +1,304 @@
+{
+  "state": "pre_diagnostic",
+  "purpose": "Finite initial diagnostic only; formal resource forecast is updated after actual diagnostic review.",
+  "cap_calls": 520,
+  "cap_resource_s": 57600,
+  "resource_domain": "sum of max(MONOTONIC,MONOTONIC_RAW,REALTIME) per controlled task; retain originals",
+  "diagnostic_jobs": [
+    {
+      "id": "diagnostic-b1-01-F-A1",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b1-02-F-A2",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b1-03-M-B1",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b1-04-M-B2",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b1-05-F-B1",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b1-06-M-A1",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-01-F-anchor-before",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-02-F-A1",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-03-F-B1",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-04-M-B1",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-05-M-A1",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-06-F-B2",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-07-F-A2",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b2-08-F-anchor-after",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-01-F-anchor-before",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-02-M-A2",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-03-M-B2",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-04-F-A3",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-05-F-B3",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-06-M-B3",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-07-M-A3",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b3-08-F-anchor-after",
+      "role": "diagnostic_anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-01-M-A2",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-02-M-A3",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-03-F-B2",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-04-F-B3",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-05-M-B3",
+      "role": "aa",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "diagnostic-b4-06-F-A3",
+      "role": "aa",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    }
+  ],
+  "additional_diagnostic_matrix_jobs": [
+    {
+      "id": "matrix-multiclock-fast",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    },
+    {
+      "id": "matrix-multiclock-medium",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "call_upper": 1
+    }
+  ],
+  "initial_diagnostic_call_upper": 30,
+  "old_median_kernel_forecast_s": 1689.5698000000002,
+  "initial_diagnostic_target_timeout_upper_s": 36000,
+  "short_probe_cases": 7,
+  "requested_idle_wait_s": 42,
+  "short_probe_timeout_upper_s": 2100,
+  "diagnostic_compilation_timeout_upper_s": 120,
+  "normal_full_stage_call_upper": {
+    "diagnostic": 30,
+    "reference_including_auxiliary": 70,
+    "comparison_including_panels_and_warmup": 283,
+    "confirmation_if_keep": 76,
+    "greedy_starts": 32,
+    "full_validation": 2,
+    "fresh_reproduction": 1
+  },
+  "normal_full_call_upper": 494,
+  "reserve_shared": 26,
+  "not_keep_full_upper": 461,
+  "notes": [
+    "Old median forecast is an estimate, not a bound or correction.",
+    "All-target-timeout theoretical cost exceeds the 16h cap; actual cap stops incomplete work as PARTIAL.",
+    "No short probe/idle/build is counted as a matrix invocation. All controlled elapsed costs include actual necessary waiting and compilation.",
+    "Formal dynamic panels have predetermined upper bounds and are expanded only after all block returns are locked."
+  ]
+}

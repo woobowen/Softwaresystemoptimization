@@ -1,0 +1,8 @@
+stage,role,process_runs,process_runs_known,recorded_process_lower,full_driver_wall_s,conservative_resource_s,failed_tasks,tasks,domains_s,unknown_attempts
+goal,correctness_small,0,True,0,3.26511312,3.286546387,0,1,"{""monotonic"": 3.26511312, ""raw"": 3.286546387, ""realtime"": 3.265114406}",[]
+goal,correctness_sanitizer,0,True,0,0.503538603,0.506945202,0,1,"{""monotonic"": 0.503538603, ""raw"": 0.506945202, ""realtime"": 0.503539481}",[]
+goal,diagnostic_build,0,True,0,0.508177106,0.508179529,0,2,"{""monotonic"": 0.508177106, ""raw"": 0.5073460089999999, ""realtime"": 0.508179529}",[]
+goal,clock_probe,0,True,0,81.531260366,81.979635233,0,7,"{""monotonic"": 81.531260366, ""raw"": 81.627290364, ""realtime"": 81.53127167299999}",[]
+goal,clock_matrix_diagnostic,2,True,2,138.373513404,138.52151772,0,2,"{""monotonic"": 138.373513404, ""raw"": 138.44629091, ""realtime"": 138.373515963}",[]
+diagnostic,aa,23,True,23,1607.8042576490002,1610.23187487,1,23,"{""monotonic"": 1607.8042576490002, ""raw"": 1609.68798842, ""realtime"": 1609.506019882}",[]
+diagnostic,diagnostic_anchor,4,True,4,221.681567481,222.168510356,0,4,"{""monotonic"": 221.681567481, ""raw"": 221.885072536, ""realtime"": 222.105259859}",[]

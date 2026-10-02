@@ -1,0 +1,5 @@
+n=129 O1 s=8 seed=1 mode=0 OK
+n=129 O1 s=16 seed=1 mode=0 OK
+n=129 O1 s=24 seed=1 mode=0 OK
+n=129 O1 s=64 seed=1 mode=0 OK
+n=129 O1 s=128 seed=1 mode=0 OK

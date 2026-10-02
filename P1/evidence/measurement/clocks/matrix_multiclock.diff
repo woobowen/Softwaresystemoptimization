@@ -1,0 +1,51 @@
+--- formal_target
++++ diagnostic_only
+@@ -14,6 +14,13 @@
+             struct timespec *end) {
+     return(end->tv_sec-start->tv_sec) +
+         1e-9*(end->tv_nsec-start->tv_nsec);
++}
++
++
++static long long diagnostic_read(clockid_t id) {
++    struct timespec t;
++    if (clock_gettime(id,&t)) exit(2);
++    return (long long)t.tv_sec*1000000000LL+t.tv_nsec;
+ }
+ 
+ int main(int argc, const char *argv[]){
+@@ -40,6 +47,11 @@
+ 
+     struct timespec start, end;
+     if (clock_gettime(CLOCK_MONOTONIC, &start) != 0) return 1;
++    long long start_ns[4];
++    start_ns[0]=(long long)start.tv_sec*1000000000LL+start.tv_nsec;
++    start_ns[1]=diagnostic_read(CLOCK_MONOTONIC_RAW);
++    start_ns[2]=diagnostic_read(CLOCK_REALTIME);
++    start_ns[3]=diagnostic_read(CLOCK_PROCESS_CPUTIME_ID);
+ 
+     for(int ih = 0; ih < n; ih += s)
+         for(int jh = 0; jh < n; jh += s)
+@@ -50,6 +62,11 @@
+                             C[ih+il][jh+jl] += A[ih+il][kh+kl] * B[kh+kl][jh+jl];
+ 
+     if (clock_gettime(CLOCK_MONOTONIC, &end) != 0) return 1;
++    long long end_ns[4];
++    end_ns[0]=(long long)end.tv_sec*1000000000LL+end.tv_nsec;
++    end_ns[1]=diagnostic_read(CLOCK_MONOTONIC_RAW);
++    end_ns[2]=diagnostic_read(CLOCK_REALTIME);
++    end_ns[3]=diagnostic_read(CLOCK_PROCESS_CPUTIME_ID);
+     printf("%0.6f\n",tdiff(&start, &end));
+     /* Consume the result after timing so every build computes C. */
+     double checksum = 0.0;
+@@ -57,5 +74,10 @@
+         for (int j = 0; j < n; ++j)
+             checksum += C[i][j];
+     printf("checksum=%.17g\n", checksum);
++
++    printf("{\"clock_order\":[\"MONOTONIC\",\"RAW\",\"REALTIME\",\"PROCESS_CPU\"],\"start_ns\":[%lld,%lld,%lld,%lld],\"end_ns\":[%lld,%lld,%lld,%lld],\"elapsed_s\":[%.9f,%.9f,%.9f,%.9f]}\n",
++        start_ns[0],start_ns[1],start_ns[2],start_ns[3],end_ns[0],end_ns[1],end_ns[2],end_ns[3],
++        (end_ns[0]-start_ns[0])/1e9,(end_ns[1]-start_ns[1])/1e9,
++        (end_ns[2]-start_ns[2])/1e9,(end_ns[3]-start_ns[3])/1e9);
+     return 0;
+ }

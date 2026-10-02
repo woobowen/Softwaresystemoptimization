@@ -1,0 +1,292 @@
+{
+  "reviewer": "/root/implementation",
+  "role": "independent_method_analysis_review",
+  "reviewer_authored_under_review": false,
+  "started_at_utc": "2026-10-02T14:26:56Z",
+  "state": "ANALYSIS_REGRESSION_PASSED_PERFORMANCE_GATE_PENDING",
+  "source_snapshot": {
+    "scripts/summarize_v2.py": "5b710a0ca02e907b690d2bbac691577e9d0b5b5e89de6220881b495a7dc7295d",
+    "tests/test_goal2_summary.py": "df6ff9be996cf416b4a838c85d8e869793ba6e1a85ee13044cb2e3b7a31e9693",
+    "evidence/measurement/design.md": "cf1362b3ec150fa6f1fcde86df04b7a6cda5926c61ef5df3f322bd574ebc259b",
+    "evidence/protocol_diagnostic.json": "8c0d51f459a6caf88580613b2cbb58698a31fbfd15e18f770aa5c9c1b646821d",
+    "evidence/protocol_v2.md": "14eb72bad84faefd8e9c1bebdea11a20a9029685012aba489b981d8d38ee412c",
+    "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
+  },
+  "latest_static_snapshot": {
+    "scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+    "tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7"
+  },
+  "executed_by_reviewer": {
+    "tests": 37,
+    "test_failures": 0,
+    "test_errors": 0,
+    "suite_reported_s": 0.011,
+    "compilations": 0,
+    "plots": 0,
+    "n4096_calls": 0,
+    "test_run": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "started_at_utc": "2026-10-02T15:22:52.304599+00:00",
+      "ended_at_utc": "2026-10-02T15:22:52.400387+00:00",
+      "exit_code": 0,
+      "source_sha256": {
+        "P1/scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+        "P1/tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7"
+      },
+      "clock_start_ns": {
+        "monotonic": 73509991918774,
+        "raw": 77446980804236,
+        "realtime": 1790954572304613141
+      },
+      "clock_end_ns": {
+        "monotonic": 73510087689127,
+        "raw": 77447077794111,
+        "realtime": 1790954572400384080
+      },
+      "elapsed_s": {
+        "monotonic": 0.095770353,
+        "raw": 0.096989875,
+        "realtime": 0.095770939
+      },
+      "log": "P1/evidence/commands/goal2_method_analysis_tests.log",
+      "c_compilations": 0,
+      "n4096_calls": 0,
+      "plots": 0,
+      "source_unchanged": true
+    },
+    "independent_raw_recount": {
+      "reviewer": "/root/implementation",
+      "checked_at_utc": "2026-10-02T15:24:52.749329+00:00",
+      "independent_of_analysis_source": true,
+      "raw_files_checked": 107,
+      "raw_unchanged": true,
+      "planned_jobs": 28,
+      "raw_target_starts": 27,
+      "valid_ordinary_samples": 26,
+      "valid_aa_samples": 22,
+      "anchors": 4,
+      "interrupted_ordinary": 1,
+      "pending_jobs": [
+        "diagnostic-b4-06-F-A3"
+      ],
+      "partial_jobs": [
+        "diagnostic-b4-05-M-B3"
+      ],
+      "global_n4096_calls": 29,
+      "global_attempts": 40,
+      "global_mono_driver_s": 2053.667427729,
+      "global_resource_max_domain_s": 2057.203209297,
+      "aa": [
+        {
+          "method": "M0",
+          "tier": "F",
+          "a_samples": [
+            58.778687,
+            61.583714
+          ],
+          "b_samples": [
+            60.847298,
+            58.235882,
+            51.987427
+          ],
+          "a_median_s": 60.1812005,
+          "b_median_s": 58.235882,
+          "signed_median_difference_pct": -3.2324355177992925,
+          "complete": false
+        },
+        {
+          "method": "M0",
+          "tier": "M",
+          "a_samples": [
+            84.766418,
+            95.408348,
+            86.904335
+          ],
+          "b_samples": [
+            85.556702,
+            83.758797
+          ],
+          "a_median_s": 86.904335,
+          "b_median_s": 84.6577495,
+          "signed_median_difference_pct": -2.585124781174619,
+          "complete": false
+        },
+        {
+          "method": "M1",
+          "tier": "F",
+          "a_samples": [
+            63.237171,
+            55.668694,
+            49.826942
+          ],
+          "b_samples": [
+            64.870026,
+            54.526001,
+            56.695389
+          ],
+          "a_median_s": 55.668694,
+          "b_median_s": 56.695389,
+          "signed_median_difference_pct": 1.8442951077673797,
+          "complete": true
+        },
+        {
+          "method": "M1",
+          "tier": "M",
+          "a_samples": [
+            84.853203,
+            83.857307,
+            84.139397
+          ],
+          "b_samples": [
+            87.179337,
+            83.895874,
+            84.750038
+          ],
+          "a_median_s": 84.139397,
+          "b_median_s": 84.750038,
+          "signed_median_difference_pct": 0.7257491992722409,
+          "complete": true
+        }
+      ],
+      "arrangement": null,
+      "resolution_pp": null,
+      "performance_gate": false,
+      "n4096_calls_spawned_by_reviewer": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "AS1",
+      "severity": "high",
+      "function": "summarize_v2.cost_table / main",
+      "line_at_initial_review": 628,
+      "state": "CLOSED_REGRESSION",
+      "owner": "/root/measurement",
+      "issue": "missing raw clock-boundary and journal-call crosscheck even if batch/global copies agree",
+      "fix": "original multi-clock nanosecond/call verification; global journal matching covers guarded and partially copied multi-attempt jobs; missing costs and unknown totals remain null; no raw writing",
+      "observed_real_cost_error": false,
+      "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    },
+    {
+      "id": "AS2",
+      "severity": "high",
+      "function": "summarize_v2.safe_destination",
+      "line_at_initial_review": 739,
+      "state": "CLOSED_REGRESSION",
+      "owner": "/root/measurement",
+      "issue": "only supplied raw batches protected; omitted historical/raw root can receive derived outputs",
+      "fix": "reject all resolved raw ancestors containing plan.json including unlisted batches",
+      "actual_raw_mutation": false,
+      "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    },
+    {
+      "id": "AS3",
+      "severity": "medium",
+      "function": "summarize_v2.plot_results",
+      "line_at_initial_review": 748,
+      "state": "STATIC_FIX_VISUAL_PENDING",
+      "owner": "/root/measurement",
+      "issue": "online progress plot does not identify S3 provisional-to-eligible score-set transition",
+      "fix": "actual cumulative target calls, dashed S3 estimate and successful-finalist triangles plus upward-update caption",
+      "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    },
+    {
+      "id": "AS4",
+      "severity": "medium",
+      "function": "experiment_v2.validate_task / summarize_v2.read_batch",
+      "line_at_initial_review": 298,
+      "state": "CLOSED_REGRESSION",
+      "owner": "/root",
+      "issue": "correctly recorded failed-summary batches cannot be analyzed into failure sample and cost tables",
+      "fix": "separate failed state after frozen metadata/trace and independent raw replay validation without altering frozen driver",
+      "false_keep": false,
+      "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    },
+    {
+      "id": "AS5",
+      "severity": "high",
+      "function": "summarize_v2.paired_rows / panel_table",
+      "state": "CLOSED_REGRESSION",
+      "owner": "/root/measurement",
+      "issue": "same stage/algorithm/seed from different batch directories silently replaces prior search in paired index",
+      "fix": "reject repeated formal search identities and common-panel stage/block/config identities",
+      "panel_fixture_present": true,
+      "actual_batch_selection_observed": false,
+      "regression_evidence": "evidence/commands/goal2_method_analysis_tests.log"
+    }
+  ],
+  "observations": {
+    "same_identity_quality_separate_from_independent_aa": true,
+    "online_replay_uses_fresh_feedback": true,
+    "panel_is_locked_after_search_dependencies": true,
+    "shared_panel_is_not_per_algorithm_cost_copy": true,
+    "rho_claim_is_finite_descriptive_not_population": true,
+    "endpoint_ranges_claimed_as_confidence_intervals": false,
+    "formal_protocol_frozen": false
+  },
+  "primary_source_crosschecks": [
+    {
+      "url": "https://arxiv.org/pdf/2103.08716v2",
+      "read_sections": [
+        "III-C",
+        "VI-C"
+      ],
+      "scope": "normal approximation, low-repeat and platform-specific minimum-count limitations"
+    },
+    {
+      "url": "https://pure.uva.nl/ws/files/182730825/A_methodology_for_comparing_optimization_algorithms_for_auto-tuning.pdf",
+      "read_sections": [
+        "3.2",
+        "3.3",
+        "3.4"
+      ],
+      "scope": "budget, stochasticity, iid limitations, actual cost and calculated-baseline distinction"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2309.06414v1",
+      "read_sections": [
+        "3.3",
+        "4.3"
+      ],
+      "scope": "compilation and slow-variant overhead amortization requires future calls"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.06555",
+      "read_sections": [
+        "metadata",
+        "v1 introduction"
+      ],
+      "scope": "title, authors, 2026-06-04 v1, fixed-budget repeated-evaluation cost; no project adoption of its ES mechanism"
+    }
+  ],
+  "final_engineering_pass_assigned": false,
+  "followup_design_crosscheck": {
+    "path": "evidence/measurement/clock_followup_design.md",
+    "sha256_at_read": "9264fb4120a645fbc61d859612c084156205a48e537742d23847963fa546dcbb",
+    "new_target_call_upper": 12,
+    "execution_design_review": "ACCEPTABLE_PENDING_INDEPENDENT_CODE_GATE",
+    "formal_performance_approved": false,
+    "notes": [
+      "finite prefix-versus-complete comparison uses unchanged 2% threshold and source-specific baselines",
+      "supplemental M0 labels include guard/document/test interruption; no causal variance-reduction conclusion",
+      "known driver/process elapsed and calls remain separate from missing interrupted kernel elapsed"
+    ]
+  },
+  "remaining": [
+    "completed-source clock and arrangement gate after finite followup",
+    "final S3 phase plot actual visual inspection",
+    "final formal protocol/source approval before any reference/search experiment",
+    "new real reference/main/confirmation and experiment/report final review"
+  ]
+}

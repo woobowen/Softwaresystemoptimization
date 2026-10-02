@@ -1,0 +1,49 @@
+{
+  "runs": [
+    {
+      "started_at_utc": "2026-10-02T15:20:27.140641+00:00",
+      "ended_at_utc": "2026-10-02T15:20:27.272376+00:00",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "P1/tests",
+        "-p",
+        "test_goal2_summary.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_monotonic_s": 0.131746708
+    },
+    {
+      "started_at_utc": "2026-10-02T15:20:27.272419+00:00",
+      "ended_at_utc": "2026-10-02T15:20:27.384894+00:00",
+      "command": [
+        "python3",
+        "-B",
+        "P1/scripts/summarize_v2.py",
+        "--protocol",
+        "P1/evidence/protocol_diagnostic.json",
+        "--diagnostic",
+        "P1/results/diagnostic_v2",
+        "--ledger",
+        "P1/evidence/measurement/resource_ledger.jsonl",
+        "--clocks",
+        "P1/evidence/measurement/clocks",
+        "--output-dir",
+        "P1/results/diagnostic_summary_v2"
+      ],
+      "returncode": 0,
+      "wall_monotonic_s": 0.112491461
+    }
+  ],
+  "performance_lock": "P1/.cache/performance.lock",
+  "n4096_calls": 0,
+  "source_sha256": {
+    "P1/scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+    "P1/tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7"
+  }
+}

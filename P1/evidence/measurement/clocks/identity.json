@@ -1,0 +1,24 @@
+{
+  "source_sha256": "cece4fd572c1d25e9f9a7d045c21e8d77b25079a6f71513de0385d0d85d44835",
+  "variant_sha256": "c9525ba7d8e514d67a03a3ec47abfa43db57beacabf38606cf0a65387e8bde59",
+  "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+  "probe_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9",
+  "flags": [
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-O2"
+  ],
+  "diagnostic_only": true,
+  "idle_control": "BOOTTIME; no absolute-accuracy claim",
+  "long_fixed_iterations": 8000000000,
+  "compiler": {
+    "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+    "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+  },
+  "binary_sha256": {
+    "probe": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+    "matrix_multiclock": "4d63efa53dded3338f622bc255b9f756ff8322de7f5f092fa21626b619c48bb3"
+  }
+}

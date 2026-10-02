@@ -1,0 +1,3 @@
+stage,component,process_runs,valid_runs,failed_runs,kernel_recorded_s,process_recorded_s,unknown_kernel_runs,unknown_process_runs
+diagnostic,aa,23,22,1,1581.3269869999997,1603.461887148,1,0
+diagnostic,diagnostic_anchor,4,4,0,219.032917,221.095730212,0,0

@@ -1,0 +1,42 @@
+{
+  "started_at_utc": "2026-10-02T15:17:33.001085+00:00",
+  "ended_at_utc": "2026-10-02T15:17:33.175506+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "P1/tests",
+    "-p",
+    "test_goal2_summary.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "clock_start_ns": {
+    "monotonic": 73191155018556,
+    "raw": 77127559370887,
+    "realtime": 1790954253001115320
+  },
+  "clock_end_ns": {
+    "monotonic": 73191328639998,
+    "raw": 77127732987452,
+    "realtime": 1790954253174736873
+  },
+  "elapsed_s": {
+    "monotonic": 0.173621442,
+    "raw": 0.173616565,
+    "realtime": 0.173621553
+  },
+  "performance_lock": "P1/.cache/performance.lock",
+  "n4096_calls": 0,
+  "py_compile": [
+    "P1/scripts/summarize_v2.py",
+    "P1/tests/test_goal2_summary.py"
+  ],
+  "sha256": {
+    "P1/scripts/summarize_v2.py": "1c4d6fef07bf44847004121ad9509eff092397fd75fd561616946832f6bada2d",
+    "P1/tests/test_goal2_summary.py": "2d28f112b2d535ec9acb3a8478d37ba5ee3ba64d3ff88c44d4654b9d0b726c40"
+  }
+}

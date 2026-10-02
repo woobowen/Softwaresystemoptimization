@@ -1,0 +1,380 @@
+{
+  "reviewer": "/root/review",
+  "author_under_review": "/root/measurement",
+  "created_at_utc": "2026-10-02T14:41:01.390625+00:00",
+  "state": "FIXTURES_AND_INITIAL_RAW_REVIEWED_FORMAL_GATE_PENDING",
+  "source_snapshot": {
+    "scripts/summarize_v2.py": "7ecb4e9f78e05d6c0ed67afbfa26d1113ea98a74804e2521aa69deb1c1eb0eb0",
+    "tests/test_goal2_summary.py": "3eb1964cc7a9f0e13145432300fff33b86bea0b2c354ff3f02a1068cbd650245",
+    "scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+    "evidence/protocol_v2.md": "14eb72bad84faefd8e9c1bebdea11a20a9029685012aba489b981d8d38ee412c",
+    "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
+  },
+  "independent_analysis_test_count": 37,
+  "independent_analysis_test_reason": "Root-authorized pure-fixture exclusive window; actual execution",
+  "observations": {
+    "same_configuration_common_identity_score": true,
+    "independent_aa_labels_remain_real_samples": true,
+    "online_feedback_isolated_from_reference_and_panel": true,
+    "successfully_rechecked_finalist_only_return": true,
+    "endpoint_ranges_are_not_confidence_intervals": true,
+    "quality_target_pct": 5,
+    "quality_risk_pp": 2,
+    "efficiency_time_saving_fraction": 0.1,
+    "formal_protocol_frozen": false
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "issue": "Historical panel analysis originally used execution root and could create raw panel",
+      "state": "STATIC_FIX_REVIEWED",
+      "regression": "Independent fixture suite passed; final clean reproduction/visual checks remain where relevant"
+    },
+    {
+      "id": "A2",
+      "issue": "Recovered None clock/unknown driver or calls originally miscounted or failed summary",
+      "state": "STATIC_FIX_REVIEWED",
+      "regression": "Independent fixture suite passed; final clean reproduction/visual checks remain where relevant"
+    },
+    {
+      "id": "A3",
+      "issue": "Incomplete global cost originally did not block candidate KEEP",
+      "state": "STATIC_FIX_REVIEWED",
+      "regression": "Independent fixture suite passed; final clean reproduction/visual checks remain where relevant"
+    },
+    {
+      "id": "A4",
+      "issue": "S3 graph provisional-to-eligible transition and proposal/call distinction",
+      "state": "STATIC_FIX_REVIEWED",
+      "regression": "Independent fixture suite passed; final clean reproduction/visual checks remain where relevant"
+    }
+  ],
+  "cross_review": {
+    "path": "goal2_method_analysis_review.md/json",
+    "reviewer": "/root/implementation",
+    "ids": [
+      "AS1",
+      "AS2",
+      "AS3",
+      "AS4",
+      "AS5"
+    ],
+    "state": "Author reports fixes; independent test and final-source review pending"
+  },
+  "final_engineering_pass_assigned": false,
+  "initial_diagnostic_independent_reparse": {
+    "at_utc": "2026-10-02T15:26:25.583202+00:00",
+    "method": "stdlib-only independent reparse; no project analyzer import, no compilation or target invocation",
+    "ordinary_actual": {
+      "starts": 27,
+      "valid": 26,
+      "interrupted": 1,
+      "not_started": 1
+    },
+    "aa_cells": [
+      {
+        "method": "M0",
+        "tier": "F",
+        "a": [
+          [
+            1,
+            58.778687
+          ],
+          [
+            2,
+            61.583714
+          ]
+        ],
+        "b": [
+          [
+            1,
+            60.847298
+          ],
+          [
+            2,
+            58.235882
+          ],
+          [
+            3,
+            51.987427
+          ]
+        ],
+        "a_median_s": 60.1812005,
+        "b_median_s": 58.235882,
+        "paired_ids": [
+          1,
+          2
+        ],
+        "paired_pct": [
+          3.5193215527254074,
+          -5.436229455079644
+        ],
+        "signed_median_pct": -3.2324355177992925
+      },
+      {
+        "method": "M0",
+        "tier": "M",
+        "a": [
+          [
+            1,
+            84.766418
+          ],
+          [
+            2,
+            95.408348
+          ],
+          [
+            3,
+            86.904335
+          ]
+        ],
+        "b": [
+          [
+            1,
+            85.556702
+          ],
+          [
+            2,
+            83.758797
+          ]
+        ],
+        "a_median_s": 86.904335,
+        "b_median_s": 84.6577495,
+        "paired_ids": [
+          1,
+          2
+        ],
+        "paired_pct": [
+          0.9323078863613166,
+          -12.210200935456928
+        ],
+        "signed_median_pct": -2.585124781174619
+      },
+      {
+        "method": "M1",
+        "tier": "F",
+        "a": [
+          [
+            1,
+            63.237171
+          ],
+          [
+            2,
+            55.668694
+          ],
+          [
+            3,
+            49.826942
+          ]
+        ],
+        "b": [
+          [
+            1,
+            64.870026
+          ],
+          [
+            2,
+            54.526001
+          ],
+          [
+            3,
+            56.695389
+          ]
+        ],
+        "a_median_s": 55.668694,
+        "b_median_s": 56.695389,
+        "paired_ids": [
+          1,
+          2,
+          3
+        ],
+        "paired_pct": [
+          2.58211266281978,
+          -2.0526671597505097,
+          13.784604722481264
+        ],
+        "signed_median_pct": 1.8442951077673797
+      },
+      {
+        "method": "M1",
+        "tier": "M",
+        "a": [
+          [
+            1,
+            84.853203
+          ],
+          [
+            2,
+            83.857307
+          ],
+          [
+            3,
+            84.139397
+          ]
+        ],
+        "b": [
+          [
+            1,
+            87.179337
+          ],
+          [
+            2,
+            83.895874
+          ],
+          [
+            3,
+            84.750038
+          ]
+        ],
+        "a_median_s": 84.139397,
+        "b_median_s": 84.750038,
+        "paired_ids": [
+          1,
+          2,
+          3
+        ],
+        "paired_pct": [
+          2.7413626330640817,
+          0.045991221730989906,
+          0.7257491992722409
+        ],
+        "signed_median_pct": 0.7257491992722409
+      }
+    ],
+    "whole_target_q_range": [
+      0.9981160219083189,
+      1.0096708540223052
+    ],
+    "raw_binary_sha256": [
+      "2155ae7c0c908d939f535c50c02fc2ee2a8a148729e37cd3cafde324abf42f4c"
+    ],
+    "global_role_cost": {
+      "correctness_small": {
+        "calls": 0,
+        "tasks": 1,
+        "monotonic_s": 3.26511312,
+        "raw_s": 3.286546387,
+        "realtime_s": 3.265114406,
+        "resource_s": 3.286546387
+      },
+      "correctness_sanitizer": {
+        "calls": 0,
+        "tasks": 1,
+        "monotonic_s": 0.503538603,
+        "raw_s": 0.506945202,
+        "realtime_s": 0.503539481,
+        "resource_s": 0.506945202
+      },
+      "diagnostic_build": {
+        "calls": 0,
+        "tasks": 2,
+        "monotonic_s": 0.508177106,
+        "raw_s": 0.5073460089999999,
+        "realtime_s": 0.508179529,
+        "resource_s": 0.508179529
+      },
+      "clock_probe": {
+        "calls": 0,
+        "tasks": 7,
+        "monotonic_s": 81.531260366,
+        "raw_s": 81.627290364,
+        "realtime_s": 81.53127167299999,
+        "resource_s": 81.979635233
+      },
+      "clock_matrix_diagnostic": {
+        "calls": 2,
+        "tasks": 2,
+        "monotonic_s": 138.373513404,
+        "raw_s": 138.44629091,
+        "realtime_s": 138.373515963,
+        "resource_s": 138.52151772
+      },
+      "aa": {
+        "calls": 23,
+        "tasks": 23,
+        "monotonic_s": 1607.8042576490002,
+        "raw_s": 1609.68798842,
+        "realtime_s": 1609.506019882,
+        "resource_s": 1610.23187487
+      },
+      "diagnostic_anchor": {
+        "calls": 4,
+        "tasks": 4,
+        "monotonic_s": 221.681567481,
+        "raw_s": 221.885072536,
+        "realtime_s": 222.105259859,
+        "resource_s": 222.168510356
+      }
+    },
+    "global_n4096_calls": 29,
+    "global_resource_s": 2057.203209297,
+    "input_hashes": {
+      "manifest": "cbfc028c85e2ebed22b3f2607860a8da7e40b2beb3dae3d2583a84312e218c02",
+      "summary": "a243f63c1b594521dacc3e330be204aad29cf614c64c251e145a8fa956ab550b",
+      "global_ledger": "9812d4dd15ec261bb3aefdcf23ad327d2bd7668a16db27fca7176b1827ca84ce"
+    },
+    "missing_m0_prevents_arrangement": true,
+    "performance_approval": false
+  },
+  "independent_analysis_regression": {
+    "started_at_utc": "2026-10-02T15:32:12.938001+00:00",
+    "ended_at_utc": "2026-10-02T15:32:13.053737+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_goal2_summary.py",
+      "-v"
+    ],
+    "cwd": "P1",
+    "lock": ".cache/performance.lock",
+    "lock_exclusive_nonblocking_acquired": true,
+    "source_sha256_before": {
+      "scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+      "tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7",
+      "scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+      "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
+    },
+    "source_sha256_after": {
+      "scripts/summarize_v2.py": "96352437a0e9b76e3ccd709d048736721a0e7359ad238fdef89033aff9ad624f",
+      "tests/test_goal2_summary.py": "421acfa96fbd46ead6bcf5bce89ef34cae401a04f190144a5b4490c864c0f3d7",
+      "scripts/experiment_v2.py": "22a839a0df7fe409227a8c2a8671d839b5703408aac845bcabb169c817547273",
+      "evidence/protocol_v2.json": "f11a6d190dd360650b15fa7681a99ff995ffe491310f16d4a851d2848f6f0a2b"
+    },
+    "source_unchanged": true,
+    "returncode": 0,
+    "tests_count": 37,
+    "unittest_reported_s": 0.012,
+    "stdout": "",
+    "stderr": "test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed (test_goal2_summary.Goal2DiagnosticAndCostTests.test_actual_aa_labels_remain_distinct_and_m1_rule_is_recomputed) ... ok\ntest_batch_copy_cannot_disagree_with_global_actual_attempt (test_goal2_summary.Goal2DiagnosticAndCostTests.test_batch_copy_cannot_disagree_with_global_actual_attempt) ... ok\ntest_clock_diagnostics_recompute_nanoseconds_units_and_float_output (test_goal2_summary.Goal2DiagnosticAndCostTests.test_clock_diagnostics_recompute_nanoseconds_units_and_float_output) ... ok\ntest_derived_path_cannot_overwrite_or_nest_under_raw (test_goal2_summary.Goal2DiagnosticAndCostTests.test_derived_path_cannot_overwrite_or_nest_under_raw) ... ok\ntest_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup (test_goal2_summary.Goal2DiagnosticAndCostTests.test_duplicate_or_missing_aa_sample_is_not_hidden_by_identity_dedup) ... ok\ntest_guarded_task_uses_exact_global_journal_end_without_raw_copy (test_goal2_summary.Goal2DiagnosticAndCostTests.test_guarded_task_uses_exact_global_journal_end_without_raw_copy) ... ok\ntest_internal_rechecks_are_charged_not_external_confirmation (test_goal2_summary.Goal2DiagnosticAndCostTests.test_internal_rechecks_are_charged_not_external_confirmation) ... ok\ntest_matching_cost_copies_cannot_hide_a_raw_target_call (test_goal2_summary.Goal2DiagnosticAndCostTests.test_matching_cost_copies_cannot_hide_a_raw_target_call) ... ok\ntest_method_rank_reversal_prevents_diagnostic_performance_gate (test_goal2_summary.Goal2DiagnosticAndCostTests.test_method_rank_reversal_prevents_diagnostic_performance_gate) ... ok\ntest_missing_whole_cost_attempt_is_not_a_complete_project_bill (test_goal2_summary.Goal2DiagnosticAndCostTests.test_missing_whole_cost_attempt_is_not_a_complete_project_bill) ... ok\ntest_partial_aa_preserves_available_labels_without_selecting_arrangement (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_aa_preserves_available_labels_without_selecting_arrangement) ... ok\ntest_partial_cost_copies_use_all_exact_journal_attempts_once (test_goal2_summary.Goal2DiagnosticAndCostTests.test_partial_cost_copies_use_all_exact_journal_attempts_once) ... ok\ntest_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost (test_goal2_summary.Goal2DiagnosticAndCostTests.test_recovered_clock_and_call_upper_bound_is_never_actual_complete_cost) ... ok\ntest_same_attempt_copy_timestamps_are_not_new_cost_or_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_same_attempt_copy_timestamps_are_not_new_cost_or_identity) ... ok\ntest_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero (test_goal2_summary.Goal2DiagnosticAndCostTests.test_shared_panel_cost_counted_once_and_unknown_attempt_is_not_zero) ... ok\ntest_two_batch_panels_with_same_identity_are_not_new_evidence (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_batch_panels_with_same_identity_are_not_new_evidence) ... ok\ntest_two_copies_of_forged_cost_cannot_override_original_clock_boundaries (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_copies_of_forged_cost_cannot_override_original_clock_boundaries) ... ok\ntest_two_different_batches_cannot_replace_same_seed_identity (test_goal2_summary.Goal2DiagnosticAndCostTests.test_two_different_batches_cannot_replace_same_seed_identity) ... ok\ntest_zero_m0_branch_does_not_claim_observed_aa_reduction (test_goal2_summary.Goal2DiagnosticAndCostTests.test_zero_m0_branch_does_not_claim_observed_aa_reduction) ... ok\ntest_anchor_endpoint_corners_preserve_signed_ranges (test_goal2_summary.Goal2QualityTests.test_anchor_endpoint_corners_preserve_signed_ranges) ... ok\ntest_clear_quality_regression_and_unsupported_risk (test_goal2_summary.Goal2QualityTests.test_clear_quality_regression_and_unsupported_risk) ... ok\ntest_disjoint_reference_panel_blocks_keep (test_goal2_summary.Goal2QualityTests.test_disjoint_reference_panel_blocks_keep) ... ok\ntest_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate (test_goal2_summary.Goal2QualityTests.test_missing_holdout_unknown_cost_or_missing_calls_never_retains_candidate) ... ok\ntest_quality_route_requires_useful_supported_lower_bound (test_goal2_summary.Goal2QualityTests.test_quality_route_requires_useful_supported_lower_bound) ... ok\ntest_rho_padding_prevents_false_five_percent_classification (test_goal2_summary.Goal2QualityTests.test_rho_padding_prevents_false_five_percent_classification) ... ok\ntest_same_config_efficiency_boundary_and_cost_regression (test_goal2_summary.Goal2QualityTests.test_same_config_efficiency_boundary_and_cost_regression) ... ok\ntest_same_identity_scores_zero_despite_independent_time_differences (test_goal2_summary.Goal2QualityTests.test_same_identity_scores_zero_despite_independent_time_differences) ... ok\ntest_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep (test_goal2_summary.Goal2QualityTests.test_unfrozen_rules_or_missing_diagnostic_resolution_cannot_keep) ... ok\ntest_base_order_and_greedy_explicit_start_are_independently_replayed (test_goal2_summary.Goal2ReplayTests.test_base_order_and_greedy_explicit_start_are_independently_replayed) ... ok\ntest_clock_units_domains_and_nan_do_not_create_a_fastest_sample (test_goal2_summary.Goal2ReplayTests.test_clock_units_domains_and_nan_do_not_create_a_fastest_sample) ... ok\ntest_failed_batch_remains_failed_and_forged_metadata_is_rejected (test_goal2_summary.Goal2ReplayTests.test_failed_batch_remains_failed_and_forged_metadata_is_rejected) ... ok\ntest_final_tie_uses_original_visit_order (test_goal2_summary.Goal2ReplayTests.test_final_tie_uses_original_visit_order) ... ok\ntest_nonfinite_zero_and_invalid_recheck_contract_are_rejected (test_goal2_summary.Goal2ReplayTests.test_nonfinite_zero_and_invalid_recheck_contract_are_rejected) ... ok\ntest_raw_replay_rejects_backfilled_best_and_missing_process (test_goal2_summary.Goal2ReplayTests.test_raw_replay_rejects_backfilled_best_and_missing_process) ... ok\ntest_recheck_failure_is_ineligible_without_extra_free_exploration (test_goal2_summary.Goal2ReplayTests.test_recheck_failure_is_ineligible_without_extra_free_exploration) ... ok\ntest_recheck_recomputes_best_upward_and_preserves_random_prefix (test_goal2_summary.Goal2ReplayTests.test_recheck_recomputes_best_upward_and_preserves_random_prefix) ... ok\ntest_zero_or_one_finalist_stops_without_padding (test_goal2_summary.Goal2ReplayTests.test_zero_or_one_finalist_stops_without_padding) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.012s\n\nOK\n",
+    "clock_read_order": [
+      "monotonic",
+      "raw",
+      "realtime"
+    ],
+    "clock_unit": "ns",
+    "clock_start_ns": {
+      "monotonic": 74065041176790,
+      "raw": 78007319164567,
+      "realtime": 1790955132937997022
+    },
+    "clock_end_ns": {
+      "monotonic": 74065156528157,
+      "raw": 78007434746081,
+      "realtime": 1790955133053348369
+    },
+    "elapsed_s": {
+      "monotonic": 0.115351367,
+      "raw": 0.115581514,
+      "realtime": 0.115351347
+    },
+    "n4096_calls": 0,
+    "controlled_measurement_cost": false,
+    "engineering_test_cost": true
+  }
+}
