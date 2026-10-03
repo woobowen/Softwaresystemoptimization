@@ -1,0 +1,1 @@
+[{"mode": "idle", "command": ["taskset", "-c", "0", "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe", "idle", "0", "10"]}]

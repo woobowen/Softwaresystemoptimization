@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "primary_ledger": "evidence/measurement/resource_ledger.jsonl",
+  "primary_new_clock": "CLOCK_MONOTONIC_RAW",
+  "prior_calls": 48,
+  "prior_charged_s": 3713.432874365,
+  "agent_logs": [
+    "evidence/measurement/goal2r_implementation_control.jsonl",
+    "evidence/measurement/goal2r_review_control.jsonl",
+    "evidence/measurement/goal2r_method_control.jsonl"
+  ],
+  "known_agent_cost": "sum of recorded actual RAW durations; verify saved integer endpoints when present; never duplicate root controlled test fees",
+  "unmeasured_method_checks_upper_s": 120,
+  "unmeasured_scope": "the two explicitly unmeasured zero-call, zero-compilation method log entries; no reconstructed clock boundaries",
+  "formal_supplementary_reserve_s": 180,
+  "known_agent_and_later_accounting_reserve_s": 60,
+  "reserve_is_actual_measurement": false,
+  "cap": "primary charges + known separate agent charges + conservative unmeasured allowance must remain <=57600 s; n4096 total <=520",
+  "scope": "controlled program intervals and predefined waits; human reasoning and conversation span are separate"
+}

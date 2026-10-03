@@ -1,0 +1,108 @@
+{
+  "schema": 2,
+  "block": 2,
+  "seed": 804730,
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "dependencies_sha256": {
+    "b2-random-seed804730": "99f337eda230a12db5838ca0f1ed9ac26f22220c502ef059b056d1dcf2cc4d7d",
+    "b2-recheck-seed804730": "51110e1d42444d0238ff8555e76ab0bcdb872c629e22d6b939566773f152250d",
+    "b2-greedy-seed804730": "ba29f01cf33e369ab4140f42e4f82362067bbac19e56600286bd1820136582ae",
+    "b2-grid-seed804730": "f59edba5d311b3c49b8d1ccabef7a50eca64876c898610868271a37d9933a871"
+  },
+  "reference_manifest_sha256": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+  "reference_config": {
+    "s": 128,
+    "opt": "O3"
+  },
+  "configs": [
+    {
+      "s": 64,
+      "opt": "O1"
+    },
+    {
+      "s": 128,
+      "opt": "O3"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "panel-b2-r1-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r1-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b2-r2-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r2-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b2-r3-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b2-r3-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 804730,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    }
+  ],
+  "fingerprint": "2c9d8eb3789ac7d53a14607f47578bab3f546f4d02daf0323f7fdd0602242ac5"
+}

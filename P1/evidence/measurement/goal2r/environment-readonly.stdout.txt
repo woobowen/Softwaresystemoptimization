@@ -1,0 +1,113 @@
+{
+  "commands": [
+    {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stdout": "Linux LAPTOP-KI0GT6AJ 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  22\nOn-line CPU(s) list:                     0-21\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) Ultra 9 185H\nCPU family:                              6\nModel:                                   170\nThread(s) per core:                      2\nCore(s) per socket:                      11\nSocket(s):                               1\nStepping:                                4\nBogoMIPS:                                6143.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               528 KiB (11 instances)\nL1i cache:                               704 KiB (11 instances)\nL2 cache:                                22 MiB (11 instances)\nL3 cache:                                24 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-21\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "Python 3.12.3\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "systemctl",
+        "is-active",
+        "systemd-timesyncd"
+      ],
+      "returncode": 0,
+      "stdout": "active\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "systemctl",
+        "status",
+        "systemd-timesyncd",
+        "--no-pager"
+      ],
+      "returncode": 0,
+      "stdout": "● systemd-timesyncd.service - Network Time Synchronization\n     Loaded: loaded (/usr/lib/systemd/system/systemd-timesyncd.service; enabled; preset: enabled)\n    Drop-In: /usr/lib/systemd/system/systemd-timesyncd.service.d\n             └─wsl.conf\n     Active: active (running) since Sat 2026-10-03 09:37:47 CST; 15min ago\n       Docs: man:systemd-timesyncd.service(8)\n   Main PID: 199 (systemd-timesyn)\n     Status: \"Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\"\n      Tasks: 2 (limit: 18940)\n     Memory: 3.9M (peak: 4.2M)\n        CPU: 62ms\n     CGroup: /system.slice/systemd-timesyncd.service\n             └─199 /usr/lib/systemd/systemd-timesyncd\n\nOct 03 09:37:47 LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\nOct 03 09:37:47 LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\nOct 03 09:37:49 LAPTOP-KI0GT6AJ systemd-timesyncd[199]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\nOct 03 09:37:49 LAPTOP-KI0GT6AJ systemd-timesyncd[199]: Initial clock synchronization to Sat 2026-10-03 09:37:49.219944 CST.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "journalctl",
+        "-u",
+        "systemd-timesyncd",
+        "-n",
+        "20",
+        "--no-pager"
+      ],
+      "returncode": 0,
+      "stdout": "Oct 02 00:53:07 LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\nOct 02 00:53:07 LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\n-- Boot 7e9481132ef446b698e1a890cad45163 --\nOct 02 01:52:05 LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\nOct 02 01:52:05 LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\nOct 02 01:52:08 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).\nOct 02 01:52:08 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Initial clock synchronization to Fri 2026-10-02 01:52:08.245836 CST.\nOct 02 11:23:06 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).\nOct 02 13:48:11 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).\nOct 02 13:48:14 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\nOct 02 21:08:33 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server [2620:2d:4000:1::3f]:123 (ntp.ubuntu.com).\nOct 02 21:38:32 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Timed out waiting for reply from [2620:2d:4000:1::3f]:123 (ntp.ubuntu.com).\nOct 02 21:38:32 LAPTOP-KI0GT6AJ systemd-timesyncd[192]: Contacted time server [2620:2d:4000:1::41]:123 (ntp.ubuntu.com).\nOct 03 09:09:49 LAPTOP-KI0GT6AJ systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...\nOct 03 09:09:49 LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Deactivated successfully.\nOct 03 09:09:49 LAPTOP-KI0GT6AJ systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.\nOct 03 09:09:49 LAPTOP-KI0GT6AJ systemd[1]: systemd-timesyncd.service: Consumed 1.672s CPU time, 5.3M memory peak, 0B memory swap peak.\n-- Boot e3ff608b19f546f9816e0c3cd0941122 --\nOct 03 09:37:47 LAPTOP-KI0GT6AJ systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...\nOct 03 09:37:47 LAPTOP-KI0GT6AJ systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.\nOct 03 09:37:49 LAPTOP-KI0GT6AJ systemd-timesyncd[199]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).\nOct 03 09:37:49 LAPTOP-KI0GT6AJ systemd-timesyncd[199]: Initial clock synchronization to Sat 2026-10-03 09:37:49.219944 CST.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "getconf",
+        "CLK_TCK"
+      ],
+      "returncode": 0,
+      "stdout": "100\n",
+      "stderr": ""
+    }
+  ],
+  "files": {
+    "/etc/os-release": "PRETTY_NAME=\"Ubuntu 24.04.2 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.2 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "/proc/meminfo": "MemTotal:       16173212 kB\nMemFree:         5132184 kB\nMemAvailable:   11582752 kB\nBuffers:          180916 kB\nCached:          6277664 kB\nSwapCached:            0 kB\nActive:          2679872 kB\nInactive:        7298972 kB\nActive(anon):       3264 kB\nInactive(anon):  3521020 kB\nActive(file):    2676608 kB\nInactive(file):  3777952 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:       4194304 kB\nSwapFree:        4194304 kB\nDirty:             74960 kB\nWriteback:             4 kB\nAnonPages:       3520792 kB\nMapped:           481552 kB\nShmem:              4048 kB\nKReclaimable:     243628 kB\nSlab:             431940 kB\nSReclaimable:     243628 kB\nSUnreclaim:       188312 kB\nKernelStack:       11108 kB\nPageTables:        53820 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    12280908 kB\nCommitted_AS:    6237908 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      160240 kB\nVmallocChunk:          0 kB\nPercpu:            10752 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:    169984 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       87040 kB\nDirectMap2M:    10194944 kB\nDirectMap1G:    14680064 kB\n",
+    "/proc/sys/kernel/random/boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122\n",
+    "/sys/devices/system/clocksource/clocksource0/current_clocksource": "tsc\n",
+    "/sys/devices/system/clocksource/clocksource0/available_clocksource": "tsc hyperv_clocksource_tsc_page hyperv_clocksource_msr acpi_pm \n"
+  },
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ]
+}

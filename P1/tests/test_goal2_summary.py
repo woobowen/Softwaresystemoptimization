@@ -5,6 +5,7 @@ import json
 import math
 from pathlib import Path
 import random
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -199,7 +200,7 @@ def shared_panel_fixture(root):
         build.update(opt=config["opt"], config=config, compiler=metadata["target"]["compiler"],
             flags=[*metadata["target"]["flags"], "-" + config["opt"]], source_sha256=metadata["target"]["source_sha256"],
             binary_sha256="synthetic-" + config["opt"])
-        build["build_key"] = su.ex.at.fingerprint(dict(metadata["target"], flags=build["flags"]))
+        build["build_key"] = su.ex.at.fingerprint(su.ex.at.build_identity(metadata["target"], config["opt"]))
         for row in task["records"]:
             if row["type"] == "header":
                 row.update(metadata=metadata, fingerprint=su.ex.at.fingerprint(metadata))
@@ -298,7 +299,7 @@ def raw_aa_cli_fixture(root):
         build.update(opt=config["opt"], config=config, compiler=meta["target"]["compiler"],
             flags=[*meta["target"]["flags"], "-" + config["opt"]], source_sha256=meta["target"]["source_sha256"],
             binary_sha256="synthetic-one-O2-binary-only")
-        build["build_key"] = su.ex.at.fingerprint(dict(meta["target"], flags=build["flags"]))
+        build["build_key"] = su.ex.at.fingerprint(su.ex.at.build_identity(meta["target"], config["opt"]))
         for row in task["records"]:
             if row["type"] == "header":
                 row.update(metadata=meta, fingerprint=su.ex.at.fingerprint(meta))
@@ -1013,8 +1014,7 @@ class Goal2RawClockTests(unittest.TestCase):
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
         source = Path(directory.name) / "matrix_raw_fixture.c"
-        text = su.validation.SOURCE.read_text().replace(
-            "clock_gettime(CLOCK_MONOTONIC,", "clock_gettime(CLOCK_MONOTONIC_RAW,")
+        text = subprocess.check_output(["git", "show", "5c78049a22fa3422f2b23dddd634f2e7a3d73f9d:P1/src/matrix_multiplication.c"], cwd=P1, text=True)
         source.write_text(text)
         self.assertEqual(su.sha256(source),
             "a752f644337a96b6bceeadc24489c0d14bbf976850dcb0292b06d312ef93aed1")

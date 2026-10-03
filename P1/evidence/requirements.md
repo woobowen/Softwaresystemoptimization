@@ -1,27 +1,27 @@
-# P1 要求与阶段状态
+# P1 要求与执行状态
 
-Goal1 原矩阵保留在受审提交 `3ac0c4688b964c873379d012cbcf09afb7ed0937`。本表区分已实现、先前实际成果和本阶段受阻工作，不代替外部 Engineering 最终验收。
+本表记录Goal2R的实际产物。旧阶段要求表保留于受审提交efb6259e7c662a706a57297bb016116b7412d92c，旧raw、停止和判定不回写。最终Engineering由外部实际GitHub验收决定，本表不自授PASS。
 
-| 要求 | 对应产物/证据 | 本阶段状态 |
+| 要求 | 实际产物/证据 | 执行事实 |
 | --- | --- | --- |
-| 老师1 三明确接口、框架图、优缺点 | src/autotuner.py / report第1题 / images/framework.svg | 已实现；代码与六图实际审核记录见两类终审 |
-| 老师2 指定Matrix目标 | original.c原件188d011…、当前C cece4f…、kernel4005ab… | 原初始化/double/n4096/六循环/尾块保留；240小全元素、5san及四个大矩阵各24点实际通过 |
-| 老师3 五s×四O共20 | ConfigSpace及所有协议，8/16/24/64/128×O0—O3 | 未扩大；24保留，末块16 |
-| 老师4 完整Grid及分析 | reference_v1原60有效样本 / grid_summary.csv / report4(1) | 旧20配置实测保留；新20配置0有效，时钟BLOCKED |
-| 老师4 另外两算法自实现与比较 | Random/Greedy及旧九真实搜索 / report4(2) | 旧结果按统一身份参照重评，未伪称新六块已执行 |
-| 正式Markdown report.md、重点代码、图片 | report.md / src链接 / images六图 | 已精简；完整report/README及六图实际连续/视觉审核完成 |
-| OS/CPU/compiler，用户memory；学生身份 | report顶部、environment实际记录 | 实际Ubuntu24.04.2/185H/GCC13.3/15.42GiB；学号姓名无班级日期字段 |
-| project01需自建，截止2026-10-28 24:00 | 老师PDF、本提示要求 | 本阶段不操作水杉；后续提交要求保留 |
-| 历史保护/固定版本可复现 | history_goal2 / reproduction/goal2 / README版本入口 | 三旧版本及RAW停止fixed5c实际重算一致，protected431不变 |
-| 真多代理/测量独占 | agents_goal2 / performance.lock / primary ledger / review记录 | 主控+三原生代理；正式窗口仅一个高负载目标 |
-| 时钟、多区间A/A、M0/M1 | measurement/clocks、clock_followup、RAW stopped原ns | 原41矩阵诊断完成；新RAW八A/A首项冲突止，0有效，不授正式准入 |
-| 新协议、全部目标预算与成本 | protocol_v2、protocol_raw_aa、resource_plan、resource_ledger | 520/16h硬限、原2%门；每真实失败/暖机/数值/复现计费 |
-| 新完整20表、六主seed、共同确认 | reference_v2 plan、预定seed/面板规则 | BLOCKED / NOT_EXECUTED；不能以旧结果补齐 |
-| Greedy四结构起点 | protocol/显式start参数与测试 | 接口正确性已测；真实起点面板NOT_EXECUTED |
-| S3有限重复单因素闭环 | recheck6+2、optimization_goal2、literature_goal2 | 实现及回归已测；真实配对/选择/留出NOT_EXECUTED，无KEEP/REJECT |
-| 问题修复及两类终审 | goal2_review_closure / reviews两个最终路径 | 常规软件问题已修并实际回归、两类阶段终审；钟域核心依赖仍受阻 |
-| 干净复现/安全截图/完整图片视觉 | reproduction/goal2 / screenshots_goal2 / images_goal2 | 干净221/19及四冷通过，3安全终端/6图实际查看；唯一fresh被原live guard止为PARTIAL |
-| GitHub main阶段发布及实际SHA | [实际发布checkpoint](commands/goal2_publication_checkpoint.json) | 两类内部终审后正常main发布95298a0；实际remote SHA相同，24blob及24HTTP内容一致。记录随后正常入库，最终SHA另作实际核对，不宣称最终Engineering PASS |
-| 清理/依赖/范围 | environment/goal2_dependencies.json / A1A2 tree / protected hashes | 新系统/语言包/工具链/全局配置均0；仅精确删除旧下载包，用户输入保留 |
+| 老师1：三个接口、框架与优缺点 | src/autotuner.py；report第1题；framework.svg | TargetProgram、ConfigSpace、SearchStrategy；真实suggest/evaluate/observe截图 |
+| 老师2：指定矩阵目标与原核 | original.c；matrix_multiplication.c；数值日志 | n4096/double/原初始化/六层循环/24尾块16不变；仅边界计时及必要元数据适配 |
+| 数学正确性 | measurement/goal2r；reproduction/goal2r | 240小矩阵全元素、5ASan/UBSan、两项4096独立24点；最终完整4096退出0；不称checksum全量证明 |
+| 老师3：全部20组合 | ConfigSpace；protocol_goal2r | s8/16/24/64/128×O0/O1/O2/O3；共同C11/Wall/Wextra；未扩大配置或合并O2/O3 |
+| 老师4：完整Grid参照 | results/goal2r_reference；goal2r_summary/grid_summary.csv | 三轮各20，60有效样本；预热1、锚点3单列；观测最佳128/O3，接近项重叠 |
+| 另外两自行实现基础搜索 | results/goal2r_comparison；report4(2) | 六主seed×Grid/Random/Greedy；共同参照评分，真实driver成本；共141基础搜索调用 |
+| 单因素S3及配对 | comparison原始轨迹、48新面板；paired.csv | 同seed前六Random＋两候选新复核；总8；真实三组观察退化，不保留；不混S1/S2 |
+| 固定Greedy起点 | results/goal2r_starts | 8/8/5/7调用，28合计；独立面板，不变多起点策略 |
+| 追加及新seed | summary/additional_request.json；confirmation | 主完整REJECT不触发追加；S3留出NOT_REQUIRED；三个Random新seed24搜索＋15面板完成 |
+| T1主域有限依据 | 初始六区间、8A/A、32正式检查、2最终检查 | RAW/QPC整数完整括界符合冻结阈值；辅助变化保存，不据其单独否决RAW；非绝对校准 |
+| T2三层分开与可达判断 | 三运行模式、纯判据、两类独立审核 | 正确性不受辅助比值杀进程；退出/输出/参数/超时/资源/主域/归属保护保留；KEEP/REJECT/INC具体夹具及真实负结果 |
+| 预算与旧费用 | resource_ledger；goal2r_costs；supplement规则 | 原48及3713.432874365秒不重置；520调用/57600秒硬上限；共享面板只计一次 |
+| 干净检出与旧版本重算 | reproduction/goal2r | 首次目录准备失败保留；一行修复后254测试0skip；四冷构建及1完整4096；五版本45派生逐字节等 |
+| 正式report/OS/CPU/内存/编译器/学生身份 | report.md；README.md | 老师1—4顺序；10245102410吴博闻；Ubuntu24.04.2/185H/15.42GiB/GCC13.3；完整表图与有限结论 |
+| 六张正式图 | images；reproduction/goal2r/images.json | 框架SVG保留；五新实测/源码/运行图；实际逐张查看，运行图只裁空白 |
+| 原生多代理及两种审核 | reviews/goal2r_*.md/json；三个actor control | 主控独占测量，实施与独立审核分开；方法设计被独立反例挑战；以raw复算结论 |
+| GitHub与外部验收 | main正常发布；实际远端核对见最终交接 | 发布授权已给；不force/reset/覆盖输入；最终SHA核对后交接；不自授Engineering PASS |
+| 教师分支及截止 | 原PDF；当前提示 | project01需自建，截止2026-10-28 24:00；此次不操作水杉，Submission NOT_READY |
+| 范围与依赖 | 起点A1/A2 tree；历史hash；实际命令 | 无其他作业/全局服务/时间/WSL/电源变更；无新系统包、语言包或工具链 |
 
-Goal2：PARTIAL（性能可比性依赖阻塞）。Engineering：IN_PROGRESS，等待实际GitHub外部FINAL_REVIEW。Submission：NOT_READY，未提交水杉。
+预定性能任务和完整新鲜运行已完成；最终成品独立审核及远端检查见相应新记录和最终交接。Engineering等待外部最终验收，Submission NOT_READY。

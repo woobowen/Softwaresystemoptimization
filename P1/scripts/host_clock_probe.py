@@ -4,6 +4,7 @@
 import argparse
 import json
 import os
+from pathlib import Path
 import selectors
 import signal
 import subprocess
@@ -16,12 +17,12 @@ BRIDGE = r"""
 $ErrorActionPreference = 'Stop'
 $p1ClockMarker = 'P1Goal2ClockProbe'
 $started = (Get-Process -Id $PID).StartTime.ToUniversalTime().Ticks
-[Console]::Out.WriteLine(('ready:{0}:{1}:{2}:{3}' -f [System.Diagnostics.Stopwatch]::Frequency, [System.Diagnostics.Stopwatch]::IsHighResolution, $PID, $started))
+[Console]::Out.WriteLine(('ready:{0}:{1}:{2}:{3}:{4}' -f [System.Diagnostics.Stopwatch]::Frequency, [System.Diagnostics.Stopwatch]::IsHighResolution, $PID, $started, [System.Threading.Thread]::CurrentThread.ManagedThreadId))
 [Console]::Out.Flush()
 while ($null -ne ($line = [Console]::ReadLine())) {
     if ($line -eq 'quit') { break }
     if ($line -notmatch '^sample:([0-9]+)$') { throw 'unexpected clock request' }
-    [Console]::Out.WriteLine(('sample:{0}:{1}:{2}:{3}:{4}' -f $Matches[1], [System.Diagnostics.Stopwatch]::GetTimestamp(), [System.Diagnostics.Stopwatch]::Frequency, [System.Diagnostics.Stopwatch]::IsHighResolution, $PID))
+    [Console]::Out.WriteLine(('sample:{0}:{1}:{2}:{3}:{4}:{5}' -f $Matches[1], [System.Diagnostics.Stopwatch]::GetTimestamp(), [System.Diagnostics.Stopwatch]::Frequency, [System.Diagnostics.Stopwatch]::IsHighResolution, $PID, [System.Threading.Thread]::CurrentThread.ManagedThreadId))
     [Console]::Out.Flush()
 }
 """
@@ -69,16 +70,21 @@ def sample(bridge, sequence, frequency, host_pid, readings):
         row["partial_reply"] = getattr(bridge, "clock_pending", b"").decode(errors="replace")
     fields = response.split(":")
     after = row["after_ns"]
-    if len(fields) != 6 or fields[0] != "sample" or int(fields[1]) != sequence or \
+    if len(fields) != 7 or fields[0] != "sample" or int(fields[1]) != sequence or \
             int(fields[3]) != frequency or fields[4] != "True" or int(fields[5]) != host_pid:
         raise ValueError("host reply sequence or frequency changed")
     tick = int(fields[2])
-    if tick <= 0 or any(after[name] < before[name] for name in CLOCKS) or previous and any(
-            before[name] < previous["after_ns"][name] for name in CLOCKS):
-        raise ValueError("clock read went backwards")
+    thread = int(fields[6])
+    if thread != bridge.host_thread_id:
+        raise ValueError("host QPC sampling thread changed")
+    row["auxiliary_anomalies"] = [name for name in ("MONOTONIC", "REALTIME")
+        if after[name] < before[name] or previous and before[name] < previous["after_ns"][name]]
+    if tick <= 0 or after["RAW"] < before["RAW"] or previous and before["RAW"] < previous["after_ns"]["RAW"]:
+        raise ValueError("primary RAW clock read went backwards")
     if previous and tick < previous["host_tick"]:
         raise ValueError("host QPC counter went backwards")
-    row.update(host_tick=tick, frequency_hz=frequency, is_high_resolution=True, host_pid=host_pid)
+    row.update(host_tick=tick, frequency_hz=frequency, is_high_resolution=True, host_pid=host_pid,
+               host_managed_thread_id=thread)
     return row
 
 
@@ -90,27 +96,28 @@ def interval(first, last, frequency):
     host_low, host_high = host_s - 2 / frequency, host_s + 2 / frequency
     if host_low <= 0:
         raise ValueError("host interval is below its quantization allowance")
-    endpoint_s = [max((reading["after_ns"][name] - reading["before_ns"][name]) / 1e9
-                     for name in ("MONOTONIC", "RAW", "REALTIME"))
+    endpoint_s = [(reading["after_ns"]["RAW"] - reading["before_ns"]["RAW"]) / 1e9
                   for reading in (first, last)]
     bounds = {}
     for name in ("MONOTONIC", "RAW", "REALTIME"):
         lower = (last["before_ns"][name] - first["after_ns"][name]) / 1e9
         upper = (last["after_ns"][name] - first["before_ns"][name]) / 1e9
         if lower <= 0 or upper < lower:
-            raise ValueError("Linux interval has no positive ordered bounds")
+            if name == "RAW":
+                raise ValueError("primary Linux interval has no positive ordered bounds")
+            bounds[name] = dict(lower_s=lower, upper_s=upper, auxiliary_anomaly=True)
+            continue
         bounds[name] = dict(lower_s=lower, upper_s=upper,
                             host_to_linux_ratio_bounds=[host_low / upper, host_high / lower],
                             linux_to_host_ratio_bounds=[lower / host_high, upper / host_low],
                             bracket_width_fraction=(upper - lower) / host_s)
-    usable = max(endpoint_s) <= .02 and all(
-        row["bracket_width_fraction"] <= .002 for row in bounds.values())
+    usable = min(endpoint_s) >= 0 and max(endpoint_s) <= .02 and bounds["RAW"]["bracket_width_fraction"] <= .002
     raw_bounds = bounds["RAW"]["linux_to_host_ratio_bounds"]
     return dict(host_elapsed_s=host_s, endpoint_bracket_s=endpoint_s,
                 host_quantization_allowance_s=2 / frequency,
                 linux_interval_bounds=bounds, usable_brackets=usable,
                 endpoint_limits_pass=[value <= .02 for value in endpoint_s],
-                width_limits_pass={name: row["bracket_width_fraction"] <= .002 for name, row in bounds.items()},
+                width_limits_pass={name: row.get("bracket_width_fraction", float("inf")) <= .002 for name, row in bounds.items()},
                 raw_relative_screen_pass=raw_bounds[0] >= .995 and raw_bounds[1] <= 1.005,
                 limits=dict(endpoint_s=.02, relative_bracket_width=.002))
 
@@ -158,9 +165,10 @@ def run_workload(command, timeout=300):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--probe")
+    parser.add_argument("--intervals", type=Path, help="predeclared JSON list of names and workload argv")
     parser.add_argument("--cleanup-check", choices=("normal", "error", "timeout", "signal", "cleanup-signal"))
     args = parser.parse_args()
-    if not args.probe and not args.cleanup_check:
+    if not args.probe and not args.intervals and not args.cleanup_check:
         parser.error("--probe is required for the two clock intervals")
     def interrupted(signum, frame):
         raise KeyboardInterrupt("clock probe interrupted")
@@ -176,14 +184,16 @@ def main():
     try:
         header_text = line(bridge)
         header = header_text.split(":")
-        if len(header) != 5 or header[0] != "ready" or header[2] != "True":
+        if len(header) != 6 or header[0] != "ready" or header[2] != "True":
             raise ValueError("host did not report a high-resolution Stopwatch")
         frequency, host_pid, started = int(header[1]), int(header[3]), int(header[4])
+        bridge.host_thread_id = int(header[5])
         if frequency <= 0 or host_pid <= 0 or started <= 0:
             raise ValueError("invalid host frequency or process ID")
         result.update(host_frequency_hz=frequency, host_pid=host_pid,
                       header=header_text,
                       host_start_utc_ticks=started,
+                      host_managed_thread_id=bridge.host_thread_id,
                       bridge_linux_pid=bridge.pid, clock_read_order=list(CLOCKS),
                       host_clock="System.Diagnostics.Stopwatch.GetTimestamp / QPC",
                       host_bridge_source=BRIDGE, handshake=[])
@@ -203,13 +213,16 @@ def main():
                     result["cleanup_workload"] = error.workload_raw
                     raise
                 raise ValueError("intentional failed-workload cleanup check")
-        for mode, count, seconds in (() if args.cleanup_check else (("idle", 0, 40), ("work", 8000000000, 0))):
+        intervals = [] if args.cleanup_check else json.loads(args.intervals.read_text()) if args.intervals else [
+            dict(mode=mode, command=["taskset", "-c", "0", args.probe, mode, str(count), str(seconds)])
+            for mode, count, seconds in (("idle", 0, 40), ("work", 8000000000, 0))]
+        for specification in intervals:
             first = sample(bridge, len(result["readings"]), frequency, host_pid, result["readings"])
-            command = ["taskset", "-c", "0", args.probe, mode, str(count), str(seconds)]
-            row = dict(mode=mode, command=command, first=first)
+            command = specification["command"]
+            row = dict(mode=specification["mode"], command=command, first=first)
             result["intervals"].append(row)
             try:
-                workload = run_workload(command)
+                workload = run_workload(command, timeout=specification.get("timeout_s", 1200))
             except BaseException as error:
                 row.update(error.workload_raw)
                 raise
@@ -265,7 +278,8 @@ def main():
         result["lifecycle_valid"] = result["bridge_exit_code"] == 0 and not result.get("cleanup_error") and \
             result["host_cleanup"]["state"] in ("absent", "pid-reused", "stopped-recorded-owned-process")
         result["raw_candidate_feasible"] = bool(result["complete"] and result["lifecycle_valid"] and
-            len(result["intervals"]) == 2 and all(row.get("raw_relative_screen_pass") is True for row in result["intervals"]))
+            len(result["intervals"]) > 0 and all(row.get("usable_brackets") is True and
+                row.get("raw_relative_screen_pass") is True for row in result["intervals"]))
         print(json.dumps(result, ensure_ascii=False, allow_nan=False), flush=True)
     if result["bridge_exit_code"] != 0 or result.get("cleanup_error"):
         raise ValueError("host bridge cleanup failed; inspect its recorded PID")

@@ -67,6 +67,24 @@ class HostClockTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "positive"):
             hp.interval(first, last, 10000000)
 
+    def test_auxiliary_jump_preserves_primary_brackets(self):
+        first = self.reading(100, 100000000000, 100001000000)
+        last = self.reading(400000100, 140000000000, 140001000000)
+        last["before_ns"]["REALTIME"] = 50000000000
+        last["after_ns"]["REALTIME"] = 50001000000
+        value = hp.interval(first, last, 10000000)
+        self.assertTrue(value["usable_brackets"])
+        self.assertTrue(value["raw_relative_screen_pass"])
+        self.assertTrue(value["linux_interval_bounds"]["REALTIME"]["auxiliary_anomaly"])
+
+    def test_wide_auxiliary_endpoint_does_not_change_raw_precision(self):
+        first = self.reading(100, 100000000000, 100001000000)
+        last = self.reading(400000100, 140000000000, 140001000000)
+        last["after_ns"]["REALTIME"] += 10000000000
+        value = hp.interval(first, last, 10000000)
+        self.assertTrue(value["usable_brackets"])
+        self.assertFalse(value["width_limits_pass"]["REALTIME"])
+
     def test_invalid_response_raw_is_preserved(self):
         bridge = SimpleNamespace(stdin=mock.Mock())
         rows = []

@@ -1,0 +1,465 @@
+{
+  "schema": 1,
+  "method": "goal2r",
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "analysis_sha256": "5b125ad8b5a0fa068b52075ab6e063820ded27271ebcc0464ae49779a697a7ff",
+  "reference_complete": true,
+  "reference_best": {
+    "s": 128,
+    "opt": "O3",
+    "failed_runs": 0,
+    "rounds": [
+      1,
+      2,
+      3
+    ],
+    "valid_runs": 3,
+    "samples": [
+      49.688403,
+      46.822599,
+      47.007504
+    ],
+    "median_s": 47.007504,
+    "min_s": 46.822599,
+    "max_s": 49.688403,
+    "mad_s": 0.18490500000000054,
+    "gap_ref_pct": 0.0
+  },
+  "measurements": 368,
+  "search_tasks": 31,
+  "costs": {
+    "complete": true,
+    "n4096_calls": 428,
+    "resource_s": 48058.93117965,
+    "role_costs": [
+      {
+        "role": "aa",
+        "tasks": 23,
+        "n4096_calls": 23,
+        "failures": 1,
+        "resource_s": 1610.23187487
+      },
+      {
+        "role": "aa_raw_timer",
+        "tasks": 1,
+        "n4096_calls": 1,
+        "failures": 1,
+        "resource_s": 41.760444408
+      },
+      {
+        "role": "aa_replacement",
+        "tasks": 2,
+        "n4096_calls": 2,
+        "failures": 0,
+        "resource_s": 103.73071213099999
+      },
+      {
+        "role": "analysis",
+        "tasks": 3,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.7774816920000001
+      },
+      {
+        "role": "analysis_regression",
+        "tasks": 14,
+        "n4096_calls": 0,
+        "failures": 2,
+        "resource_s": 5.236394004
+      },
+      {
+        "role": "analysis_reproduction",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.27409479
+      },
+      {
+        "role": "anchor",
+        "tasks": 3,
+        "n4096_calls": 3,
+        "failures": 0,
+        "resource_s": 143.720303007
+      },
+      {
+        "role": "clock_block_check",
+        "tasks": 32,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 361.030548892
+      },
+      {
+        "role": "clock_bridge_validation",
+        "tasks": 3,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 12.932541034
+      },
+      {
+        "role": "clock_followup_aa",
+        "tasks": 8,
+        "n4096_calls": 8,
+        "failures": 0,
+        "resource_s": 483.157285839
+      },
+      {
+        "role": "clock_host_probe",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 61.29844101
+      },
+      {
+        "role": "clock_matrix_diagnostic",
+        "tasks": 4,
+        "n4096_calls": 4,
+        "failures": 0,
+        "resource_s": 247.92162629
+      },
+      {
+        "role": "clock_probe",
+        "tasks": 9,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 142.568884423
+      },
+      {
+        "role": "correctness",
+        "tasks": 18,
+        "n4096_calls": 0,
+        "failures": 1,
+        "resource_s": 50.188920665
+      },
+      {
+        "role": "correctness_reproduction",
+        "tasks": 1,
+        "n4096_calls": 1,
+        "failures": 1,
+        "resource_s": 11.231500658
+      },
+      {
+        "role": "correctness_sanitizer",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.506945202
+      },
+      {
+        "role": "correctness_small",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 3.286546387
+      },
+      {
+        "role": "correctness_test",
+        "tasks": 7,
+        "n4096_calls": 0,
+        "failures": 1,
+        "resource_s": 45.612367033
+      },
+      {
+        "role": "diagnostic_anchor",
+        "tasks": 4,
+        "n4096_calls": 4,
+        "failures": 0,
+        "resource_s": 222.168510356
+      },
+      {
+        "role": "diagnostic_build",
+        "tasks": 3,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 1.020492
+      },
+      {
+        "role": "diagnostic_preflight",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 2,
+        "resource_s": 0.376610473
+      },
+      {
+        "role": "environment",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.5366156
+      },
+      {
+        "role": "goal2r_analysis",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 1.290661501
+      },
+      {
+        "role": "goal2r_clock_aa",
+        "tasks": 8,
+        "n4096_calls": 8,
+        "failures": 0,
+        "resource_s": 485.620013094
+      },
+      {
+        "role": "goal2r_clock_diagnostic",
+        "tasks": 2,
+        "n4096_calls": 2,
+        "failures": 0,
+        "resource_s": 463.046884136
+      },
+      {
+        "role": "goal2r_numeric",
+        "tasks": 3,
+        "n4096_calls": 2,
+        "failures": 1,
+        "resource_s": 285.672127478
+      },
+      {
+        "role": "goal2r_numerical_small",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 4.7446809949999995
+      },
+      {
+        "role": "goal2r_plan",
+        "tasks": 3,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.8153666420000001
+      },
+      {
+        "role": "goal2r_prebuild",
+        "tasks": 4,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 1.6700735729999998
+      },
+      {
+        "role": "goal2r_software_regression",
+        "tasks": 4,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 43.483918222
+      },
+      {
+        "role": "historical_analysis",
+        "tasks": 7,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 2.853854154
+      },
+      {
+        "role": "image_review",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.264198191
+      },
+      {
+        "role": "independent_analysis_regression",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.528435108
+      },
+      {
+        "role": "independent_correctness",
+        "tasks": 3,
+        "n4096_calls": 0,
+        "failures": 1,
+        "resource_s": 6.135233638
+      },
+      {
+        "role": "independent_reproduction",
+        "tasks": 5,
+        "n4096_calls": 0,
+        "failures": 1,
+        "resource_s": 39.926873142
+      },
+      {
+        "role": "independent_syntax",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.526903822
+      },
+      {
+        "role": "numeric_smoke",
+        "tasks": 2,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.527333388
+      },
+      {
+        "role": "numeric_validation",
+        "tasks": 2,
+        "n4096_calls": 2,
+        "failures": 0,
+        "resource_s": 271.091947967
+      },
+      {
+        "role": "numeric_validation_raw",
+        "tasks": 2,
+        "n4096_calls": 2,
+        "failures": 0,
+        "resource_s": 273.946509646
+      },
+      {
+        "role": "preflight",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 0.261049111
+      },
+      {
+        "role": "reference",
+        "tasks": 60,
+        "n4096_calls": 60,
+        "failures": 0,
+        "resource_s": 7488.687952861
+      },
+      {
+        "role": "regression",
+        "tasks": 6,
+        "n4096_calls": 0,
+        "failures": 1,
+        "resource_s": 105.447672541
+      },
+      {
+        "role": "screenshot_capture",
+        "tasks": 5,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 5.992149593
+      },
+      {
+        "role": "screenshot_validation",
+        "tasks": 1,
+        "n4096_calls": 0,
+        "failures": 0,
+        "resource_s": 2.757842945
+      },
+      {
+        "role": "search",
+        "tasks": 27,
+        "n4096_calls": 213,
+        "failures": 0,
+        "resource_s": 28098.895970253998
+      },
+      {
+        "role": "shared_confirmation",
+        "tasks": 63,
+        "n4096_calls": 63,
+        "failures": 0,
+        "resource_s": 3828.302928355
+      },
+      {
+        "role": "short_test",
+        "tasks": 21,
+        "n4096_calls": 0,
+        "failures": 2,
+        "resource_s": 17.847737384
+      },
+      {
+        "role": "start_panel",
+        "tasks": 4,
+        "n4096_calls": 28,
+        "failures": 0,
+        "resource_s": 3002.525165891
+      },
+      {
+        "role": "warmup",
+        "tasks": 2,
+        "n4096_calls": 2,
+        "failures": 1,
+        "resource_s": 76.498555254
+      }
+    ],
+    "pending_attempts": [],
+    "aggregate_is_complete_cost": true,
+    "ledger_sha256": "48285ab3b1caa9fd387ac93fefbb08e2b174ec03310b5b9a6253eb6cb81943fd"
+  },
+  "decisions": {
+    "comparison": {
+      "decision": "REJECT",
+      "reasons": [
+        "observed gain upper bound is below -2pp"
+      ],
+      "evaluation_complete": true,
+      "cost_clock": "CLOCK_MONOTONIC_RAW",
+      "ranges_are_confidence_intervals": false,
+      "gain_lows_pp": [
+        -6.983991278831617,
+        0.0,
+        -14.969579061514828,
+        -52.10618758343751,
+        -2.685391648197462,
+        -30.71154658577668
+      ],
+      "gain_highs_pp": [
+        -3.49732292587063,
+        0.0,
+        10.489880433996994,
+        -48.65556877201368,
+        0.13697019402460017,
+        -30.578453567803486
+      ],
+      "median_gain_panel_pp": -5.85801402461414,
+      "median_gain_low_pp": -10.976785170173223,
+      "paired_cost_savings_fraction": [
+        0.39403823540727256,
+        0.4311520900711744,
+        0.026936048930896073,
+        0.06435324690698607,
+        0.29242382840470316,
+        0.22173103964785446
+      ],
+      "median_cost_saving_fraction": 0.2570774340262788,
+      "severe_regression": true
+    },
+    "confirmation": {
+      "decision": "NOT_REQUIRED",
+      "reasons": [
+        "complete main data did not select S3; baseline holdout still required"
+      ],
+      "evaluation_complete": false,
+      "cost_clock": "CLOCK_MONOTONIC_RAW",
+      "ranges_are_confidence_intervals": false
+    }
+  },
+  "retention": {
+    "selection": "REJECT",
+    "confirmation": "NOT_REQUIRED",
+    "decision": "REJECT",
+    "retained": false,
+    "comparison_baseline": "random",
+    "recommended_strategy": "base_algorithms",
+    "cli_default_algorithm": "grid"
+  },
+  "additional_confirmation": {
+    "selected_seeds": [],
+    "completed_seeds": [],
+    "complete": true
+  },
+  "baseline_confirmation": {
+    "complete": true,
+    "seeds": [
+      1328375,
+      1433104,
+      1537833
+    ]
+  },
+  "batch_manifest_sha256": {
+    "goal2r_reference": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+    "goal2r_comparison": "674b2d364481e7ae728b4fcb834ed7fbb710ccfef7e639762487626b00d5cfcb",
+    "goal2r_starts": "6202e55266ba7c23b9085a127a1815b7b37d18aff6fcda44d112a9e455e83b23",
+    "goal2r_confirmation": "b66845bfddf768bbb2e2482353686b7b2ccf78070d38b0cb84b6ee06dc3e3808"
+  },
+  "limitation": "Finite observed ranges, six main seeds and three holdout seeds; no population confidence or absolute clock calibration",
+  "images": [
+    "grid_median.png",
+    "online_search.png",
+    "saved-search-results.png"
+  ]
+}

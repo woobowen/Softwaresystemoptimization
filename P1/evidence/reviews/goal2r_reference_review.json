@@ -1,0 +1,728 @@
+{
+  "schema": 1,
+  "reviewer": "/root/method",
+  "method_support": "continue predeclared main searches; reference data valid, tiny rank differences remain observational",
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "manifest_sha256": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+  "ledger_snapshot_sha256": "2d2384c1da2ad5553dc35288ee1e2b7c3d531c5172c70bf0422352053a09d0e1",
+  "reference_samples": 60,
+  "extras": [
+    {
+      "task": "warmup-reference",
+      "role": "warmup",
+      "round": null,
+      "s": 128,
+      "opt": "O2",
+      "kernel_s": 41.308534,
+      "kernel_exact_s": 41.308534313,
+      "driver_raw_s": 42.280855649,
+      "source_sha256": "8cca90800b6b69c239dc5a23780fc73e7ce2494d53b21ebd3cdc4f2f30f9ac36"
+    },
+    {
+      "task": "anchor-r1-00",
+      "role": "anchor",
+      "round": 1,
+      "s": 128,
+      "opt": "O2",
+      "kernel_s": 42.340832,
+      "kernel_exact_s": 42.340831649,
+      "driver_raw_s": 43.420183901,
+      "source_sha256": "fce78a7f18650449a9402f05d1a8de010e0da4c0f94294c22cf9382168d097ce"
+    },
+    {
+      "task": "anchor-r2-00",
+      "role": "anchor",
+      "round": 2,
+      "s": 128,
+      "opt": "O2",
+      "kernel_s": 51.276746,
+      "kernel_exact_s": 51.276745692,
+      "driver_raw_s": 52.25941086,
+      "source_sha256": "b8af9ac02a3926422893b2311ebda7d930021e55777aa6b7ca10e14a5b450673"
+    },
+    {
+      "task": "anchor-r3-00",
+      "role": "anchor",
+      "round": 3,
+      "s": 128,
+      "opt": "O2",
+      "kernel_s": 47.201093,
+      "kernel_exact_s": 47.201092733,
+      "driver_raw_s": 48.040708246,
+      "source_sha256": "08e885050e24900ce49eb75f593bd8633dd42aa0afefc2a408fb470fbb6d436d"
+    }
+  ],
+  "grid": [
+    {
+      "s": 8,
+      "opt": "O0",
+      "samples": [
+        393.848872,
+        389.661449,
+        391.01906
+      ],
+      "median_s": 391.01906,
+      "min_s": 389.661449,
+      "max_s": 393.848872,
+      "mad_s": 1.3576110000000199,
+      "gap_ref_pct": 731.8226383600372
+    },
+    {
+      "s": 8,
+      "opt": "O1",
+      "samples": [
+        105.351811,
+        99.987787,
+        101.83914
+      ],
+      "median_s": 101.83914,
+      "min_s": 99.987787,
+      "max_s": 105.351811,
+      "mad_s": 1.8513530000000031,
+      "gap_ref_pct": 116.6444319187847
+    },
+    {
+      "s": 8,
+      "opt": "O2",
+      "samples": [
+        99.441381,
+        100.628924,
+        103.676373
+      ],
+      "median_s": 100.628924,
+      "min_s": 99.441381,
+      "max_s": 103.676373,
+      "mad_s": 1.187542999999991,
+      "gap_ref_pct": 114.06991530543719
+    },
+    {
+      "s": 8,
+      "opt": "O3",
+      "samples": [
+        100.415041,
+        102.737143,
+        101.957034
+      ],
+      "median_s": 101.957034,
+      "min_s": 100.415041,
+      "max_s": 102.737143,
+      "mad_s": 0.7801090000000102,
+      "gap_ref_pct": 116.89523017431429
+    },
+    {
+      "s": 16,
+      "opt": "O0",
+      "samples": [
+        314.702166,
+        313.773654,
+        316.390441
+      ],
+      "median_s": 314.702166,
+      "min_s": 313.773654,
+      "max_s": 316.390441,
+      "mad_s": 0.9285119999999552,
+      "gap_ref_pct": 569.4721889509385
+    },
+    {
+      "s": 16,
+      "opt": "O1",
+      "samples": [
+        63.628636,
+        63.383835,
+        66.819025
+      ],
+      "median_s": 63.628636,
+      "min_s": 63.383835,
+      "max_s": 66.819025,
+      "mad_s": 0.2448010000000025,
+      "gap_ref_pct": 35.35846532077092
+    },
+    {
+      "s": 16,
+      "opt": "O2",
+      "samples": [
+        62.537484,
+        63.683843,
+        61.871661
+      ],
+      "median_s": 62.537484,
+      "min_s": 61.871661,
+      "max_s": 63.683843,
+      "mad_s": 0.6658229999999961,
+      "gap_ref_pct": 33.03723592726813
+    },
+    {
+      "s": 16,
+      "opt": "O3",
+      "samples": [
+        64.712676,
+        64.209566,
+        66.757137
+      ],
+      "median_s": 64.712676,
+      "min_s": 64.209566,
+      "max_s": 66.757137,
+      "mad_s": 0.5031100000000066,
+      "gap_ref_pct": 37.66456521494952
+    },
+    {
+      "s": 24,
+      "opt": "O0",
+      "samples": [
+        238.978801,
+        287.353034,
+        291.588661
+      ],
+      "median_s": 287.353034,
+      "min_s": 238.978801,
+      "max_s": 291.588661,
+      "mad_s": 4.235627000000022,
+      "gap_ref_pct": 511.29183544822973
+    },
+    {
+      "s": 24,
+      "opt": "O1",
+      "samples": [
+        64.517075,
+        67.627184,
+        65.436714
+      ],
+      "median_s": 65.436714,
+      "min_s": 64.517075,
+      "max_s": 67.627184,
+      "mad_s": 0.9196389999999894,
+      "gap_ref_pct": 39.20482568059771
+    },
+    {
+      "s": 24,
+      "opt": "O2",
+      "samples": [
+        53.777253,
+        67.582815,
+        63.718468
+      ],
+      "median_s": 63.718468,
+      "min_s": 53.777253,
+      "max_s": 67.582815,
+      "mad_s": 3.864346999999995,
+      "gap_ref_pct": 35.54956672449574
+    },
+    {
+      "s": 24,
+      "opt": "O3",
+      "samples": [
+        62.391651,
+        64.305891,
+        63.927611
+      ],
+      "median_s": 63.927611,
+      "min_s": 62.391651,
+      "max_s": 64.305891,
+      "mad_s": 0.3782800000000037,
+      "gap_ref_pct": 35.99448079608738
+    },
+    {
+      "s": 64,
+      "opt": "O0",
+      "samples": [
+        271.412812,
+        248.731089,
+        246.584909
+      ],
+      "median_s": 248.731089,
+      "min_s": 246.584909,
+      "max_s": 271.412812,
+      "mad_s": 2.146179999999987,
+      "gap_ref_pct": 429.1306022119362
+    },
+    {
+      "s": 64,
+      "opt": "O1",
+      "samples": [
+        50.940238,
+        57.790135,
+        55.894518
+      ],
+      "median_s": 55.894518,
+      "min_s": 50.940238,
+      "max_s": 57.790135,
+      "mad_s": 1.8956170000000014,
+      "gap_ref_pct": 18.905521977937823
+    },
+    {
+      "s": 64,
+      "opt": "O2",
+      "samples": [
+        64.957855,
+        57.380079,
+        56.035192
+      ],
+      "median_s": 57.380079,
+      "min_s": 56.035192,
+      "max_s": 64.957855,
+      "mad_s": 1.344887,
+      "gap_ref_pct": 22.065785496715606
+    },
+    {
+      "s": 64,
+      "opt": "O3",
+      "samples": [
+        57.015349,
+        57.321516,
+        54.596104
+      ],
+      "median_s": 57.015349,
+      "min_s": 54.596104,
+      "max_s": 57.321516,
+      "mad_s": 0.3061670000000021,
+      "gap_ref_pct": 21.28988809956811
+    },
+    {
+      "s": 128,
+      "opt": "O0",
+      "samples": [
+        239.426935,
+        233.37557,
+        236.40408
+      ],
+      "median_s": 236.40408,
+      "min_s": 233.37557,
+      "max_s": 239.426935,
+      "mad_s": 3.0228549999999927,
+      "gap_ref_pct": 402.9071103200885
+    },
+    {
+      "s": 128,
+      "opt": "O1",
+      "samples": [
+        53.234821,
+        47.395634,
+        46.70197
+      ],
+      "median_s": 47.395634,
+      "min_s": 46.70197,
+      "max_s": 53.234821,
+      "mad_s": 0.6936639999999983,
+      "gap_ref_pct": 0.8256766834503715
+    },
+    {
+      "s": 128,
+      "opt": "O2",
+      "samples": [
+        54.389251,
+        47.516251,
+        46.134434
+      ],
+      "median_s": 47.516251,
+      "min_s": 46.134434,
+      "max_s": 54.389251,
+      "mad_s": 1.381816999999998,
+      "gap_ref_pct": 1.082267631142475
+    },
+    {
+      "s": 128,
+      "opt": "O3",
+      "samples": [
+        49.688403,
+        46.822599,
+        47.007504
+      ],
+      "median_s": 47.007504,
+      "min_s": 46.822599,
+      "max_s": 49.688403,
+      "mad_s": 0.18490500000000054,
+      "gap_ref_pct": 0.0
+    }
+  ],
+  "observed_best": {
+    "s": 128,
+    "opt": "O3",
+    "samples": [
+      49.688403,
+      46.822599,
+      47.007504
+    ],
+    "median_s": 47.007504,
+    "min_s": 46.822599,
+    "max_s": 49.688403,
+    "mad_s": 0.18490500000000054,
+    "gap_ref_pct": 0.0
+  },
+  "within_5pct": [
+    {
+      "s": 128,
+      "opt": "O1",
+      "gap_ref_pct": 0.8256766834503715
+    },
+    {
+      "s": 128,
+      "opt": "O2",
+      "gap_ref_pct": 1.082267631142475
+    },
+    {
+      "s": 128,
+      "opt": "O3",
+      "gap_ref_pct": 0.0
+    }
+  ],
+  "block_checks": [
+    {
+      "block_id": "round-1",
+      "phase": "before",
+      "source": "results/goal2r_reference/qpc-round-1-before.stdout.txt",
+      "sha256": "76f8e15034a54b0d67bf5843276cd77c281c5fb462adb56134143688a849d709",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.1009955,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999520564096468,
+            1.000036316718215
+          ],
+          "linux_ns_bounds": [
+            10100511422,
+            10101362135
+          ],
+          "endpoint_s": [
+            0.00019901,
+            0.000651703
+          ],
+          "width_fraction": 8.422070874103448e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            0.9902689025003742,
+            0.9903493955689693
+          ],
+          "linux_ns_bounds": [
+            10002701926,
+            10003514590
+          ],
+          "endpoint_s": [
+            0.000194565,
+            0.000618099
+          ],
+          "width_fraction": 8.04538522960435e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            1.1742130496105447,
+            1.1742935525373426
+          ],
+          "linux_ns_bounds": [
+            11860720965,
+            11861533655
+          ],
+          "endpoint_s": [
+            0.000194708,
+            0.000617982
+          ],
+          "width_fraction": 8.045642629976421e-05
+        }
+      }
+    },
+    {
+      "block_id": "round-1",
+      "phase": "after",
+      "source": "results/goal2r_reference/qpc-round-1-after.stdout.txt",
+      "sha256": "c617b08c635d01acac6069508c881c7788e23d7b0a986b3981f2be9a69aa36eb",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.5989199,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999636708271817,
+            1.000027659705734
+          ],
+          "linux_ns_bounds": [
+            10598535050,
+            10599212863
+          ],
+          "endpoint_s": [
+            0.000289253,
+            0.00038856
+          ],
+          "width_fraction": 6.395113902125065e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            0.9437698560441078,
+            0.943831628897047
+          ],
+          "linux_ns_bounds": [
+            10002941297,
+            10003595645
+          ],
+          "endpoint_s": [
+            0.000264918,
+            0.00038943
+          ],
+          "width_fraction": 6.173723418741942e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            0.9437698898211337,
+            0.9438316292744439
+          ],
+          "linux_ns_bounds": [
+            10002941655,
+            10003595649
+          ],
+          "endpoint_s": [
+            0.000265282,
+            0.000388712
+          ],
+          "width_fraction": 6.17038345577081e-05
+        }
+      }
+    },
+    {
+      "block_id": "round-2",
+      "phase": "before",
+      "source": "results/goal2r_reference/qpc-round-2-before.stdout.txt",
+      "sha256": "5eccc4249ad10531ae5dda12b4f4061e8fe9652328fdc29d737a7f656fd214fc",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.0019792,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999641646932406,
+            1.0000314693722112
+          ],
+          "linux_ns_bounds": [
+            10001620976,
+            10002293756
+          ],
+          "endpoint_s": [
+            0.000272175,
+            0.000400605
+          ],
+          "width_fraction": 6.726468697315428e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            1.0000349580803976,
+            1.000102300954641
+          ],
+          "linux_ns_bounds": [
+            10002329050,
+            10003002212
+          ],
+          "endpoint_s": [
+            0.000272059,
+            0.000401103
+          ],
+          "width_fraction": 6.730287941410636e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            1.1475318431469674,
+            1.1475991777227286
+          ],
+          "linux_ns_bounds": [
+            11477589856,
+            11478262876
+          ],
+          "endpoint_s": [
+            0.000272344,
+            0.000400676
+          ],
+          "width_fraction": 6.728868222401422e-05
+        }
+      }
+    },
+    {
+      "block_id": "round-2",
+      "phase": "after",
+      "source": "results/goal2r_reference/qpc-round-2-after.stdout.txt",
+      "sha256": "ba83947d05694640a9bbfd779edcdfcec1b22e55dfce0f90edf2e6954a68dc4a",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.69725,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999565009706887,
+            1.0000349711380958
+          ],
+          "linux_ns_bounds": [
+            10696784880,
+            10697623895
+          ],
+          "endpoint_s": [
+            0.00033556,
+            0.000503455
+          ],
+          "width_fraction": 7.843277477856459e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            0.9351105079322161,
+            0.9351864075381319
+          ],
+          "linux_ns_bounds": [
+            10003111068,
+            10003922611
+          ],
+          "endpoint_s": [
+            0.000307187,
+            0.000504356
+          ],
+          "width_fraction": 7.586463810792493e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            0.9351106102949709,
+            0.9351864427808352
+          ],
+          "linux_ns_bounds": [
+            10003112163,
+            10003922988
+          ],
+          "endpoint_s": [
+            0.000307738,
+            0.000503087
+          ],
+          "width_fraction": 7.57975180537054e-05
+        }
+      }
+    },
+    {
+      "block_id": "round-3",
+      "phase": "before",
+      "source": "results/goal2r_reference/qpc-round-3-before.stdout.txt",
+      "sha256": "d14543e4d58bd7cedf49fec1cdac2416c09315b4df3b4bff1771f32e5b5122c1",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.3988435,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999690835818602,
+            1.0000273121723067
+          ],
+          "linux_ns_bounds": [
+            10398522205,
+            10399127315
+          ],
+          "endpoint_s": [
+            0.000237763,
+            0.000367347
+          ],
+          "width_fraction": 5.8190124699924564e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            0.961843978768524,
+            0.9618979437838052
+          ],
+          "linux_ns_bounds": [
+            10002065199,
+            10002625988
+          ],
+          "endpoint_s": [
+            0.000224037,
+            0.000336752
+          ],
+          "width_fraction": 5.3928016129870595e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            1.1730461968574448,
+            1.1731001986538252
+          ],
+          "linux_ns_bounds": [
+            12198324054,
+            12198885141
+          ],
+          "endpoint_s": [
+            0.000224379,
+            0.000336708
+          ],
+          "width_fraction": 5.395667316274161e-05
+        }
+      }
+    },
+    {
+      "block_id": "round-3",
+      "phase": "after",
+      "source": "results/goal2r_reference/qpc-round-3-after.stdout.txt",
+      "sha256": "5d24648e5c137377e02d8a0e82d1f33a77703daacf3c60258d8dabd32eaf1d76",
+      "frequency_hz": 10000000,
+      "qpc_s": 10.7210738,
+      "domains": {
+        "RAW": {
+          "ratio_bounds": [
+            0.9999490474555068,
+            1.000034579186174
+          ],
+          "linux_ns_bounds": [
+            10720527734,
+            10721444326
+          ],
+          "endpoint_s": [
+            0.000313861,
+            0.000602731
+          ],
+          "width_fraction": 8.54944212770926e-05
+        },
+        "MONOTONIC": {
+          "ratio_bounds": [
+            0.9329622145132102,
+            0.933041751154474
+          ],
+          "linux_ns_bounds": [
+            10002356941,
+            10003209286
+          ],
+          "endpoint_s": [
+            0.000289594,
+            0.000562751
+          ],
+          "width_fraction": 7.950183124380694e-05
+        },
+        "REALTIME": {
+          "ratio_bounds": [
+            0.9329623220584057,
+            0.9330418134616667
+          ],
+          "linux_ns_bounds": [
+            10002358094,
+            10003209954
+          ],
+          "endpoint_s": [
+            0.000289788,
+            0.000562072
+          ],
+          "width_fraction": 7.945659323789004e-05
+        }
+      }
+    }
+  ],
+  "binary_sha256_by_opt": {
+    "O2": "ed09737e4c5fc1502bba676bd34101ec490560242787aa71e36236f3e44291fe",
+    "O0": "1cb0987ef381ecb5526a1df53aeaa0221c849fed9e76d196fc3e5370ccd3044e",
+    "O1": "bb64f1ef2a1a927cec81d4a3dab01d0aa42cdb2536a7b269e31b2d247048cc77",
+    "O3": "cbffa4a612e473bfe56a098492f886082cce7f3916790caf4cef2f577ddbf13f"
+  },
+  "batch_calls": 64,
+  "batch_controlled_raw_s": 7743.330536685,
+  "batch_role_costs": {
+    "warmup": 42.280855649,
+    "anchor": 143.720303007,
+    "reference": 7488.687952860998,
+    "clock_block_check": 68.641425168
+  },
+  "cumulative_snapshot_calls": 124,
+  "cumulative_snapshot_resource_s": 12834.711963283,
+  "all_derived_cells_match": true,
+  "limitations": [
+    "before/after QPC supports predeclared blocks without claiming every intervening instant",
+    "all slow samples retained; no unmeasured thermal or core-type causal explanation",
+    "128/O1,O2,O3 ranges overlap; point-best O3 is not a uniquely proven population winner"
+  ],
+  "target_driver_raw_s": 7674.689111517,
+  "qpc_check_driver_raw_s": 68.641425168,
+  "batch_tasks": 70,
+  "target_driver_tasks": 64,
+  "qpc_check_tasks": 6,
+  "cost_label_correction": "Original batch cost label contained target drivers only; now target, six QPC checks and full seventy-task phase are explicit. Original raw/ledger unchanged."
+}

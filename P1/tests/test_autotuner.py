@@ -332,6 +332,24 @@ class ProcessTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.target.build("O2")
 
+    def test_compile_timeout_does_not_duplicate_a_cached_binary(self):
+        first = self.target.build("O2")
+        for timeout in (60, 60.0, 120):
+            target = at.TargetProgram(self.source, cache_dir=self.target.cache_dir,
+                                      compile_timeout=timeout)
+            cached = target.build("O2")
+            self.assertTrue(cached["cached"])
+            self.assertEqual(cached["build_key"], first["build_key"])
+            self.assertEqual(cached["binary_sha256"], first["binary_sha256"])
+            self.assertEqual(cached["compile_raw_s"], 0)
+        path = self.directory / "compile-settings.jsonl"
+        journal = at.Journal(path, self.target.metadata())
+        journal.close()
+        changed = at.TargetProgram(self.source, cache_dir=self.target.cache_dir,
+                                   compile_timeout=120)
+        with self.assertRaisesRegex(ValueError, "fingerprint mismatch"):
+            at.Journal(path, changed.metadata(), True)
+
     def test_cache_hit_log_failure_is_not_swallowed_or_recompiled(self):
         self.target.build("O0")
         def fail(kind, data):

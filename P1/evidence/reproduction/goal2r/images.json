@@ -1,0 +1,59 @@
+{
+  "images": [
+    {
+      "file": "framework.svg",
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "bytes": 3416,
+      "actual_visual_opened": true,
+      "content": "保留的三接口框架，SHA未变"
+    },
+    {
+      "file": "grid_median.png",
+      "sha256": "db211acb10572ec4c8446592520a99548669b99e839467516840ab39db10920a",
+      "git_blob_sha": "3046a72c2a3758675d704ad7ec1f98d7944009d6",
+      "bytes": 164739,
+      "actual_visual_opened": true,
+      "content": "新60样本的20配置中位数及min/max"
+    },
+    {
+      "file": "online_search.png",
+      "sha256": "c450118568b847c751109966f459392a754899a7bffbbe6d29cf89ee0ecf7b5d",
+      "git_blob_sha": "2a1e395536cdf1a74573fd34cbffdecabb1af710",
+      "bytes": 283547,
+      "actual_visual_opened": true,
+      "content": "新六seed三基础算法质量/成本及真实在线轨迹"
+    },
+    {
+      "file": "saved-search-results.png",
+      "sha256": "1c15fd73f3a2d9b54ebe37f8ba7f635ff1310fa4c5a6fc2d69b1b3fcac980649",
+      "git_blob_sha": "3362b85c1269b876f0e05fdb3376ac4c80d35670",
+      "bytes": 93865,
+      "actual_visual_opened": true,
+      "content": "新S3与Random共同面板及实际成本差"
+    },
+    {
+      "file": "interfaces-kernel.png",
+      "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "bytes": 154698,
+      "actual_visual_opened": true,
+      "content": "最终源码真实suggest/evaluate/observe与S3路径截图"
+    },
+    {
+      "file": "build-run.png",
+      "sha256": "2fa10410f9543a423258a2a5a4bf4ee9fca463ac4cf3b1ef1cb280eed386621d",
+      "git_blob_sha": "9ac810e09f693b1d0e43882bb2827a1d74f0c079",
+      "bytes": 89203,
+      "actual_visual_opened": true,
+      "content": "干净检出四冷构建及一次完整n4096，裁去下方空白"
+    }
+  ],
+  "all_six_opened": true,
+  "svg_actual_preview": ".cache/goal2r-framework-preview.png (ffmpeg librsvg from unchanged source)",
+  "formal_raster_sources": "results/goal2r_summary and evidence/reproduction/goal2r/screenshots.jsonl",
+  "crop_evidence": "evidence/reproduction/goal2r/build_run_crop.json",
+  "target_returncode": 0,
+  "fresh_kernel_raw_s": 63.327071,
+  "old_viewer_130_preserved_in_commit": "efb6259e7c662a706a57297bb016116b7412d92c"
+}

@@ -1,0 +1,75 @@
+{
+  "schema": 2,
+  "stage": "confirmation",
+  "protocol": "evidence/protocol_goal2r.json",
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "target_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+  "framework_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+  "driver_sha256": "9d985ae01c24ad322bc4847772b082c425793e8758871feac1b8edc3cf9e41ee",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "algorithms": [
+    "random"
+  ],
+  "jobs": [
+    {
+      "id": "b1-random-seed1328375",
+      "action": "search",
+      "role": "search",
+      "block": 1,
+      "algorithm": "random",
+      "seed": 1328375,
+      "budget": 8,
+      "repeats": 1
+    },
+    {
+      "id": "panel-b1",
+      "action": "panel",
+      "role": "shared_confirmation",
+      "block": 1,
+      "seed": 1328375,
+      "depends_on": [
+        "b1-random-seed1328375"
+      ]
+    },
+    {
+      "id": "b2-random-seed1433104",
+      "action": "search",
+      "role": "search",
+      "block": 2,
+      "algorithm": "random",
+      "seed": 1433104,
+      "budget": 8,
+      "repeats": 1
+    },
+    {
+      "id": "panel-b2",
+      "action": "panel",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "depends_on": [
+        "b2-random-seed1433104"
+      ]
+    },
+    {
+      "id": "b3-random-seed1537833",
+      "action": "search",
+      "role": "search",
+      "block": 3,
+      "algorithm": "random",
+      "seed": 1537833,
+      "budget": 8,
+      "repeats": 1
+    },
+    {
+      "id": "panel-b3",
+      "action": "panel",
+      "role": "shared_confirmation",
+      "block": 3,
+      "seed": 1537833,
+      "depends_on": [
+        "b3-random-seed1537833"
+      ]
+    }
+  ]
+}

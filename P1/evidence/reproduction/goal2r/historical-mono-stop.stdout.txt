@@ -1,0 +1,1 @@
+{"output": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/.cache/goal2r-derived", "actual_process_runs": 44, "charged_process_upper": 44, "recorded_ledger_charged_calls": 44, "missing_job_raw_starts": 0, "costs_complete": true}

@@ -19,6 +19,7 @@ import clock_followup as cf
 
 class ClockFollowupTests(unittest.TestCase):
     def setUp(self):
+        (P1 / ".cache").mkdir(exist_ok=True)
         self.temporary=tempfile.TemporaryDirectory(prefix="clock-fixtures-",dir=P1/".cache")
         self.directory=Path(self.temporary.name)
         self.job=dict(id="fixture",action="run")

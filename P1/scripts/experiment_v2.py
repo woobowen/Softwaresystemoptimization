@@ -34,9 +34,10 @@ def clocks():
     return {name: time.clock_gettime_ns(clock) for name, clock in CLOCKS.items()}
 
 
-def elapsed(start, end):
+def elapsed(start, end, strict_auxiliary=True):
     values = {name: (end[name] - start[name]) / 1e9 for name in CLOCKS}
-    if any(not math.isfinite(x) or x < 0 for x in values.values()):
+    checked = values.values() if strict_auxiliary else [values["raw"]]
+    if any(not math.isfinite(x) or x < 0 for x in checked):
         raise ValueError("a resource clock went backwards; inspect the saved boundaries")
     return values
 
@@ -104,12 +105,16 @@ def resource_span(start, end):
     if set(begin)!=set(CLOCKS) or set(finish)!=set(CLOCKS) or \
             any(type(v) is not int for v in [*begin.values(),*finish.values()]):
         raise ValueError("resource boundaries must be three integer nanosecond domains")
-    spans=elapsed(begin,finish)
-    if end["resource_s"]!=max(spans.values()) or end.get("resource_wall_s")!=max(spans.values()):
+    new_basis = end.get("resource_clock") == "CLOCK_MONOTONIC_RAW"
+    spans=elapsed(begin,finish,strict_auxiliary=not new_basis)
+    charged = spans["raw"] if new_basis else max(spans.values())
+    if end["resource_s"]!=charged or end.get("resource_wall_s")!=charged:
         raise ValueError("charged resource duration differs from its raw boundaries")
     if end.get("n4096_calls_known",True):
         if end.get("clock_elapsed_s")!=spans or end.get("driver_wall_s")!=spans["monotonic"]:
             raise ValueError("known driver clock fields differ from raw boundaries")
+        if new_basis and end.get("driver_raw_s") != spans["raw"]:
+            raise ValueError("new driver RAW cost differs from integer boundaries")
     elif end.get("driver_wall_s") is not None or end.get("clock_elapsed_s") is not None or \
             end.get("resource_bound_basis")!="same-boot multi-domain span including downtime":
         raise ValueError("unknown recovered cost must retain its explicit conservative bound")
@@ -425,14 +430,20 @@ def validate_complete_clock_record(record, ledger_rows, journal_rows, journal_pa
 
 def controlled(command, directory, task, role, call_upper=0, journal=None,
                direct_calls=None, ledger=LEDGER, time_limit=None, diagnostic_observer=None,
-               complete_clock_guard=False, clock_history=None):
+               complete_clock_guard=False, clock_history=None, mode="benchmark", resource_reserve_s=0):
     """Caller holds the performance lock. Unknown starts block future work."""
     directory = Path(directory)
+    if mode not in ("correctness", "diagnostic", "benchmark"):
+        raise ValueError("unknown execution purpose")
+    if mode == "correctness" and (complete_clock_guard or diagnostic_observer is not None):
+        raise ValueError("correctness does not use performance clock guards")
     directory.mkdir(parents=True, exist_ok=True)
     used_calls, used_s = usage(ledger)
-    if used_calls + call_upper > MAX_CALLS or used_s >= MAX_SECONDS:
+    if not math.isfinite(resource_reserve_s) or resource_reserve_s < 0:
+        raise ValueError("supplementary-cost reserve must be finite and nonnegative")
+    if used_calls + call_upper > MAX_CALLS or used_s + resource_reserve_s >= MAX_SECONDS:
         raise ValueError("Goal 2 resource cap reached before starting this task")
-    remaining = MAX_SECONDS - used_s
+    remaining = MAX_SECONDS - used_s - resource_reserve_s
     if time_limit is not None:
         remaining = min(remaining, time_limit)
     stdout, stderr = directory / (task + ".stdout.txt"), directory / (task + ".stderr.txt")
@@ -450,13 +461,14 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
         diagnostic_observer.validate(task, argv, call_upper, journal)
     if complete_clock_guard and (journal is None or diagnostic_observer is not None):
         raise ValueError("formal complete-clock guard needs a target journal and no diagnostic observer")
-    mode="complete_target_and_driver" if complete_clock_guard is True else complete_clock_guard
-    guard=CompleteClockGuard(previous_rows,boot_id,journal,prior_count,mode=mode,history=clock_history) if mode else None
+    guard_mode="complete_target_and_driver" if complete_clock_guard is True else complete_clock_guard
+    guard=CompleteClockGuard(previous_rows,boot_id,journal,prior_count,mode=guard_mode,history=clock_history) if guard_mode else None
     append(ledger, "task_start", task=task, role=role, command=argv,
            attempt_id=attempt, clock_start_ns=before, call_upper=call_upper,
            journal=str(Path(journal).resolve().relative_to(P1)) if journal else None,
            prior_measurement_starts=prior_count,
-           boot_id=boot_id)
+           boot_id=boot_id, mode=mode, resource_clock="CLOCK_MONOTONIC_RAW",
+           supplementary_cost_reserve_s=resource_reserve_s)
     child, code, reason = None, None, None
     try:
         if diagnostic_observer is not None:
@@ -466,7 +478,7 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
             append(ledger, "task_process", task=task, attempt_id=attempt, pid=child.pid)
             while child.poll() is None:
                 current = clocks()
-                spans = elapsed(before, current)
+                spans = elapsed(before, current, strict_auxiliary=False)
                 if diagnostic_observer is not None:
                     diagnostic_observer.sample("interval", current, clock_baselines)
                 if guard is not None and not guard.poll(attempt):
@@ -474,14 +486,7 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
                     stop(child)
                     cleanup_recorded_children(journal)
                     break
-                if guard is None and diagnostic_observer is None and call_upper>0 and spans["monotonic"] >= 10 and clock_baselines and any(
-                        abs((spans["raw"] / spans["monotonic"]) / baseline - 1) > .02
-                        for baseline in (clock_baselines[0], clock_baselines[-1])):
-                    reason = "RAW/MONOTONIC changed >2% relative to first or previous long interval"
-                    stop(child)
-                    cleanup_recorded_children(journal)
-                    break
-                if max(spans.values()) >= remaining:
+                if spans["raw"] >= remaining:
                     reason = "resource_or_task_timeout"
                     stop(child)
                     cleanup_recorded_children(journal)
@@ -504,7 +509,7 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
     finally:
         after = clocks()
         try:
-            spans = elapsed(before, after)
+            spans = elapsed(before, after, strict_auxiliary=False)
         except ValueError:
             append(ledger, "clock_error", task=task, attempt_id=attempt,
                    clock_end_ns=after, actual_cost_unknown=True)
@@ -528,7 +533,9 @@ def controlled(command, directory, task, role, call_upper=0, journal=None,
         record = append(ledger, "task_end", task=task, role=role, attempt_id=attempt,
             returncode=code, reason=reason, n4096_calls=calls,n4096_calls_known=True,
             driver_wall_s=spans["monotonic"], clock_elapsed_s=spans,
-            clock_end_ns=after, resource_s=max(spans.values()), resource_wall_s=max(spans.values()),
+            driver_raw_s=spans["raw"], mode=mode, resource_clock="CLOCK_MONOTONIC_RAW",
+            clock_end_ns=after, resource_s=spans["raw"], resource_wall_s=spans["raw"],
+            auxiliary_anomalies=[k for k in ("monotonic", "realtime") if spans[k] < 0],
             clock_ratio_baselines=clock_baselines[:1]+clock_baselines[-1:] if clock_baselines else [],
             stdout=str(stdout.resolve().relative_to(P1)), stderr=str(stderr.resolve().relative_to(P1)),
             **observation)
@@ -552,6 +559,9 @@ def common_metadata(protocol, job, root=P1):
         repeats=job.get("repeats", 1), timeout=float(measurement["timeout_s"]),
         runtime_affinity=measurement["cpu_affinity"], protocol_sha256=protocol["protocol_sha256"],
         cache_dir=str((root / measurement["cache_dir"]).resolve()))
+    expected.update(mode=job.get("mode", "benchmark"), primary_clock="CLOCK_MONOTONIC_RAW", primary_clock_unit="ns")
+    source = root / target["path"]
+    expected["target"]["require_kernel_boundaries"] = target.get("require_kernel_boundaries", source.is_file() and "kernel_start_ns=" in source.read_text())
     if job.get("algorithm") == "recheck":
         expected.update(schema=2, recheck=dict(exploration_trials=min(20,job["budget"]-2),
             finalist_limit=2, rechecks_per_finalist=1, return_rule="successful_finalists_only",
@@ -617,7 +627,7 @@ def validate_trace(rows, metadata, job):
         elif kind == "build":
             t, config = row["trial_id"], row["config"]
             flags = [*metadata["target"]["flags"], "-"+config["opt"]]
-            identity = dict(metadata["target"], flags=flags)
+            identity = at.build_identity(metadata["target"], config["opt"]) if metadata.get("primary_clock") else dict(metadata["target"], flags=flags)
             if t not in starts or config != starts[t]["config"] or row["flags"] != flags or \
                     row["source_sha256"] != metadata["target"]["source_sha256"] or \
                     row["compiler"] != metadata["target"]["compiler"] or row["build_key"] != at.fingerprint(identity):
@@ -660,10 +670,20 @@ def validate_trace(rows, metadata, job):
                         if set(values)!=set(clock_names) or any(type(v) is not int for v in values.values()):
                             raise ValueError("clock boundaries must be three exact integer nanosecond domains")
                     deltas = {n:(row["clock_end_ns"][n]-v)/1e9 for n,v in row["clock_start_ns"].items()}
-                    if deltas != row["clock_deltas_s"] or any(v < 0 or not math.isfinite(v) for v in deltas.values()) or \
+                    if deltas != row["clock_deltas_s"] or not math.isfinite(deltas["CLOCK_MONOTONIC_RAW"]) or \
+                            deltas["CLOCK_MONOTONIC_RAW"] <= 0 or \
                             row["process_wall_s"] != deltas["CLOCK_MONOTONIC"] or \
                             row["kernel_s"] > deltas[metadata["target"]["kernel_clock"]]+.005:
                         raise ValueError("clock fields or same-domain guard are invalid")
+                    if metadata["target"].get("require_kernel_boundaries"):
+                        boundaries = at.TargetProgram.kernel_boundaries(row["stdout"])
+                        if boundaries is None:
+                            raise ValueError("required kernel integer boundaries are missing")
+                        begin, end = boundaries["kernel_start_ns"], boundaries["kernel_end_ns"]
+                        if row.get("kernel_start_ns") != begin or row.get("kernel_end_ns") != end or \
+                                not row["clock_start_ns"]["CLOCK_MONOTONIC_RAW"] <= begin < end <= row["clock_end_ns"]["CLOCK_MONOTONIC_RAW"] or \
+                                abs((end - begin) / 1e9 - row["kernel_s"]) > .0000005 + 1e-12:
+                            raise ValueError("kernel integer boundaries differ from valid same-domain output")
                 completions[key] = row
         elif kind == "trial":
             t = row["trial_id"]
@@ -722,6 +742,7 @@ def command(job, directory, protocol, protocol_path):
         "--repeats", str(job.get("repeats", 1)), "--seed", str(job.get("seed", 0)),
         "--timeout", str(protocol["measurement"]["timeout_s"]),
         "--compile-timeout", str(protocol["measurement"]["compile_timeout_s"])]
+    argv += ["--mode", job.get("mode", "benchmark")]
     if job["action"] == "search":
         argv += ["--algorithm", job["algorithm"], "--budget", str(job["budget"])]
         if job.get("start"):
@@ -752,17 +773,33 @@ def freeze_check(protocol, manifest, protocol_path, execute=False):
     if manifest["stage"]!="diagnostic":
         health=protocol["measurement"]["clock_health"]
         raw=protocol["measurement"]["score_clock"]=="CLOCK_MONOTONIC_RAW"
-        if health["guard"]!="completed_per_target_process_and_driver_first_and_previous_same_boot" or \
+        if protocol.get("method") == "goal2r":
+            if not raw or health["guard"] != "qpc_aligned_blocks" or \
+                    protocol["measurement"]["cost_clock"] != "CLOCK_MONOTONIC_RAW":
+                raise ValueError("Goal2R needs the established RAW domain and aligned block checks")
+            if execute:
+                evidence = P1 / health["initial_evidence"]["path"]
+                if sha256(evidence) != health["initial_evidence"]["sha256"] or load_json(evidence).get("primary_supported") is not True:
+                    raise ValueError("Goal2R primary source evidence is missing or changed")
+                probe = health["probe"]
+                if sha256(P1 / probe["path"]) != probe["sha256"]:
+                    raise ValueError("fixed QPC workload binary changed")
+        elif health["guard"]!="completed_per_target_process_and_driver_first_and_previous_same_boot" or \
                 health.get("guard_mode")!=(RAW_GUARD if raw else "complete_target_and_driver") or \
                 health.get("guard_schema")!=(2 if raw else 1) or \
                 health.get("raw_realtime_ratio_change_fraction" if raw else "raw_monotonic_ratio_change_fraction")!=.02 or \
                 protocol["measurement"]["cost_clock"]!=("CLOCK_MONOTONIC_RAW" if raw else "CLOCK_MONOTONIC"):
             raise ValueError("formal complete-clock guard differs from the reviewed mode/threshold")
-        if raw and execute:
+        if raw and execute and protocol.get("method") != "goal2r":
             load_clock_history(health["clock_history"],read_records(LEDGER))
     for key in ("target", "framework"):
         if sha256(P1 / protocol[key]["path"]) != protocol[key]["sha256"]:
             raise ValueError(f"{key} changed after freeze; historical analysis needs the matching checkout")
+    if protocol.get("method") == "goal2r":
+        for key in ("driver", "analysis", "decision", "host_clock_probe"):
+            identity = protocol["execution"][key]
+            if sha256(P1 / identity["path"]) != identity["sha256"]:
+                raise ValueError(f"Goal2R {key} source differs from its frozen identity")
     target_text=(P1/protocol["target"]["path"]).read_text()
     clock=protocol["measurement"]["score_clock"]
     if any(target_text.count(f"clock_gettime({clock}, &{boundary})")!=1 for boundary in ("start","end")):
@@ -805,7 +842,8 @@ def plan(protocol, stage, algorithms=None):
                 "random" not in names or not set(names)<= {"random","recheck"} or len(names)!=len(set(names))):
             raise ValueError("invalid algorithm subset for this frozen stage")
         seeds = protocol["online"]["seeds"] if stage == "comparison" else protocol["holdout"]["seeds"]
-        run("warmup-" + stage, "warmup", protocol["measurement"]["warmup"])
+        if protocol.get("method") != "goal2r":
+            run("warmup-" + stage, "warmup", protocol["measurement"]["warmup"])
         for block, seed in enumerate(seeds, 1):
             order = protocol["online"]["orders"][block - 1] if stage == "comparison" else (
                 names if block % 2 else list(reversed(names)))
@@ -859,7 +897,8 @@ def panel(job, directory, reference, protocol, historical=False):
         if not summary or not summary["best"] or summary["failed_trials"]:
             raise ValueError("all block searches must finish and lock valid returns before confirmation")
         dependencies[task] = sha256(path)
-        configs.append(summary["best"]["config"])
+        if protocol.get("method") != "goal2r" or frozen_job["algorithm"] in ("random", "recheck"):
+            configs.append(summary["best"]["config"])
     fixed = reference_best(reference, protocol)
     configs.append(fixed)
     unique = sorted({(c["s"], c["opt"]) for c in configs})
@@ -886,11 +925,122 @@ def panel(job, directory, reference, protocol, historical=False):
     return jobs
 
 
+def clock_block_check(directory, block_id, phase, protocol):
+    """A separate aligned QPC interval brackets each predetermined experiment block."""
+    import host_clock_probe as hp
+    directory = Path(directory)
+    records = directory / "block_checks.jsonl"
+    boot = Path("/proc/sys/kernel/random/boot_id").read_text().strip()
+    prior = [r for r in read_records(records) if r["block_id"] == block_id and r["phase"] == phase] if records.exists() else []
+    if prior:
+        if len(prior) != 1 or prior[0]["valid"] is not True or prior[0].get("boot_id") != boot or \
+                prior[0].get("protocol_sha256") != protocol["protocol_sha256"] or \
+                sha256(P1 / prior[0]["raw_path"]) != prior[0]["sha256"]:
+            raise ValueError("a stopped/changed QPC block check cannot be resumed")
+        return prior[0]
+    task = f"qpc-{block_id}-{phase}"
+    specification = directory / (task + ".input.json")
+    probe = P1 / protocol["measurement"]["clock_health"]["probe"]["path"]
+    specification.write_text(json.dumps([dict(mode="idle", command=["taskset", "-c", "0", str(probe), "idle", "0", "10"])]) + "\n")
+    record = controlled([sys.executable, "-B", hp.__file__, "--intervals", specification], directory,
+        task, "clock_block_check", mode="diagnostic", time_limit=60,
+        resource_reserve_s=protocol["resources"].get("supplementary_cost_reserve_s", 0))
+    raw = directory / (task + ".stdout.txt")
+    value = load_json(raw)
+    valid = value.get("raw_candidate_feasible") is True and value.get("lifecycle_valid") is True
+    result = append(records, "clock_block_check", block_id=block_id, phase=phase, valid=valid,
+        raw_path=str(raw.relative_to(P1)), sha256=sha256(raw), attempt_id=record["attempt_id"],
+        boot_id=boot, protocol_sha256=protocol["protocol_sha256"])
+    if not valid:
+        raise ValueError("primary RAW/QPC evidence failed for this predetermined block; preserve its mathematics and diagnose")
+    return result
+
+
+def additional_panels(directory, protocol, protocol_path, reference, request_path):
+    """Only the frozen rule's two selected whole panels receive rounds 4 and 5."""
+    from identity_quality import confirmation_additions
+    directory = Path(directory)
+    manifest = load_json(directory / "plan.json")
+    freeze_check(protocol, manifest, protocol_path, execute=True)
+    request = load_json(request_path)
+    seeds = confirmation_additions(request["pairs"])
+    if manifest["stage"] != "comparison" or len(request["pairs"]) != 6 or \
+            {p["seed"] for p in request["pairs"]} != set(protocol["online"]["seeds"]) or \
+            request.get("protocol_sha256") != protocol["protocol_sha256"] or \
+            request.get("comparison_manifest_sha256") != sha256(directory / "plan.json") or \
+            request.get("seeds") != seeds:
+        raise ValueError("additional confirmation request differs from the predeclared selection")
+    with performance_lock():
+        saved = read_records(directory / "block_checks.jsonl")
+        closed = {row["block_id"] for row in saved if row["phase"] == "after"}
+        if any(row["valid"] is not True or row["phase"] == "before" and row["block_id"] not in closed
+               for row in saved):
+            raise ValueError("a failed or interrupted timing block needs diagnosis before additional panels")
+        for seed in seeds:
+            entry = next(j for j in manifest["jobs"] if j["action"] == "panel" and j["seed"] == seed)
+            panel(entry, directory, reference, protocol, historical=True)
+            base_path = directory / (entry["id"] + ".json")
+            base = load_json(base_path)
+            jobs = []
+            for round_id in (4, 5):
+                order = [(c["s"], c["opt"]) for c in base["configs"]]
+                random.Random(protocol["return_confirmation"]["order_seed"] + 100 * entry["block"] + round_id).shuffle(order)
+                for s, opt in order:
+                    jobs.append(dict(id=f"{entry['id']}-r{round_id}-s{s}-{opt}", action="run", role="shared_confirmation",
+                        block=entry["block"], seed=seed, round=round_id, repeats=1, config=dict(s=s, opt=opt)))
+            extra = dict(base, jobs=jobs, additional_to_sha256=sha256(base_path), selected_seed=seed,
+                round_start=4, rounds=[4, 5], request_sha256=sha256(request_path))
+            extra.pop("fingerprint")
+            extra["fingerprint"] = at.fingerprint(extra)
+            path = directory / (entry["id"] + "-additional.json")
+            if path.exists():
+                if load_json(path) != extra:
+                    raise ValueError("additional panel identity changed")
+            else:
+                path.write_text(json.dumps(extra, indent=2) + "\n")
+            block_id = f"additional-seed-{seed}"
+            clock_block_check(directory, block_id, "before", protocol)
+            for job in jobs:
+                state = validate_task(job, directory, protocol)
+                if state == "complete":
+                    continue
+                if state != "pending":
+                    raise ValueError("an interrupted additional panel cannot be automatically rerun")
+                journal = directory / (job["id"] + ".jsonl")
+                record = controlled(command(job, directory, protocol, protocol_path), directory,
+                    job["id"], job["role"], 1, journal=journal,
+                    resource_reserve_s=protocol["resources"].get("supplementary_cost_reserve_s", 0))
+                append(directory / "driver.jsonl", "task_end", **{k:v for k,v in record.items() if k not in ("type", "at")})
+                if validate_task(job, directory, protocol) != "complete":
+                    raise ValueError("additional panel did not complete validly")
+            clock_block_check(directory, block_id, "after", protocol)
+
+
 def execute(directory, manifest, protocol, protocol_path, reference=None, max_jobs=None):
     freeze_check(protocol, manifest, protocol_path, execute=True)
     with performance_lock():
         completed = 0
-        for entry in manifest["jobs"]:
+        active_block = None
+        new_method = protocol.get("method") == "goal2r"
+        if new_method:
+            if max_jobs is not None:
+                raise ValueError("Goal2R executes whole predeclared blocks; --max-jobs cannot leave an open timing block")
+            checks = Path(directory) / "block_checks.jsonl"
+            if checks.exists() and any(r["valid"] is not True for r in read_records(checks)):
+                raise ValueError("a failed timing block cannot continue under the same batch")
+            saved = read_records(checks) if checks.exists() else []
+            closed = {r["block_id"] for r in saved if r["phase"] == "after"}
+            if any(r["phase"] == "before" and r["block_id"] not in closed for r in saved):
+                raise ValueError("an interrupted open timing block needs explicit diagnosis/new identity; do not reuse an old precheck")
+        for index, entry in enumerate(manifest["jobs"]):
+            if new_method:
+                block_id = f"round-{entry.get('round', 1)}" if manifest["stage"] == "reference" else (
+                    entry["id"] if manifest["stage"] == "starts" else f"seed-{entry['seed']}")
+                if block_id != active_block:
+                    if active_block is not None:
+                        clock_block_check(directory, active_block, "after", protocol)
+                    clock_block_check(directory, block_id, "before", protocol)
+                    active_block = block_id
             jobs = panel(entry, directory, reference, protocol) if entry["action"] == "panel" else [entry]
             for job in jobs:
                 state = validate_task(job, directory, protocol)
@@ -908,31 +1058,35 @@ def execute(directory, manifest, protocol, protocol_path, reference=None, max_jo
                 record = controlled(command(job, directory, protocol, protocol_path), directory,
                     job["id"], job["role"], upper, journal=path,
                     complete_clock_guard=(protocol["measurement"]["clock_health"].get("guard_mode")
-                        if manifest["stage"]!="diagnostic" else False),
-                    clock_history=protocol["measurement"]["clock_health"].get("clock_history"))
+                        if manifest["stage"]!="diagnostic" and not new_method else False),
+                    clock_history=protocol["measurement"]["clock_health"].get("clock_history"),
+                    resource_reserve_s=protocol["resources"].get("supplementary_cost_reserve_s", 0))
                 append(Path(directory) / "driver.jsonl", "task_end", **{k:v for k,v in record.items() if k not in ("type", "at")})
                 if validate_task(job, directory, protocol) != "complete":
                     raise ValueError("task did not complete its valid frozen job")
-                if record["driver_wall_s"] > 1:
+                if not new_method and record["driver_wall_s"] > 1:
                     ratio = record["clock_elapsed_s"]["raw"] / record["driver_wall_s"]
                     baseline = protocol["measurement"]["clock_health"].get("raw_mono_ratio")
                     if baseline is not None and abs(ratio / baseline - 1) > .02:
                         raise ValueError("RAW/MONOTONIC relation changed by >2%; pause and diagnose")
                 print(json.dumps(dict(task=job["id"], state="complete", calls=record["n4096_calls"],
-                    driver_wall_s=record["driver_wall_s"], resource_s=record["resource_s"])), flush=True)
+                    driver_wall_s=record["driver_wall_s"], driver_raw_s=record["driver_raw_s"], resource_s=record["resource_s"])), flush=True)
                 completed += 1
+        if new_method and active_block is not None:
+            clock_block_check(directory, active_block, "after", protocol)
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("plan", "execute", "status", "usage", "recover"))
-    parser.add_argument("--protocol", type=Path, default=P1 / "evidence/protocol_v2.json")
+    parser.add_argument("action", choices=("plan", "execute", "additional", "status", "usage", "recover"))
+    parser.add_argument("--protocol", type=Path, default=P1 / "evidence/protocol_goal2r.json")
     parser.add_argument("--stage", choices=("diagnostic", "raw_aa", "reference", "comparison", "confirmation", "starts"))
     parser.add_argument("--directory", type=Path)
     parser.add_argument("--reference", type=Path)
     parser.add_argument("--algorithms")
     parser.add_argument("--max-jobs", type=int)
     parser.add_argument("--recovery-evidence", type=Path)
+    parser.add_argument("--selection-file", type=Path)
     args = parser.parse_args(argv)
     if args.action == "usage":
         calls, cost = usage()
@@ -959,6 +1113,11 @@ def main(argv=None):
             stream.write("\n")
         print(json.dumps(dict(plan=str(directory / "plan.json"), jobs=len(result["jobs"])))); return
     manifest = load_json(directory / "plan.json")
+    if args.action == "additional":
+        if args.selection_file is None or args.reference is None:
+            parser.error("additional panels need --selection-file and --reference")
+        additional_panels(directory, protocol, args.protocol.resolve(), args.reference, args.selection_file)
+        return
     if args.action == "execute":
         execute(directory, manifest, protocol, args.protocol.resolve(), args.reference, args.max_jobs)
     else:

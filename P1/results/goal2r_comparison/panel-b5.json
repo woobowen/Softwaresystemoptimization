@@ -1,0 +1,151 @@
+{
+  "schema": 2,
+  "block": 5,
+  "seed": 1118917,
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "dependencies_sha256": {
+    "b5-grid-seed1118917": "c18da8c69d14e32b457898b5d460fcc9da9b49a9c6346d24243c8d16b1635127",
+    "b5-random-seed1118917": "3416e07910c999e0fe94dc12755981fced7321c49714920693805a6e3b29e352",
+    "b5-recheck-seed1118917": "6e536f49d0d9f3298de6c984faa1a8dcf9734c02d9d97109c18080e1ae018bf9",
+    "b5-greedy-seed1118917": "f08cded1e6761ced76c8fc85d13418690c68543c4fd45d5e82848a0879086148"
+  },
+  "reference_manifest_sha256": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+  "reference_config": {
+    "s": 128,
+    "opt": "O3"
+  },
+  "configs": [
+    {
+      "s": 64,
+      "opt": "O1"
+    },
+    {
+      "s": 64,
+      "opt": "O3"
+    },
+    {
+      "s": 128,
+      "opt": "O3"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "panel-b5-r1-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b5-r1-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b5-r1-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b5-r2-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b5-r2-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b5-r2-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b5-r3-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b5-r3-s64-O1",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      }
+    },
+    {
+      "id": "panel-b5-r3-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 5,
+      "seed": 1118917,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    }
+  ],
+  "fingerprint": "285f2c1d6c6f9af949ba6c32ea63b7cd9ad9cb9dfc3eeea8ec338621a468c731"
+}

@@ -1,0 +1,89 @@
+{
+  "commit": "a39f348e6cf0c7466900ec739a797753f4d93f0b",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/scripts/summarize_v2.py",
+    "--protocol",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/evidence/protocol_v2.json",
+    "--reference",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/results/reference_v2",
+    "--ledger",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/.cache/stopped-analysis-ledger.jsonl",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/.cache/goal2r-derived"
+  ],
+  "comparison_target": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-mono-stop/P1/.cache/derived",
+  "matrix_runs": 0,
+  "attempt_id": "d3ce42a9498248709007be6a1a8b0264",
+  "driver_raw_s": 0.529918798,
+  "files": [
+    {
+      "file": "batch_costs.csv",
+      "original_sha256": "821f25f6a2050048badd8325490bf7900635958c04739e5e2081da99ceb5db33",
+      "regenerated_sha256": "821f25f6a2050048badd8325490bf7900635958c04739e5e2081da99ceb5db33",
+      "equal": true
+    },
+    {
+      "file": "build_costs.csv",
+      "original_sha256": "68928b2ebbacd44c2cfc1d67b6275328b66144331b09a4b582c80bfbed8f4c9a",
+      "regenerated_sha256": "68928b2ebbacd44c2cfc1d67b6275328b66144331b09a4b582c80bfbed8f4c9a",
+      "equal": true
+    },
+    {
+      "file": "comparison_paired.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "confirmation_paired.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "grid_summary.csv",
+      "original_sha256": "3985b7828da0e8030d21dc26eb85481693f28bafab159825718821cf45a1ba36",
+      "regenerated_sha256": "3985b7828da0e8030d21dc26eb85481693f28bafab159825718821cf45a1ba36",
+      "equal": true
+    },
+    {
+      "file": "measurements.csv",
+      "original_sha256": "23bf6c775c54675861be484033543b3f2771a06ff4413bf91823a367c43e1170",
+      "regenerated_sha256": "23bf6c775c54675861be484033543b3f2771a06ff4413bf91823a367c43e1170",
+      "equal": true
+    },
+    {
+      "file": "online_curves.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "panel_summary.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "process_costs.csv",
+      "original_sha256": "3f11a020bdccb0436bf67d1b00061423768bf60202d45ed8161fedb36f3e76e7",
+      "regenerated_sha256": "3f11a020bdccb0436bf67d1b00061423768bf60202d45ed8161fedb36f3e76e7",
+      "equal": true
+    },
+    {
+      "file": "search_summary.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "f77c0910b3bd4423e614165465f8f81a48032e8b834d4d5cd2857e1d100f66bb",
+      "regenerated_sha256": "f77c0910b3bd4423e614165465f8f81a48032e8b834d4d5cd2857e1d100f66bb",
+      "equal": true
+    }
+  ],
+  "all_equal": true
+}

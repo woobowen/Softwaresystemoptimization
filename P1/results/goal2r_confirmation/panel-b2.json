@@ -1,0 +1,105 @@
+{
+  "schema": 2,
+  "block": 2,
+  "seed": 1433104,
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "dependencies_sha256": {
+    "b2-random-seed1433104": "b05702a0e4f31c486dffd1a019ca007d6b3d774a5baa3a90bde4fa9f63f161b3"
+  },
+  "reference_manifest_sha256": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+  "reference_config": {
+    "s": 128,
+    "opt": "O3"
+  },
+  "configs": [
+    {
+      "s": 64,
+      "opt": "O3"
+    },
+    {
+      "s": 128,
+      "opt": "O3"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "panel-b2-r1-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r1-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r2-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r2-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r3-s64-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b2-r3-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 2,
+      "seed": 1433104,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    }
+  ],
+  "fingerprint": "ba0a99ee11a2021d481bb82f218f442c04a00f1cad382a92a5d886b5881c5db7"
+}

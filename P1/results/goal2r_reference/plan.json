@@ -1,0 +1,780 @@
+{
+  "schema": 2,
+  "stage": "reference",
+  "protocol": "evidence/protocol_goal2r.json",
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "target_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+  "framework_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+  "driver_sha256": "9d985ae01c24ad322bc4847772b082c425793e8758871feac1b8edc3cf9e41ee",
+  "measurement_root": "/home/addaswsw/lab/Software_system_optimization/P1",
+  "algorithms": null,
+  "jobs": [
+    {
+      "id": "warmup-reference",
+      "action": "run",
+      "role": "warmup",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0
+    },
+    {
+      "id": "anchor-r1-00",
+      "action": "run",
+      "role": "anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-01",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-02",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-03",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-04",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-05",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-06",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-07",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-08",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-09",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-10",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-11",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-12",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-13",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-14",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-15",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-16",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-17",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-18",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-19",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "ref-r1-20",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 1
+    },
+    {
+      "id": "anchor-r2-00",
+      "action": "run",
+      "role": "anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-01",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-02",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-03",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-04",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-05",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-06",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-07",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-08",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-09",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-10",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-11",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-12",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-13",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-14",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-15",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-16",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-17",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-18",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-19",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "ref-r2-20",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 2
+    },
+    {
+      "id": "anchor-r3-00",
+      "action": "run",
+      "role": "anchor",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-01",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-02",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-03",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-04",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-05",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-06",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-07",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-08",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-09",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-10",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-11",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-12",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-13",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-14",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-15",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O1"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-16",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 64,
+        "opt": "O3"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-17",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-18",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 16,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-19",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    },
+    {
+      "id": "ref-r3-20",
+      "action": "run",
+      "role": "reference",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "repeats": 1,
+      "seed": 0,
+      "round": 3
+    }
+  ]
+}

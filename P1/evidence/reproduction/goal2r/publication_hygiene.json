@@ -1,0 +1,35 @@
+{
+  "scope": "staged publication candidates after all actual tests/measurements; audit itself is charged by outer primary controlled task",
+  "head_before_publication": "efb6259e7c662a706a57297bb016116b7412d92c",
+  "staged_candidates_count": 812,
+  "staged_tree_before_audit_receipt": "ab8239c87669b53a638030f1ef586328c43914bd",
+  "frozen_identities_checked": 8,
+  "protocol_unchanged": true,
+  "old_protected_files_checked": 1022,
+  "old_prefix_sha256": "68861959f1e1e98b758f0c7143bb18683acb86ffe85f867e449ac84fc56f24e7",
+  "unapproved_old_changes": [],
+  "old_current_index_only_changes": [
+    "P1/evidence/README.md",
+    "P1/evidence/measurement/resource_ledger.jsonl",
+    "P1/evidence/requirements.md"
+  ],
+  "other_assignments_unchanged": true,
+  "relative_links_checked": 127,
+  "broken_links": [],
+  "large_new_files_over_10MiB": [],
+  "binary_or_input_flags": [],
+  "secret_flags_without_contents": [],
+  "formal_images_checked": 6,
+  "diff_check_returncode": 0,
+  "diff_check_command": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "csv_line_endings": "standard csv.writer CRLF retained byte-for-byte; command-local cr-at-eol, no Git/global config change",
+  "prior_check": "publication-hygiene raw output and charged failed attempt retained; only CSV CRLF diagnostics",
+  "issues": []
+}

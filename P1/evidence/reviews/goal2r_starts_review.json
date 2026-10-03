@@ -1,0 +1,361 @@
+{
+  "schema": 1,
+  "reviewer": "/root/method",
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "manifest_sha256": "6202e55266ba7c23b9085a127a1815b7b37d18aff6fcda44d112a9e455e83b23",
+  "searches": [
+    {
+      "id": "start-1",
+      "start": {
+        "s": 8,
+        "opt": "O0"
+      },
+      "returned": {
+        "s": 16,
+        "opt": "O2"
+      },
+      "calls": 8,
+      "gap_ref_pct": 33.03723592726813,
+      "driver_raw_s": 1277.002441539,
+      "trajectory": [
+        {
+          "s": 8,
+          "opt": "O0",
+          "kernel_s": 445.939813
+        },
+        {
+          "s": 8,
+          "opt": "O1",
+          "kernel_s": 117.819761
+        },
+        {
+          "s": 16,
+          "opt": "O0",
+          "kernel_s": 338.956139
+        },
+        {
+          "s": 8,
+          "opt": "O2",
+          "kernel_s": 105.30877
+        },
+        {
+          "s": 16,
+          "opt": "O1",
+          "kernel_s": 66.162413
+        },
+        {
+          "s": 16,
+          "opt": "O2",
+          "kernel_s": 62.152606
+        },
+        {
+          "s": 24,
+          "opt": "O1",
+          "kernel_s": 66.404466
+        },
+        {
+          "s": 16,
+          "opt": "O3",
+          "kernel_s": 67.475875
+        }
+      ],
+      "source_sha256": "edf3b3ecbc1c895b9dcf72d06d7b03f06f6250e1ec8ecda92b7c99fbbdb62414"
+    },
+    {
+      "id": "start-2",
+      "start": {
+        "s": 16,
+        "opt": "O1"
+      },
+      "returned": {
+        "s": 16,
+        "opt": "O2"
+      },
+      "calls": 8,
+      "gap_ref_pct": 33.03723592726813,
+      "driver_raw_s": 890.195976976,
+      "trajectory": [
+        {
+          "s": 16,
+          "opt": "O1",
+          "kernel_s": 67.151874
+        },
+        {
+          "s": 8,
+          "opt": "O1",
+          "kernel_s": 108.400365
+        },
+        {
+          "s": 16,
+          "opt": "O0",
+          "kernel_s": 332.787406
+        },
+        {
+          "s": 16,
+          "opt": "O2",
+          "kernel_s": 66.061176
+        },
+        {
+          "s": 24,
+          "opt": "O1",
+          "kernel_s": 68.520957
+        },
+        {
+          "s": 8,
+          "opt": "O2",
+          "kernel_s": 106.96759
+        },
+        {
+          "s": 16,
+          "opt": "O3",
+          "kernel_s": 67.892672
+        },
+        {
+          "s": 24,
+          "opt": "O2",
+          "kernel_s": 66.661902
+        }
+      ],
+      "source_sha256": "99e597408f0da4d59d7f1884a3c4d8798069e4a22e89ec29c89fe1fba1aec108"
+    },
+    {
+      "id": "start-3",
+      "start": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "returned": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "calls": 5,
+      "gap_ref_pct": 35.54956672449574,
+      "driver_raw_s": 337.953658469,
+      "trajectory": [
+        {
+          "s": 24,
+          "opt": "O2",
+          "kernel_s": 64.130956
+        },
+        {
+          "s": 16,
+          "opt": "O2",
+          "kernel_s": 66.973162
+        },
+        {
+          "s": 24,
+          "opt": "O1",
+          "kernel_s": 67.017688
+        },
+        {
+          "s": 24,
+          "opt": "O3",
+          "kernel_s": 67.40675
+        },
+        {
+          "s": 64,
+          "opt": "O2",
+          "kernel_s": 68.284506
+        }
+      ],
+      "source_sha256": "e215522e3c44a2c63faef41a0037a6cb2c0dab84fc52667b6168d1e97e09a2ce"
+    },
+    {
+      "id": "start-4",
+      "start": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "returned": {
+        "s": 64,
+        "opt": "O2"
+      },
+      "calls": 7,
+      "gap_ref_pct": 22.065785496715606,
+      "driver_raw_s": 497.373088907,
+      "trajectory": [
+        {
+          "s": 128,
+          "opt": "O3",
+          "kernel_s": 74.612751
+        },
+        {
+          "s": 64,
+          "opt": "O3",
+          "kernel_s": 75.057174
+        },
+        {
+          "s": 128,
+          "opt": "O2",
+          "kernel_s": 72.43084
+        },
+        {
+          "s": 64,
+          "opt": "O2",
+          "kernel_s": 64.407111
+        },
+        {
+          "s": 128,
+          "opt": "O1",
+          "kernel_s": 71.901829
+        },
+        {
+          "s": 24,
+          "opt": "O2",
+          "kernel_s": 68.217666
+        },
+        {
+          "s": 64,
+          "opt": "O1",
+          "kernel_s": 65.721267
+        }
+      ],
+      "source_sha256": "8ac33942b155f9c1b5ab99e6bd0bc75139d04ca27be93a0dcccc005def987178"
+    }
+  ],
+  "clock_checks": [
+    {
+      "block_id": "start-1",
+      "phase": "before",
+      "source": "results/goal2r_starts/qpc-start-1-before.stdout.txt",
+      "sha256": "70811c80e632f0e9c4f224d96388fb748fec1cbb0d4ddc60a6fccc9bee585297",
+      "raw_qpc_bounds": [
+        0.9999578326851858,
+        1.0000328078684173
+      ],
+      "raw_endpoint_s": [
+        0.0002847,
+        0.000469166
+      ],
+      "relative_width": 7.493542281150267e-05
+    },
+    {
+      "block_id": "start-1",
+      "phase": "after",
+      "source": "results/goal2r_starts/qpc-start-1-after.stdout.txt",
+      "sha256": "e151347c879fd611ad8d082cb025bac746553164c9bba266911079e5db694518",
+      "raw_qpc_bounds": [
+        0.9999568577827049,
+        1.0000283770488811
+      ],
+      "raw_endpoint_s": [
+        0.000232516,
+        0.00048222
+      ],
+      "relative_width": 7.147926330203142e-05
+    },
+    {
+      "block_id": "start-2",
+      "phase": "before",
+      "source": "results/goal2r_starts/qpc-start-2-before.stdout.txt",
+      "sha256": "0af1dc85c4118335c0b9f50d855d77dbbfe028038b4410a7af789a0ed96aafd4",
+      "raw_qpc_bounds": [
+        0.9999597833391293,
+        1.0000376188850104
+      ],
+      "raw_endpoint_s": [
+        0.00022504,
+        0.000553102
+      ],
+      "relative_width": 7.779555551716476e-05
+    },
+    {
+      "block_id": "start-2",
+      "phase": "after",
+      "source": "results/goal2r_starts/qpc-start-2-after.stdout.txt",
+      "sha256": "6a2bf2984b80954122ab24199447fdc54be8cab4f880aa70c577048058a9b2a9",
+      "raw_qpc_bounds": [
+        0.9999420229336663,
+        1.0000496989276952
+      ],
+      "raw_endpoint_s": [
+        0.000385043,
+        0.000688385
+      ],
+      "relative_width": 0.00010763588498028938
+    },
+    {
+      "block_id": "start-3",
+      "phase": "before",
+      "source": "results/goal2r_starts/qpc-start-3-before.stdout.txt",
+      "sha256": "b30f674f89cf4ef380d43bb6d47b5730fa3a34197f5ec3970dec484055c27c0b",
+      "raw_qpc_bounds": [
+        0.999959933213313,
+        1.0000354338737156
+      ],
+      "raw_endpoint_s": [
+        0.000221599,
+        0.000537992
+      ],
+      "relative_width": 7.546092283424213e-05
+    },
+    {
+      "block_id": "start-3",
+      "phase": "after",
+      "source": "results/goal2r_starts/qpc-start-3-after.stdout.txt",
+      "sha256": "fa450c40acfffdeaaf17b23b6f6b5383f078ff89cecde63e2c27977c855a04d6",
+      "raw_qpc_bounds": [
+        0.9999503106486023,
+        1.0000401014150417
+      ],
+      "raw_endpoint_s": [
+        0.000286344,
+        0.000598405
+      ],
+      "relative_width": 8.975019006824238e-05
+    },
+    {
+      "block_id": "start-4",
+      "phase": "before",
+      "source": "results/goal2r_starts/qpc-start-4-before.stdout.txt",
+      "sha256": "5b5216843d76d0c0f7e2cabfd961c98f294cb1754f3e27903d7843c812af910f",
+      "raw_qpc_bounds": [
+        0.9999567439920709,
+        1.0000300906937614
+      ],
+      "raw_endpoint_s": [
+        0.000248955,
+        0.000505889
+      ],
+      "relative_width": 7.330785532083248e-05
+    },
+    {
+      "block_id": "start-4",
+      "phase": "after",
+      "source": "results/goal2r_starts/qpc-start-4-after.stdout.txt",
+      "sha256": "458250032e349c32192028a9496f9f6bbcb542c70b085d0e4eacce7cc6cec318",
+      "raw_qpc_bounds": [
+        0.9999520289629454,
+        1.000041844201619
+      ],
+      "raw_endpoint_s": [
+        0.00032365,
+        0.000571297
+      ],
+      "relative_width": 8.9775113464658e-05
+    }
+  ],
+  "target_calls": 28,
+  "target_driver_tasks": 4,
+  "target_driver_raw_s": "3002.525165891",
+  "qpc_driver_tasks": 8,
+  "qpc_driver_raw_s": "89.856559178",
+  "full_phase_raw_s": "3092.381725069",
+  "closed_pre_holdout_calls": 389,
+  "closed_pre_holdout_resource_s": "44324.958273927",
+  "closed_prefix_last_attempt": "2f9fa649dea44a30b6e7322e6d2a3329",
+  "closed_prefix_sha256": "cb3e7bb4fe93825a13cd66ad7e3e3509a9ab9e831cd135ce01b7642ab65a4d02",
+  "main_decision": "REJECT",
+  "additional_required": false,
+  "s3_candidate_holdout": "NOT_REQUIRED",
+  "random_new_seeds_required": [
+    1328375,
+    1433104,
+    1537833
+  ],
+  "limitations": [
+    "fixed starts are a separate structural panel, not more random main seeds or a restart strategy",
+    "common reference quality remains observational",
+    "later growing holdout records excluded from closed pre-holdout totals"
+  ]
+}

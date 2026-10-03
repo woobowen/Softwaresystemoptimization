@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "method": "goal2r",
+  "state": "predeclared_before_new_diagnostic_results",
+  "primary_candidate": "CLOCK_MONOTONIC_RAW",
+  "host_clock": "System.Diagnostics.Stopwatch.GetTimestamp/QPC",
+  "frequency": "query actual positive frequency at handshake and verify each response",
+  "quantization_allowance_ticks": 2,
+  "probe": {
+    "path": ".cache/clock_goal2/probe",
+    "sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d",
+    "source_sha256": "eec2fc56c80d5aa11306d6169495da614ada9c349937cf99f295f26eacc01aa9"
+  },
+  "screen": {
+    "raw_endpoint_max_s": 0.02,
+    "raw_relative_bracket_width_max": 0.002,
+    "entire_raw_over_qpc_bounds": [
+      0.995,
+      1.005
+    ],
+    "auxiliary_clocks_gate_primary": false,
+    "absolute_accuracy_claim": false,
+    "independent_physical_standards_claim": false
+  },
+  "initial_blocks": [
+    {
+      "id": "initial-early",
+      "intervals": [
+        {
+          "id": "idle-10",
+          "kind": "idle",
+          "requested_seconds": 10
+        },
+        {
+          "id": "work-4e9",
+          "kind": "fixed_cpu_work",
+          "iterations": 4000000000
+        },
+        {
+          "id": "matrix-fast",
+          "kind": "matrix_n4096",
+          "config": {
+            "s": 128,
+            "opt": "O2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "initial-late",
+      "between_blocks": "first four predeclared AA processes; no timer-selected waiting",
+      "intervals": [
+        {
+          "id": "idle-40",
+          "kind": "idle",
+          "requested_seconds": 40
+        },
+        {
+          "id": "work-8e9",
+          "kind": "fixed_cpu_work",
+          "iterations": 8000000000
+        },
+        {
+          "id": "matrix-slow",
+          "kind": "matrix_n4096",
+          "config": {
+            "s": 8,
+            "opt": "O0"
+          }
+        }
+      ]
+    }
+  ],
+  "aa_processes": [
+    {
+      "id": "aa-01-F-A1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "aa-02-F-B1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "aa-03-M-B1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1
+    },
+    {
+      "id": "aa-04-M-A1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1
+    },
+    {
+      "id": "aa-05-M-A2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2
+    },
+    {
+      "id": "aa-06-M-B2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "aa-07-F-B2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2
+    },
+    {
+      "id": "aa-08-F-A2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2
+    }
+  ],
+  "formal_checks": {
+    "interval": {
+      "kind": "idle",
+      "requested_seconds": 10
+    },
+    "locations": "before/after each reference round, each main or holdout seed block including its panel, each of four Greedy starts, and each additional panel",
+    "adjacent_boundary_reuse": "only the same saved endpoint check may serve adjacent after/before boundaries",
+    "affected_scope": "the predeclared block whose endpoint check fails; keep all numerical results and raw durations, omit affected timings from scores",
+    "width_failure": "bridge evidence insufficient, at most one documented repair/retest with an actual method change",
+    "narrow_reproducible_disagreement": "diagnose primary; stop dependent benchmark blocks, continue correctness/report work"
+  },
+  "resource_limits": {
+    "initial_plus_AA_n4096_default": 10,
+    "diagnostic_n4096_cap": 12,
+    "controlled_seconds_cap": 2700,
+    "additional_diagnostic_seconds_cap": 1800,
+    "additional_requires": "one new, explicit testable cause; use project reserve",
+    "project_call_cap": 520,
+    "project_seconds_cap": 57600,
+    "prior_calls": 48,
+    "prior_cost_s": 3713.432874365,
+    "new_cost_domain": "CLOCK_MONOTONIC_RAW; no revaluation of old charges"
+  },
+  "execution_order": [
+    "initial-early three intervals",
+    "aa-01 through aa-04 (candidate RAW diagnostic only)",
+    "initial-late three intervals",
+    "aa-05 through aa-08 (diagnostic only)",
+    "all six initial intervals and eight AA inspected before formal primary-domain selection"
+  ]
+}

@@ -1,0 +1,1 @@
+{"plan": "/home/addaswsw/lab/Software_system_optimization/P1/results/goal2r_starts/plan.json", "jobs": 4}

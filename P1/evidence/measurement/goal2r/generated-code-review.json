@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "use": "code-generation explanation only; no additional workload execution",
+  "disassembly_path": "P1/evidence/measurement/goal2r/generated-code-disassembly.txt",
+  "disassembly_sha256": "a2b98aed81cfa2bc8fbdda94923fc2f75a19b6d9985bc759aac5999cbf294abc",
+  "builds": [
+    {
+      "opt": "O0",
+      "prebuild_path": "P1/evidence/measurement/goal2r/prebuild-O0.jsonl",
+      "prebuild_sha256": "774e101630b45d686e77a53a01e3e302584dbde32dd309add3bed2a25ecb6993",
+      "binary_sha256": "1cb0987ef381ecb5526a1df53aeaa0221c849fed9e76d196fc3e5370ccd3044e",
+      "build_key": "4822bf72764d604f50e81dd17a40ef5ca08e6c317896f3ec623eb77d52e9652b",
+      "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O0"
+      ],
+      "binary_verified_before_objdump": true,
+      "clock_gettime_call_addresses": [
+        "0x1442",
+        "0x160b"
+      ],
+      "between_calls_start": "0x1447",
+      "between_calls_end_exclusive": "0x160b",
+      "between_calls_byte_count": 452,
+      "between_calls_instruction_count": 112,
+      "between_calls_machine_sha256": "0acf1a155e7cbf6a924b84156fe4bcb797638ac01789038e4d1f5ff719d049d5",
+      "scalar_arithmetic_slots": [
+        "0x1530: mulsd  xmm0,xmm2",
+        "0x1545: addsd  xmm0,xmm1"
+      ],
+      "packed_arithmetic_slots": []
+    },
+    {
+      "opt": "O1",
+      "prebuild_path": "P1/evidence/measurement/goal2r/prebuild-O1.jsonl",
+      "prebuild_sha256": "7e031753d87a854fc70b58efe4e3be8ccfdcc5b36226e59ec7df97e9159d0a28",
+      "binary_sha256": "bb64f1ef2a1a927cec81d4a3dab01d0aa42cdb2536a7b269e31b2d247048cc77",
+      "build_key": "59fad0f8e2ee2d7f6a8d19953c2b767bc2ce10a2607d5a3507a3c5b045aa9208",
+      "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O1"
+      ],
+      "binary_verified_before_objdump": true,
+      "clock_gettime_call_addresses": [
+        "0x1362",
+        "0x1557"
+      ],
+      "between_calls_start": "0x1367",
+      "between_calls_end_exclusive": "0x1557",
+      "between_calls_byte_count": 496,
+      "between_calls_instruction_count": 123,
+      "between_calls_machine_sha256": "d154eaa9abfff38e5296b12df82735169d07ac9b087ac08a524b149c70d948bf",
+      "scalar_arithmetic_slots": [
+        "0x13f3: mulsd  xmm0,QWORD PTR [rcx]",
+        "0x13f7: addsd  xmm0,QWORD PTR [rdx]"
+      ],
+      "packed_arithmetic_slots": []
+    },
+    {
+      "opt": "O2",
+      "prebuild_path": "P1/evidence/measurement/goal2r/prebuild-O2.jsonl",
+      "prebuild_sha256": "97608d5038b2a0c932b21bb8586f7f5e4cef1548b949d3404ef77edc01faecad",
+      "binary_sha256": "ed09737e4c5fc1502bba676bd34101ec490560242787aa71e36236f3e44291fe",
+      "build_key": "39ad671632187f65cea587073115ce5c558caf1d716fc37abaa9af8596ec5693",
+      "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O2"
+      ],
+      "binary_verified_before_objdump": true,
+      "clock_gettime_call_addresses": [
+        "0x126c",
+        "0x1448"
+      ],
+      "between_calls_start": "0x1271",
+      "between_calls_end_exclusive": "0x1448",
+      "between_calls_byte_count": 471,
+      "between_calls_instruction_count": 113,
+      "between_calls_machine_sha256": "5d1b875817c289339b3afdf11c852ee78f36d41687893ae05feb9576a45bbab2",
+      "scalar_arithmetic_slots": [
+        "0x1373: mulsd  xmm0,xmm1",
+        "0x1377: addsd  xmm0,QWORD PTR [rdx]"
+      ],
+      "packed_arithmetic_slots": []
+    },
+    {
+      "opt": "O3",
+      "prebuild_path": "P1/evidence/measurement/goal2r/prebuild-O3.jsonl",
+      "prebuild_sha256": "af190ffdcaa0551c06ce2a07a5c1ded7329fedb94d205f20b487c7f6937620ed",
+      "binary_sha256": "cbffa4a612e473bfe56a098492f886082cce7f3916790caf4cef2f577ddbf13f",
+      "build_key": "dd511a2dcee9eb4c2791f03b54563bd51731d30835d74f8b237a2ccefed5c38e",
+      "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-O3"
+      ],
+      "binary_verified_before_objdump": true,
+      "clock_gettime_call_addresses": [
+        "0x126c",
+        "0x1448"
+      ],
+      "between_calls_start": "0x1271",
+      "between_calls_end_exclusive": "0x1448",
+      "between_calls_byte_count": 471,
+      "between_calls_instruction_count": 113,
+      "between_calls_machine_sha256": "5d1b875817c289339b3afdf11c852ee78f36d41687893ae05feb9576a45bbab2",
+      "scalar_arithmetic_slots": [
+        "0x1373: mulsd  xmm0,xmm1",
+        "0x1377: addsd  xmm0,QWORD PTR [rdx]"
+      ],
+      "packed_arithmetic_slots": []
+    }
+  ],
+  "o2_o3": {
+    "whole_binary_sha_equal": false,
+    "between_timer_calls_machine_bytes_equal": true,
+    "same_address_range": true
+  },
+  "findings": [
+    {
+      "topic": "O0 addressing",
+      "evidence_ranges": [
+        "0x149d..0x1564",
+        "0x1569..0x15f9"
+      ],
+      "finding": "The scalar multiply/add repeatedly reloads stack-based loop counters and rebuilds A/B/C addresses using additions, sign extension, row shifts and eight-byte element scaling. Block and tail conditions remain branches."
+    },
+    {
+      "topic": "O1 addressing",
+      "evidence_ranges": [
+        "0x13e0..0x1410"
+      ],
+      "finding": "The current A[i][k] value is loaded once before the jl loop; B and C use running row pointers advanced by eight bytes. The innermost arithmetic is mulsd/addsd with scalar double loads/stores."
+    },
+    {
+      "topic": "O2/O3 equality",
+      "evidence_ranges": [
+        "0x1271..0x1448 (end exclusive)",
+        "0x1360..0x1381"
+      ],
+      "finding": "All bytes between the two timer call instructions match exactly, including loop setup/control and end-clock argument setup. The complete ELF files have different SHA256 values; this inspection does not claim whole-binary equality."
+    },
+    {
+      "topic": "SIMD",
+      "evidence_ranges": [
+        "O0:0x1530,0x1545",
+        "O1:0x13f3,0x13f7",
+        "O2/O3:0x1373,0x1377"
+      ],
+      "finding": "All four timed multiply paths contain scalar mulsd/addsd, with no packed floating-point multiply/add or AVX/FMA arithmetic in the inspected region. XMM registers and O1 movapd are not evidence of arithmetic on multiple matrix elements at once."
+    }
+  ],
+  "limits": [
+    "The linear O1 range also contains an invalid-input printf block at 0x13a7..0x13c2; the successful timer path jumps past it to 0x1535, so it is not normal timed multiplication.",
+    "Instruction counts are static code slots, not dynamic instruction counts or measured CPU cycles.",
+    "No cache miss counts, physical-core mapping, temperature or frequency were measured here; runtime ranking and variability must come from the experiment records.",
+    "All twenty formal configurations remain required even when O2/O3 timed code matches."
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "scope": "closed pre-publication primary ledger plus separate actor records; publication/readback fees go in ignored local receipt",
+  "generated_at_auxiliary_utc": "2026-10-03T17:02:06.788143+00:00",
+  "primary_new_clock": "CLOCK_MONOTONIC_RAW",
+  "prior_cost_not_rebased": true,
+  "ledger": {
+    "path": "evidence/measurement/resource_ledger.jsonl",
+    "sha256": "e6988c4b1240c335f4d26aef80070ec6bc1ae7d10234c3e532896576e85e5e9d",
+    "rows": 1214,
+    "closed_tasks": 405,
+    "all_attempts_closed": true,
+    "old_prefix_rows": 494,
+    "old_prefix_sha256": "68861959f1e1e98b758f0c7143bb18683acb86ffe85f867e449ac84fc56f24e7"
+  },
+  "calls": {
+    "prior": 48,
+    "new": 381,
+    "cumulative": 429,
+    "limit": 520,
+    "remaining": 91,
+    "new_matrix_nonzero_exit_count": 0
+  },
+  "primary_resource_s": {
+    "prior_unchanged": "3713.432874365",
+    "new_raw": "44496.875148711",
+    "cumulative": "48210.308023076"
+  },
+  "separate_actor_costs": [
+    {
+      "role": "implementation",
+      "path": "evidence/measurement/goal2r_implementation_control.jsonl",
+      "sha256": "7ac5c8d1d3129a9c5cc377f2e9e5fbd6675478eda4abcb09bf161739308e20f8",
+      "rows": 12,
+      "known_actual_raw_s": "0.859115537",
+      "integer_boundaries_checked": 11,
+      "known_duration_integer_endpoints_not_retained_rows": [],
+      "unknown_or_annotation_rows_excluded_from_known_sum": [
+        8
+      ]
+    },
+    {
+      "role": "review",
+      "path": "evidence/measurement/goal2r_review_control.jsonl",
+      "sha256": "4a3c5fa4bfc45db2ba4bf0d1467dad74167aa408e6575e361148b6fbb3883e3d",
+      "rows": 61,
+      "known_actual_raw_s": "1.810873388",
+      "integer_boundaries_checked": 53,
+      "known_duration_integer_endpoints_not_retained_rows": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unknown_or_annotation_rows_excluded_from_known_sum": [
+        27,
+        34,
+        54
+      ]
+    },
+    {
+      "role": "method",
+      "path": "evidence/measurement/goal2r_method_control.jsonl",
+      "sha256": "6cd1a13b02aef8ac87843c9db8c4e7978c14e00b4de1e17d3d10cdef74e93a47",
+      "rows": 20,
+      "known_actual_raw_s": "0.294780663",
+      "integer_boundaries_checked": 16,
+      "known_duration_integer_endpoints_not_retained_rows": [],
+      "unknown_or_annotation_rows_excluded_from_known_sum": [
+        1,
+        2,
+        15,
+        16
+      ]
+    }
+  ],
+  "separate_known_actor_raw_s": "2.964769588",
+  "unknown_allowances": [
+    {
+      "scope": "method initial two unmetered entries",
+      "upper_s": 120,
+      "source": "evidence/measurement/goal2r_resource_supplement_policy.json",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "method late file/visual tools and the explicitly unmetered first cost-schema audit",
+      "upper_s": 5,
+      "source": "evidence/measurement/goal2r_method_control.jsonl supplementary_unknown_cost_note and final_prepublication_layered_costs_independent_prefix_audit.prior_failed_audit_note",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "review initial three short reads",
+      "upper_s": 3,
+      "source": "evidence/measurement/goal2r_review_control.jsonl review_control_unmeasured_note",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "review late native/exec overheads",
+      "upper_s": 5,
+      "source": "evidence/measurement/goal2r_review_control.jsonl final_native_read_and_exec_startup_overheads_outside_retained_RAW_brackets",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "implementation failed screenshot locator",
+      "upper_s": 1,
+      "source": "evidence/measurement/goal2r_implementation_control.jsonl capture-command-preparation-failed",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "root pre-publication read-only fetch",
+      "upper_s": 5,
+      "source": "evidence/measurement/goal2r_accounting_notes.json unmeasured_root_prefetch",
+      "actual_raw_s": null
+    },
+    {
+      "scope": "root finite closing preparation",
+      "upper_s": 5,
+      "source": "evidence/measurement/goal2r_accounting_notes.json unmeasured_root_closing_preparation",
+      "actual_raw_s": null
+    }
+  ],
+  "unknown_total_upper_s": "144",
+  "known_recorded_cumulative_s": "48213.272792664",
+  "conservative_cumulative_upper_s": "48357.272792664",
+  "time_limit_s": 57600,
+  "remaining_after_conservative_upper_s": "9242.727207336",
+  "supplementary_frozen_reserve_s": 180,
+  "supplementary_known_plus_upper_s": "146.964769588",
+  "no_double_counting": "primary driver windows charge physical calls once; kernel/process/build parts not added again; actor logs contain zero matrix calls; unknown notes not summed as actual measurements",
+  "session_span_is_controlled_cost": false,
+  "failed_new_zero_matrix_tasks": [
+    {
+      "task": "integration-first",
+      "returncode": 1,
+      "resource_s": 45.032129162
+    },
+    {
+      "task": "numeric-s24-O0",
+      "returncode": 1,
+      "resource_s": 0.267481179
+    },
+    {
+      "task": "clean-full-tests",
+      "returncode": 1,
+      "resource_s": 24.268236864
+    },
+    {
+      "task": "publication-hygiene",
+      "returncode": 1,
+      "resource_s": 0.515367078
+    }
+  ]
+}

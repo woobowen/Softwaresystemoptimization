@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "controlled_cost_scope": "scheduled program windows in primary ledger; separately recorded actor windows; conservative allowance for explicitly unclocked software calls; human reasoning/session span separate",
+  "unmeasured_root_prefetch": {
+    "command": "GIT_TERMINAL_PROMPT=0 git fetch --no-tags origin main",
+    "actual_raw_s": null,
+    "upper_s": 5,
+    "n4096_calls": 0,
+    "basis": "short read-only fetch completed normally; first tool waited1s and later returned already-completed result; raw endpoints not retained, no invented measurement",
+    "charged_from": "existing60s supplementary known-agent/later reserve"
+  },
+  "additional_method_visual_unknown": {
+    "actual_raw_s": null,
+    "upper_s": 5,
+    "source": "goal2r_method_control.jsonl supplementary_unknown_cost_note",
+    "charged_from": "existing60s later reserve"
+  },
+  "unmeasured_root_closing_preparation": {
+    "actual_raw_s": null,
+    "upper_s": 5,
+    "n4096_calls": 0,
+    "scope": "finite short local ls/status/file reads and closing metadata edits after the final primary-ledger task; excludes human reasoning, measured hygiene and publication commands",
+    "basis": "local small-file operations only; no compiler, target, tests or network fetch; integer RAW endpoints not retained, not reconstructed",
+    "charged_from": "existing60s supplementary known-agent/later reserve"
+  },
+  "formal_costs_unmodified": true,
+  "old_records_unmodified": true
+}

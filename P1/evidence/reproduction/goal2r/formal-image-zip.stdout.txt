@@ -1,0 +1,1 @@
+{"zip": "P1/.cache/P1-Goal2R-formal-images.zip", "zip_sha256": "119a22d63a2e3b672dcfb90fc2d8d953b98b673e959890888208aca850f52603", "zip_bytes": 705638, "only_six_formal_images": true}

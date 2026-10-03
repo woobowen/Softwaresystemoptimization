@@ -41,7 +41,7 @@ class ScreenshotCleanupTests(unittest.TestCase):
                       "display_socket_removed","display_lock_removed"):
             self.assertTrue(row[field],field)
         # Retain actual integration evidence, never authority contents or cookies.
-        ss.append(P1/"evidence/commands/screenshot_cleanup_tests.jsonl","integration_test",
+        ss.append(P1/"evidence/commands/goal2r_screenshot_cleanup_tests.jsonl","integration_test",
                   test=self.id(),capture=row)
         return row
 

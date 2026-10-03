@@ -1,0 +1,16 @@
+{
+  "image": "images/build-run.png",
+  "original_full_sha256": "1cfbe09900e2a1e9160649f2cc8962fda31fe78ae4c46129c0c3b457dd6dfe23",
+  "final_sha256": "2fa10410f9543a423258a2a5a4bf4ee9fca463ac4cf3b1ef1cb280eed386621d",
+  "crop_box": [
+    0,
+    0,
+    1500,
+    450
+  ],
+  "pixel_data_exact_top_region": true,
+  "command_and_exit_zero_retained": true,
+  "removed": "blank lower region only",
+  "attempt_id": "5366e3d026ae470288f152cb90482688",
+  "no_target_rerun": true
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal2r_publication_hygiene.py", line 109, in <module>
+    assert not issues, 'inspect saved publication_hygiene.json; retain this failure and repair only affected owner files'
+           ^^^^^^^^^^
+AssertionError: inspect saved publication_hygiene.json; retain this failure and repair only affected owner files

@@ -1,0 +1,8 @@
+{
+  "clean_export": "P1/.cache/goal2r-clean-repaired",
+  "tree": "65a651c76b35d2eac0a52e1fd43fd7012ca48f99",
+  "repair": "test_clock_followup.setUp creates its cache parent before TemporaryDirectory",
+  "test_sha256": "ccce3dbabdf1958b9819dc0ea1014b494e89764df644f3d75a03e5665bca880a",
+  "source_hashes_equal": true,
+  "initial_cache_absent": true
+}

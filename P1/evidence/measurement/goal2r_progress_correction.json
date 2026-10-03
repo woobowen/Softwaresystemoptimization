@@ -1,0 +1,52 @@
+{
+  "issue": "Several commentary progress labels mismatched second-round task IDs; claims of multi-fold same-config changes from those labels are withdrawn.",
+  "scope": "Commentary only. Original plans, journals, cost records, order, protocol and raw data unchanged.",
+  "corrected_labels": [
+    {
+      "task": "ref-r2-06",
+      "actual_config": {
+        "s": 8,
+        "opt": "O3"
+      },
+      "actual_driver_raw_s": 103.768802921,
+      "journal_sha256": "df33b7e4b94bacfe493728eac93ab1cfa28bd81ca72faa7d83c64bf40af17f14"
+    },
+    {
+      "task": "ref-r2-08",
+      "actual_config": {
+        "s": 128,
+        "opt": "O0"
+      },
+      "actual_driver_raw_s": 234.255181279,
+      "journal_sha256": "0feb6aa3c4935981372a60542ba260e15ecf614504bbe0a8389c3139d99152a1"
+    },
+    {
+      "task": "ref-r2-10",
+      "actual_config": {
+        "s": 64,
+        "opt": "O0"
+      },
+      "actual_driver_raw_s": 249.606844212,
+      "journal_sha256": "a08841b8e803db21a1e377ae14758fc64f0129b7e4fefa1f522c08ef65395f19"
+    },
+    {
+      "task": "ref-r2-12",
+      "actual_config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "actual_driver_raw_s": 48.36985436,
+      "journal_sha256": "403543ce8f449d00d481a7211f719dced428a9c02ee6a7fa02be4ad0f9f6980c"
+    },
+    {
+      "task": "ref-r2-14",
+      "actual_config": {
+        "s": 24,
+        "opt": "O0"
+      },
+      "actual_driver_raw_s": 288.333403821,
+      "journal_sha256": "e00644b05c4cf3a9c311610e79e8dec86d9af1ca7d5532bd26d427f51fd4df92"
+    }
+  ],
+  "prevention": "Read configuration from the actual immutable plan/journal before progress labels; final tables recompute from raw."
+}

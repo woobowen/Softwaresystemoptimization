@@ -1,0 +1,301 @@
+{
+  "pairs": [
+    {
+      "stage": "comparison",
+      "seed": 700001,
+      "block": 1,
+      "valid": true,
+      "same_config": false,
+      "baseline_config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "candidate_config": {
+        "s": 64,
+        "opt": "O3"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 902.508059403,
+      "candidate_cost_s": 546.885376235,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 61.068366,
+          "recheck_s": 63.236509,
+          "anchor_s": 61.994361
+        },
+        {
+          "round": 2,
+          "random_s": 61.877465,
+          "recheck_s": 66.108492,
+          "anchor_s": 60.581791
+        },
+        {
+          "round": 3,
+          "random_s": 59.984421,
+          "recheck_s": 64.036838,
+          "anchor_s": 59.671412
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        -3.49732292587063,
+        -6.983991278831617,
+        -6.791220224518913
+      ],
+      "gain_panel_pp": -6.791220224518913,
+      "gain_panel_low_pp": -6.983991278831617,
+      "gain_panel_high_pp": -3.49732292587063,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.39403823540727256
+    },
+    {
+      "stage": "comparison",
+      "seed": 804730,
+      "block": 2,
+      "valid": true,
+      "same_config": true,
+      "baseline_config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "candidate_config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 975.438367518,
+      "candidate_cost_s": 554.876076627,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 59.069305,
+          "recheck_s": 59.069305,
+          "anchor_s": 59.861806
+        },
+        {
+          "round": 2,
+          "random_s": 58.891987,
+          "recheck_s": 58.891987,
+          "anchor_s": 56.924937
+        },
+        {
+          "round": 3,
+          "random_s": 59.378795,
+          "recheck_s": 59.378795,
+          "anchor_s": 59.78545
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gain_panel_pp": 0.0,
+      "gain_panel_low_pp": 0.0,
+      "gain_panel_high_pp": 0.0,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.4311520900711744
+    },
+    {
+      "stage": "comparison",
+      "seed": 909459,
+      "block": 3,
+      "valid": true,
+      "same_config": false,
+      "baseline_config": {
+        "s": 128,
+        "opt": "O1"
+      },
+      "candidate_config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 1012.33664874,
+      "candidate_cost_s": 985.068299235,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 49.939851,
+          "recheck_s": 63.429427,
+          "anchor_s": 90.113262
+        },
+        {
+          "round": 2,
+          "random_s": 52.346003,
+          "recheck_s": 46.746727,
+          "anchor_s": 53.377882
+        },
+        {
+          "round": 3,
+          "random_s": 49.990041,
+          "recheck_s": 52.905847,
+          "anchor_s": 59.206493
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        -14.969579061514828,
+        10.489880433996994,
+        -4.924807824709367
+      ],
+      "gain_panel_pp": -4.924807824709367,
+      "gain_panel_low_pp": -14.969579061514828,
+      "gain_panel_high_pp": 10.489880433996994,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.026936048930896073
+    },
+    {
+      "stage": "comparison",
+      "seed": 1014188,
+      "block": 4,
+      "valid": true,
+      "same_config": false,
+      "baseline_config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "candidate_config": {
+        "s": 24,
+        "opt": "O1"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 1180.177197318,
+      "candidate_cost_s": 1104.228962745,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 44.362331,
+          "recheck_s": 65.821023,
+          "anchor_s": 44.10326
+        },
+        {
+          "round": 2,
+          "random_s": 44.23341,
+          "recheck_s": 66.566575,
+          "anchor_s": 44.921115
+        },
+        {
+          "round": 3,
+          "random_s": 44.720532,
+          "recheck_s": 68.213592,
+          "anchor_s": 45.086891
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        -48.65556877201368,
+        -49.71640841951496,
+        -52.10618758343751
+      ],
+      "gain_panel_pp": -49.71640841951496,
+      "gain_panel_low_pp": -52.10618758343751,
+      "gain_panel_high_pp": -48.65556877201368,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.06435324690698607
+    },
+    {
+      "stage": "comparison",
+      "seed": 1118917,
+      "block": 5,
+      "valid": true,
+      "same_config": false,
+      "baseline_config": {
+        "s": 64,
+        "opt": "O1"
+      },
+      "candidate_config": {
+        "s": 64,
+        "opt": "O3"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 1477.920197498,
+      "candidate_cost_s": 1045.741115269,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 57.483703,
+          "recheck_s": 57.626521,
+          "anchor_s": 54.221434
+        },
+        {
+          "round": 2,
+          "random_s": 57.918105,
+          "recheck_s": 59.406487,
+          "anchor_s": 55.425137
+        },
+        {
+          "round": 3,
+          "random_s": 58.272647,
+          "recheck_s": 58.199621,
+          "anchor_s": 53.315249
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        -0.26339768144088244,
+        -2.685391648197462,
+        0.13697019402460017
+      ],
+      "gain_panel_pp": -0.26339768144088244,
+      "gain_panel_low_pp": -2.685391648197462,
+      "gain_panel_high_pp": 0.13697019402460017,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.29242382840470316
+    },
+    {
+      "stage": "comparison",
+      "seed": 1223646,
+      "block": 6,
+      "valid": true,
+      "same_config": false,
+      "baseline_config": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "candidate_config": {
+        "s": 24,
+        "opt": "O2"
+      },
+      "baseline_calls": 8,
+      "candidate_calls": 8,
+      "baseline_cost_s": 1317.109779505,
+      "candidate_cost_s": 1025.065658765,
+      "rounds": [
+        {
+          "round": 1,
+          "random_s": 54.380994,
+          "recheck_s": 71.009861,
+          "anchor_s": 54.380994
+        },
+        {
+          "round": 2,
+          "random_s": 54.278277,
+          "recheck_s": 70.946348,
+          "anchor_s": 54.278277
+        },
+        {
+          "round": 3,
+          "random_s": 55.1531,
+          "recheck_s": 72.09147,
+          "anchor_s": 55.1531
+        }
+      ],
+      "gain_panel_rounds_pp": [
+        -30.578453567803486,
+        -30.70854846774152,
+        -30.71154658577668
+      ],
+      "gain_panel_pp": -30.70854846774152,
+      "gain_panel_low_pp": -30.71154658577668,
+      "gain_panel_high_pp": -30.578453567803486,
+      "confirmation_rounds": 3,
+      "cost_saving_fraction": 0.22173103964785446
+    }
+  ],
+  "seeds": [],
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "comparison_manifest_sha256": "674b2d364481e7ae728b4fcb834ed7fbb710ccfef7e639762487626b00d5cfcb"
+}

@@ -1,0 +1,1 @@
+{"image": "images/interfaces-kernel.png", "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8", "stopped": true, "tcp_listeners": []}

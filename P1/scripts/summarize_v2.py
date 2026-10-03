@@ -232,6 +232,8 @@ def check_trials(task, tolerance=.005):
             trial_starts[trial_id] = row
         elif kind == "build" and row.get("status") == "ok":
             identity = dict(metadata["target"], flags=[*metadata["target"]["flags"], "-" + row["opt"]])
+            if metadata.get("primary_clock"):
+                identity = ex.at.build_identity(metadata["target"], row["opt"])
             if row.get("source_sha256") != metadata["target"]["source_sha256"] or \
                     row.get("compiler") != metadata["target"]["compiler"] or \
                     row.get("flags") != identity["flags"] or row["build_key"] != ex.at.fingerprint(identity):
@@ -1866,6 +1868,9 @@ def main(argv=None):
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args(argv)
     protocol = load_json(args.protocol)
+    if protocol.get("method") == "goal2r":
+        from goal2r_analysis import run
+        return run(args)
     if len({bool(args.clock_followup), bool(args.initial_derived), bool(args.initial_root)}) != 1 or \
             (args.clock_followup and (args.diagnostic or not args.ledger)):
         raise ValueError("clock followup needs its fixed initial root/output and the actual ledger; old raw is not a current diagnostic batch")

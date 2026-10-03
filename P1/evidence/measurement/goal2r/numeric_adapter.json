@@ -1,0 +1,21 @@
+{
+  "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+  "variant_sha256": "4c398d8bc6c7a2ebc175d3bfb4fa9f8b78dfc921ca2cbc87824e01e7deb53804",
+  "original_sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+  "kernel_sha256": "4005ab7de11a2336c300420cdf354b3ec2f05aa995be988b5008abdf21e382ab",
+  "initialization": "original, no srand",
+  "reference": "unblocked independent long-double dot products; 8 edges and 16 fixed pseudorandom points",
+  "point_seed": 20260930,
+  "atol": 1e-12,
+  "rtol": 1e-11,
+  "configs": [
+    {
+      "s": 24,
+      "opt": "O0"
+    },
+    {
+      "s": 128,
+      "opt": "O3"
+    }
+  ]
+}

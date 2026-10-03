@@ -1,5 +1,22 @@
 # P1 证据入口
 
+## Goal2R 新证据
+
+新的60配置样本、六组主搜索及共同面板、四个Greedy起点、三个Random新seed确认和完整新鲜n4096均已执行。主计时为有对齐区间依据的RAW；数学正确性、主域计时与有限样本比较分开。S3因三组明确观察退化不保留，未触发追加，候选留出按事前规则不需要；Random三个新seed及其面板实际完成。Engineering等待外部GitHub源码、结果、报告和图片验收，Submission仍NOT_READY，未操作水杉。
+
+- [本次执行事实与限制](goal2r_result.md)、[当前要求表](requirements.md)
+- [新冻结协议](protocol_goal2r.json)、[简明方法修订及所读原文](measurement/goal2r_method.md)
+- [起点身份、1022历史文件及原账保护清单](measurement/goal2r_start.json)、[主账](measurement/resource_ledger.jsonl)、[单列开销/未知费用规则](measurement/goal2r_resource_supplement_policy.json)、[最终成本快照](measurement/goal2r_costs.json)
+- [六区间与八独立A/A的完整整数/输出记录](measurement/goal2r/)、[独立计时复算](reviews/goal2r_timing_review.json)
+- [60正式参照＋预热/锚点](../results/goal2r_reference/)、[六组主实验](../results/goal2r_comparison/)、[四固定起点](../results/goal2r_starts/)、[三个Random新seed确认](../results/goal2r_confirmation/)
+- [完整派生表图](../results/goal2r_summary/summary.json)、[对应闭合账本](measurement/goal2r/final-results-resource-ledger.jsonl)
+- [代码与原始数据审核](reviews/goal2r_code_review.md)、[独立方法挑战](reviews/goal2r_method_challenge.md)、[方法与真实结果复核](reviews/goal2r_method_result_review.md)
+- [五匹配commit只读重生成、干净254测试、四冷构建、完整新鲜运行与截图](reproduction/goal2r/)、[六图来源与SHA](reproduction/goal2r/images.json)
+
+新协议、批次和派生表与历史隔离。旧raw、协议、停止、判定及48调用/3713.432874365秒原费用不变。以下保存原阶段的入口与当时结论，不能当作新实验状态。
+
+## Goal2 历史阶段（原状态）
+
 本阶段为 Goal2 PARTIAL：测量跨时段可比性受阻。当前 report 保留真实历史结果，按配置身份统一评价；新正式参照、六组在线比较、S3选择/确认及起点面板未执行。Engineering 等待外部实际 GitHub 终审，未提交水杉。
 
 ## 本阶段

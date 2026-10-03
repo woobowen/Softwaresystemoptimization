@@ -1,0 +1,81 @@
+{
+  "commit": "3ac0c4688b964c873379d012cbcf09afb7ed0937",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/scripts/summarize.py",
+    "--reference",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/reference_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/selection_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/conflict_selection_v1",
+    "--runs",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/results/holdout_v1",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/.cache/goal2r-derived",
+    "--plots",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/.cache/goal2r-derived-images"
+  ],
+  "comparison_target": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal1-reproduction/P1/.cache/derived",
+  "matrix_runs": 0,
+  "attempt_id": "d27736666b604939885cf1054d59df55",
+  "driver_raw_s": 3.560481246,
+  "files": [
+    {
+      "file": "batch_costs.csv",
+      "original_sha256": "b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302",
+      "regenerated_sha256": "b7d0a6a590b52cf6d7f91dddc32e1e8b4bdf12a9ed8689d468802651db700302",
+      "equal": true
+    },
+    {
+      "file": "conflict_request_holdout.json",
+      "original_sha256": "02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e",
+      "regenerated_sha256": "02867ec65625cba6089a9bb02b6b02bd94fb0b2de88e750401ee3094999c5b5e",
+      "equal": true
+    },
+    {
+      "file": "conflict_request_selection.json",
+      "original_sha256": "ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7",
+      "regenerated_sha256": "ac527ec2cc0d11e4fe0b9818fb81398500b5c2679aac3eb182327f7be278bdf7",
+      "equal": true
+    },
+    {
+      "file": "grid_summary.csv",
+      "original_sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "regenerated_sha256": "8f3bfbb506370076afe3a15f08cd1bcff8f5e23e34f05a5ec6e9e5702f6761ec",
+      "equal": true
+    },
+    {
+      "file": "measurements.csv",
+      "original_sha256": "f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3",
+      "regenerated_sha256": "f0659aa3f7ec75f1e4d14768c42d415b58e21958d4e3667f25ea3c0ab31f74c3",
+      "equal": true
+    },
+    {
+      "file": "online_curves.csv",
+      "original_sha256": "c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26",
+      "regenerated_sha256": "c54edb9e3243168c7783201912615cd07cab1cf050f461304865c488c130de26",
+      "equal": true
+    },
+    {
+      "file": "reference_conflicts.csv",
+      "original_sha256": "5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90",
+      "regenerated_sha256": "5f85ac0afc38fbbd0a336e51fa4804abb2fba1ea2c1aa2f83f12e27f1cb57d90",
+      "equal": true
+    },
+    {
+      "file": "search_summary.csv",
+      "original_sha256": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc",
+      "regenerated_sha256": "9bbc2490e77476f40278f16eead5b053a0cc67b828b86e14346d1de548e31fbc",
+      "equal": true
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+      "regenerated_sha256": "4fd2f0e7aa326880618f5d88e52afbd4f641c36265b6e4ec1c7baa4b0fae90de",
+      "equal": true
+    }
+  ],
+  "all_equal": true
+}

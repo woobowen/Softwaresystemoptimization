@@ -192,6 +192,8 @@ def task_status(job, directory, manifest, historical_only=False):
         runtime_affinity=protocol["measurement"]["cpu_affinity"],
         protocol_sha256=manifest["protocol_sha256"],
         cache_dir=str((original_root / protocol["measurement"]["cache_dir"]).resolve()))
+    if "mode" in rows[0]["metadata"]:
+        expected.update(mode="benchmark", primary_clock="CLOCK_MONOTONIC_RAW", primary_clock_unit="ns")
     expected_hash = hashlib.sha256(json.dumps(expected, sort_keys=True, separators=(",", ":"),
                                              allow_nan=False).encode()).hexdigest()
     if rows[0].get("metadata") != expected or rows[0].get("fingerprint") != expected_hash:

@@ -236,6 +236,18 @@ Never:
 - describe "should succeed" as "succeeded";
 - label unverified information as `PASS`.
 
+Keep numerical correctness, primary-clock measurement validity, and the
+strength of a performance comparison separate. An auxiliary-clock change
+alone does not establish primary-clock failure; check comparable, aligned
+intervals and retain the original readings. A failed timing check may limit
+the affected measurements without invalidating completed numerical results.
+
+Project performance goals must not prevent valid coursework measurements
+merely because a small difference remains uncertain. Before collecting formal
+results, check that acceptance rules have reachable positive, negative, and
+inconclusive outcomes. Apply revised rules to new batch identities while
+preserving old protocols, raw data, decisions, and incurred costs.
+
 For WSL, virtualization, PMU, DMI, NUMA, CPU topology, interrupts, or similar
 hardware-sensitive information:
 

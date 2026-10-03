@@ -1,0 +1,59 @@
+[
+  {
+    "mode": "idle-40",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe",
+      "idle",
+      "0",
+      "40"
+    ],
+    "timeout_s": 1200
+  },
+  {
+    "mode": "work-8e9",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/addaswsw/lab/Software_system_optimization/P1/.cache/clock_goal2/probe",
+      "work",
+      "8000000000",
+      "0"
+    ],
+    "timeout_s": 1200
+  },
+  {
+    "mode": "matrix-slow",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/usr/bin/python3",
+      "-B",
+      "/home/addaswsw/lab/Software_system_optimization/P1/src/autotuner.py",
+      "run",
+      "--target",
+      "/home/addaswsw/lab/Software_system_optimization/P1/src/matrix_multiplication.c",
+      "--cache-dir",
+      "/home/addaswsw/lab/Software_system_optimization/P1/.cache/build_goal2r",
+      "--s",
+      "8",
+      "--opt",
+      "O0",
+      "--repeats",
+      "1",
+      "--timeout",
+      "1200",
+      "--compile-timeout",
+      "60",
+      "--mode",
+      "diagnostic",
+      "--output",
+      "/home/addaswsw/lab/Software_system_optimization/P1/evidence/measurement/goal2r/matrix-slow.jsonl"
+    ],
+    "timeout_s": 1200
+  }
+]

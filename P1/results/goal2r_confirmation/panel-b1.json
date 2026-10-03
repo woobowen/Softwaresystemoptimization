@@ -1,0 +1,62 @@
+{
+  "schema": 2,
+  "block": 1,
+  "seed": 1328375,
+  "protocol_sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+  "dependencies_sha256": {
+    "b1-random-seed1328375": "952a5da61f5620f2f1b099114e3847172d712fcde92aa8cd98013e954bdaf410"
+  },
+  "reference_manifest_sha256": "338bde1ca119cbe41fbad72c6e39b4bb5c73f6953cdde5d0c06a443ed1928f2f",
+  "reference_config": {
+    "s": 128,
+    "opt": "O3"
+  },
+  "configs": [
+    {
+      "s": 128,
+      "opt": "O3"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "panel-b1-r1-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 1,
+      "seed": 1328375,
+      "round": 1,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b1-r2-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 1,
+      "seed": 1328375,
+      "round": 2,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    },
+    {
+      "id": "panel-b1-r3-s128-O3",
+      "action": "run",
+      "role": "shared_confirmation",
+      "block": 1,
+      "seed": 1328375,
+      "round": 3,
+      "repeats": 1,
+      "config": {
+        "s": 128,
+        "opt": "O3"
+      }
+    }
+  ],
+  "fingerprint": "3a9e2ad2a3382888a5a0057c506dc3b32e4058b076e8a4531d62aefb7c7d0bdb"
+}

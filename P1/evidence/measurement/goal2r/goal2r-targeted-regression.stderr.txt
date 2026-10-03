@@ -1,0 +1,30 @@
+test_clock_source_hash_or_boot_change_cannot_pass (test_goal2r_analysis.Goal2RAnalysisTests.test_clock_source_hash_or_boot_change_cannot_pass) ... ok
+test_old_qpc_interval_cannot_be_relabelled_as_later_check (test_goal2r_analysis.Goal2RAnalysisTests.test_old_qpc_interval_cannot_be_relabelled_as_later_check) ... ok
+test_raw_clock_is_not_vetoed_by_auxiliary_backwards_or_width (test_goal2r_analysis.Goal2RAnalysisTests.test_raw_clock_is_not_vetoed_by_auxiliary_backwards_or_width) ... ok
+test_same_choice_still_needs_three_real_panel_rounds (test_goal2r_analysis.Goal2RAnalysisTests.test_same_choice_still_needs_three_real_panel_rounds) ... ok
+test_shared_panel_cost_is_once_and_unknown_not_complete (test_goal2r_analysis.Goal2RAnalysisTests.test_shared_panel_cost_is_once_and_unknown_not_complete) ... ok
+test_auxiliary_reversal_keeps_valid_primary_and_output (test_goal2r_core.ModeTests.test_auxiliary_reversal_keeps_valid_primary_and_output) ... ok
+test_bad_output_is_an_error_in_every_mode (test_goal2r_core.ModeTests.test_bad_output_is_an_error_in_every_mode) ... ok
+test_build_key_ignores_runtime_settings_but_resume_does_not (test_goal2r_core.ModeTests.test_build_key_ignores_runtime_settings_but_resume_does_not) ... ok
+test_correctness_trial_succeeds_without_a_performance_best (test_goal2r_core.ModeTests.test_correctness_trial_succeeds_without_a_performance_best) ... ok
+test_formal_integer_kernel_boundaries_are_required_and_recomputed (test_goal2r_core.ModeTests.test_formal_integer_kernel_boundaries_are_required_and_recomputed) ... ok
+test_kernel_overrun_and_nonpositive_timer_are_not_scores (test_goal2r_core.ModeTests.test_kernel_overrun_and_nonpositive_timer_are_not_scores) ... ok
+test_mode_is_not_a_global_error_bypass (test_goal2r_core.ModeTests.test_mode_is_not_a_global_error_bypass) ... ok
+test_primary_reversal_preserves_correctness_output_but_never_scores (test_goal2r_core.ModeTests.test_primary_reversal_preserves_correctness_output_but_never_scores) ... ok
+test_raw_online_costs_use_actual_integer_events (test_goal2r_core.ModeTests.test_raw_online_costs_use_actual_integer_events) ... ok
+test_addition_selection_is_risk_then_width_then_seed (test_goal2r_method.Goal2RMethodTests.test_addition_selection_is_risk_then_width_then_seed) ... ok
+test_clear_loss_rejects_before_large_cost_saving (test_goal2r_method.Goal2RMethodTests.test_clear_loss_rejects_before_large_cost_saving) ... ok
+test_complete_no_benefit_rejects (test_goal2r_method.Goal2RMethodTests.test_complete_no_benefit_rejects) ... ok
+test_different_choices_can_keep_quality (test_goal2r_method.Goal2RMethodTests.test_different_choices_can_keep_quality) ... ok
+test_different_near_choices_can_keep_efficiency_at_exact_boundary (test_goal2r_method.Goal2RMethodTests.test_different_near_choices_can_keep_efficiency_at_exact_boundary) ... ok
+test_invalid_rounds_or_anchor_are_not_hidden_by_same_choice (test_goal2r_method.Goal2RMethodTests.test_invalid_rounds_or_anchor_are_not_hidden_by_same_choice) ... ok
+test_missing_data_and_holdout_do_not_finally_keep (test_goal2r_method.Goal2RMethodTests.test_missing_data_and_holdout_do_not_finally_keep) ... ok
+test_quality_crossing_is_inconclusive_and_efficiency_has_priority (test_goal2r_method.Goal2RMethodTests.test_quality_crossing_is_inconclusive_and_efficiency_has_priority) ... ok
+test_risk_crossing_is_inconclusive (test_goal2r_method.Goal2RMethodTests.test_risk_crossing_is_inconclusive) ... ok
+test_round_pairing_uses_that_round_anchor (test_goal2r_method.Goal2RMethodTests.test_round_pairing_uses_that_round_anchor) ... ok
+test_same_choice_zero_preserves_different_raw_observations (test_goal2r_method.Goal2RMethodTests.test_same_choice_zero_preserves_different_raw_observations) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.050s
+
+OK

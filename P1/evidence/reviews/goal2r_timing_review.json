@@ -1,0 +1,669 @@
+{
+  "schema": 1,
+  "reviewer": "/root/method",
+  "assessment": "RAW supported for checked intervals and new stage scopes; formal blocks require predeclared checks",
+  "primary_clock": "CLOCK_MONOTONIC_RAW",
+  "input_timing_result_sha256": "3a1d2089c187c86dab2b6797b0207f54a294b09becfd1608ec6b077855168f82",
+  "timing_plan_sha256": "0a72b98b97d1ac9ff789013664c4fe1ee74e33936a1253e3157520d7f2802c4d",
+  "formula": "integer Linux end_before-start_after .. end_after-start_before; divide by QPC (delta_tick+2)/F .. (delta_tick-2)/F using Fraction",
+  "intervals": [
+    {
+      "id": "idle-10",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "source_sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "frequency_hz": 10000000,
+      "tick_delta": 103523881,
+      "qpc_s": 10.3523881,
+      "host_pid": 1752,
+      "thread_id": 19,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 10352033490,
+          "linux_upper_ns": 10352650129,
+          "ratio_bounds": [
+            0.9999657267492565,
+            1.0000253302911881
+          ],
+          "ratio_bounds_exact": [
+            "345067783/345079610",
+            "10352650129/10352387900"
+          ],
+          "endpoint_s": [
+            0.000207271,
+            0.000409368
+          ],
+          "relative_width": 5.956490367666954e-05
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 10002763214,
+          "linux_upper_ns": 10003364531,
+          "ratio_bounds": [
+            0.9662275915597177,
+            0.9662857137530559
+          ],
+          "ratio_bounds_exact": [
+            "5001381607/5176194150",
+            "10003364531/10352387900"
+          ],
+          "endpoint_s": [
+            0.000190798,
+            0.000410519
+          ],
+          "relative_width": 5.808485870038045e-05
+        },
+        "REALTIME": {
+          "linux_lower_ns": 11746366737,
+          "linux_upper_ns": 11746968011,
+          "ratio_bounds": [
+            1.1346528353268974,
+            1.1347109598742915
+          ],
+          "ratio_bounds_exact": [
+            "3915455579/3450796100",
+            "11746968011/10352387900"
+          ],
+          "endpoint_s": [
+            0.000190921,
+            0.000410353
+          ],
+          "relative_width": 5.80807050693936e-05
+        }
+      },
+      "raw_screen_pass": true
+    },
+    {
+      "id": "work-4e9",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "source_sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "frequency_hz": 10000000,
+      "tick_delta": 116835443,
+      "qpc_s": 11.6835443,
+      "host_pid": 1752,
+      "thread_id": 19,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 11683227625,
+          "linux_upper_ns": 11683810710,
+          "ratio_bounds": [
+            0.9999728785215822,
+            1.0000228192745042
+          ],
+          "ratio_bounds_exact": [
+            "93465821/93468356",
+            "389460357/389451470"
+          ],
+          "endpoint_s": [
+            0.000204635,
+            0.00037845
+          ],
+          "relative_width": 4.9906516809287056e-05
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 11248066610,
+          "linux_upper_ns": 11248618560,
+          "ratio_bounds": [
+            0.9627272451438004,
+            0.9627745197623725
+          ],
+          "ratio_bounds_exact": [
+            "1124806661/1168354450",
+            "187476976/194725735"
+          ],
+          "endpoint_s": [
+            0.000205082,
+            0.000346868
+          ],
+          "relative_width": 4.724165765349133e-05
+        },
+        "REALTIME": {
+          "linux_lower_ns": 11248066840,
+          "linux_upper_ns": 11248618868,
+          "ratio_bounds": [
+            0.9627272648296071,
+            0.9627745461242364
+          ],
+          "ratio_bounds_exact": [
+            "562403342/584177225",
+            "2812154717/2920886025"
+          ],
+          "endpoint_s": [
+            0.000205189,
+            0.000346839
+          ],
+          "relative_width": 4.724833370983153e-05
+        }
+      },
+      "raw_screen_pass": true
+    },
+    {
+      "id": "matrix-fast",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "source_sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "frequency_hz": 10000000,
+      "tick_delta": 388194298,
+      "qpc_s": 38.8194298,
+      "host_pid": 1752,
+      "thread_id": 19,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 38819100799,
+          "linux_upper_ns": 38819700194,
+          "ratio_bounds": [
+            0.9999915196848589,
+            1.0000069705815564
+          ],
+          "ratio_bounds_exact": [
+            "38819100799/38819430000",
+            "19409850097/19409714800"
+          ],
+          "endpoint_s": [
+            0.000154012,
+            0.000445383
+          ],
+          "relative_width": 1.5440592586962727e-05
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 36929067031,
+          "linux_upper_ns": 36929653921,
+          "ratio_bounds": [
+            0.9513036907291014,
+            0.9513188189916113
+          ],
+          "ratio_bounds_exact": [
+            "36929067031/38819430000",
+            "36929653921/38819429600"
+          ],
+          "endpoint_s": [
+            0.000141104,
+            0.000445786
+          ],
+          "relative_width": 1.5118460086191167e-05
+        },
+        "REALTIME": {
+          "linux_lower_ns": 38402723971,
+          "linux_upper_ns": 38403310484,
+          "ratio_bounds": [
+            0.9892655294268875,
+            0.9892806483689291
+          ],
+          "ratio_bounds_exact": [
+            "38402723971/38819430000",
+            "1371546803/1386408200"
+          ],
+          "endpoint_s": [
+            0.000141227,
+            0.000445286
+          ],
+          "relative_width": 1.5108748454620526e-05
+        }
+      },
+      "raw_screen_pass": true
+    },
+    {
+      "id": "idle-40",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "source_sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "frequency_hz": 10000000,
+      "tick_delta": 424402569,
+      "qpc_s": 42.4402569,
+      "host_pid": 15740,
+      "thread_id": 16,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 42439736854,
+          "linux_upper_ns": 42440609956,
+          "ratio_bounds": [
+            0.9999877416859475,
+            1.0000083236065818
+          ],
+          "ratio_bounds_exact": [
+            "21219868427/21220128550",
+            "10610152489/10610064175"
+          ],
+          "endpoint_s": [
+            0.000212203,
+            0.000660899
+          ],
+          "relative_width": 2.0572495639158112e-05
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 40001830773,
+          "linux_upper_ns": 40002641520,
+          "ratio_bounds": [
+            0.9425444968145587,
+            0.9425636089519694
+          ],
+          "ratio_bounds_exact": [
+            "40001830773/42440257100",
+            "2000132076/2122012835"
+          ],
+          "endpoint_s": [
+            0.000194236,
+            0.000616511
+          ],
+          "relative_width": 1.910325382596824e-05
+        },
+        "REALTIME": {
+          "linux_lower_ns": 41980752872,
+          "linux_upper_ns": 41981563691,
+          "ratio_bounds": [
+            0.9891729160142152,
+            0.9891920302876019
+          ],
+          "ratio_bounds_exact": [
+            "10495188218/10610064275",
+            "41981563691/42440256700"
+          ],
+          "endpoint_s": [
+            0.000194651,
+            0.000616168
+          ],
+          "relative_width": 1.9104950328422728e-05
+        }
+      },
+      "raw_screen_pass": true
+    },
+    {
+      "id": "work-8e9",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "source_sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "frequency_hz": 10000000,
+      "tick_delta": 221342294,
+      "qpc_s": 22.1342294,
+      "host_pid": 15740,
+      "thread_id": 16,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 22133856749,
+          "linux_upper_ns": 22134550693,
+          "ratio_bounds": [
+            0.99998315500441,
+            1.0000145246982444
+          ],
+          "ratio_bounds_exact": [
+            "22133856749/22134229600",
+            "22134550693/22134229200"
+          ],
+          "endpoint_s": [
+            0.000260411,
+            0.000433533
+          ],
+          "relative_width": 3.1351622297724986e-05
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 20901137366,
+          "linux_upper_ns": 20901813337,
+          "ratio_bounds": [
+            0.9442902573848787,
+            0.9443208140719894
+          ],
+          "ratio_bounds_exact": [
+            "10450568683/11067114800",
+            "20901813337/22134229200"
+          ],
+          "endpoint_s": [
+            0.000242627,
+            0.000433344
+          ],
+          "relative_width": 3.0539622038976426e-05
+        },
+        "REALTIME": {
+          "linux_lower_ns": 22801248494,
+          "linux_upper_ns": 22801924696,
+          "ratio_bounds": [
+            1.0301351755201817,
+            1.0301657441949683
+          ],
+          "ratio_bounds_exact": [
+            "11400624247/11067114800",
+            "2850240587/2766778650"
+          ],
+          "endpoint_s": [
+            0.000242737,
+            0.000433465
+          ],
+          "relative_width": 3.0550058363450415e-05
+        }
+      },
+      "raw_screen_pass": true
+    },
+    {
+      "id": "matrix-slow",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "source_sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "frequency_hz": 10000000,
+      "tick_delta": 3351599250,
+      "qpc_s": 335.159925,
+      "host_pid": 15740,
+      "thread_id": 16,
+      "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+      "domains": {
+        "RAW": {
+          "linux_lower_ns": 335159627982,
+          "linux_upper_ns": 335160249495,
+          "ratio_bounds": [
+            0.9999991132054352,
+            1.0000009687763243
+          ],
+          "ratio_bounds_exact": [
+            "167579813991/167579962600",
+            "67032049899/67031984960"
+          ],
+          "endpoint_s": [
+            0.000209303,
+            0.00041221
+          ],
+          "relative_width": 1.8543774289244158e-06
+        },
+        "MONOTONIC": {
+          "linux_lower_ns": 315362982018,
+          "linux_upper_ns": 315363605016,
+          "ratio_bounds": [
+            0.9409328452075929,
+            0.9409347051387094
+          ],
+          "ratio_bounds_exact": [
+            "157681491009/167579962600",
+            "39420450627/41894990600"
+          ],
+          "endpoint_s": [
+            0.000209082,
+            0.000413916
+          ],
+          "relative_width": 1.858808149572178e-06
+        },
+        "REALTIME": {
+          "linux_lower_ns": 335780939086,
+          "linux_upper_ns": 335781561411,
+          "ratio_bounds": [
+            1.001852888246199,
+            1.0018547462420244
+          ],
+          "ratio_bounds_exact": [
+            "167890469543/167579962600",
+            "335781561411/335159924800"
+          ],
+          "endpoint_s": [
+            0.000209273,
+            0.000413052
+          ],
+          "relative_width": 1.8568001529419128e-06
+        }
+      },
+      "raw_screen_pass": true
+    }
+  ],
+  "aa_samples": [
+    {
+      "id": "aa-01-F-A1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-01-F-A1.jsonl",
+      "source_sha256": "16f295cb7c00b72891526d00eb0ccc1349634a3d9e41e309561b498c703a2e2c",
+      "run_id": "1a9a590227cc4d63b26a85a9302bb4cd",
+      "pid": 31273,
+      "measurement_start_count": 1,
+      "kernel_s": 38.893211,
+      "kernel_exact_s": 38.893210862,
+      "kernel_start_ns": 2516798544947,
+      "kernel_end_ns": 2555691755809,
+      "process_raw_s": 39.478314172,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 37.6176779,
+        "CLOCK_MONOTONIC_RAW": 39.478314172,
+        "CLOCK_REALTIME": 39.114723848
+      },
+      "driver_raw_s": 39.660898824,
+      "driver_start_ns": 2516167387246,
+      "driver_end_ns": 2555828286070
+    },
+    {
+      "id": "aa-02-F-B1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-02-F-B1.jsonl",
+      "source_sha256": "0a97de9d7117f04c99f916d4b930b6031c3e5a4e3c71efd95c147559b5fa014b",
+      "run_id": "dce25d0605404b6aa2f7a7f5de9aa7c2",
+      "pid": 31596,
+      "measurement_start_count": 1,
+      "kernel_s": 37.816395,
+      "kernel_exact_s": 37.816395475,
+      "kernel_start_ns": 2556643946211,
+      "kernel_end_ns": 2594460341686,
+      "process_raw_s": 38.556532518,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 36.28978871,
+        "CLOCK_MONOTONIC_RAW": 38.556532518,
+        "CLOCK_REALTIME": 37.942688847
+      },
+      "driver_raw_s": 38.839585014,
+      "driver_start_ns": 2555842455788,
+      "driver_end_ns": 2594682040802
+    },
+    {
+      "id": "aa-03-M-B1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-03-M-B1.jsonl",
+      "source_sha256": "86ea9af8a723f09b048bf6679c93c5c470c7741783f024e762c66c2326665c68",
+      "run_id": "d7e7231a34d2405283b57af6623de9a8",
+      "pid": 31898,
+      "measurement_start_count": 1,
+      "kernel_s": 77.231976,
+      "kernel_exact_s": 77.231976458,
+      "kernel_start_ns": 2595365598488,
+      "kernel_end_ns": 2672597574946,
+      "process_raw_s": 77.856777674,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 73.34586889,
+        "CLOCK_MONOTONIC_RAW": 77.856777674,
+        "CLOCK_REALTIME": 79.504031233
+      },
+      "driver_raw_s": 78.080665971,
+      "driver_start_ns": 2594696771691,
+      "driver_end_ns": 2672777437662
+    },
+    {
+      "id": "aa-04-M-A1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-04-M-A1.jsonl",
+      "source_sha256": "d8b00eda73f8ed773eba56e72ddf3a9ddf94d9290e232dca02eb766d77527921",
+      "run_id": "fd84ce8f9b7a408caafd647d38499c54",
+      "pid": 32483,
+      "measurement_start_count": 1,
+      "kernel_s": 76.416761,
+      "kernel_exact_s": 76.416760629,
+      "kernel_start_ns": 2673463130891,
+      "kernel_end_ns": 2749879891520,
+      "process_raw_s": 77.042626358,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 72.776918331,
+        "CLOCK_MONOTONIC_RAW": 77.042626358,
+        "CLOCK_REALTIME": 76.475974697
+      },
+      "driver_raw_s": 77.342243256,
+      "driver_start_ns": 2672791714271,
+      "driver_end_ns": 2750133957527
+    },
+    {
+      "id": "aa-05-M-A2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-05-M-A2.jsonl",
+      "source_sha256": "6d811662f37c714b1575767ec0396b2534e9b0e7403bb42115c70ecb7d54600d",
+      "run_id": "3136db1bf6804f0b848519832397b8b6",
+      "pid": 35934,
+      "measurement_start_count": 1,
+      "kernel_s": 75.131166,
+      "kernel_exact_s": 75.131165502,
+      "kernel_start_ns": 3151889184432,
+      "kernel_end_ns": 3227020349934,
+      "process_raw_s": 75.814863833,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 71.180681655,
+        "CLOCK_MONOTONIC_RAW": 75.814863833,
+        "CLOCK_REALTIME": 75.584458919
+      },
+      "driver_raw_s": 75.954221874,
+      "driver_start_ns": 3151168119474,
+      "driver_end_ns": 3227122341348
+    },
+    {
+      "id": "aa-06-M-B2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-06-M-B2.jsonl",
+      "source_sha256": "c6dedfaff3f1aa25ab287cc94b63a52e65995799cd9321dcb656289fe5be1269",
+      "run_id": "bc55be99628a4958b345faf1672e7b22",
+      "pid": 36530,
+      "measurement_start_count": 1,
+      "kernel_s": 88.073248,
+      "kernel_exact_s": 88.073247948,
+      "kernel_start_ns": 3227813471362,
+      "kernel_end_ns": 3315886719310,
+      "process_raw_s": 88.704546938,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 83.524856162,
+        "CLOCK_MONOTONIC_RAW": 88.704546938,
+        "CLOCK_REALTIME": 87.343900568
+      },
+      "driver_raw_s": 89.00598068,
+      "driver_start_ns": 3227140883873,
+      "driver_end_ns": 3316146864553
+    },
+    {
+      "id": "aa-07-F-B2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-07-F-B2.jsonl",
+      "source_sha256": "9a6e5205b1c9b442212d16202bc77769de23c9ccac95609e4c960c6bbd90bbe4",
+      "run_id": "39ce8bf6dab44a09bacac9504e3143d0",
+      "pid": 37105,
+      "measurement_start_count": 1,
+      "kernel_s": 41.648063,
+      "kernel_exact_s": 41.648062566,
+      "kernel_start_ns": 3316877620491,
+      "kernel_end_ns": 3358525683057,
+      "process_raw_s": 42.315084618,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 39.884525422,
+        "CLOCK_MONOTONIC_RAW": 42.315084618,
+        "CLOCK_REALTIME": 43.807700883
+      },
+      "driver_raw_s": 42.469909628,
+      "driver_start_ns": 3316163397463,
+      "driver_end_ns": 3358633307091
+    },
+    {
+      "id": "aa-08-F-A2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-08-F-A2.jsonl",
+      "source_sha256": "6027e9015410cd40ff0672cec1dc4500076e68d26ce8efd68fe961463844606c",
+      "run_id": "f2996c5e87814b97b89d4f7545bf167b",
+      "pid": 37373,
+      "measurement_start_count": 1,
+      "kernel_s": 43.392648,
+      "kernel_exact_s": 43.392648094,
+      "kernel_start_ns": 3359336059840,
+      "kernel_end_ns": 3402728707934,
+      "process_raw_s": 44.034216508,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 41.56811867,
+        "CLOCK_MONOTONIC_RAW": 44.034216508,
+        "CLOCK_REALTIME": 43.545720872
+      },
+      "driver_raw_s": 44.266507847,
+      "driver_start_ns": 3358649734957,
+      "driver_end_ns": 3402916242804
+    }
+  ],
+  "aa_pairs": [
+    {
+      "tier": "F",
+      "pair": 1,
+      "a_s": 38.893211,
+      "b_s": 37.816395,
+      "signed_difference_pct": 2.8075127905102284
+    },
+    {
+      "tier": "F",
+      "pair": 2,
+      "a_s": 43.392648,
+      "b_s": 41.648063,
+      "signed_difference_pct": 4.102940766805209
+    },
+    {
+      "tier": "M",
+      "pair": 1,
+      "a_s": 76.416761,
+      "b_s": 77.231976,
+      "signed_difference_pct": -1.0611411664256105
+    },
+    {
+      "tier": "M",
+      "pair": 2,
+      "a_s": 75.131166,
+      "b_s": 88.073248,
+      "signed_difference_pct": -15.859965650193768
+    }
+  ],
+  "diagnostic_n4096_calls": 10,
+  "diagnostic_controlled_raw_s": 948.66689723,
+  "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+  "framework_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+  "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+  "limits": [
+    "six aligned intervals and eight independent processes, not absolute physical calibration",
+    "RAW and QPC may share hardware",
+    "auxiliary variation and adjtimex snapshots do not identify root cause",
+    "A/A extrema are observed variation, not future padding bound",
+    "QPC matrix interval is whole CLI; kernel/process/driver boundaries stay separate"
+  ]
+}

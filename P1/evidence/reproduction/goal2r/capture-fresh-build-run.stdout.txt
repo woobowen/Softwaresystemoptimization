@@ -1,0 +1,1 @@
+{"image": "images/build-run.png", "sha256": "1cfbe09900e2a1e9160649f2cc8962fda31fe78ae4c46129c0c3b457dd6dfe23", "stopped": true, "tcp_listeners": []}

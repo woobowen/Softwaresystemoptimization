@@ -1,0 +1,31 @@
+{
+  "clean_export": "P1/.cache/goal2r-clean",
+  "purpose": "clean staged files, full regression, four cold builds and one fresh complete target",
+  "source_sha256": {
+    "src/autotuner.py": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+    "src/matrix_multiplication.c": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50"
+  },
+  "tests": "python3 -B -m unittest discover -s P1/tests -v",
+  "cold_opts": [
+    "O0",
+    "O1",
+    "O2",
+    "O3"
+  ],
+  "final_config": {
+    "s": 128,
+    "opt": "O3"
+  },
+  "n4096_call_upper": 1,
+  "mode": "benchmark",
+  "final_result_is_formal_ranking_sample": false,
+  "qpc_checks": [
+    "before-fresh",
+    "after-fresh"
+  ],
+  "qpc_scope": "two finite aligned checks surrounding final fresh demonstration; same frozen thresholds",
+  "old_fresh_failure_preserved": "evidence/reproduction/goal2/clean-fresh-n4096-check.json",
+  "private_screenshot_transport": "Unix socket with private authority, no TCP",
+  "new_dependencies": 0,
+  "global_changes": 0
+}

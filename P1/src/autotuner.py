@@ -26,6 +26,8 @@ BLOCKS = (8, 16, 24, 64, 128)
 OPTS = ("O0", "O1", "O2", "O3")
 COMMON_FLAGS = ("-std=c11", "-Wall", "-Wextra")
 ALGORITHMS = ("grid", "random", "greedy", "stratified", "patience", "recheck")
+RUN_MODES = ("correctness", "diagnostic", "benchmark")
+PRIMARY_CLOCK = "CLOCK_MONOTONIC_RAW"
 
 
 def now():
@@ -45,6 +47,18 @@ def clock_readings_ns():
     """Read these time domains in the same fixed order at each boundary."""
     return {name: time.clock_gettime_ns(getattr(time, name)) for name in
             ("CLOCK_MONOTONIC", "CLOCK_MONOTONIC_RAW", "CLOCK_REALTIME")}
+
+
+def raw_time_ns():
+    return time.clock_gettime_ns(time.CLOCK_MONOTONIC_RAW)
+
+
+def build_identity(metadata, opt):
+    """Runtime settings do not change a compiler's output."""
+    if opt not in OPTS:
+        raise ValueError("invalid optimization level")
+    return dict(source=metadata["source"], source_sha256=metadata["source_sha256"],
+                compiler=metadata["compiler"], flags=[*metadata["flags"], "-" + opt])
 
 
 @dataclass(frozen=True)
@@ -126,6 +140,11 @@ def process(command, timeout, on_start=None):
         deltas = {name: (clocks_end[name] - value) / 1e9 for name, value in clocks_start.items()}
         result.update(ended_at=now(), process_wall_s=deltas["CLOCK_MONOTONIC"],
             process_wall_clock="CLOCK_MONOTONIC", clock_unit="ns",
+            process_raw_s=deltas[PRIMARY_CLOCK], process_raw_clock=PRIMARY_CLOCK,
+            timing_status="ok" if deltas[PRIMARY_CLOCK] > 0 else "invalid",
+            timing_error=None if deltas[PRIMARY_CLOCK] > 0 else "primary process clock did not advance",
+            auxiliary_clock_anomalies=[name for name in ("CLOCK_MONOTONIC", "CLOCK_REALTIME")
+                                       if deltas[name] <= 0],
             clock_read_order=list(clocks_start), clock_start_ns=clocks_start,
             clock_end_ns=clocks_end, clock_deltas_s=deltas,
             boundary_read_order=dict(start=[*clocks_start, "RUSAGE_CHILDREN"],
@@ -149,7 +168,7 @@ class TargetProgram:
         self.flags = tuple(flags)
         if not math.isfinite(compile_timeout) or compile_timeout <= 0:
             raise ValueError("compile timeout must be positive and finite")
-        self.compile_timeout = compile_timeout
+        self.compile_timeout = float(compile_timeout)
         probe = process([self.compiler, "--version"], compile_timeout)
         if probe["status"] != "ok":
             raise ValueError(f"compiler version probe failed: {probe['status']}")
@@ -158,6 +177,7 @@ class TargetProgram:
         self.cache_dir = Path(cache_dir or Path(__file__).resolve().parents[1] / ".cache" / "build").resolve()
         source_text = self.source.read_text()
         self.require_checksum = bool(re.search(r'printf\s*\(\s*"checksum=', source_text))
+        self.require_kernel_boundaries = bool(re.search(r'printf\s*\(\s*"kernel_start_ns=', source_text))
         code = re.sub(r'//[^\n]*|/\*.*?\*/|"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'',
                       " ", source_text, flags=re.S)
         clocks = set(re.findall(r"\bclock_gettime\s*\(\s*(CLOCK_[A-Z_]+)\s*,", code))
@@ -171,7 +191,8 @@ class TargetProgram:
         return dict(source=str(self.source), source_sha256=self.source_sha256, n=self.n,
                     compiler={k: v for k, v in self.compiler_info.items() if k != "probe"},
                     flags=list(self.flags), compile_timeout=self.compile_timeout,
-                    require_checksum=self.require_checksum, kernel_clock=self.kernel_clock)
+                    require_checksum=self.require_checksum, kernel_clock=self.kernel_clock,
+                    require_kernel_boundaries=self.require_kernel_boundaries)
 
     def build(self, opt, emit=None):
         if opt not in OPTS:
@@ -179,7 +200,7 @@ class TargetProgram:
         if digest(self.source.read_bytes()) != self.source_sha256:
             raise ValueError("target source changed during experiment")
         flags = [*self.flags, "-" + opt]
-        identity = dict(self.metadata(), flags=flags)
+        identity = build_identity(self.metadata(), opt)
         key = fingerprint(identity)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         binary, manifest = self.cache_dir / key, self.cache_dir / (key + ".json")
@@ -194,7 +215,7 @@ class TargetProgram:
             except (ValueError, KeyError, OSError):
                 pass
         if cached is not None:
-            result.update(cached, cached=True, compile_wall_s=0)
+            result.update(cached, cached=True, compile_wall_s=0, compile_raw_s=0)
             if emit:
                 emit("build", result)
             return result
@@ -208,7 +229,10 @@ class TargetProgram:
             Path(temporary).unlink(missing_ok=True)
             raise
         result.update(cached=False, compile=compile_result, status=compile_result["status"],
-                      compile_wall_s=compile_result["process_wall_s"], binary_sha256=None)
+                      compile_wall_s=compile_result["process_wall_s"],
+                      compile_raw_s=compile_result.get("process_raw_s")
+                          if compile_result.get("timing_status") == "ok" else None,
+                      binary_sha256=None)
         try:
             if result["status"] == "ok":
                 os.replace(temporary, binary)
@@ -224,7 +248,7 @@ class TargetProgram:
         return result
 
     @staticmethod
-    def parse(stdout):
+    def elapsed(stdout):
         lines = stdout.splitlines()
         if not lines:
             raise ValueError("missing elapsed-time output")
@@ -232,8 +256,15 @@ class TargetProgram:
             value = float(lines[0].strip())
         except ValueError as exc:
             raise ValueError("first output line is not a float") from exc
-        if not math.isfinite(value) or value <= 0:
-            raise ValueError("elapsed time must be positive and finite")
+        if not math.isfinite(value):
+            raise ValueError("elapsed time must be finite")
+        return value
+
+    @staticmethod
+    def parse(stdout):
+        value = TargetProgram.elapsed(stdout)
+        if value <= 0:
+            raise ValueError("elapsed time must be positive")
         TargetProgram.checksum(stdout)
         return value
 
@@ -253,28 +284,76 @@ class TargetProgram:
             raise ValueError("checksum must be finite")
         return value
 
-    def measure(self, build, config, timeout, on_start=None):
+    @staticmethod
+    def kernel_boundaries(stdout):
+        names = ("kernel_start_ns", "kernel_end_ns")
+        lines = [line.strip() for line in stdout.splitlines()[1:]
+                 if line.strip().startswith(names)]
+        if not lines:
+            return None
+        values = {}
+        for line in lines:
+            match = re.fullmatch(r"(kernel_start_ns|kernel_end_ns)=(-?[0-9]+)", line)
+            if not match or match[1] in values:
+                raise ValueError("invalid or duplicate kernel nanosecond boundary")
+            values[match[1]] = int(match[2])
+        if set(values) != set(names):
+            raise ValueError("missing kernel nanosecond boundary")
+        return values
+
+    def measure(self, build, config, timeout, on_start=None, *, mode="benchmark"):
+        if mode not in RUN_MODES:
+            raise ValueError("unknown run mode")
         binary = Path(build["binary"])
         if digest(binary.read_bytes()) != build["binary_sha256"]:
             raise ValueError("cached binary changed before measurement")
         result = process([str(binary), str(config.s)], timeout, on_start)
         result.update(kernel_s=None, kernel_clock=self.kernel_clock, kernel_unit="s",
                       checksum=None, build_key=build["build_key"],
-                      binary_sha256=build["binary_sha256"])
+                      binary_sha256=build["binary_sha256"], mode=mode,
+                      output_status="not_checked", score_eligible=False,
+                      kernel_start_ns=None, kernel_end_ns=None,
+                      timing_source_established=self.kernel_clock != "unknown")
         if result["status"] == "ok":
             try:
-                result["kernel_s"] = self.parse(result["stdout"])
+                result["kernel_s"] = self.elapsed(result["stdout"])
                 result["checksum"] = self.checksum(result["stdout"])
+                boundaries = self.kernel_boundaries(result["stdout"])
                 if self.require_checksum and result["checksum"] is None:
                     raise ValueError("missing checksum output for this target")
+                if getattr(self, "require_kernel_boundaries", False) and boundaries is None:
+                    raise ValueError("missing kernel nanosecond boundaries for this target")
+                if boundaries is not None:
+                    result.update(boundaries)
+                result["output_status"] = "ok"
+                if result["kernel_s"] <= 0:
+                    result.update(timing_status="invalid", timing_error="kernel clock did not advance")
             except ValueError as exc:
-                result.update(status="parse_error", error=str(exc), kernel_s=None)
+                result.update(status="parse_error", error=str(exc), kernel_s=None,
+                              output_status="error")
             if result["status"] == "ok" and self.kernel_clock != "unknown":
                 wall = result.get("clock_deltas_s", {}).get(self.kernel_clock)
                 if type(wall) not in (int, float) or not math.isfinite(wall) or wall <= 0:
-                    result.update(status="clock_error", error="missing or invalid same-domain process interval")
+                    result.update(timing_status="invalid", timing_error="missing or invalid same-domain process interval")
                 elif result["kernel_s"] > wall + .005:
-                    result.update(status="clock_error", error="kernel elapsed exceeds same-domain process time + 0.005 s")
+                    result.update(timing_status="invalid", timing_error="kernel elapsed exceeds same-domain process time + 0.005 s")
+            if result["status"] == "ok" and boundaries is not None:
+                start, end = boundaries["kernel_start_ns"], boundaries["kernel_end_ns"]
+                if start < 0 or end <= start:
+                    result.update(timing_status="invalid", timing_error="kernel nanosecond boundaries did not advance")
+                elif abs(result["kernel_s"] - (end - start) / 1e9) > .0000005 + 1e-12:
+                    result.update(timing_status="invalid", timing_error="kernel seconds differ from integer nanosecond boundaries")
+                if self.kernel_clock != "unknown":
+                    begin = result.get("clock_start_ns", {}).get(self.kernel_clock)
+                    finish = result.get("clock_end_ns", {}).get(self.kernel_clock)
+                    if type(begin) is not int or type(finish) is not int or not begin <= start < end <= finish:
+                        result.update(timing_status="invalid", timing_error="kernel boundaries are outside same-domain process boundaries")
+            if result["status"] == "ok":
+                result.setdefault("timing_status", "ok")
+                result.setdefault("timing_error", None)
+                if result["timing_status"] == "invalid" and mode == "benchmark":
+                    result.update(status="clock_error", error=result["timing_error"])
+                result["score_eligible"] = mode == "benchmark" and result["timing_status"] == "ok"
         return result
 
 
@@ -437,19 +516,22 @@ def unfinished_builds(records):
 
 
 class Evaluator:
-    def __init__(self, target, space, journal, repeats=1, timeout=1800):
+    def __init__(self, target, space, journal, repeats=1, timeout=1800, *, mode="benchmark"):
         if type(repeats) is not int or repeats < 1:
             raise ValueError("repeats must be a positive integer")
         if not math.isfinite(timeout) or timeout <= 0:
             raise ValueError("timeout must be positive and finite")
+        if mode not in RUN_MODES:
+            raise ValueError("unknown run mode")
         self.target, self.space, self.journal = target, space, journal
-        self.repeats, self.timeout = repeats, timeout
+        self.repeats, self.timeout, self.mode = repeats, timeout, mode
         self.session_started = None
+        self.session_raw_started_ns = None
 
     def evaluate(self, config, trial_id, strategy=None):
         self.space.check(config)
         if strategy is not None:
-            if strategy.name != "recheck" or self.repeats != 1:
+            if strategy.name != "recheck" or self.repeats != 1 or self.mode != "benchmark":
                 raise ValueError("aggregate scoring requires recheck with one process per trial")
             if config != strategy.suggest():
                 raise ValueError("evaluation does not match next proposed configuration")
@@ -460,8 +542,10 @@ class Evaluator:
                 raise ValueError("completed trial configuration mismatch")
             return completed
         trial_started = time.monotonic()
+        trial_raw_started_ns = raw_time_ns()
         if not records:
-            self.journal.append("trial_start", trial_id=trial_id, config=asdict(config), started_at=now())
+            self.journal.append("trial_start", trial_id=trial_id, config=asdict(config), started_at=now(),
+                                raw_start_ns=trial_raw_started_ns)
         elif records[0]["config"] != asdict(config):
             raise ValueError("resume trial configuration mismatch")
         emit = lambda kind, data: self.journal.append(kind, trial_id=trial_id, config=asdict(config), **data)
@@ -486,8 +570,11 @@ class Evaluator:
                 raise KeyboardInterrupt
             if build["status"] == "ok":
                 for repeat in range(len(measurements), self.repeats):
-                    result = self.target.measure(build, config, self.timeout,
-                        lambda data: emit("measurement_start", dict(repeat=repeat, **data)))
+                    start_callback = lambda data: emit("measurement_start", dict(repeat=repeat, **data))
+                    if self.mode == "benchmark":
+                        result = self.target.measure(build, config, self.timeout, start_callback)
+                    else:
+                        result = self.target.measure(build, config, self.timeout, start_callback, mode=self.mode)
                     measurements.append(emit("measurement", dict(repeat=repeat, **result)))
                     if result["status"] == "interrupted":
                         raise KeyboardInterrupt
@@ -496,7 +583,9 @@ class Evaluator:
         samples = [r["kernel_s"] for r in measurements if r["status"] == "ok"]
         valid = not interrupted_build and build is not None and build["status"] == "ok" and \
             len(measurements) == self.repeats and len(samples) == self.repeats
-        score = statistics.median(samples) if valid else None
+        score_eligible = valid and self.mode == "benchmark" and all(
+            r.get("score_eligible", True) for r in measurements)
+        score = statistics.median(samples) if score_eligible else None
         scoring = {}
         if strategy is not None:
             phase = "recheck" if config in strategy.first_scores else "explore"
@@ -511,23 +600,39 @@ class Evaluator:
         else:
             previous = [r for r in self.journal.records if r["type"] == "trial" and r["score"] is not None]
             candidates = [dict(config=r["config"], score=r["score"]) for r in previous]
-            if valid:
+            if score_eligible:
                 candidates.append(dict(config=asdict(config), score=score))
             best = min(candidates, key=lambda r: r["score"]) if candidates else None
         wall = time.monotonic() - trial_started
+        trial_raw_ended_ns = raw_time_ns()
+        raw_elapsed = (trial_raw_ended_ns - trial_raw_started_ns) / 1e9
         prior_wall = sum((r.get("compile_wall_s") or 0) for r in records if r["type"] == "build") + sum(
             (r.get("process_wall_s") or 0) for r in records if r["type"] == "measurement")
+        prior_raw = sum(r.get("compile_raw_s") or 0 for r in records if r["type"] == "build") + sum(
+            r.get("process_raw_s") or 0 for r in records if r["type"] == "measurement")
         cost = dict(started_at=records[0]["at"] if records else next(
             r["started_at"] for r in self.journal.records if r["type"] == "trial_start" and r["trial_id"] == trial_id),
             ended_at=now(), trial_wall_s=None if records else wall,
-            trial_wall_recorded_s=prior_wall + wall, resumed=bool(records))
+            trial_wall_recorded_s=prior_wall + wall, resumed=bool(records),
+            raw_start_ns=trial_raw_started_ns, raw_end_ns=trial_raw_ended_ns,
+            trial_raw_s=raw_elapsed if not records and raw_elapsed > 0 else None,
+            trial_raw_recorded_s=prior_raw + raw_elapsed,
+            primary_clock=PRIMARY_CLOCK)
         if self.session_started is not None:
             elapsed = sum(r["wall_s"] for r in self.journal.records if r["type"] == "session_end") + \
                 time.monotonic() - self.session_started
             unknown = sum(r["type"] == "session_start" for r in self.journal.records) - sum(
                 r["type"] == "session_end" for r in self.journal.records) > 1
             cost.update(tuning_elapsed_s=None if unknown else elapsed, tuning_elapsed_recorded_s=elapsed)
+        if self.session_raw_started_ns is not None:
+            completed_sessions = [r for r in self.journal.records if r["type"] == "session_end"]
+            raw_elapsed = (trial_raw_ended_ns - self.session_raw_started_ns) / 1e9
+            known_raw = sum(r["raw_s"] for r in completed_sessions if r.get("raw_s") is not None)
+            unknown_raw = any(r.get("raw_s") is None for r in completed_sessions) or unknown or raw_elapsed <= 0
+            cost.update(tuning_raw_elapsed_s=None if unknown_raw else known_raw + raw_elapsed,
+                        tuning_raw_elapsed_recorded_s=known_raw + raw_elapsed)
         return emit("trial", dict(score=score, samples=samples, status="ok" if valid else "failed",
+                                  mode=self.mode, score_eligible=score_eligible,
                                   best_so_far=best, **scoring, **cost))
 
     @staticmethod
@@ -555,10 +660,13 @@ def search(strategy, evaluator, budget, session_started=None):
     for trial in trials:
         strategy.observe(Config(**trial["config"]), trial["fresh_score"] if strategy.name == "recheck"
                          else trial["score"])
-    session_started = session_started or dict(monotonic=time.monotonic(), at=now())
+    session_started = session_started or dict(monotonic=time.monotonic(), raw_ns=raw_time_ns(), at=now())
     start = session_started["monotonic"]
+    raw_start = session_started["raw_ns"] if "raw_ns" in session_started else raw_time_ns()
     evaluator.session_started = start
-    journal.append("session_start", started_at=session_started["at"])
+    evaluator.session_raw_started_ns = raw_start
+    journal.append("session_start", started_at=session_started["at"], raw_start_ns=raw_start,
+                   primary_clock=PRIMARY_CLOCK)
     try:
         for trial_id in range(len(trials), budget):
             config = strategy.suggest()
@@ -570,7 +678,11 @@ def search(strategy, evaluator, budget, session_started=None):
                 trial = evaluator.evaluate(config, trial_id)
                 strategy.observe(config, trial["score"])
     finally:
-        journal.append("session_end", ended_at=now(), wall_s=time.monotonic() - start)
+        raw_end = raw_time_ns()
+        journal.append("session_end", ended_at=now(), wall_s=time.monotonic() - start,
+                       raw_start_ns=raw_start, raw_end_ns=raw_end,
+                       raw_s=(raw_end - raw_start) / 1e9 if raw_end > raw_start else None,
+                       primary_clock=PRIMARY_CLOCK)
     trials = [r for r in journal.records if r["type"] == "trial"]
     measurements = [r for r in journal.records if r["type"] == "measurement"]
     builds = [r for r in journal.records if r["type"] == "build"]
@@ -579,7 +691,12 @@ def search(strategy, evaluator, budget, session_started=None):
     incomplete_sessions = sum(r["type"] == "session_start" for r in journal.records) - sum(
         r["type"] == "session_end" for r in journal.records)
     compile_wall = sum(r["compile_wall_s"] for r in builds)
+    compile_raw = sum(r["compile_raw_s"] for r in builds if r.get("compile_raw_s") is not None)
+    missing_compile_raw = incomplete_builds or any(r.get("compile_raw_s") is None for r in builds)
     tuning_wall = sum(r["wall_s"] for r in journal.records if r["type"] == "session_end")
+    sessions = [r for r in journal.records if r["type"] == "session_end"]
+    tuning_raw = sum(r["raw_s"] for r in sessions if r.get("raw_s") is not None)
+    missing_tuning_raw = incomplete_sessions or any(r.get("raw_s") is None for r in sessions)
     stop_reason = "budget" if len(trials) >= budget else (
         "patience" if strategy.name == "patience" and len(strategy.scores) >= strategy.min_trials and
         strategy.stale >= strategy.patience else
@@ -607,7 +724,10 @@ def search(strategy, evaluator, budget, session_started=None):
         compile_wall_recorded_s=compile_wall,
         cached_builds=sum(r["cached"] for r in builds),
         incomplete_sessions=incomplete_sessions, tuning_wall_s=None if incomplete_sessions else tuning_wall,
-        tuning_wall_recorded_s=tuning_wall, **scoring)
+        tuning_wall_recorded_s=tuning_wall,
+        compile_raw_s=None if missing_compile_raw else compile_raw,
+        compile_raw_recorded_s=compile_raw, tuning_raw_s=None if missing_tuning_raw else tuning_raw,
+        tuning_raw_recorded_s=tuning_raw, primary_clock=PRIMARY_CLOCK, mode=evaluator.mode, **scoring)
 
 
 def main(argv=None):
@@ -636,9 +756,10 @@ def main(argv=None):
     parser.add_argument("--start-s", type=int, help="explicit Greedy start for the separate diagnostic panel")
     parser.add_argument("--start-opt", choices=OPTS)
     parser.add_argument("--timeout", type=float, default=1800)
+    parser.add_argument("--mode", choices=RUN_MODES, default="benchmark")
     args = parser.parse_args(argv)
     journal = None
-    session_started = dict(monotonic=time.monotonic(), at=now())
+    session_started = dict(monotonic=time.monotonic(), raw_ns=raw_time_ns(), at=now())
     def interrupt(signum, frame):
         raise KeyboardInterrupt
     previous_handler = signal.signal(signal.SIGTERM, interrupt)
@@ -660,6 +781,8 @@ def main(argv=None):
             space.check(explicit_start)
         if args.action == "search" and args.algorithm == "recheck" and (args.budget < 4 or args.repeats != 1):
             raise ValueError("recheck requires budget >= 4 and repeats=1")
+        if args.action == "search" and args.mode != "benchmark":
+            raise ValueError("search requires benchmark mode; correctness/diagnostic use run or build")
         if args.action == "list":
             print(json.dumps([asdict(c) for c in space.configs]))
             return 0
@@ -678,6 +801,7 @@ def main(argv=None):
             min_relative_improvement=args.min_relative_improvement,
             repeats=args.repeats, timeout=args.timeout,
             runtime_affinity=sorted(os.sched_getaffinity(0)),
+            mode=args.mode, primary_clock=PRIMARY_CLOCK, primary_clock_unit="ns",
             protocol_sha256=digest(args.protocol.read_bytes()) if args.protocol else None,
             cache_dir=str(target.cache_dir))
         if args.action == "search" and args.algorithm == "recheck":
@@ -708,7 +832,7 @@ def main(argv=None):
             strategy = SearchStrategy(metadata["algorithm"], space, args.seed,
                                       args.min_trials, args.patience, args.min_relative_improvement,
                                       budget=metadata["budget"], start=explicit_start)
-            result = search(strategy, Evaluator(target, space, journal, args.repeats, args.timeout),
+            result = search(strategy, Evaluator(target, space, journal, args.repeats, args.timeout, mode=args.mode),
                             metadata["budget"], session_started)
             result = dict(result, output=str(output))
             code = int(result["failed_trials"] > 0)

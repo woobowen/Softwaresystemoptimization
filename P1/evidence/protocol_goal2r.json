@@ -1,0 +1,366 @@
+{
+  "schema": 2,
+  "method": "goal2r",
+  "state": "approved",
+  "approval": {
+    "code_evidence": "evidence/reviews/goal2r_code_review.md",
+    "method_evidence": "evidence/reviews/goal2r_method_challenge.md",
+    "method_result_evidence": "evidence/reviews/goal2r_method_result_review.md"
+  },
+  "framework": {
+    "path": "src/autotuner.py",
+    "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec"
+  },
+  "target": {
+    "path": "src/matrix_multiplication.c",
+    "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+    "compiler": "gcc",
+    "compiler_identity": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+      "version": "x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26"
+    },
+    "require_checksum": true,
+    "common_flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra"
+    ],
+    "n": 4096,
+    "require_kernel_boundaries": true
+  },
+  "space": {
+    "blocks": [
+      8,
+      16,
+      24,
+      64,
+      128
+    ],
+    "opts": [
+      "O0",
+      "O1",
+      "O2",
+      "O3"
+    ]
+  },
+  "measurement": {
+    "cpu_affinity": [
+      0
+    ],
+    "timeout_s": 1200,
+    "compile_timeout_s": 60,
+    "cache_dir": ".cache/build_goal2r",
+    "warmup": {
+      "s": 128,
+      "opt": "O2",
+      "repeats": 1
+    },
+    "statistic": "median",
+    "score_clock": "CLOCK_MONOTONIC_RAW",
+    "process_clock": "CLOCK_MONOTONIC",
+    "primary_process_clock": "CLOCK_MONOTONIC_RAW",
+    "cost_clock": "CLOCK_MONOTONIC_RAW",
+    "resource_clock": "CLOCK_MONOTONIC_RAW",
+    "arrangement": "serial_balanced_blocks",
+    "performance_lock": ".cache/performance.lock",
+    "clock_health": {
+      "status": "supported_for_stage_checked_intervals",
+      "timer": "CLOCK_MONOTONIC_RAW",
+      "kernel_over_process_tolerance_s": 0.005,
+      "guard": "qpc_aligned_blocks",
+      "guard_mode": "qpc_aligned_blocks",
+      "guard_schema": 3,
+      "auxiliary_ratio_is_stop_rule": false,
+      "probe": {
+        "path": ".cache/clock_goal2/probe",
+        "sha256": "8c98025fbc9de32235bd25e954ea92fefba4fc396a5d649a885ff05de019d43d"
+      },
+      "raw_qpc_bounds": [
+        0.995,
+        1.005
+      ],
+      "endpoint_max_s": 0.02,
+      "relative_bracket_width_max": 0.002,
+      "quantization_allowance_ticks": 2,
+      "block_check_idle_seconds": 10,
+      "diagnostic_plan": "evidence/measurement/goal2r_timing_plan.json",
+      "block_scope": "reference round / main or holdout seed plus panel / each greedy start / additional panel",
+      "checks": "before and after each predeclared block; same adjacent boundary check may be shared",
+      "scope": "observed aligned intervals in this stage; no absolute clock accuracy or future-noise guarantee",
+      "initial_evidence": {
+        "path": "evidence/measurement/goal2r/timing_result.json",
+        "sha256": "3a1d2089c187c86dab2b6797b0207f54a294b09becfd1608ec6b077855168f82"
+      },
+      "independent_integer_review": {
+        "path": "evidence/reviews/goal2r_timing_review.json",
+        "sha256": "4bec43f0035b0d7a30e76833877145fd760a53545620c8bed2b1be82fe9cbbe3"
+      },
+      "diagnostic_plan_sha256": "0a72b98b97d1ac9ff789013664c4fe1ee74e33936a1253e3157520d7f2802c4d",
+      "initial_diagnostic_calls": 10
+    }
+  },
+  "reference": {
+    "rounds": 3,
+    "order_seed": 505063,
+    "anchor": {
+      "s": 128,
+      "opt": "O2"
+    },
+    "anchor_after_positions": [],
+    "reference_best_rule": "minimum_complete_config_median_then_canonical_order",
+    "replace_reference": false,
+    "extra_matrix_calls": 4
+  },
+  "online": {
+    "budget": 8,
+    "repeats": 1,
+    "algorithms": [
+      "grid",
+      "random",
+      "greedy",
+      "recheck"
+    ],
+    "seed_rule": "700001+104729*i",
+    "seeds": [
+      700001,
+      804730,
+      909459,
+      1014188,
+      1118917,
+      1223646
+    ],
+    "order_seed": 505057,
+    "orders": [
+      [
+        "recheck",
+        "grid",
+        "greedy",
+        "random"
+      ],
+      [
+        "random",
+        "recheck",
+        "greedy",
+        "grid"
+      ],
+      [
+        "recheck",
+        "greedy",
+        "random",
+        "grid"
+      ],
+      [
+        "greedy",
+        "random",
+        "grid",
+        "recheck"
+      ],
+      [
+        "grid",
+        "random",
+        "recheck",
+        "greedy"
+      ],
+      [
+        "grid",
+        "recheck",
+        "random",
+        "greedy"
+      ]
+    ],
+    "grid_order": "block_major_then_opt_major",
+    "search_measurements_shared": false,
+    "order_generation": "permutations([grid,random,greedy,recheck]); six rng.choice(permutations) calls per proposed layout with replacement; random.Random(505057); reject on position max-min>1 or Random before S3 count!=3; accept first (layout396)"
+  },
+  "strategy_options": {
+    "recheck": {
+      "explore_calls": 6,
+      "finalists": 2,
+      "rechecks_per_finalist": 1,
+      "selection": "initial_valid_score_then_visit_order",
+      "return": "rechecked_finalist_median_then_initial_visit_order",
+      "failed_recheck": "ineligible_no_free_retry"
+    }
+  },
+  "return_confirmation": {
+    "mode": "shared_panel_after_all_block_searches_locked",
+    "repeats": 3,
+    "config_set": "distinct Random/S3 returns union locked reference best",
+    "deduplicate_by": "target_build_binary_s",
+    "order_seed": 505071,
+    "order_rule": "canonical_then_shuffle_seed_plus_100_block_plus_round",
+    "online_feedback": false,
+    "shared_actual_cost_count": 1,
+    "panel_algorithms": [
+      "random",
+      "recheck"
+    ],
+    "all_searches_lock_before_panel": true
+  },
+  "holdout": {
+    "seeds": [
+      1328375,
+      1433104,
+      1537833
+    ],
+    "candidate_if_selection_keep": "recheck",
+    "baseline": "random",
+    "keep_orders": [
+      [
+        "random",
+        "recheck"
+      ],
+      [
+        "recheck",
+        "random"
+      ],
+      [
+        "random",
+        "recheck"
+      ]
+    ],
+    "failed_selection_orders": [
+      [
+        "random"
+      ],
+      [
+        "random"
+      ],
+      [
+        "random"
+      ]
+    ],
+    "retune_after_reading": false,
+    "additional_panel_rounds": 0
+  },
+  "greedy_start_panel": {
+    "budget": 8,
+    "starts": [
+      {
+        "s": 8,
+        "opt": "O0"
+      },
+      {
+        "s": 16,
+        "opt": "O1"
+      },
+      {
+        "s": 24,
+        "opt": "O2"
+      },
+      {
+        "s": 128,
+        "opt": "O3"
+      }
+    ],
+    "counts_as_random_seeds": false
+  },
+  "acceptance": {
+    "state": "frozen",
+    "primary_quality": "same_round_shared_panel_gain",
+    "course_quality": "g_ref_configuration_identity",
+    "epsilon_pct": 5,
+    "quality_loss_pp": 2,
+    "quality_gain_median_pp": 2,
+    "quality_gain_seed_pp": 5,
+    "minimum_improving_seeds": 2,
+    "severe_regression_pp": 10,
+    "quality_cost_increase_fraction": 0.1,
+    "efficiency_wall_saving_fraction": 0.1,
+    "gain_definition": "100*(t_Random_round-t_S3_round)/t_locked_reference_round; same choice identity zero",
+    "range_rule": "min/max of all three or five round gains; descriptive, not confidence interval or future noise bound",
+    "order": [
+      "missing_layer_INCONCLUSIVE",
+      "any_upper_below_minus2_REJECT",
+      "risk_crossing_INCONCLUSIVE",
+      "risk_safe_median_saving_at_least10pct_KEEP",
+      "risk_safe_quality_lower2pp_two_lower5pp_cost_increase_at_most10pct_KEEP",
+      "quality_upper_possible_but_lower_unsupported_INCONCLUSIVE",
+      "otherwise_supported_no_meaningful_benefit_REJECT"
+    ],
+    "quality_upper_possible_rule": "median upper>=2pp and at least two upper>=5pp and median cost increase<=10%",
+    "same_identity_requires_complete_data": true,
+    "candidate_keep_requires_holdout": true,
+    "descriptive_bounds_are_confidence_intervals": false,
+    "aa_global_padding_pp": null,
+    "float_absolute_rounding_tolerance": 1e-12,
+    "additional_confirmation": {
+      "stage": "comparison_only",
+      "maximum_pairs": 2,
+      "rounds": [
+        4,
+        5
+      ],
+      "maximum_calls": 12,
+      "trigger": "complete main INCONCLUSIVE with different-identity risk or quality threshold crossing",
+      "selection": "risk crossing first, then quality crossing; within class decreasing gain width, increasing seed",
+      "purpose": "finite reproduction and extended descriptive observations; all samples retained; envelope cannot shrink",
+      "restart_search": false,
+      "change_seed": false
+    },
+    "cli_default_algorithm": "grid"
+  },
+  "failure_policy": {
+    "action": "stop_and_diagnose",
+    "automatic_retries": 0,
+    "maximum_repair_attempts": 3,
+    "exclude_slow_samples": false,
+    "changed_target_requires_new_batch": true,
+    "hard_exit_requires_process_inspection": true,
+    "unknown_cost_is_zero": false
+  },
+  "resources": {
+    "max_process_runs": 520,
+    "max_wall_s": 57600,
+    "prior_calls": 48,
+    "prior_cost_s": 3713.432874365,
+    "diagnostic_matrix_upper": 12,
+    "numeric_plus_final_upper": 3,
+    "reference_upper": 64,
+    "comparison_plus_panels_upper": 246,
+    "greedy_starts_upper": 32,
+    "keep_holdout_upper": 75,
+    "baseline_only_holdout_upper": 42,
+    "shared_reserve": 40,
+    "worst_case_total_with_prior": 480,
+    "new_cost_clock": "CLOCK_MONOTONIC_RAW",
+    "old_charges_unchanged": true,
+    "diagnostic_seconds_cap": 2700,
+    "one_additional_diagnostic_seconds_cap": 1800,
+    "supplementary_cost_reserve_s": 180,
+    "supplementary_cost_parts": {
+      "unmeasured_method_control_upper_s": 120,
+      "measured_agent_and_followup_reserve_s": 60,
+      "actual_fees_recorded_separately": true
+    }
+  },
+  "execution": {
+    "driver": {
+      "path": "scripts/experiment_v2.py",
+      "sha256": "9d985ae01c24ad322bc4847772b082c425793e8758871feac1b8edc3cf9e41ee"
+    },
+    "analysis": {
+      "path": "scripts/goal2r_analysis.py",
+      "sha256": "5b125ad8b5a0fa068b52075ab6e063820ded27271ebcc0464ae49779a697a7ff"
+    },
+    "decision": {
+      "path": "scripts/identity_quality.py",
+      "sha256": "a5a94c084cd3998ec6e32ab70cad3d36f140a9bbdd83b81bed636662bc7d13a6"
+    },
+    "host_clock_probe": {
+      "path": "scripts/host_clock_probe.py",
+      "sha256": "5ebcb21f709ab0f325855892aee2cdae349035fb808c45a20a61a357f288326c"
+    },
+    "diagnostic_checks": {
+      "path": "scripts/goal2r_checks.py",
+      "sha256": "5e61cdae21b45dc2ea269e44e516c15b671db69a00b25e7d9de490de095c9b4b"
+    },
+    "summarize_entry": {
+      "path": "scripts/summarize_v2.py",
+      "sha256": "de5119cec0bc8edef358f26ec56cef4807031d874c1d8024219a2f9700b1b0e8"
+    }
+  },
+  "method_note": "evidence/measurement/goal2r_method.md",
+  "method_note_sha256": "f028a53ce57a79fa548af7f4385175069982af20ab999227aab088eaeb2f900e"
+}

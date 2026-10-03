@@ -1,0 +1,663 @@
+{
+  "primary_supported": true,
+  "primary_clock": "CLOCK_MONOTONIC_RAW",
+  "cost_clock": "CLOCK_MONOTONIC_RAW",
+  "unit": "ns before subtraction; seconds after",
+  "boot_id": "e3ff608b-19f5-46f9-816e-0c3cd0941122",
+  "timing_plan_sha256": "0a72b98b97d1ac9ff789013664c4fe1ee74e33936a1253e3157520d7f2802c4d",
+  "host_source_sha256": "5ebcb21f709ab0f325855892aee2cdae349035fb808c45a20a61a357f288326c",
+  "kernel_scope": "six-loop multiply only; exact integer boundaries in target stdout",
+  "qpc_matrix_scope": "outer aligned core CLI interval including process, cache/framework and initialization; not kernel-only",
+  "process_scope": "Linux parent before spawn to after communicate",
+  "search_scope": "actual outer driver launch through completed journal; formal blocks checked separately",
+  "intervals": [
+    {
+      "id": "idle-10",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "host_pid": 1752,
+      "host_managed_thread_id": 19,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 10.3523881,
+      "endpoint_bracket_s": [
+        0.000207271,
+        0.000409368
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 10.002763214,
+          "upper_s": 10.003364531,
+          "host_to_linux_ratio_bounds": [
+            1.0348905978501923,
+            1.0349528503794494
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9662275915597175,
+            0.966285713753056
+          ],
+          "bracket_width_fraction": 5.808485870047601e-05
+        },
+        "RAW": {
+          "lower_s": 10.35203349,
+          "upper_s": 10.352650129,
+          "host_to_linux_ratio_bounds": [
+            0.9999746703504192,
+            1.0000342744254396
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999657267492564,
+            1.0000253302911881
+          ],
+          "bracket_width_fraction": 5.956490367670996e-05
+        },
+        "REALTIME": {
+          "lower_s": 11.746366737,
+          "upper_s": 11.746968011,
+          "host_to_linux_ratio_bounds": [
+            0.8812816967157739,
+            0.8813268418898337
+          ],
+          "linux_to_host_ratio_bounds": [
+            1.1346528353268974,
+            1.1347109598742915
+          ],
+          "bracket_width_fraction": 5.808070506931708e-05
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    },
+    {
+      "id": "work-4e9",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "host_pid": 1752,
+      "host_managed_thread_id": 19,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 11.6835443,
+      "endpoint_bracket_s": [
+        0.000204635,
+        0.00037845
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 11.24806661,
+          "upper_s": 11.24861856,
+          "host_to_linux_ratio_bounds": [
+            1.0386647958307156,
+            1.0387157993546057
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9627272451438004,
+            0.9627745197623726
+          ],
+          "bracket_width_fraction": 4.724165765350758e-05
+        },
+        "RAW": {
+          "lower_s": 11.683227625,
+          "upper_s": 11.68381071,
+          "host_to_linux_ratio_bounds": [
+            0.9999771812462032,
+            1.0000271222140122
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999728785215822,
+            1.0000228192745042
+          ],
+          "bracket_width_fraction": 4.9906516809185846e-05
+        },
+        "REALTIME": {
+          "lower_s": 11.24806684,
+          "upper_s": 11.248618868,
+          "host_to_linux_ratio_bounds": [
+            1.0386647673908902,
+            1.0387157781149885
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9627272648296071,
+            0.9627745461242364
+          ],
+          "bracket_width_fraction": 4.7248333709792e-05
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    },
+    {
+      "id": "matrix-fast",
+      "source": "evidence/measurement/goal2r/initial-early.stdout.txt",
+      "sha256": "34a7051ff78cc190819e3c48194ce3c62a9eb0837d9b4b1cf61e7e91ec200ec1",
+      "host_pid": 1752,
+      "host_managed_thread_id": 19,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 38.8194298,
+      "endpoint_bracket_s": [
+        0.000154012,
+        0.000445383
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 36.929067031,
+          "upper_s": 36.929653921,
+          "host_to_linux_ratio_bounds": [
+            1.0511723094682286,
+            1.0511890259077799
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9513036907291014,
+            0.9513188189916114
+          ],
+          "bracket_width_fraction": 1.5118460086217076e-05
+        },
+        "RAW": {
+          "lower_s": 38.819100799,
+          "upper_s": 38.819700194,
+          "host_to_linux_ratio_bounds": [
+            0.9999930294670323,
+            1.0000084803870577
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999915196848587,
+            1.0000069705815564
+          ],
+          "bracket_width_fraction": 1.544059258700998e-05
+        },
+        "REALTIME": {
+          "lower_s": 38.402723971,
+          "upper_s": 38.403310484,
+          "host_to_linux_ratio_bounds": [
+            1.0108355011783,
+            1.0108509497741536
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9892655294268874,
+            0.9892806483689293
+          ],
+          "bracket_width_fraction": 1.510874845466656e-05
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    },
+    {
+      "id": "idle-40",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "host_pid": 15740,
+      "host_managed_thread_id": 16,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 42.4402569,
+      "endpoint_bracket_s": [
+        0.000212203,
+        0.000660899
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 40.001830773,
+          "upper_s": 40.00264152,
+          "host_to_linux_ratio_bounds": [
+            1.0609363553849631,
+            1.0609578681745202
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9425444968145587,
+            0.9425636089519693
+          ],
+          "bracket_width_fraction": 1.910325382586492e-05
+        },
+        "RAW": {
+          "lower_s": 42.439736854,
+          "upper_s": 42.440609956,
+          "host_to_linux_ratio_bounds": [
+            0.9999916764627,
+            1.0000122584643205
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999877416859475,
+            1.0000083236065818
+          ],
+          "bracket_width_fraction": 2.057249563915584e-05
+        },
+        "REALTIME": {
+          "lower_s": 41.980752872,
+          "upper_s": 41.981563691,
+          "host_to_linux_ratio_bounds": [
+            1.0109260582187016,
+            1.010945592838724
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.989172916014215,
+            0.9891920302876019
+          ],
+          "bracket_width_fraction": 1.910495032845978e-05
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    },
+    {
+      "id": "work-8e9",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "host_pid": 15740,
+      "host_managed_thread_id": 16,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 22.1342294,
+      "endpoint_bracket_s": [
+        0.000260411,
+        0.000433533
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 20.901137366,
+          "upper_s": 20.901813337,
+          "host_to_linux_ratio_bounds": [
+            1.0589621504665532,
+            1.0589964178698656
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9442902573848788,
+            0.9443208140719894
+          ],
+          "bracket_width_fraction": 3.0539622038963775e-05
+        },
+        "RAW": {
+          "lower_s": 22.133856749,
+          "upper_s": 22.134550693,
+          "host_to_linux_ratio_bounds": [
+            0.9999854755127194,
+            1.0000168452793485
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.99998315500441,
+            1.0000145246982444
+          ],
+          "bracket_width_fraction": 3.135162229780533e-05
+        },
+        "REALTIME": {
+          "lower_s": 22.801248494,
+          "upper_s": 22.801924696,
+          "host_to_linux_ratio_bounds": [
+            0.9707175817435653,
+            0.9707463872350883
+          ],
+          "linux_to_host_ratio_bounds": [
+            1.0301351755201817,
+            1.0301657441949683
+          ],
+          "bracket_width_fraction": 3.0550058363498723e-05
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    },
+    {
+      "id": "matrix-slow",
+      "source": "evidence/measurement/goal2r/initial-late.stdout.txt",
+      "sha256": "0c3cb3edeb2da46d5cad763754e0c5e317f1ef8acc6ba804d80019da485511cf",
+      "host_pid": 15740,
+      "host_managed_thread_id": 16,
+      "frequency_hz": 10000000,
+      "host_elapsed_s": 335.159925,
+      "endpoint_bracket_s": [
+        0.000209303,
+        0.00041221
+      ],
+      "host_quantization_allowance_s": 2e-07,
+      "linux_interval_bounds": {
+        "MONOTONIC": {
+          "lower_s": 315.362982018,
+          "upper_s": 315.363605016,
+          "host_to_linux_ratio_bounds": [
+            1.0627730006542626,
+            1.0627751014254108
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.940932845207593,
+            0.9409347051387094
+          ],
+          "bracket_width_fraction": 1.8588081495214541e-06
+        },
+        "RAW": {
+          "lower_s": 335.159627982,
+          "upper_s": 335.160249495,
+          "host_to_linux_ratio_bounds": [
+            0.9999990312246142,
+            1.0000008867953512
+          ],
+          "linux_to_host_ratio_bounds": [
+            0.9999991132054353,
+            1.0000009687763243
+          ],
+          "bracket_width_fraction": 1.8543774289204945e-06
+        },
+        "REALTIME": {
+          "lower_s": 335.780939086,
+          "upper_s": 335.781561411,
+          "host_to_linux_ratio_bounds": [
+            0.998148687472928,
+            0.9981505385990925
+          ],
+          "linux_to_host_ratio_bounds": [
+            1.001852888246199,
+            1.0018547462420244
+          ],
+          "bracket_width_fraction": 1.8568001529264474e-06
+        }
+      },
+      "usable_brackets": true,
+      "endpoint_limits_pass": [
+        true,
+        true
+      ],
+      "width_limits_pass": {
+        "MONOTONIC": true,
+        "RAW": true,
+        "REALTIME": true
+      },
+      "raw_relative_screen_pass": true,
+      "limits": {
+        "endpoint_s": 0.02,
+        "relative_bracket_width": 0.002
+      }
+    }
+  ],
+  "aa_samples": [
+    {
+      "id": "aa-01-F-A1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-01-F-A1.jsonl",
+      "sha256": "16f295cb7c00b72891526d00eb0ccc1349634a3d9e41e309561b498c703a2e2c",
+      "pid": 31273,
+      "kernel_s": 38.893211,
+      "kernel_start_ns": 2516798544947,
+      "kernel_end_ns": 2555691755809,
+      "process_raw_s": 39.478314172,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 37.6176779,
+        "CLOCK_MONOTONIC_RAW": 39.478314172,
+        "CLOCK_REALTIME": 39.114723848
+      },
+      "driver_raw_s": 39.660898824
+    },
+    {
+      "id": "aa-02-F-B1",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-02-F-B1.jsonl",
+      "sha256": "0a97de9d7117f04c99f916d4b930b6031c3e5a4e3c71efd95c147559b5fa014b",
+      "pid": 31596,
+      "kernel_s": 37.816395,
+      "kernel_start_ns": 2556643946211,
+      "kernel_end_ns": 2594460341686,
+      "process_raw_s": 38.556532518,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 36.28978871,
+        "CLOCK_MONOTONIC_RAW": 38.556532518,
+        "CLOCK_REALTIME": 37.942688847
+      },
+      "driver_raw_s": 38.839585014
+    },
+    {
+      "id": "aa-03-M-B1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-03-M-B1.jsonl",
+      "sha256": "86ea9af8a723f09b048bf6679c93c5c470c7741783f024e762c66c2326665c68",
+      "pid": 31898,
+      "kernel_s": 77.231976,
+      "kernel_start_ns": 2595365598488,
+      "kernel_end_ns": 2672597574946,
+      "process_raw_s": 77.856777674,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 73.34586889,
+        "CLOCK_MONOTONIC_RAW": 77.856777674,
+        "CLOCK_REALTIME": 79.504031233
+      },
+      "driver_raw_s": 78.080665971
+    },
+    {
+      "id": "aa-04-M-A1",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 1,
+      "source": "evidence/measurement/goal2r/aa-04-M-A1.jsonl",
+      "sha256": "d8b00eda73f8ed773eba56e72ddf3a9ddf94d9290e232dca02eb766d77527921",
+      "pid": 32483,
+      "kernel_s": 76.416761,
+      "kernel_start_ns": 2673463130891,
+      "kernel_end_ns": 2749879891520,
+      "process_raw_s": 77.042626358,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 72.776918331,
+        "CLOCK_MONOTONIC_RAW": 77.042626358,
+        "CLOCK_REALTIME": 76.475974697
+      },
+      "driver_raw_s": 77.342243256
+    },
+    {
+      "id": "aa-05-M-A2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "A",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-05-M-A2.jsonl",
+      "sha256": "6d811662f37c714b1575767ec0396b2534e9b0e7403bb42115c70ecb7d54600d",
+      "pid": 35934,
+      "kernel_s": 75.131166,
+      "kernel_start_ns": 3151889184432,
+      "kernel_end_ns": 3227020349934,
+      "process_raw_s": 75.814863833,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 71.180681655,
+        "CLOCK_MONOTONIC_RAW": 75.814863833,
+        "CLOCK_REALTIME": 75.584458919
+      },
+      "driver_raw_s": 75.954221874
+    },
+    {
+      "id": "aa-06-M-B2",
+      "config": {
+        "s": 8,
+        "opt": "O2"
+      },
+      "tier": "M",
+      "label": "B",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-06-M-B2.jsonl",
+      "sha256": "c6dedfaff3f1aa25ab287cc94b63a52e65995799cd9321dcb656289fe5be1269",
+      "pid": 36530,
+      "kernel_s": 88.073248,
+      "kernel_start_ns": 3227813471362,
+      "kernel_end_ns": 3315886719310,
+      "process_raw_s": 88.704546938,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 83.524856162,
+        "CLOCK_MONOTONIC_RAW": 88.704546938,
+        "CLOCK_REALTIME": 87.343900568
+      },
+      "driver_raw_s": 89.00598068
+    },
+    {
+      "id": "aa-07-F-B2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "B",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-07-F-B2.jsonl",
+      "sha256": "9a6e5205b1c9b442212d16202bc77769de23c9ccac95609e4c960c6bbd90bbe4",
+      "pid": 37105,
+      "kernel_s": 41.648063,
+      "kernel_start_ns": 3316877620491,
+      "kernel_end_ns": 3358525683057,
+      "process_raw_s": 42.315084618,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 39.884525422,
+        "CLOCK_MONOTONIC_RAW": 42.315084618,
+        "CLOCK_REALTIME": 43.807700883
+      },
+      "driver_raw_s": 42.469909628
+    },
+    {
+      "id": "aa-08-F-A2",
+      "config": {
+        "s": 128,
+        "opt": "O2"
+      },
+      "tier": "F",
+      "label": "A",
+      "pair": 2,
+      "source": "evidence/measurement/goal2r/aa-08-F-A2.jsonl",
+      "sha256": "6027e9015410cd40ff0672cec1dc4500076e68d26ce8efd68fe961463844606c",
+      "pid": 37373,
+      "kernel_s": 43.392648,
+      "kernel_start_ns": 3359336059840,
+      "kernel_end_ns": 3402728707934,
+      "process_raw_s": 44.034216508,
+      "process_auxiliary_s": {
+        "CLOCK_MONOTONIC": 41.56811867,
+        "CLOCK_MONOTONIC_RAW": 44.034216508,
+        "CLOCK_REALTIME": 43.545720872
+      },
+      "driver_raw_s": 44.266507847
+    }
+  ],
+  "aa_pairs": [
+    {
+      "tier": "F",
+      "pair": 1,
+      "a_s": 38.893211,
+      "b_s": 37.816395,
+      "signed_difference_pct": 2.8075127905102284,
+      "different_processes": true
+    },
+    {
+      "tier": "F",
+      "pair": 2,
+      "a_s": 43.392648,
+      "b_s": 41.648063,
+      "signed_difference_pct": 4.102940766805209,
+      "different_processes": true
+    },
+    {
+      "tier": "M",
+      "pair": 1,
+      "a_s": 76.416761,
+      "b_s": 77.231976,
+      "signed_difference_pct": -1.0611411664256105,
+      "different_processes": true
+    },
+    {
+      "tier": "M",
+      "pair": 2,
+      "a_s": 75.131166,
+      "b_s": 88.073248,
+      "signed_difference_pct": -15.859965650193768,
+      "different_processes": true
+    }
+  ],
+  "diagnostic_calls": 10,
+  "diagnostic_controlled_raw_s": 948.66689723,
+  "limitations": [
+    "QPC and RAW may share hardware; consistency during checked intervals, not independent absolute calibration",
+    "Auxiliary clock adjustments do not identify the cause from a snapshot",
+    "A/A ranges describe these eight processes; no universal future noise padding or clock-failure inference",
+    "Before/after checks cover predeclared blocks; no proof of every instant between endpoints"
+  ]
+}

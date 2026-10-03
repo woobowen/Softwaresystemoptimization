@@ -1,0 +1,65 @@
+{
+  "commit": "5c78049a22fa3422f2b23dddd634f2e7a3d73f9d",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/scripts/summarize_v2.py",
+    "--protocol",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/evidence/protocol_raw_aa.json",
+    "--raw-aa",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/results/raw_aa_v3",
+    "--ledger",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/evidence/measurement/raw_timing/aa_ledger_snapshot.jsonl",
+    "--output-dir",
+    "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/.cache/goal2r-derived"
+  ],
+  "comparison_target": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/reproduce-raw-stop/P1/.cache/derived",
+  "matrix_runs": 0,
+  "attempt_id": "d3a18041518a40c2a3c8e25802a598d7",
+  "driver_raw_s": 0.529089909,
+  "files": [
+    {
+      "file": "batch_costs.csv",
+      "original_sha256": "161cbc9e49f7cf327ec6057c3e2eda0ebc2138fb86ab97190dfb661538a7f13d",
+      "regenerated_sha256": "161cbc9e49f7cf327ec6057c3e2eda0ebc2138fb86ab97190dfb661538a7f13d",
+      "equal": true
+    },
+    {
+      "file": "build_costs.csv",
+      "original_sha256": "c2b0b8374b1fa4559368d141f0d3a8d13dc28f36d2455cbfd32800b8f8ed8998",
+      "regenerated_sha256": "c2b0b8374b1fa4559368d141f0d3a8d13dc28f36d2455cbfd32800b8f8ed8998",
+      "equal": true
+    },
+    {
+      "file": "measurements.csv",
+      "original_sha256": "8c79db6c71704486f58fdf8ecfcdb73fc0581512a025dca03d40e95fd3d06e33",
+      "regenerated_sha256": "8c79db6c71704486f58fdf8ecfcdb73fc0581512a025dca03d40e95fd3d06e33",
+      "equal": true
+    },
+    {
+      "file": "process_costs.csv",
+      "original_sha256": "0672d4780214a888e9e7da84dd244b5f42bdb35466b72a45b48d45ac285dc071",
+      "regenerated_sha256": "0672d4780214a888e9e7da84dd244b5f42bdb35466b72a45b48d45ac285dc071",
+      "equal": true
+    },
+    {
+      "file": "raw_aa_rank.csv",
+      "original_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "regenerated_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "equal": true
+    },
+    {
+      "file": "raw_aa_summary.csv",
+      "original_sha256": "fad97da6053d40095329f9fcf347700ab88177fe4333be6e606f386da9a625f2",
+      "regenerated_sha256": "fad97da6053d40095329f9fcf347700ab88177fe4333be6e606f386da9a625f2",
+      "equal": true
+    },
+    {
+      "file": "summary.json",
+      "original_sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66",
+      "regenerated_sha256": "0811eea00aa7dc67b83838ddeac2549433bf8b16c8881dd860b885e20cd62a66",
+      "equal": true
+    }
+  ],
+  "all_equal": true
+}
