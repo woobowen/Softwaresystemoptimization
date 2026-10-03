@@ -1,0 +1,1 @@
+{"image": ".cache/goal3/build-run-capture.png", "sha256": "bb29daaf7e906509b4928ea423968f07e26e38c0a6c0190be5bee26e239b0cff", "stopped": true, "tcp_listeners": []}

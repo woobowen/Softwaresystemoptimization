@@ -1,0 +1,38 @@
+{
+  "base_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "remote_before_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "protected_trees": {
+    "A1": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+    "A2": "139b6e7469d63b27cfa100d1e005061548d36ce8",
+    "P1/src": "365147f8daa832bac47b43c3088cd2ce300c0078",
+    "P1/results": "af9ea2884fbeec41b870155f1bd61a761488b639",
+    "P1/tests": "73e0edd03be5fe0d107cc761280154f07a6c589d"
+  },
+  "protected_inputs_match": true,
+  "task_processes": [],
+  "process_check_outputs": "only task PID/name; unrelated argv excluded",
+  "recorded_starts": 13,
+  "recorded_ends": 16,
+  "all_recorded_starts_closed": true,
+  "internal_reviews_closed": [
+    "data-review.md",
+    "delivery-review.md"
+  ],
+  "known_preflight_failure_retained": true,
+  "independent_review_sha256": {
+    "data-review.md": "ea5969781c6e69558fb07981f5fc0b57f31fc0779beb162ff0d93f01472d3c9c",
+    "delivery-review.md": "f451aca229b42d08d4e7ded11436c05d9ec79bce433431c16613c06fd1176cf7"
+  },
+  "candidate_manifest_sha256": "61d519df4f0fd6fd3239a89c2feeec8db62d6e8f2811992ecbda112df88b3390",
+  "zip": {
+    "path": "P1/.cache/P1-Goal3-formal-images.zip",
+    "bytes": 615834,
+    "sha256": "db115f2b89694456539af736ebd339acf3141b725720dc544c0417441c0ab146",
+    "members": 6
+  },
+  "packages_added": [],
+  "global_config_changes": [],
+  "out_of_scope_changes": [],
+  "engineering": "PENDING_EXTERNAL_ACCEPTANCE",
+  "submission": "NOT_OPERATED"
+}

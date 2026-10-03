@@ -1,0 +1,191 @@
+{
+  "base_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "clean_export": "clean-export.json",
+  "full_regression": {
+    "command": "python3 -B -m unittest discover -s P1/tests -v",
+    "tests": 254,
+    "skips": 0,
+    "failures": 0,
+    "returncode": 0,
+    "native_screenshot_tests": 4,
+    "native_windows_cleanup_tests": 5,
+    "stdout": "full-regression.stdout.txt",
+    "stderr": "full-regression.stderr.txt"
+  },
+  "four_level_cold_builds": {
+    "full": 4,
+    "minimal": 4,
+    "all_compile_exit_zero": true,
+    "all_cached_false": true,
+    "source_identity_equal": true,
+    "binaries_identical_between_directories": true
+  },
+  "fresh_runs": [
+    {
+      "context": "full",
+      "n": 4096,
+      "s": 128,
+      "opt": "O3",
+      "purpose": "clean engineering correctness run",
+      "calls": 1,
+      "target_returncode": 0,
+      "kernel_stdout_s": 45.362832,
+      "kernel_integer_s": "45.362831808",
+      "kernel_start_ns": 59444811561761,
+      "kernel_end_ns": 59490174393569,
+      "process_raw_s": 46.039513505,
+      "checksum": 17180040496.458935,
+      "mode": "correctness",
+      "added_to_formal_performance": false,
+      "raw": "full-fresh-n4096.jsonl"
+    },
+    {
+      "context": "minimal",
+      "n": 4096,
+      "s": 128,
+      "opt": "O3",
+      "purpose": "minimum classroom runtime and real terminal image",
+      "calls": 1,
+      "target_returncode": 0,
+      "kernel_stdout_s": 33.338205,
+      "kernel_integer_s": "33.338204624",
+      "kernel_start_ns": 59730155139763,
+      "kernel_end_ns": 59763493344387,
+      "process_raw_s": 33.952249174,
+      "checksum": 17180040496.458935,
+      "mode": "benchmark",
+      "added_to_formal_performance": false,
+      "raw": "minimal-fresh-n4096.jsonl"
+    }
+  ],
+  "new_n4096_calls": 2,
+  "cumulative_n4096_calls": 431,
+  "small_algorithm_control": {
+    "commands": [
+      [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "search",
+        "--target",
+        ".cache/small.c",
+        "--algorithm",
+        "grid",
+        "--budget",
+        "20",
+        "--seed",
+        "17",
+        "--repeats",
+        "1",
+        "--timeout",
+        "30",
+        "--cache-dir",
+        ".cache/small-build",
+        "--output",
+        ".cache/control-grid.jsonl"
+      ],
+      [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "search",
+        "--target",
+        ".cache/small.c",
+        "--algorithm",
+        "random",
+        "--budget",
+        "20",
+        "--seed",
+        "17",
+        "--repeats",
+        "1",
+        "--timeout",
+        "30",
+        "--cache-dir",
+        ".cache/small-build",
+        "--output",
+        ".cache/control-random.jsonl"
+      ],
+      [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "search",
+        "--target",
+        ".cache/small.c",
+        "--algorithm",
+        "greedy",
+        "--budget",
+        "20",
+        "--seed",
+        "17",
+        "--repeats",
+        "1",
+        "--timeout",
+        "30",
+        "--cache-dir",
+        ".cache/small-build",
+        "--output",
+        ".cache/control-greedy.jsonl"
+      ]
+    ],
+    "checked": [
+      {
+        "algorithm": "grid",
+        "n": 129,
+        "actual_calls": 20,
+        "distinct": 20,
+        "stop_reason": "budget",
+        "returned": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "failed_runs": 0
+      },
+      {
+        "algorithm": "random",
+        "n": 129,
+        "actual_calls": 20,
+        "distinct": 20,
+        "stop_reason": "budget",
+        "returned": {
+          "s": 16,
+          "opt": "O3"
+        },
+        "failed_runs": 0
+      },
+      {
+        "algorithm": "greedy",
+        "n": 129,
+        "actual_calls": 8,
+        "distinct": 8,
+        "stop_reason": "local_optimum",
+        "returned": {
+          "s": 128,
+          "opt": "O3"
+        },
+        "failed_runs": 0
+      }
+    ],
+    "n4096_calls": 0,
+    "claim": "same-source small matrix control flow only; not formal performance"
+  },
+  "saved_summary_regeneration": "regeneration-comparison.json",
+  "formal_link_and_file_closure": "formal-closure.json",
+  "new_packages": [],
+  "configuration_changes": [],
+  "test_tools_reused": "existing local xterm by per-process PATH; existing Xvfb, ffmpeg, PowerShell; no new tool installation",
+  "engineering_status": "PENDING_EXTERNAL_ACCEPTANCE",
+  "submission": "NOT_OPERATED",
+  "new_unknown_controlled_cost": {
+    "actual_s": null,
+    "budget_upper_s": 180,
+    "scope": "unmetered initial fetch/read commands, file/visual preparation, agent read/write and existing-paper access, two failed local audit invocations; human reasoning/wait span excluded",
+    "basis": "single finite bookkeeping reserve for short read-only/local operations; no additional matrix, compiler, batch test or unaccounted native screenshot window; no inferred integer endpoints",
+    "not_measured_time": true
+  },
+  "agent_audit_metered_raw_s": "0.450305041",
+  "agent_audit_scope": "two audit compute/read windows; exclude root windows and count each once",
+  "source_production_changes": 0,
+  "independent_review_boundary": "separate author owners and independent reviewer; external final judgment remains pending"
+}

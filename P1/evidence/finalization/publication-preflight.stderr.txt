@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal3/preflight.py", line 82, in <module>
+    assert {r['label'] for r in rows if r['type'] == 'start'} <= {r['label'] for r in ends}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

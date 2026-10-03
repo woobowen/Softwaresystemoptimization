@@ -1,0 +1,33 @@
+{
+  "cutoff": "final local metadata closure before staging/commit/push/remote readback",
+  "publication_excluded": true,
+  "clock": "CLOCK_MONOTONIC_RAW",
+  "root_known_s": "105.135510076",
+  "separate_audit_known_s": "0.450305041",
+  "new_known_s": "105.585815117",
+  "prior_known_s": "48271.046382693",
+  "prior_unknown_budget_upper_s": "144",
+  "new_unknown_budget_upper_s": "180",
+  "unknown_not_measured": true,
+  "unknown_scope": {
+    "actual_s": null,
+    "budget_upper_s": 180,
+    "scope": "unmetered initial fetch/read commands, file/visual preparation, agent read/write and existing-paper access, two failed local audit invocations; human reasoning/wait span excluded",
+    "basis": "single finite bookkeeping reserve for short read-only/local operations; no additional matrix, compiler, batch test or unaccounted native screenshot window; no inferred integer endpoints",
+    "not_measured_time": true
+  },
+  "new_conservative_s": "285.585815117",
+  "cumulative_known_s": "48376.632197810",
+  "cumulative_conservative_s": "48700.632197810",
+  "new_n4096_calls": 2,
+  "prior_n4096_calls": 429,
+  "cumulative_n4096_calls": 431,
+  "normal_new_call_limit": 12,
+  "new_call_hard_limit": 18,
+  "normal_new_cost_s": 3600,
+  "new_hard_cost_s": 5400,
+  "cumulative_call_limit": 520,
+  "cumulative_cost_limit_s": 57600,
+  "nested_kernel_process_and_compile_costs_not_added_twice": true,
+  "notes": "snapshot JSON write and later short metadata reads remain in declared unmetered reserve; final local receipt adds actual publication windows"
+}

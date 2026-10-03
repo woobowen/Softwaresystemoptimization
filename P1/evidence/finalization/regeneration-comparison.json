@@ -1,0 +1,91 @@
+{
+  "source_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "core_source_unchanged": true,
+  "new_matrix_runs_for_regeneration": 0,
+  "files": [
+    {
+      "file": "additional_request.json",
+      "old_sha256": "a4431e96cbaa5d96cbe1d465eda4b9075a359004db0d83c0868256f3247edeec",
+      "new_sha256": "a4431e96cbaa5d96cbe1d465eda4b9075a359004db0d83c0868256f3247edeec",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": null
+    },
+    {
+      "file": "batch_costs.csv",
+      "old_sha256": "d1d79648307da0547953c0b8ef365012265b969b6ef46a75b51383683956586d",
+      "new_sha256": "d1d79648307da0547953c0b8ef365012265b969b6ef46a75b51383683956586d",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 49
+    },
+    {
+      "file": "block_clock_checks.csv",
+      "old_sha256": "40ac13e5d0bdae36f7ff44d8aabd6d484b6947e3fbd759bb2feb458fc1efe7fc",
+      "new_sha256": "40ac13e5d0bdae36f7ff44d8aabd6d484b6947e3fbd759bb2feb458fc1efe7fc",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 32
+    },
+    {
+      "file": "comparison_paired.csv",
+      "old_sha256": "bca875288d1ca8b9a13de19cba152ad09869b8db5770cbf0225a001fc8aa6af1",
+      "new_sha256": "bca875288d1ca8b9a13de19cba152ad09869b8db5770cbf0225a001fc8aa6af1",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 6
+    },
+    {
+      "file": "confirmation_paired.csv",
+      "old_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "new_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 0
+    },
+    {
+      "file": "grid_summary.csv",
+      "old_sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "new_sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 20
+    },
+    {
+      "file": "measurements.csv",
+      "old_sha256": "22b6bb42162e35e4e3b4a44e69c59775dd1074ff678af866b100fee946e9036f",
+      "new_sha256": "22b6bb42162e35e4e3b4a44e69c59775dd1074ff678af866b100fee946e9036f",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 368
+    },
+    {
+      "file": "online_curves.csv",
+      "old_sha256": "bc17b4a72a0b22416960a401f1a0e2bae6f34868b0b0cb810851426246c57a09",
+      "new_sha256": "bc17b4a72a0b22416960a401f1a0e2bae6f34868b0b0cb810851426246c57a09",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 241
+    },
+    {
+      "file": "search_summary.csv",
+      "old_sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "new_sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "byte_equal": true,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": 31
+    },
+    {
+      "file": "summary.json",
+      "old_sha256": "13471808660cf473680664222896fca18199d467d38db74ee22fc290c9789acf",
+      "new_sha256": "2dcb67e2e0de55f19d52fe7b3231f49afc69fec98376b5b5adf3fecf95dfed65",
+      "byte_equal": false,
+      "field_equal_except_documented_images_metadata": true,
+      "csv_rows": null
+    }
+  ],
+  "all_data_equal": true,
+  "byte_equal_files": 9,
+  "summary_difference": "images list absent without --plots; every other field equal; old summary unmodified",
+  "prior_historical_regeneration": "evidence/reproduction/goal2r/*-comparison.json unchanged, not rerun this phase"
+}

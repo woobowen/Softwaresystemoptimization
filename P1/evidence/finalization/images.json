@@ -1,0 +1,72 @@
+{
+  "source_code_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "images": [
+    {
+      "file": "framework.svg",
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "bytes": 3416,
+      "actual_visual_opened_by_root": true,
+      "source": "unchanged framework SVG; current ffmpeg rendering .cache/goal3/framework-preview.png",
+      "unchanged_from_base": true
+    },
+    {
+      "file": "interfaces-kernel.png",
+      "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "bytes": 154698,
+      "actual_visual_opened_by_root": true,
+      "source": "unchanged final suggest/evaluate/observe and six-loop source; c22d856 capture",
+      "unchanged_from_base": true
+    },
+    {
+      "file": "grid_median.png",
+      "sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "bytes": 157782,
+      "actual_visual_opened_by_root": true,
+      "source": "saved grid_summary.csv: 20 medians/min/max, three runs each",
+      "unchanged_from_base": false
+    },
+    {
+      "file": "online_search.png",
+      "sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "bytes": 220073,
+      "actual_visual_opened_by_root": true,
+      "source": "saved search_summary.csv and online_curves.csv; post steps at completed trial feedback",
+      "unchanged_from_base": false
+    },
+    {
+      "file": "saved-search-results.png",
+      "sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "bytes": 106543,
+      "actual_visual_opened_by_root": true,
+      "source": "saved comparison_paired.csv: 18 G, six search cost savings; percentage point unit",
+      "unchanged_from_base": false
+    },
+    {
+      "file": "build-run.png",
+      "sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "bytes": 54725,
+      "actual_visual_opened_by_root": true,
+      "source": "new isolated minimum-directory four cold builds and exactly one n4096 run; target exit 0",
+      "unchanged_from_base": false
+    }
+  ],
+  "all_six_actual_opened": true,
+  "four_png_changed": true,
+  "only_presentation_changes_to_statistics": true,
+  "script": "scripts/render_report_figures.py",
+  "crop": {
+    "command": "ffmpeg -vf crop=1420:335:10:10",
+    "source_png_sha256": "bb29daaf7e906509b4928ea423968f07e26e38c0a6c0190be5bee26e239b0cff",
+    "crop_pixels_identical": true,
+    "removed_region": "irrelevant lower terminal blank area"
+  },
+  "target_returncode": 0,
+  "classroom_screenshot_cleanup_complete": true,
+  "fresh_not_added_to_reference": true
+}

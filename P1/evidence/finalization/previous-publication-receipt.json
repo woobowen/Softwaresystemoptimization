@@ -1,0 +1,1357 @@
+{
+  "schema": 1,
+  "start_auxiliary_utc": "2026-10-03T17:02:04.057282+00:00",
+  "clock": "CLOCK_MONOTONIC_RAW",
+  "start_raw_ns": 55460611886074,
+  "n4096_calls": 0,
+  "scope": "final staged hygiene, normal commit/push and fresh remote-only bare fetch/readback; separate from sealed prepublication ledger",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "raw_start_ns": 55460612046506,
+      "raw_end_ns": 55460613639212,
+      "raw_s": 0.001592706,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "raw_start_ns": 55460613646172,
+      "raw_end_ns": 55460614715552,
+      "raw_s": 0.00106938,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "raw_start_ns": 55460614720944,
+      "raw_end_ns": 55460615700340,
+      "raw_s": 0.000979396,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--exit-code",
+        "origin",
+        "refs/heads/main"
+      ],
+      "raw_start_ns": 55460615705243,
+      "raw_end_ns": 55462447769831,
+      "raw_s": 1.832064588,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal2r_publication_hygiene.py"
+      ],
+      "raw_start_ns": 55462447877123,
+      "raw_end_ns": 55462602073142,
+      "raw_s": 0.154196019,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal2r_close_costs.py"
+      ],
+      "raw_start_ns": 55462602150989,
+      "raw_end_ns": 55462718806667,
+      "raw_s": 0.116655678,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "--",
+        "AGENTS.md",
+        "P1"
+      ],
+      "raw_start_ns": 55462718816553,
+      "raw_end_ns": 55462725692885,
+      "raw_s": 0.006876332,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "raw_start_ns": 55462725698730,
+      "raw_end_ns": 55462749752227,
+      "raw_s": 0.024053497,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "--",
+        "AGENTS.md",
+        "P1"
+      ],
+      "raw_start_ns": 55462749760713,
+      "raw_end_ns": 55462752569678,
+      "raw_s": 0.002808965,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only",
+        "-z"
+      ],
+      "raw_start_ns": 55462752576298,
+      "raw_end_ns": 55462754875664,
+      "raw_s": 0.002299366,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "raw_start_ns": 55462755032147,
+      "raw_end_ns": 55462761724564,
+      "raw_s": 0.006692417,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Complete P1 Goal2R experiments with checked RAW timing and separate decisions"
+      ],
+      "raw_start_ns": 55462761780313,
+      "raw_end_ns": 55462772635778,
+      "raw_s": 0.010855465,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "raw_start_ns": 55462772642652,
+      "raw_end_ns": 55462773796265,
+      "raw_s": 0.001153613,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "raw_start_ns": 55462773804329,
+      "raw_end_ns": 55462775004565,
+      "raw_s": 0.001200236,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "efb6259e7c662a706a57297bb016116b7412d92c",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a"
+      ],
+      "raw_start_ns": 55462775010186,
+      "raw_end_ns": 55462776751275,
+      "raw_s": 0.001741089,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "raw_start_ns": 55462776756477,
+      "raw_end_ns": 55470729037049,
+      "raw_s": 7.952280572,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "main"
+      ],
+      "raw_start_ns": 55470729069608,
+      "raw_end_ns": 55472610208102,
+      "raw_s": 1.881138494,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--exit-code",
+        "origin",
+        "refs/heads/main"
+      ],
+      "raw_start_ns": 55472610219011,
+      "raw_end_ns": 55474371636521,
+      "raw_s": 1.76141751,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "raw_start_ns": 55474371664025,
+      "raw_end_ns": 55474373223063,
+      "raw_s": 0.001559038,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--bare",
+        "--quiet",
+        "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal2r-remote-c22d856b8fa2f0b37aff4f436a856cf3a74bb37a.git"
+      ],
+      "raw_start_ns": 55474373297457,
+      "raw_end_ns": 55474391002916,
+      "raw_s": 0.017705459,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/woobowen/Softwaresystemoptimization.git"
+      ],
+      "raw_start_ns": 55474391010233,
+      "raw_end_ns": 55474392593265,
+      "raw_s": 0.001583032,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "fetch",
+        "--depth=1",
+        "--no-tags",
+        "origin",
+        "refs/heads/main:refs/heads/main"
+      ],
+      "raw_start_ns": 55474392598716,
+      "raw_end_ns": 55518228961689,
+      "raw_s": 43.836362973,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "raw_start_ns": 55518228980572,
+      "raw_end_ns": 55518230279862,
+      "raw_s": 0.00129929,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a"
+      ],
+      "raw_start_ns": 55518230290321,
+      "raw_end_ns": 55518233736684,
+      "raw_s": 0.003446363,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a"
+      ],
+      "raw_start_ns": 55518233980488,
+      "raw_end_ns": 55518239459856,
+      "raw_s": 0.005479368,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:A1"
+      ],
+      "raw_start_ns": 55518239758283,
+      "raw_end_ns": 55518241211986,
+      "raw_s": 0.001453703,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "efb6259e7c662a706a57297bb016116b7412d92c:A1"
+      ],
+      "raw_start_ns": 55518241219167,
+      "raw_end_ns": 55518242317791,
+      "raw_s": 0.001098624,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:A2"
+      ],
+      "raw_start_ns": 55518242323844,
+      "raw_end_ns": 55518243395989,
+      "raw_s": 0.001072145,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "efb6259e7c662a706a57297bb016116b7412d92c:A2"
+      ],
+      "raw_start_ns": 55518243401154,
+      "raw_end_ns": 55518244597560,
+      "raw_s": 0.001196406,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:AGENTS.md"
+      ],
+      "raw_start_ns": 55518245061024,
+      "raw_end_ns": 55518246671733,
+      "raw_s": 0.001610709,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:AGENTS.md"
+      ],
+      "raw_start_ns": 55518246769421,
+      "raw_end_ns": 55518247805767,
+      "raw_s": 0.001036346,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/README.md"
+      ],
+      "raw_start_ns": 55518247814459,
+      "raw_end_ns": 55518249043002,
+      "raw_s": 0.001228543,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/README.md"
+      ],
+      "raw_start_ns": 55518249111597,
+      "raw_end_ns": 55518250178972,
+      "raw_s": 0.001067375,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/report.md"
+      ],
+      "raw_start_ns": 55518250185725,
+      "raw_end_ns": 55518251477119,
+      "raw_s": 0.001291394,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/report.md"
+      ],
+      "raw_start_ns": 55518251548550,
+      "raw_end_ns": 55518252633164,
+      "raw_s": 0.001084614,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/autotuner.py"
+      ],
+      "raw_start_ns": 55518252639779,
+      "raw_end_ns": 55518254173809,
+      "raw_s": 0.00153403,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/autotuner.py"
+      ],
+      "raw_start_ns": 55518254283597,
+      "raw_end_ns": 55518255300599,
+      "raw_s": 0.001017002,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/matrix_multiplication.c"
+      ],
+      "raw_start_ns": 55518255307020,
+      "raw_end_ns": 55518256378915,
+      "raw_s": 0.001071895,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/matrix_multiplication.c"
+      ],
+      "raw_start_ns": 55518256437311,
+      "raw_end_ns": 55518257591424,
+      "raw_s": 0.001154113,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/matrix_multiplication.original.c"
+      ],
+      "raw_start_ns": 55518257597728,
+      "raw_end_ns": 55518258671620,
+      "raw_s": 0.001073892,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/src/matrix_multiplication.original.c"
+      ],
+      "raw_start_ns": 55518259071192,
+      "raw_end_ns": 55518260100434,
+      "raw_s": 0.001029242,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/experiment_v2.py"
+      ],
+      "raw_start_ns": 55518260106754,
+      "raw_end_ns": 55518261712533,
+      "raw_s": 0.001605779,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/experiment_v2.py"
+      ],
+      "raw_start_ns": 55518261835854,
+      "raw_end_ns": 55518263100290,
+      "raw_s": 0.001264436,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/goal2r_analysis.py"
+      ],
+      "raw_start_ns": 55518263105918,
+      "raw_end_ns": 55518264408560,
+      "raw_s": 0.001302642,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/goal2r_analysis.py"
+      ],
+      "raw_start_ns": 55518264498293,
+      "raw_end_ns": 55518265599161,
+      "raw_s": 0.001100868,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/identity_quality.py"
+      ],
+      "raw_start_ns": 55518265605314,
+      "raw_end_ns": 55518266748778,
+      "raw_s": 0.001143464,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/identity_quality.py"
+      ],
+      "raw_start_ns": 55518266829301,
+      "raw_end_ns": 55518267888296,
+      "raw_s": 0.001058995,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/host_clock_probe.py"
+      ],
+      "raw_start_ns": 55518267894196,
+      "raw_end_ns": 55518269257833,
+      "raw_s": 0.001363637,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/host_clock_probe.py"
+      ],
+      "raw_start_ns": 55518269327061,
+      "raw_end_ns": 55518270456377,
+      "raw_s": 0.001129316,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/summarize_v2.py"
+      ],
+      "raw_start_ns": 55518270463383,
+      "raw_end_ns": 55518272421538,
+      "raw_s": 0.001958155,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/scripts/summarize_v2.py"
+      ],
+      "raw_start_ns": 55518272607849,
+      "raw_end_ns": 55518273686745,
+      "raw_s": 0.001078896,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/protocol_goal2r.json"
+      ],
+      "raw_start_ns": 55518273693769,
+      "raw_end_ns": 55518274847632,
+      "raw_s": 0.001153863,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/protocol_goal2r.json"
+      ],
+      "raw_start_ns": 55518274902967,
+      "raw_end_ns": 55518275998990,
+      "raw_s": 0.001096023,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/goal2r_result.md"
+      ],
+      "raw_start_ns": 55518276005534,
+      "raw_end_ns": 55518277474736,
+      "raw_s": 0.001469202,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/goal2r_result.md"
+      ],
+      "raw_start_ns": 55518277551482,
+      "raw_end_ns": 55518278890861,
+      "raw_s": 0.001339379,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/measurement/goal2r_costs.json"
+      ],
+      "raw_start_ns": 55518278897903,
+      "raw_end_ns": 55518280041488,
+      "raw_s": 0.001143585,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/measurement/goal2r_costs.json"
+      ],
+      "raw_start_ns": 55518280128000,
+      "raw_end_ns": 55518281236505,
+      "raw_s": 0.001108505,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/measurement/resource_ledger.jsonl"
+      ],
+      "raw_start_ns": 55518281242112,
+      "raw_end_ns": 55518286495111,
+      "raw_s": 0.005252999,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/measurement/resource_ledger.jsonl"
+      ],
+      "raw_start_ns": 55518287100773,
+      "raw_end_ns": 55518288496223,
+      "raw_s": 0.00139545,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reproduction/goal2r/clean-fresh-n4096.jsonl"
+      ],
+      "raw_start_ns": 55518288505812,
+      "raw_end_ns": 55518290092228,
+      "raw_s": 0.001586416,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reproduction/goal2r/clean-fresh-n4096.jsonl"
+      ],
+      "raw_start_ns": 55518290175026,
+      "raw_end_ns": 55518291441711,
+      "raw_s": 0.001266685,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reproduction/goal2r/images.json"
+      ],
+      "raw_start_ns": 55518291450351,
+      "raw_end_ns": 55518292694148,
+      "raw_s": 0.001243797,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reproduction/goal2r/images.json"
+      ],
+      "raw_start_ns": 55518292765092,
+      "raw_end_ns": 55518293997264,
+      "raw_s": 0.001232172,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/summary.json"
+      ],
+      "raw_start_ns": 55518294005886,
+      "raw_end_ns": 55518295439958,
+      "raw_s": 0.001434072,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/summary.json"
+      ],
+      "raw_start_ns": 55518295512512,
+      "raw_end_ns": 55518296680908,
+      "raw_s": 0.001168396,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/grid_summary.csv"
+      ],
+      "raw_start_ns": 55518296688211,
+      "raw_end_ns": 55518297885689,
+      "raw_s": 0.001197478,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/grid_summary.csv"
+      ],
+      "raw_start_ns": 55518297948362,
+      "raw_end_ns": 55518299096933,
+      "raw_s": 0.001148571,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/search_summary.csv"
+      ],
+      "raw_start_ns": 55518299104128,
+      "raw_end_ns": 55518300204288,
+      "raw_s": 0.00110016,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_summary/search_summary.csv"
+      ],
+      "raw_start_ns": 55518300273948,
+      "raw_end_ns": 55518301557974,
+      "raw_s": 0.001284026,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_comparison/b1-random-seed700001.jsonl"
+      ],
+      "raw_start_ns": 55518301565780,
+      "raw_end_ns": 55518302952842,
+      "raw_s": 0.001387062,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/results/goal2r_comparison/b1-random-seed700001.jsonl"
+      ],
+      "raw_start_ns": 55518303047603,
+      "raw_end_ns": 55518304105734,
+      "raw_s": 0.001058131,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_code_review.md"
+      ],
+      "raw_start_ns": 55518304111505,
+      "raw_end_ns": 55518305628137,
+      "raw_s": 0.001516632,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_code_review.md"
+      ],
+      "raw_start_ns": 55518305707155,
+      "raw_end_ns": 55518306775319,
+      "raw_s": 0.001068164,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_method_challenge.md"
+      ],
+      "raw_start_ns": 55518306783051,
+      "raw_end_ns": 55518308169033,
+      "raw_s": 0.001385982,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_method_challenge.md"
+      ],
+      "raw_start_ns": 55518308237581,
+      "raw_end_ns": 55518309276709,
+      "raw_s": 0.001039128,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_method_result_review.md"
+      ],
+      "raw_start_ns": 55518309283836,
+      "raw_end_ns": 55518311071526,
+      "raw_s": 0.00178769,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/evidence/reviews/goal2r_method_result_review.md"
+      ],
+      "raw_start_ns": 55518311150809,
+      "raw_end_ns": 55518312177410,
+      "raw_s": 0.001026601,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/framework.svg"
+      ],
+      "raw_start_ns": 55518312184644,
+      "raw_end_ns": 55518313401386,
+      "raw_s": 0.001216742,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/framework.svg"
+      ],
+      "raw_start_ns": 55518313459213,
+      "raw_end_ns": 55518314450362,
+      "raw_s": 0.000991149,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/grid_median.png"
+      ],
+      "raw_start_ns": 55518314457101,
+      "raw_end_ns": 55518319098168,
+      "raw_s": 0.004641067,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/grid_median.png"
+      ],
+      "raw_start_ns": 55518319336948,
+      "raw_end_ns": 55518320623586,
+      "raw_s": 0.001286638,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/online_search.png"
+      ],
+      "raw_start_ns": 55518320631724,
+      "raw_end_ns": 55518327633917,
+      "raw_s": 0.007002193,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/online_search.png"
+      ],
+      "raw_start_ns": 55518327949458,
+      "raw_end_ns": 55518329291859,
+      "raw_s": 0.001342401,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/saved-search-results.png"
+      ],
+      "raw_start_ns": 55518329301973,
+      "raw_end_ns": 55518332256788,
+      "raw_s": 0.002954815,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/saved-search-results.png"
+      ],
+      "raw_start_ns": 55518332522488,
+      "raw_end_ns": 55518333656683,
+      "raw_s": 0.001134195,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/interfaces-kernel.png"
+      ],
+      "raw_start_ns": 55518333664668,
+      "raw_end_ns": 55518337476287,
+      "raw_s": 0.003811619,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/interfaces-kernel.png"
+      ],
+      "raw_start_ns": 55518337655929,
+      "raw_end_ns": 55518338776959,
+      "raw_s": 0.00112103,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/build-run.png"
+      ],
+      "raw_start_ns": 55518338785093,
+      "raw_end_ns": 55518341320987,
+      "raw_s": 0.002535894,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a:P1/images/build-run.png"
+      ],
+      "raw_start_ns": 55518341453933,
+      "raw_end_ns": 55518342665160,
+      "raw_s": 0.001211227,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--",
+        "AGENTS.md",
+        "P1"
+      ],
+      "raw_start_ns": 55518359275865,
+      "raw_end_ns": 55518362800983,
+      "raw_s": 0.003525118,
+      "returncode": 0
+    }
+  ],
+  "remote_files": [
+    {
+      "file": "AGENTS.md",
+      "bytes": 28925,
+      "sha256": "770a64d45f4c7053ae649c63e056b6570e97ffd9c2094f6c65291fd33cee0dfe",
+      "git_blob_sha": "b56052ce7d55f6ab06228ae12ead55b9748eadf6",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/README.md",
+      "bytes": 5927,
+      "sha256": "aa69063350fe3cddfb528b82d2021812ea6094ae63aaeaaa046a65c5a9b0b542",
+      "git_blob_sha": "979387cadce1097e21bd63d045cd09cda9aa62cc",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/report.md",
+      "bytes": 11607,
+      "sha256": "0d5ccd57de3dea56e1fbdec3521609897c85bd94f7824ec9b53f7e2ef65e6630",
+      "git_blob_sha": "9f1c2a908dd9ee6fe2afe70a11f98b729d0b4679",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/src/autotuner.py",
+      "bytes": 46520,
+      "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/src/matrix_multiplication.c",
+      "bytes": 2209,
+      "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/src/matrix_multiplication.original.c",
+      "bytes": 1357,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/scripts/experiment_v2.py",
+      "bytes": 69243,
+      "sha256": "9d985ae01c24ad322bc4847772b082c425793e8758871feac1b8edc3cf9e41ee",
+      "git_blob_sha": "844311d7441b59051bae591ae9fca4d15540d9a5",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/scripts/goal2r_analysis.py",
+      "bytes": 29424,
+      "sha256": "5b125ad8b5a0fa068b52075ab6e063820ded27271ebcc0464ae49779a697a7ff",
+      "git_blob_sha": "53ce80dde5425748963e7d4357f309323f6ff5ea",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/scripts/identity_quality.py",
+      "bytes": 11221,
+      "sha256": "a5a94c084cd3998ec6e32ab70cad3d36f140a9bbdd83b81bed636662bc7d13a6",
+      "git_blob_sha": "5d45b5a6bf3361e7297ea1aebe5308b83d6200c0",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/scripts/host_clock_probe.py",
+      "bytes": 15578,
+      "sha256": "5ebcb21f709ab0f325855892aee2cdae349035fb808c45a20a61a357f288326c",
+      "git_blob_sha": "1ab61685117001b2e501bfc765fa91334ac2bc1e",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/scripts/summarize_v2.py",
+      "bytes": 130844,
+      "sha256": "de5119cec0bc8edef358f26ec56cef4807031d874c1d8024219a2f9700b1b0e8",
+      "git_blob_sha": "83ad726e98cb653ca63d8c45eee3ce91018d8949",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/protocol_goal2r.json",
+      "bytes": 10978,
+      "sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+      "git_blob_sha": "69ff51d2c070c4ffec67a83e796b22de8f5df146",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/goal2r_result.md",
+      "bytes": 9409,
+      "sha256": "53adf40038c7462ef94f68bf4ae84014f9025801e0a55bf6e2432a0b7547ca09",
+      "git_blob_sha": "c764f32d2c597a453e277fd3f10f7f4846d88df5",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/measurement/goal2r_costs.json",
+      "bytes": 5183,
+      "sha256": "053bf5b1e9a1c2296070807b45a3f714408bba7f70b23d5f24665405bbb04bf8",
+      "git_blob_sha": "e93f3afd68cedf46447aa6b14b937d71e66f5c60",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/measurement/resource_ledger.jsonl",
+      "bytes": 817612,
+      "sha256": "e6988c4b1240c335f4d26aef80070ec6bc1ae7d10234c3e532896576e85e5e9d",
+      "git_blob_sha": "af9fb340f5cd39cc801cd2c98a86688e103e9a40",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/reproduction/goal2r/clean-fresh-n4096.jsonl",
+      "bytes": 11280,
+      "sha256": "81c958e842f01dc30f701a4035d1fe838d7d636d11d0ef907466c53233d786f3",
+      "git_blob_sha": "62c19f62e3c457c05c084000765514bc995a123a",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/reproduction/goal2r/images.json",
+      "bytes": 2432,
+      "sha256": "fbd6d2769aa838a170cfac1506f3c63754f568830b7622a2bfd114a73a2d5c9a",
+      "git_blob_sha": "130988fcbde8d0448d004706459ac8f21df08fc9",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/results/goal2r_summary/summary.json",
+      "bytes": 11146,
+      "sha256": "13471808660cf473680664222896fca18199d467d38db74ee22fc290c9789acf",
+      "git_blob_sha": "989d1c9629ab05b5347839c8af233cab419175a6",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/results/goal2r_summary/grid_summary.csv",
+      "bytes": 2616,
+      "sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/results/goal2r_summary/search_summary.csv",
+      "bytes": 5240,
+      "sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/results/goal2r_comparison/b1-random-seed700001.jsonl",
+      "bytes": 56045,
+      "sha256": "0b65d45a79e627f03e25a681ab01bff5aee60c0e93fe4b83e0faa22854cdc1eb",
+      "git_blob_sha": "f938104220045592031e324c062eb6a2cc4f96a0",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/reviews/goal2r_code_review.md",
+      "bytes": 31994,
+      "sha256": "fab2807093665de96d684a4ac0e9f8a6239188f5e75bc88cb98ca1c1fadb2da7",
+      "git_blob_sha": "45098ae83c335e51544247a03288e05777e7871b",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/reviews/goal2r_method_challenge.md",
+      "bytes": 20380,
+      "sha256": "a7e501b9a1ff58cf085138300bf9f0d6348f941a6478435a50f408ed5c582971",
+      "git_blob_sha": "d3b21890da4adf0bf047c91cb4ce550e8d81862d",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/evidence/reviews/goal2r_method_result_review.md",
+      "bytes": 22053,
+      "sha256": "f49f6b9e5d5122c85981d8455907309cbc3f735381531a847cfa0924eee6972f",
+      "git_blob_sha": "a0b4e051d14fdfa0d55953ae7f98248ce5817286",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/framework.svg",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/grid_median.png",
+      "bytes": 164739,
+      "sha256": "db211acb10572ec4c8446592520a99548669b99e839467516840ab39db10920a",
+      "git_blob_sha": "3046a72c2a3758675d704ad7ec1f98d7944009d6",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/online_search.png",
+      "bytes": 283547,
+      "sha256": "c450118568b847c751109966f459392a754899a7bffbbe6d29cf89ee0ecf7b5d",
+      "git_blob_sha": "2a1e395536cdf1a74573fd34cbffdecabb1af710",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/saved-search-results.png",
+      "bytes": 93865,
+      "sha256": "1c15fd73f3a2d9b54ebe37f8ba7f635ff1310fa4c5a6fc2d69b1b3fcac980649",
+      "git_blob_sha": "3362b85c1269b876f0e05fdb3376ac4c80d35670",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/interfaces-kernel.png",
+      "bytes": 154698,
+      "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "identical_to_local": true
+    },
+    {
+      "file": "P1/images/build-run.png",
+      "bytes": 89203,
+      "sha256": "2fa10410f9543a423258a2a5a4bf4ee9fca463ac4cf3b1ef1cb280eed386621d",
+      "git_blob_sha": "9ac810e09f693b1d0e43882bb2827a1d74f0c079",
+      "identical_to_local": true
+    }
+  ],
+  "complete": true,
+  "approved_staged_tree": "54dc2ae507d10109d25236b2ae225ae1c6a93347",
+  "staged_files_count": 812,
+  "commit_sha": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "remote_sha": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "fresh_remote_sha": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "local_remote_equal": true,
+  "independent_remote_fetch": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/goal2r-remote-c22d856b8fa2f0b37aff4f436a856cf3a74bb37a.git",
+  "remote_summary_decisions": {
+    "comparison": {
+      "decision": "REJECT",
+      "reasons": [
+        "observed gain upper bound is below -2pp"
+      ],
+      "evaluation_complete": true,
+      "cost_clock": "CLOCK_MONOTONIC_RAW",
+      "ranges_are_confidence_intervals": false,
+      "gain_lows_pp": [
+        -6.983991278831617,
+        0.0,
+        -14.969579061514828,
+        -52.10618758343751,
+        -2.685391648197462,
+        -30.71154658577668
+      ],
+      "gain_highs_pp": [
+        -3.49732292587063,
+        0.0,
+        10.489880433996994,
+        -48.65556877201368,
+        0.13697019402460017,
+        -30.578453567803486
+      ],
+      "median_gain_panel_pp": -5.85801402461414,
+      "median_gain_low_pp": -10.976785170173223,
+      "paired_cost_savings_fraction": [
+        0.39403823540727256,
+        0.4311520900711744,
+        0.026936048930896073,
+        0.06435324690698607,
+        0.29242382840470316,
+        0.22173103964785446
+      ],
+      "median_cost_saving_fraction": 0.2570774340262788,
+      "severe_regression": true
+    },
+    "confirmation": {
+      "decision": "NOT_REQUIRED",
+      "reasons": [
+        "complete main data did not select S3; baseline holdout still required"
+      ],
+      "evaluation_complete": false,
+      "cost_clock": "CLOCK_MONOTONIC_RAW",
+      "ranges_are_confidence_intervals": false
+    }
+  },
+  "images_zip": {
+    "path": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/P1-Goal2R-formal-images.zip",
+    "sha256": "119a22d63a2e3b672dcfb90fc2d8d953b98b673e959890888208aca850f52603",
+    "bytes": 705638,
+    "members": 6,
+    "published_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+    "manifest_path": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/P1-Goal2R-formal-images-manifest.json"
+  },
+  "tracked_worktree_clean": true,
+  "remote_tree_files": 3350,
+  "end_raw_ns": 55518362833468,
+  "publication_controlled_raw_s": 57.750947394,
+  "end_auxiliary_utc": "2026-10-03T17:03:01.896468+00:00",
+  "prepublication_known_s": "48213.272792664",
+  "unknown_upper_s": "144",
+  "cumulative_known_s": "48271.046382693",
+  "cumulative_conservative_upper_s": "48415.046382693",
+  "remaining_controlled_upper_s": "9184.953617307",
+  "actual_task_start_auxiliary_local": "2026-10-03T09:47:21.664896+08:00",
+  "prior_failed_final_metadata_read": {
+    "error": "assumed realtime key; saved metadata uses a different field name",
+    "actual_raw_s": null,
+    "cost_scope": "existing root finite closing preparation5s upper; no reconstructed endpoints; no target/code/remote failure"
+  },
+  "final_local_receipt_verification": {
+    "head_remote_manifest_agree": true,
+    "sealed_ledger_and_actors_unchanged": true,
+    "untracked_inputs_preserved": [
+      "?? P1_Goal1_Codex_Prompt.md",
+      "?? P1_Goal2R_Codex_Prompt.md",
+      "?? P1_Goal2_Codex_Prompt.md",
+      "?? matrix_multiplication.c"
+    ]
+  },
+  "final_metadata_raw_start_ns": 55716676330412,
+  "final_metadata_raw_end_ns": 55716691699467,
+  "final_metadata_raw_s": "0.015369055",
+  "task_closed_at_auxiliary_utc": "2026-10-03T17:12:39.732198+00:00",
+  "session_end_raw_ns": 55716691699467,
+  "session_raw_span_s": "55517.906493401",
+  "calendar_span_is_controlled_cost": false,
+  "final_command_evidence_read": {
+    "raw_start_ns": 55944583710124,
+    "raw_end_ns": 55944590378733,
+    "raw_s": "0.006668609",
+    "n4096_calls": 0
+  },
+  "final_closure_metadata": {
+    "raw_start_ns": 56096163880169,
+    "raw_end_ns": 56096164485140,
+    "raw_s": "0.000604971",
+    "n4096_calls": 0
+  }
+}

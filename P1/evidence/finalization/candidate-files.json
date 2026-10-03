@@ -1,0 +1,204 @@
+{
+  "candidate_only": true,
+  "root": "P1",
+  "source_code_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "content_source": "frozen Goal3 working tree over the reviewed base; publication receipt binds this manifest to the published commit",
+  "minimal_directory": "P1/.cache/goal3/minimal",
+  "file_count": 13,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2722,
+      "sha256": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+      "git_blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "report.md",
+      "bytes": 12730,
+      "sha256": "482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8",
+      "git_blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "src/autotuner.py",
+      "bytes": 46520,
+      "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "src/matrix_multiplication.c",
+      "bytes": 2209,
+      "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "src/matrix_multiplication.original.c",
+      "bytes": 1357,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/framework.svg",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/grid_median.png",
+      "bytes": 157782,
+      "sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/online_search.png",
+      "bytes": 220073,
+      "sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/saved-search-results.png",
+      "bytes": 106543,
+      "sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/interfaces-kernel.png",
+      "bytes": 154698,
+      "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "images/build-run.png",
+      "bytes": 54725,
+      "sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "results/goal2r_summary/grid_summary.csv",
+      "bytes": 2616,
+      "sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "minimal_same_bytes": true
+    },
+    {
+      "path": "results/goal2r_summary/search_summary.csv",
+      "bytes": 5240,
+      "sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "minimal_same_bytes": true
+    }
+  ],
+  "production_sources_equal_to_base": {
+    "src/autotuner.py": true,
+    "src/matrix_multiplication.c": true,
+    "src/matrix_multiplication.original.c": true
+  },
+  "minimal_same_bytes_all": true,
+  "extra_files_outside_generated_cache": [],
+  "formal_relative_links": [
+    {
+      "document": "README.md",
+      "target": "report.md",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/framework.svg",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "README.md",
+      "exists": true,
+      "included": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png",
+      "exists": true,
+      "included": true
+    }
+  ],
+  "relative_link_count": 13,
+  "excludes": [
+    ".git",
+    "evidence/",
+    "scripts/",
+    "tests/",
+    "AGENTS.md",
+    "prompts",
+    "handouts",
+    "archives",
+    "binaries",
+    "build caches",
+    "other assignments"
+  ],
+  "reproduction_promise": "classroom compilation and three algorithms; full historical raw recomputation requires the complete engineering repository",
+  "submission_state": "not prepared or submitted to Shuishan"
+}

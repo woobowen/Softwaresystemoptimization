@@ -1,0 +1,320 @@
+{
+  "base_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "protected_inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "770a64d45f4c7053ae649c63e056b6570e97ffd9c2094f6c65291fd33cee0dfe",
+      "bytes": 28925
+    },
+    {
+      "path": "P1 Matrix Multiplication Autotuner.pdf",
+      "sha256": "ffe21db96ab0af28ff2f329f6d0a03b61fac577e530e8649c375ce13bf74eafe",
+      "bytes": 198183
+    },
+    {
+      "path": "matrix_multiplication.c",
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "bytes": 1357
+    },
+    {
+      "path": "P1/src/matrix_multiplication.original.c",
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "bytes": 1357
+    },
+    {
+      "path": "P1/src/matrix_multiplication.c",
+      "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "bytes": 2209
+    },
+    {
+      "path": "P1/src/autotuner.py",
+      "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "bytes": 46520
+    },
+    {
+      "path": "P1/evidence/protocol_goal2r.json",
+      "sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+      "bytes": 10978
+    },
+    {
+      "path": "P1_Goal3_Codex_Prompt.md",
+      "sha256": "f5fa9e8aeae241021fb3982362812adb7fe312ff2dacf031836073028d95e788",
+      "bytes": 27005
+    }
+  ],
+  "tracked_changes": [
+    "P1/README.md",
+    "P1/evidence/README.md",
+    "P1/images/build-run.png",
+    "P1/images/grid_median.png",
+    "P1/images/online_search.png",
+    "P1/images/saved-search-results.png",
+    "P1/report.md"
+  ],
+  "untracked_user_inputs_preserved": [
+    "P1_Goal1_Codex_Prompt.md",
+    "P1_Goal2R_Codex_Prompt.md",
+    "P1_Goal2_Codex_Prompt.md",
+    "P1_Goal3_Codex_Prompt.md",
+    "matrix_multiplication.c"
+  ],
+  "new_p1_files": [
+    "P1/evidence/finalization/candidate-files.json",
+    "P1/evidence/finalization/candidate-files.txt",
+    "P1/evidence/finalization/classroom-demo.py",
+    "P1/evidence/finalization/classroom-screenshot.jsonl",
+    "P1/evidence/finalization/classroom-terminal.sh",
+    "P1/evidence/finalization/clean-export.json",
+    "P1/evidence/finalization/control.jsonl",
+    "P1/evidence/finalization/cost-cutoffs.md",
+    "P1/evidence/finalization/crop-build-run.stderr.txt",
+    "P1/evidence/finalization/crop-build-run.stdout.txt",
+    "P1/evidence/finalization/data-audit.json",
+    "P1/evidence/finalization/data-review.md",
+    "P1/evidence/finalization/delivery-dependencies.md",
+    "P1/evidence/finalization/delivery-review.md",
+    "P1/evidence/finalization/formal-closure.json",
+    "P1/evidence/finalization/full-cold-build.jsonl",
+    "P1/evidence/finalization/full-cold-build.stderr.txt",
+    "P1/evidence/finalization/full-cold-build.stdout.txt",
+    "P1/evidence/finalization/full-fresh-n4096.jsonl",
+    "P1/evidence/finalization/full-fresh-n4096.stderr.txt",
+    "P1/evidence/finalization/full-fresh-n4096.stdout.txt",
+    "P1/evidence/finalization/full-host-cleanup.jsonl",
+    "P1/evidence/finalization/full-regression.stderr.txt",
+    "P1/evidence/finalization/full-regression.stdout.txt",
+    "P1/evidence/finalization/full-screenshot-cleanup.jsonl",
+    "P1/evidence/finalization/images.json",
+    "P1/evidence/finalization/minimal-cold-build.jsonl",
+    "P1/evidence/finalization/minimal-control-check.json",
+    "P1/evidence/finalization/minimal-control-check.py",
+    "P1/evidence/finalization/minimal-control-greedy.jsonl",
+    "P1/evidence/finalization/minimal-control-grid.jsonl",
+    "P1/evidence/finalization/minimal-control-random.jsonl",
+    "P1/evidence/finalization/minimal-fresh-n4096.jsonl",
+    "P1/evidence/finalization/minimal-fresh-screenshot.stderr.txt",
+    "P1/evidence/finalization/minimal-fresh-screenshot.stdout.txt",
+    "P1/evidence/finalization/minimal-small-controls.stderr.txt",
+    "P1/evidence/finalization/minimal-small-controls.stdout.txt",
+    "P1/evidence/finalization/negative-result-mechanism.md",
+    "P1/evidence/finalization/previous-publication-receipt.json",
+    "P1/evidence/finalization/publication-preflight.stderr.txt",
+    "P1/evidence/finalization/publication-preflight.stdout.txt",
+    "P1/evidence/finalization/regenerate-goal2r.stderr.txt",
+    "P1/evidence/finalization/regenerate-goal2r.stdout.txt",
+    "P1/evidence/finalization/regeneration-comparison.json",
+    "P1/evidence/finalization/render-current-framework.stderr.txt",
+    "P1/evidence/finalization/render-current-framework.stdout.txt",
+    "P1/evidence/finalization/render-figure-units.stderr.txt",
+    "P1/evidence/finalization/render-figure-units.stdout.txt",
+    "P1/evidence/finalization/render-report-figures.stderr.txt",
+    "P1/evidence/finalization/render-report-figures.stdout.txt",
+    "P1/evidence/finalization/reproduction.json",
+    "P1/evidence/finalization/start-and-protection.json",
+    "P1/scripts/goal3_audit.py",
+    "P1/scripts/render_report_figures.py"
+  ],
+  "secret_pattern_scan": "no matches in changed/new files",
+  "production_sources_unchanged": true,
+  "original_results_and_protocols_unchanged": true,
+  "syntax_checked_new_python": true,
+  "relative_links": [
+    {
+      "document": "report.md",
+      "target": "images/framework.svg"
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py"
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png"
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c"
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c"
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png"
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv"
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv"
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png"
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png"
+    },
+    {
+      "document": "report.md",
+      "target": "README.md"
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png"
+    },
+    {
+      "document": "README.md",
+      "target": "report.md"
+    }
+  ],
+  "ordinary_list_commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "list"
+      ],
+      "returncode": 0,
+      "count": 20,
+      "configurations": [
+        {
+          "s": 8,
+          "opt": "O0"
+        },
+        {
+          "s": 8,
+          "opt": "O1"
+        },
+        {
+          "s": 8,
+          "opt": "O2"
+        },
+        {
+          "s": 8,
+          "opt": "O3"
+        },
+        {
+          "s": 16,
+          "opt": "O0"
+        },
+        {
+          "s": 16,
+          "opt": "O1"
+        },
+        {
+          "s": 16,
+          "opt": "O2"
+        },
+        {
+          "s": 16,
+          "opt": "O3"
+        },
+        {
+          "s": 24,
+          "opt": "O0"
+        },
+        {
+          "s": 24,
+          "opt": "O1"
+        },
+        {
+          "s": 24,
+          "opt": "O2"
+        },
+        {
+          "s": 24,
+          "opt": "O3"
+        },
+        {
+          "s": 64,
+          "opt": "O0"
+        },
+        {
+          "s": 64,
+          "opt": "O1"
+        },
+        {
+          "s": 64,
+          "opt": "O2"
+        },
+        {
+          "s": 64,
+          "opt": "O3"
+        },
+        {
+          "s": 128,
+          "opt": "O0"
+        },
+        {
+          "s": 128,
+          "opt": "O1"
+        },
+        {
+          "s": 128,
+          "opt": "O2"
+        },
+        {
+          "s": 128,
+          "opt": "O3"
+        }
+      ]
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "list",
+        "--blocks",
+        "8,24",
+        "--opts",
+        "O1,O3"
+      ],
+      "returncode": 0,
+      "count": 4,
+      "configurations": [
+        {
+          "s": 8,
+          "opt": "O1"
+        },
+        {
+          "s": 8,
+          "opt": "O3"
+        },
+        {
+          "s": 24,
+          "opt": "O1"
+        },
+        {
+          "s": 24,
+          "opt": "O3"
+        }
+      ]
+    }
+  ],
+  "closed_control_windows_before_this_check": 14,
+  "new_n4096_calls": 2,
+  "prior_check_failure": {
+    "label": "publication-preflight",
+    "raw_s": 0.218196933,
+    "cause": "checker included its own active recorder start as a missing completion",
+    "fix": "allow only this known active checker; preserve prior failure and its cost",
+    "affected_production_or_raw": false
+  },
+  "zip": {
+    "path": "P1/.cache/P1-Goal3-formal-images.zip",
+    "bytes": 615834,
+    "sha256": "db115f2b89694456539af736ebd339acf3141b725720dc544c0417441c0ab146",
+    "members": 6
+  },
+  "installs": [],
+  "global_config_changes": [],
+  "engineering": "PENDING_EXTERNAL_ACCEPTANCE",
+  "submission": "NOT_OPERATED"
+}

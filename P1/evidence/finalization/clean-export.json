@@ -1,0 +1,29 @@
+{
+  "base_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "directory": "P1/.cache/goal3/full-clean",
+  "cache_absent_before_execution": true,
+  "overlay_files": {
+    "P1/README.md": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+    "P1/images/grid_median.png": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+    "P1/images/online_search.png": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+    "P1/images/saved-search-results.png": "56cd81d9b907e2c3fe3da328adcbacd143bc38436134929d8ad473b4fe217201",
+    "P1/report.md": "35c81a5db0f1a870e6367ff56ab11f7fed6a81ad9985a8286fe56977b7f45c28",
+    "P1/scripts/render_report_figures.py": "56aa5962037f4fd531a14b1eb4081baf2e65ae2f6174a152b801d1b876c33e32"
+  },
+  "stable_core_files": {
+    "P1/src/matrix_multiplication.c": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+    "P1/src/autotuner.py": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+    "P1/src/matrix_multiplication.original.c": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15"
+  },
+  "full_regression_command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "P1/tests",
+    "-v"
+  ],
+  "tests_modify_only_exported_evidence": true
+}

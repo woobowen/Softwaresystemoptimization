@@ -1,0 +1,104 @@
+{
+  "minimal_directory": "P1/.cache/goal3/minimal",
+  "full_directory": "P1/.cache/goal3/full-clean",
+  "files": [
+    "README.md",
+    "report.md",
+    "src/autotuner.py",
+    "src/matrix_multiplication.c",
+    "src/matrix_multiplication.original.c",
+    "images/framework.svg",
+    "images/grid_median.png",
+    "images/online_search.png",
+    "images/saved-search-results.png",
+    "images/interfaces-kernel.png",
+    "images/build-run.png",
+    "results/goal2r_summary/grid_summary.csv",
+    "results/goal2r_summary/search_summary.csv"
+  ],
+  "same_bytes_all_13": true,
+  "synchronized_after_display_changes": [
+    "images/saved-search-results.png",
+    "images/build-run.png"
+  ],
+  "production_sources_changed_after_runs": false,
+  "relative_links": [
+    {
+      "document": "report.md",
+      "target": "images/framework.svg",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "report.md",
+      "exists": true
+    }
+  ],
+  "classroom_raw_history_dependency": false,
+  "excluded_at_assembly": [
+    ".git",
+    "evidence",
+    "AGENTS.md",
+    "prompts",
+    "handouts",
+    "archives",
+    "old caches",
+    "other assignments"
+  ],
+  "post_run_generated_artifacts": "only own .cache holds logs, binaries and same-source n129 fixture; never included in candidate list"
+}

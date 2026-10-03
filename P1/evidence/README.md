@@ -1,5 +1,14 @@
 # P1 证据入口
 
+## Goal3 成品收敛
+
+本阶段只整理既有实验、独立复算、运行依赖、文稿和交付复现；没有新增搜索策略或重跑完整基准。正式课堂入口为 [P1 README](../README.md)，以下为完整工程内部材料，不能机械带入教师候选目录。Engineering 等待外部 GitHub 最终验收，水杉未操作。
+
+- [起点、原输入哈希与保护范围](finalization/start-and-protection.json)、[上一发布回执](finalization/previous-publication-receipt.json)、[费用截止说明](finalization/cost-cutoffs.md)
+- [独立数据审核](finalization/data-review.md)、[逐项独立复算](finalization/data-audit.json)、[已有轨迹的负结果机制](finalization/negative-result-mechanism.md)
+- [课堂与完整复算依赖](finalization/delivery-dependencies.md)、[13 文件候选白名单](finalization/candidate-files.txt)
+- [本阶段闭合索引](finalization/README.md)汇集干净复现、隔离演练、图像终稿与独立交付审核；实际命令和受控区间见 [control.jsonl](finalization/control.jsonl)。
+
 ## Goal2R 新证据
 
 新的60配置样本、六组主搜索及共同面板、四个Greedy起点、三个Random新seed确认和完整新鲜n4096均已执行。主计时为有对齐区间依据的RAW；数学正确性、主域计时与有限样本比较分开。S3因三组明确观察退化不保留，未触发追加，候选留出按事前规则不需要；Random三个新seed及其面板实际完成。Engineering等待外部GitHub源码、结果、报告和图片验收，Submission仍NOT_READY，未操作水杉。
@@ -43,4 +52,4 @@
 
 [原代码审核](reviews/code_review.md)、[原实验/报告审核](reviews/experiment_report_review.md)、[原正确性与实际环境](environment/initial_environment.txt)、[目标适配](environment/target_adaptation.diff)、[旧计时诊断](environment/timing_issue.md)、[原汇编](environment/kernel_assembly.txt)、[原文献](literature.md)、[原截图来源](commands/screenshots.json)均作为历史记录，不能冒称当前图片/计时器或本阶段终审。
 
-固定提交3ac、2fc、c247的只读重生成分别见 reproduction/goal2/*-comparison.json；RAW停止采用匹配5c78049，详细命令见[README](../README.md)。所有新增输出写到新派生目录或忽略缓存，身份检查保留，不覆盖 raw。[最终三张安全终端截图](commands/screenshots_goal2.jsonl)与[六图SHA/内容/实际视觉记录](commands/images_goal2.json)已保存；旧不安全启动记录不删改。干净复现221/19通过、四冷构建通过，唯一大矩阵复现被原保护中止，见[实际检查](reproduction/goal2/clean-fresh-n4096-check.json)。RAW七派生及历史各版本数据实际重算见对应comparison；MONO停批十CSV全等、JSON仅中间分析源码身份差已说明。完整受控成本见[costs_goal2.json](measurement/costs_goal2.json)。
+固定提交3ac、2fc、c247的只读重生成分别见 reproduction/goal2/*-comparison.json；RAW停止采用匹配5c78049，完整重生入口见[内部复现依赖说明](finalization/delivery-dependencies.md)。所有新增输出写到新派生目录或忽略缓存，身份检查保留，不覆盖 raw。[最终三张安全终端截图](commands/screenshots_goal2.jsonl)与[六图SHA/内容/实际视觉记录](commands/images_goal2.json)已保存；旧不安全启动记录不删改。干净复现221/19通过、四冷构建通过，唯一大矩阵复现被原保护中止，见[实际检查](reproduction/goal2/clean-fresh-n4096-check.json)。RAW七派生及历史各版本数据实际重算见对应comparison；MONO停批十CSV全等、JSON仅中间分析源码身份差已说明。完整受控成本见[costs_goal2.json](measurement/costs_goal2.json)。

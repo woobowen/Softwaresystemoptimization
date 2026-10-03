@@ -1,0 +1,110 @@
+{
+  "commands": [
+    [
+      "python3",
+      "-B",
+      "src/autotuner.py",
+      "search",
+      "--target",
+      ".cache/small.c",
+      "--algorithm",
+      "grid",
+      "--budget",
+      "20",
+      "--seed",
+      "17",
+      "--repeats",
+      "1",
+      "--timeout",
+      "30",
+      "--cache-dir",
+      ".cache/small-build",
+      "--output",
+      ".cache/control-grid.jsonl"
+    ],
+    [
+      "python3",
+      "-B",
+      "src/autotuner.py",
+      "search",
+      "--target",
+      ".cache/small.c",
+      "--algorithm",
+      "random",
+      "--budget",
+      "20",
+      "--seed",
+      "17",
+      "--repeats",
+      "1",
+      "--timeout",
+      "30",
+      "--cache-dir",
+      ".cache/small-build",
+      "--output",
+      ".cache/control-random.jsonl"
+    ],
+    [
+      "python3",
+      "-B",
+      "src/autotuner.py",
+      "search",
+      "--target",
+      ".cache/small.c",
+      "--algorithm",
+      "greedy",
+      "--budget",
+      "20",
+      "--seed",
+      "17",
+      "--repeats",
+      "1",
+      "--timeout",
+      "30",
+      "--cache-dir",
+      ".cache/small-build",
+      "--output",
+      ".cache/control-greedy.jsonl"
+    ]
+  ],
+  "checked": [
+    {
+      "algorithm": "grid",
+      "n": 129,
+      "actual_calls": 20,
+      "distinct": 20,
+      "stop_reason": "budget",
+      "returned": {
+        "s": 16,
+        "opt": "O3"
+      },
+      "failed_runs": 0
+    },
+    {
+      "algorithm": "random",
+      "n": 129,
+      "actual_calls": 20,
+      "distinct": 20,
+      "stop_reason": "budget",
+      "returned": {
+        "s": 16,
+        "opt": "O3"
+      },
+      "failed_runs": 0
+    },
+    {
+      "algorithm": "greedy",
+      "n": 129,
+      "actual_calls": 8,
+      "distinct": 8,
+      "stop_reason": "local_optimum",
+      "returned": {
+        "s": 128,
+        "opt": "O3"
+      },
+      "failed_runs": 0
+    }
+  ],
+  "n4096_calls": 0,
+  "claim": "same-source small matrix control flow only; not formal performance"
+}

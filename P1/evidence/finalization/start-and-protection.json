@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "start_local": "2026-10-04T01:54:07+08:00",
+  "base_commit": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "remote_at_start": "c22d856b8fa2f0b37aff4f436a856cf3a74bb37a",
+  "tracked_clean_at_start": true,
+  "untracked_user_inputs_preserved": [
+    "P1_Goal1_Codex_Prompt.md",
+    "P1_Goal2R_Codex_Prompt.md",
+    "P1_Goal2_Codex_Prompt.md",
+    "P1_Goal3_Codex_Prompt.md",
+    "matrix_multiplication.c"
+  ],
+  "protected_inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "770a64d45f4c7053ae649c63e056b6570e97ffd9c2094f6c65291fd33cee0dfe",
+      "bytes": 28925
+    },
+    {
+      "path": "P1 Matrix Multiplication Autotuner.pdf",
+      "sha256": "ffe21db96ab0af28ff2f329f6d0a03b61fac577e530e8649c375ce13bf74eafe",
+      "bytes": 198183
+    },
+    {
+      "path": "matrix_multiplication.c",
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "bytes": 1357
+    },
+    {
+      "path": "P1/src/matrix_multiplication.original.c",
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "bytes": 1357
+    },
+    {
+      "path": "P1/src/matrix_multiplication.c",
+      "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "bytes": 2209
+    },
+    {
+      "path": "P1/src/autotuner.py",
+      "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "bytes": 46520
+    },
+    {
+      "path": "P1/evidence/protocol_goal2r.json",
+      "sha256": "6aa610244e3268fa6e315925c56a32634ca7aca27e14e52abd9c01661da7eb9c",
+      "bytes": 10978
+    },
+    {
+      "path": "P1_Goal3_Codex_Prompt.md",
+      "sha256": "f5fa9e8aeae241021fb3982362812adb7fe312ff2dacf031836073028d95e788",
+      "bytes": 27005
+    }
+  ],
+  "protected_git_trees": {
+    "A1": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+    "A2": "139b6e7469d63b27cfa100d1e005061548d36ce8",
+    "P1/results": "af9ea2884fbeec41b870155f1bd61a761488b639",
+    "P1/evidence": "67cae70537910e70bce9a8db7df72a22fd302d13",
+    "P1/src": "365147f8daa832bac47b43c3088cd2ce300c0078",
+    "P1/scripts": "39688b58992cc2031d2d833821b5f61007a54ee3",
+    "P1/tests": "73e0edd03be5fe0d107cc761280154f07a6c589d"
+  },
+  "history_reference": "efb6259e7c662a706a57297bb016116b7412d92c",
+  "prior_calls": 429,
+  "prior_known_controlled_s": "48271.046382693",
+  "prior_unknown_budget_upper_s": "144",
+  "prior_conservative_s": "48415.046382693",
+  "old_zip_verified": {
+    "path": "P1/.cache/P1-Goal2R-formal-images.zip",
+    "bytes": 705638,
+    "sha256": "119a22d63a2e3b672dcfb90fc2d8d953b98b673e959890888208aca850f52603",
+    "members_equal_current_images": true
+  },
+  "new_run_limit_normal": 12,
+  "new_run_limit_with_failure_reserve": 18,
+  "new_controlled_normal_s": 3600,
+  "new_controlled_hard_s": 5400,
+  "cumulative_run_limit": 520,
+  "cumulative_controlled_limit_s": 57600,
+  "new_software_packages": [],
+  "global_configuration_changes": [],
+  "scope": "Goal3 finalization; no new search experiment; no Shuishan operation"
+}
