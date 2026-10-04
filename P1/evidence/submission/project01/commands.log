@@ -1,0 +1,1034 @@
+P1 project01 actual command log. Time zone: Asia/Shanghai.
+Exact durations were not tracked for bootstrap/reviewer reads. Timestamps below are actual command records, not experimental timing.
+Post-GitHub commit/push/readback records are retained in ignored final receipt to avoid a self-SHA loop.
+
+Bootstrap actual commands before timestamped logging (exact times/durations not recorded):
+ls -la -> exit 0
+cat P1_Submission_Codex_Prompt.md; cat AGENTS.md; full rereads and sed segments -> exit 0
+pwd; git status --porcelain=v1 --untracked-files=all; git branch --show-current; git rev-parse HEAD; git config --get-regexp remote URLs; rg --files --hidden -g AGENTS.md; df -Pk . -> exit 0
+pdftotext -layout "P1 Matrix Multiplication Autotuner.pdf" - -> exit 0
+Existing teacher checkout: git rev-parse --show-toplevel; git remote get-url origin; git branch --show-current; git rev-parse HEAD; git status --porcelain=v1 --untracked-files=all -> exit 0
+git check-ignore -v task-cache; git ls-files; git object/file protection hashes -> exit 0
+Only local ignored cache and protection snapshot created. No installation or global configuration change.
+
+[2026-10-04T12:09:45.080482+08:00 -> 2026-10-04T12:09:46.675346+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git fetch origin
+
+[2026-10-04T12:09:46.675855+08:00 -> 2026-10-04T12:09:46.676998+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse refs/remotes/origin/main
+stdout: 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+
+[2026-10-04T12:09:46.677168+08:00 -> 2026-10-04T12:09:46.678572+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file -t 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+stdout: commit
+
+[2026-10-04T12:09:46.678839+08:00 -> 2026-10-04T12:09:46.680179+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git merge-base --is-ancestor 5d49e31556aa7f759cd64a1de1ac1739d33cf165 refs/remotes/origin/main
+
+[2026-10-04T12:09:46.680439+08:00 -> 2026-10-04T12:09:46.681486+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/evidence/finalization/candidate-files.txt
+stdout: [binary stdout: 335 bytes; SHA256 01c834c66f03aa85d10964436d7ac0aaf37acae7c9b6392e83e9679234f0aa9f]
+
+[2026-10-04T12:09:46.681694+08:00 -> 2026-10-04T12:09:46.682724+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/evidence/finalization/candidate-files.json
+stdout: [binary stdout: 6189 bytes; SHA256 61d519df4f0fd6fd3239a89c2feeec8db62d6e8f2811992ecbda112df88b3390]
+
+[2026-10-04T12:09:46.682962+08:00 -> 2026-10-04T12:09:46.684001+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/README.md
+stdout: 8e9e7161f4aa597116a2760c924701856f9a503e
+
+[2026-10-04T12:09:46.684123+08:00 -> 2026-10-04T12:09:46.685078+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/README.md
+stdout: 100644 blob 8e9e7161f4aa597116a2760c924701856f9a503e	P1/README.md
+
+[2026-10-04T12:09:46.685201+08:00 -> 2026-10-04T12:09:46.686200+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 8e9e7161f4aa597116a2760c924701856f9a503e
+stdout: [binary stdout: 2722 bytes; SHA256 9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d]
+
+[2026-10-04T12:09:46.686439+08:00 -> 2026-10-04T12:09:46.687453+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/report.md
+stdout: 672e04f0857c37eb21fce83ce6b6d626f2e08674
+
+[2026-10-04T12:09:46.687578+08:00 -> 2026-10-04T12:09:46.688559+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/report.md
+stdout: 100644 blob 672e04f0857c37eb21fce83ce6b6d626f2e08674	P1/report.md
+
+[2026-10-04T12:09:46.688681+08:00 -> 2026-10-04T12:09:46.689714+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 672e04f0857c37eb21fce83ce6b6d626f2e08674
+stdout: [binary stdout: 12730 bytes; SHA256 482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8]
+
+[2026-10-04T12:09:46.689974+08:00 -> 2026-10-04T12:09:46.690852+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/src/autotuner.py
+stdout: e758b0d60287982104509b012b14c04de57112fa
+
+[2026-10-04T12:09:46.690998+08:00 -> 2026-10-04T12:09:46.691978+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/src/autotuner.py
+stdout: 100644 blob e758b0d60287982104509b012b14c04de57112fa	P1/src/autotuner.py
+
+[2026-10-04T12:09:46.692100+08:00 -> 2026-10-04T12:09:46.693342+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob e758b0d60287982104509b012b14c04de57112fa
+stdout: [binary stdout: 46520 bytes; SHA256 e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec]
+
+[2026-10-04T12:09:46.693880+08:00 -> 2026-10-04T12:09:46.695005+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/src/matrix_multiplication.c
+stdout: 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f
+
+[2026-10-04T12:09:46.695171+08:00 -> 2026-10-04T12:09:46.696168+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/src/matrix_multiplication.c
+stdout: 100644 blob 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f	P1/src/matrix_multiplication.c
+
+[2026-10-04T12:09:46.696303+08:00 -> 2026-10-04T12:09:46.697282+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f
+stdout: [binary stdout: 2209 bytes; SHA256 aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50]
+
+[2026-10-04T12:09:46.697548+08:00 -> 2026-10-04T12:09:46.698491+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/src/matrix_multiplication.original.c
+stdout: 1f6625cf5258ebe386c6ca616a2d098140fe5702
+
+[2026-10-04T12:09:46.698602+08:00 -> 2026-10-04T12:09:46.699643+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/src/matrix_multiplication.original.c
+stdout: 100644 blob 1f6625cf5258ebe386c6ca616a2d098140fe5702	P1/src/matrix_multiplication.original.c
+
+[2026-10-04T12:09:46.699761+08:00 -> 2026-10-04T12:09:46.700728+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 1f6625cf5258ebe386c6ca616a2d098140fe5702
+stdout: [binary stdout: 1357 bytes; SHA256 188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15]
+
+[2026-10-04T12:09:46.701011+08:00 -> 2026-10-04T12:09:46.701917+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/framework.svg
+stdout: 364acf1bf079f1ee02f3a70187a49a97981c6cf0
+
+[2026-10-04T12:09:46.702027+08:00 -> 2026-10-04T12:09:46.703067+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/framework.svg
+stdout: 100644 blob 364acf1bf079f1ee02f3a70187a49a97981c6cf0	P1/images/framework.svg
+
+[2026-10-04T12:09:46.703241+08:00 -> 2026-10-04T12:09:46.704563+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 364acf1bf079f1ee02f3a70187a49a97981c6cf0
+stdout: [binary stdout: 3416 bytes; SHA256 08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4]
+
+[2026-10-04T12:09:46.705013+08:00 -> 2026-10-04T12:09:46.705899+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/grid_median.png
+stdout: b88b6b459062a92b35327c2f9ed3413af0e3e2d2
+
+[2026-10-04T12:09:46.706019+08:00 -> 2026-10-04T12:09:46.706928+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/grid_median.png
+stdout: 100644 blob b88b6b459062a92b35327c2f9ed3413af0e3e2d2	P1/images/grid_median.png
+
+[2026-10-04T12:09:46.707078+08:00 -> 2026-10-04T12:09:46.709992+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob b88b6b459062a92b35327c2f9ed3413af0e3e2d2
+stdout: [binary stdout: 157782 bytes; SHA256 4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155]
+
+[2026-10-04T12:09:46.710559+08:00 -> 2026-10-04T12:09:46.712089+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/online_search.png
+stdout: 64ee5f188397dc965aaaffd5840edf1119b3c971
+
+[2026-10-04T12:09:46.712221+08:00 -> 2026-10-04T12:09:46.713348+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/online_search.png
+stdout: 100644 blob 64ee5f188397dc965aaaffd5840edf1119b3c971	P1/images/online_search.png
+
+[2026-10-04T12:09:46.713481+08:00 -> 2026-10-04T12:09:46.720933+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 64ee5f188397dc965aaaffd5840edf1119b3c971
+stdout: [binary stdout: 220073 bytes; SHA256 3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581]
+
+[2026-10-04T12:09:46.721449+08:00 -> 2026-10-04T12:09:46.722474+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/saved-search-results.png
+stdout: b2b9f34f7604297e6805743733b759ade44e3742
+
+[2026-10-04T12:09:46.722623+08:00 -> 2026-10-04T12:09:46.723858+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/saved-search-results.png
+stdout: 100644 blob b2b9f34f7604297e6805743733b759ade44e3742	P1/images/saved-search-results.png
+
+[2026-10-04T12:09:46.723992+08:00 -> 2026-10-04T12:09:46.726034+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob b2b9f34f7604297e6805743733b759ade44e3742
+stdout: [binary stdout: 106543 bytes; SHA256 c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267]
+
+[2026-10-04T12:09:46.726366+08:00 -> 2026-10-04T12:09:46.727368+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/interfaces-kernel.png
+stdout: 72a4519a8445827572e3af6d07fde834b4c6f82d
+
+[2026-10-04T12:09:46.727494+08:00 -> 2026-10-04T12:09:46.728492+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/interfaces-kernel.png
+stdout: 100644 blob 72a4519a8445827572e3af6d07fde834b4c6f82d	P1/images/interfaces-kernel.png
+
+[2026-10-04T12:09:46.728615+08:00 -> 2026-10-04T12:09:46.730750+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 72a4519a8445827572e3af6d07fde834b4c6f82d
+stdout: [binary stdout: 154698 bytes; SHA256 6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8]
+
+[2026-10-04T12:09:46.731201+08:00 -> 2026-10-04T12:09:46.732166+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/images/build-run.png
+stdout: edbbd34552e98cde487830414699c773d497b10c
+
+[2026-10-04T12:09:46.732282+08:00 -> 2026-10-04T12:09:46.733206+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/images/build-run.png
+stdout: 100644 blob edbbd34552e98cde487830414699c773d497b10c	P1/images/build-run.png
+
+[2026-10-04T12:09:46.733326+08:00 -> 2026-10-04T12:09:46.734865+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob edbbd34552e98cde487830414699c773d497b10c
+stdout: [binary stdout: 54725 bytes; SHA256 e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb]
+
+[2026-10-04T12:09:46.735301+08:00 -> 2026-10-04T12:09:46.736197+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/results/goal2r_summary/grid_summary.csv
+stdout: 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a
+
+[2026-10-04T12:09:46.736313+08:00 -> 2026-10-04T12:09:46.737264+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/results/goal2r_summary/grid_summary.csv
+stdout: 100644 blob 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a	P1/results/goal2r_summary/grid_summary.csv
+
+[2026-10-04T12:09:46.737383+08:00 -> 2026-10-04T12:09:46.738905+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a
+stdout: [binary stdout: 2616 bytes; SHA256 b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec]
+
+[2026-10-04T12:09:46.739573+08:00 -> 2026-10-04T12:09:46.740624+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/results/goal2r_summary/search_summary.csv
+stdout: 1188f1f5af1f233c3ea8070e949b387ca2deedc9
+
+[2026-10-04T12:09:46.740747+08:00 -> 2026-10-04T12:09:46.741698+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-tree 5d49e31556aa7f759cd64a1de1ac1739d33cf165 -- P1/results/goal2r_summary/search_summary.csv
+stdout: 100644 blob 1188f1f5af1f233c3ea8070e949b387ca2deedc9	P1/results/goal2r_summary/search_summary.csv
+
+[2026-10-04T12:09:46.741840+08:00 -> 2026-10-04T12:09:46.743258+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 1188f1f5af1f233c3ea8070e949b387ca2deedc9
+stdout: [binary stdout: 5240 bytes; SHA256 8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787]
+
+[2026-10-04T12:10:39.149901+08:00 -> 2026-10-04T12:10:39.814000+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote --symref git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git HEAD 'refs/heads/*'
+stdout: ref: refs/heads/master	HEAD
+414947e374423bad4e6b24a4a175d0e208714c85	HEAD
+f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb	refs/heads/homework01
+f00613fff9f32f25bbac1423bb76a1bef52d7e41	refs/heads/homework02
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework03
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework04
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework05
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework06
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework07
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework08
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework09
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework10
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework11
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework12
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework13
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework14
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework15
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/master
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T12:10:39.814882+08:00 -> 2026-10-04T12:10:41.305126+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git clone --no-checkout git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git /home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+stderr: Cloning into '/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write'...
+bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T12:10:41.305387+08:00 -> 2026-10-04T12:10:41.863209+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git fetch origin
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T12:10:41.863526+08:00 -> 2026-10-04T12:10:41.864960+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git symbolic-ref refs/remotes/origin/HEAD
+stdout: refs/remotes/origin/master
+
+[2026-10-04T12:10:41.865125+08:00 -> 2026-10-04T12:10:41.866176+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse refs/remotes/origin/master
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T12:10:41.866359+08:00 -> 2026-10-04T12:10:41.867624+08:00] exit=128 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git show-ref --verify refs/remotes/origin/project01
+stderr: fatal: 'refs/remotes/origin/project01' - not a valid ref
+
+[2026-10-04T12:10:41.867794+08:00 -> 2026-10-04T12:10:41.869131+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git ls-tree -r -l -z 414947e374423bad4e6b24a4a175d0e208714c85
+stdout: 100644 blob 790c8b9c3961b74f6fa9b036558712aab58f2104      51	README.md 
+
+[2026-10-04T12:10:41.869339+08:00 -> 2026-10-04T12:10:41.870835+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git show --no-patch --format=fuller 414947e374423bad4e6b24a4a175d0e208714c85
+stdout: commit 414947e374423bad4e6b24a4a175d0e208714c85
+[unrelated baseline author identity omitted]
+AuthorDate: Wed Sep 16 10:51:49 2026 +0800
+[unrelated baseline author identity omitted]
+CommitDate: Wed Sep 16 10:51:49 2026 +0800
+
+    Initial commit
+
+[2026-10-04T12:10:41.871082+08:00 -> 2026-10-04T12:10:41.872196+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git var GIT_AUTHOR_IDENT
+stdout: woobowen <woobowen@gmail.com> 1791087041 +0800
+
+[2026-10-04T12:10:41.872435+08:00 -> 2026-10-04T12:10:41.873647+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git show 414947e374423bad4e6b24a4a175d0e208714c85:README.md
+stdout: # 10245102410
+
+student 10245102410 吴博闻's repo
+
+[2026-10-04T12:11:39.797120+08:00 -> 2026-10-04T12:11:39.798945+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git log --oneline --all -- README.md
+stdout: f5b9cca A1: refine report wording
+77bdbf8 A1: submit homework01
+414947e Initial commit
+
+[2026-10-04T12:11:39.799286+08:00 -> 2026-10-04T12:11:39.865726+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ rg --files --hidden -g '*P1*' -g '*project01*' -g '!P1/.cache/**' -g '!.git/**'
+stdout: P1 Matrix Multiplication Autotuner.pdf
+P1_Goal2_Codex_Prompt.md
+P1_Goal3_Codex_Prompt.md:Zone.Identifier
+P1_Submission_Codex_Prompt.md:Zone.Identifier
+P1_Goal2R_Codex_Prompt.md
+P1_Goal3_Codex_Prompt.md
+P1_Goal2_Codex_Prompt.md:Zone.Identifier
+P1_Goal1_Codex_Prompt.md
+P1_Goal2R_Codex_Prompt.md:Zone.Identifier
+P1_Goal1_Codex_Prompt.md:Zone.Identifier
+P1_Submission_Codex_Prompt.md
+
+[2026-10-04T12:15:01.219657+08:00 -> 2026-10-04T12:15:01.221237+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 414947e374423bad4e6b24a4a175d0e208714c85:README.md
+stdout: [binary stdout: 51 bytes; SHA256 570dc0d9f5cf381aaa5b133fc86ebf3f6ed8b1f21cb97a7b66cb72ff329feca4]
+
+[2026-10-04T12:15:01.221741+08:00 -> 2026-10-04T12:15:01.224073+08:00] exit=1 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git diff --no-index -- /home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/source/teacher-baseline-README.md /home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/package/README.md
+stdout: diff --git a/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/source/teacher-baseline-README.md b/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/package/README.md
+index 790c8b9..8e9e716 100644
+--- a/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/source/teacher-baseline-README.md
++++ b/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/package/README.md
+@@ -1,3 +1,34 @@
+-# 10245102410
++# P1 运行入口
+ 
+-student 10245102410 吴博闻's repo
+\ No newline at end of file
++正式报告见 [report.md](report.md)。目标为 n=4096 的串行 `double` 矩阵乘法，保留原初始化和六层分块循环；配置为 `{8,16,24,64,128}` 与 `{O0,O1,O2,O3}` 的 20 个组合。
++
++运行需要 Linux / WSL2、Python 3 和 GCC，Python 部分只用标准库。以下命令在 **P1 目录内**执行，输出写入 `.cache/`。一次完整矩阵运行可能需要数分钟。
++
++```bash
++# 列出完整配置空间，编译四个优化级别
++python3 -B src/autotuner.py list
++python3 -B src/autotuner.py build --output .cache/demo-build.jsonl
++
++# 运行一个配置
++python3 -B src/autotuner.py run --s 128 --opt O3 \
++  --repeats 1 --timeout 1200 --output .cache/demo-run.jsonl
++```
++
++下面三条搜索命令按需选择。Grid 完整访问 20 个组合；Random 无放回打乱配置；Greedy 从 seed 决定的起点检查单参数相邻配置，无改善时停止。Random、Greedy 的示例预算为八次尝试，每次测量一次；失败的尝试也占预算。
++
++```bash
++python3 -B src/autotuner.py search --algorithm grid \
++  --budget 20 --repeats 1 --timeout 1200 --output .cache/demo-grid.jsonl
++python3 -B src/autotuner.py search --algorithm random \
++  --budget 8 --seed 700001 --repeats 1 --timeout 1200 \
++  --output .cache/demo-random.jsonl
++python3 -B src/autotuner.py search --algorithm greedy \
++  --budget 8 --seed 700001 --repeats 1 --timeout 1200 \
++  --output .cache/demo-greedy.jsonl
++```
++
++`--target` 输入 C 源码，`--blocks` 与 `--opts` 输入候选值，`--algorithm` 选择算法，缺省为 Grid。例如 `list --blocks 8,24 --opts O1,O3` 列出四个组合。更换目标时需适配本项目的调用约定：可执行文件接受一个分块参数，第一行输出以秒为单位的耗时；框架不会自动识别任意程序的参数和计时区域。
++
++`run` 和 `search` 缺省使用 `benchmark`，检查输出、退出码、超时和目标计时，并将有效耗时用于评分。`run --mode correctness` 或 `--mode diagnostic` 保存运行记录但不参与排名；数值正确性的检查方法与结果见报告。内核耗时只包含乘法循环，进程与搜索总耗时还包含初始化、输出和调优开销。普通运行不需要 Windows 时钟桥或截图工具；比较性能时应保持测量条件一致，在可用的逻辑 CPU 上可用 `taskset` 固定亲和性。
++
++日志不能覆盖已有文件。继续中断任务时，用相同源码、配置、编译器和运行设置加 `--resume --output <原日志>`；框架核对完整元数据，不会自动终止身份不明的遗留进程。更换设置或重新实验时使用新日志路径。候选复核策略 `recheck` 的结果与取舍见报告，默认算法仍为 Grid。
+Expected exit 1: the proposed source README differs from the teacher template; this is not a failed submission.
+
+[2026-10-04T12:18:10.875197+08:00 -> 2026-10-04T12:18:10.877322+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git switch -c project01 414947e374423bad4e6b24a4a175d0e208714c85
+stderr: Switched to a new branch 'project01'
+
+[2026-10-04T12:18:10.888716+08:00 -> 2026-10-04T12:18:10.909136+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git add -- report.md src/autotuner.py src/matrix_multiplication.c src/matrix_multiplication.original.c images/framework.svg images/grid_median.png images/online_search.png images/saved-search-results.png images/interfaces-kernel.png images/build-run.png results/goal2r_summary/grid_summary.csv results/goal2r_summary/search_summary.csv
+
+[2026-10-04T12:18:10.909383+08:00 -> 2026-10-04T12:18:10.910659+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --cached --name-status
+stdout: A	images/build-run.png
+A	images/framework.svg
+A	images/grid_median.png
+A	images/interfaces-kernel.png
+A	images/online_search.png
+A	images/saved-search-results.png
+A	report.md
+A	results/goal2r_summary/grid_summary.csv
+A	results/goal2r_summary/search_summary.csv
+A	src/autotuner.py
+A	src/matrix_multiplication.c
+A	src/matrix_multiplication.original.c
+
+[2026-10-04T12:18:10.910819+08:00 -> 2026-10-04T12:18:10.911850+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse HEAD:README.md
+stdout: 790c8b9c3961b74f6fa9b036558712aab58f2104
+
+[2026-10-04T12:21:22.951924+08:00 -> 2026-10-04T12:21:22.953479+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:A1
+stdout: e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0
+
+[2026-10-04T12:21:22.954972+08:00 -> 2026-10-04T12:21:22.956487+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:A2
+stdout: 139b6e7469d63b27cfa100d1e005061548d36ce8
+
+[2026-10-04T12:21:22.959835+08:00 -> 2026-10-04T12:21:22.961354+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/src
+stdout: 365147f8daa832bac47b43c3088cd2ce300c0078
+
+[2026-10-04T12:21:22.961869+08:00 -> 2026-10-04T12:21:22.963011+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/results
+stdout: af9ea2884fbeec41b870155f1bd61a761488b639
+
+[2026-10-04T12:21:22.965798+08:00 -> 2026-10-04T12:21:22.966878+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/tests
+stdout: 73e0edd03be5fe0d107cc761280154f07a6c589d
+
+[2026-10-04T12:21:22.967312+08:00 -> 2026-10-04T12:21:22.968421+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/report.md
+stdout: 672e04f0857c37eb21fce83ce6b6d626f2e08674
+
+[2026-10-04T12:21:22.968814+08:00 -> 2026-10-04T12:21:22.969824+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/README.md
+stdout: 8e9e7161f4aa597116a2760c924701856f9a503e
+
+[2026-10-04T12:21:22.970224+08:00 -> 2026-10-04T12:21:22.971291+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/images
+stdout: 2d9e73bc9f0ef726a0c92cd354cdbc45d69f7773
+
+[2026-10-04T12:21:22.971783+08:00 -> 2026-10-04T12:21:22.972798+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:AGENTS.md
+stdout: b56052ce7d55f6ab06228ae12ead55b9748eadf6
+
+[2026-10-04T12:22:39.107991+08:00 -> 2026-10-04T12:22:39.666948+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote --symref git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git HEAD 'refs/heads/*'
+stdout: ref: refs/heads/master	HEAD
+414947e374423bad4e6b24a4a175d0e208714c85	HEAD
+f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb	refs/heads/homework01
+f00613fff9f32f25bbac1423bb76a1bef52d7e41	refs/heads/homework02
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework03
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework04
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework05
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework06
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework07
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework08
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework09
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework10
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework11
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework12
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework13
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework14
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework15
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/master
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T12:39:19.685022+08:00 -> 2026-10-04T12:39:19.686266+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git branch --show-current
+stdout: main
+
+[2026-10-04T12:39:19.686663+08:00 -> 2026-10-04T12:39:19.687611+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD
+stdout: 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+
+[2026-10-04T12:39:19.687742+08:00 -> 2026-10-04T12:39:19.693746+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git status --porcelain=v1 --untracked-files=all
+stdout: ?? P1/evidence/submission/project01/engineering-acceptance.md
+?? P1/evidence/submission/project01/package-manifest.json
+?? P1_Goal1_Codex_Prompt.md
+?? P1_Goal2R_Codex_Prompt.md
+?? P1_Goal2_Codex_Prompt.md
+?? P1_Goal3_Codex_Prompt.md
+?? P1_Submission_Codex_Prompt.md
+?? matrix_multiplication.c
+
+[2026-10-04T12:39:19.694036+08:00 -> 2026-10-04T12:39:19.695372+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git branch --show-current
+stdout: project01
+
+[2026-10-04T12:39:19.695499+08:00 -> 2026-10-04T12:39:19.696511+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse HEAD
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T12:39:19.696637+08:00 -> 2026-10-04T12:39:19.697842+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --cached --name-status
+stdout: A	images/build-run.png
+A	images/framework.svg
+A	images/grid_median.png
+A	images/interfaces-kernel.png
+A	images/online_search.png
+A	images/saved-search-results.png
+A	report.md
+A	results/goal2r_summary/grid_summary.csv
+A	results/goal2r_summary/search_summary.csv
+A	src/autotuner.py
+A	src/matrix_multiplication.c
+A	src/matrix_multiplication.original.c
+
+[2026-10-04T12:39:19.697985+08:00 -> 2026-10-04T12:39:19.699009+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git hash-object README.md
+stdout: 790c8b9c3961b74f6fa9b036558712aab58f2104
+
+[2026-10-04T13:59:28.187424+08:00 -> 2026-10-04T13:59:28.189217+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git branch --show-current
+stdout: main
+
+[2026-10-04T13:59:28.190779+08:00 -> 2026-10-04T13:59:28.192339+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD
+stdout: 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+
+[2026-10-04T13:59:28.192605+08:00 -> 2026-10-04T13:59:28.200013+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git status --porcelain=v1 --untracked-files=all
+stdout: ?? P1/evidence/submission/project01/engineering-acceptance.md
+?? P1/evidence/submission/project01/package-manifest.json
+?? P1_Goal1_Codex_Prompt.md
+?? P1_Goal2R_Codex_Prompt.md
+?? P1_Goal2_Codex_Prompt.md
+?? P1_Goal3_Codex_Prompt.md
+?? P1_Submission_Codex_Prompt.md
+?? matrix_multiplication.c
+
+[2026-10-04T13:59:28.200307+08:00 -> 2026-10-04T13:59:28.203154+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git remote get-url origin
+stdout: git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git
+
+[2026-10-04T13:59:28.203371+08:00 -> 2026-10-04T13:59:28.205636+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git branch --show-current
+stdout: project01
+
+[2026-10-04T13:59:28.206023+08:00 -> 2026-10-04T13:59:28.207696+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse HEAD
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T13:59:28.207881+08:00 -> 2026-10-04T13:59:28.211072+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --cached --name-status
+stdout: A	images/build-run.png
+A	images/framework.svg
+A	images/grid_median.png
+A	images/interfaces-kernel.png
+A	images/online_search.png
+A	images/saved-search-results.png
+A	report.md
+A	results/goal2r_summary/grid_summary.csv
+A	results/goal2r_summary/search_summary.csv
+A	src/autotuner.py
+A	src/matrix_multiplication.c
+A	src/matrix_multiplication.original.c
+
+[2026-10-04T13:59:28.211345+08:00 -> 2026-10-04T13:59:28.213089+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git hash-object README.md
+stdout: 790c8b9c3961b74f6fa9b036558712aab58f2104
+
+[2026-10-04T14:00:18.800231+08:00 -> 2026-10-04T14:00:19.525239+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git fetch origin
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:00:19.526304+08:00 -> 2026-10-04T14:00:20.093776+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote --symref git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git HEAD 'refs/heads/*'
+stdout: ref: refs/heads/master	HEAD
+414947e374423bad4e6b24a4a175d0e208714c85	HEAD
+f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb	refs/heads/homework01
+f00613fff9f32f25bbac1423bb76a1bef52d7e41	refs/heads/homework02
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework03
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework04
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework05
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework06
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework07
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework08
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework09
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework10
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework11
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework12
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework13
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework14
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework15
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/master
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:00:20.094403+08:00 -> 2026-10-04T14:00:20.096988+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse refs/remotes/origin/master
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T14:00:20.099156+08:00 -> 2026-10-04T14:00:20.104163+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git cat-file blob 5d49e31556aa7f759cd64a1de1ac1739d33cf165:P1/README.md
+stdout: [binary stdout: 2722 bytes; SHA256 9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d]
+
+[2026-10-04T14:00:20.105126+08:00 -> 2026-10-04T14:00:20.109711+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git add -- README.md
+
+[2026-10-04T14:00:20.110055+08:00 -> 2026-10-04T14:00:20.112614+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --cached --name-status
+stdout: M	README.md
+A	images/build-run.png
+A	images/framework.svg
+A	images/grid_median.png
+A	images/interfaces-kernel.png
+A	images/online_search.png
+A	images/saved-search-results.png
+A	report.md
+A	results/goal2r_summary/grid_summary.csv
+A	results/goal2r_summary/search_summary.csv
+A	src/autotuner.py
+A	src/matrix_multiplication.c
+A	src/matrix_multiplication.original.c
+
+[2026-10-04T14:00:20.113760+08:00 -> 2026-10-04T14:00:20.116132+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :README.md
+stdout: 8e9e7161f4aa597116a2760c924701856f9a503e
+
+[2026-10-04T14:00:20.116479+08:00 -> 2026-10-04T14:00:20.119369+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 8e9e7161f4aa597116a2760c924701856f9a503e
+stdout: [binary stdout: 2722 bytes; SHA256 9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d]
+
+[2026-10-04T14:00:20.119730+08:00 -> 2026-10-04T14:00:20.121636+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :report.md
+stdout: 672e04f0857c37eb21fce83ce6b6d626f2e08674
+
+[2026-10-04T14:00:20.121897+08:00 -> 2026-10-04T14:00:20.124859+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 672e04f0857c37eb21fce83ce6b6d626f2e08674
+stdout: [binary stdout: 12730 bytes; SHA256 482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8]
+
+[2026-10-04T14:00:20.125626+08:00 -> 2026-10-04T14:00:20.128039+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :src/autotuner.py
+stdout: e758b0d60287982104509b012b14c04de57112fa
+
+[2026-10-04T14:00:20.128337+08:00 -> 2026-10-04T14:00:20.131499+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob e758b0d60287982104509b012b14c04de57112fa
+stdout: [binary stdout: 46520 bytes; SHA256 e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec]
+
+[2026-10-04T14:00:20.132654+08:00 -> 2026-10-04T14:00:20.135138+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :src/matrix_multiplication.c
+stdout: 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f
+
+[2026-10-04T14:00:20.135437+08:00 -> 2026-10-04T14:00:20.138356+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f
+stdout: [binary stdout: 2209 bytes; SHA256 aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50]
+
+[2026-10-04T14:00:20.139067+08:00 -> 2026-10-04T14:00:20.141025+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :src/matrix_multiplication.original.c
+stdout: 1f6625cf5258ebe386c6ca616a2d098140fe5702
+
+[2026-10-04T14:00:20.141287+08:00 -> 2026-10-04T14:00:20.143949+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 1f6625cf5258ebe386c6ca616a2d098140fe5702
+stdout: [binary stdout: 1357 bytes; SHA256 188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15]
+
+[2026-10-04T14:00:20.144720+08:00 -> 2026-10-04T14:00:20.146868+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/framework.svg
+stdout: 364acf1bf079f1ee02f3a70187a49a97981c6cf0
+
+[2026-10-04T14:00:20.147289+08:00 -> 2026-10-04T14:00:20.150307+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 364acf1bf079f1ee02f3a70187a49a97981c6cf0
+stdout: [binary stdout: 3416 bytes; SHA256 08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4]
+
+[2026-10-04T14:00:20.151055+08:00 -> 2026-10-04T14:00:20.152969+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/grid_median.png
+stdout: b88b6b459062a92b35327c2f9ed3413af0e3e2d2
+
+[2026-10-04T14:00:20.153231+08:00 -> 2026-10-04T14:00:20.159288+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob b88b6b459062a92b35327c2f9ed3413af0e3e2d2
+stdout: [binary stdout: 157782 bytes; SHA256 4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155]
+
+[2026-10-04T14:00:20.160735+08:00 -> 2026-10-04T14:00:20.163588+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/online_search.png
+stdout: 64ee5f188397dc965aaaffd5840edf1119b3c971
+
+[2026-10-04T14:00:20.163987+08:00 -> 2026-10-04T14:00:20.177833+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 64ee5f188397dc965aaaffd5840edf1119b3c971
+stdout: [binary stdout: 220073 bytes; SHA256 3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581]
+
+[2026-10-04T14:00:20.180761+08:00 -> 2026-10-04T14:00:20.183459+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/saved-search-results.png
+stdout: b2b9f34f7604297e6805743733b759ade44e3742
+
+[2026-10-04T14:00:20.183803+08:00 -> 2026-10-04T14:00:20.194647+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob b2b9f34f7604297e6805743733b759ade44e3742
+stdout: [binary stdout: 106543 bytes; SHA256 c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267]
+
+[2026-10-04T14:00:20.196858+08:00 -> 2026-10-04T14:00:20.200069+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/interfaces-kernel.png
+stdout: 72a4519a8445827572e3af6d07fde834b4c6f82d
+
+[2026-10-04T14:00:20.200396+08:00 -> 2026-10-04T14:00:20.205825+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 72a4519a8445827572e3af6d07fde834b4c6f82d
+stdout: [binary stdout: 154698 bytes; SHA256 6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8]
+
+[2026-10-04T14:00:20.207925+08:00 -> 2026-10-04T14:00:20.212164+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :images/build-run.png
+stdout: edbbd34552e98cde487830414699c773d497b10c
+
+[2026-10-04T14:00:20.212573+08:00 -> 2026-10-04T14:00:20.218833+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob edbbd34552e98cde487830414699c773d497b10c
+stdout: [binary stdout: 54725 bytes; SHA256 e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb]
+
+[2026-10-04T14:00:20.219873+08:00 -> 2026-10-04T14:00:20.222333+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :results/goal2r_summary/grid_summary.csv
+stdout: 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a
+
+[2026-10-04T14:00:20.222880+08:00 -> 2026-10-04T14:00:20.226273+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a
+stdout: [binary stdout: 2616 bytes; SHA256 b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec]
+
+[2026-10-04T14:00:20.227124+08:00 -> 2026-10-04T14:00:20.229415+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse :results/goal2r_summary/search_summary.csv
+stdout: 1188f1f5af1f233c3ea8070e949b387ca2deedc9
+
+[2026-10-04T14:00:20.229857+08:00 -> 2026-10-04T14:00:20.233183+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git cat-file blob 1188f1f5af1f233c3ea8070e949b387ca2deedc9
+stdout: [binary stdout: 5240 bytes; SHA256 8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787]
+
+[2026-10-04T14:00:20.233990+08:00 -> 2026-10-04T14:00:20.292324+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --cached --binary --full-index
+stdout: [Full stdout retained in ignored task cache: 858784 UTF-8 bytes, SHA256 9e49d5709ae8688dd3e9518eb58537c380fcc7345f87b530167ede4b8021763d; omitted here to avoid duplicating formal content/binary patch.]
+
+[2026-10-04T14:00:20.440456+08:00 -> 2026-10-04T14:00:20.443019+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git var GIT_AUTHOR_IDENT
+stdout: woobowen <woobowen@gmail.com> 1791093620 +0800
+
+[2026-10-04T14:00:18.770354+08:00 -> 2026-10-04T14:00:21.924796+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git fetch origin
+
+[2026-10-04T14:00:21.925866+08:00 -> 2026-10-04T14:00:21.928634+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse refs/remotes/origin/main
+stdout: 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+
+[2026-10-04T14:00:21.928990+08:00 -> 2026-10-04T14:00:21.931131+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD
+stdout: 5d49e31556aa7f759cd64a1de1ac1739d33cf165
+
+[2026-10-04T14:06:28.429201+08:00 -> 2026-10-04T14:06:28.430787+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git branch --show-current
+stdout: project01
+
+[2026-10-04T14:06:28.431245+08:00 -> 2026-10-04T14:06:28.432624+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git remote get-url origin
+stdout: git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git
+
+[2026-10-04T14:06:28.432773+08:00 -> 2026-10-04T14:06:28.434156+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse HEAD
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T14:06:28.434297+08:00 -> 2026-10-04T14:06:28.435489+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git diff --name-only
+
+[2026-10-04T14:06:28.435629+08:00 -> 2026-10-04T14:06:28.438448+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git write-tree
+stdout: 82417b5e66cecf8afb0dd357ab7ef1d153d3b3bd
+
+[2026-10-04T14:06:28.438629+08:00 -> 2026-10-04T14:06:28.967899+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:06:28.968179+08:00 -> 2026-10-04T14:06:28.982518+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git commit -m 'Submit P1 matrix multiplication autotuner'
+stdout: [project01 6b42f26] Submit P1 matrix multiplication autotuner
+ 13 files changed, 1248 insertions(+), 2 deletions(-)
+ create mode 100644 images/build-run.png
+ create mode 100644 images/framework.svg
+ create mode 100644 images/grid_median.png
+ create mode 100644 images/interfaces-kernel.png
+ create mode 100644 images/online_search.png
+ create mode 100644 images/saved-search-results.png
+ create mode 100644 report.md
+ create mode 100644 results/goal2r_summary/grid_summary.csv
+ create mode 100644 results/goal2r_summary/search_summary.csv
+ create mode 100644 src/autotuner.py
+ create mode 100644 src/matrix_multiplication.c
+ create mode 100644 src/matrix_multiplication.original.c
+
+[2026-10-04T14:06:28.982823+08:00 -> 2026-10-04T14:06:28.984017+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse HEAD
+stdout: 6b42f26926c5dcd740a9bfea8385be0455d7ce53
+
+[2026-10-04T14:06:28.984181+08:00 -> 2026-10-04T14:06:28.985798+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse 'HEAD^{tree}'
+stdout: 82417b5e66cecf8afb0dd357ab7ef1d153d3b3bd
+
+[2026-10-04T14:06:28.986003+08:00 -> 2026-10-04T14:06:28.987355+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git rev-parse 'HEAD^'
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T14:06:28.987523+08:00 -> 2026-10-04T14:06:29.521219+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:06:29.521478+08:00 -> 2026-10-04T14:06:31.041116+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-write
+$ git push origin HEAD:refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)        
+remote: 
+remote: Create a new pull request for 'project01':        
+remote:   https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/compare/master...project01        
+remote: 
+remote: . Processing 1 references        
+remote: Processed 1 references in total        
+To gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git
+ * [new branch]      HEAD -> project01
+
+[2026-10-04T14:06:31.041439+08:00 -> 2026-10-04T14:06:31.577450+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01
+stdout: 6b42f26926c5dcd740a9bfea8385be0455d7ce53	refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:07:59.308430+08:00 -> 2026-10-04T14:07:59.347909+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git init --bare --quiet /home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+
+[2026-10-04T14:07:59.349584+08:00 -> 2026-10-04T14:08:00.202569+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git fetch --depth=2 git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01:refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+From gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410
+ * [new branch]      project01  -> project01
+
+[2026-10-04T14:08:00.202904+08:00 -> 2026-10-04T14:08:00.204571+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse refs/heads/project01
+stdout: 6b42f26926c5dcd740a9bfea8385be0455d7ce53
+
+[2026-10-04T14:08:00.204827+08:00 -> 2026-10-04T14:08:00.206449+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse '6b42f26926c5dcd740a9bfea8385be0455d7ce53^'
+stdout: 414947e374423bad4e6b24a4a175d0e208714c85
+
+[2026-10-04T14:08:00.206696+08:00 -> 2026-10-04T14:08:00.208641+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse '6b42f26926c5dcd740a9bfea8385be0455d7ce53^{tree}'
+stdout: 82417b5e66cecf8afb0dd357ab7ef1d153d3b3bd
+
+[2026-10-04T14:08:00.208950+08:00 -> 2026-10-04T14:08:00.211327+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git ls-tree -r -l -z 6b42f26926c5dcd740a9bfea8385be0455d7ce53
+stdout: 100644 blob 8e9e7161f4aa597116a2760c924701856f9a503e    2722	README.md 100644 blob edbbd34552e98cde487830414699c773d497b10c   54725	images/build-run.png 100644 blob 364acf1bf079f1ee02f3a70187a49a97981c6cf0    3416	images/framework.svg 100644 blob b88b6b459062a92b35327c2f9ed3413af0e3e2d2  157782	images/grid_median.png 100644 blob 72a4519a8445827572e3af6d07fde834b4c6f82d  154698	images/interfaces-kernel.png 100644 blob 64ee5f188397dc965aaaffd5840edf1119b3c971  220073	images/online_search.png 100644 blob b2b9f34f7604297e6805743733b759ade44e3742  106543	images/saved-search-results.png 100644 blob 672e04f0857c37eb21fce83ce6b6d626f2e08674   12730	report.md 100644 blob 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a    2616	results/goal2r_summary/grid_summary.csv 100644 blob 1188f1f5af1f233c3ea8070e949b387ca2deedc9    5240	results/goal2r_summary/search_summary.csv 100644 blob e758b0d60287982104509b012b14c04de57112fa   46520	src/autotuner.py 100644 blob 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f    2209	src/matrix_multiplication.c 100644 blob 1f6625cf5258ebe386c6ca616a2d098140fe5702    1357	src/matrix_multiplication.original.c 
+
+[2026-10-04T14:08:00.212479+08:00 -> 2026-10-04T14:08:00.214436+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:README.md
+stdout: 8e9e7161f4aa597116a2760c924701856f9a503e
+
+[2026-10-04T14:08:00.214729+08:00 -> 2026-10-04T14:08:00.216606+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:README.md
+stdout: [binary stdout: 2722 bytes; SHA256 9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d]
+
+[2026-10-04T14:08:00.217376+08:00 -> 2026-10-04T14:08:00.219297+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:report.md
+stdout: 672e04f0857c37eb21fce83ce6b6d626f2e08674
+
+[2026-10-04T14:08:00.219556+08:00 -> 2026-10-04T14:08:00.221672+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:report.md
+stdout: [binary stdout: 12730 bytes; SHA256 482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8]
+
+[2026-10-04T14:08:00.222472+08:00 -> 2026-10-04T14:08:00.224538+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/autotuner.py
+stdout: e758b0d60287982104509b012b14c04de57112fa
+
+[2026-10-04T14:08:00.224805+08:00 -> 2026-10-04T14:08:00.227066+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/autotuner.py
+stdout: [binary stdout: 46520 bytes; SHA256 e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec]
+
+[2026-10-04T14:08:00.228303+08:00 -> 2026-10-04T14:08:00.230225+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/matrix_multiplication.c
+stdout: 0643a6be3a4ddda292583b6c2ee65509ff9c5e6f
+
+[2026-10-04T14:08:00.230421+08:00 -> 2026-10-04T14:08:00.232319+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/matrix_multiplication.c
+stdout: [binary stdout: 2209 bytes; SHA256 aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50]
+
+[2026-10-04T14:08:00.233128+08:00 -> 2026-10-04T14:08:00.234831+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/matrix_multiplication.original.c
+stdout: 1f6625cf5258ebe386c6ca616a2d098140fe5702
+
+[2026-10-04T14:08:00.235068+08:00 -> 2026-10-04T14:08:00.237415+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:src/matrix_multiplication.original.c
+stdout: [binary stdout: 1357 bytes; SHA256 188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15]
+
+[2026-10-04T14:08:00.238121+08:00 -> 2026-10-04T14:08:00.240005+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/framework.svg
+stdout: 364acf1bf079f1ee02f3a70187a49a97981c6cf0
+
+[2026-10-04T14:08:00.240236+08:00 -> 2026-10-04T14:08:00.242182+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/framework.svg
+stdout: [binary stdout: 3416 bytes; SHA256 08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4]
+
+[2026-10-04T14:08:00.243603+08:00 -> 2026-10-04T14:08:00.245573+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/grid_median.png
+stdout: b88b6b459062a92b35327c2f9ed3413af0e3e2d2
+
+[2026-10-04T14:08:00.245753+08:00 -> 2026-10-04T14:08:00.249240+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/grid_median.png
+stdout: [binary stdout: 157782 bytes; SHA256 4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155]
+
+[2026-10-04T14:08:00.250502+08:00 -> 2026-10-04T14:08:00.252148+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/online_search.png
+stdout: 64ee5f188397dc965aaaffd5840edf1119b3c971
+
+[2026-10-04T14:08:00.252317+08:00 -> 2026-10-04T14:08:00.256471+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/online_search.png
+stdout: [binary stdout: 220073 bytes; SHA256 3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581]
+
+[2026-10-04T14:08:00.257830+08:00 -> 2026-10-04T14:08:00.259799+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/saved-search-results.png
+stdout: b2b9f34f7604297e6805743733b759ade44e3742
+
+[2026-10-04T14:08:00.260015+08:00 -> 2026-10-04T14:08:00.263323+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/saved-search-results.png
+stdout: [binary stdout: 106543 bytes; SHA256 c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267]
+
+[2026-10-04T14:08:00.264303+08:00 -> 2026-10-04T14:08:00.265962+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/interfaces-kernel.png
+stdout: 72a4519a8445827572e3af6d07fde834b4c6f82d
+
+[2026-10-04T14:08:00.266155+08:00 -> 2026-10-04T14:08:00.269558+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/interfaces-kernel.png
+stdout: [binary stdout: 154698 bytes; SHA256 6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8]
+
+[2026-10-04T14:08:00.271057+08:00 -> 2026-10-04T14:08:00.272994+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/build-run.png
+stdout: edbbd34552e98cde487830414699c773d497b10c
+
+[2026-10-04T14:08:00.273208+08:00 -> 2026-10-04T14:08:00.275272+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:images/build-run.png
+stdout: [binary stdout: 54725 bytes; SHA256 e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb]
+
+[2026-10-04T14:08:00.276217+08:00 -> 2026-10-04T14:08:00.277924+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:results/goal2r_summary/grid_summary.csv
+stdout: 4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a
+
+[2026-10-04T14:08:00.278107+08:00 -> 2026-10-04T14:08:00.279749+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:results/goal2r_summary/grid_summary.csv
+stdout: [binary stdout: 2616 bytes; SHA256 b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec]
+
+[2026-10-04T14:08:00.280715+08:00 -> 2026-10-04T14:08:00.282171+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git rev-parse 6b42f26926c5dcd740a9bfea8385be0455d7ce53:results/goal2r_summary/search_summary.csv
+stdout: 1188f1f5af1f233c3ea8070e949b387ca2deedc9
+
+[2026-10-04T14:08:00.282335+08:00 -> 2026-10-04T14:08:00.283947+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git
+$ git cat-file blob 6b42f26926c5dcd740a9bfea8385be0455d7ce53:results/goal2r_summary/search_summary.csv
+stdout: [binary stdout: 5240 bytes; SHA256 8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787]
+
+[2026-10-04T14:08:00.287348+08:00 -> 2026-10-04T14:08:00.885506+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git ls-remote --symref git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git HEAD 'refs/heads/*'
+stdout: ref: refs/heads/master	HEAD
+414947e374423bad4e6b24a4a175d0e208714c85	HEAD
+f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb	refs/heads/homework01
+f00613fff9f32f25bbac1423bb76a1bef52d7e41	refs/heads/homework02
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework03
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework04
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework05
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework06
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework07
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework08
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework09
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework10
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework11
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework12
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework13
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework14
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/homework15
+414947e374423bad4e6b24a4a175d0e208714c85	refs/heads/master
+6b42f26926c5dcd740a9bfea8385be0455d7ce53	refs/heads/project01
+stderr: bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+
+[2026-10-04T14:11:06.191427+08:00 -> 2026-10-04T14:11:06.193236+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:A1
+stdout: e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0
+
+[2026-10-04T14:11:06.195037+08:00 -> 2026-10-04T14:11:06.196420+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:A2
+stdout: 139b6e7469d63b27cfa100d1e005061548d36ce8
+
+[2026-10-04T14:11:06.200847+08:00 -> 2026-10-04T14:11:06.202613+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/src
+stdout: 365147f8daa832bac47b43c3088cd2ce300c0078
+
+[2026-10-04T14:11:06.203243+08:00 -> 2026-10-04T14:11:06.204722+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/results
+stdout: af9ea2884fbeec41b870155f1bd61a761488b639
+
+[2026-10-04T14:11:06.209464+08:00 -> 2026-10-04T14:11:06.210854+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/tests
+stdout: 73e0edd03be5fe0d107cc761280154f07a6c589d
+
+[2026-10-04T14:11:06.211379+08:00 -> 2026-10-04T14:11:06.212656+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/report.md
+stdout: 672e04f0857c37eb21fce83ce6b6d626f2e08674
+
+[2026-10-04T14:11:06.213139+08:00 -> 2026-10-04T14:11:06.214516+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/README.md
+stdout: 8e9e7161f4aa597116a2760c924701856f9a503e
+
+[2026-10-04T14:11:06.215026+08:00 -> 2026-10-04T14:11:06.216364+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:P1/images
+stdout: 2d9e73bc9f0ef726a0c92cd354cdbc45d69f7773
+
+[2026-10-04T14:11:06.216844+08:00 -> 2026-10-04T14:11:06.218325+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization
+$ git rev-parse HEAD:AGENTS.md
+stdout: b56052ce7d55f6ab06228ae12ead55b9748eadf6
+
+[2026-10-04T14:11:06.218520+08:00 -> 2026-10-04T14:11:06.225443+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization_shuishan
+$ git rev-parse HEAD
+stdout: f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb
+
+[2026-10-04T14:11:06.225657+08:00 -> 2026-10-04T14:11:06.226952+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization_shuishan
+$ git branch --show-current
+stdout: homework01
+
+[2026-10-04T14:11:06.227112+08:00 -> 2026-10-04T14:11:06.235114+08:00] exit=0 cwd=/home/addaswsw/lab/Software_system_optimization_shuishan
+$ git status --porcelain=v1 --untracked-files=all
+
+[package agent 2026-10-04T12:12:48.551861+08:00] exit=0 cwd=isolated13-file package
+$ python3 -B src/autotuner.py list
+stdout: [{"s": 8, "opt": "O0"}, {"s": 8, "opt": "O1"}, {"s": 8, "opt": "O2"}, {"s": 8, "opt": "O3"}, {"s": 16, "opt": "O0"}, {"s": 16, "opt": "O1"}, {"s": 16, "opt": "O2"}, {"s": 16, "opt": "O3"}, {"s": 24, "opt": "O0"}, {"s": 24, "opt": "O1"}, {"s": 24, "opt": "O2"}, {"s": 24, "opt": "O3"}, {"s": 64, "opt": "O0"}, {"s": 64, "opt": "O1"}, {"s": 64, "opt": "O2"}, {"s": 64, "opt": "O3"}, {"s": 128, "opt": "O0"}, {"s": 128, "opt": "O1"}, {"s": 128, "opt": "O2"}, {"s": 128, "opt": "O3"}]
+stderr: 
+
+[package agent 2026-10-04T12:12:48.608565+08:00] exit=0 cwd=isolated13-file package
+$ python3 -B src/autotuner.py --help
+stdout: usage: autotuner.py [-h] [--target TARGET] [--blocks BLOCKS] [--opts OPTS]
+                    [--compiler COMPILER] [--cflag CFLAG]
+                    [--cache-dir CACHE_DIR]
+                    [--compile-timeout COMPILE_TIMEOUT] [--output OUTPUT]
+                    [--protocol PROTOCOL] [--resume] [--s S]
+                    [--opt {O0,O1,O2,O3}]
+                    [--algorithm {grid,random,greedy,stratified,patience,recheck}]
+                    [--min-trials MIN_TRIALS] [--patience PATIENCE]
+                    [--min-relative-improvement MIN_RELATIVE_IMPROVEMENT]
+                    [--budget BUDGET] [--repeats REPEATS] [--seed SEED]
+                    [--start-s START_S] [--start-opt {O0,O1,O2,O3}]
+                    [--timeout TIMEOUT]
+                    [--mode {correctness,diagnostic,benchmark}]
+                    {list,build,run,search}
+
+A small, serial C-program autotuner with append-only experiment records.
+
+positional arguments:
+  {list,build,run,search}
+
+options:
+  -h, --help            show this help message and exit
+  --target TARGET
+  --blocks BLOCKS
+  --opts OPTS
+  --compiler COMPILER
+  --cflag CFLAG
+  --cache-dir CACHE_DIR
+  --compile-timeout COMPILE_TIMEOUT
+  --output OUTPUT
+  --protocol PROTOCOL
+  --resume
+  --s S
+  --opt {O0,O1,O2,O3}
+  --algorithm {grid,random,greedy,stratified,patience,recheck}
+  --min-trials MIN_TRIALS
+  --patience PATIENCE
+  --min-relative-improvement MIN_RELATIVE_IMPROVEMENT
+                        relative reduction required to reset patience, e.g.
+                        0.02 for 2%
+  --budget BUDGET
+  --repeats REPEATS
+  --seed SEED
+  --start-s START_S     explicit Greedy start for the separate diagnostic
+                        panel
+  --start-opt {O0,O1,O2,O3}
+  --timeout TIMEOUT
+  --mode {correctness,diagnostic,benchmark}
+stderr: 
+
+Independent reviewer reads and exact exits are described in review.md. One diff-format validator exited 1 and was fixed; recheck exited 0; formal bytes never changed.
+Web tool: exact project01 tree/report URLs unavailable through the tool. Actual HTTPS GETs exited normally but both redirected to /user/login; no branch/report rendering asserted.
+New build/matrix/n4096 invocations: 0. No installs, global Git/SSH/locale changes, or credentials recorded.

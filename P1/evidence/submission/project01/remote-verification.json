@@ -1,0 +1,737 @@
+{
+  "recorded_at": "2026-10-04T14:08:00.885890+08:00",
+  "source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+  "teacher_repository": "git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git",
+  "branch": "project01",
+  "local_teacher_head": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "queried_remote_sha": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "independent_network_fetch_sha": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "network_fetch_command": "git fetch --depth=2 git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01:refs/heads/project01",
+  "fetch_exit_code": 0,
+  "fresh_bare_repository": "/home/addaswsw/lab/Software_system_optimization/P1/.cache/submission-project01-20261004T120732-fdae9c53/teacher-readback.git",
+  "local_clone_or_object_copy_used": false,
+  "object_alternates_present": false,
+  "parent_sha": "414947e374423bad4e6b24a4a175d0e208714c85",
+  "tree_sha": "82417b5e66cecf8afb0dd357ab7ef1d153d3b3bd",
+  "complete_remote_tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "bytes": 2722
+    },
+    {
+      "path": "images/build-run.png",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "bytes": 54725
+    },
+    {
+      "path": "images/framework.svg",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "bytes": 3416
+    },
+    {
+      "path": "images/grid_median.png",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "bytes": 157782
+    },
+    {
+      "path": "images/interfaces-kernel.png",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "bytes": 154698
+    },
+    {
+      "path": "images/online_search.png",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "bytes": 220073
+    },
+    {
+      "path": "images/saved-search-results.png",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "bytes": 106543
+    },
+    {
+      "path": "report.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "bytes": 12730
+    },
+    {
+      "path": "results/goal2r_summary/grid_summary.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "bytes": 2616
+    },
+    {
+      "path": "results/goal2r_summary/search_summary.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "bytes": 5240
+    },
+    {
+      "path": "src/autotuner.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "bytes": 46520
+    },
+    {
+      "path": "src/matrix_multiplication.c",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "bytes": 2209
+    },
+    {
+      "path": "src/matrix_multiplication.original.c",
+      "mode": "100644",
+      "type": "blob",
+      "blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "bytes": 1357
+    }
+  ],
+  "files": [
+    {
+      "source_path": "P1/README.md",
+      "destination_path": "README.md",
+      "source_bytes": 2722,
+      "remote_bytes": 2722,
+      "source_sha256": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+      "remote_sha256": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+      "source_git_blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "remote_git_blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/report.md",
+      "destination_path": "report.md",
+      "source_bytes": 12730,
+      "remote_bytes": 12730,
+      "source_sha256": "482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8",
+      "remote_sha256": "482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8",
+      "source_git_blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "remote_git_blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/src/autotuner.py",
+      "destination_path": "src/autotuner.py",
+      "source_bytes": 46520,
+      "remote_bytes": 46520,
+      "source_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "remote_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "source_git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "remote_git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/src/matrix_multiplication.c",
+      "destination_path": "src/matrix_multiplication.c",
+      "source_bytes": 2209,
+      "remote_bytes": 2209,
+      "source_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "remote_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "source_git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "remote_git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/src/matrix_multiplication.original.c",
+      "destination_path": "src/matrix_multiplication.original.c",
+      "source_bytes": 1357,
+      "remote_bytes": 1357,
+      "source_sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "remote_sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "source_git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "remote_git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/framework.svg",
+      "destination_path": "images/framework.svg",
+      "source_bytes": 3416,
+      "remote_bytes": 3416,
+      "source_sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "remote_sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "source_git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "remote_git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/grid_median.png",
+      "destination_path": "images/grid_median.png",
+      "source_bytes": 157782,
+      "remote_bytes": 157782,
+      "source_sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "remote_sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "source_git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "remote_git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/online_search.png",
+      "destination_path": "images/online_search.png",
+      "source_bytes": 220073,
+      "remote_bytes": 220073,
+      "source_sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "remote_sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "source_git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "remote_git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/saved-search-results.png",
+      "destination_path": "images/saved-search-results.png",
+      "source_bytes": 106543,
+      "remote_bytes": 106543,
+      "source_sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "remote_sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "source_git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "remote_git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/interfaces-kernel.png",
+      "destination_path": "images/interfaces-kernel.png",
+      "source_bytes": 154698,
+      "remote_bytes": 154698,
+      "source_sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "remote_sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "source_git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "remote_git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/images/build-run.png",
+      "destination_path": "images/build-run.png",
+      "source_bytes": 54725,
+      "remote_bytes": 54725,
+      "source_sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "remote_sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "source_git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "remote_git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/results/goal2r_summary/grid_summary.csv",
+      "destination_path": "results/goal2r_summary/grid_summary.csv",
+      "source_bytes": 2616,
+      "remote_bytes": 2616,
+      "source_sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "remote_sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "source_git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "remote_git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    },
+    {
+      "source_path": "P1/results/goal2r_summary/search_summary.csv",
+      "destination_path": "results/goal2r_summary/search_summary.csv",
+      "source_bytes": 5240,
+      "remote_bytes": 5240,
+      "source_sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "remote_sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "source_git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "remote_git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "source_mode": "100644",
+      "remote_mode": "100644",
+      "all_identities_match": true
+    }
+  ],
+  "formal_file_count": 13,
+  "total_formal_bytes": 770631,
+  "extra_remote_files": [],
+  "preserved_non_whitelist_files": [],
+  "authorized_replacement": {
+    "recorded_at": "2026-10-04T14:00:20.097356+08:00",
+    "source": "User explicit follow-up authorization in this conversation",
+    "teacher_repository": "SSO.James.2026Fall.DASE/10245102410",
+    "branch": "project01",
+    "path": "README.md",
+    "fixed_source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "source_path": "P1/README.md",
+    "allowed_action": "Replace only this 51-byte teacher initial README with the fixed-source README in normal new project01 commit; preserve original teacher ancestry and all other branches/files; no force push.",
+    "original_commit": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "original_git_blob_sha": "790c8b9c3961b74f6fa9b036558712aab58f2104",
+    "original_bytes": 51,
+    "original_sha256": "570dc0d9f5cf381aaa5b133fc86ebf3f6ed8b1f21cb97a7b66cb72ff329feca4",
+    "original_content": "# 10245102410\n\nstudent 10245102410 吴博闻's repo",
+    "authorization_status": "GRANTED"
+  },
+  "remote_refs_before": {
+    "HEAD": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework01": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+    "refs/heads/homework02": "f00613fff9f32f25bbac1423bb76a1bef52d7e41",
+    "refs/heads/homework03": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework04": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework05": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework06": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework07": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework08": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework09": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework10": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework11": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework12": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework13": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework14": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework15": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/master": "414947e374423bad4e6b24a4a175d0e208714c85"
+  },
+  "remote_refs_after": {
+    "HEAD": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework01": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+    "refs/heads/homework02": "f00613fff9f32f25bbac1423bb76a1bef52d7e41",
+    "refs/heads/homework03": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework04": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework05": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework06": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework07": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework08": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework09": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework10": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework11": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework12": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework13": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework14": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework15": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/master": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/project01": "6b42f26926c5dcd740a9bfea8385be0455d7ce53"
+  },
+  "remote_ref_changes": [
+    {
+      "ref": "refs/heads/project01",
+      "before": null,
+      "after": "6b42f26926c5dcd740a9bfea8385be0455d7ce53"
+    }
+  ],
+  "other_branches_unchanged": true,
+  "local_references": [
+    {
+      "document": "README.md",
+      "target": "report.md",
+      "destination_path": "report.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/framework.svg",
+      "destination_path": "images/framework.svg",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py",
+      "destination_path": "src/autotuner.py",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png",
+      "destination_path": "images/interfaces-kernel.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c",
+      "destination_path": "src/matrix_multiplication.original.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c",
+      "destination_path": "src/matrix_multiplication.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png",
+      "destination_path": "images/grid_median.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv",
+      "destination_path": "results/goal2r_summary/grid_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv",
+      "destination_path": "results/goal2r_summary/search_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png",
+      "destination_path": "images/online_search.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png",
+      "destination_path": "images/saved-search-results.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "README.md",
+      "destination_path": "README.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png",
+      "destination_path": "images/build-run.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    }
+  ],
+  "local_and_remote_and_independent_sha_equal": true,
+  "all_formal_file_identities_match": true,
+  "submission_state": "SUBMITTED",
+  "final_submission_pass": "reserved_for_external_acceptance",
+  "teacher_baseline_preserved_in_parent": true,
+  "source_repository": "https://github.com/woobowen/Softwaresystemoptimization",
+  "teacher_branch_before": {
+    "existed": false,
+    "sha": null,
+    "selected_remote_default": "master",
+    "selected_teacher_baseline_sha": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "baseline_tree": [
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "blob_sha": "790c8b9c3961b74f6fa9b036558712aab58f2104",
+        "bytes": 51
+      }
+    ]
+  },
+  "web_visibility": {
+    "recorded_at": "2026-10-04T14:08:44.434815+08:00",
+    "state": "UNVERIFIED",
+    "http_checks": [
+      {
+        "checked_at": "2026-10-04T14:08:44.143954+08:00",
+        "requested_url": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01",
+        "method": "HTTPS GET with default TLS certificate validation; no login/cookies/credentials provided",
+        "http_status": 200,
+        "final_url": "https://gitea.shuishan.net.cn/user/login",
+        "content_type": "text/html; charset=UTF-8",
+        "response_bytes": 10355,
+        "redirected_to_login": true,
+        "requested_branch_content_visible": false
+      },
+      {
+        "checked_at": "2026-10-04T14:08:44.303464+08:00",
+        "requested_url": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01/report.md",
+        "method": "HTTPS GET with default TLS certificate validation; no login/cookies/credentials provided",
+        "http_status": 200,
+        "final_url": "https://gitea.shuishan.net.cn/user/login",
+        "content_type": "text/html; charset=UTF-8",
+        "response_bytes": 10355,
+        "redirected_to_login": true,
+        "requested_branch_content_visible": false
+      }
+    ],
+    "branch_html_or_report_rendered": false,
+    "images_rendered_in_teacher_platform": false,
+    "six_image_requests_skipped_reason": "Exact branch and report URLs redirect anonymous HTTPS access to login; source image decoding is verified locally, platform rendering cannot be checked in this session.",
+    "browser_available": false,
+    "browser_and_python_browser_packages": "Previously checked: no Chromium/Chrome/Firefox executables, no Playwright/Selenium package; no software installed.",
+    "screenshot_created": false,
+    "git_network_content_verification_is_separate": true,
+    "web_tool_result": "Exact project01 tree and report URL both unavailable through web tool; independent HTTPS GET redirected to login."
+  },
+  "engineering_protection": {
+    "recorded_at": "2026-10-04T14:11:06.235254+08:00",
+    "source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "start_head": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "tracked_and_input_files_checked": 3431,
+    "changed_start_files": [],
+    "protected_scopes": [
+      {
+        "path": "A1",
+        "start_git_object": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+        "pre_evidence_commit_git_object": "e2e8fd3c3d04f98ea7d16a05ee3126adbf9a47b0",
+        "working_files_checked": 272,
+        "before_working_identity_sha256": "0ad982f5270c0f55d600ced315e26f60f617ddd76644834a0f62933b5027cb6f",
+        "after_working_identity_sha256": "0ad982f5270c0f55d600ced315e26f60f617ddd76644834a0f62933b5027cb6f",
+        "unchanged": true
+      },
+      {
+        "path": "A2",
+        "start_git_object": "139b6e7469d63b27cfa100d1e005061548d36ce8",
+        "pre_evidence_commit_git_object": "139b6e7469d63b27cfa100d1e005061548d36ce8",
+        "working_files_checked": 1235,
+        "before_working_identity_sha256": "e53951ab0c347966b6ae42a00acc6892ffb7a89075e3ccd0a664dc41e77e995b",
+        "after_working_identity_sha256": "e53951ab0c347966b6ae42a00acc6892ffb7a89075e3ccd0a664dc41e77e995b",
+        "unchanged": true
+      },
+      {
+        "path": "P1/src",
+        "start_git_object": "365147f8daa832bac47b43c3088cd2ce300c0078",
+        "pre_evidence_commit_git_object": "365147f8daa832bac47b43c3088cd2ce300c0078",
+        "working_files_checked": 3,
+        "before_working_identity_sha256": "6e47bc9962466ae5fbd9a9634b935e23d1ec97678c3cb3d089a2def8cb35f960",
+        "after_working_identity_sha256": "6e47bc9962466ae5fbd9a9634b935e23d1ec97678c3cb3d089a2def8cb35f960",
+        "unchanged": true
+      },
+      {
+        "path": "P1/results",
+        "start_git_object": "af9ea2884fbeec41b870155f1bd61a761488b639",
+        "pre_evidence_commit_git_object": "af9ea2884fbeec41b870155f1bd61a761488b639",
+        "working_files_checked": 1137,
+        "before_working_identity_sha256": "ab748e07dceb6b8bcd9d6cc7707b079ebb10acbb17133553b90900431fb0887c",
+        "after_working_identity_sha256": "ab748e07dceb6b8bcd9d6cc7707b079ebb10acbb17133553b90900431fb0887c",
+        "unchanged": true
+      },
+      {
+        "path": "P1/tests",
+        "start_git_object": "73e0edd03be5fe0d107cc761280154f07a6c589d",
+        "pre_evidence_commit_git_object": "73e0edd03be5fe0d107cc761280154f07a6c589d",
+        "working_files_checked": 12,
+        "before_working_identity_sha256": "03aeb52516d47845a4ec1eb75e4db81043232df7b117e4d2bc509f8e604895b4",
+        "after_working_identity_sha256": "03aeb52516d47845a4ec1eb75e4db81043232df7b117e4d2bc509f8e604895b4",
+        "unchanged": true
+      },
+      {
+        "path": "P1/report.md",
+        "start_git_object": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+        "pre_evidence_commit_git_object": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+        "working_files_checked": 1,
+        "before_working_identity_sha256": "3e2e95a729bbdf9ff00b6da455339339c94c06d5fa929250a5c2f926a9126255",
+        "after_working_identity_sha256": "3e2e95a729bbdf9ff00b6da455339339c94c06d5fa929250a5c2f926a9126255",
+        "unchanged": true
+      },
+      {
+        "path": "P1/README.md",
+        "start_git_object": "8e9e7161f4aa597116a2760c924701856f9a503e",
+        "pre_evidence_commit_git_object": "8e9e7161f4aa597116a2760c924701856f9a503e",
+        "working_files_checked": 1,
+        "before_working_identity_sha256": "401ee1549a663a990df120536479a99c89aa259900b67d5063dc49173d460414",
+        "after_working_identity_sha256": "401ee1549a663a990df120536479a99c89aa259900b67d5063dc49173d460414",
+        "unchanged": true
+      },
+      {
+        "path": "P1/images",
+        "start_git_object": "2d9e73bc9f0ef726a0c92cd354cdbc45d69f7773",
+        "pre_evidence_commit_git_object": "2d9e73bc9f0ef726a0c92cd354cdbc45d69f7773",
+        "working_files_checked": 6,
+        "before_working_identity_sha256": "23cdb3e3c503a1f39dfcf57dc84c49a93bad8646f629a1437046f82f1987cb0a",
+        "after_working_identity_sha256": "23cdb3e3c503a1f39dfcf57dc84c49a93bad8646f629a1437046f82f1987cb0a",
+        "unchanged": true
+      },
+      {
+        "path": "AGENTS.md",
+        "start_git_object": "b56052ce7d55f6ab06228ae12ead55b9748eadf6",
+        "pre_evidence_commit_git_object": "b56052ce7d55f6ab06228ae12ead55b9748eadf6",
+        "working_files_checked": 1,
+        "before_working_identity_sha256": "61a77d7a03aa37bb0bca4b5b73a312aaa7b33bc4a66629b7e42ba82383e8b0da",
+        "after_working_identity_sha256": "61a77d7a03aa37bb0bca4b5b73a312aaa7b33bc4a66629b7e42ba82383e8b0da",
+        "unchanged": true
+      }
+    ],
+    "before_all_file_identity_sha256": "516d69712e3245f158db3a19b36bebab5546ca2141b1438989366f74f77c8f0d",
+    "after_all_file_identity_sha256": "516d69712e3245f158db3a19b36bebab5546ca2141b1438989366f74f77c8f0d",
+    "root_input_files_preserved": [
+      ".gitignore",
+      "A1 Getting Started.pdf",
+      "A1 代码材料.zip",
+      "A1 初试环境和工具.docx",
+      "A1 初试环境和工具.pdf",
+      "A1 初试环境和工具.pdf:Zone.Identifier",
+      "AGENTS.md",
+      "P1 Matrix Multiplication Autotuner.pdf",
+      "P1_Goal1_Codex_Prompt.md",
+      "P1_Goal1_Codex_Prompt.md:Zone.Identifier",
+      "P1_Goal2R_Codex_Prompt.md",
+      "P1_Goal2R_Codex_Prompt.md:Zone.Identifier",
+      "P1_Goal2_Codex_Prompt.md",
+      "P1_Goal2_Codex_Prompt.md:Zone.Identifier",
+      "P1_Goal3_Codex_Prompt.md",
+      "P1_Goal3_Codex_Prompt.md:Zone.Identifier",
+      "P1_Submission_Codex_Prompt.md",
+      "P1_Submission_Codex_Prompt.md:Zone.Identifier",
+      "README.md",
+      "matrix_multiplication.c",
+      "环境搭建和工具安装.pdf",
+      "环境搭建和工具安装.pdf:Zone.Identifier"
+    ],
+    "original_untracked_inputs": [
+      "P1_Goal1_Codex_Prompt.md",
+      "P1_Goal2R_Codex_Prompt.md",
+      "P1_Goal2_Codex_Prompt.md",
+      "P1_Goal3_Codex_Prompt.md",
+      "P1_Submission_Codex_Prompt.md",
+      "matrix_multiplication.c"
+    ],
+    "existing_teacher_checkout_before": {
+      "path": "/home/addaswsw/lab/Software_system_optimization_shuishan",
+      "head": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+      "branch": "homework01",
+      "status": "clean"
+    },
+    "existing_teacher_checkout_after": {
+      "path": "/home/addaswsw/lab/Software_system_optimization_shuishan",
+      "head": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+      "branch": "homework01",
+      "status": ""
+    }
+  },
+  "github_remote_before_evidence_commit": {
+    "recorded_at": "2026-10-04T14:00:21.928911+08:00",
+    "remote_main": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "local_head": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165"
+  },
+  "resource_scope": {
+    "new_n4096_calls": 0,
+    "new_compilation_calls": 0,
+    "new_matrix_benchmarks": 0,
+    "installed_dependencies": [],
+    "global_configuration_changes": []
+  },
+  "remaining_limitations": [
+    "Teacher platform HTML/report/image rendering requires authenticated browser access; Git network content verification passed.",
+    "Git/SSH emitted nonfatal LC_ALL=C.UTF-8 locale warnings; actual commands exited 0. No locale or global configuration was changed."
+  ],
+  "github_G_recording": "G and its post-push network verification are kept in the ignored final receipt and final response to avoid a self-SHA commit loop.",
+  "independent_review": {
+    "reviewer": "/root/independent_review",
+    "precommit_review": "PASS",
+    "precommit_record_sha256": "8a5b7f1fe9a2ce9310f5fe8ca907183e8def28b4ac0f2965cf49c6037cc81292",
+    "teacher_remote_review_record_sha256": "ae483c9e484f9a085a10b4042e641c69b429add153160b7db4a80d5fc4334130",
+    "teacher_remote_review_completed": true,
+    "closed_findings": [
+      {
+        "id": "README-conflict",
+        "resolution": "Exact user authorization granted before replacement; old teacher commit/blob/bytes remain in parent history and evidence."
+      },
+      {
+        "id": "proposal-diff-presentation",
+        "resolution": "Actual git diff includes missing-final-newline marker; formal bytes unchanged."
+      },
+      {
+        "id": "reviewer-diff-verifier",
+        "initial_exit_code": 1,
+        "cause": "Reviewer compared ordinary diff bytes to full-index binary diff captured in text mode; invalid format-equality assumption.",
+        "repair": "Use matching --binary --full-index flags and account only for display CRLF normalization; then independently recheck all 13 index bytes and exact hashes.",
+        "recheck_exit_code": 0,
+        "formal_content_change": false
+      },
+      {
+        "id": "github-review-diff-parser",
+        "initial_exit_code": 1,
+        "cause": "Reviewer unanchored diff split matched an old diff header inside commands.log text and counted an extra file; actual staged name-status and line-start headers have exactly six additions.",
+        "repair": "Anchor diff header parsing at line starts; inspect complete six real index records and protection identities.",
+        "recheck_exit_code": 0,
+        "formal_content_change": false
+      }
+    ],
+    "github_prepublication_review": {
+      "reviewer": "/root/independent_review",
+      "actual_six_record_review": "PASS",
+      "record_sha256": "68e2534258e506bb2586f888c267fe258cab55f84fd33a1c0173855f07888b89",
+      "original_index_entries_checked": 3412,
+      "original_working_files_and_inputs_checked": 3431,
+      "only_new_evidence_paths": 6,
+      "last_evidence_supplement_scope": [
+        "README.md wording without diagnostic count; exact Git network warning context",
+        "review.md independent GitHub findings",
+        "remote-verification.json independent GitHub findings"
+      ],
+      "last_supplement_and_post_G_checks_recorded": "Ignored final receipt and final handoff; not a self-referential commit loop."
+    }
+  }
+}

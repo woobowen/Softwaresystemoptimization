@@ -1,0 +1,611 @@
+{
+  "source_repository": "https://github.com/woobowen/Softwaresystemoptimization",
+  "source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+  "source_prefix": "P1/",
+  "teacher_repository": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410",
+  "teacher_branch": "project01",
+  "teacher_commit": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "package_state": "READY",
+  "submission_state": "SUBMITTED",
+  "file_count": 13,
+  "total_bytes": 770631,
+  "export_method": "git cat-file blob from fixed Git objects, write_bytes without filters",
+  "files": [
+    {
+      "source_path": "P1/README.md",
+      "destination_path": "README.md",
+      "bytes": 2722,
+      "sha256": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+      "git_blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 2722,
+      "teacher_sha256": "9368267c67adb42e026e84ccf52d8a0bbb94828a509dfa869a38a10cee1fa91d",
+      "teacher_git_blob_sha": "8e9e7161f4aa597116a2760c924701856f9a503e",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/report.md",
+      "destination_path": "report.md",
+      "bytes": 12730,
+      "sha256": "482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8",
+      "git_blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 12730,
+      "teacher_sha256": "482ad64381e3696da9d60888d3311c396c179026bad246e39f005701401f25e8",
+      "teacher_git_blob_sha": "672e04f0857c37eb21fce83ce6b6d626f2e08674",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/src/autotuner.py",
+      "destination_path": "src/autotuner.py",
+      "bytes": 46520,
+      "sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 46520,
+      "teacher_sha256": "e3a563264994f4875da955ad87ff4ce1dd0c6c180aad3da750e1ae7d5beb02ec",
+      "teacher_git_blob_sha": "e758b0d60287982104509b012b14c04de57112fa",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/src/matrix_multiplication.c",
+      "destination_path": "src/matrix_multiplication.c",
+      "bytes": 2209,
+      "sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 2209,
+      "teacher_sha256": "aad89170e8d0ca80c1dbc8dc1d8d5e69bab354af86128021be163c91e5a72b50",
+      "teacher_git_blob_sha": "0643a6be3a4ddda292583b6c2ee65509ff9c5e6f",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/src/matrix_multiplication.original.c",
+      "destination_path": "src/matrix_multiplication.original.c",
+      "bytes": 1357,
+      "sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 1357,
+      "teacher_sha256": "188d011109c4470e1f41829216e8677a5c2d8f2b7c8a44215652320dbdf6de15",
+      "teacher_git_blob_sha": "1f6625cf5258ebe386c6ca616a2d098140fe5702",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/framework.svg",
+      "destination_path": "images/framework.svg",
+      "bytes": 3416,
+      "sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 3416,
+      "teacher_sha256": "08034aef414db6a889d2830163091d4152928ced8b346148054a6e183c551ef4",
+      "teacher_git_blob_sha": "364acf1bf079f1ee02f3a70187a49a97981c6cf0",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/grid_median.png",
+      "destination_path": "images/grid_median.png",
+      "bytes": 157782,
+      "sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 157782,
+      "teacher_sha256": "4d33bc0443db2cd00ad663a3da59fb98b0ec2b31b0821857d5a0eacbc85d6155",
+      "teacher_git_blob_sha": "b88b6b459062a92b35327c2f9ed3413af0e3e2d2",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/online_search.png",
+      "destination_path": "images/online_search.png",
+      "bytes": 220073,
+      "sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 220073,
+      "teacher_sha256": "3caf892f8cc96f58058f16cd7aa390ebe6cdc339f09645a743c854994a12d581",
+      "teacher_git_blob_sha": "64ee5f188397dc965aaaffd5840edf1119b3c971",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/saved-search-results.png",
+      "destination_path": "images/saved-search-results.png",
+      "bytes": 106543,
+      "sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 106543,
+      "teacher_sha256": "c6ce5f5749651a46972cde6d91b53be342906fd20b70c4b67242b4757bc04267",
+      "teacher_git_blob_sha": "b2b9f34f7604297e6805743733b759ade44e3742",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/interfaces-kernel.png",
+      "destination_path": "images/interfaces-kernel.png",
+      "bytes": 154698,
+      "sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 154698,
+      "teacher_sha256": "6f57ca3f98ed87b0097ec24e804a7e77d8287a3f57fdaba2f20c1308eb360bc8",
+      "teacher_git_blob_sha": "72a4519a8445827572e3af6d07fde834b4c6f82d",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/images/build-run.png",
+      "destination_path": "images/build-run.png",
+      "bytes": 54725,
+      "sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 54725,
+      "teacher_sha256": "e944786ae7e8c5d5c05a6458f1a5ebec1ba1c017a10aa26a5158790f3ed68aeb",
+      "teacher_git_blob_sha": "edbbd34552e98cde487830414699c773d497b10c",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/results/goal2r_summary/grid_summary.csv",
+      "destination_path": "results/goal2r_summary/grid_summary.csv",
+      "bytes": 2616,
+      "sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 2616,
+      "teacher_sha256": "b33b1cfabfe4dde343fae847f8418a76ef06fbca5ef9c03a9ab2bdb9d48a13ec",
+      "teacher_git_blob_sha": "4b8fcec9d84b67b6fd94c8e19dc2ec57b67bc42a",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    },
+    {
+      "source_path": "P1/results/goal2r_summary/search_summary.csv",
+      "destination_path": "results/goal2r_summary/search_summary.csv",
+      "bytes": 5240,
+      "sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "source_mode": "100644",
+      "export_bytes_equal": true,
+      "teacher_bytes": 5240,
+      "teacher_sha256": "8351644259b9e46e10e1cee2da132d60800cd6ce7dc297553a378b75a00f1787",
+      "teacher_git_blob_sha": "1188f1f5af1f233c3ea8070e949b387ca2deedc9",
+      "teacher_mode": "100644",
+      "remote_bytes_match_source": true
+    }
+  ],
+  "local_references": [
+    {
+      "document": "README.md",
+      "target": "report.md",
+      "destination_path": "report.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/framework.svg",
+      "destination_path": "images/framework.svg",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py",
+      "destination_path": "src/autotuner.py",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png",
+      "destination_path": "images/interfaces-kernel.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c",
+      "destination_path": "src/matrix_multiplication.original.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c",
+      "destination_path": "src/matrix_multiplication.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png",
+      "destination_path": "images/grid_median.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv",
+      "destination_path": "results/goal2r_summary/grid_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv",
+      "destination_path": "results/goal2r_summary/search_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png",
+      "destination_path": "images/online_search.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png",
+      "destination_path": "images/saved-search-results.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "README.md",
+      "destination_path": "README.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png",
+      "destination_path": "images/build-run.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    }
+  ],
+  "image_checks": [
+    {
+      "path": "images/grid_median.png",
+      "format": "PNG",
+      "dimensions": [
+        2240,
+        880
+      ],
+      "mode": "RGBA",
+      "verified": true,
+      "pixels_decoded": 1971200
+    },
+    {
+      "path": "images/online_search.png",
+      "format": "PNG",
+      "dimensions": [
+        2080,
+        1280
+      ],
+      "mode": "RGBA",
+      "verified": true,
+      "pixels_decoded": 2662400
+    },
+    {
+      "path": "images/saved-search-results.png",
+      "format": "PNG",
+      "dimensions": [
+        1920,
+        800
+      ],
+      "mode": "RGBA",
+      "verified": true,
+      "pixels_decoded": 1536000
+    },
+    {
+      "path": "images/interfaces-kernel.png",
+      "format": "PNG",
+      "dimensions": [
+        1500,
+        940
+      ],
+      "mode": "RGB",
+      "verified": true,
+      "pixels_decoded": 1410000
+    },
+    {
+      "path": "images/build-run.png",
+      "format": "PNG",
+      "dimensions": [
+        1420,
+        335
+      ],
+      "mode": "RGB",
+      "verified": true,
+      "pixels_decoded": 475700
+    },
+    {
+      "path": "images/framework.svg",
+      "format": "SVG",
+      "xml_parsed": true,
+      "root_tag": "{http://www.w3.org/2000/svg}svg",
+      "width": "1000",
+      "height": "640",
+      "resource_references": [
+        "#arrow"
+      ],
+      "external_resources": [],
+      "active_or_external_document": false,
+      "passed": true
+    }
+  ],
+  "lightweight_commands": [
+    {
+      "at": "2026-10-04T12:12:48.551861+08:00",
+      "command": [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "list"
+      ],
+      "cwd": "isolated 13-file package root",
+      "exit_code": 0,
+      "stdout": "[{\"s\": 8, \"opt\": \"O0\"}, {\"s\": 8, \"opt\": \"O1\"}, {\"s\": 8, \"opt\": \"O2\"}, {\"s\": 8, \"opt\": \"O3\"}, {\"s\": 16, \"opt\": \"O0\"}, {\"s\": 16, \"opt\": \"O1\"}, {\"s\": 16, \"opt\": \"O2\"}, {\"s\": 16, \"opt\": \"O3\"}, {\"s\": 24, \"opt\": \"O0\"}, {\"s\": 24, \"opt\": \"O1\"}, {\"s\": 24, \"opt\": \"O2\"}, {\"s\": 24, \"opt\": \"O3\"}, {\"s\": 64, \"opt\": \"O0\"}, {\"s\": 64, \"opt\": \"O1\"}, {\"s\": 64, \"opt\": \"O2\"}, {\"s\": 64, \"opt\": \"O3\"}, {\"s\": 128, \"opt\": \"O0\"}, {\"s\": 128, \"opt\": \"O1\"}, {\"s\": 128, \"opt\": \"O2\"}, {\"s\": 128, \"opt\": \"O3\"}]\n",
+      "stderr": "",
+      "configuration_count": 20,
+      "exact_configurations": true
+    },
+    {
+      "at": "2026-10-04T12:12:48.608565+08:00",
+      "command": [
+        "python3",
+        "-B",
+        "src/autotuner.py",
+        "--help"
+      ],
+      "cwd": "isolated 13-file package root",
+      "exit_code": 0,
+      "stdout": "usage: autotuner.py [-h] [--target TARGET] [--blocks BLOCKS] [--opts OPTS]\n                    [--compiler COMPILER] [--cflag CFLAG]\n                    [--cache-dir CACHE_DIR]\n                    [--compile-timeout COMPILE_TIMEOUT] [--output OUTPUT]\n                    [--protocol PROTOCOL] [--resume] [--s S]\n                    [--opt {O0,O1,O2,O3}]\n                    [--algorithm {grid,random,greedy,stratified,patience,recheck}]\n                    [--min-trials MIN_TRIALS] [--patience PATIENCE]\n                    [--min-relative-improvement MIN_RELATIVE_IMPROVEMENT]\n                    [--budget BUDGET] [--repeats REPEATS] [--seed SEED]\n                    [--start-s START_S] [--start-opt {O0,O1,O2,O3}]\n                    [--timeout TIMEOUT]\n                    [--mode {correctness,diagnostic,benchmark}]\n                    {list,build,run,search}\n\nA small, serial C-program autotuner with append-only experiment records.\n\npositional arguments:\n  {list,build,run,search}\n\noptions:\n  -h, --help            show this help message and exit\n  --target TARGET\n  --blocks BLOCKS\n  --opts OPTS\n  --compiler COMPILER\n  --cflag CFLAG\n  --cache-dir CACHE_DIR\n  --compile-timeout COMPILE_TIMEOUT\n  --output OUTPUT\n  --protocol PROTOCOL\n  --resume\n  --s S\n  --opt {O0,O1,O2,O3}\n  --algorithm {grid,random,greedy,stratified,patience,recheck}\n  --min-trials MIN_TRIALS\n  --patience PATIENCE\n  --min-relative-improvement MIN_RELATIVE_IMPROVEMENT\n                        relative reduction required to reset patience, e.g.\n                        0.02 for 2%\n  --budget BUDGET\n  --repeats REPEATS\n  --seed SEED\n  --start-s START_S     explicit Greedy start for the separate diagnostic\n                        panel\n  --start-opt {O0,O1,O2,O3}\n  --timeout TIMEOUT\n  --mode {correctness,diagnostic,benchmark}\n",
+      "stderr": ""
+    }
+  ],
+  "n4096_new_calls": 0,
+  "excluded": [
+    "evidence/",
+    "scripts/",
+    "tests/",
+    "AGENTS.md",
+    "prompts",
+    "handouts/PDF/ZIP",
+    ".git/",
+    ".cache/",
+    "binaries/objects/pyc",
+    "credentials",
+    "other assignments"
+  ],
+  "csv_journal_fields": "Retained unchanged as source indices in the full engineering repository, not teacher package dependencies.",
+  "readme_replacement_authorization": {
+    "recorded_at": "2026-10-04T14:00:20.097356+08:00",
+    "source": "User explicit follow-up authorization in this conversation",
+    "teacher_repository": "SSO.James.2026Fall.DASE/10245102410",
+    "branch": "project01",
+    "path": "README.md",
+    "fixed_source_commit": "5d49e31556aa7f759cd64a1de1ac1739d33cf165",
+    "source_path": "P1/README.md",
+    "allowed_action": "Replace only this 51-byte teacher initial README with the fixed-source README in normal new project01 commit; preserve original teacher ancestry and all other branches/files; no force push.",
+    "original_commit": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "original_git_blob_sha": "790c8b9c3961b74f6fa9b036558712aab58f2104",
+    "original_bytes": 51,
+    "original_sha256": "570dc0d9f5cf381aaa5b133fc86ebf3f6ed8b1f21cb97a7b66cb72ff329feca4",
+    "original_content": "# 10245102410\n\nstudent 10245102410 吴博闻's repo",
+    "authorization_status": "GRANTED"
+  },
+  "all_staged_files_match_source": true,
+  "final_staged_files": [
+    "M\tREADME.md",
+    "A\timages/build-run.png",
+    "A\timages/framework.svg",
+    "A\timages/grid_median.png",
+    "A\timages/interfaces-kernel.png",
+    "A\timages/online_search.png",
+    "A\timages/saved-search-results.png",
+    "A\treport.md",
+    "A\tresults/goal2r_summary/grid_summary.csv",
+    "A\tresults/goal2r_summary/search_summary.csv",
+    "A\tsrc/autotuner.py",
+    "A\tsrc/matrix_multiplication.c",
+    "A\tsrc/matrix_multiplication.original.c"
+  ],
+  "teacher_independent_network_fetch_commit": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "teacher_local_references": [
+    {
+      "document": "README.md",
+      "target": "report.md",
+      "destination_path": "report.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/framework.svg",
+      "destination_path": "images/framework.svg",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/autotuner.py",
+      "destination_path": "src/autotuner.py",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/interfaces-kernel.png",
+      "destination_path": "images/interfaces-kernel.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.original.c",
+      "destination_path": "src/matrix_multiplication.original.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "src/matrix_multiplication.c",
+      "destination_path": "src/matrix_multiplication.c",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/grid_median.png",
+      "destination_path": "images/grid_median.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/grid_summary.csv",
+      "destination_path": "results/goal2r_summary/grid_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "results/goal2r_summary/search_summary.csv",
+      "destination_path": "results/goal2r_summary/search_summary.csv",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/online_search.png",
+      "destination_path": "images/online_search.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/saved-search-results.png",
+      "destination_path": "images/saved-search-results.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "README.md",
+      "destination_path": "README.md",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    },
+    {
+      "document": "report.md",
+      "target": "images/build-run.png",
+      "destination_path": "images/build-run.png",
+      "inside_package": true,
+      "exists": true,
+      "case_exact": true,
+      "included": true,
+      "passed": true
+    }
+  ],
+  "all_teacher_file_identities_match": true
+}
