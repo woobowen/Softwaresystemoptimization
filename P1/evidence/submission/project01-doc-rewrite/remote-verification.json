@@ -1,0 +1,138 @@
+{
+  "S2": "e7e3d4e2bfbf6b2c30b3b9f4b73a68372c48102a",
+  "T1": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "T2": "22974c9707d176f3a1abd8603728286b8ebe2270",
+  "repository": "git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git",
+  "branch": "project01",
+  "local_teacher_head": "22974c9707d176f3a1abd8603728286b8ebe2270",
+  "queried_remote_sha": "22974c9707d176f3a1abd8603728286b8ebe2270",
+  "fresh_network_fetch_sha": "22974c9707d176f3a1abd8603728286b8ebe2270",
+  "all_equal": true,
+  "parent": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+  "tree": "ea11c0ff6d7e10b291f62e15c82685e7756fa62d",
+  "fresh_bare_repository": "task-local empty teacher-readback.git",
+  "network_fetch_command": "git fetch git@gitea.shuishan.net.cn:SSO.James.2026Fall.DASE/10245102410.git refs/heads/project01:refs/heads/project01",
+  "object_alternates_present": false,
+  "local_clone_or_object_copy_used": false,
+  "formal_file_count": 13,
+  "changed_paths": [
+    "README.md",
+    "report.md"
+  ],
+  "unchanged_formal_files": 11,
+  "remote_refs_before": {
+    "HEAD": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework01": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+    "refs/heads/homework02": "f00613fff9f32f25bbac1423bb76a1bef52d7e41",
+    "refs/heads/homework03": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework04": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework05": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework06": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework07": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework08": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework09": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework10": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework11": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework12": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework13": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework14": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework15": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/master": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/project01": "6b42f26926c5dcd740a9bfea8385be0455d7ce53"
+  },
+  "remote_refs_after": {
+    "HEAD": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework01": "f5b9cca8ce5a2dbf1287c1e7cdf278f63e445bfb",
+    "refs/heads/homework02": "f00613fff9f32f25bbac1423bb76a1bef52d7e41",
+    "refs/heads/homework03": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework04": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework05": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework06": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework07": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework08": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework09": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework10": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework11": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework12": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework13": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework14": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/homework15": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/master": "414947e374423bad4e6b24a4a175d0e208714c85",
+    "refs/heads/project01": "22974c9707d176f3a1abd8603728286b8ebe2270"
+  },
+  "refs_changed": {
+    "refs/heads/project01": {
+      "before": "6b42f26926c5dcd740a9bfea8385be0455d7ce53",
+      "after": "22974c9707d176f3a1abd8603728286b8ebe2270"
+    }
+  },
+  "other_refs_unchanged": true,
+  "recorded_at": "2026-10-04T18:03:21.393477+08:00",
+  "web_rendering": {
+    "status": "UNVERIFIED",
+    "pages": [
+      {
+        "requested_url": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01",
+        "final_url": "https://gitea.shuishan.net.cn/user/login",
+        "http_status": 200,
+        "redirects": [
+          {
+            "status": 302,
+            "from": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01",
+            "to": "https://gitea.shuishan.net.cn/user/login"
+          }
+        ],
+        "title": "Sign In - 水杉码园",
+        "login_required": true,
+        "web_rendering": "UNVERIFIED",
+        "rendered_document_seen": false
+      },
+      {
+        "requested_url": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01/README.md",
+        "final_url": "https://gitea.shuishan.net.cn/user/login",
+        "http_status": 200,
+        "redirects": [
+          {
+            "status": 302,
+            "from": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01/README.md",
+            "to": "https://gitea.shuishan.net.cn/user/login"
+          }
+        ],
+        "title": "Sign In - 水杉码园",
+        "login_required": true,
+        "web_rendering": "UNVERIFIED",
+        "rendered_document_seen": false
+      },
+      {
+        "requested_url": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01/report.md",
+        "final_url": "https://gitea.shuishan.net.cn/user/login",
+        "http_status": 200,
+        "redirects": [
+          {
+            "status": 302,
+            "from": "https://gitea.shuishan.net.cn/SSO.James.2026Fall.DASE/10245102410/src/branch/project01/report.md",
+            "to": "https://gitea.shuishan.net.cn/user/login"
+          }
+        ],
+        "title": "Sign In - 水杉码园",
+        "login_required": true,
+        "web_rendering": "UNVERIFIED",
+        "rendered_document_seen": false
+      }
+    ],
+    "browser_tool": "All three URLs inaccessible via web tool; direct unauthenticated HTTPS attempted without cookies or credentials.",
+    "reason": "login required",
+    "observation_stage": "teacher pre-push unauthenticated HTTPS check; no rendered document seen"
+  },
+  "github": {
+    "repository": "https://github.com/woobowen/Softwaresystemoptimization",
+    "branch": "main",
+    "execution_start_head": "e7e3d4e2bfbf6b2c30b3b9f4b73a68372c48102a",
+    "evidence_commit_G2": {
+      "identity": "commit initially adding this evidence directory",
+      "resolve_command": "git log -1 --diff-filter=A --format=%H -- P1/evidence/submission/project01-doc-rewrite/README.md",
+      "exact_sha": "reported after commit creation in final response; cannot self-embed"
+    },
+    "publication_readback": "performed after creation of G2; results reported in final response, not preclaimed by this immutable record"
+  }
+}
