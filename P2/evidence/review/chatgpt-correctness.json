@@ -1,0 +1,111 @@
+{
+  "review_date": "2026-10-21",
+  "purpose": "Independent correctness check only; timings in these diagnostic logs are not coursework performance samples.",
+  "compiler": {
+    "executable": "/usr/bin/gcc",
+    "version_command": [
+      "gcc",
+      "--version"
+    ],
+    "version_first_line": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+  },
+  "build": {
+    "cwd": "/tmp/p2-code-audit-mhq6krb3/homework",
+    "command": [
+      "make",
+      "CC=gcc",
+      "DEBUG=1",
+      "EXTRA_CFLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer"
+    ],
+    "exit_code": 0
+  },
+  "extremes_build": {
+    "cwd": "/workspace/scratch/9692ae41ef80",
+    "command": [
+      "gcc",
+      "-O1",
+      "-g",
+      "-Wall",
+      "-std=gnu99",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I/tmp/p2-code-audit-mhq6krb3/homework",
+      "/workspace/scratch/9692ae41ef80/p2_audit_20261021/P2/evidence/review/check-extremes.c",
+      "/tmp/p2-code-audit-mhq6krb3/homework/sort_m.c",
+      "/tmp/p2-code-audit-mhq6krb3/homework/sort_f.c",
+      "/tmp/p2-code-audit-mhq6krb3/homework/isort.c",
+      "/tmp/p2-code-audit-mhq6krb3/homework/util.c",
+      "-o",
+      "/tmp/p2-code-audit-mhq6krb3/check-extremes"
+    ],
+    "exit_code": 0
+  },
+  "runs": [
+    {
+      "cwd": "/tmp/p2-code-audit-mhq6krb3/homework",
+      "command": [
+        "/tmp/p2-code-audit-mhq6krb3/homework/sort",
+        "257",
+        "1"
+      ],
+      "environment_override": {
+        "ASAN_OPTIONS": "detect_leaks=0"
+      },
+      "exit_code": 0,
+      "log": "gcc-asan-no-lsan-correctness.txt",
+      "qsort_cases": 1656
+    },
+    {
+      "cwd": "/tmp/p2-code-audit-mhq6krb3/homework",
+      "command": [
+        "/tmp/p2-code-audit-mhq6krb3/check-extremes"
+      ],
+      "environment_override": {
+        "ASAN_OPTIONS": "detect_leaks=0"
+      },
+      "exit_code": 0,
+      "log": "gcc-asan-no-lsan-extremes.txt",
+      "qsort_cases": 78
+    }
+  ],
+  "initial_run_limitation": {
+    "exit_code": 1,
+    "reason": "LeakSanitizer could not read /proc task data in the audit container; successful final runs disabled leak detection. This check does not independently establish zero leaks.",
+    "logs": [
+      "gcc-asan-correctness.txt",
+      "gcc-asan-extremes.txt"
+    ]
+  },
+  "logs": [
+    {
+      "name": "gcc-asan-build.txt",
+      "sha256": "011c01ba67b9d5afd31892842b6d68c8aa85304e0bec3cb62b4accea667eeb88",
+      "content": "gcc main.c tests.c util.c isort.c sort_a.c sort_c.c sort_i.c sort_p.c sort_m.c sort_f.c -DDEBUG -O0 -g -Wall -std=gnu99 -gdwarf-3 -fsanitize=address,undefined -fno-omit-frame-pointer -lrt -lm  -o sort\n"
+    },
+    {
+      "name": "gcc-asan-correctness.txt",
+      "sha256": "e1337d9177f8a92cc2234474f1752e47113e01b1b4621a39bebe0cfa725a9b9a",
+      "content": "\nRunning test #0...\n --> test_correctness at line 221: PASS\n --> test_correctness at line 221: PASS\n\nRunning test #1...\n --> test_zero_element at line 250: PASS\n\nRunning test #2...\n --> test_one_element at line 270: PASS\n\nRunning test #3...\n --> test_subarray at line 317: PASS\n\nRunning test #4...\n --> test_reference at line 374: PASS\nDone testing.\n==32==Can't open /proc/31/task for reading.\n==31==LeakSanitizer has encountered a fatal error.\n==31==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1\n==31==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)\n"
+    },
+    {
+      "name": "gcc-asan-extremes-build.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content": ""
+    },
+    {
+      "name": "gcc-asan-extremes.txt",
+      "sha256": "f257b9b69a23b7698db9e56b6ad0860a5c91326e840f2d70ccbc913b3f609cde",
+      "content": "==47==Can't open /proc/46/task for reading.\n==46==LeakSanitizer has encountered a fatal error.\n==46==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1\n==46==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)\n"
+    },
+    {
+      "name": "gcc-asan-no-lsan-correctness.txt",
+      "sha256": "e8965619a498d34df73e810bfa748be9d2d230d3a0407cbf282dbd32991620de",
+      "content": "Using seed: 42\nGenerating random array of 257 elements\nTIME version=sort_a input=random trial=0 seconds=0.001892262\nTIME version=sort_i input=random trial=0 seconds=0.000913917\nTIME version=sort_p input=random trial=0 seconds=0.000451380\nTIME version=sort_c input=random trial=0 seconds=0.000030425\nTIME version=sort_m input=random trial=0 seconds=0.000068984\nTIME version=sort_f input=random trial=0 seconds=0.000021222\nArrays are sorted: yes\nAVG version=sort_a input=random n=257 R=1 seconds=0.001892262\nAVG version=sort_i input=random n=257 R=1 seconds=0.000913917\nAVG version=sort_p input=random n=257 R=1 seconds=0.000451380\nAVG version=sort_c input=random n=257 R=1 seconds=0.000030425\nAVG version=sort_m input=random n=257 R=1 seconds=0.000068984\nAVG version=sort_f input=random n=257 R=1 seconds=0.000021222\nGenerating inverted array of 257 elements\nTIME version=sort_a input=inverted trial=0 seconds=0.000206982\nTIME version=sort_i input=inverted trial=0 seconds=0.000249086\nTIME version=sort_p input=inverted trial=0 seconds=0.000161834\nTIME version=sort_c input=inverted trial=0 seconds=0.000036025\nTIME version=sort_m input=inverted trial=0 seconds=0.000025518\nTIME version=sort_f input=inverted trial=0 seconds=0.000022694\nArrays are sorted: yes\nAVG version=sort_a input=inverted n=257 R=1 seconds=0.000206982\nAVG version=sort_i input=inverted n=257 R=1 seconds=0.000249086\nAVG version=sort_p input=inverted n=257 R=1 seconds=0.000161834\nAVG version=sort_c input=inverted n=257 R=1 seconds=0.000036025\nAVG version=sort_m input=inverted n=257 R=1 seconds=0.000025518\nAVG version=sort_f input=inverted n=257 R=1 seconds=0.000022694\nSorting subarray A[96..160]\nArrays are sorted: yes\nqsort reference: 1656 cases, whole-array comparisons passed\n\nRunning test #0...\n --> test_correctness at line 221: PASS\n --> test_correctness at line 221: PASS\n\nRunning test #1...\n --> test_zero_element at line 250: PASS\n\nRunning test #2...\n --> test_one_element at line 270: PASS\n\nRunning test #3...\n --> test_subarray at line 317: PASS\n\nRunning test #4...\n --> test_reference at line 374: PASS\nDone testing.\n"
+    },
+    {
+      "name": "gcc-asan-no-lsan-extremes.txt",
+      "sha256": "b1ac1386cd426f430b9f1cfe09e7d686090c0e9aca2e05af73006b39a918a537",
+      "content": "m/f full uint32_t domain: 78 qsort cases passed\n"
+    }
+  ]
+}
