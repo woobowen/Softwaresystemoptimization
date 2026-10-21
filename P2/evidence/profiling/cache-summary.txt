@@ -1,0 +1,13 @@
+Cachegrind process totals; N=32768, R=1, seed42, random, cache+branch simulation.
+Includes generator, checks, allocator and startup; not sort-only instruction counts.
+
+version                        Ir  I1 misses  LLi misses   D1 misses  LLd misses
+sort_a                 22,208,183      1,678       1,660      41,220       7,938
+sort_i                 22,208,205      1,677       1,660      41,220       7,938
+sort_p                 23,428,821      1,676       1,659      41,218       7,938
+sort_c                  8,868,983      1,674       1,657      41,169       7,933
+sort_m                 10,946,694      1,666       1,648      29,350       6,877
+sort_f                 10,773,775      1,665       1,648      28,624       6,845
+recursive-noinline     22,208,223      1,677       1,660      41,220       7,939
+w1-debug               37,255,218      1,656       1,640      41,046       7,924
+w1-release             22,208,117      1,677       1,658      41,213       7,934

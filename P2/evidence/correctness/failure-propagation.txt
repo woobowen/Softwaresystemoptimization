@@ -1,0 +1,31 @@
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+
+Running test #1...
+ --> test_zero_element at line 250: PASS
+
+Running test #2...
+ --> test_one_element at line 270: PASS
+
+Running test #3...
+ --> test_subarray at line 317: PASS
+
+Running test #4...
+ --> test_reference at line 365: FAIL
+    Reason:sort_a differs from qsort: n=2 offset=0 pattern=0
+Done testing.
+Using seed: 42
+Generating random array of 8 elements
+TIME version=sort_a input=random trial=0 seconds=0.000000122
+Arrays are sorted: yes
+AVG version=sort_a input=random n=8 R=1 seconds=0.000000122
+Generating inverted array of 8 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.000000016
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=8 R=1 seconds=0.000000016
+Sorting subarray A[3..4]
+Arrays are sorted: yes
+
+expected_failure_exit=1

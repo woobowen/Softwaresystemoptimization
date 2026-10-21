@@ -1,0 +1,122 @@
+[
+  {
+    "batch": "all-versions",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "binary_sha256": "dd5ad4c03b1e14ee34ec8e5dd4c4c5109fb92d2521199bc95702fc8c9fcf5ba7",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/all-versions/samples.csv",
+    "summary": "P2/evidence/performance/all-versions/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/builds/final-release-sort"
+    ]
+  },
+  {
+    "batch": "inline",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "binary_sha256": "7b6eaca3379fe858b36738ce2a8393cf46852a21f3137a62024ab01cf89f4371",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/inline/samples.csv",
+    "summary": "P2/evidence/performance/inline/summary.csv",
+    "source_note": "Reconstructed from retained W1 source with pointer registration/stub restored; full binary SHA exactly equals the originally recorded SHA. See debug/fixes.md.",
+    "retained_matches": [
+      ".cache/P2/builds/inline-sort-recovered"
+    ]
+  },
+  {
+    "batch": "pre-coarsening",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "binary_sha256": "5cdf52f1c2bebe9e62797980a56a4c52976d1822fb63f242de4ba053e84086b2",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/pre-coarsening/samples.csv",
+    "summary": "P2/evidence/performance/pre-coarsening/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-release-sort"
+    ]
+  },
+  {
+    "batch": "recursive-noinline",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/recursive-noinline-sort",
+    "binary_sha256": "a0e255b40d7b2504e284128dfe7beaf32a3600bbaa40e53ccec5d09a6ca990ad",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/recursive-noinline/samples.csv",
+    "summary": "P2/evidence/performance/recursive-noinline/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/builds/recursive-noinline-sort"
+    ]
+  },
+  {
+    "batch": "thresholds/t16",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-16",
+    "binary_sha256": "a1a6687163cd86a0c939b3a5f0c3bcfdeaf76eb23f4cbee27055b5b7e88f7327",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm; -DCOARSE_THRESHOLD=16",
+    "samples": "P2/evidence/performance/thresholds/t16/samples.csv",
+    "summary": "P2/evidence/performance/thresholds/t16/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-16"
+    ]
+  },
+  {
+    "batch": "thresholds/t32",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-32",
+    "binary_sha256": "d561d4d3f8f99d75c8a3b68a0766ce34de9c6fdb68cbf3ac5b02a6d1b4350277",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm; -DCOARSE_THRESHOLD=32",
+    "samples": "P2/evidence/performance/thresholds/t32/samples.csv",
+    "summary": "P2/evidence/performance/thresholds/t32/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-32"
+    ]
+  },
+  {
+    "batch": "thresholds/t64",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-64",
+    "binary_sha256": "8c989e9f4c8b98da859985673f947e3d5ace25e471ce41127e51602bff0cb8f5",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm; -DCOARSE_THRESHOLD=64",
+    "samples": "P2/evidence/performance/thresholds/t64/samples.csv",
+    "summary": "P2/evidence/performance/thresholds/t64/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-64"
+    ]
+  },
+  {
+    "batch": "thresholds/t8",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-8",
+    "binary_sha256": "bf7edc708a756f5fa6ec93353301ffa2b939fb4d13fef33b3e22974b1aff471d",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm; -DCOARSE_THRESHOLD=8",
+    "samples": "P2/evidence/performance/thresholds/t8/samples.csv",
+    "summary": "P2/evidence/performance/thresholds/t8/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-8"
+    ]
+  },
+  {
+    "batch": "writeup1-debug",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-debug-sort",
+    "binary_sha256": "2d95b1502aa473f087405c45cdc80c8982d240e9c54449e460be5a20ad115fdc",
+    "build": "-DDEBUG -O0 -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/writeup1-debug/samples.csv",
+    "summary": "P2/evidence/performance/writeup1-debug/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-debug-sort"
+    ]
+  },
+  {
+    "batch": "writeup1-release",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-release-sort",
+    "binary_sha256": "5cdf52f1c2bebe9e62797980a56a4c52976d1822fb63f242de4ba053e84086b2",
+    "build": "-O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3; -lrt -lm",
+    "samples": "P2/evidence/performance/writeup1-release/samples.csv",
+    "summary": "P2/evidence/performance/writeup1-release/summary.csv",
+    "source_note": "W1 uses paired snapshot; threshold versions predate m/f; final sort code in profiles/final/source; noinline diff in evidence/profiling/writeup3",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-release-sort"
+    ]
+  }
+]

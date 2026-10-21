@@ -1,0 +1,23 @@
+$ taskset -c 2 /home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-16 -b -s 42 -v sort_c 1048576 5
+Using seed: 42
+Generating random array of 1048576 elements
+TIME version=sort_c input=random trial=0 seconds=0.051923612
+TIME version=sort_c input=random trial=1 seconds=0.048273604
+TIME version=sort_c input=random trial=2 seconds=0.050589269
+TIME version=sort_c input=random trial=3 seconds=0.049284064
+TIME version=sort_c input=random trial=4 seconds=0.048918145
+Arrays are sorted: yes
+AVG version=sort_c input=random n=1048576 R=5 seconds=0.049797739
+Generating inverted array of 1048576 elements
+TIME version=sort_c input=inverted trial=0 seconds=0.044640963
+TIME version=sort_c input=inverted trial=1 seconds=0.043815760
+TIME version=sort_c input=inverted trial=2 seconds=0.044457037
+TIME version=sort_c input=inverted trial=3 seconds=0.044668566
+TIME version=sort_c input=inverted trial=4 seconds=0.043712201
+Arrays are sorted: yes
+AVG version=sort_c input=inverted n=1048576 R=5 seconds=0.044258905
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.

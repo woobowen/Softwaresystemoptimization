@@ -1,0 +1,48 @@
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.
+Using seed: 42
+Generating random array of 4096 elements
+TIME version=sort_a input=random trial=0 seconds=0.000157758
+TIME version=sort_a input=random trial=1 seconds=0.000159670
+Arrays are sorted: yes
+AVG version=sort_a input=random n=4096 R=2 seconds=0.000158714
+Generating inverted array of 4096 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.000149124
+TIME version=sort_a input=inverted trial=1 seconds=0.000147383
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=4096 R=2 seconds=0.000148253
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.
+Using seed: 42
+Generating random array of 65536 elements
+TIME version=sort_a input=random trial=0 seconds=0.003150066
+TIME version=sort_a input=random trial=1 seconds=0.003407749
+Arrays are sorted: yes
+AVG version=sort_a input=random n=65536 R=2 seconds=0.003278908
+Generating inverted array of 65536 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.003144002
+TIME version=sort_a input=inverted trial=1 seconds=0.003176162
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=65536 R=2 seconds=0.003160082
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.
+Using seed: 42
+Generating random array of 1048576 elements
+TIME version=sort_a input=random trial=0 seconds=0.066758627
+TIME version=sort_a input=random trial=1 seconds=0.064260503
+Arrays are sorted: yes
+AVG version=sort_a input=random n=1048576 R=2 seconds=0.065509565
+Generating inverted array of 1048576 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.061721406
+TIME version=sort_a input=inverted trial=1 seconds=0.063479179
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=1048576 R=2 seconds=0.062600293

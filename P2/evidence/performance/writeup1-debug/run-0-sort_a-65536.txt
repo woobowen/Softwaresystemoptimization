@@ -1,0 +1,23 @@
+$ taskset -c 2 /home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-debug-sort -b -s 42 -v sort_a 65536 5
+Using seed: 42
+Generating random array of 65536 elements
+TIME version=sort_a input=random trial=0 seconds=0.007983910
+TIME version=sort_a input=random trial=1 seconds=0.007410377
+TIME version=sort_a input=random trial=2 seconds=0.008615884
+TIME version=sort_a input=random trial=3 seconds=0.007400323
+TIME version=sort_a input=random trial=4 seconds=0.007938897
+Arrays are sorted: yes
+AVG version=sort_a input=random n=65536 R=5 seconds=0.007869878
+Generating inverted array of 65536 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.003874211
+TIME version=sort_a input=inverted trial=1 seconds=0.003913809
+TIME version=sort_a input=inverted trial=2 seconds=0.004195892
+TIME version=sort_a input=inverted trial=3 seconds=0.003774986
+TIME version=sort_a input=inverted trial=4 seconds=0.004096148
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=65536 R=5 seconds=0.003971009
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.

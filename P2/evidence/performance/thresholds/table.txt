@@ -1,0 +1,11 @@
+Coarsening: sort_a chosen as source by the pre-coarsening comparison.
+Five independent processes per candidate/size; R=5, seed42, CPU2.
+Median of process means (ms). Selection uses medium/large and both inputs.
+
+cutoff    small-rnd  small-inv    mid-rnd    mid-inv  large-rnd  large-inv
+8             0.1058     0.0882     2.3906     2.1645    50.1707    46.3730
+16            0.1017     0.0846     2.4049     2.0692    49.7977    44.2847
+32            0.1010     0.0817     2.3146     2.0854    49.2438    43.9373
+64            0.1058     0.0957     2.3996     2.3722    50.1789    47.9416
+
+Selected cutoff: 32; finite-candidate result, not a universal optimum.

@@ -1,0 +1,6 @@
+sort_a n=1048576 malloc=2097150 free=2097150
+sort_i n=1048576 malloc=2097150 free=2097150
+sort_p n=1048576 malloc=2097150 free=2097150
+sort_c n=1048576 malloc=65534 free=65534
+sort_m n=1048576 malloc=32767 free=32767
+sort_f n=1048576 malloc=1 free=1

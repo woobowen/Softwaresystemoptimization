@@ -1,0 +1,7 @@
+.cache/P2/diagnostics/sort_a_corrupt.c:27:13: warning: unused function 'merge_a' [-Wunused-function]
+   27 | static void merge_a(data_t* A, int p, int q, int r);
+      |             ^~~~~~~
+.cache/P2/diagnostics/sort_a_corrupt.c:28:13: warning: unused function 'copy_a' [-Wunused-function]
+   28 | static void copy_a(data_t* source, data_t* dest, int n);
+      |             ^~~~~~
+2 warnings generated.

@@ -1,0 +1,22 @@
+Measurement batch: evidence/performance/all-versions checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/inline checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/pre-coarsening checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/recursive-noinline checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/thresholds/t16 checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/thresholds/t32 checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/thresholds/t64 checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/thresholds/t8 checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/writeup1-debug checked against raw times and matching retained binary SHA.
+Measurement batch: evidence/performance/writeup1-release checked against raw times and matching retained binary SHA.
+All 490 input-specific process means and 2450 individual times match raw logs; medians/ranges/speedups checked.
+All 94 local raw profile/build/source SHA-256 records checked.
+Final source snapshot: 16 files identical to delivered homework.
+Original algorithm/util and recitation analysis sources match official starter.
+12 final screenshot files and exact command sources have matching recorded SHA-256.
+Final report hash matches both independent reviews; 21 relative links exist; nine required headings present.
+Python script syntax and screenshot shell syntax checked.
+Hygiene: 533 current files checked; no ELF/object/cache/download archives or recognized secrets.
+Repository base/branch unchanged; existing assignments and root rules unchanged; teacher DOCX retained.
+Source cleanup happened after raw profiles and matching binaries were preserved outside P2; early inline binary recovery is byte-identical to original recorded SHA.
+Copied clean source tree rebuilt and ran both README commands, original isort10000/10 and sum100000000 accesses; see isolated logs.
+No installation or global configuration changes. Local content validation passed; external review pending.

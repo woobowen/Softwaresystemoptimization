@@ -1,0 +1,104 @@
+$ cg_annotate --auto=yes --context=4 --show-percs=no /home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.cg
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /usr/bin/cg_annotate --auto=yes --context=4 --show-percs=no /home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.cg
+I1 cache:         65536 B, 64 B, 16-way associative
+D1 cache:         49152 B, 64 B, 12-way associative
+LL cache:         25165824 B, 64 B, 12-way associative
+Command:          /home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw Bc Bcm Bi Bim
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Ir___________ I1mr_ ILmr_ Dr_________ D1mr_ DLmr_ Dw_________ D1mw DLmw Bc_________ Bcm__ Bi_________ Bim 
+
+3,100,179,858 1,335 1,332 400,037,320 1,211 1,052 200,016,898  634  612 100,036,009 4,032 100,000,345 179  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Ir___________ I1mr ILmr Dr_________ D1mr DLmr Dw_________ D1mw DLmw Bc_________ Bcm Bi_________ Bim  file:function
+
+< 1,900,000,000    2    2 200,000,000    0    0 100,000,000    0    0           0   0           0   0  ./stdlib/./stdlib/rand_r.c:rand_r
+
+< 1,100,016,422    3    3 100,000,005    0    0 100,004,107  255  255 100,004,097  20           0   0  .cache/P2/sum-controls/u4096-n100000000.c:main
+
+<   100,000,219   23   22 100,000,079    2    1          22    1    1          11   7 100,000,052  18  ???:
+    100,000,207   21   20 100,000,077    2    1          19    1    1          11   7 100,000,051  17    ???
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Ir___________ I1mr ILmr Dr_________ D1mr DLmr Dw_________ D1mw DLmw Bc_________ Bcm Bi_________ Bim  function:file
+
+> 1,900,000,000    2    2 200,000,000    0    0 100,000,000    0    0           0   0           0   0  rand_r:./stdlib/./stdlib/rand_r.c
+
+> 1,100,016,422    3    3 100,000,005    0    0 100,004,107  255  255 100,004,097  20           0   0  main:.cache/P2/sum-controls/u4096-n100000000.c
+
+>   100,000,207   21   20 100,000,077    2    1          19    1    1          11   7 100,000,051  17  ???:???
+
+--------------------------------------------------------------------------------
+-- Annotated source file: ./stdlib/./stdlib/rand_r.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- ./stdlib/./stdlib/rand_r.c
+
+--------------------------------------------------------------------------------
+-- Annotated source file: .cache/P2/sum-controls/u4096-n100000000.c
+--------------------------------------------------------------------------------
+Ir_________ I1mr ILmr Dr_________ D1mr DLmr Dw_________ D1mw DLmw Bc_________ Bcm Bi Bim 
+
+          5    0    0           0    0    0           0    0    0           0   0  0   0  <unknown (line 0)>
+
+-- line 7 ----------------------------------------
+          .    .    .           .    .    .           .    .    .           .   .  .   .  typedef uint32_t data_t;
+          .    .    .           .    .    .           .    .    .           .   .  .   .  const int U = 4096;   // size of the array. 10 million vals ~= 40MB
+          .    .    .           .    .    .           .    .    .           .   .  .   .  const int N = 100000000;  // number of searches to perform
+          .    .    .           .    .    .           .    .    .           .   .  .   .  
+          5    0    0           0    0    0           5    0    0           0   0  0   0  int main() {
+          2    0    0           0    0    0           1    0    0           0   0  0   0    data_t* data = (data_t*) malloc(U * sizeof(data_t));
+          2    0    0           0    0    0           0    0    0           1   0  0   0    if (data == NULL) {
+          .    .    .           .    .    .           .    .    .           .   .  .   .      free(data);
+          .    .    .           .    .    .           .    .    .           .   .  .   .      printf("Error: not enough memory\n");
+          .    .    .           .    .    .           .    .    .           .   .  .   .      exit(-1);
+          .    .    .           .    .    .           .    .    .           .   .  .   .    }
+          .    .    .           .    .    .           .    .    .           .   .  .   .  
+          .    .    .           .    .    .           .    .    .           .   .  .   .    // fill up the array with sequential (sorted) values.
+          .    .    .           .    .    .           .    .    .           .   .  .   .    int i;
+     12,288    0    0           0    0    0           0    0    0       4,096  10  0   0    for (i = 0; i < U; i++) {
+      4,096    0    0           0    0    0       4,096  255  255           0   0  0   0      data[i] = i;
+          .    .    .           .    .    .           .    .    .           .   .  .   .    }
+          .    .    .           .    .    .           .    .    .           .   .  .   .  
+          5    1    1           0    0    0           1    0    0           0   0  0   0    printf("Allocated array of size %d\n", U);
+          5    0    0           0    0    0           1    0    0           0   0  0   0    printf("Summing %d random values...\n", N);
+          .    .    .           .    .    .           .    .    .           .   .  .   .  
+          .    .    .           .    .    .           .    .    .           .   .  .   .    data_t val = 0;
+          1    0    0           0    0    0           1    0    0           0   0  0   0    data_t seed = 42;
+200,000,000    0    0           0    0    0           0    0    0 100,000,000  10  0   0    for (i = 0; i < N; i++) {
+700,000,000    1    1           0    0    0 100,000,000    0    0           0   0  0   0      int l = rand_r(&seed) % U;
+200,000,000    0    0 100,000,000    0    0           0    0    0           0   0  0   0      val = (val + data[l]);
+          .    .    .           .    .    .           .    .    .           .   .  .   .    }
+          .    .    .           .    .    .           .    .    .           .   .  .   .  
+          2    0    0           0    0    0           1    0    0           0   0  0   0    free(data);
+          4    0    0           0    0    0           1    0    0           0   0  0   0    printf("Done. Value = %d\n", val);
+          7    1    1           5    0    0           0    0    0           0   0  0   0    return 0;
+          .    .    .           .    .    .           .    .    .           .   .  .   .  }
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Ir___________ I1mr_ ILmr_ Dr_________ D1mr_ DLmr_ Dw_________ D1mw DLmw Bc_________ Bcm__ Bi_________ Bim 
+
+1,100,016,417     3     3 100,000,005     0     0 100,004,107  255  255 100,004,097    20           0   0    annotated: files known & above threshold & readable, line numbers known
+            5     0     0           0     0     0           0    0    0           0     0           0   0    annotated: files known & above threshold & readable, line numbers unknown
+            0     0     0           0     0     0           0    0    0           0     0           0   0  unannotated: files known & above threshold & two or more non-identical
+1,900,000,000     2     2 200,000,000     0     0 100,000,000    0    0           0     0           0   0  unannotated: files known & above threshold & unreadable 
+      163,217 1,307 1,305      37,236 1,209 1,051      12,769  378  356      31,901 4,005         293 161  unannotated: files known & below threshold
+  100,000,219    23    22 100,000,079     2     1          22    1    1          11     7 100,000,052  18  unannotated: files unknown
+

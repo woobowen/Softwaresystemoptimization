@@ -1,0 +1,15 @@
+{
+  "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-release-sort",
+  "sha256": "5cdf52f1c2bebe9e62797980a56a4c52976d1822fb63f242de4ba053e84086b2",
+  "versions": [
+    "sort_a"
+  ],
+  "sizes": [
+    65536
+  ],
+  "seed": 42,
+  "R": 5,
+  "runs": 5,
+  "cpu": 2,
+  "statistic": "median of independent process means; seconds per sort"
+}

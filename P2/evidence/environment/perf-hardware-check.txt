@@ -1,0 +1,15 @@
+Sorting 100 values...
+Done!
+
+ Performance counter stats for 'P2/recitation/isort 100 1':
+
+   <not supported>      cycles:u                                                              
+   <not supported>      instructions:u                                                        
+   <not supported>      branch-misses:u                                                       
+
+       0.001167338 seconds time elapsed
+
+       0.000000000 seconds user
+       0.000955000 seconds sys
+
+

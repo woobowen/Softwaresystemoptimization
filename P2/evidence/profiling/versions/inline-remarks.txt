@@ -1,0 +1,21 @@
+P2/homework/sort_i.c:59:3: remark: 'copy_i' inlined into 'merge_i' with (cost=-10, threshold=325) at callsite merge_i:16:3; [-Rpass=inline]
+   59 |   copy_i(&(A[p]), left, n1);
+      |   ^
+P2/homework/sort_i.c:60:3: remark: 'copy_i' inlined into 'merge_i' with (cost=-15010, threshold=325) at callsite merge_i:17:3; [-Rpass=inline]
+   60 |   copy_i(&(A[q + 1]), right, n2);
+      |   ^
+P2/homework/sort_i.c:35:5: remark: sort_recursive_i has uninlinable pattern (recursive) and cost is not fully computed [-Rpass-missed=inline-cost]
+   35 |     sort_recursive_i(A, p, q);
+      |     ^
+P2/homework/sort_i.c:35:5: remark: 'sort_recursive_i' not inlined into 'sort_recursive_i' because it should never be inlined (cost=never): recursive [-Rpass-missed=inline]
+P2/homework/sort_i.c:36:5: remark: sort_recursive_i has uninlinable pattern (recursive) and cost is not fully computed [-Rpass-missed=inline-cost]
+   36 |     sort_recursive_i(A, q + 1, r);
+      |     ^
+P2/homework/sort_i.c:36:5: remark: 'sort_recursive_i' not inlined into 'sort_recursive_i' because it should never be inlined (cost=never): recursive [-Rpass-missed=inline]
+P2/homework/sort_i.c:37:5: remark: 'merge_i' inlined into 'sort_recursive_i' with (cost=-14635, threshold=325) at callsite sort_recursive_i:6:5; [-Rpass=inline]
+   37 |     merge_i(A, p, q, r);
+      |     ^
+P2/homework/sort_i.c:90:3: remark: sort_recursive_i has uninlinable pattern (recursive) and cost is not fully computed [-Rpass-missed=inline-cost]
+   90 |   sort_recursive_i(A, p, r);
+      |   ^
+P2/homework/sort_i.c:90:3: remark: 'sort_recursive_i' not inlined into 'sort_i' because it should never be inlined (cost=never): recursive [-Rpass-missed=inline]

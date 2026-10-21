@@ -1,0 +1,24 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu-clock:u'
+# Event count (approx.): 1178178177
+#
+# Overhead  Command          Shared Object       Symbol                          
+# ........  ...............  ..................  ................................
+#
+    73.83%  final-release-s  final-release-sort  [.] sort_recursive_f
+    19.63%  final-release-s  final-release-sort  [.] isort
+     3.48%  final-release-s  libc.so.6           [.] rand_r
+     1.10%  final-release-s  final-release-sort  [.] all_random
+     1.10%  final-release-s  final-release-sort  [.] post_process
+     0.51%  final-release-s  final-release-sort  [.] rand_r@plt
+     0.25%  final-release-s  libc.so.6           [.] __memmove_avx_unaligned_erms
+     0.08%  final-release-s  libc.so.6           [.] clock_gettime@@GLIBC_2.17
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

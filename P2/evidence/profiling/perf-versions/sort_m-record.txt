@@ -1,0 +1,30 @@
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+Done testing.
+Using seed: 42
+Generating random array of 1048576 elements
+TIME version=sort_m input=random trial=0 seconds=0.056097085
+TIME version=sort_m input=random trial=1 seconds=0.054487783
+TIME version=sort_m input=random trial=2 seconds=0.055391328
+TIME version=sort_m input=random trial=3 seconds=0.055480464
+TIME version=sort_m input=random trial=4 seconds=0.055880867
+TIME version=sort_m input=random trial=5 seconds=0.054571860
+TIME version=sort_m input=random trial=6 seconds=0.055322157
+TIME version=sort_m input=random trial=7 seconds=0.054894375
+TIME version=sort_m input=random trial=8 seconds=0.056210406
+TIME version=sort_m input=random trial=9 seconds=0.054524755
+TIME version=sort_m input=random trial=10 seconds=0.055648577
+TIME version=sort_m input=random trial=11 seconds=0.055170249
+TIME version=sort_m input=random trial=12 seconds=0.056813753
+TIME version=sort_m input=random trial=13 seconds=0.055025652
+TIME version=sort_m input=random trial=14 seconds=0.056248682
+TIME version=sort_m input=random trial=15 seconds=0.054931140
+TIME version=sort_m input=random trial=16 seconds=0.055088580
+TIME version=sort_m input=random trial=17 seconds=0.054934741
+TIME version=sort_m input=random trial=18 seconds=0.055096241
+TIME version=sort_m input=random trial=19 seconds=0.054943524
+Arrays are sorted: yes
+AVG version=sort_m input=random n=1048576 R=20 seconds=0.055338111
+[ perf record: Woken up 38 times to write data ]
+[ perf record: Captured and wrote 9.424 MB .cache/P2/profiles/perf-versions/sort_m.data (1170 samples) ]

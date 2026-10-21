@@ -1,0 +1,22 @@
+Normal build: Clang 18.1.3, -O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3
+CPU 2; seed 42; R=5 per process; 5 independent processes per group
+Values: median of process means, milliseconds per sort; parentheses: speedup vs sort_a
+
+RANDOM
+version                 N=4096             N=65536           N=1048576
+sort_a          0.1524 (1.000x)     3.3009 (1.000x)    62.6914 (1.000x)
+sort_i          0.1482 (1.029x)     3.1586 (1.045x)    62.8199 (0.998x)
+sort_p          0.1662 (0.917x)     3.4504 (0.957x)    67.7730 (0.925x)
+sort_c          0.1086 (1.404x)     2.4454 (1.350x)    51.5426 (1.216x)
+sort_m          0.1196 (1.275x)     2.6752 (1.234x)    55.4710 (1.130x)
+sort_f          0.1243 (1.226x)     2.7051 (1.220x)    54.8455 (1.143x)
+
+INVERTED
+version                 N=4096             N=65536           N=1048576
+sort_a          0.1488 (1.000x)     3.1430 (1.000x)    62.3506 (1.000x)
+sort_i          0.1499 (0.993x)     3.1322 (1.003x)    62.5056 (0.998x)
+sort_p          0.1591 (0.936x)     3.3822 (0.929x)    67.6190 (0.922x)
+sort_c          0.0827 (1.800x)     2.0187 (1.557x)    44.3056 (1.407x)
+sort_m          0.0561 (2.655x)     1.2725 (2.470x)    27.1425 (2.297x)
+sort_f          0.0542 (2.747x)     1.2924 (2.432x)    26.7741 (2.329x)
+

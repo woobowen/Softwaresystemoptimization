@@ -1,0 +1,13 @@
+Sorting 100 values...
+Done!
+
+ Performance counter stats for 'P2/recitation/isort 100 1':
+
+              0.47 msec task-clock:u                     #    0.525 CPUs utilized             
+
+       0.000897250 seconds time elapsed
+
+       0.000124000 seconds user
+       0.000000000 seconds sys
+
+

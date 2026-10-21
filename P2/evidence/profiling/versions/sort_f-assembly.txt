@@ -1,0 +1,61 @@
+
+.cache/P2/builds/final-release-sort:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+00000000000054f0 <sort_f>:
+  }
+}
+
+void sort_f(data_t* A, int p, int r) {
+  assert(A);
+  if (p >= r) return;
+    54f0:	89 d0                	mov    %edx,%eax
+    54f2:	29 f0                	sub    %esi,%eax
+    54f4:	7e 5a                	jle    5550 <sort_f+0x60>
+    54f6:	55                   	push   %rbp
+    54f7:	41 56                	push   %r14
+    54f9:	53                   	push   %rbx
+    54fa:	48 83 ec 10          	sub    $0x10,%rsp
+    54fe:	49 89 fe             	mov    %rdi,%r14
+    5501:	89 f5                	mov    %esi,%ebp
+    5503:	89 d3                	mov    %edx,%ebx
+  data_t* left = 0;
+    5505:	48 c7 44 24 08 00 00 	movq   $0x0,0x8(%rsp)
+    550c:	00 00 
+  mem_alloc(&left, (r - p + 2) / 2);
+    550e:	89 c1                	mov    %eax,%ecx
+    5510:	83 c1 02             	add    $0x2,%ecx
+    5513:	c1 e9 1f             	shr    $0x1f,%ecx
+    5516:	8d 34 08             	lea    (%rax,%rcx,1),%esi
+    5519:	83 c6 02             	add    $0x2,%esi
+    551c:	d1 fe                	sar    $1,%esi
+    551e:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+    5523:	e8 78 ef ff ff       	call   44a0 <mem_alloc>
+  if (left == NULL) return;
+    5528:	48 8b 4c 24 08       	mov    0x8(%rsp),%rcx
+    552d:	48 85 c9             	test   %rcx,%rcx
+    5530:	74 16                	je     5548 <sort_f+0x58>
+  sort_recursive_f(A, p, r, left);
+    5532:	4c 89 f7             	mov    %r14,%rdi
+    5535:	89 ee                	mov    %ebp,%esi
+    5537:	89 da                	mov    %ebx,%edx
+    5539:	e8 22 00 00 00       	call   5560 <sort_recursive_f>
+    553e:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+  mem_free(&left);
+    5543:	e8 88 ef ff ff       	call   44d0 <mem_free>
+    5548:	48 83 c4 10          	add    $0x10,%rsp
+    554c:	5b                   	pop    %rbx
+    554d:	41 5e                	pop    %r14
+    554f:	5d                   	pop    %rbp
+}
+    5550:	c3                   	ret
+
+Disassembly of section .fini:

@@ -1,0 +1,10 @@
+{
+  "metric": "geometric mean time ratio vs threshold 8, medium/large and both inputs",
+  "ratios": {
+    "8": 1.0,
+    "16": 0.9771240364366658,
+    "32": 0.9650916431615669,
+    "64": 1.0327304972124816
+  },
+  "selected": 32
+}

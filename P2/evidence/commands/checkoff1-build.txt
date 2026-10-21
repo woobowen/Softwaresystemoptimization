@@ -1,0 +1,5 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'
+clang -Wall -O0 -g -c isort.c 
+clang -Wall -O0 -g -c qsort.c 
+clang -o isort isort.o qsort.o -lrt
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'

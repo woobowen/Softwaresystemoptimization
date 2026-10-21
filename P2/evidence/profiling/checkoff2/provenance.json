@@ -1,0 +1,242 @@
+[
+  {
+    "case": "u10000000-n100000000",
+    "source": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000.c",
+    "source_sha256": "26898636aba35823fb423e1ba0b865b9174dd8503a3f95369c07bb19f9234ed4",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000",
+    "binary_sha256": "541447a9c80011a0e080d1045c7a544a1ca83a6a9d231b3b2333c33f9e841f23",
+    "cache": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000.cg",
+    "cache_sha256": "46bbceffc81d8aea97b6af602fd4b0c13c4fd9613c10828972a810b6c168c02f",
+    "build": [
+      "clang",
+      "-Wall",
+      "-O1",
+      "-DNDEBUG",
+      "-g",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000.c",
+      "-lrt",
+      "-o",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000"
+    ],
+    "command": [
+      "valgrind",
+      "--tool=cachegrind",
+      "--cache-sim=yes",
+      "--branch-sim=yes",
+      "--cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000.cg",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n100000000"
+    ],
+    "cache_configuration": [
+      "desc: I1 cache:         65536 B, 64 B, 16-way associative",
+      "desc: D1 cache:         49152 B, 64 B, 12-way associative",
+      "desc: LL cache:         25165824 B, 64 B, 12-way associative"
+    ],
+    "counts": {
+      "Ir": 3440163575,
+      "I1mr": 1334,
+      "ILmr": 1332,
+      "Dr": 400037333,
+      "D1mr": 99879912,
+      "DLmr": 37232898,
+      "Dw": 210012802,
+      "D1mw": 625438,
+      "DLmw": 625421,
+      "Bc": 110031924,
+      "Bcm": 4017,
+      "Bi": 100000346,
+      "Bim": 179
+    }
+  },
+  {
+    "case": "u4096-n100000000",
+    "source": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.c",
+    "source_sha256": "19cc44de5b86c2136d402f9052962cfe117c93d836fcb0cbc3d232535b669f0e",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000",
+    "binary_sha256": "fc8043434a276d0550e943b67384f63f12b17aea208bcabf8558e2e1e11fd6ce",
+    "cache": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.cg",
+    "cache_sha256": "0faf67895960032954099580b905ae4edfabc32c482a2710782e073c57b02a2d",
+    "build": [
+      "clang",
+      "-Wall",
+      "-O1",
+      "-DNDEBUG",
+      "-g",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.c",
+      "-lrt",
+      "-o",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000"
+    ],
+    "command": [
+      "valgrind",
+      "--tool=cachegrind",
+      "--cache-sim=yes",
+      "--branch-sim=yes",
+      "--cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000.cg",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u4096-n100000000"
+    ],
+    "cache_configuration": [
+      "desc: I1 cache:         65536 B, 64 B, 16-way associative",
+      "desc: D1 cache:         49152 B, 64 B, 12-way associative",
+      "desc: LL cache:         25165824 B, 64 B, 12-way associative"
+    ],
+    "counts": {
+      "Ir": 3100179858,
+      "I1mr": 1335,
+      "ILmr": 1332,
+      "Dr": 400037320,
+      "D1mr": 1211,
+      "DLmr": 1052,
+      "Dw": 200016898,
+      "D1mw": 634,
+      "DLmw": 612,
+      "Bc": 100036009,
+      "Bcm": 4032,
+      "Bi": 100000345,
+      "Bim": 179
+    }
+  },
+  {
+    "case": "u1048576-n100000000",
+    "source": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000.c",
+    "source_sha256": "93a1586b78746d4e78c25dd366da3a5df42765913c0443614eac39c6723743b8",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000",
+    "binary_sha256": "db73d32d71c1f59c714a5b00b5c04baeda5213faa64230bf3403c20da40ed8cf",
+    "cache": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000.cg",
+    "cache_sha256": "3f2c3a49f07ee0a242b9b71d054cac272281e5a9e075d93f06eed11c9d0317e4",
+    "build": [
+      "clang",
+      "-Wall",
+      "-O1",
+      "-DNDEBUG",
+      "-g",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000.c",
+      "-lrt",
+      "-o",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000"
+    ],
+    "command": [
+      "valgrind",
+      "--tool=cachegrind",
+      "--cache-sim=yes",
+      "--branch-sim=yes",
+      "--cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000.cg",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000"
+    ],
+    "cache_configuration": [
+      "desc: I1 cache:         65536 B, 64 B, 16-way associative",
+      "desc: D1 cache:         49152 B, 64 B, 12-way associative",
+      "desc: LL cache:         25165824 B, 64 B, 12-way associative"
+    ],
+    "counts": {
+      "Ir": 3104357858,
+      "I1mr": 1334,
+      "ILmr": 1331,
+      "Dr": 400037331,
+      "D1mr": 98832581,
+      "DLmr": 1053,
+      "Dw": 201061378,
+      "D1mw": 65974,
+      "DLmw": 65894,
+      "Bc": 101080499,
+      "Bcm": 4017,
+      "Bi": 100000346,
+      "Bim": 179
+    }
+  },
+  {
+    "case": "u10000000-n10000000",
+    "source": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000.c",
+    "source_sha256": "6b7d5fb7b63bfa0f0e3a51dce02ef9472575757de8f0e18fab3ad37c4d8e2a0e",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000",
+    "binary_sha256": "5c749330b627f3142fc10bbb57137e24cdfc617398b863f439f0d9018b9b5c0e",
+    "cache": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000.cg",
+    "cache_sha256": "dbbe3d130b6b4dde32c52c2fc47546ab24a6c8f1f0842f187f88aee07e5c36e3",
+    "build": [
+      "clang",
+      "-Wall",
+      "-O1",
+      "-DNDEBUG",
+      "-g",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000.c",
+      "-lrt",
+      "-o",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000"
+    ],
+    "command": [
+      "valgrind",
+      "--tool=cachegrind",
+      "--cache-sim=yes",
+      "--branch-sim=yes",
+      "--cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000.cg",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n10000000"
+    ],
+    "cache_configuration": [
+      "desc: I1 cache:         65536 B, 64 B, 16-way associative",
+      "desc: D1 cache:         49152 B, 64 B, 12-way associative",
+      "desc: LL cache:         25165824 B, 64 B, 12-way associative"
+    ],
+    "counts": {
+      "Ir": 380163575,
+      "I1mr": 1334,
+      "ILmr": 1332,
+      "Dr": 40037333,
+      "D1mr": 9989070,
+      "DLmr": 3724736,
+      "Dw": 30012802,
+      "D1mw": 625438,
+      "DLmw": 625421,
+      "Bc": 20031924,
+      "Bcm": 4017,
+      "Bi": 10000346,
+      "Bim": 179
+    }
+  },
+  {
+    "case": "u10000000-n50000000",
+    "source": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000.c",
+    "source_sha256": "d6921ede3a07b7021cdc83b7386a21dee9406b8c99c75cda28e742936d997619",
+    "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000",
+    "binary_sha256": "ca4523b498023732256e4335dc281a78a6706273b65474042474103528b2b5fe",
+    "cache": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000.cg",
+    "cache_sha256": "3868217c0c66a415ee8a3fb494046e0fc056f015a2fd6cf245221fbcf1d218c1",
+    "build": [
+      "clang",
+      "-Wall",
+      "-O1",
+      "-DNDEBUG",
+      "-g",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000.c",
+      "-lrt",
+      "-o",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000"
+    ],
+    "command": [
+      "valgrind",
+      "--tool=cachegrind",
+      "--cache-sim=yes",
+      "--branch-sim=yes",
+      "--cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000.cg",
+      "/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u10000000-n50000000"
+    ],
+    "cache_configuration": [
+      "desc: I1 cache:         65536 B, 64 B, 16-way associative",
+      "desc: D1 cache:         49152 B, 64 B, 12-way associative",
+      "desc: LL cache:         25165824 B, 64 B, 12-way associative"
+    ],
+    "counts": {
+      "Ir": 1740163585,
+      "I1mr": 1337,
+      "ILmr": 1335,
+      "Dr": 200037335,
+      "D1mr": 49940690,
+      "DLmr": 18613193,
+      "Dw": 110012804,
+      "D1mw": 625438,
+      "DLmw": 625421,
+      "Bc": 60031926,
+      "Bcm": 4030,
+      "Bi": 50000346,
+      "Bim": 179
+    }
+  }
+]

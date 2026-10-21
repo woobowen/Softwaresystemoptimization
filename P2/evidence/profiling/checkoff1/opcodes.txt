@@ -1,0 +1,62 @@
+
+.cache/P2/profiles/checkoff1/isort:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+0000000000001190 <isort>:
+    1190:	55                   	push   %rbp
+    1191:	48 89 e5             	mov    %rsp,%rbp
+    1194:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+    1198:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+    119c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    11a0:	48 83 c0 04          	add    $0x4,%rax
+    11a4:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+    11a8:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    11ac:	48 3b 45 f0          	cmp    -0x10(%rbp),%rax
+    11b0:	0f 87 80 00 00 00    	ja     1236 <isort+0xa6>
+    11b6:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    11ba:	8b 00                	mov    (%rax),%eax
+    11bc:	89 45 e4             	mov    %eax,-0x1c(%rbp)
+    11bf:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    11c3:	48 83 c0 fc          	add    $0xfffffffffffffffc,%rax
+    11c7:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+    11cb:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+    11cf:	31 c0                	xor    %eax,%eax
+    11d1:	48 3b 4d f8          	cmp    -0x8(%rbp),%rcx
+    11d5:	88 45 d7             	mov    %al,-0x29(%rbp)
+    11d8:	0f 82 0f 00 00 00    	jb     11ed <isort+0x5d>
+    11de:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    11e2:	8b 00                	mov    (%rax),%eax
+    11e4:	3b 45 e4             	cmp    -0x1c(%rbp),%eax
+    11e7:	0f 97 c0             	seta   %al
+    11ea:	88 45 d7             	mov    %al,-0x29(%rbp)
+    11ed:	8a 45 d7             	mov    -0x29(%rbp),%al
+    11f0:	a8 01                	test   $0x1,%al
+    11f2:	0f 85 05 00 00 00    	jne    11fd <isort+0x6d>
+    11f8:	e9 1e 00 00 00       	jmp    121b <isort+0x8b>
+    11fd:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    1201:	8b 08                	mov    (%rax),%ecx
+    1203:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    1207:	89 48 04             	mov    %ecx,0x4(%rax)
+    120a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    120e:	48 83 c0 fc          	add    $0xfffffffffffffffc,%rax
+    1212:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+    1216:	e9 b0 ff ff ff       	jmp    11cb <isort+0x3b>
+    121b:	8b 4d e4             	mov    -0x1c(%rbp),%ecx
+    121e:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    1222:	89 48 04             	mov    %ecx,0x4(%rax)
+    1225:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1229:	48 83 c0 04          	add    $0x4,%rax
+    122d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+    1231:	e9 72 ff ff ff       	jmp    11a8 <isort+0x18>
+    1236:	5d                   	pop    %rbp
+    1237:	c3                   	ret
+
+Disassembly of section .fini:

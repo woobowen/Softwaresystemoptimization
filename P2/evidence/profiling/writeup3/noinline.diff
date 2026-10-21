@@ -1,0 +1,11 @@
+--- P2/homework/sort_i.c	2026-10-21 15:08:54.528315631 +0800
++++ .cache/P2/variants/sort_i_noinline.c	2026-10-21 15:17:13.018458998 +0800
+@@ -28,7 +28,7 @@
+ static inline void copy_i(data_t* source, data_t* dest, int n);
+ 
+ // A basic merge sort routine that sorts the subarray A[p..r]
+-static inline void sort_recursive_i(data_t* A, int p, int r) {
++static __attribute__((noinline)) void sort_recursive_i(data_t* A, int p, int r) {
+   assert(A);
+   if (p < r) {
+     int q = (p + r) / 2;

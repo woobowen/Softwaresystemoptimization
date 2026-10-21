@@ -1,0 +1,22 @@
+
+.cache/P2/builds/final-release-sort:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+0000000000004c00 <sort_i>:
+    dest[i] = source[i];
+  }
+}
+
+void sort_i(data_t* A, int p, int r) {
+  sort_recursive_i(A, p, r);
+    4c00:	eb 0e                	jmp    4c10 <sort_recursive_i>
+
+Disassembly of section .fini:

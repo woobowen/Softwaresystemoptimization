@@ -1,0 +1,15 @@
+{
+  "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-debug-sort",
+  "sha256": "2d95b1502aa473f087405c45cdc80c8982d240e9c54449e460be5a20ad115fdc",
+  "versions": [
+    "sort_a"
+  ],
+  "sizes": [
+    65536
+  ],
+  "seed": 42,
+  "R": 5,
+  "runs": 5,
+  "cpu": 2,
+  "statistic": "median of independent process means; seconds per sort"
+}

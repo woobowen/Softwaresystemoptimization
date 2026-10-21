@@ -1,0 +1,258 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu-clock:u'
+# Event count (approx.): 1171171170
+#
+# Overhead  Command          Shared Object       Symbol                          
+# ........  ...............  ..................  ................................
+#
+    73.93%  final-release-s  final-release-sort  [.] sort_m
+            |          
+            |--72.39%--merge_m (inlined)
+            |          sort_m
+            |          |          
+            |          |--67.61%--sort_m
+            |          |          |          
+            |          |          |--62.56%--sort_m
+            |          |          |          |          
+            |          |          |          |--58.63%--sort_m
+            |          |          |          |          |          
+            |          |          |          |          |--53.50%--sort_m
+            |          |          |          |          |          |          
+            |          |          |          |          |          |--46.92%--sort_m
+            |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |--42.99%--sort_m
+            |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |--37.78%--sort_m
+            |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |--32.74%--sort_m
+            |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |--27.18%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |--22.05%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |--18.29%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |          |--13.85%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |--10.26%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |--5.64%--test_correctness
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          main
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          _start
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |           --4.62%--sort_m
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     test_correctness
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |          |           --3.59%--test_correctness
+            |          |          |          |          |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |          |           --4.44%--test_correctness
+            |          |          |          |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |          |           --3.76%--test_correctness
+            |          |          |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |          |           --5.13%--test_correctness
+            |          |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |          |           --5.56%--test_correctness
+            |          |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |          |           --5.04%--test_correctness
+            |          |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          |          
+            |          |          |          |          |          |          |           --5.21%--test_correctness
+            |          |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |          |                     main
+            |          |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          |          
+            |          |          |          |          |          |           --3.93%--test_correctness
+            |          |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |          |                     main
+            |          |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |          |                     _start
+            |          |          |          |          |          |          
+            |          |          |          |          |           --6.58%--test_correctness
+            |          |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |          |                     main
+            |          |          |          |          |                     __libc_start_call_main
+            |          |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |          |                     _start
+            |          |          |          |          |          
+            |          |          |          |           --5.13%--test_correctness
+            |          |          |          |                     run_test_suite (inlined)
+            |          |          |          |                     main
+            |          |          |          |                     __libc_start_call_main
+            |          |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |          |                     _start
+            |          |          |          |          
+            |          |          |           --3.93%--test_correctness
+            |          |          |                     run_test_suite (inlined)
+            |          |          |                     main
+            |          |          |                     __libc_start_call_main
+            |          |          |                     __libc_start_main_impl (inlined)
+            |          |          |                     _start
+            |          |          |          
+            |          |           --5.04%--test_correctness
+            |          |                     run_test_suite (inlined)
+            |          |                     main
+            |          |                     __libc_start_call_main
+            |          |                     __libc_start_main_impl (inlined)
+            |          |                     _start
+            |          |          
+            |           --4.79%--test_correctness
+            |                     run_test_suite (inlined)
+            |                     main
+            |                     __libc_start_call_main
+            |                     __libc_start_main_impl (inlined)
+            |                     _start
+            |          
+             --1.28%--copy_m (inlined)
+                       merge_m (inlined)
+                       sort_m
+                       |          
+                        --0.85%--sort_m
+                                  sort_m
+                                  |          
+                                   --0.51%--test_correctness
+                                             run_test_suite (inlined)
+                                             main
+                                             __libc_start_call_main
+                                             __libc_start_main_impl (inlined)
+                                             _start
+
+    18.46%  final-release-s  final-release-sort  [.] isort
+            |
+            ---isort
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               sort_m
+               test_correctness
+               run_test_suite (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     3.08%  final-release-s  libc.so.6           [.] rand_r
+            |
+            ---rand_r
+               init_data (inlined)
+               all_random
+               test_correctness
+               run_test_suite (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     1.20%  final-release-s  final-release-sort  [.] all_random
+            |
+            ---init_data (inlined)
+               all_random
+               test_correctness
+               run_test_suite (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     0.94%  final-release-s  final-release-sort  [.] post_process
+            |          
+             --0.51%--post_process
+                       test_correctness
+                       run_test_suite (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     0.60%  final-release-s  libc.so.6           [.] malloc
+            |          
+             --0.51%--__GI___libc_malloc (inlined)
+                       mem_alloc
+                       merge_m (inlined)
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+                       sort_m
+
+     0.51%  final-release-s  libc.so.6           [.] __memmove_avx_unaligned_erms
+            |
+            ---__memcpy_avx_unaligned_erms (inlined)
+               test_correctness
+               run_test_suite (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     0.43%  final-release-s  final-release-sort  [.] rand_r@plt
+     0.26%  final-release-s  libc.so.6           [.] _int_free
+     0.17%  final-release-s  final-release-sort  [.] mem_free
+     0.17%  final-release-s  libc.so.6           [.] _int_free_merge_chunk
+     0.17%  final-release-s  libc.so.6           [.] cfree@GLIBC_2.2.5
+     0.09%  final-release-s  libc.so.6           [.] _int_malloc
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

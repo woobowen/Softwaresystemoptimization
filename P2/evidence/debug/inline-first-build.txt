@@ -1,0 +1,12 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'
+clang main.c tests.c util.c isort.c sort_a.c sort_c.c sort_i.c sort_p.c sort_m.c sort_f.c -O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3 -lrt -lm  -o sort
+sort_i.c:51:3: error: call to undeclared function 'mem_illoc'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   51 |   mem_illoc(&left, n1 + 1);
+      |   ^
+sort_i.c:51:3: note: did you mean 'mem_alloc'?
+././util.h:14:6: note: 'mem_alloc' declared here
+   14 | void mem_alloc(data_t** space, int size);
+      |      ^
+1 error generated.
+make: *** [Makefile:20: sort] Error 1
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'

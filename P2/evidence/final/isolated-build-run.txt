@@ -1,0 +1,113 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/homework'
+clang main.c tests.c util.c isort.c sort_a.c sort_c.c sort_i.c sort_p.c sort_m.c sort_f.c -O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3 -lrt -lm  -o sort
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/homework'
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+Using seed: 42
+Generating random array of 65536 elements
+TIME version=sort_a input=random trial=0 seconds=0.003241225
+TIME version=sort_i input=random trial=0 seconds=0.003246273
+TIME version=sort_p input=random trial=0 seconds=0.003373174
+TIME version=sort_c input=random trial=0 seconds=0.002465796
+TIME version=sort_m input=random trial=0 seconds=0.002641590
+TIME version=sort_f input=random trial=0 seconds=0.002738318
+TIME version=sort_a input=random trial=1 seconds=0.003309385
+TIME version=sort_i input=random trial=1 seconds=0.003020735
+TIME version=sort_p input=random trial=1 seconds=0.003268812
+TIME version=sort_c input=random trial=1 seconds=0.002415949
+TIME version=sort_m input=random trial=1 seconds=0.002668008
+TIME version=sort_f input=random trial=1 seconds=0.002878669
+TIME version=sort_a input=random trial=2 seconds=0.003105231
+TIME version=sort_i input=random trial=2 seconds=0.003140034
+TIME version=sort_p input=random trial=2 seconds=0.003278160
+TIME version=sort_c input=random trial=2 seconds=0.002402611
+TIME version=sort_m input=random trial=2 seconds=0.003081311
+TIME version=sort_f input=random trial=2 seconds=0.002630350
+TIME version=sort_a input=random trial=3 seconds=0.003099816
+TIME version=sort_i input=random trial=3 seconds=0.003040348
+TIME version=sort_p input=random trial=3 seconds=0.003256744
+TIME version=sort_c input=random trial=3 seconds=0.002755437
+TIME version=sort_m input=random trial=3 seconds=0.002683082
+TIME version=sort_f input=random trial=3 seconds=0.002646275
+TIME version=sort_a input=random trial=4 seconds=0.003683518
+TIME version=sort_i input=random trial=4 seconds=0.003425863
+TIME version=sort_p input=random trial=4 seconds=0.003727638
+TIME version=sort_c input=random trial=4 seconds=0.002757421
+TIME version=sort_m input=random trial=4 seconds=0.002765051
+TIME version=sort_f input=random trial=4 seconds=0.002622449
+Arrays are sorted: yes
+AVG version=sort_a input=random n=65536 R=5 seconds=0.003287835
+AVG version=sort_i input=random n=65536 R=5 seconds=0.003174651
+AVG version=sort_p input=random n=65536 R=5 seconds=0.003380906
+AVG version=sort_c input=random n=65536 R=5 seconds=0.002559443
+AVG version=sort_m input=random n=65536 R=5 seconds=0.002767808
+AVG version=sort_f input=random n=65536 R=5 seconds=0.002703212
+Generating inverted array of 65536 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.003134017
+TIME version=sort_i input=inverted trial=0 seconds=0.003422672
+TIME version=sort_p input=inverted trial=0 seconds=0.003304385
+TIME version=sort_c input=inverted trial=0 seconds=0.002053301
+TIME version=sort_m input=inverted trial=0 seconds=0.001274464
+TIME version=sort_f input=inverted trial=0 seconds=0.001226562
+TIME version=sort_a input=inverted trial=1 seconds=0.003090481
+TIME version=sort_i input=inverted trial=1 seconds=0.003305314
+TIME version=sort_p input=inverted trial=1 seconds=0.003254944
+TIME version=sort_c input=inverted trial=1 seconds=0.001960983
+TIME version=sort_m input=inverted trial=1 seconds=0.001249087
+TIME version=sort_f input=inverted trial=1 seconds=0.001255010
+TIME version=sort_a input=inverted trial=2 seconds=0.003039054
+TIME version=sort_i input=inverted trial=2 seconds=0.002997326
+TIME version=sort_p input=inverted trial=2 seconds=0.003662572
+TIME version=sort_c input=inverted trial=2 seconds=0.002128488
+TIME version=sort_m input=inverted trial=2 seconds=0.001277900
+TIME version=sort_f input=inverted trial=2 seconds=0.001256074
+TIME version=sort_a input=inverted trial=3 seconds=0.003110599
+TIME version=sort_i input=inverted trial=3 seconds=0.003049967
+TIME version=sort_p input=inverted trial=3 seconds=0.003903394
+TIME version=sort_c input=inverted trial=3 seconds=0.001968284
+TIME version=sort_m input=inverted trial=3 seconds=0.001260287
+TIME version=sort_f input=inverted trial=3 seconds=0.001239984
+TIME version=sort_a input=inverted trial=4 seconds=0.003086379
+TIME version=sort_i input=inverted trial=4 seconds=0.002993623
+TIME version=sort_p input=inverted trial=4 seconds=0.003702980
+TIME version=sort_c input=inverted trial=4 seconds=0.0019 --> test_correctness at line 221: PASS
+
+Running test #1...
+ --> test_zero_element at line 250: PASS
+
+Running test #2...
+ --> test_one_element at line 270: PASS
+
+Running test #3...
+ --> test_subarray at line 317: PASS
+
+Running test #4...
+ --> test_reference at line 374: PASS
+Done testing.
+86303
+TIME version=sort_m input=inverted trial=4 seconds=0.001262790
+TIME version=sort_f input=inverted trial=4 seconds=0.001224580
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=65536 R=5 seconds=0.003092106
+AVG version=sort_i input=inverted n=65536 R=5 seconds=0.003153780
+AVG version=sort_p input=inverted n=65536 R=5 seconds=0.003565655
+AVG version=sort_c input=inverted n=65536 R=5 seconds=0.002019472
+AVG version=sort_m input=inverted n=65536 R=5 seconds=0.001264906
+AVG version=sort_f input=inverted n=65536 R=5 seconds=0.001240442
+Sorting subarray A[32579..32956]
+Arrays are sorted: yes
+qsort reference: 1656 cases, whole-array comparisons passed
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+Done testing.
+Using seed: 42
+Generating random array of 1048576 elements
+TIME version=sort_m input=random trial=0 seconds=0.058140975
+TIME version=sort_m input=random trial=1 seconds=0.054566185
+TIME version=sort_m input=random trial=2 seconds=0.055559159
+TIME version=sort_m input=random trial=3 seconds=0.055693482
+TIME version=sort_m input=random trial=4 seconds=0.060352415
+Arrays are sorted: yes
+AVG version=sort_m input=random n=1048576 R=5 seconds=0.056862443

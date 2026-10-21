@@ -1,0 +1,22 @@
+{
+  "binary": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+  "sha256": "dd5ad4c03b1e14ee34ec8e5dd4c4c5109fb92d2521199bc95702fc8c9fcf5ba7",
+  "versions": [
+    "sort_a",
+    "sort_i",
+    "sort_p",
+    "sort_c",
+    "sort_m",
+    "sort_f"
+  ],
+  "sizes": [
+    4096,
+    65536,
+    1048576
+  ],
+  "seed": 42,
+  "R": 5,
+  "runs": 5,
+  "cpu": 2,
+  "statistic": "median of independent process means; seconds per sort"
+}

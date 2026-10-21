@@ -1,0 +1,23 @@
+$ taskset -c 2 /home/addaswsw/lab/Software_system_optimization/P2/homework/sort -b -s 42 -v sort_m 1048576 5
+Using seed: 42
+Generating random array of 1048576 elements
+TIME version=sort_m input=random trial=0 seconds=0.056420947
+TIME version=sort_m input=random trial=1 seconds=0.054529658
+TIME version=sort_m input=random trial=2 seconds=0.055740153
+TIME version=sort_m input=random trial=3 seconds=0.055206001
+TIME version=sort_m input=random trial=4 seconds=0.055039728
+Arrays are sorted: yes
+AVG version=sort_m input=random n=1048576 R=5 seconds=0.055387297
+Generating inverted array of 1048576 elements
+TIME version=sort_m input=inverted trial=0 seconds=0.026643563
+TIME version=sort_m input=inverted trial=1 seconds=0.027821058
+TIME version=sort_m input=inverted trial=2 seconds=0.026832831
+TIME version=sort_m input=inverted trial=3 seconds=0.026682956
+TIME version=sort_m input=inverted trial=4 seconds=0.027732337
+Arrays are sorted: yes
+AVG version=sort_m input=inverted n=1048576 R=5 seconds=0.027142549
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+Done testing.

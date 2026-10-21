@@ -1,0 +1,16 @@
+{
+  "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/recursive-noinline-sort",
+  "sha256": "a0e255b40d7b2504e284128dfe7beaf32a3600bbaa40e53ccec5d09a6ca990ad",
+  "versions": [
+    "sort_i"
+  ],
+  "sizes": [
+    65536,
+    1048576
+  ],
+  "seed": 42,
+  "R": 5,
+  "runs": 5,
+  "cpu": 2,
+  "statistic": "median of independent process means; seconds per sort"
+}

@@ -1,0 +1,255 @@
+
+.cache/P2/builds/final-release-sort:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+0000000000005560 <sort_recursive_f>:
+// Function prototypes
+static void merge_f(data_t* A, int p, int q, int r, data_t* left);
+static void copy_f(data_t* source, data_t* dest, int n);
+
+// A basic merge sort routine that sorts the subarray A[p..r]
+static void sort_recursive_f(data_t* A, int p, int r, data_t* left) {
+    5560:	55                   	push   %rbp
+    5561:	41 57                	push   %r15
+    5563:	41 56                	push   %r14
+    5565:	41 55                	push   %r13
+    5567:	41 54                	push   %r12
+    5569:	53                   	push   %rbx
+    556a:	50                   	push   %rax
+  assert(A);
+  if (p >= r) return;
+    556b:	89 d0                	mov    %edx,%eax
+    556d:	29 f0                	sub    %esi,%eax
+    556f:	0f 8e 18 02 00 00    	jle    578d <sort_recursive_f+0x22d>
+    5575:	41 89 d7             	mov    %edx,%r15d
+    5578:	41 89 f6             	mov    %esi,%r14d
+  if (r - p + 1 <= COARSE_THRESHOLD) {
+    557b:	83 f8 1f             	cmp    $0x1f,%eax
+    557e:	7f 24                	jg     55a4 <sort_recursive_f+0x44>
+    isort(A + p, A + r);
+    5580:	49 63 c6             	movslq %r14d,%rax
+    5583:	48 8d 04 87          	lea    (%rdi,%rax,4),%rax
+    5587:	49 63 cf             	movslq %r15d,%rcx
+    558a:	48 8d 34 8f          	lea    (%rdi,%rcx,4),%rsi
+    558e:	48 89 c7             	mov    %rax,%rdi
+    5591:	48 83 c4 08          	add    $0x8,%rsp
+    5595:	5b                   	pop    %rbx
+    5596:	41 5c                	pop    %r12
+    5598:	41 5d                	pop    %r13
+    559a:	41 5e                	pop    %r14
+    559c:	41 5f                	pop    %r15
+    559e:	5d                   	pop    %rbp
+    559f:	e9 4c ef ff ff       	jmp    44f0 <isort>
+    return;
+  }
+  if (p < r) {
+    int q = (p + r) / 2;
+    55a4:	43 8d 04 37          	lea    (%r15,%r14,1),%eax
+    55a8:	41 89 c5             	mov    %eax,%r13d
+    55ab:	41 c1 ed 1f          	shr    $0x1f,%r13d
+    55af:	41 01 c5             	add    %eax,%r13d
+    55b2:	41 d1 fd             	sar    $1,%r13d
+    55b5:	49 89 fc             	mov    %rdi,%r12
+    sort_recursive_f(A, p, q, left);
+    55b8:	44 89 f6             	mov    %r14d,%esi
+    55bb:	44 89 ea             	mov    %r13d,%edx
+    55be:	48 89 cb             	mov    %rcx,%rbx
+    55c1:	e8 9a ff ff ff       	call   5560 <sort_recursive_f>
+    sort_recursive_f(A, q + 1, r, left);
+    55c6:	41 8d 6d 01          	lea    0x1(%r13),%ebp
+    55ca:	4c 89 24 24          	mov    %r12,(%rsp)
+    55ce:	4c 89 e7             	mov    %r12,%rdi
+    55d1:	89 ee                	mov    %ebp,%esi
+    55d3:	44 89 fa             	mov    %r15d,%edx
+    55d6:	49 89 dc             	mov    %rbx,%r12
+    55d9:	48 89 d9             	mov    %rbx,%rcx
+    55dc:	e8 7f ff ff ff       	call   5560 <sort_recursive_f>
+
+static void copy_f(data_t* source, data_t* dest, int n) {
+  assert(dest);
+  assert(source);
+
+  for (int i = 0 ; i < n ; i++) {
+    55e1:	44 89 e8             	mov    %r13d,%eax
+    55e4:	44 29 f0             	sub    %r14d,%eax
+    55e7:	78 1b                	js     5604 <sort_recursive_f+0xa4>
+    55e9:	4d 63 c6             	movslq %r14d,%r8
+    55ec:	48 8b 0c 24          	mov    (%rsp),%rcx
+    55f0:	4a 8d 34 81          	lea    (%rcx,%r8,4),%rsi
+  int n1 = q - p + 1;
+    55f4:	8d 78 01             	lea    0x1(%rax),%edi
+  for (int i = 0 ; i < n ; i++) {
+    55f7:	83 f8 0b             	cmp    $0xb,%eax
+    55fa:	73 19                	jae    5615 <sort_recursive_f+0xb5>
+    55fc:	45 31 c9             	xor    %r9d,%r9d
+    55ff:	4c 89 e2             	mov    %r12,%rdx
+    5602:	eb 70                	jmp    5674 <sort_recursive_f+0x114>
+    5604:	31 ff                	xor    %edi,%edi
+    5606:	45 89 f0             	mov    %r14d,%r8d
+    5609:	48 8b 0c 24          	mov    (%rsp),%rcx
+    560d:	4c 89 e2             	mov    %r12,%rdx
+    5610:	e9 2a 01 00 00       	jmp    573f <sort_recursive_f+0x1df>
+    5615:	4c 89 e2             	mov    %r12,%rdx
+    5618:	4d 89 e1             	mov    %r12,%r9
+    561b:	49 29 f1             	sub    %rsi,%r9
+    561e:	49 83 f9 20          	cmp    $0x20,%r9
+    5622:	73 05                	jae    5629 <sort_recursive_f+0xc9>
+    5624:	45 31 c9             	xor    %r9d,%r9d
+    5627:	eb 4b                	jmp    5674 <sort_recursive_f+0x114>
+    5629:	4e 8d 14 85 00 00 00 	lea    0x0(,%r8,4),%r10
+    5630:	00 
+    5631:	41 89 f9             	mov    %edi,%r9d
+    5634:	41 81 e1 f8 ff ff 7f 	and    $0x7ffffff8,%r9d
+    563b:	49 01 ca             	add    %rcx,%r10
+    563e:	49 83 c2 10          	add    $0x10,%r10
+    5642:	45 31 db             	xor    %r11d,%r11d
+    5645:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    564c:	00 00 00 00 
+    dest[i] = source[i];
+    5650:	43 0f 10 44 9a f0    	movups -0x10(%r10,%r11,4),%xmm0
+    5656:	43 0f 10 0c 9a       	movups (%r10,%r11,4),%xmm1
+    565b:	42 0f 11 04 9a       	movups %xmm0,(%rdx,%r11,4)
+    5660:	42 0f 11 4c 9a 10    	movups %xmm1,0x10(%rdx,%r11,4)
+  for (int i = 0 ; i < n ; i++) {
+    5666:	49 83 c3 08          	add    $0x8,%r11
+    566a:	4d 39 d9             	cmp    %r11,%r9
+    566d:	75 e1                	jne    5650 <sort_recursive_f+0xf0>
+    566f:	49 39 f9             	cmp    %rdi,%r9
+    5672:	74 7b                	je     56ef <sort_recursive_f+0x18f>
+    5674:	49 89 fb             	mov    %rdi,%r11
+    5677:	4d 89 ca             	mov    %r9,%r10
+    567a:	49 83 e3 03          	and    $0x3,%r11
+    567e:	74 20                	je     56a0 <sort_recursive_f+0x140>
+    5680:	4d 89 ca             	mov    %r9,%r10
+    5683:	66 66 66 66 2e 0f 1f 	data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    568a:	84 00 00 00 00 00 
+    dest[i] = source[i];
+    5690:	42 8b 1c 96          	mov    (%rsi,%r10,4),%ebx
+    5694:	42 89 1c 92          	mov    %ebx,(%rdx,%r10,4)
+  for (int i = 0 ; i < n ; i++) {
+    5698:	49 ff c2             	inc    %r10
+    569b:	49 ff cb             	dec    %r11
+    569e:	75 f0                	jne    5690 <sort_recursive_f+0x130>
+    56a0:	49 29 f9             	sub    %rdi,%r9
+    56a3:	49 83 f9 fc          	cmp    $0xfffffffffffffffc,%r9
+    56a7:	77 46                	ja     56ef <sort_recursive_f+0x18f>
+    56a9:	4e 8d 04 81          	lea    (%rcx,%r8,4),%r8
+    56ad:	49 83 c0 0c          	add    $0xc,%r8
+    56b1:	66 66 66 66 66 66 2e 	data16 data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    56b8:	0f 1f 84 00 00 00 00 
+    56bf:	00 
+    dest[i] = source[i];
+    56c0:	47 8b 4c 90 f4       	mov    -0xc(%r8,%r10,4),%r9d
+    56c5:	46 89 0c 92          	mov    %r9d,(%rdx,%r10,4)
+    56c9:	47 8b 4c 90 f8       	mov    -0x8(%r8,%r10,4),%r9d
+    56ce:	46 89 4c 92 04       	mov    %r9d,0x4(%rdx,%r10,4)
+    56d3:	47 8b 4c 90 fc       	mov    -0x4(%r8,%r10,4),%r9d
+    56d8:	46 89 4c 92 08       	mov    %r9d,0x8(%rdx,%r10,4)
+    56dd:	47 8b 0c 90          	mov    (%r8,%r10,4),%r9d
+    56e1:	46 89 4c 92 0c       	mov    %r9d,0xc(%rdx,%r10,4)
+  for (int i = 0 ; i < n ; i++) {
+    56e6:	49 83 c2 04          	add    $0x4,%r10
+    56ea:	4c 39 d7             	cmp    %r10,%rdi
+    56ed:	75 d1                	jne    56c0 <sort_recursive_f+0x160>
+    56ef:	31 ff                	xor    %edi,%edi
+    56f1:	45 89 f0             	mov    %r14d,%r8d
+  while (i < n1 && j <= r) {
+    56f4:	45 39 fd             	cmp    %r15d,%r13d
+    56f7:	7d 46                	jge    573f <sort_recursive_f+0x1df>
+    56f9:	31 ff                	xor    %edi,%edi
+    56fb:	45 89 f0             	mov    %r14d,%r8d
+    56fe:	66 90                	xchg   %ax,%ax
+    5700:	41 89 fb             	mov    %edi,%r11d
+    if (left[i] <= A[j]) A[k++] = left[i++];
+    5703:	89 ff                	mov    %edi,%edi
+    5705:	8b 1c ba             	mov    (%rdx,%rdi,4),%ebx
+    5708:	48 63 fd             	movslq %ebp,%rdi
+    570b:	44 8b 24 b9          	mov    (%rcx,%rdi,4),%r12d
+    570f:	45 31 c9             	xor    %r9d,%r9d
+    5712:	31 ff                	xor    %edi,%edi
+    5714:	44 39 e3             	cmp    %r12d,%ebx
+    5717:	41 0f 97 c2          	seta   %r10b
+    571b:	40 0f 96 c7          	setbe  %dil
+    571f:	44 0f 42 e3          	cmovb  %ebx,%r12d
+    5723:	44 01 df             	add    %r11d,%edi
+    5726:	44 89 26             	mov    %r12d,(%rsi)
+  while (i < n1 && j <= r) {
+    5729:	41 ff c0             	inc    %r8d
+    572c:	39 c7                	cmp    %eax,%edi
+    572e:	7f 0f                	jg     573f <sort_recursive_f+0x1df>
+    5730:	45 88 d1             	mov    %r10b,%r9b
+    5733:	44 01 cd             	add    %r9d,%ebp
+    5736:	48 83 c6 04          	add    $0x4,%rsi
+    573a:	44 39 fd             	cmp    %r15d,%ebp
+    573d:	7e c1                	jle    5700 <sort_recursive_f+0x1a0>
+  while (i < n1) A[k++] = left[i++];
+    573f:	39 c7                	cmp    %eax,%edi
+    5741:	7f 4a                	jg     578d <sort_recursive_f+0x22d>
+    5743:	4d 63 c0             	movslq %r8d,%r8
+    5746:	4c 63 cf             	movslq %edi,%r9
+    5749:	41 01 fe             	add    %edi,%r14d
+    574c:	45 29 f5             	sub    %r14d,%r13d
+    574f:	41 83 fd 0b          	cmp    $0xb,%r13d
+    5753:	72 11                	jb     5766 <sort_recursive_f+0x206>
+    5755:	4a 8d 34 81          	lea    (%rcx,%r8,4),%rsi
+    5759:	4a 8d 3c 8a          	lea    (%rdx,%r9,4),%rdi
+    575d:	48 29 fe             	sub    %rdi,%rsi
+    5760:	48 83 fe 20          	cmp    $0x20,%rsi
+    5764:	73 36                	jae    579c <sort_recursive_f+0x23c>
+    5766:	4c 89 ce             	mov    %r9,%rsi
+    5769:	4c 89 c7             	mov    %r8,%rdi
+    576c:	48 8d 14 b2          	lea    (%rdx,%rsi,4),%rdx
+    5770:	29 f0                	sub    %esi,%eax
+    5772:	ff c0                	inc    %eax
+    5774:	48 8d 0c b9          	lea    (%rcx,%rdi,4),%rcx
+    5778:	31 f6                	xor    %esi,%esi
+    577a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    5780:	8b 3c b2             	mov    (%rdx,%rsi,4),%edi
+    5783:	89 3c b1             	mov    %edi,(%rcx,%rsi,4)
+    5786:	48 ff c6             	inc    %rsi
+    5789:	39 f0                	cmp    %esi,%eax
+    578b:	75 f3                	jne    5780 <sort_recursive_f+0x220>
+}
+    578d:	48 83 c4 08          	add    $0x8,%rsp
+    5791:	5b                   	pop    %rbx
+    5792:	41 5c                	pop    %r12
+    5794:	41 5d                	pop    %r13
+    5796:	41 5e                	pop    %r14
+    5798:	41 5f                	pop    %r15
+    579a:	5d                   	pop    %rbp
+    579b:	c3                   	ret
+  while (i < n1) A[k++] = left[i++];
+    579c:	49 ff c5             	inc    %r13
+    579f:	4d 89 ea             	mov    %r13,%r10
+    57a2:	49 83 e2 f8          	and    $0xfffffffffffffff8,%r10
+    57a6:	4b 8d 34 0a          	lea    (%r10,%r9,1),%rsi
+    57aa:	49 c1 e1 02          	shl    $0x2,%r9
+    57ae:	4b 8d 3c 02          	lea    (%r10,%r8,1),%rdi
+    57b2:	49 c1 e0 02          	shl    $0x2,%r8
+    57b6:	49 01 c8             	add    %rcx,%r8
+    57b9:	49 83 c0 10          	add    $0x10,%r8
+    57bd:	49 01 d1             	add    %rdx,%r9
+    57c0:	49 83 c1 10          	add    $0x10,%r9
+    57c4:	45 31 db             	xor    %r11d,%r11d
+    57c7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    57ce:	00 00 
+    57d0:	43 0f 10 44 99 f0    	movups -0x10(%r9,%r11,4),%xmm0
+    57d6:	43 0f 10 0c 99       	movups (%r9,%r11,4),%xmm1
+    57db:	43 0f 11 44 98 f0    	movups %xmm0,-0x10(%r8,%r11,4)
+    57e1:	43 0f 11 0c 98       	movups %xmm1,(%r8,%r11,4)
+    57e6:	49 83 c3 08          	add    $0x8,%r11
+    57ea:	4d 39 da             	cmp    %r11,%r10
+    57ed:	75 e1                	jne    57d0 <sort_recursive_f+0x270>
+    57ef:	4d 39 d5             	cmp    %r10,%r13
+    57f2:	0f 85 74 ff ff ff    	jne    576c <sort_recursive_f+0x20c>
+    57f8:	eb 93                	jmp    578d <sort_recursive_f+0x22d>
+
+Disassembly of section .fini:

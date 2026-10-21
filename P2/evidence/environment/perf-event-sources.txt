@@ -1,0 +1,7 @@
+breakpoint
+kprobe
+msr
+power
+software
+tracepoint
+uprobe

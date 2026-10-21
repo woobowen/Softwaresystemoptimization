@@ -1,0 +1,6 @@
+Rebuilt in .cache/P2/recovered-inline-source from retained W1 snapshot.
+Restored only sort_p.c official stub and the original disabled sort_p registration.
+Command: clang main.c tests.c util.c isort.c sort_a.c sort_c.c sort_i.c sort_p.c sort_m.c sort_f.c -O3 -DNDEBUG -g -Wall -std=gnu99 -gdwarf-3 -fdebug-compilation-dir=/home/addaswsw/lab/Software_system_optimization/P2/homework -lrt -lm -o ../builds/inline-sort-recovered
+Original recorded complete binary SHA-256: 7b6eaca3379fe858b36738ce2a8393cf46852a21f3137a62024ab01cf89f4371
+Reconstructed complete binary SHA-256: 7b6eaca3379fe858b36738ce2a8393cf46852a21f3137a62024ab01cf89f4371
+Exact equality: confirmed; no original timing rows changed.

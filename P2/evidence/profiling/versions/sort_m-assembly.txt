@@ -1,0 +1,268 @@
+
+.cache/P2/builds/final-release-sort:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+0000000000005220 <sort_m>:
+// Function prototypes
+static void merge_m(data_t* A, int p, int q, int r);
+static void copy_m(data_t* source, data_t* dest, int n);
+
+// A basic merge sort routine that sorts the subarray A[p..r]
+void sort_m(data_t* A, int p, int r) {
+    5220:	55                   	push   %rbp
+    5221:	41 57                	push   %r15
+    5223:	41 56                	push   %r14
+    5225:	41 55                	push   %r13
+    5227:	41 54                	push   %r12
+    5229:	53                   	push   %rbx
+    522a:	48 83 ec 18          	sub    $0x18,%rsp
+  assert(A);
+  if (p >= r) return;
+    522e:	89 d0                	mov    %edx,%eax
+    5230:	29 f0                	sub    %esi,%eax
+    5232:	0f 8e 40 02 00 00    	jle    5478 <sort_m+0x258>
+    5238:	41 89 d7             	mov    %edx,%r15d
+    523b:	41 89 f6             	mov    %esi,%r14d
+  if (r - p + 1 <= COARSE_THRESHOLD) {
+    523e:	83 f8 1f             	cmp    $0x1f,%eax
+    5241:	7f 24                	jg     5267 <sort_m+0x47>
+    isort(A + p, A + r);
+    5243:	49 63 c6             	movslq %r14d,%rax
+    5246:	48 8d 04 87          	lea    (%rdi,%rax,4),%rax
+    524a:	49 63 cf             	movslq %r15d,%rcx
+    524d:	48 8d 34 8f          	lea    (%rdi,%rcx,4),%rsi
+    5251:	48 89 c7             	mov    %rax,%rdi
+    5254:	48 83 c4 18          	add    $0x18,%rsp
+    5258:	5b                   	pop    %rbx
+    5259:	41 5c                	pop    %r12
+    525b:	41 5d                	pop    %r13
+    525d:	41 5e                	pop    %r14
+    525f:	41 5f                	pop    %r15
+    5261:	5d                   	pop    %rbp
+    5262:	e9 89 f2 ff ff       	jmp    44f0 <isort>
+    return;
+  }
+  if (p < r) {
+    int q = (p + r) / 2;
+    5267:	43 8d 04 37          	lea    (%r15,%r14,1),%eax
+    526b:	89 c3                	mov    %eax,%ebx
+    526d:	c1 eb 1f             	shr    $0x1f,%ebx
+    5270:	01 c3                	add    %eax,%ebx
+    5272:	d1 fb                	sar    $1,%ebx
+    5274:	49 89 fc             	mov    %rdi,%r12
+    sort_m(A, p, q);
+    5277:	44 89 f6             	mov    %r14d,%esi
+    527a:	89 da                	mov    %ebx,%edx
+    527c:	e8 9f ff ff ff       	call   5220 <sort_m>
+    sort_m(A, q + 1, r);
+    5281:	8d 6b 01             	lea    0x1(%rbx),%ebp
+    5284:	4c 89 64 24 10       	mov    %r12,0x10(%rsp)
+    5289:	4c 89 e7             	mov    %r12,%rdi
+    528c:	89 ee                	mov    %ebp,%esi
+    528e:	44 89 fa             	mov    %r15d,%edx
+    5291:	e8 8a ff ff ff       	call   5220 <sort_m>
+// Copy only the left half; read the right half directly from A.
+static void merge_m(data_t* A, int p, int q, int r) {
+  assert(A);
+  assert(p <= q);
+  assert((q + 1) <= r);
+  int n1 = q - p + 1;
+    5296:	41 89 dd             	mov    %ebx,%r13d
+    5299:	45 29 f5             	sub    %r14d,%r13d
+    529c:	45 8d 65 01          	lea    0x1(%r13),%r12d
+  data_t* left = 0;
+    52a0:	48 c7 44 24 08 00 00 	movq   $0x0,0x8(%rsp)
+    52a7:	00 00 
+    52a9:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+  mem_alloc(&left, n1);
+    52ae:	44 89 e6             	mov    %r12d,%esi
+    52b1:	e8 ea f1 ff ff       	call   44a0 <mem_alloc>
+  if (left == NULL) return;
+    52b6:	48 8b 44 24 08       	mov    0x8(%rsp),%rax
+    52bb:	48 85 c0             	test   %rax,%rax
+    52be:	0f 84 b4 01 00 00    	je     5478 <sort_m+0x258>
+
+static void copy_m(data_t* source, data_t* dest, int n) {
+  assert(dest);
+  assert(source);
+
+  for (int i = 0 ; i < n ; i++) {
+    52c4:	45 85 ed             	test   %r13d,%r13d
+    52c7:	0f 88 a4 00 00 00    	js     5371 <sort_m+0x151>
+  copy_m(A + p, left, n1);
+    52cd:	49 63 fe             	movslq %r14d,%rdi
+    52d0:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+    52d5:	48 8d 14 b9          	lea    (%rcx,%rdi,4),%rdx
+  for (int i = 0 ; i < n ; i++) {
+    52d9:	44 89 e6             	mov    %r12d,%esi
+    52dc:	41 83 fc 0c          	cmp    $0xc,%r12d
+    52e0:	72 10                	jb     52f2 <sort_m+0xd2>
+    52e2:	49 89 c0             	mov    %rax,%r8
+    52e5:	49 29 d0             	sub    %rdx,%r8
+    52e8:	49 83 f8 20          	cmp    $0x20,%r8
+    52ec:	0f 83 8e 00 00 00    	jae    5380 <sort_m+0x160>
+    52f2:	45 31 c0             	xor    %r8d,%r8d
+    52f5:	49 89 f2             	mov    %rsi,%r10
+    52f8:	4d 89 c1             	mov    %r8,%r9
+    52fb:	49 83 e2 03          	and    $0x3,%r10
+    52ff:	74 1f                	je     5320 <sort_m+0x100>
+    5301:	4d 89 c1             	mov    %r8,%r9
+    5304:	66 66 66 2e 0f 1f 84 	data16 data16 cs nopw 0x0(%rax,%rax,1)
+    530b:	00 00 00 00 00 
+    dest[i] = source[i];
+    5310:	46 8b 1c 8a          	mov    (%rdx,%r9,4),%r11d
+    5314:	46 89 1c 88          	mov    %r11d,(%rax,%r9,4)
+  for (int i = 0 ; i < n ; i++) {
+    5318:	49 ff c1             	inc    %r9
+    531b:	49 ff ca             	dec    %r10
+    531e:	75 f0                	jne    5310 <sort_m+0xf0>
+    5320:	49 29 f0             	sub    %rsi,%r8
+    5323:	49 83 f8 fc          	cmp    $0xfffffffffffffffc,%r8
+    5327:	0f 87 9b 00 00 00    	ja     53c8 <sort_m+0x1a8>
+    532d:	48 8d 3c b9          	lea    (%rcx,%rdi,4),%rdi
+    5331:	48 83 c7 0c          	add    $0xc,%rdi
+    5335:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    533c:	00 00 00 00 
+    dest[i] = source[i];
+    5340:	46 8b 44 8f f4       	mov    -0xc(%rdi,%r9,4),%r8d
+    5345:	46 89 04 88          	mov    %r8d,(%rax,%r9,4)
+    5349:	46 8b 44 8f f8       	mov    -0x8(%rdi,%r9,4),%r8d
+    534e:	46 89 44 88 04       	mov    %r8d,0x4(%rax,%r9,4)
+    5353:	46 8b 44 8f fc       	mov    -0x4(%rdi,%r9,4),%r8d
+    5358:	46 89 44 88 08       	mov    %r8d,0x8(%rax,%r9,4)
+    535d:	46 8b 04 8f          	mov    (%rdi,%r9,4),%r8d
+    5361:	46 89 44 88 0c       	mov    %r8d,0xc(%rax,%r9,4)
+  for (int i = 0 ; i < n ; i++) {
+    5366:	49 83 c1 04          	add    $0x4,%r9
+    536a:	4c 39 ce             	cmp    %r9,%rsi
+    536d:	75 d1                	jne    5340 <sort_m+0x120>
+    536f:	eb 57                	jmp    53c8 <sort_m+0x1a8>
+    5371:	31 f6                	xor    %esi,%esi
+    5373:	44 89 f7             	mov    %r14d,%edi
+    5376:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+    537b:	e9 a0 00 00 00       	jmp    5420 <sort_m+0x200>
+    5380:	4c 8d 0c bd 00 00 00 	lea    0x0(,%rdi,4),%r9
+    5387:	00 
+    5388:	41 89 f0             	mov    %esi,%r8d
+    538b:	41 81 e0 f8 ff ff 7f 	and    $0x7ffffff8,%r8d
+    5392:	49 01 c9             	add    %rcx,%r9
+    5395:	49 83 c1 10          	add    $0x10,%r9
+    5399:	45 31 d2             	xor    %r10d,%r10d
+    539c:	0f 1f 40 00          	nopl   0x0(%rax)
+    dest[i] = source[i];
+    53a0:	43 0f 10 44 91 f0    	movups -0x10(%r9,%r10,4),%xmm0
+    53a6:	43 0f 10 0c 91       	movups (%r9,%r10,4),%xmm1
+    53ab:	42 0f 11 04 90       	movups %xmm0,(%rax,%r10,4)
+    53b0:	42 0f 11 4c 90 10    	movups %xmm1,0x10(%rax,%r10,4)
+  for (int i = 0 ; i < n ; i++) {
+    53b6:	49 83 c2 08          	add    $0x8,%r10
+    53ba:	4d 39 d0             	cmp    %r10,%r8
+    53bd:	75 e1                	jne    53a0 <sort_m+0x180>
+    53bf:	49 39 f0             	cmp    %rsi,%r8
+    53c2:	0f 85 2d ff ff ff    	jne    52f5 <sort_m+0xd5>
+    53c8:	31 f6                	xor    %esi,%esi
+    53ca:	44 89 f7             	mov    %r14d,%edi
+  while (i < n1 && j <= r) {
+    53cd:	44 39 fb             	cmp    %r15d,%ebx
+    53d0:	7d 4e                	jge    5420 <sort_m+0x200>
+    53d2:	31 f6                	xor    %esi,%esi
+    53d4:	44 89 f7             	mov    %r14d,%edi
+    53d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    53de:	00 00 
+    53e0:	41 89 f2             	mov    %esi,%r10d
+    if (left[i] <= A[j]) A[k++] = left[i++];
+    53e3:	89 f6                	mov    %esi,%esi
+    53e5:	44 8b 1c b0          	mov    (%rax,%rsi,4),%r11d
+    53e9:	48 63 f5             	movslq %ebp,%rsi
+    53ec:	44 8b 24 b1          	mov    (%rcx,%rsi,4),%r12d
+    53f0:	45 31 c0             	xor    %r8d,%r8d
+    53f3:	31 f6                	xor    %esi,%esi
+    53f5:	45 39 e3             	cmp    %r12d,%r11d
+    53f8:	41 0f 97 c1          	seta   %r9b
+    53fc:	40 0f 96 c6          	setbe  %sil
+    5400:	45 0f 42 e3          	cmovb  %r11d,%r12d
+    5404:	44 01 d6             	add    %r10d,%esi
+    5407:	44 89 22             	mov    %r12d,(%rdx)
+  while (i < n1 && j <= r) {
+    540a:	ff c7                	inc    %edi
+    540c:	44 39 ee             	cmp    %r13d,%esi
+    540f:	7f 0f                	jg     5420 <sort_m+0x200>
+    5411:	45 88 c8             	mov    %r9b,%r8b
+    5414:	44 01 c5             	add    %r8d,%ebp
+    5417:	48 83 c2 04          	add    $0x4,%rdx
+    541b:	44 39 fd             	cmp    %r15d,%ebp
+    541e:	7e c0                	jle    53e0 <sort_m+0x1c0>
+  while (i < n1) A[k++] = left[i++];
+    5420:	44 39 ee             	cmp    %r13d,%esi
+    5423:	7f 49                	jg     546e <sort_m+0x24e>
+    5425:	48 63 ff             	movslq %edi,%rdi
+    5428:	4c 63 c6             	movslq %esi,%r8
+    542b:	41 01 f6             	add    %esi,%r14d
+    542e:	44 29 f3             	sub    %r14d,%ebx
+    5431:	83 fb 0b             	cmp    $0xb,%ebx
+    5434:	72 11                	jb     5447 <sort_m+0x227>
+    5436:	48 8d 14 b9          	lea    (%rcx,%rdi,4),%rdx
+    543a:	4a 8d 34 80          	lea    (%rax,%r8,4),%rsi
+    543e:	48 29 f2             	sub    %rsi,%rdx
+    5441:	48 83 fa 20          	cmp    $0x20,%rdx
+    5445:	73 40                	jae    5487 <sort_m+0x267>
+    5447:	4c 89 c2             	mov    %r8,%rdx
+    544a:	48 89 fe             	mov    %rdi,%rsi
+    544d:	48 8d 04 90          	lea    (%rax,%rdx,4),%rax
+    5451:	41 29 d5             	sub    %edx,%r13d
+    5454:	41 ff c5             	inc    %r13d
+    5457:	48 8d 0c b1          	lea    (%rcx,%rsi,4),%rcx
+    545b:	31 d2                	xor    %edx,%edx
+    545d:	0f 1f 00             	nopl   (%rax)
+    5460:	8b 34 90             	mov    (%rax,%rdx,4),%esi
+    5463:	89 34 91             	mov    %esi,(%rcx,%rdx,4)
+    5466:	48 ff c2             	inc    %rdx
+    5469:	41 39 d5             	cmp    %edx,%r13d
+    546c:	75 f2                	jne    5460 <sort_m+0x240>
+    546e:	48 8d 7c 24 08       	lea    0x8(%rsp),%rdi
+  mem_free(&left);
+    5473:	e8 58 f0 ff ff       	call   44d0 <mem_free>
+}
+    5478:	48 83 c4 18          	add    $0x18,%rsp
+    547c:	5b                   	pop    %rbx
+    547d:	41 5c                	pop    %r12
+    547f:	41 5d                	pop    %r13
+    5481:	41 5e                	pop    %r14
+    5483:	41 5f                	pop    %r15
+    5485:	5d                   	pop    %rbp
+    5486:	c3                   	ret
+  while (i < n1) A[k++] = left[i++];
+    5487:	48 ff c3             	inc    %rbx
+    548a:	49 89 d9             	mov    %rbx,%r9
+    548d:	49 83 e1 f8          	and    $0xfffffffffffffff8,%r9
+    5491:	4b 8d 14 01          	lea    (%r9,%r8,1),%rdx
+    5495:	49 c1 e0 02          	shl    $0x2,%r8
+    5499:	49 8d 34 39          	lea    (%r9,%rdi,1),%rsi
+    549d:	48 c1 e7 02          	shl    $0x2,%rdi
+    54a1:	48 01 cf             	add    %rcx,%rdi
+    54a4:	48 83 c7 10          	add    $0x10,%rdi
+    54a8:	49 01 c0             	add    %rax,%r8
+    54ab:	49 83 c0 10          	add    $0x10,%r8
+    54af:	45 31 d2             	xor    %r10d,%r10d
+    54b2:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 cs nopw 0x0(%rax,%rax,1)
+    54b9:	1f 84 00 00 00 00 00 
+    54c0:	43 0f 10 44 90 f0    	movups -0x10(%r8,%r10,4),%xmm0
+    54c6:	43 0f 10 0c 90       	movups (%r8,%r10,4),%xmm1
+    54cb:	42 0f 11 44 97 f0    	movups %xmm0,-0x10(%rdi,%r10,4)
+    54d1:	42 0f 11 0c 97       	movups %xmm1,(%rdi,%r10,4)
+    54d6:	49 83 c2 08          	add    $0x8,%r10
+    54da:	4d 39 d1             	cmp    %r10,%r9
+    54dd:	75 e1                	jne    54c0 <sort_m+0x2a0>
+    54df:	4c 39 cb             	cmp    %r9,%rbx
+    54e2:	0f 85 65 ff ff ff    	jne    544d <sort_m+0x22d>
+    54e8:	eb 84                	jmp    546e <sort_m+0x24e>
+
+Disassembly of section .fini:

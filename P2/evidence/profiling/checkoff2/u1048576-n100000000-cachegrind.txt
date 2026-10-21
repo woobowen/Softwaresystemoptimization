@@ -1,0 +1,30 @@
+$ valgrind --tool=cachegrind --cache-sim=yes --branch-sim=yes --cachegrind-out-file=/home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000.cg /home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000
+==31721== Cachegrind, a high-precision tracing profiler
+==31721== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==31721== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==31721== Command: /home/addaswsw/lab/Software_system_optimization/.cache/P2/sum-controls/u1048576-n100000000
+==31721== 
+--31721-- warning: L3 cache found, using its data for the LL simulation.
+Allocated array of size 1048576
+Summing 100000000 random values...
+Done. Value = 92623152
+==31721== 
+==31721== I refs:        3,104,357,858
+==31721== I1  misses:            1,334
+==31721== LLi misses:            1,331
+==31721== I1  miss rate:          0.00%
+==31721== LLi miss rate:          0.00%
+==31721== 
+==31721== D refs:          601,098,709  (400,037,331 rd   + 201,061,378 wr)
+==31721== D1  misses:       98,898,555  ( 98,832,581 rd   +      65,974 wr)
+==31721== LLd misses:           66,947  (      1,053 rd   +      65,894 wr)
+==31721== D1  miss rate:          16.5% (       24.7%     +         0.0%  )
+==31721== LLd miss rate:           0.0% (        0.0%     +         0.0%  )
+==31721== 
+==31721== LL refs:          98,899,889  ( 98,833,915 rd   +      65,974 wr)
+==31721== LL misses:            68,278  (      2,384 rd   +      65,894 wr)
+==31721== LL miss rate:            0.0% (        0.0%     +         0.0%  )
+==31721== 
+==31721== Branches:        201,080,845  (101,080,499 cond + 100,000,346 ind)
+==31721== Mispredicts:           4,196  (      4,017 cond +         179 ind)
+==31721== Mispred rate:            0.0% (        0.0%     +         0.0%   )

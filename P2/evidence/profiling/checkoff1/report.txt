@@ -1,0 +1,17 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 227  of event 'cpu-clock:u'
+# Event count (approx.): 227227227
+#
+# Overhead  Command  Shared Object  Symbol   
+# ........  .......  .............  .........
+#
+   100.00%  isort    isort          [.] isort
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

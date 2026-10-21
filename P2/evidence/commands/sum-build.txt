@@ -1,0 +1,4 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'
+clang -Wall -O1 -DNDEBUG  -c sum.c 
+clang -o sum sum.o -lrt
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'

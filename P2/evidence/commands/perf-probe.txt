@@ -1,0 +1,4 @@
+Sorting 10000 values...
+Done!
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.011 MB .cache/P2/checkoff1-probe.data (227 samples) ]

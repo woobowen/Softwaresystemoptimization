@@ -1,0 +1,14 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/recitation'
+clang -Wall -O0 -g -c isort.c 
+clang -Wall -O0 -g -c qsort.c 
+clang -o isort isort.o qsort.o -lrt
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/recitation'
+Sorting 10000 values...
+Done!
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/recitation'
+clang -Wall -O1 -DNDEBUG  -c sum.c 
+clang -o sum sum.o -lrt
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/.cache/P2/isolated-review/P2/recitation'
+Allocated array of size 10000000
+Summing 100000000 random values...
+Done. Value = 938895920

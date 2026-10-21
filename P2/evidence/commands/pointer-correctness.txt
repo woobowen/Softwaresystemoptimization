@@ -1,0 +1,43 @@
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+
+Running test #1...
+ --> test_zero_element at line 250: PASS
+
+Running test #2...
+ --> test_one_element at line 270: PASS
+
+Running test #3...
+ --> test_subarray at line 317: PASS
+
+Running test #4...
+ --> test_reference at line 374: PASS
+Done testing.
+Using seed: 42
+Generating random array of 4096 elements
+TIME version=sort_a input=random trial=0 seconds=0.000157721
+TIME version=sort_i input=random trial=0 seconds=0.000154600
+TIME version=sort_p input=random trial=0 seconds=0.000158367
+TIME version=sort_a input=random trial=1 seconds=0.000152313
+TIME version=sort_i input=random trial=1 seconds=0.000150214
+TIME version=sort_p input=random trial=1 seconds=0.000156490
+Arrays are sorted: yes
+AVG version=sort_a input=random n=4096 R=2 seconds=0.000155017
+AVG version=sort_i input=random n=4096 R=2 seconds=0.000152407
+AVG version=sort_p input=random n=4096 R=2 seconds=0.000157428
+Generating inverted array of 4096 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.000151578
+TIME version=sort_i input=inverted trial=0 seconds=0.000149960
+TIME version=sort_p input=inverted trial=0 seconds=0.000159616
+TIME version=sort_a input=inverted trial=1 seconds=0.000150260
+TIME version=sort_i input=inverted trial=1 seconds=0.000149343
+TIME version=sort_p input=inverted trial=1 seconds=0.000160320
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=4096 R=2 seconds=0.000150919
+AVG version=sort_i input=inverted n=4096 R=2 seconds=0.000149652
+AVG version=sort_p input=inverted n=4096 R=2 seconds=0.000159968
+Sorting subarray A[66..4029]
+Arrays are sorted: yes
+qsort reference: 828 cases, whole-array comparisons passed

@@ -1,0 +1,6 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'
+rm -f ./sort *.std* *.gcov *.gcda *.gcno default.profraw
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'
+rm -f isort sum *.o *.gcda *.gcno *.gcov perf.data */perf.data cachegrind.out.*
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/recitation'

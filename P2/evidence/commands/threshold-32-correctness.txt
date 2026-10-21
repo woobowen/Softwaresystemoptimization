@@ -1,0 +1,49 @@
+
+Running test #0...
+ --> test_correctness at line 221: PASS
+ --> test_correctness at line 221: PASS
+
+Running test #1...
+ --> test_zero_element at line 250: PASS
+
+Running test #2...
+ --> test_one_element at line 270: PASS
+
+Running test #3...
+ --> test_subarray at line 317: PASS
+
+Running test #4...
+ --> test_reference at line 374: PASS
+Done testing.
+Using seed: 42
+Generating random array of 4096 elements
+TIME version=sort_a input=random trial=0 seconds=0.000155646
+TIME version=sort_i input=random trial=0 seconds=0.000150452
+TIME version=sort_p input=random trial=0 seconds=0.000163153
+TIME version=sort_c input=random trial=0 seconds=0.000105562
+TIME version=sort_a input=random trial=1 seconds=0.000147893
+TIME version=sort_i input=random trial=1 seconds=0.000149983
+TIME version=sort_p input=random trial=1 seconds=0.000191714
+TIME version=sort_c input=random trial=1 seconds=0.000102169
+Arrays are sorted: yes
+AVG version=sort_a input=random n=4096 R=2 seconds=0.000151770
+AVG version=sort_i input=random n=4096 R=2 seconds=0.000150218
+AVG version=sort_p input=random n=4096 R=2 seconds=0.000177434
+AVG version=sort_c input=random n=4096 R=2 seconds=0.000103866
+Generating inverted array of 4096 elements
+TIME version=sort_a input=inverted trial=0 seconds=0.000174767
+TIME version=sort_i input=inverted trial=0 seconds=0.000192874
+TIME version=sort_p input=inverted trial=0 seconds=0.000211349
+TIME version=sort_c input=inverted trial=0 seconds=0.000085334
+TIME version=sort_a input=inverted trial=1 seconds=0.000209429
+TIME version=sort_i input=inverted trial=1 seconds=0.000196715
+TIME version=sort_p input=inverted trial=1 seconds=0.000204337
+TIME version=sort_c input=inverted trial=1 seconds=0.000127055
+Arrays are sorted: yes
+AVG version=sort_a input=inverted n=4096 R=2 seconds=0.000192098
+AVG version=sort_i input=inverted n=4096 R=2 seconds=0.000194795
+AVG version=sort_p input=inverted n=4096 R=2 seconds=0.000207843
+AVG version=sort_c input=inverted n=4096 R=2 seconds=0.000106195
+Sorting subarray A[66..4029]
+Arrays are sorted: yes
+qsort reference: 1104 cases, whole-array comparisons passed

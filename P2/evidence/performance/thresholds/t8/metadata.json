@@ -1,0 +1,17 @@
+{
+  "binary": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-8",
+  "sha256": "bf7edc708a756f5fa6ec93353301ffa2b939fb4d13fef33b3e22974b1aff471d",
+  "versions": [
+    "sort_c"
+  ],
+  "sizes": [
+    4096,
+    65536,
+    1048576
+  ],
+  "seed": 42,
+  "R": 5,
+  "runs": 5,
+  "cpu": 2,
+  "statistic": "median of independent process means; seconds per sort"
+}

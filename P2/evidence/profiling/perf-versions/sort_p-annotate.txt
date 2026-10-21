@@ -1,0 +1,252 @@
+
+Sorted summary for file /home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/final-release-sort
+----------------------------------------------
+
+   74.69 sort_p.c:69
+   12.08 sort_p.c:0
+    3.40 sort_p.c:68
+    1.61 sort_p.c:33
+    1.25 sort_p.c:81
+    0.54 sort_p.c:35
+ Percent |	Source code & Disassembly of final-release-sort for cpu-clock:u (1118 samples, percent: local period)
+---------------------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    0000000000004f70 <sort_recursive_p>:
+         : 6    static inline void copy_p(data_t* source, data_t* dest, int n);
+         :
+         : 8    // A basic merge sort routine that sorts the subarray A[p..r]
+         : 9    static inline void sort_recursive_p(data_t* A, int p, int r) {
+         : 10   assert(A);
+         : 11   if (p < r) {
+    1.61 :   4f70:   cmp    %edx,%esi // sort_p.c:33
+    0.00 :   4f72:   jge    5214 <sort_recursive_p+0x2a4>
+    0.00 :   4f78:   push   %rbp
+    0.00 :   4f79:   push   %r15
+    0.00 :   4f7b:   push   %r14
+    0.00 :   4f7d:   push   %r13
+    0.00 :   4f7f:   push   %r12
+    0.00 :   4f81:   push   %rbx
+    0.00 :   4f82:   sub    $0x18,%rsp
+    0.27 :   4f86:   mov    %edx,%r14d
+    0.00 :   4f89:   mov    %esi,%r12d
+    0.00 :   4f8c:   mov    %rdi,%rbx
+         : 24   int q = (p + r) / 2;
+    0.00 :   4f8f:   lea    (%r14,%r12,1),%eax
+    0.00 :   4f93:   mov    %eax,%r15d
+    0.00 :   4f96:   shr    $0x1f,%r15d
+    0.00 :   4f9a:   add    %eax,%r15d
+    0.00 :   4f9d:   sar    $1,%r15d
+         : 30   sort_recursive_p(A, p, q);
+    0.00 :   4fa0:   mov    %r15d,%edx
+    0.54 :   4fa3:   call   4f70 <sort_recursive_p> // sort_p.c:35
+         : 33   sort_recursive_p(A, q + 1, r);
+    0.09 :   4fa8:   lea    0x1(%r15),%esi
+    0.09 :   4fac:   mov    %rbx,%rdi
+    0.00 :   4faf:   mov    %r14d,%edx
+    0.00 :   4fb2:   call   4f70 <sort_recursive_p>
+         : 38   // Uses two arrays 'left' and 'right' in the merge operation.
+         : 39   static inline void merge_p(data_t* A, int p, int q, int r) {
+         : 40   assert(A);
+         : 41   assert(p <= q);
+         : 42   assert((q + 1) <= r);
+         : 43   int n1 = q - p + 1;
+    0.09 :   4fb7:   mov    %r15d,%ebp
+    0.00 :   4fba:   sub    %r12d,%ebp
+         : 46   int n2 = r - q;
+    0.36 :   4fbd:   mov    %r14d,%r13d
+    0.00 :   4fc0:   sub    %r15d,%r13d
+         :
+         : 50   data_t* left = 0, * right = 0;
+    0.00 :   4fc3:   movq   $0x0,0x10(%rsp)
+    0.00 :   4fcc:   movq   $0x0,0x8(%rsp)
+         : 53   mem_alloc(&left, n1 + 1);
+    0.00 :   4fd5:   lea    0x2(%rbp),%esi
+    0.09 :   4fd8:   lea    0x10(%rsp),%rdi
+    0.00 :   4fdd:   call   44a0 <mem_alloc>
+         : 57   mem_alloc(&right, n2 + 1);
+    0.18 :   4fe2:   lea    0x1(%r13),%esi
+    0.00 :   4fe6:   lea    0x8(%rsp),%rdi
+    0.00 :   4feb:   call   44a0 <mem_alloc>
+         : 61   if (left == NULL || right == NULL) {
+    0.18 :   4ff0:   mov    0x10(%rsp),%rax
+    0.00 :   4ff5:   test   %rax,%rax
+    0.00 :   4ff8:   je     51f2 <sort_recursive_p+0x282>
+    0.00 :   4ffe:   mov    0x8(%rsp),%rcx
+    0.27 :   5003:   test   %rcx,%rcx
+    0.00 :   5006:   je     51f2 <sort_recursive_p+0x282>
+         : 68   int n1 = q - p + 1;
+    0.00 :   500c:   lea    0x1(%rbp),%edi
+         : 70   mem_free(&left);
+         : 71   mem_free(&right);
+         : 72   return;
+         : 73   }
+         :
+         : 75   copy_p(&(A[p]), left, n1);
+    0.00 :   500f:   movslq %r12d,%rdx
+    0.00 :   5012:   lea    (%rbx,%rdx,4),%rsi
+         :
+         : 79   static inline void copy_p(data_t* source, data_t* dest, int n) {
+         : 80   assert(dest);
+         : 81   assert(source);
+         :
+         : 83   data_t* end = source + n;
+    0.00 :   5016:   movslq %edi,%rdi
+         : 85   while (source < end) *dest++ = *source++;
+    0.09 :   5019:   test   %ebp,%ebp
+    0.00 :   501b:   js     50d3 <sort_recursive_p+0x163>
+    0.00 :   5021:   lea    (%rbx,%rdx,4),%r12
+    0.00 :   5025:   lea    (%r12,%rdi,4),%r8
+    0.27 :   5029:   lea    (%rbx,%rdx,4),%r9
+    0.00 :   502d:   add    $0x4,%r9
+    0.00 :   5031:   cmp    %r9,%r8
+    0.00 :   5034:   cmova  %r8,%r9
+    0.18 :   5038:   lea    0x0(,%rdx,4),%r11
+    0.00 :   5040:   mov    %rbx,%r10
+    0.00 :   5043:   not    %r10
+    0.00 :   5046:   add    %r9,%r10
+    0.18 :   5049:   sub    %r11,%r10
+    0.09 :   504c:   mov    %rsi,%r8
+    0.00 :   504f:   mov    %rax,%r9
+    0.00 :   5052:   cmp    $0x3c,%r10
+    0.00 :   5056:   jb     50b2 <sort_recursive_p+0x142>
+    0.00 :   5058:   mov    %rax,%rbp
+    0.00 :   505b:   sub    %r12,%rbp
+    0.00 :   505e:   mov    %rsi,%r8
+    0.00 :   5061:   mov    %rax,%r9
+    0.00 :   5064:   cmp    $0x20,%rbp
+    0.00 :   5068:   jb     50b2 <sort_recursive_p+0x142>
+    0.00 :   506a:   shr    $0x2,%r10
+    0.00 :   506e:   inc    %r10
+    0.00 :   5071:   mov    %r10,%r12
+    0.00 :   5074:   and    $0xfffffffffffffff8,%r12
+    0.00 :   5078:   lea    (%rsi,%r12,4),%r8
+    0.00 :   507c:   lea    (%rax,%r12,4),%r9
+    0.00 :   5080:   add    %rbx,%r11
+    0.00 :   5083:   add    $0x10,%r11
+    0.09 :   5087:   xor    %ebp,%ebp
+    0.00 :   5089:   nopl   0x0(%rax)
+    0.09 :   5090:   movups -0x10(%r11,%rbp,4),%xmm0
+    0.09 :   5096:   movups (%r11,%rbp,4),%xmm1
+    0.45 :   509b:   movups %xmm0,(%rax,%rbp,4)
+    0.00 :   509f:   movups %xmm1,0x10(%rax,%rbp,4)
+    0.09 :   50a4:   add    $0x8,%rbp
+    0.00 :   50a8:   cmp    %rbp,%r12
+    0.00 :   50ab:   jne    5090 <sort_recursive_p+0x120>
+    0.00 :   50ad:   cmp    %r12,%r10
+    0.00 :   50b0:   je     50d3 <sort_recursive_p+0x163>
+    0.00 :   50b2:   lea    (%rsi,%rdi,4),%r10
+    0.18 :   50b6:   cs nopw 0x0(%rax,%rax,1)
+    0.09 :   50c0:   mov    (%r8),%r11d
+    0.09 :   50c3:   add    $0x4,%r8
+    0.09 :   50c7:   mov    %r11d,(%r9)
+    0.00 :   50ca:   add    $0x4,%r9
+    0.00 :   50ce:   cmp    %r10,%r8
+    0.00 :   50d1:   jb     50c0 <sort_recursive_p+0x150>
+         : 136  data_t* end = source + n;
+    0.00 :   50d3:   movslq %r13d,%r9
+    0.00 :   50d6:   movslq %r14d,%r8
+         : 139  while (source < end) *dest++ = *source++;
+    0.00 :   50d9:   test   %r13d,%r13d
+    0.00 :   50dc:   jle    5193 <sort_recursive_p+0x223>
+         : 142  copy_p(&(A[q + 1]), right, n2);
+    0.36 :   50e2:   movslq %r15d,%r12
+    0.00 :   50e5:   lea    (%rbx,%r12,4),%r11
+         : 145  while (source < end) *dest++ = *source++;
+    0.72 :   50e9:   lea    (%rbx,%r12,4),%r10 // sort_p.c:81
+    0.00 :   50ed:   add    $0x8,%r10
+    0.09 :   50f1:   lea    (%rbx,%r8,4),%r15
+    0.00 :   50f5:   add    $0x4,%r15
+    0.00 :   50f9:   cmp    %r15,%r10
+    0.00 :   50fc:   cmova  %r10,%r15
+         : 152  copy_p(&(A[q + 1]), right, n2);
+    0.00 :   5100:   lea    (%rbx,%r12,4),%r10
+    0.27 :   5104:   add    $0x4,%r10
+         : 155  while (source < end) *dest++ = *source++;
+    0.00 :   5108:   sub    %r11,%r15
+    0.00 :   510b:   add    $0xfffffffffffffffb,%r15
+    0.09 :   510f:   mov    %rcx,%r14
+    0.00 :   5112:   cmp    $0x4c,%r15
+    0.00 :   5116:   jb     5172 <sort_recursive_p+0x202>
+    0.00 :   5118:   sub    %r11,%r14
+    0.00 :   511b:   add    $0xfffffffffffffffc,%r14
+    0.00 :   511f:   cmp    $0x20,%r14
+    0.00 :   5123:   jae    512a <sort_recursive_p+0x1ba>
+    0.00 :   5125:   mov    %rcx,%r14
+    0.00 :   5128:   jmp    5172 <sort_recursive_p+0x202>
+    0.00 :   512a:   shl    $0x2,%r12
+    0.00 :   512e:   shr    $0x2,%r15
+    0.00 :   5132:   inc    %r15
+    0.00 :   5135:   mov    %r15,%r13
+    0.00 :   5138:   and    $0xfffffffffffffff8,%r13
+    0.00 :   513c:   lea    (%r10,%r13,4),%r10
+    0.00 :   5140:   lea    (%rcx,%r13,4),%r14
+    0.00 :   5144:   add    %rbx,%r12
+    0.00 :   5147:   add    $0x14,%r12
+    0.00 :   514b:   xor    %ebp,%ebp
+    0.00 :   514d:   nopl   (%rax)
+    0.09 :   5150:   movups -0x10(%r12,%rbp,4),%xmm0
+    0.45 :   5156:   movups (%r12,%rbp,4),%xmm1
+    0.54 :   515b:   movups %xmm0,(%rcx,%rbp,4)
+    0.09 :   515f:   movups %xmm1,0x10(%rcx,%rbp,4)
+    0.09 :   5164:   add    $0x8,%rbp
+    0.09 :   5168:   cmp    %rbp,%r13
+    0.00 :   516b:   jne    5150 <sort_recursive_p+0x1e0>
+    0.00 :   516d:   cmp    %r13,%r15
+    0.00 :   5170:   je     5193 <sort_recursive_p+0x223>
+    0.00 :   5172:   lea    (%r11,%r9,4),%r11
+    0.09 :   5176:   add    $0x4,%r11
+    0.00 :   517a:   nopw   0x0(%rax,%rax,1)
+    0.36 :   5180:   mov    (%r10),%ebp
+    0.09 :   5183:   add    $0x4,%r10
+    0.00 :   5187:   mov    %ebp,(%r14)
+    0.09 :   518a:   add    $0x4,%r14
+    0.00 :   518e:   cmp    %r11,%r10
+    0.00 :   5191:   jb     5180 <sort_recursive_p+0x210>
+         : 196  left[n1] = UINT_MAX;
+    0.09 :   5193:   movl   $0xffffffff,(%rax,%rdi,4)
+         : 198  right[n2] = UINT_MAX;
+    0.00 :   519a:   movl   $0xffffffff,(%rcx,%r9,4)
+         : 200  data_t* end = A + r + 1;
+    0.00 :   51a2:   lea    (%rbx,%r8,4),%rdi
+    0.09 :   51a6:   add    $0x4,%rdi
+         : 203  while (out < end) {
+    0.00 :   51aa:   cmp    %rdi,%rsi
+    0.00 :   51ad:   jae    51f2 <sort_recursive_p+0x282>
+    0.00 :   51af:   lea    (%rbx,%r8,4),%rsi
+    0.00 :   51b3:   lea    (%rbx,%rdx,4),%rdx
+    0.00 :   51b7:   add    $0xfffffffffffffffc,%rdx
+    0.00 :   51bb:   nopl   0x0(%rax,%rax,1)
+         : 210  if (*l <= *right_pos) *out++ = *l++;
+    0.00 :   51c0:   mov    (%rax),%edi
+   33.63 :   51c2:   mov    (%rcx),%r8d // sort_p.c:69
+    1.52 :   51c5:   xor    %r9d,%r9d
+    0.09 :   51c8:   xor    %r10d,%r10d
+    0.00 :   51cb:   cmp    %r8d,%edi
+    3.58 :   51ce:   cmovb  %edi,%r8d
+   10.47 :   51d2:   mov    %r8d,0x4(%rdx) // sort_p.c:0
+   20.66 :   51d6:   lea    0x4(%rdx),%rdi // sort_p.c:69
+    0.00 :   51da:   seta   %r9b
+    2.50 :   51de:   setbe  %r10b
+    1.79 :   51e2:   lea    (%rax,%r10,4),%rax
+   11.00 :   51e6:   lea    (%rcx,%r9,4),%rcx
+    1.07 :   51ea:   mov    %rdi,%rdx // sort_p.c:0
+         : 224  while (out < end) {
+    3.40 :   51ed:   cmp    %rsi,%rdi // sort_p.c:68
+    0.00 :   51f0:   jb     51c0 <sort_recursive_p+0x250>
+    0.00 :   51f2:   lea    0x10(%rsp),%rdi
+    0.00 :   51f7:   call   44d0 <mem_free>
+    0.00 :   51fc:   lea    0x8(%rsp),%rdi
+    0.54 :   5201:   call   44d0 <mem_free> // sort_p.c:0
+    0.00 :   5206:   add    $0x18,%rsp
+    0.18 :   520a:   pop    %rbx
+    0.00 :   520b:   pop    %r12
+    0.00 :   520d:   pop    %r13
+    0.00 :   520f:   pop    %r14
+    0.09 :   5211:   pop    %r15
+    0.00 :   5213:   pop    %rbp
+         : 238  }
+    0.00 :   5214:   ret

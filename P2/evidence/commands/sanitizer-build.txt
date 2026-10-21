@@ -1,0 +1,3 @@
+make: Entering directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'
+clang main.c tests.c util.c isort.c sort_a.c sort_c.c sort_i.c sort_p.c sort_m.c sort_f.c -O1 -DNDEBUG -g -Wall -std=gnu99 -fno-omit-frame-pointer -fsanitize=address,undefined -fno-sanitize-recover=all -lrt -lm -fsanitize=address,undefined -o sort
+make: Leaving directory '/home/addaswsw/lab/Software_system_optimization/P2/homework'

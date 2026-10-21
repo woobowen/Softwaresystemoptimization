@@ -1,0 +1,82 @@
+[
+  {
+    "batch": "all-versions",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "sha256": "dd5ad4c03b1e14ee34ec8e5dd4c4c5109fb92d2521199bc95702fc8c9fcf5ba7",
+    "retained_matches": [
+      ".cache/P2/builds/final-release-sort"
+    ]
+  },
+  {
+    "batch": "inline",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "sha256": "7b6eaca3379fe858b36738ce2a8393cf46852a21f3137a62024ab01cf89f4371",
+    "retained_matches": [
+      ".cache/P2/builds/inline-sort-recovered"
+    ]
+  },
+  {
+    "batch": "pre-coarsening",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/P2/homework/sort",
+    "sha256": "5cdf52f1c2bebe9e62797980a56a4c52976d1822fb63f242de4ba053e84086b2",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-release-sort"
+    ]
+  },
+  {
+    "batch": "recursive-noinline",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/recursive-noinline-sort",
+    "sha256": "a0e255b40d7b2504e284128dfe7beaf32a3600bbaa40e53ccec5d09a6ca990ad",
+    "retained_matches": [
+      ".cache/P2/builds/recursive-noinline-sort"
+    ]
+  },
+  {
+    "batch": "thresholds/t16",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-16",
+    "sha256": "a1a6687163cd86a0c939b3a5f0c3bcfdeaf76eb23f4cbee27055b5b7e88f7327",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-16"
+    ]
+  },
+  {
+    "batch": "thresholds/t32",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-32",
+    "sha256": "d561d4d3f8f99d75c8a3b68a0766ce34de9c6fdb68cbf3ac5b02a6d1b4350277",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-32"
+    ]
+  },
+  {
+    "batch": "thresholds/t64",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-64",
+    "sha256": "8c989e9f4c8b98da859985673f947e3d5ace25e471ce41127e51602bff0cb8f5",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-64"
+    ]
+  },
+  {
+    "batch": "thresholds/t8",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/threshold-builds/sort-8",
+    "sha256": "bf7edc708a756f5fa6ec93353301ffa2b939fb4d13fef33b3e22974b1aff471d",
+    "retained_matches": [
+      ".cache/P2/threshold-builds/sort-8"
+    ]
+  },
+  {
+    "batch": "writeup1-debug",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-debug-sort",
+    "sha256": "2d95b1502aa473f087405c45cdc80c8982d240e9c54449e460be5a20ad115fdc",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-debug-sort"
+    ]
+  },
+  {
+    "batch": "writeup1-release",
+    "recorded_path": "/home/addaswsw/lab/Software_system_optimization/.cache/P2/builds/writeup1-release-sort",
+    "sha256": "5cdf52f1c2bebe9e62797980a56a4c52976d1822fb63f242de4ba053e84086b2",
+    "retained_matches": [
+      ".cache/P2/builds/writeup1-release-sort"
+    ]
+  }
+]
