@@ -1,0 +1,23 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                           aten::matmul         0.91%      36.389us        88.07%       3.536ms     176.822us       0.000us         0.00%      99.296us       4.965us            20  
+                                               aten::mm        81.71%       3.281ms        87.17%       3.500ms     175.003us      99.296us        72.60%      99.296us       4.965us            20  
+                                       cudaLaunchKernel         8.67%     348.094us         8.67%     348.094us       6.962us       0.000us         0.00%       0.000us       0.000us            50  
+                                              aten::div         3.55%     142.507us         5.44%     218.366us      21.837us      13.822us        10.11%      13.822us       1.382us            10  
+                                          aten::softmax         0.59%      23.827us         4.50%     180.500us      18.050us       0.000us         0.00%      23.649us       2.365us            10  
+                                         aten::_softmax         2.26%      90.923us         3.90%     156.673us      15.667us      23.649us        17.29%      23.649us       2.365us            10  
+                                          aten::numpy_T         0.34%      13.717us         1.80%      72.303us       7.230us       0.000us         0.00%       0.000us       0.000us            10  
+                                          aten::permute         1.04%      41.575us         1.46%      58.586us       5.859us       0.000us         0.00%       0.000us       0.000us            10  
+                                       aten::as_strided         0.42%      17.011us         0.42%      17.011us       1.701us       0.000us         0.00%       0.000us       0.000us            10  
+          cudaOccupancyMaxActiveBlocksPerMultiprocessor         0.31%      12.613us         0.31%      12.613us       1.261us       0.000us         0.00%       0.000us       0.000us            10  
+                                  cudaDeviceSynchronize         0.19%       7.667us         0.19%       7.667us       3.834us       0.000us         0.00%       0.000us       0.000us             2  
+                        ampere_sgemm_32x32_sliced1x4_tn         0.00%       0.000us         0.00%       0.000us       0.000us      42.401us        31.00%      42.401us       4.240us            10  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.822us        10.11%      13.822us       1.382us            10  
+void (anonymous namespace)::softmax_warp_forward<flo...         0.00%       0.000us         0.00%       0.000us       0.000us      23.649us        17.29%      23.649us       2.365us            10  
+                        ampere_sgemm_64x32_sliced1x4_nn         0.00%       0.000us         0.00%       0.000us       0.000us      42.080us        30.77%      42.080us       4.208us            10  
+void cublasLt::splitKreduce_kernel<32, 16, int, floa...         0.00%       0.000us         0.00%       0.000us       0.000us      14.815us        10.83%      14.815us       1.482us            10  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.015ms
+Self CUDA time total: 136.767us
+

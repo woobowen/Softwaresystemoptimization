@@ -1,0 +1,251 @@
+/data/bwwu/envs/tiger/bin/python -B scripts/profile_workload.py attention --length 512 --threads 1 --output-dir evidence/attention 
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                           aten::matmul         0.91%      36.389us        88.07%       3.536ms     176.822us       0.000us         0.00%      99.296us       4.965us            20  
+                                               aten::mm        81.71%       3.281ms        87.17%       3.500ms     175.003us      99.296us        72.60%      99.296us       4.965us            20  
+                                       cudaLaunchKernel         8.67%     348.094us         8.67%     348.094us       6.962us       0.000us         0.00%       0.000us       0.000us            50  
+                                              aten::div         3.55%     142.507us         5.44%     218.366us      21.837us      13.822us        10.11%      13.822us       1.382us            10  
+                                          aten::softmax         0.59%      23.827us         4.50%     180.500us      18.050us       0.000us         0.00%      23.649us       2.365us            10  
+                                         aten::_softmax         2.26%      90.923us         3.90%     156.673us      15.667us      23.649us        17.29%      23.649us       2.365us            10  
+                                          aten::numpy_T         0.34%      13.717us         1.80%      72.303us       7.230us       0.000us         0.00%       0.000us       0.000us            10  
+                                          aten::permute         1.04%      41.575us         1.46%      58.586us       5.859us       0.000us         0.00%       0.000us       0.000us            10  
+                                       aten::as_strided         0.42%      17.011us         0.42%      17.011us       1.701us       0.000us         0.00%       0.000us       0.000us            10  
+          cudaOccupancyMaxActiveBlocksPerMultiprocessor         0.31%      12.613us         0.31%      12.613us       1.261us       0.000us         0.00%       0.000us       0.000us            10  
+                                  cudaDeviceSynchronize         0.19%       7.667us         0.19%       7.667us       3.834us       0.000us         0.00%       0.000us       0.000us             2  
+                        ampere_sgemm_32x32_sliced1x4_tn         0.00%       0.000us         0.00%       0.000us       0.000us      42.401us        31.00%      42.401us       4.240us            10  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.822us        10.11%      13.822us       1.382us            10  
+void (anonymous namespace)::softmax_warp_forward<flo...         0.00%       0.000us         0.00%       0.000us       0.000us      23.649us        17.29%      23.649us       2.365us            10  
+                        ampere_sgemm_64x32_sliced1x4_nn         0.00%       0.000us         0.00%       0.000us       0.000us      42.080us        30.77%      42.080us       4.208us            10  
+void cublasLt::splitKreduce_kernel<32, 16, int, floa...         0.00%       0.000us         0.00%       0.000us       0.000us      14.815us        10.83%      14.815us       1.482us            10  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.015ms
+Self CUDA time total: 136.767us
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                           aten::matmul         0.91%      36.389us        88.07%       3.536ms     176.822us       0.000us         0.00%      99.296us       4.965us            20  
+                                               aten::mm        81.71%       3.281ms        87.17%       3.500ms     175.003us      99.296us        72.60%      99.296us       4.965us            20  
+                        ampere_sgemm_32x32_sliced1x4_tn         0.00%       0.000us         0.00%       0.000us       0.000us      42.401us        31.00%      42.401us       4.240us            10  
+                        ampere_sgemm_64x32_sliced1x4_nn         0.00%       0.000us         0.00%       0.000us       0.000us      42.080us        30.77%      42.080us       4.208us            10  
+                                          aten::softmax         0.59%      23.827us         4.50%     180.500us      18.050us       0.000us         0.00%      23.649us       2.365us            10  
+                                         aten::_softmax         2.26%      90.923us         3.90%     156.673us      15.667us      23.649us        17.29%      23.649us       2.365us            10  
+void (anonymous namespace)::softmax_warp_forward<flo...         0.00%       0.000us         0.00%       0.000us       0.000us      23.649us        17.29%      23.649us       2.365us            10  
+void cublasLt::splitKreduce_kernel<32, 16, int, floa...         0.00%       0.000us         0.00%       0.000us       0.000us      14.815us        10.83%      14.815us       1.482us            10  
+                                              aten::div         3.55%     142.507us         5.44%     218.366us      21.837us      13.822us        10.11%      13.822us       1.382us            10  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.822us        10.11%      13.822us       1.382us            10  
+                                          aten::numpy_T         0.34%      13.717us         1.80%      72.303us       7.230us       0.000us         0.00%       0.000us       0.000us            10  
+                                          aten::permute         1.04%      41.575us         1.46%      58.586us       5.859us       0.000us         0.00%       0.000us       0.000us            10  
+                                       aten::as_strided         0.42%      17.011us         0.42%      17.011us       1.701us       0.000us         0.00%       0.000us       0.000us            10  
+                                       cudaLaunchKernel         8.67%     348.094us         8.67%     348.094us       6.962us       0.000us         0.00%       0.000us       0.000us            50  
+          cudaOccupancyMaxActiveBlocksPerMultiprocessor         0.31%      12.613us         0.31%      12.613us       1.261us       0.000us         0.00%       0.000us       0.000us            10  
+                                  cudaDeviceSynchronize         0.19%       7.667us         0.19%       7.667us       3.834us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.015ms
+Self CUDA time total: 136.767us
+
+{
+  "recorded_utc": "2026-11-04T18:26:23.721079+00:00",
+  "experiment": "attention",
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/bwwu/lab/SSO_A3",
+  "torch": "2.6.0+cu124",
+  "cpu_threads": 1,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "float32_matmul_precision": "highest",
+  "cuda_matmul_allow_tf32": false,
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+  "cuda_runtime": "12.4",
+  "shapes": [
+    [
+      512,
+      64
+    ],
+    [
+      512,
+      64
+    ],
+    [
+      512,
+      64
+    ]
+  ],
+  "reference": "CPU FP64 explicit attention from the same FP32 inputs",
+  "input_sha256": [
+    "287df8aa5daea39930d2662c904f283c01579084b6b734ab351d2f13e31333ba",
+    "20ce55de7bd95343bbe69b30dcd0b88b10ba0f1cd212c1e0e00d6a2043c66fb5",
+    "8caf8d96f30d894c61536d6dfdfc28f88b35dde9419bf5fcb5f5acf17e1442b5"
+  ],
+  "calls": 10,
+  "preflight_complete_call_ms": 139.322054,
+  "max_abs_error": 9.548104901169197e-08,
+  "max_relative_error_floor_1e_6": 0.001226238632610624,
+  "with_stack": true,
+  "synchronized_complete_call_ms": [
+    0.2223,
+    0.12778,
+    0.114408,
+    0.110686,
+    0.109035
+  ],
+  "synchronized_complete_call_median_ms": 0.114408,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}
+Filtered CPU top3: [
+  {
+    "name": "aten::matmul",
+    "count": 20,
+    "cpu_total_us": 3536.4489999999996,
+    "self_cpu_us": 36.38900000000103,
+    "cpu_avg_us": 176.82244999999998,
+    "device_total_us": 99.29599999999982,
+    "self_device_us": 0.0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::mm",
+    "count": 20,
+    "cpu_total_us": 3500.0599999999986,
+    "self_cpu_us": 3280.961999999999,
+    "cpu_avg_us": 175.00299999999993,
+    "device_total_us": 99.29599999999982,
+    "self_device_us": 99.29599999999982,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::div",
+    "count": 10,
+    "cpu_total_us": 218.36599999999999,
+    "self_cpu_us": 142.5069999999978,
+    "cpu_avg_us": 21.836599999999997,
+    "device_total_us": 13.822000000000571,
+    "self_device_us": 13.822000000000571,
+    "device_type": "DeviceType.CPU"
+  }
+]
+Filtered GPU top3: [
+  {
+    "name": "aten::matmul",
+    "count": 20,
+    "cpu_total_us": 3536.4489999999996,
+    "self_cpu_us": 36.38900000000103,
+    "cpu_avg_us": 176.82244999999998,
+    "device_total_us": 99.29599999999982,
+    "self_device_us": 0.0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::mm",
+    "count": 20,
+    "cpu_total_us": 3500.0599999999986,
+    "self_cpu_us": 3280.961999999999,
+    "cpu_avg_us": 175.00299999999993,
+    "device_total_us": 99.29599999999982,
+    "self_device_us": 99.29599999999982,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::softmax",
+    "count": 10,
+    "cpu_total_us": 180.49999999999955,
+    "self_cpu_us": 23.82699999999886,
+    "cpu_avg_us": 18.049999999999955,
+    "device_total_us": 23.648999999999887,
+    "self_device_us": 0.0,
+    "device_type": "DeviceType.CPU"
+  }
+]
+GPU kernel us / complete call: 13.676699999999997

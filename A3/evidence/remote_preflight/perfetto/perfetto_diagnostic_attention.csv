@@ -1,0 +1,12 @@
+"name","category","depth","track_id","type","track_name"
+
+"exp_calls","exp_total_ns","exp_average_ns","exp_average_seconds"
+0,"[NULL]","[NULL]","0.000000000000"
+
+"category","count","min_dur_ns"
+"cpu_op",10,7581
+"kernel",4,1216
+"python_function",322,30
+
+"kernel_flow_edges"
+4

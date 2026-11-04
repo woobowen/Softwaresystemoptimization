@@ -1,0 +1,12 @@
+--- preflight_smoke.initial.py
++++ preflight_smoke.py
+@@ -56,6 +56,9 @@
+     if cuda:
+         activities.append(torch.profiler.ProfilerActivity.CUDA)
+         torch.cuda.synchronize()
++    # Initialize lazy profiler imports before collecting Python call frames.
++    with torch.profiler.profile(activities=activities, with_stack=False):
++        pass
+     # Every function has already run outside the profiler, including Triton JIT.
+     with torch.profiler.profile(activities=activities, with_stack=True,
+                                 record_shapes=True) as prof:

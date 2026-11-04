@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/__init__.py", line 8, in <module>
+    from .runtime import (
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/runtime/__init__.py", line 1, in <module>
+    from .autotuner import (Autotuner, Config, Heuristics, autotune, heuristics)
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/runtime/autotuner.py", line 9, in <module>
+    from .jit import KernelInterface
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/runtime/jit.py", line 12, in <module>
+    from ..runtime.driver import driver
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/runtime/driver.py", line 1, in <module>
+    from ..backends import backends
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/__init__.py", line 50, in <module>
+    backends = _discover_backends()
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/__init__.py", line 44, in _discover_backends
+    driver = _load_module(name, os.path.join(root, name, 'driver.py'))
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/__init__.py", line 12, in _load_module
+    spec.loader.exec_module(module)
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/driver.py", line 7, in <module>
+    from triton.runtime.build import _build
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/runtime/build.py", line 8, in <module>
+    import setuptools
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/setuptools/__init__.py", line 21, in <module>
+    import _distutils_hack.override  # noqa: F401
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/_distutils_hack/override.py", line 1, in <module>
+    __import__('_distutils_hack').do_override()
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/_distutils_hack/__init__.py", line 89, in do_override
+    ensure_local_distutils()
+  File "/data/bwwu/envs/tiger/lib/python3.10/site-packages/_distutils_hack/__init__.py", line 76, in ensure_local_distutils
+    assert '_distutils' in core.__file__, core.__file__
+AssertionError: /data/bwwu/envs/tiger/lib/python3.10/distutils/core.py

@@ -1,0 +1,12 @@
+# Local working copies; complete lossless compressed traces are published.
+/evidence/cpu/*.trace.json
+/evidence/gpu/*.trace.json
+/evidence/online/*.trace.json
+/evidence/attention/*.trace.json
+
+# Historical transfer archive duplicates remote_preflight/remote/.
+/evidence/remote_preflight/remote_results.tar.gz
+
+# Original historical diagnostics remain local; lossless copies are published.
+/evidence/remote_preflight/remote/logs/cpu_initial.trace.json
+/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.trace.json

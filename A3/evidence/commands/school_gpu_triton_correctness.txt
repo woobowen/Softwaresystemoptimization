@@ -1,0 +1,69 @@
+/data/bwwu/envs/tiger/bin/python -B scripts/check_triton.py --output evidence/correctness/school_triton.json 
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmpeu75z2hp/main.c:5:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmpeu75z2hp/main.c:1:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmprbx5xynr/main.c:4:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmprbx5xynr/main.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmpaaypgzeu/main.c:4:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmpaaypgzeu/main.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmp3tu4k0cb/main.c:4:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmp3tu4k0cb/main.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmpfv6iujp_/main.c:4:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmpfv6iujp_/main.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+{"implementation": "triton", "case": "random_small", "shape": [3, 7], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 5.960464477539063e-08, "max_relative_error_floor_1e_6": 1.1424643986401861e-07, "max_row_sum_error": 1.1920928955078125e-07, "status": "PASS"}
+{"implementation": "triton", "case": "random_non_power_of_two", "shape": [4, 129], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 3.725290298461914e-09, "max_relative_error_floor_1e_6": 2.7334701258041605e-07, "max_row_sum_error": 0.0, "status": "PASS"}
+{"implementation": "triton", "case": "single_element", "shape": [1, 1], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 0.0, "max_relative_error_floor_1e_6": 0.0, "max_row_sum_error": 0.0, "status": "PASS"}
+{"implementation": "triton", "case": "single_row", "shape": [1, 13], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 7.450580596923828e-09, "max_relative_error_floor_1e_6": 1.1251816545154725e-07, "max_row_sum_error": 5.960464477539063e-08, "status": "PASS"}
+{"implementation": "triton", "case": "single_column", "shape": [7, 1], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 0.0, "max_relative_error_floor_1e_6": 0.0, "max_row_sum_error": 0.0, "status": "PASS"}
+{"implementation": "triton", "case": "equal_elements_per_row", "shape": [4, 37], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 1.862645149230957e-09, "max_relative_error_floor_1e_6": 6.891787052154541e-08, "max_row_sum_error": 5.960464477539063e-08, "status": "PASS"}
+{"implementation": "triton", "case": "large_positive_negative", "shape": [3, 5], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 5.960464477539063e-08, "max_relative_error_floor_1e_6": 8.959858632806572e-08, "max_row_sum_error": 0.0, "status": "PASS"}
+{"implementation": "triton", "case": "formal_100x5000", "shape": [100, 5000], "dtype": "torch.float32", "device": "cuda:0", "shape_ok": true, "dtype_ok": true, "device_ok": true, "finite": true, "row_sums_ok": true, "matches_reference": true, "max_abs_error": 1.862645149230957e-09, "max_relative_error_floor_1e_6": 6.255465336835186e-07, "max_row_sum_error": 2.384185791015625e-07, "status": "PASS"}

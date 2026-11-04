@@ -1,0 +1,250 @@
+{
+  "calls": 10,
+  "device_time_field": "device_time_total",
+  "profiler_self_cpu_total_us": 4015.285,
+  "cpu_top3": [
+    {
+      "name": "aten::matmul",
+      "count": 20,
+      "cpu_total_us": 3536.4489999999996,
+      "self_cpu_us": 36.38900000000103,
+      "cpu_avg_us": 176.82244999999998,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 0.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::mm",
+      "count": 20,
+      "cpu_total_us": 3500.0599999999986,
+      "self_cpu_us": 3280.961999999999,
+      "cpu_avg_us": 175.00299999999993,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 99.29599999999982,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::div",
+      "count": 10,
+      "cpu_total_us": 218.36599999999999,
+      "self_cpu_us": 142.5069999999978,
+      "cpu_avg_us": 21.836599999999997,
+      "device_total_us": 13.822000000000571,
+      "self_device_us": 13.822000000000571,
+      "device_type": "DeviceType.CPU"
+    }
+  ],
+  "device_top3": [
+    {
+      "name": "aten::matmul",
+      "count": 20,
+      "cpu_total_us": 3536.4489999999996,
+      "self_cpu_us": 36.38900000000103,
+      "cpu_avg_us": 176.82244999999998,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 0.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::mm",
+      "count": 20,
+      "cpu_total_us": 3500.0599999999986,
+      "self_cpu_us": 3280.961999999999,
+      "cpu_avg_us": 175.00299999999993,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 99.29599999999982,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::softmax",
+      "count": 10,
+      "cpu_total_us": 180.49999999999955,
+      "self_cpu_us": 23.82699999999886,
+      "cpu_avg_us": 18.049999999999955,
+      "device_total_us": 23.648999999999887,
+      "self_device_us": 0.0,
+      "device_type": "DeviceType.CPU"
+    }
+  ],
+  "gpu_kernel_count": 50,
+  "gpu_kernel_names": {
+    "ampere_sgemm_32x32_sliced1x4_tn": 10,
+    "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)": 10,
+    "void (anonymous namespace)::softmax_warp_forward<float, float, float, 9, false, false>(float*, float const*, int, int, int, bool const*, int, bool)": 10,
+    "ampere_sgemm_64x32_sliced1x4_nn": 10,
+    "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, true, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*)": 10
+  },
+  "gpu_kernel_total_us": 136.76699999999997,
+  "gpu_kernel_us_per_complete_call": 13.676699999999997,
+  "trace_categories": {
+    "cpu_op": 100,
+    "python_function": 160,
+    "kernel": 50,
+    "ac2g": 112,
+    "cuda_runtime": 62,
+    "": 60,
+    "Trace": 1
+  },
+  "rows": [
+    {
+      "name": "aten::numpy_T",
+      "count": 10,
+      "cpu_total_us": 72.30300000000022,
+      "self_cpu_us": 13.717000000000382,
+      "cpu_avg_us": 7.230300000000023,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::permute",
+      "count": 10,
+      "cpu_total_us": 58.58599999999984,
+      "self_cpu_us": 41.57499999999996,
+      "cpu_avg_us": 5.858599999999984,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::as_strided",
+      "count": 10,
+      "cpu_total_us": 17.010999999999882,
+      "self_cpu_us": 17.010999999999882,
+      "cpu_avg_us": 1.7010999999999883,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::matmul",
+      "count": 20,
+      "cpu_total_us": 3536.4489999999996,
+      "self_cpu_us": 36.38900000000103,
+      "cpu_avg_us": 176.82244999999998,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 0.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::mm",
+      "count": 20,
+      "cpu_total_us": 3500.0599999999986,
+      "self_cpu_us": 3280.961999999999,
+      "cpu_avg_us": 175.00299999999993,
+      "device_total_us": 99.29599999999982,
+      "self_device_us": 99.29599999999982,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "cudaLaunchKernel",
+      "count": 50,
+      "cpu_total_us": 348.0940000000005,
+      "self_cpu_us": 348.0940000000005,
+      "cpu_avg_us": 6.9618800000000105,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "ampere_sgemm_32x32_sliced1x4_tn",
+      "count": 10,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 42.40100000000075,
+      "self_device_us": 42.40100000000075,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::div",
+      "count": 10,
+      "cpu_total_us": 218.36599999999999,
+      "self_cpu_us": 142.5069999999978,
+      "cpu_avg_us": 21.836599999999997,
+      "device_total_us": 13.822000000000571,
+      "self_device_us": 13.822000000000571,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+      "count": 10,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 13.822000000000571,
+      "self_device_us": 13.822000000000571,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::softmax",
+      "count": 10,
+      "cpu_total_us": 180.49999999999955,
+      "self_cpu_us": 23.82699999999886,
+      "cpu_avg_us": 18.049999999999955,
+      "device_total_us": 23.648999999999887,
+      "self_device_us": 0.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::_softmax",
+      "count": 10,
+      "cpu_total_us": 156.67300000000068,
+      "self_cpu_us": 90.9230000000016,
+      "cpu_avg_us": 15.667300000000068,
+      "device_total_us": 23.648999999999887,
+      "self_device_us": 23.648999999999887,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void (anonymous namespace)::softmax_warp_forward<float, float, float, 9, false, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+      "count": 10,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 23.648999999999887,
+      "self_device_us": 23.648999999999887,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "cudaOccupancyMaxActiveBlocksPerMultiprocessor",
+      "count": 10,
+      "cpu_total_us": 12.613000000000284,
+      "self_cpu_us": 12.613000000000284,
+      "cpu_avg_us": 1.2613000000000283,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "ampere_sgemm_64x32_sliced1x4_nn",
+      "count": 10,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 42.07999999999856,
+      "self_device_us": 42.07999999999856,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, float, true, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*)",
+      "count": 10,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 14.81500000000051,
+      "self_device_us": 14.81500000000051,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "cudaDeviceSynchronize",
+      "count": 2,
+      "cpu_total_us": 7.667000000000371,
+      "self_cpu_us": 7.667000000000371,
+      "cpu_avg_us": 3.8335000000001855,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    }
+  ]
+}

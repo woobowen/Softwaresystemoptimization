@@ -1,0 +1,29 @@
+0
+    "cpu_avg_us": 13.185020497950445,
+    "device_total_us": 10634.145999995264,
+    "self_device_us": 10634.145999995264,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::maximum",
+    "count": 5000,
+    "cpu_total_us": 84432.34600000117,
+    "self_cpu_us": 49299.34700000396,
+    "cpu_avg_us": 16.886469200000235,
+    "device_total_us": 7088.191000000672,
+    "self_device_us": 7086.783000000618,
+    "device_type": "DeviceType.CPU"
+  }
+]
+GPU kernel us / complete call: 39184.87999999035
+END UTC: 2026-11-04T18:24:50+00:00
+online.trace.json 59828254 bytes
+online_naive.trace.json 20423 bytes
+online_naive.device_table.txt 3824 bytes
+online.device_table.txt 5806 bytes
+online_naive.statistics.json 10243 bytes
+online_naive.metadata.json 2213 bytes
+online.metadata.json 2222 bytes
+online.cpu_table.txt 5806 bytes
+online.statistics.json 15489 bytes
+online_naive.cpu_table.txt 3824 bytes

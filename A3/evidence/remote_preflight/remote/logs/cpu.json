@@ -1,0 +1,57 @@
+{
+  "stage": "cpu",
+  "utc": "2026-11-04T17:32:33.038742+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "correctness": {
+    "shape": [
+      4,
+      127
+    ],
+    "dtype": "torch.float32",
+    "max_abs_error": 3.725290298461914e-09,
+    "finite": true,
+    "row_sum_max_abs_error": 1.1920928955078125e-07
+  },
+  "profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/cpu_naive.trace.json",
+    "trace_bytes": 72009,
+    "aten_events": [
+      "aten::as_strided",
+      "aten::as_strided_",
+      "aten::div",
+      "aten::exp",
+      "aten::fill_",
+      "aten::max",
+      "aten::slice",
+      "aten::squeeze_",
+      "aten::sub",
+      "aten::sum",
+      "aten::unsqueeze",
+      "aten::unsqueeze_"
+    ],
+    "profiler_cuda_events": 0,
+    "profiler_cuda_duration_us": 0,
+    "trace_kernel_events": 0,
+    "trace_kernel_duration_us": 0,
+    "kernel_names": [],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 237,
+    "python_function_examples": [
+      "preflight_smoke.py(13): naive_softmax"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 23,
+      "python_function": 237,
+      "": 10,
+      "Trace": 1
+    }
+  },
+  "result": "PASS"
+}

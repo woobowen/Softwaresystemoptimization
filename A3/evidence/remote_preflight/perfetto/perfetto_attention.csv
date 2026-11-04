@@ -1,0 +1,61 @@
+"AVG(dur) / 1e9"
+"[NULL]"
+
+"category","event_count","duration_ns"
+"[NULL]",2,0
+"Trace",1,4863032
+"cpu_op",10,7204431
+"cuda_runtime",6,96764
+"gpu_user_annotation",1,226082
+"kernel",4,6368
+"python_function",322,26585866
+"user_annotation",1,4133237
+
+"name","ts","dur"
+"void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",2956530181836167,2048
+"void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",2956530181929991,1216
+"void (anonymous namespace)::softmax_warp_forward<float, float, float, 4, false, false>(float*, float const*, int, int, int, bool const*, int, bool)",2956530182005063,1248
+"void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",2956530182060391,1856
+
+"launch_name","kernel_name","launch_ts_ns","kernel_ts_ns","kernel_dur_ns"
+"cudaLaunchKernel","void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",2956530181801146,2956530181836167,2048
+"cudaLaunchKernel","void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",2956530181912938,2956530181929991,1216
+"cudaLaunchKernel","void (anonymous namespace)::softmax_warp_forward<float, float, float, 4, false, false>(float*, float const*, int, int, int, bool const*, int, bool)",2956530181992977,2956530182005063,1248
+"cudaLaunchKernel","void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",2956530182050461,2956530182060391,1856
+
+"leaf_id","level","name","category"
+171,0,"cudaLaunchKernel","cuda_runtime"
+171,1,"aten::mm","cpu_op"
+171,2,"aten::matmul","cpu_op"
+171,3,"preflight_smoke.py(35): attention","python_function"
+171,4,"preflight_smoke.py(196): <lambda>","python_function"
+171,5,"preflight_smoke.py(63): profile_once","python_function"
+171,6,"preflight_smoke.py(196): main","python_function"
+171,7,"preflight_smoke.py(217): <module>","python_function"
+175,0,"cudaLaunchKernel","cuda_runtime"
+175,1,"aten::div","cpu_op"
+175,2,"preflight_smoke.py(35): attention","python_function"
+175,3,"preflight_smoke.py(196): <lambda>","python_function"
+175,4,"preflight_smoke.py(63): profile_once","python_function"
+175,5,"preflight_smoke.py(196): main","python_function"
+175,6,"preflight_smoke.py(217): <module>","python_function"
+180,0,"cudaLaunchKernel","cuda_runtime"
+180,1,"aten::_softmax","cpu_op"
+180,2,"aten::softmax","cpu_op"
+180,3,"<built-in method softmax of type object at 0x7649ac990ec0>","python_function"
+180,4,"preflight_smoke.py(35): attention","python_function"
+180,5,"preflight_smoke.py(196): <lambda>","python_function"
+180,6,"preflight_smoke.py(63): profile_once","python_function"
+180,7,"preflight_smoke.py(196): main","python_function"
+180,8,"preflight_smoke.py(217): <module>","python_function"
+184,0,"cudaLaunchKernel","cuda_runtime"
+184,1,"aten::mm","cpu_op"
+184,2,"aten::matmul","cpu_op"
+184,3,"preflight_smoke.py(35): attention","python_function"
+184,4,"preflight_smoke.py(196): <lambda>","python_function"
+184,5,"preflight_smoke.py(63): profile_once","python_function"
+184,6,"preflight_smoke.py(196): main","python_function"
+184,7,"preflight_smoke.py(217): <module>","python_function"
+
+"name","value","severity"
+"slice_spill_overlapping_complete_event",1,"error"

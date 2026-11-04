@@ -1,0 +1,106 @@
+UTC: 2026-11-04T17:24:21+00:00
+HOST: zwlab-01
+USER: bwwu
+UID: 1005
+Linux 7.0.0-31-generic x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+
+CPU / MEMORY
+CPU(s):                                  80
+Model name:                              Intel(R) Xeon(R) Gold 6133 CPU @ 2.50GHz
+Socket(s):                               2
+Available logical CPUs: 80
+               total        used        free      shared  buff/cache   available
+Mem:           247Gi       7.9Gi        83Gi       3.3Mi       157Gi       239Gi
+Swap:           63Gi       360Mi        63Gi
+
+USER FILESYSTEM / LIMITS
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3 ext4  851G  233G  575G  29% /
+TARGET SOURCE         FSTYPE OPTIONS
+/      /dev/nvme0n1p3 ext4   rw,relatime
+Home writable/searchable: yes
+0002
+file size                   (blocks, -f) unlimited
+max user processes                  (-u) 909895
+virtual memory              (kbytes, -v) unlimited
+quota command: absent
+
+SCHEDULER / SESSION TOOLS
+/usr/bin/screen
+/usr/bin/nohup
+/usr/bin/timeout
+Scheduler-related processes (names only):
+
+/etc/issue
+Ubuntu 26.04.1 LTS \n \l
+
+Slurm config exists: no
+PBS config exists: no
+
+GPU SNAPSHOT 1
+2026-11-04T17:24:21+00:00
+Wed Nov  4 17:24:21 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.91.07              Driver Version: 595.91.07      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:3B:00.0 Off |                  Off |
+| 43%   26C    P8             13W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090        Off |   00000000:86:00.0 Off |                  Off |
+| 43%   25C    P8             21W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+index, uuid, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], driver_version, compute_cap
+0, GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %, 595.91.07, 8.9
+1, GPU-59cac3bd-3645-668b-79c8-839e0d878893, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %, 595.91.07, 8.9
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+
+AVAILABLE ENVIRONMENT ENTRY POINTS
+/usr/bin/python3
+/usr/bin/gcc
+/usr/bin/g++
+Python 3.14.4
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Registered environment paths:
+/data/bwwu/envs/tiger
+/data/bwwu/envs/grid-20261009-e61baf3
+
+GPU SNAPSHOT 2
+2026-11-04T17:24:21+00:00
+index, uuid, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], driver_version, compute_cap
+0, GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %, 595.91.07, 8.9
+1, GPU-59cac3bd-3645-668b-79c8-839e0d878893, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %, 595.91.07, 8.9
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]

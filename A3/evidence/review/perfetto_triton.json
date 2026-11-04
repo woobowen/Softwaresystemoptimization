@@ -1,0 +1,83 @@
+{
+  "trace": "/home/addaswsw/lab/Software_system_optimization/A3/evidence/gpu/gpu_triton.trace.json",
+  "trace_sha256": "56568915a3cff1e0ed0ac4057bdc83a4c3e18167cfc734501d1d8c67fb5bd066",
+  "ui_url": "https://ui.perfetto.dev/#!/viewer?local_cache_key=00000000-0000-0000-3a28-7116e7872a3b",
+  "browser": "149.0.7827.22",
+  "viewport": {
+    "width": 1800,
+    "height": 1200
+  },
+  "selected": [
+    {
+      "id": "1775",
+      "ts": "2959549749270674",
+      "dur": "3903",
+      "name": "softmax_kernel"
+    }
+  ],
+  "launch": [
+    {
+      "id": "1774",
+      "ts": "2959549749259536",
+      "dur": "10900",
+      "name": "cuLaunchKernel"
+    }
+  ],
+  "ancestors": [
+    {
+      "id": "1485",
+      "name": "triton_softmax.py(31): softmax",
+      "ts": "2959549749085999",
+      "dur": "186928"
+    }
+  ],
+  "bounds": {
+    "start": "2959549749085999",
+    "end": "2959549749274577"
+  },
+  "cached_official_urls": [
+    "https://ui.perfetto.dev/",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend.css",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/MaterialSymbolsOutlined.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/Roboto.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/stdlib_docs.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/brand.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/logo-3d.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/trace_processor_memory64.wasm",
+    "https://ui.perfetto.dev/v59.1-79997ada9/engine_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/RobotoMono-Regular.woff2",
+    "https://ui.perfetto.dev/service_worker.js?v=v59.1-79997ada9",
+    "https://ui.perfetto.dev/v59.1-79997ada9/manifest.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.html",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/base-page.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/joins_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/slices_example.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/time_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/add_columns.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/aggregation.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/counter_to_intervals.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/create_slices.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/dashboard.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_during.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_in.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/interval_intersect.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/join.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/favicon.png"
+  ],
+  "errors": [],
+  "timeline_body": "menu\nCURRENT TRACE\ngpu_triton.trace.json (16 MB)\nline_style\nTimeline\ninfo\nOverview\ndata_exploration\nData Explorer\ndatabase\nQuery (SQL)\nspeed\nMetrics\nfile_download\nDownload\nNEW TRACE\nfolder_open\nOpen trace file\nlibrary_books\nOpen multiple trace files\nfiber_smart_record\nRecord new trace\nmemory\nMemscope\nPREVIEW\nandroid\nOpen Android example\nlanguage\nOpen Chrome example\nSETTINGS\nsettings\nSettings\nemoji_flags\nFlags\nextension\nPlugins\nSUPPORT\nDocumentation & Bugs\nCONVERT TRACE\nConvert to other formats\nWSM\n0\nSW\nUPD\nv59.1-79997ada9\nunfold_more\nunfold_less\nkeep_off\nfilter_alt\nworkspacesDefault Workspace\nUnnamed SliceTrack\nexpand_less\npython 2765447\nthread 2765447 (python) 2765447\nmain thread\nexpand_less\npython 0\nstream 7 7\nexpand_less\nSpans 60015\nPyTorch Profiler 60025\nmore_vert\nCurrent Selection\nvertical_align_top\nkeyboard_arrow_down\nSlice\nsoftmax_kernel\nContextual Optionsarrow_drop_down\nDetails\nName\nsoftmax_kernel\nCategory\nkernel\nStart time\n00:00:00.004601666\nDuration\n3\u00b5s 903ns\nThread\nstream 7  [7]\nProcess\npython [0]\nSQL ID\nslice[1775]arrow_drop_down\nPreceding Flows\nSlice\nDelay\nThread\ncuLaunchKernelcall_made\n238ns\nthread 2765447 (python) 2765447 (python 2765447)\nArguments\nargs\nqueuedarrow_drop_down\n0\ndevicearrow_drop_down\n0\ncontextarrow_drop_down\n1\nstreamarrow_drop_down\n7\ncorrelationarrow_drop_down\n96\nregisters per threadarrow_drop_down\n80\nshared memoryarrow_drop_down\n32800\nblocks per SMarrow_drop_down\n0.78125\nwarps per SMarrow_drop_down\n6.25\ngrid\n[0]arrow_drop_down\n100\n[1]arrow_drop_down\n1\n[2]arrow_drop_down\n1\nblock\n[0]arrow_drop_down\n256\n[1]arrow_drop_down\n1\n[2]arrow_drop_down\n1\nest. achieved occupancy %arrow_drop_down\n13\nHistogram for 'softmax_kernel'\nhelp_outline\nScope:\nhelp_outline\nThis trackarrow_drop_down\nCount\n-\nTotal\n-\nMin\n-\nMean\n-\nMax\n-\np50\n-\np75\n-\np95\n-\np99\n-\np99.9\n-\nLoad distribution\nsyncTimeline Sync",
+  "import_statistics": [],
+  "sql": [],
+  "images": [
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/A3/images/08-triton-timeline.png",
+      "sha256": "29286c586235b35c55dd4c9ed107577148c071a7f08ecac74d27e14c3419fc81"
+    }
+  ],
+  "image_hashes_recorded_after_capture": true,
+  "playwright_version": "1.61.0-alpha-1781023400000"
+}

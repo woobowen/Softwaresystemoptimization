@@ -1,0 +1,12 @@
+{
+  "argv": [
+    ".cache/a3-remote-preflight-tools/trace_processor_shell",
+    "query",
+    "--format",
+    "csv",
+    "-f",
+    "A3/scripts/perfetto_gpu.sql",
+    "A3/evidence/attention/attention_l128.trace.json"
+  ],
+  "exit_code": 0
+}

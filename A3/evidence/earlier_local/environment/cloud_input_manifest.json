@@ -1,0 +1,54 @@
+{
+  "purpose": "cloud input only; not final review package",
+  "files": [
+    {
+      "path": "A3/scripts/check_attention.py",
+      "sha256": "b6c017d2409dad02317713c6a37c004cb01415be402e71acebab96b55c5684f0"
+    },
+    {
+      "path": "A3/scripts/check_softmax.py",
+      "sha256": "d1b6ca949db5dd8b51b16d9ae2fe483117e6a9cfb756fbefd34a0b05908399dc"
+    },
+    {
+      "path": "A3/scripts/check_triton.py",
+      "sha256": "f5c78cf39cc6bf7e94aa5f44cde343c61ba953cb238fd86c97ab77752401381b"
+    },
+    {
+      "path": "A3/scripts/environment.py",
+      "sha256": "184219f23794af0b82a129e467039fe34ab7ce7cae2c53e86d7a0a4a6bfcfab4"
+    },
+    {
+      "path": "A3/scripts/export_results.py",
+      "sha256": "110dc04f6d37acbb087f45d67c11e33804ea0eb9ca255550be277dce9556a155"
+    },
+    {
+      "path": "A3/scripts/perfetto_queries.sql",
+      "sha256": "d2cd3d9d490a4e073fe182f2350f01c64d62d463a42a19e8280e6cd8f2ae5a6f"
+    },
+    {
+      "path": "A3/scripts/profile.py",
+      "sha256": "3d874baee3e55fa3d118caf13fb27bdbb0c25c73c0a0c7315ad4f9e12df3aa9e"
+    },
+    {
+      "path": "A3/scripts/run_cpu.sh",
+      "sha256": "0b50e48265dc7dea383ad36d0e03d7dea19b81b9dc95cf73b0060991bd7f9ced"
+    },
+    {
+      "path": "A3/scripts/run_gpu.sh",
+      "sha256": "810f372dd47329e0601ed2bf4bea78d4f30100220472f2d615094bbca05a54cb"
+    },
+    {
+      "path": "A3/src/attention.py",
+      "sha256": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa"
+    },
+    {
+      "path": "A3/src/softmax.py",
+      "sha256": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1"
+    },
+    {
+      "path": "A3/src/triton_softmax.py",
+      "sha256": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+    }
+  ],
+  "zip_sha256": "15c0ae6ceffbb01ddf566a2c02d2eed84012e446453c2c5af9d0cf07dfa43c7c"
+}

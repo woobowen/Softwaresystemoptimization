@@ -1,0 +1,195 @@
+trace UI loaded
+menu
+CURRENT TRACE
+cpu_naive.trace.json (2 MB)
+line_style
+Timeline
+info
+Overview
+data_exploration
+Data Explorer
+database
+Query (SQL)
+speed
+Metrics
+file_download
+Download
+NEW TRACE
+folder_open
+Open trace file
+library_books
+Open multiple trace files
+fiber_smart_record
+Record new trace
+memory
+Memscope
+PREVIEW
+android
+Open Android example
+language
+Open Chrome example
+SETTINGS
+settings
+Settings
+emoji_flags
+Flags
+extension
+Plugins
+SUPPORT
+Documentation & Bugs
+CONVERT TRACE
+Convert to other formats
+WSM
+0
+SW
+UPD
+v59.1-79997ada9
+unfold_more
+unfold_less
+keep_off
+filter_alt
+workspacesDefault Workspace
+Unnamed SliceTrack
+expand_more
+python 17388
+expand_more
+Spans 56926
+more_vert
+Current Selection
+vertical_align_top
+keyboard_arrow_up
+inbox
+Nothing selected
+This site uses cookies from Google to deliver its services and to analyze traffic.
+More details
+OK
+syncTimeline Sync
+cached /v59.1-79997ada9/assets/data_explorer/node_info/filter.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/filter_during.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/dashboard.md
+SQL result body menu
+CURRENT TRACE
+cpu_naive.trace.json (2 MB)
+line_style
+Timeline
+info
+Overview
+data_exploration
+Data Explorer
+database
+Query (SQL)
+speed
+Metrics
+file_download
+Download
+NEW TRACE
+folder_open
+Open trace file
+library_books
+Open multiple trace files
+fiber_smart_record
+Record new trace
+memory
+Memscope
+PREVIEW
+android
+Open Android example
+language
+Open Chrome example
+SETTINGS
+settings
+Settings
+emoji_flags
+Flags
+extension
+Plugins
+SUPPORT
+Documentation & Bugs
+CONVERT TRACE
+Convert to other formats
+WSM
+0
+SW
+UPD
+v59.1-79997ada9
+code
+Query 1
+add
+right_panel_close
+play_arrowRun Query
+or press
+Ctrl
+keyboard_return
+format_align_leftFormat
+1
+SELECT AVG(dur) / 1e9 FROM slice WHERE name = 'aten::exp';
+Returned 1 rows in
+1 ms
+add_chartAdd debug track
+downloadExport
+AVG(dur) / 1e9
+0.00019337532000000002
+history
+History
+table_chart
+Tables
+Query history (1 queries)
+SELECT AVG(dur) / 1e9 FROM slice WHERE name = 'aten::exp';
+This site uses cookies from Google to deliver its services and to analyze traffic.
+More details
+OK
+syncTimeline Sync
+query inputs [
+  {
+    tag: 'INPUT',
+    type: 'text',
+    placeholder: "Search or type '>' for commands, ':' for SQL query",
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'checkbox',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'radio',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'radio',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'DIV',
+    type: undefined,
+    placeholder: undefined,
+    class: 'cm-content',
+    role: 'textbox'
+  },
+  {
+    tag: 'INPUT',
+    type: 'file',
+    placeholder: '',
+    class: 'trace_file',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'file',
+    placeholder: '',
+    class: 'pinned_tracks_import_selector',
+    role: null
+  }
+]
+cached /v59.1-79997ada9/assets/data_explorer/node_info/filter_in.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/join.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/interval_intersect.md

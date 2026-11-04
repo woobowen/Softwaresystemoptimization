@@ -1,0 +1,143 @@
+cached /
+cached /v59.1-79997ada9/assets/Roboto.woff2
+cached /v59.1-79997ada9/frontend.css
+cached /v59.1-79997ada9/assets/MaterialSymbolsOutlined.woff2
+cached /v59.1-79997ada9/frontend_bundle.js
+cached /v59.1-79997ada9/assets/brand.png
+cached /v59.1-79997ada9/assets/logo-3d.png
+cached /v59.1-79997ada9/assets/RobotoMono-Regular.woff2
+cached /v59.1-79997ada9/stdlib_docs.json
+cached /v59.1-79997ada9/engine_bundle.js
+cached /v59.1-79997ada9/engine_bundle.js
+cached /v59.1-79997ada9/assets/favicon.png
+cached /service_worker.js
+cached /v59.1-79997ada9/manifest.json
+cached /v59.1-79997ada9/assets/data_explorer/base-page.json
+cached /v59.1-79997ada9/assets/data_explorer/examples/joins_learning.json
+cached /v59.1-79997ada9/assets/data_explorer/examples/learning.json
+cached /v59.1-79997ada9/trace_processor_memory64.wasm
+cached /v59.1-79997ada9/assets/catapult_trace_viewer.js
+cached /v59.1-79997ada9/assets/catapult_trace_viewer.html
+cached /v59.1-79997ada9/assets/data_explorer/examples/time_learning.json
+cached /v59.1-79997ada9/assets/data_explorer/examples/slices_example.json
+trace UI loaded
+menu
+CURRENT TRACE
+cpu_naive.trace.json (2 MB)
+line_style
+Timeline
+info
+Overview
+data_exploration
+Data Explorer
+database
+Query (SQL)
+speed
+Metrics
+file_download
+Download
+NEW TRACE
+folder_open
+Open trace file
+library_books
+Open multiple trace files
+fiber_smart_record
+Record new trace
+memory
+Memscope
+PREVIEW
+android
+Open Android example
+language
+Open Chrome example
+SETTINGS
+settings
+Settings
+emoji_flags
+Flags
+extension
+Plugins
+SUPPORT
+Documentation & Bugs
+CONVERT TRACE
+Convert to other formats
+WSM
+0
+SW
+UPD
+v59.1-79997ada9
+unfold_more
+unfold_less
+keep_off
+filter_alt
+workspacesDefault Workspace
+Unnamed SliceTrack
+expand_more
+python 17388
+expand_more
+Spans 56926
+more_vert
+Current Selection
+vertical_align_top
+keyboard_arrow_up
+inbox
+Nothing selected
+This site uses cookies from Google to deliver its services and to analyze traffic.
+More details
+OK
+syncTimeline Sync
+cached /v59.1-79997ada9/assets/data_explorer/node_info/aggregation.md
+query inputs [
+  {
+    tag: 'INPUT',
+    type: 'text',
+    placeholder: "Search or type '>' for commands, ':' for SQL query",
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'checkbox',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'radio',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'radio',
+    placeholder: '',
+    class: '',
+    role: null
+  },
+  {
+    tag: 'DIV',
+    type: undefined,
+    placeholder: undefined,
+    class: 'cm-content',
+    role: 'textbox'
+  },
+  {
+    tag: 'INPUT',
+    type: 'file',
+    placeholder: '',
+    class: 'trace_file',
+    role: null
+  },
+  {
+    tag: 'INPUT',
+    type: 'file',
+    placeholder: '',
+    class: 'pinned_tracks_import_selector',
+    role: null
+  }
+]
+cached /v59.1-79997ada9/assets/data_explorer/node_info/add_columns.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/counter_to_intervals.md
+cached /v59.1-79997ada9/assets/data_explorer/node_info/create_slices.md

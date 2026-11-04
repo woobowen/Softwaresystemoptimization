@@ -1,0 +1,516 @@
+START UTC: 2026-11-04T18:24:29+00:00
+/data/bwwu/envs/tiger/bin/python -B scripts/gpu_status.py 
+UTC: 2026-11-04T18:24:29.275491+00:00
+Physical GPU UUID -> process cuda:0: GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae
+index, uuid, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %
+1, GPU-59cac3bd-3645-668b-79c8-839e0d878893, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+/data/bwwu/envs/tiger/bin/python -B scripts/profile_workload.py online-naive --threads 1 --output-dir evidence/online 
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                              aten::max        93.64%       2.957ms        94.68%       2.989ms       2.989ms      15.104us        49.01%      15.104us      15.104us             1  
+                                       cudaLaunchKernel         2.18%      68.856us         2.18%      68.856us      13.771us       0.000us         0.00%       0.000us       0.000us             5  
+                                              aten::sum         1.26%      39.826us         1.59%      50.283us      50.283us       8.000us        25.96%       8.000us       8.000us             1  
+                                              aten::sub         0.68%      21.488us         1.09%      34.564us      34.564us       2.880us         9.35%       2.880us       2.880us             1  
+                                              aten::div         0.61%      19.217us         0.90%      28.480us      28.480us       2.817us         9.14%       2.817us       2.817us             1  
+                                              aten::exp         0.43%      13.594us         0.70%      21.954us      21.954us       2.016us         6.54%       2.016us       2.016us             1  
+                                            aten::slice         0.45%      14.095us         0.50%      15.844us       7.922us       0.000us         0.00%       0.000us       0.000us             2  
+                                        aten::unsqueeze         0.29%       9.158us         0.32%      10.002us       5.001us       0.000us         0.00%       0.000us       0.000us             2  
+                                       aten::as_strided         0.24%       7.617us         0.24%       7.617us       1.088us       0.000us         0.00%       0.000us       0.000us             7  
+                                  cudaDeviceSynchronize         0.22%       6.891us         0.22%       6.891us       3.446us       0.000us         0.00%       0.000us       0.000us             2  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us      15.104us        49.01%      15.104us      15.104us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.880us         9.35%       2.880us       2.880us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       2.016us         6.54%       2.016us       2.016us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us       8.000us        25.96%       8.000us       8.000us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.817us         9.14%       2.817us       2.817us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 3.157ms
+Self CUDA time total: 30.817us
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                              aten::max        93.64%       2.957ms        94.68%       2.989ms       2.989ms      15.104us        49.01%      15.104us      15.104us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us      15.104us        49.01%      15.104us      15.104us             1  
+                                              aten::sum         1.26%      39.826us         1.59%      50.283us      50.283us       8.000us        25.96%       8.000us       8.000us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us       8.000us        25.96%       8.000us       8.000us             1  
+                                              aten::sub         0.68%      21.488us         1.09%      34.564us      34.564us       2.880us         9.35%       2.880us       2.880us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.880us         9.35%       2.880us       2.880us             1  
+                                              aten::div         0.61%      19.217us         0.90%      28.480us      28.480us       2.817us         9.14%       2.817us       2.817us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.817us         9.14%       2.817us       2.817us             1  
+                                              aten::exp         0.43%      13.594us         0.70%      21.954us      21.954us       2.016us         6.54%       2.016us       2.016us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       2.016us         6.54%       2.016us       2.016us             1  
+                                       aten::as_strided         0.24%       7.617us         0.24%       7.617us       1.088us       0.000us         0.00%       0.000us       0.000us             7  
+                                       cudaLaunchKernel         2.18%      68.856us         2.18%      68.856us      13.771us       0.000us         0.00%       0.000us       0.000us             5  
+                                            aten::slice         0.45%      14.095us         0.50%      15.844us       7.922us       0.000us         0.00%       0.000us       0.000us             2  
+                                        aten::unsqueeze         0.29%       9.158us         0.32%      10.002us       5.001us       0.000us         0.00%       0.000us       0.000us             2  
+                                  cudaDeviceSynchronize         0.22%       6.891us         0.22%       6.891us       3.446us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 3.157ms
+Self CUDA time total: 30.817us
+
+{
+  "recorded_utc": "2026-11-04T18:24:31.065117+00:00",
+  "experiment": "online-naive",
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/bwwu/lab/SSO_A3",
+  "torch": "2.6.0+cu124",
+  "cpu_threads": 1,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "float32_matmul_precision": "highest",
+  "cuda_matmul_allow_tf32": false,
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+  "cuda_runtime": "12.4",
+  "shapes": [
+    [
+      100,
+      5000
+    ]
+  ],
+  "reference": "torch.softmax(x, dim=1)",
+  "input_sha256": [
+    "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+  ],
+  "calls": 1,
+  "preflight_complete_call_ms": 69.999271,
+  "max_abs_error": 9.313225746154785e-10,
+  "max_relative_error_floor_1e_6": 2.9510677553352356e-07,
+  "max_row_sum_error": 1.1920928955078125e-07,
+  "with_stack": false,
+  "synchronized_complete_call_ms": [
+    0.228425,
+    0.140063,
+    0.126469,
+    0.1224,
+    0.123107
+  ],
+  "synchronized_complete_call_median_ms": 0.126469,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}
+Filtered CPU top3: [
+  {
+    "name": "aten::max",
+    "count": 1,
+    "cpu_total_us": 2989.331,
+    "self_cpu_us": 2956.607,
+    "cpu_avg_us": 2989.331,
+    "device_total_us": 15.10400000000027,
+    "self_device_us": 15.10400000000027,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::sum",
+    "count": 1,
+    "cpu_total_us": 50.2829999999999,
+    "self_cpu_us": 39.82600000000002,
+    "cpu_avg_us": 50.2829999999999,
+    "device_total_us": 8.0,
+    "self_device_us": 8.0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::sub",
+    "count": 1,
+    "cpu_total_us": 34.564000000000306,
+    "self_cpu_us": 21.488000000000284,
+    "cpu_avg_us": 34.564000000000306,
+    "device_total_us": 2.880000000000109,
+    "self_device_us": 2.880000000000109,
+    "device_type": "DeviceType.CPU"
+  }
+]
+Filtered GPU top3: [
+  {
+    "name": "aten::max",
+    "count": 1,
+    "cpu_total_us": 2989.331,
+    "self_cpu_us": 2956.607,
+    "cpu_avg_us": 2989.331,
+    "device_total_us": 15.10400000000027,
+    "self_device_us": 15.10400000000027,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::sum",
+    "count": 1,
+    "cpu_total_us": 50.2829999999999,
+    "self_cpu_us": 39.82600000000002,
+    "cpu_avg_us": 50.2829999999999,
+    "device_total_us": 8.0,
+    "self_device_us": 8.0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::sub",
+    "count": 1,
+    "cpu_total_us": 34.564000000000306,
+    "self_cpu_us": 21.488000000000284,
+    "cpu_avg_us": 34.564000000000306,
+    "device_total_us": 2.880000000000109,
+    "self_device_us": 2.880000000000109,
+    "device_type": "DeviceType.CPU"
+  }
+]
+GPU kernel us / complete call: 30.817
+/data/bwwu/envs/tiger/bin/python -B scripts/gpu_status.py 
+UTC: 2026-11-04T18:24:31.940550+00:00
+Physical GPU UUID -> process cuda:0: GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae
+index, uuid, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 9 %
+1, GPU-59cac3bd-3645-668b-79c8-839e0d878893, NVIDIA GeForce RTX 4090, 24564 MiB, 1 MiB, 24082 MiB, 0 %
+gpu_uuid, pid, process_name, used_gpu_memory [MiB]
+/data/bwwu/envs/tiger/bin/python -B scripts/profile_workload.py online --threads 1 --output-dir evidence/online 
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                       cudaLaunchKernel        40.09%     215.062ms        40.09%     215.062ms       6.144us       0.000us         0.00%       0.000us       0.000us         35005  
+                                              aten::sub        15.47%      82.965ms        26.98%     144.727ms      14.471us      11.441ms        29.20%      11.442ms       1.144us         10001  
+                                              aten::exp        14.10%      75.642ms        24.58%     131.863ms      13.185us      10.634ms        27.14%      10.634ms       1.063us         10001  
+                                          aten::maximum         9.19%      49.299ms        15.74%      84.432ms      16.886us       7.087ms        18.09%       7.088ms       1.418us          5000  
+                                              aten::add         6.78%      36.363ms        12.99%      69.690ms      13.938us       5.006ms        12.77%       5.007ms       1.001us          5000  
+                                              aten::mul         7.45%      39.963ms        12.84%      68.895ms      13.779us       5.010ms        12.79%       5.010ms       1.002us          5000  
+                                            aten::slice         2.64%      14.150ms         3.29%      17.624ms       3.523us       0.000us         0.00%       0.000us       0.000us          5002  
+                                           aten::select         2.56%      13.714ms         2.93%      15.733ms       3.147us       0.000us         0.00%       0.000us       0.000us          5000  
+                                       aten::as_strided         1.02%       5.493ms         1.02%       5.493ms       0.549us       0.000us         0.00%       0.000us       0.000us         10004  
+                                             aten::full         0.00%      24.445us         0.54%       2.910ms       2.910ms       0.000us         0.00%       1.024us       1.024us             1  
+                                            aten::empty         0.53%       2.849ms         0.53%       2.849ms       1.424ms       0.000us         0.00%       0.000us       0.000us             2  
+                                           Buffer Flush         0.16%     845.570us         0.16%     855.349us     122.193us       7.424us         0.02%       7.424us       1.061us             7  
+                                            aten::fill_         0.00%      17.654us         0.01%      57.241us      28.621us       2.016us         0.01%       2.016us       1.008us             2  
+                                            aten::zeros         0.00%      11.110us         0.01%      34.682us      34.682us       0.000us         0.00%       0.992us       0.992us             1  
+                                              aten::div         0.00%      21.896us         0.01%      33.762us      33.762us       2.816us         0.01%       2.816us       2.816us             1  
+                                            aten::zero_         0.00%       3.258us         0.00%      17.332us      17.332us       0.000us         0.00%       0.992us       0.992us             1  
+                                  cudaDeviceSynchronize         0.00%       8.569us         0.00%       8.569us       4.284us       0.000us         0.00%       0.000us       0.000us             2  
+                                        aten::unsqueeze         0.00%       6.775us         0.00%       7.556us       3.778us       0.000us         0.00%       0.000us       0.000us             2  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       2.016us         0.01%       2.016us       1.008us             2  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       7.087ms        18.09%       7.087ms       1.417us          5000  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      10.007ms        25.54%      10.007ms       1.001us         10000  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      10.634ms        27.14%      10.634ms       1.063us         10001  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       5.010ms        12.79%       5.010ms       1.002us          5000  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       6.442ms        16.44%       6.442ms       1.288us          5001  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.816us         0.01%       2.816us       2.816us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 536.440ms
+Self CUDA time total: 39.185ms
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                              aten::sub        15.47%      82.965ms        26.98%     144.727ms      14.471us      11.441ms        29.20%      11.442ms       1.144us         10001  
+                                              aten::exp        14.10%      75.642ms        24.58%     131.863ms      13.185us      10.634ms        27.14%      10.634ms       1.063us         10001  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      10.634ms        27.14%      10.634ms       1.063us         10001  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      10.007ms        25.54%      10.007ms       1.001us         10000  
+                                          aten::maximum         9.19%      49.299ms        15.74%      84.432ms      16.886us       7.087ms        18.09%       7.088ms       1.418us          5000  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       7.087ms        18.09%       7.087ms       1.417us          5000  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       6.442ms        16.44%       6.442ms       1.288us          5001  
+                                              aten::mul         7.45%      39.963ms        12.84%      68.895ms      13.779us       5.010ms        12.79%       5.010ms       1.002us          5000  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       5.010ms        12.79%       5.010ms       1.002us          5000  
+                                              aten::add         6.78%      36.363ms        12.99%      69.690ms      13.938us       5.006ms        12.77%       5.007ms       1.001us          5000  
+                                           Buffer Flush         0.16%     845.570us         0.16%     855.349us     122.193us       7.424us         0.02%       7.424us       1.061us             7  
+                                              aten::div         0.00%      21.896us         0.01%      33.762us      33.762us       2.816us         0.01%       2.816us       2.816us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       2.816us         0.01%       2.816us       2.816us             1  
+                                            aten::fill_         0.00%      17.654us         0.01%      57.241us      28.621us       2.016us         0.01%       2.016us       1.008us             2  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       2.016us         0.01%       2.016us       1.008us             2  
+                                             aten::full         0.00%      24.445us         0.54%       2.910ms       2.910ms       0.000us         0.00%       1.024us       1.024us             1  
+                                            aten::zeros         0.00%      11.110us         0.01%      34.682us      34.682us       0.000us         0.00%       0.992us       0.992us             1  
+                                            aten::zero_         0.00%       3.258us         0.00%      17.332us      17.332us       0.000us         0.00%       0.992us       0.992us             1  
+                                            aten::empty         0.53%       2.849ms         0.53%       2.849ms       1.424ms       0.000us         0.00%       0.000us       0.000us             2  
+                                       cudaLaunchKernel        40.09%     215.062ms        40.09%     215.062ms       6.144us       0.000us         0.00%       0.000us       0.000us         35005  
+                                            aten::slice         2.64%      14.150ms         3.29%      17.624ms       3.523us       0.000us         0.00%       0.000us       0.000us          5002  
+                                       aten::as_strided         1.02%       5.493ms         1.02%       5.493ms       0.549us       0.000us         0.00%       0.000us       0.000us         10004  
+                                           aten::select         2.56%      13.714ms         2.93%      15.733ms       3.147us       0.000us         0.00%       0.000us       0.000us          5000  
+                                        aten::unsqueeze         0.00%       6.775us         0.00%       7.556us       3.778us       0.000us         0.00%       0.000us       0.000us             2  
+                                  cudaDeviceSynchronize         0.00%       8.569us         0.00%       8.569us       4.284us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 536.440ms
+Self CUDA time total: 39.185ms
+
+{
+  "recorded_utc": "2026-11-04T18:24:33.713445+00:00",
+  "experiment": "online",
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/bwwu/lab/SSO_A3",
+  "torch": "2.6.0+cu124",
+  "cpu_threads": 1,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "float32_matmul_precision": "highest",
+  "cuda_matmul_allow_tf32": false,
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+  "cuda_runtime": "12.4",
+  "shapes": [
+    [
+      100,
+      5000
+    ]
+  ],
+  "reference": "torch.softmax(x, dim=1)",
+  "input_sha256": [
+    "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+  ],
+  "calls": 1,
+  "preflight_complete_call_ms": 423.836174,
+  "max_abs_error": 2.2351741790771484e-08,
+  "max_relative_error_floor_1e_6": 2.6749862616194714e-06,
+  "max_row_sum_error": 2.562999725341797e-06,
+  "with_stack": false,
+  "synchronized_complete_call_ms": [
+    477.448069,
+    473.695438,
+    472.286069,
+    476.216874,
+    472.255787
+  ],
+  "synchronized_complete_call_median_ms": 473.695438,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}
+Filtered CPU top3: [
+  {
+    "name": "aten::sub",
+    "count": 10001,
+    "cpu_total_us": 144727.2900000035,
+    "self_cpu_us": 82965.03700000617,
+    "cpu_avg_us": 14.471281871813169,
+    "device_total_us": 11442.446000004478,
+    "self_device_us": 11441.16600000445,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::exp",
+    "count": 10001,
+    "cpu_total_us": 131863.3900000024,
+    "self_cpu_us": 75641.57400000439,
+    "cpu_avg_us": 13.185020497950445,
+    "device_total_us": 10634.145999995264,
+    "self_device_us": 10634.145999995264,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::maximum",
+    "count": 5000,
+    "cpu_total_us": 84432.34600000117,
+    "self_cpu_us": 49299.34700000396,
+    "cpu_avg_us": 16.886469200000235,
+    "device_total_us": 7088.191000000672,
+    "self_device_us": 7086.783000000618,
+    "device_type": "DeviceType.CPU"
+  }
+]
+Filtered GPU top3: [
+  {
+    "name": "aten::sub",
+    "count": 10001,
+    "cpu_total_us": 144727.2900000035,
+    "self_cpu_us": 82965.03700000617,
+    "cpu_avg_us": 14.471281871813169,
+    "device_total_us": 11442.446000004478,
+    "self_device_us": 11441.16600000445,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::exp",
+    "count": 10001,
+    "cpu_total_us": 131863.3900000024,
+    "self_cpu_us": 75641.57400000439,
+    "cpu_avg_us": 13.185020497950445,
+    "device_total_us": 10634.145999995264,
+    "self_device_us": 10634.145999995264,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::maximum",
+    "count": 5000,
+    "cpu_total_us": 84432.34600000117,
+    "self_cpu_us": 49299.34700000396,
+    "cpu_avg_us": 16.886469200000235,
+    "device_total_us": 7088.191000000672,
+    "self_device_us": 7086.783000000618,
+    "device_type": "DeviceType.CPU"
+  }
+]
+GPU kernel us / complete call: 39184.87999999035
+END UTC: 2026-11-04T18:24:50+00:00

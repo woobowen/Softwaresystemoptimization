@@ -1,0 +1,117 @@
+{
+  "calls": 200,
+  "device_time_field": "device_time_total",
+  "profiler_self_cpu_total_us": 6727.15099999996,
+  "cpu_top3": [
+    {
+      "name": "aten::empty_like",
+      "count": 200,
+      "cpu_total_us": 4816.067999999941,
+      "self_cpu_us": 417.68799999996963,
+      "cpu_avg_us": 24.080339999999705,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::empty_strided",
+      "count": 200,
+      "cpu_total_us": 4398.379999999971,
+      "self_cpu_us": 4398.379999999971,
+      "cpu_avg_us": 21.991899999999855,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "softmax_kernel",
+      "count": 200,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 781.1260000000207,
+      "self_device_us": 781.1260000000207,
+      "device_type": "DeviceType.CUDA"
+    }
+  ],
+  "device_top3": [
+    {
+      "name": "softmax_kernel",
+      "count": 200,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 781.1260000000207,
+      "self_device_us": 781.1260000000207,
+      "device_type": "DeviceType.CUDA"
+    }
+  ],
+  "gpu_kernel_count": 200,
+  "gpu_kernel_names": {
+    "softmax_kernel": 200
+  },
+  "gpu_kernel_total_us": 781.1259999999994,
+  "gpu_kernel_us_per_complete_call": 3.905629999999997,
+  "trace_categories": {
+    "cpu_op": 400,
+    "python_function": 57720,
+    "kernel": 200,
+    "ac2g": 402,
+    "cuda_driver": 200,
+    "cuda_runtime": 2,
+    "": 60,
+    "Trace": 1
+  },
+  "rows": [
+    {
+      "name": "aten::empty_like",
+      "count": 200,
+      "cpu_total_us": 4816.067999999941,
+      "self_cpu_us": 417.68799999996963,
+      "cpu_avg_us": 24.080339999999705,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::empty_strided",
+      "count": 200,
+      "cpu_total_us": 4398.379999999971,
+      "self_cpu_us": 4398.379999999971,
+      "cpu_avg_us": 21.991899999999855,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "cuLaunchKernel",
+      "count": 200,
+      "cpu_total_us": 1902.2130000000157,
+      "self_cpu_us": 1902.2130000000157,
+      "cpu_avg_us": 9.511065000000078,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "softmax_kernel",
+      "count": 200,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 781.1260000000207,
+      "self_device_us": 781.1260000000207,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "cudaDeviceSynchronize",
+      "count": 2,
+      "cpu_total_us": 8.87000000000262,
+      "self_cpu_us": 8.87000000000262,
+      "cpu_avg_us": 4.43500000000131,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    }
+  ]
+}

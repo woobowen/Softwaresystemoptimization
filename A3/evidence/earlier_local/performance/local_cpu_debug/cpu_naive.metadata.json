@@ -1,0 +1,41 @@
+{
+  "experiment": "cpu-naive",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/addaswsw/lab/Software_system_optimization",
+  "torch": "2.15.0+cpu",
+  "cpu_threads": 1,
+  "float32_matmul_precision": "highest",
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "shapes": [
+    [
+      100,
+      5000
+    ]
+  ],
+  "reference": "torch.softmax(x, dim=1)",
+  "input_sha256": [
+    "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+  ],
+  "calls": 200,
+  "preflight_complete_call_ms": 5.617277,
+  "max_abs_error": 2.3283064365386963e-09,
+  "with_stack": true,
+  "synchronized_complete_call_ms": [
+    3.402601,
+    1.083233,
+    0.930279,
+    0.926296,
+    1.293065
+  ],
+  "synchronized_complete_call_median_ms": 1.083233,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}

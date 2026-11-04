@@ -1,0 +1,111 @@
+[
+  {
+    "sql": "-- 2.3 \u7b2c2\u95ee\uff1adur \u7684\u5355\u4f4d ns\uff0c\u7ed3\u679c\u4e3a\u79d2\u3002\nSELECT AVG(dur) / 1e9\nFROM slice\nWHERE name = 'aten::exp'",
+    "rows": [
+      {
+        "AVG(dur) / 1e9": 0.00019337532000000002
+      }
+    ]
+  },
+  {
+    "sql": "-- \u5148\u68c0\u67e5 category / track\uff0c\u786e\u8ba4\u5f53\u524d\u52a0\u8f7d\u7684\u662f\u8be5\u6b21 CPU \u6b63\u5f0f trace\u3002\nSELECT category, track_id, COUNT(*) AS slices, SUM(dur) / 1e6 AS sum_ms\nFROM slice\nWHERE dur >= 0\nGROUP BY category, track_id\nORDER BY slices DESC",
+    "rows": [
+      {
+        "category": "cpu_op",
+        "track_id": 2,
+        "slices": 3800,
+        "sum_ms": 188.395924
+      },
+      {
+        "category": "python_function",
+        "track_id": 2,
+        "slices": 1031,
+        "sum_ms": 926.442555
+      },
+      {
+        "category": null,
+        "track_id": 1,
+        "slices": 2,
+        "sum_ms": 0.0
+      },
+      {
+        "category": "Trace",
+        "track_id": 0,
+        "slices": 1,
+        "sum_ms": 200.650242
+      }
+    ]
+  },
+  {
+    "sql": "-- \u68c0\u67e5\u5b9e\u9645\u5d4c\u5957\uff0cPython \u6808\u4e0d\u4f5c\u4e3a cpu_op \u7684\u5206\u6bcd\u91cd\u590d\u7d2f\u52a0\u3002\nSELECT s.id, s.name, s.category, s.track_id, s.depth, s.parent_id,\n       p.name AS parent_name, p.category AS parent_category, s.dur\nFROM slice s LEFT JOIN slice p ON s.parent_id = p.id\nWHERE s.name = 'aten::exp'\nLIMIT 5",
+    "rows": [
+      {
+        "id": 38,
+        "name": "aten::exp",
+        "category": "cpu_op",
+        "track_id": 2,
+        "depth": 5,
+        "parent_id": 37,
+        "parent_name": "<built-in method exp of type object at 0x7eb5861f3d80>",
+        "parent_category": "python_function",
+        "dur": 257765
+      },
+      {
+        "id": 62,
+        "name": "aten::exp",
+        "category": "cpu_op",
+        "track_id": 2,
+        "depth": 5,
+        "parent_id": 61,
+        "parent_name": "<built-in method exp of type object at 0x7eb5861f3d80>",
+        "parent_category": "python_function",
+        "dur": 211673
+      },
+      {
+        "id": 86,
+        "name": "aten::exp",
+        "category": "cpu_op",
+        "track_id": 2,
+        "depth": 5,
+        "parent_id": 85,
+        "parent_name": "<built-in method exp of type object at 0x7eb5861f3d80>",
+        "parent_category": "python_function",
+        "dur": 244557
+      },
+      {
+        "id": 110,
+        "name": "aten::exp",
+        "category": "cpu_op",
+        "track_id": 2,
+        "depth": 5,
+        "parent_id": 109,
+        "parent_name": "<built-in method exp of type object at 0x7eb5861f3d80>",
+        "parent_category": "python_function",
+        "dur": 235129
+      },
+      {
+        "id": 134,
+        "name": "aten::exp",
+        "category": "cpu_op",
+        "track_id": 2,
+        "depth": 5,
+        "parent_id": 133,
+        "parent_name": "<built-in method exp of type object at 0x7eb5861f3d80>",
+        "parent_category": "python_function",
+        "dur": 164381
+      }
+    ]
+  },
+  {
+    "sql": "-- 2.3 \u7b2c3\u95ee\u3002\u5bf9\u65e0\u7528\u6237 annotation \u7684 CPU naive trace\uff0c\n-- cpu_op \u7684\u6839\u533a\u95f4\u4e4b\u548c = \u5168\u90e8 ATen Self CPU \u4e4b\u548c\u3002\n-- \u539f\u56e0\u662f\u5404 cpu_op \u7236\u533a\u95f4\u7684 self + \u5176\u5b50\u533a\u95f4 self \u4e4b\u548c\u7b49\u4e8e\u7236 dur\u3002\n-- \u67e5\u8be2\u4e2d\u7684 ancestor_slice \u6392\u9664\u4efb\u610f\u6df1\u5ea6\u7684 cpu_op \u7956\u5148\uff1bPython \u7956\u5148\u4e0d\u8ba1\u5165\u3002\n-- \u5fc5\u987b\u4e0e\u8be5\u6b21 Profiler \u8868\u5e95\u90e8 Self CPU time total \u4ea4\u53c9\u6838\u5bf9\u540e\u4f7f\u7528\u767e\u5206\u6bd4\u3002\nWITH cpu_roots AS (\n    SELECT s.id, s.dur\n    FROM slice s\n    WHERE s.category = 'cpu_op' AND s.dur >= 0\n      AND NOT EXISTS (\n          SELECT 1 FROM ancestor_slice(s.id) a WHERE a.category = 'cpu_op'\n      )\n), exp_calls AS (\n    SELECT COUNT(*) AS calls, SUM(dur) AS total_ns, AVG(dur) AS avg_ns\n    FROM slice\n    WHERE category = 'cpu_op' AND name = 'aten::exp' AND dur >= 0\n), cpu_total AS (\n    SELECT SUM(dur) AS total_ns FROM cpu_roots\n)\nSELECT e.calls, e.total_ns / 1e6 AS exp_total_ms,\n       e.avg_ns / 1e3 AS exp_avg_us,\n       t.total_ns / 1e6 AS all_self_cpu_ms,\n       100.0 * e.total_ns / t.total_ns AS exp_cpu_total_pct\nFROM exp_calls e CROSS JOIN cpu_total t",
+    "rows": [
+      {
+        "calls": 200,
+        "exp_total_ms": 38.675064,
+        "exp_avg_us": 193.37532000000002,
+        "all_self_cpu_ms": 184.864536,
+        "exp_cpu_total_pct": 20.92075897131508
+      }
+    ]
+  }
+]

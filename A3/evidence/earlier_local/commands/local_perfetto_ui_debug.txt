@@ -1,0 +1,24 @@
+navigation complete
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/assets/brand.png { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/assets/logo-3d.png { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource http://127.0.0.1:9001/status { errorText: 'net::ERR_CONNECTION_REFUSED' }
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/stdlib_docs.json { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource https://storage.cloud.google.com/perfetto-ui-internal/internal-data-v1/amalgamated.js { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource https://www.googletagmanager.com/gtag/js?id=G-BD89KT2P3C { errorText: 'net::ERR_NETWORK_CHANGED' }
+open trace control ready
+Cached official WASM https://ui.perfetto.dev/v59.1-79997ada9/trace_processor_memory64.wasm
+failed resource https://perfetto-gae-internal.googleplex.com/extension_server_assets/manifest { errorText: 'net::ERR_NETWORK_CHANGED' }
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForEvent: Timeout 30000ms exceeded while waiting for event "filechooser"
+=========================== logs ===========================
+waiting for event "filechooser"
+============================================================
+    at /tmp/a3-perfetto-load.cjs:9:18 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v22.22.0

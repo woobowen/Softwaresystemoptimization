@@ -1,0 +1,175 @@
+{
+  "archive_sha256": "0fe652a1738d5c32fac49f1b62a8b3eec975a9efd4b54d4f969213a32ea8abc5",
+  "files": [
+    {
+      "path": "A3/evidence/environment/school_gpu.json",
+      "sha256": "e8fe0b70107861990989fbe9b0733b61e940a77d94732bc7eb8c7b0606e50797",
+      "bytes": 9859
+    },
+    {
+      "path": "A3/evidence/environment/school_cpu.json",
+      "sha256": "2c45fb15a7380dd364f39e21c6ab147c34dd9abd8109e72ba2e503bc13a3bc44",
+      "bytes": 7537
+    },
+    {
+      "path": "A3/evidence/correctness/school_softmax_cpu.json",
+      "sha256": "241706cbdc25374f382b5f47e7746f38ef18a075d33777df0b69e89161b57e00",
+      "bytes": 8171
+    },
+    {
+      "path": "A3/evidence/correctness/school_attention_cpu.json",
+      "sha256": "1b39b26f98e617c0783673fbdb774e4bdf982368f822c9c70d3a572f70e70c7c",
+      "bytes": 4895
+    },
+    {
+      "path": "A3/evidence/correctness/school_attention_cuda.json",
+      "sha256": "7d92fcc6dc2aeb70601a55608d53c36127bd8229ec81cf8911baebcd518cca4b",
+      "bytes": 4895
+    },
+    {
+      "path": "A3/evidence/correctness/school_softmax_cuda.json",
+      "sha256": "a48ac1e6828dc24997df6f23530e4f564f022dee776f0dccb7cc0fc500e7e107",
+      "bytes": 8159
+    },
+    {
+      "path": "A3/evidence/correctness/school_triton.json",
+      "sha256": "1485672abbfe587bb97c04fecd35348071ec584467c1265a3444f902349fac76",
+      "bytes": 4190
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.trace.json",
+      "sha256": "56568915a3cff1e0ed0ac4057bdc83a4c3e18167cfc734501d1d8c67fb5bd066",
+      "bytes": 15630878
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.device_table.txt",
+      "sha256": "e4da8b8f609c59d9952fafd6b787fca0ec525daa15163c7ebb4e589d4540549b",
+      "bytes": 1575
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.device_table.txt",
+      "sha256": "0be59d3b49a6d11ebfd33502e6415fad82f38cae829cc376a90c9ed77e306977",
+      "bytes": 3824
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.statistics.json",
+      "sha256": "d733765684eaa3f0242983eb5a55bdfbcee364301c102b5d98ca169ae5a94d55",
+      "bytes": 3029
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.trace.json",
+      "sha256": "c03f3057754cbe0d9747dd56fc3f56cf435f4e7353cc2f60932aad406bc19040",
+      "bytes": 2377943
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.metadata.json",
+      "sha256": "848e7be588fe7f6983319de8214dcfdf2648fe3d101dcc3e2ddb7974ea81e966",
+      "bytes": 2216
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.cpu_table.txt",
+      "sha256": "feb4528b87f9235c5ed82a46189a17335e7409813f0d29859d0a90b0fcd92c2b",
+      "bytes": 3824
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.metadata.json",
+      "sha256": "d0f367ab9334c982d7c6ebc23a5bad62c4793d0ced9bf93509b38a438f80652d",
+      "bytes": 2213
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.statistics.json",
+      "sha256": "025d5d7ce2fa1f0ef26b1757cab03c70ff62049f5632513bbe972ab3487ba0a1",
+      "bytes": 10567
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.cpu_table.txt",
+      "sha256": "1a57ac30c2dd8b44d34135392ea9ec2bd3cb1ca22ce56f6f7f0ddc591a7b19e0",
+      "bytes": 1575
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_softmax_correctness.txt",
+      "sha256": "076fc989a91381ca5a24cc1c62963354ab75fd6f37e9761cda5a038999f0323f",
+      "bytes": 1501
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_softmax_correctness.txt",
+      "sha256": "bd19b65126921c8e585136138923e84937e4656a0472fd7d8094ab831b1e6032",
+      "bytes": 1499
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_gpu-naive.txt",
+      "sha256": "4aaee431ab2ce5b9a1cd6c0ee7c70cc7885abc68f8e1df09248cc10b8e880dfc",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_attention_correctness.txt",
+      "sha256": "aa14e92aa5c4ca068d89fb6f28e03a79bf9061528430943843d67a909e2ed12c",
+      "bytes": 5040
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_environment.txt",
+      "sha256": "8df06bba5b709fb670522a13906a572cf299d24a4eeb6dcef1a0e39189274abe",
+      "bytes": 10010
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_environment.txt",
+      "sha256": "aa2bdee298c6f9bf4f020c3a0a974a526d10b6b184166d4d36603b0fe170aaeb",
+      "bytes": 7687
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_gpu-triton.txt",
+      "sha256": "f72d42be966fbae9466691ae0498e9021bcb400d9f9df16d6bf8e4e7a6c1e627",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_correctness.txt",
+      "sha256": "720987d619466c8f736bfacbf5d39bf78139cf45cb0d7a360ef39dc166d3d8d1",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_attention_correctness.txt",
+      "sha256": "067a380ae23ff6336aa7b602ca11c3a0ac9b3ca390936f983482c49c3ef5f028",
+      "bytes": 5042
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_triton_correctness.txt",
+      "sha256": "00c6d3aa0906e468d4ba797f52050619ed74d5c951cbd3ac9e4cf83b9730f179",
+      "bytes": 6944
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu-naive.txt",
+      "sha256": "6825ac931e7c60ae294c0e14ffac87b3b59027d8689c071ba51170d3a26288fa",
+      "bytes": 11788
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_naive.txt",
+      "sha256": "9d5df19a16d8994d1c5d311621537888c1ae8f7f47254e67e513986aec572c32",
+      "bytes": 4897
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu-triton.txt",
+      "sha256": "27446935317885054a41ef459b3edf3aae26236c158034c70c8a8cad455cd0af",
+      "bytes": 6589
+    },
+    {
+      "path": "A3/evidence/commands/jobs/correctness.log",
+      "sha256": "8497f0c00a6a3c7a863ecd405b3cbc08dcfd8cd5942695b762916e91efc6da8c",
+      "bytes": 24098
+    },
+    {
+      "path": "A3/evidence/commands/jobs/correctness.exitcode",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "A3/evidence/commands/jobs/softmax.log",
+      "sha256": "a7ca6281bfa6a82a1ed7d19a2491bbdc218c70c0e8492ca209c82112b3772d85",
+      "bytes": 19507
+    },
+    {
+      "path": "A3/evidence/commands/jobs/softmax.exitcode",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    }
+  ]
+}

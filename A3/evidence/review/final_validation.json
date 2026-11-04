@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "readme_sha256": "fbee6e08fd37b821330b8e4aca5dd60f15bd6d1b377af2025073313802edb42c",
+  "relative_links": [
+    "images/01-environment.png",
+    "images/02-cpu-profiler.png",
+    "images/03-cpu-perfetto.png",
+    "src/softmax.py",
+    "images/04a-cpu-sql-average.png",
+    "images/04b-cpu-sql-total.png",
+    "scripts/perfetto_queries.sql",
+    "images/05-gpu-profiler.png",
+    "images/06-gpu-timeline.png",
+    "images/07-triton-profiler.png",
+    "images/08-triton-timeline.png",
+    "src/triton_softmax.py",
+    "images/09a-online-profiler.png",
+    "images/09-online-timeline.png",
+    "src/attention.py",
+    "images/10-attention-profiler.png",
+    "images/11-attention-timeline.png"
+  ],
+  "syntax_checked": [
+    "src/attention.py",
+    "src/softmax.py",
+    "src/triton_softmax.py",
+    "scripts/analyze_results.py",
+    "scripts/capture_perfetto.py",
+    "scripts/capture_terminal.py",
+    "scripts/check_attention.py",
+    "scripts/check_softmax.py",
+    "scripts/check_triton.py",
+    "scripts/environment.py",
+    "scripts/gpu_status.py",
+    "scripts/preflight_smoke.py",
+    "scripts/preflight_ssh.py",
+    "scripts/preflight_trace_check.py",
+    "scripts/profile_workload.py",
+    "scripts/teacher_softmax_preflight.py",
+    "scripts/validate_artifacts.py"
+  ],
+  "remote_source_files_match": true,
+  "remote_job_exitcodes": "all 0",
+  "correctness": [
+    {
+      "name": "school_softmax_cpu",
+      "cases": 16,
+      "passed": true
+    },
+    {
+      "name": "school_softmax_cuda",
+      "cases": 16,
+      "passed": true
+    },
+    {
+      "name": "school_triton",
+      "cases": 8,
+      "passed": true
+    },
+    {
+      "name": "school_attention_cpu",
+      "cases": 9,
+      "passed": true
+    },
+    {
+      "name": "school_attention_cuda",
+      "cases": 9,
+      "passed": true
+    }
+  ],
+  "complete_lossless_traces": 8,
+  "images": [
+    {
+      "path": "images/01-environment.png",
+      "width": 1600,
+      "height": 1000,
+      "sha256": "cd28afa0ca4c1abbbd6c87fb4ed10aca0433f499d1ed3a7eecffc04118a54776"
+    },
+    {
+      "path": "images/02-cpu-profiler.png",
+      "width": 1600,
+      "height": 1000,
+      "sha256": "ff234554d5d1564a907cb6afe8aac81489bef3dc501184af68c7dc644a966c5d"
+    },
+    {
+      "path": "images/03-cpu-perfetto.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "b198bcf7bb69dbd8ede32ad4c8f7444d418a878914354391350869de5170225d"
+    },
+    {
+      "path": "images/04a-cpu-sql-average.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "2694e4e6bf3a1c1c4ceb384d4b4e47067180f61aefe52016d975832a81f9ef2c"
+    },
+    {
+      "path": "images/04b-cpu-sql-total.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "68dbe71a9ddf091cfa3cd71e174bd4908aed5e27b0f48dded731d9db3088ef92"
+    },
+    {
+      "path": "images/05-gpu-profiler.png",
+      "width": 1950,
+      "height": 1000,
+      "sha256": "8ded42bd3d461d2dd8ad410f0f5de76572152d4179ddd433acef9c9a38ffc00d"
+    },
+    {
+      "path": "images/06-gpu-timeline.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "49df581fb3ea8cadb5c5de1e23418686efcda46c124908b4c410649ebc00144f"
+    },
+    {
+      "path": "images/07-triton-profiler.png",
+      "width": 1700,
+      "height": 900,
+      "sha256": "b23de16102778651cb06e27302bb83776eceabe597ee79bcd750752a3f327e28"
+    },
+    {
+      "path": "images/08-triton-timeline.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "29286c586235b35c55dd4c9ed107577148c071a7f08ecac74d27e14c3419fc81"
+    },
+    {
+      "path": "images/09-online-timeline.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "cb2569570c723f813a14702a84e6ed41524a59e36cff65b2ae3c72726cc425f6"
+    },
+    {
+      "path": "images/09a-online-profiler.png",
+      "width": 1950,
+      "height": 1000,
+      "sha256": "e996ca9e73acfe48c9f22a363705a4551bd19cfe2dace9079b61e76917d12b08"
+    },
+    {
+      "path": "images/10-attention-profiler.png",
+      "width": 1950,
+      "height": 1000,
+      "sha256": "49ff05aff1ae431a578c8e37b3e8010b6f5aa64b9e485cf98c2f793c76aa6770"
+    },
+    {
+      "path": "images/11-attention-timeline.png",
+      "width": 1800,
+      "height": 1200,
+      "sha256": "e84dd7d8e82e53d283489e0eee1b228d09b39df4379dab9ee7cd3d9270fe249b"
+    }
+  ],
+  "publication_files_checked": 372,
+  "secret_markers_found": 0,
+  "boundary": "Artifact self-check only; Engineering final review and teacher submission remain pending."
+}

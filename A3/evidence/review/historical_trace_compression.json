@@ -1,0 +1,20 @@
+[
+  {
+    "raw": "A3/evidence/remote_preflight/remote/logs/cpu_initial.trace.json",
+    "published": "A3/evidence/remote_preflight/remote/logs/cpu_initial.trace.json.gz",
+    "raw_sha256": "317657d118ec2d8125cb3bc3bc61641c6a8f4d9a77bc5f64ba6c5ea2f4e45bb5",
+    "gzip_sha256": "9ed8fbf8eba53fc391ee988b91ed2f8feec53aa2d9fff19c0531471382d32472",
+    "raw_bytes": 10121268,
+    "gzip_bytes": 650961,
+    "description": "Historical initialization/local diagnostic, not a school-server formal experiment."
+  },
+  {
+    "raw": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.trace.json",
+    "published": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.trace.json.gz",
+    "raw_sha256": "69d678f26ca389f1d9b8e8c22ca91459f31d49aa36fe82ac193b1acdd9d5f26c",
+    "gzip_sha256": "36d9a3b1942d6be1dc581f5a9f620258fd58a0e1bb4aba805e3cde4572ad65bf",
+    "raw_bytes": 1273871,
+    "gzip_bytes": 90116,
+    "description": "Historical initialization/local diagnostic, not a school-server formal experiment."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "new_system_packages": [],
+  "new_language_packages": [],
+  "new_toolchains": [],
+  "global_configuration_changes": [],
+  "remote_reused_python": "/data/bwwu/envs/tiger/bin/python",
+  "local_reused_tools": [
+    "Python3 standard library",
+    "poppler pdftotext/pdftoppm",
+    "Perfetto trace processor v59.1",
+    "Node22.22.0 with preinstalled Playwright/Chromium",
+    "authenticated Xvfb, cached P2 xterm, ffmpeg"
+  ],
+  "new_task_directories": [
+    "/home/bwwu/lab/SSO_A3",
+    "local .cache/a3-formal-transfer",
+    "local .cache/a3-formal-browser",
+    "local .cache/a3-git-integration"
+  ],
+  "retention": "Preserve results and backups through independent review. No cleanup of other projects, environments or shared caches."
+}

@@ -1,0 +1,47 @@
+Perfetto Trace Processor.
+Usage: /home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell [command] [flags] [trace_file]
+
+If no command is given, opens an interactive SQL shell on the trace file.
+
+trace_file can be a local path, an http(s):// URL, or a Perfetto UI share link
+(https://ui.perfetto.dev/#!/?s=<hash>).
+
+Commands:
+  query         Load a trace and run a SQL query.
+  interactive   Interactive SQL shell (default if no command is given).
+  convert       Convert trace format.
+  summarize     Compute a trace summary from specs and/or built-in metrics.
+  bundle        Bundle a trace with symbols and deobfuscation data.
+  util          Low-level trace utilities (symbolize, deobfuscate).
+  server        Start an RPC server (http or stdio).
+  export        Export a trace to a database file.
+  metrics       Run v1 metrics (deprecated; use 'summarize --metrics-v2').
+
+Common flags (apply to all commands):
+  -h, --help                  Show help (per-command if after a command).
+  -v, --version               Print version.
+      --no-progress           Disable live progress.
+      --quiet                 Suppress progress and routine status output.
+      --full-sort             Force full sort ignoring windowing.
+      --no-ftrace-raw         Prevent ingestion of typed ftrace into raw table.
+      --add-sql-package PATH  Register SQL files from a directory as a package.
+  -m, --metatrace FILE        Enable metatracing, write to FILE.
+
+Run '/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell help <command>' for per-command flags and details.
+Scripting or AI agent? Run '/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell help agent' for a short guide: keeping a trace
+loaded across many queries, discovering tables and the SQL standard library.
+
+Examples:
+  tp trace.pb                                       Interactive shell.
+  tp query trace.pb "SELECT ts, dur FROM slice"     Run a query.
+  tp query -f queries.sql trace.pb                  Run queries from file.
+  tp server http                                    Start HTTP server.
+  tp summarize --metrics-v2 all trace.pb            Summarize a trace.
+  tp convert json trace.pb out.json                 Convert to JSON.
+  tp query "https://.../trace.pftrace" "SELECT ..." Query a trace from a URL.
+  tp "https://ui.perfetto.dev/#!/?s=<hash>"         Open a UI share link.
+
+Classic interface:
+  The previous flat-flag interface (-q, --httpd, --summary, -e, etc.) is
+  fully supported and will remain so. Existing scripts will continue to work.
+  Run '/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell --help-classic' to see the classic flag reference.

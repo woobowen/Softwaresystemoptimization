@@ -1,0 +1,17 @@
+PASS naive  random_small                 abs_error=5.96046448e-08 row_sum_error=1.1920929e-07
+PASS online random_small                 abs_error=1.49011612e-08 row_sum_error=1.1920929e-07
+PASS naive  random_non_power_of_two      abs_error=1.11758709e-08 row_sum_error=1.1920929e-07
+PASS online random_non_power_of_two      abs_error=1.49011612e-08 row_sum_error=1.78813934e-07
+PASS naive  single_element               abs_error=0 row_sum_error=0
+PASS online single_element               abs_error=0 row_sum_error=0
+PASS naive  single_row                   abs_error=2.98023224e-08 row_sum_error=0
+PASS online single_row                   abs_error=7.4505806e-09 row_sum_error=0
+PASS naive  single_column                abs_error=0 row_sum_error=0
+PASS online single_column                abs_error=0 row_sum_error=0
+PASS naive  equal_elements_per_row       abs_error=0 row_sum_error=0
+PASS online equal_elements_per_row       abs_error=0 row_sum_error=0
+PASS naive  large_positive_negative      abs_error=0 row_sum_error=0
+PASS online large_positive_negative      abs_error=0 row_sum_error=0
+PASS naive  formal_100x5000              abs_error=4.65661287e-09 row_sum_error=1.1920929e-07
+PASS online formal_100x5000              abs_error=2.23517418e-08 row_sum_error=3.27825546e-06
+Overall: PASS; 16 checks; output=A3/evidence/correctness/local_softmax_cpu.json

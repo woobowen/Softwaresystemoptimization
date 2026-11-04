@@ -1,0 +1,43 @@
+EXITCODE
+    PID     ELAPSED STAT COMMAND
+2765124       00:09 S    bash jobs/worker.sh cpu
+
+LOG TAIL
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::exp",
+    "count": 200,
+    "cpu_total_us": 49893.072000000044,
+    "self_cpu_us": 49893.072000000044,
+    "cpu_avg_us": 249.46536000000023,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::div",
+    "count": 200,
+    "cpu_total_us": 48902.56600000011,
+    "self_cpu_us": 48902.56600000011,
+    "cpu_avg_us": 244.51283000000055,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  }
+]
+Filtered GPU top3: []
+GPU kernel us / complete call: 0.0
+
+RESULT FILES
+environment/school_cpu.json 7537 bytes
+commands/school_cpu_softmax_correctness.txt 1499 bytes
+commands/school_cpu_attention_correctness.txt 5040 bytes
+commands/school_cpu_environment.txt 7687 bytes
+commands/school_cpu_naive.txt 4897 bytes
+cpu/cpu_naive.cpu_table.txt 1760 bytes
+cpu/cpu_naive.metadata.json 2076 bytes
+cpu/cpu_naive.statistics.json 4553 bytes
+cpu/cpu_naive.trace.json 1326614 bytes
+correctness/school_softmax_cpu.json 8171 bytes
+correctness/school_attention_cpu.json 4895 bytes

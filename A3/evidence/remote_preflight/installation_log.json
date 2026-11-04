@@ -1,0 +1,23 @@
+{
+  "system_packages": [],
+  "language_packages": [],
+  "remote_installs": [],
+  "local_tools": [
+    {
+      "name": "Perfetto trace_processor_shell",
+      "version": "v59.1",
+      "path": "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell",
+      "url": "https://commondatastorage.googleapis.com/perfetto-luci-artifacts/v59.1/linux-amd64/trace_processor_shell",
+      "download_bytes": 15885448,
+      "sha256": "2434129a3af4dc9e2034a476f7b76447b490975213e301769310d3bd0d5d6458"
+    },
+    {
+      "name": "Official download manifest wrapper (not executed)",
+      "path": "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor",
+      "url": "https://get.perfetto.dev/trace_processor",
+      "download_bytes": 10698
+    }
+  ],
+  "total_download_bytes": 15896146,
+  "shell_or_ssh_config_changes": []
+}

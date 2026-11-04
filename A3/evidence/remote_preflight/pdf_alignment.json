@@ -1,0 +1,10 @@
+{
+  "teacher_pdf_sha256": "546edfed40e024ae4401af617628dbeadc404033f25e87ba097a1679d594db41",
+  "teacher_softmax_script_sha256": "b456dcae9067d06186d37d22eb23f6b518c4d54680efd7ab56d44dfb36aa3cb4",
+  "core_AST_equals_PDF_pages_4_5": true,
+  "algorithm_or_API_compatibility_modifications": [],
+  "PDF_reading": "All six pages text read; all six rendered pages inspected, including page 5 algorithm image.",
+  "online_recurrence": "m_new=max(m,x[:,j]); d=d*exp(m-m_new)+exp(x[:,j]-m_new); retain old m until d update; second pass computes y.",
+  "reference_versions": "PyTorch 2.13.0+cu130 / Triton 3.7.1 / A10 24GB are reference configuration; no version replacement performed.",
+  "appendix_precaution": "Triton compile and warmup outside with_stack=True profiling; no pip install triton -U."
+}

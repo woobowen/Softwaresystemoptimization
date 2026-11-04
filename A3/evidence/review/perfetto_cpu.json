@@ -1,0 +1,97 @@
+{
+  "trace": "/home/addaswsw/lab/Software_system_optimization/A3/evidence/cpu/cpu_naive.trace.json",
+  "trace_sha256": "574a0f1d541567265eced80464250d1018e6be458fa324b52d8e0e986445581b",
+  "ui_url": "https://ui.perfetto.dev/#!/viewer?local_cache_key=00000000-0000-0000-60c5-35498510ece7",
+  "browser": "149.0.7827.22",
+  "viewport": {
+    "width": 1800,
+    "height": 1200
+  },
+  "selected": [
+    {
+      "id": "42",
+      "ts": "2959468501086914",
+      "dur": "266674",
+      "name": "aten::exp"
+    }
+  ],
+  "launch": [],
+  "ancestors": [
+    {
+      "id": "25",
+      "name": "softmax.py(6): naive_softmax",
+      "ts": "2959468500382974",
+      "dur": "1424557"
+    }
+  ],
+  "bounds": {
+    "start": "2959468500382974",
+    "end": "2959468501807531"
+  },
+  "cached_official_urls": [
+    "https://ui.perfetto.dev/",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend.css",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/MaterialSymbolsOutlined.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/Roboto.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/stdlib_docs.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/brand.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/logo-3d.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/engine_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/trace_processor_memory64.wasm",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/RobotoMono-Regular.woff2",
+    "https://ui.perfetto.dev/service_worker.js?v=v59.1-79997ada9",
+    "https://ui.perfetto.dev/v59.1-79997ada9/manifest.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.html",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/base-page.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/joins_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/slices_example.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/time_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/add_columns.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/aggregation.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/counter_to_intervals.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/create_slices.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/dashboard.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_during.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_in.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/interval_intersect.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/join.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/favicon.png"
+  ],
+  "errors": [],
+  "timeline_body": "menu\nCURRENT TRACE\ncpu_naive.trace.json (2 MB)\nline_style\nTimeline\ninfo\nOverview\ndata_exploration\nData Explorer\ndatabase\nQuery (SQL)\nspeed\nMetrics\nfile_download\nDownload\nNEW TRACE\nfolder_open\nOpen trace file\nlibrary_books\nOpen multiple trace files\nfiber_smart_record\nRecord new trace\nmemory\nMemscope\nPREVIEW\nandroid\nOpen Android example\nlanguage\nOpen Chrome example\nSETTINGS\nsettings\nSettings\nemoji_flags\nFlags\nextension\nPlugins\nSUPPORT\nDocumentation & Bugs\nCONVERT TRACE\nConvert to other formats\nWSM\n0\nSW\nUPD\nv59.1-79997ada9\nunfold_more\nunfold_less\nkeep_off\nfilter_alt\nworkspacesDefault Workspace\nUnnamed SliceTrack\nexpand_less\npython 2765155\nthread 2765155 (python) 2765155\nmain thread\nexpand_more\nSpans 56784\nmore_vert\nCurrent Selection\nvertical_align_top\nkeyboard_arrow_down\nSlice\naten::exp\nContextual Optionsarrow_drop_down\nDetails\nName\naten::exp\nCategory\ncpu_op\nStart time\n00:00:00.000839557\nDuration\n266\u00b5s 674ns\nThread\nthread 2765155 (python) [2765155]\nProcess\npython [2765155]\nSQL ID\nslice[42]arrow_drop_down\nArguments\nargs\nExternal idarrow_drop_down\n15\nRecord function idarrow_drop_down\n0\nEv Idxarrow_drop_down\n14\nHistogram for 'aten::exp'\nhelp_outline\nScope:\nhelp_outline\nThis trackarrow_drop_down\nCount\n-\nTotal\n-\nMin\n-\nMean\n-\nMax\n-\np50\n-\np75\n-\np95\n-\np99\n-\np99.9\n-\nLoad distribution\nsyncTimeline Sync",
+  "import_statistics": [],
+  "sql": [
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/.cache/a3-formal-browser/exp_avg.sql",
+      "image": "/home/addaswsw/lab/Software_system_optimization/A3/images/04a-cpu-sql-average.png",
+      "text": "-- 2.3 \u7b2c2\u95ee\uff1adur \u7684\u5355\u4f4d ns\uff0c\u7ed3\u679c\u4e3a\u79d2\u3002\nSELECT AVG(dur) / 1e9\nFROM slice\nWHERE name = 'aten::exp';",
+      "body": "menu\nCURRENT TRACE\ncpu_naive.trace.json (2 MB)\nline_style\nTimeline\ninfo\nOverview\ndata_exploration\nData Explorer\ndatabase\nQuery (SQL)\nspeed\nMetrics\nfile_download\nDownload\nNEW TRACE\nfolder_open\nOpen trace file\nlibrary_books\nOpen multiple trace files\nfiber_smart_record\nRecord new trace\nmemory\nMemscope\nPREVIEW\nandroid\nOpen Android example\nlanguage\nOpen Chrome example\nSETTINGS\nsettings\nSettings\nemoji_flags\nFlags\nextension\nPlugins\nSUPPORT\nDocumentation & Bugs\nCONVERT TRACE\nConvert to other formats\nWSM\n0\nSW\nUPD\nv59.1-79997ada9\ncode\nQuery 1\nadd\nright_panel_close\nplay_arrowRun Query\nor press\nCtrl\nkeyboard_return\nformat_align_leftFormat\n1\n2\n3\n4\n-- 2.3 \u7b2c2\u95ee\uff1adur \u7684\u5355\u4f4d ns\uff0c\u7ed3\u679c\u4e3a\u79d2\u3002\nSELECT AVG(dur) / 1e9\nFROM slice\nWHERE name = 'aten::exp';\nReturned 1 rows in\n0 ms\nadd_chartAdd debug track\ndownloadExport\nAVG(dur) / 1e9\n0.00024946536\nhistory\nHistory\ntable_chart\nTables\nQuery history (1 queries)\n-- 2.3 \u7b2c2\u95ee\uff1adur \u7684\u5355\u4f4d ns\uff0c\u7ed3\u679c\u4e3a\u79d2\u3002\nSELECT AVG(dur) / 1e9\nFROM slice\nWHERE name = 'aten::exp';\nsyncTimeline Sync"
+    },
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/.cache/a3-formal-browser/exp_total.sql",
+      "image": "/home/addaswsw/lab/Software_system_optimization/A3/images/04b-cpu-sql-total.png",
+      "text": "WITH cpu_roots AS (\n    SELECT s.id, s.dur\n    FROM slice s\n    WHERE s.category = 'cpu_op' AND s.dur >= 0\n      AND NOT EXISTS (\n          SELECT 1 FROM ancestor_slice(s.id) a WHERE a.category = 'cpu_op'\n      )\n), exp_calls AS (\n    SELECT COUNT(*) AS calls, SUM(dur) AS total_ns, AVG(dur) AS avg_ns\n    FROM slice\n    WHERE category = 'cpu_op' AND name = 'aten::exp' AND dur >= 0\n), cpu_total AS (\n    SELECT SUM(dur) AS total_ns FROM cpu_roots\n)\nSELECT e.calls, e.total_ns / 1e6 AS exp_total_ms,\n       e.avg_ns / 1e3 AS exp_avg_us,\n       t.total_ns / 1e6 AS all_self_cpu_ms,\n       100.0 * e.total_ns / t.total_ns AS exp_cpu_total_pct\nFROM exp_calls e CROSS JOIN cpu_total t;\n",
+      "body": "menu\nCURRENT TRACE\ncpu_naive.trace.json (2 MB)\nline_style\nTimeline\ninfo\nOverview\ndata_exploration\nData Explorer\ndatabase\nQuery (SQL)\nspeed\nMetrics\nfile_download\nDownload\nNEW TRACE\nfolder_open\nOpen trace file\nlibrary_books\nOpen multiple trace files\nfiber_smart_record\nRecord new trace\nmemory\nMemscope\nPREVIEW\nandroid\nOpen Android example\nlanguage\nOpen Chrome example\nSETTINGS\nsettings\nSettings\nemoji_flags\nFlags\nextension\nPlugins\nSUPPORT\nDocumentation & Bugs\nCONVERT TRACE\nConvert to other formats\nWSM\n0\nSW\nUPD\nv59.1-79997ada9\ncode\nQuery 1\nadd\nright_panel_close\nplay_arrowRun Query\nor press\nCtrl\nkeyboard_return\nformat_align_leftFormat\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\nWITH cpu_roots AS (\n    SELECT s.id, s.dur\n    FROM slice s\n    WHERE s.category = 'cpu_op' AND s.dur >= 0\n      AND NOT EXISTS (\n          SELECT 1 FROM ancestor_slice(s.id) a WHERE a.category = 'cpu_op'\n      )\n), exp_calls AS (\n    SELECT COUNT(*) AS calls, SUM(dur) AS total_ns, AVG(dur) AS avg_ns\n    FROM slice\n    WHERE category = 'cpu_op' AND name = 'aten::exp' AND dur >= 0\n), cpu_total AS (\n    SELECT SUM(dur) AS total_ns FROM cpu_roots\n)\nSELECT e.calls, e.total_ns / 1e6 AS exp_total_ms,\n       e.avg_ns / 1e3 AS exp_avg_us,\n       t.total_ns / 1e6 AS all_self_cpu_ms,\n       100.0 * e.total_ns / t.total_ns AS exp_cpu_total_pct\nFROM exp_calls e CROSS JOIN cpu_total t;\n\n\nReturned 1 rows in\n6 ms\nadd_chartAdd debug track\ndownloadExport\ncalls\nexp_total_ms\nexp_avg_us\nall_self_cpu_ms\nexp_cpu_total_pct\n200\n49.893072\n249.46535999999998\n264.485312\n18.864212769592285\nhistory\nHistory\ntable_chart\nTables\nQuery history (2 queries)\nWITH cpu_roots AS (\n    SELECT s.id, s.dur\n    FROM slice s\n    WHERE s.category = 'cpu_op' AND s.dur >= 0\n      AND NOT EXISTS (\n          SELECT 1 FROM ancestor_slice(s.id) a WHERE a.category = 'cpu_op'\n      )\n), exp_calls AS (\n    SELECT COUNT(*) AS calls, SUM(dur) AS total_ns, AVG(dur) AS avg_ns\n    FROM slice\n    WHERE category = 'cpu_op' AND name = 'aten::exp' AND dur >= 0\n), cpu_total AS (\n    SELECT SUM(dur) AS total_ns FROM cpu_roots\n)\nSELECT e.calls, e.total_ns / 1e6 AS exp_total_ms,\n       e.avg_ns / 1e3 AS exp_avg_us,\n       t.total_ns / 1e6 AS all_self_cpu_ms,\n       100.0 * e.total_ns / t.total_ns AS exp_cpu_total_pct\nFROM exp_calls e CROSS JOIN cpu_total t;\n\n-- 2.3 \u7b2c2\u95ee\uff1adur \u7684\u5355\u4f4d ns\uff0c\u7ed3\u679c\u4e3a\u79d2\u3002\nSELECT AVG(dur) / 1e9\nFROM slice\nWHERE name = 'aten::exp';\nsyncTimeline Sync"
+    }
+  ],
+  "images": [
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/A3/images/03-cpu-perfetto.png",
+      "sha256": "b198bcf7bb69dbd8ede32ad4c8f7444d418a878914354391350869de5170225d"
+    },
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/A3/images/04a-cpu-sql-average.png",
+      "sha256": "2694e4e6bf3a1c1c4ceb384d4b4e47067180f61aefe52016d975832a81f9ef2c"
+    },
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/A3/images/04b-cpu-sql-total.png",
+      "sha256": "68dbe71a9ddf091cfa3cd71e174bd4908aed5e27b0f48dded731d9db3088ef92"
+    }
+  ],
+  "image_hashes_recorded_after_capture": true,
+  "playwright_version": "1.61.0-alpha-1781023400000"
+}

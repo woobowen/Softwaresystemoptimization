@@ -1,0 +1,11 @@
+RECONNECT_UTC: 2026-11-04T17:31:37+00:00
+Detached CPU job output:
+2026-11-04T17:30:20+00:00
+detached_cpu_probe_complete
+Detached exit status: 0
+Own background PID state (if retained as zombie):
+
+UNMASKED CUDA DEVICE ENUMERATION (no tensor allocations)
+is_available: True
+device_count: 2
+context_initialized: False

@@ -1,0 +1,215 @@
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmpg1lvywze/main.c:5:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmpg1lvywze/main.c:1:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /data/bwwu/envs/tiger/include/python3.10/Python.h:8,
+                 from /tmp/tmppufs_kge/main.c:4:
+/data/bwwu/envs/tiger/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1643 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmppufs_kge/main.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+        preflight::triton        29.48%       1.289ms        99.78%       4.364ms       4.364ms       0.000us         0.00%       0.000us       0.000us             1  
+         aten::empty_like         0.69%      29.966us        69.52%       3.040ms       3.040ms       0.000us         0.00%       0.000us       0.000us             1  
+      aten::empty_strided        68.83%       3.010ms        68.83%       3.010ms       3.010ms       0.000us         0.00%       0.000us       0.000us             1  
+           cuLaunchKernel         0.78%      34.199us         0.78%      34.199us      34.199us       0.000us         0.00%       0.000us       0.000us             1  
+    cudaDeviceSynchronize         0.22%       9.489us         0.22%       9.489us       4.745us       0.000us         0.00%       0.000us       0.000us             2  
+           softmax_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       1.504us       100.00%       1.504us       1.504us             1  
+        preflight::triton         0.00%       0.000us         0.00%       0.000us       0.000us       1.504us       100.00%       1.504us       1.504us             1  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.373ms
+Self CUDA time total: 1.504us
+
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+           softmax_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       1.504us       100.00%       1.504us       1.504us             1  
+        preflight::triton         0.00%       0.000us         0.00%       0.000us       0.000us       1.504us       100.00%       1.504us       1.504us             1  
+        preflight::triton        29.48%       1.289ms        99.78%       4.364ms       4.364ms       0.000us         0.00%       0.000us       0.000us             1  
+         aten::empty_like         0.69%      29.966us        69.52%       3.040ms       3.040ms       0.000us         0.00%       0.000us       0.000us             1  
+      aten::empty_strided        68.83%       3.010ms        68.83%       3.010ms       3.010ms       0.000us         0.00%       0.000us       0.000us             1  
+           cuLaunchKernel         0.78%      34.199us         0.78%      34.199us      34.199us       0.000us         0.00%       0.000us       0.000us             1  
+    cudaDeviceSynchronize         0.22%       9.489us         0.22%       9.489us       4.745us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.373ms
+Self CUDA time total: 1.504us
+
+{
+  "profiled_calls": 1,
+  "with_stack": true,
+  "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/triton.trace.json",
+  "trace_bytes": 168869,
+  "aten_events": [
+    "aten::empty_like",
+    "aten::empty_strided"
+  ],
+  "profiler_cuda_events": 2,
+  "profiler_cuda_duration_us": 3.007999999999811,
+  "trace_kernel_events": 1,
+  "trace_kernel_duration_us": 1.504,
+  "kernel_names": [
+    "softmax_kernel"
+  ],
+  "events_with_stack": 0,
+  "stack_example": [],
+  "python_function_events": 606,
+  "python_function_examples": [
+    "teacher_softmax_preflight.py(45): softmax"
+  ],
+  "categories": {
+    "user_annotation": 1,
+    "cpu_op": 2,
+    "python_function": 606,
+    "kernel": 1,
+    "ac2g": 4,
+    "cuda_driver": 1,
+    "cuda_runtime": 2,
+    "gpu_user_annotation": 1,
+    "": 60,
+    "Trace": 1
+  }
+}
+{
+  "stage": "triton",
+  "utc": "2026-11-04T17:31:38.216365+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "device": {
+    "logical_device": 0,
+    "visible_device_count": 1,
+    "name": "NVIDIA GeForce RTX 4090",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_memory_bytes": 25252724736
+  },
+  "triton_version": "3.2.0",
+  "target": "GPUTarget(backend='cuda', arch=89, warp_size=32)",
+  "properties": {
+    "max_shared_mem": 101376,
+    "max_num_regs": 65536,
+    "multiprocessor_count": 128,
+    "warpSize": 32,
+    "sm_clock_rate": 2520000,
+    "mem_clock_rate": 10501000,
+    "mem_bus_width": 384
+  },
+  "bundled_ptxas": "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/bin/ptxas",
+  "ptxas_version": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Tue_Feb_27_16:15:50_PST_2024\nCuda compilation tools, release 12.4, V12.4.99\nBuild cuda_12.4.r12.4/compiler.33961263_0\n",
+  "compiled_specializations": [
+    {
+      "shape": [
+        4,
+        127
+      ],
+      "BLOCK_SIZE": 128,
+      "num_warps": 8,
+      "num_stages": 2,
+      "n_regs": 24,
+      "shared_bytes": 528,
+      "occupancy": 10,
+      "persistent_programs": 4,
+      "correctness": {
+        "shape": [
+          4,
+          127
+        ],
+        "dtype": "torch.float32",
+        "max_abs_error": 1.4901161193847656e-08,
+        "finite": true,
+        "row_sum_max_abs_error": 1.1920928955078125e-07
+      }
+    },
+    {
+      "shape": [
+        100,
+        5000
+      ],
+      "BLOCK_SIZE": 8192,
+      "num_warps": 8,
+      "num_stages": 2,
+      "n_regs": 80,
+      "shared_bytes": 32800,
+      "occupancy": 3,
+      "persistent_programs": 100,
+      "correctness": {
+        "shape": [
+          100,
+          5000
+        ],
+        "dtype": "torch.float32",
+        "max_abs_error": 9.313225746154785e-10,
+        "finite": true,
+        "row_sum_max_abs_error": 2.384185791015625e-07
+      }
+    }
+  ],
+  "profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/triton.trace.json",
+    "trace_bytes": 168869,
+    "aten_events": [
+      "aten::empty_like",
+      "aten::empty_strided"
+    ],
+    "profiler_cuda_events": 2,
+    "profiler_cuda_duration_us": 3.007999999999811,
+    "trace_kernel_events": 1,
+    "trace_kernel_duration_us": 1.504,
+    "kernel_names": [
+      "softmax_kernel"
+    ],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 606,
+    "python_function_examples": [
+      "teacher_softmax_preflight.py(45): softmax"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 2,
+      "python_function": 606,
+      "kernel": 1,
+      "ac2g": 4,
+      "cuda_driver": 1,
+      "cuda_runtime": 2,
+      "gpu_user_annotation": 1,
+      "": 60,
+      "Trace": 1
+    }
+  },
+  "teacher_softmax_launches": {
+    "4x127": 2,
+    "100x5000": 1
+  },
+  "cache_directory": "/home/bwwu/lab/SSO_A3_preflight/cache/triton",
+  "peak_tensor_allocated_bytes": 14007296,
+  "peak_allocator_reserved_bytes": 23068672,
+  "gpu_process_snapshot": "gpu_uuid, pid, used_gpu_memory [MiB]\nGPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, 2762017, 482 MiB\n",
+  "loaded_cuda_libraries": [
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_cupti/lib/libcupti.so.12",
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.595.91.07"
+  ],
+  "result": "PASS"
+}

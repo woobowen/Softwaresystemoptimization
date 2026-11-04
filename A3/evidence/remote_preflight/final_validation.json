@@ -1,0 +1,71 @@
+{
+  "recorded_utc": "2026-11-04T17:41:49.088250+00:00",
+  "old_A3_files_unchanged": 41,
+  "teacher_pdf_unchanged": true,
+  "git_head_unchanged": true,
+  "syntax_checks": {
+    "new_python_ast": true,
+    "new_shell_bash_n": true
+  },
+  "new_scripts": {
+    "A3/scripts/preflight_inventory.sh": "9ab45ef33dbdb6e49d5ba610372d9251e59bbd6663256596ee9e9318ee3ce759",
+    "A3/scripts/preflight_perfetto.sql": "a8195231d221c2c609ea2e274785b43da762fd868543b9f94d052078eed5895f",
+    "A3/scripts/preflight_run.sh": "c6ed75cfeb1d6bcac0ea86a3a56bb7116cd64d0d16d2829c33a6f3e032032778",
+    "A3/scripts/preflight_smoke.py": "f455b6721fe888d6c3ead4731292ecae0391f53c88a13d303e4baf5688a062e7",
+    "A3/scripts/preflight_ssh.py": "7915911fc9721c2de16b88b6d554d1af920b4090b9545dab884f97550635f7ea",
+    "A3/scripts/preflight_trace_check.py": "ee425b8eb4ea68ab263431f2847fcd3d85412842f091ef5bb7e5c41822b0fe90",
+    "A3/scripts/teacher_softmax_preflight.py": "b456dcae9067d06186d37d22eb23f6b518c4d54680efd7ab56d44dfb36aa3cb4"
+  },
+  "remote_stage_exitcodes": {
+    "triton": "0",
+    "extras": "0",
+    "cuda": "0",
+    "cpu": "0",
+    "detached": "0",
+    "cpu_initial": "0"
+  },
+  "perfetto_checked_traces": 4,
+  "real_gpu_kernels": 10,
+  "gpu_kernels_with_verified_flow_and_python_ancestor": 10,
+  "remote_artifact_sha256_match_count": 28,
+  "git_status": "## main...origin/main [behind 2]\n?? A3/\n?? P1_Documentation_Rewrite_V2_Codex_Prompt.md\n?? P1_Goal1_Codex_Prompt.md\n?? P1_Goal2R_Codex_Prompt.md\n?? P1_Goal2_Codex_Prompt.md\n?? P1_Goal3_Codex_Prompt.md\n?? P1_Submission_Codex_Prompt.md\n?? P2/\n?? matrix_multiplication.c\n",
+  "windows_ssh_config_metadata": {
+    "/mnt/c/Users/lenovo/.ssh/config": {
+      "mtime_utc": "2026-10-07T16:19:01.834889+00:00"
+    },
+    "/mnt/c/Users/lenovo/.ssh/known_hosts": {
+      "mtime_utc": "2026-09-16T01:58:35.153221+00:00"
+    }
+  },
+  "new_bytecode_cleaned": [
+    "A3/scripts/__pycache__/preflight_ssh.cpython-312.pyc"
+  ],
+  "not_executed": [
+    "formal 200-call sampling",
+    "full-size Online profiling",
+    "formal Attention comparisons",
+    "large benchmarks",
+    "training/inference",
+    "system or dependency installs on server",
+    "GitHub or Shuishan network operations",
+    "git commit/push"
+  ],
+  "limitations": [
+    "Perfetto GUI not operated; native SQL importer was used",
+    "quota utility absent; no quota guarantee",
+    "screen availability checked, only nohup detach behavior tested"
+  ],
+  "finalized_utc": "2026-11-04T17:48:12.132699+00:00",
+  "git_head": "65c2128e142bf59a6e19ff635b760be3729abbac",
+  "reviewed_local_links": 46,
+  "command_records": 28,
+  "command_output_links_valid": true,
+  "credential_pattern_scan": {
+    "scanned_files": 119,
+    "matches": []
+  },
+  "final_bridge_check_exit": 0,
+  "final_gpu_observation_utc": "2026-11-04T17:42:30+00:00",
+  "local_original_pdf_sha256_matches": true,
+  "package_validation_expected": "CRC, per-file SHA-256, Markdown link closure, no caches/binaries/old A3 inputs"
+}

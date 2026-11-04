@@ -1,0 +1,190 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                   preflight::attention        11.71%     485.280us        99.72%       4.133ms       4.133ms       0.000us         0.00%       6.368us       6.368us             1  
+                                           aten::matmul         0.23%       9.462us        84.06%       3.484ms       1.742ms       0.000us         0.00%       3.904us       1.952us             2  
+                                               aten::mm        82.63%       3.425ms        83.83%       3.475ms       1.737ms       3.904us        61.31%       3.904us       1.952us             2  
+                                       cudaLaunchKernel         2.06%      85.248us         2.06%      85.248us      21.312us       0.000us         0.00%       0.000us       0.000us             4  
+                                          aten::numpy_T         0.59%      24.309us         1.48%      61.164us      61.164us       0.000us         0.00%       0.000us       0.000us             1  
+                                              aten::div         0.91%      37.552us         1.35%      55.870us      55.870us       1.216us        19.10%       1.216us       1.216us             1  
+                                          aten::softmax         0.23%       9.423us         1.13%      46.862us      46.862us       0.000us         0.00%       1.248us       1.248us             1  
+                                         aten::_softmax         0.49%      20.128us         0.90%      37.439us      37.439us       1.248us        19.60%       1.248us       1.248us             1  
+                                          aten::permute         0.71%      29.274us         0.89%      36.855us      36.855us       0.000us         0.00%       0.000us       0.000us             1  
+                                  cudaDeviceSynchronize         0.28%      11.516us         0.28%      11.516us       5.758us       0.000us         0.00%       0.000us       0.000us             2  
+                                       aten::as_strided         0.18%       7.581us         0.18%       7.581us       7.581us       0.000us         0.00%       0.000us       0.000us             1  
+                                   preflight::attention         0.00%       0.000us         0.00%       0.000us       0.000us     226.080us      3550.25%     226.080us     226.080us             1  
+void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, fa...         0.00%       0.000us         0.00%       0.000us       0.000us       2.048us        32.16%       2.048us       2.048us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       1.216us        19.10%       1.216us       1.216us             1  
+void (anonymous namespace)::softmax_warp_forward<flo...         0.00%       0.000us         0.00%       0.000us       0.000us       1.248us        19.60%       1.248us       1.248us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.145ms
+Self CUDA time total: 6.368us
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                   preflight::attention         0.00%       0.000us         0.00%       0.000us       0.000us     226.080us      3550.25%     226.080us     226.080us             1  
+                                   preflight::attention        11.71%     485.280us        99.72%       4.133ms       4.133ms       0.000us         0.00%       6.368us       6.368us             1  
+                                           aten::matmul         0.23%       9.462us        84.06%       3.484ms       1.742ms       0.000us         0.00%       3.904us       1.952us             2  
+                                               aten::mm        82.63%       3.425ms        83.83%       3.475ms       1.737ms       3.904us        61.31%       3.904us       1.952us             2  
+void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, fa...         0.00%       0.000us         0.00%       0.000us       0.000us       2.048us        32.16%       2.048us       2.048us             1  
+void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, fal...         0.00%       0.000us         0.00%       0.000us       0.000us       1.856us        29.15%       1.856us       1.856us             1  
+                                          aten::softmax         0.23%       9.423us         1.13%      46.862us      46.862us       0.000us         0.00%       1.248us       1.248us             1  
+                                         aten::_softmax         0.49%      20.128us         0.90%      37.439us      37.439us       1.248us        19.60%       1.248us       1.248us             1  
+void (anonymous namespace)::softmax_warp_forward<flo...         0.00%       0.000us         0.00%       0.000us       0.000us       1.248us        19.60%       1.248us       1.248us             1  
+                                              aten::div         0.91%      37.552us         1.35%      55.870us      55.870us       1.216us        19.10%       1.216us       1.216us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       1.216us        19.10%       1.216us       1.216us             1  
+                                          aten::numpy_T         0.59%      24.309us         1.48%      61.164us      61.164us       0.000us         0.00%       0.000us       0.000us             1  
+                                          aten::permute         0.71%      29.274us         0.89%      36.855us      36.855us       0.000us         0.00%       0.000us       0.000us             1  
+                                       aten::as_strided         0.18%       7.581us         0.18%       7.581us       7.581us       0.000us         0.00%       0.000us       0.000us             1  
+                                       cudaLaunchKernel         2.06%      85.248us         2.06%      85.248us      21.312us       0.000us         0.00%       0.000us       0.000us             4  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.145ms
+Self CUDA time total: 6.368us
+
+{
+  "profiled_calls": 1,
+  "with_stack": true,
+  "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/attention.trace.json",
+  "trace_bytes": 101994,
+  "aten_events": [
+    "aten::_softmax",
+    "aten::as_strided",
+    "aten::div",
+    "aten::matmul",
+    "aten::mm",
+    "aten::numpy_T",
+    "aten::permute",
+    "aten::softmax"
+  ],
+  "profiler_cuda_events": 5,
+  "profiler_cuda_duration_us": 232.44800000000032,
+  "trace_kernel_events": 4,
+  "trace_kernel_duration_us": 6.368,
+  "kernel_names": [
+    "void (anonymous namespace)::softmax_warp_forward<float, float, float, 4, false, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+    "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+    "void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",
+    "void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)"
+  ],
+  "events_with_stack": 0,
+  "stack_example": [],
+  "python_function_events": 322,
+  "python_function_examples": [
+    "preflight_smoke.py(35): attention",
+    "<built-in method softmax of type object at 0x7649ac990ec0>"
+  ],
+  "categories": {
+    "user_annotation": 1,
+    "cpu_op": 10,
+    "python_function": 322,
+    "kernel": 4,
+    "ac2g": 10,
+    "cuda_runtime": 6,
+    "gpu_user_annotation": 1,
+    "": 60,
+    "Trace": 1
+  }
+}
+{
+  "stage": "extras",
+  "utc": "2026-11-04T17:32:35.115476+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "device": {
+    "logical_device": 0,
+    "visible_device_count": 1,
+    "name": "NVIDIA GeForce RTX 4090",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_memory_bytes": 25252724736
+  },
+  "online_4x32": {
+    "cpu": {
+      "shape": [
+        4,
+        32
+      ],
+      "dtype": "torch.float32",
+      "max_abs_error": 1.4901161193847656e-08,
+      "finite": true,
+      "row_sum_max_abs_error": 0.0
+    },
+    "cuda:0": {
+      "shape": [
+        4,
+        32
+      ],
+      "dtype": "torch.float32",
+      "max_abs_error": 2.9802322387695312e-08,
+      "finite": true,
+      "row_sum_max_abs_error": 1.1920928955078125e-07
+    }
+  },
+  "attention_16x64": {
+    "shape": [
+      16,
+      64
+    ],
+    "dtype": "torch.float32",
+    "max_abs_error": 2.384185791015625e-07,
+    "finite": true
+  },
+  "attention_profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/attention.trace.json",
+    "trace_bytes": 101994,
+    "aten_events": [
+      "aten::_softmax",
+      "aten::as_strided",
+      "aten::div",
+      "aten::matmul",
+      "aten::mm",
+      "aten::numpy_T",
+      "aten::permute",
+      "aten::softmax"
+    ],
+    "profiler_cuda_events": 5,
+    "profiler_cuda_duration_us": 232.44800000000032,
+    "trace_kernel_events": 4,
+    "trace_kernel_duration_us": 6.368,
+    "kernel_names": [
+      "void (anonymous namespace)::softmax_warp_forward<float, float, float, 4, false, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)",
+      "void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",
+      "void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)"
+    ],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 322,
+    "python_function_examples": [
+      "preflight_smoke.py(35): attention",
+      "<built-in method softmax of type object at 0x7649ac990ec0>"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 10,
+      "python_function": 322,
+      "kernel": 4,
+      "ac2g": 10,
+      "cuda_runtime": 6,
+      "gpu_user_annotation": 1,
+      "": 60,
+      "Trace": 1
+    }
+  },
+  "peak_tensor_allocated_bytes": 8557056,
+  "peak_allocator_reserved_bytes": 23068672,
+  "gpu_process_snapshot": "gpu_uuid, pid, used_gpu_memory [MiB]\nGPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, 2762208, 492 MiB\n",
+  "loaded_cuda_libraries": [
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_cupti/lib/libcupti.so.12",
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.595.91.07"
+  ],
+  "result": "PASS"
+}

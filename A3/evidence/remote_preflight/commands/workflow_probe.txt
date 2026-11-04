@@ -1,0 +1,10 @@
+DETACHED_LAUNCH_UTC: 2026-11-04T17:30:12+00:00
+Own short CPU job PID: 2761910
+
+CPU TRACE INITIALIZATION DIAGNOSTIC
+Most common Python call frames: [('<built-in method __new__ of type object at 0x65520be86720>', 4764), ('<string>(1): <lambda>', 4763), ('<built-in function len>', 3561), ('<built-in method match of re.Pattern object at 0x712d5830e880>', 3284), ('<built-in method span of re.Match object at 0x712c8ec829f0>', 3267), ('<built-in method isidentifier of str object at 0x712d5859d270>', 2457), ('<built-in function isinstance>', 2087), ('<built-in method decode of bytes object at 0x712c8ecaf0b0>', 1375), ('tokenize.py(600): _tokenize', 1329), ('tokenize.py(592): _tokenize', 1126), ('tokenize.py(505): _tokenize', 873), ('<built-in method rstrip of str object at 0x712d5835dd80>', 636)]
+Longest Python frames: [('preflight_smoke.py(214): <module>', 129765.235), ('preflight_smoke.py(135): main', 129763.895), ('preflight_smoke.py(60): profile_once', 129762.21), ('torch/profiler/profiler.py(789): __enter__', 111979.423), ('torch/profiler/profiler.py(799): start', 111977.645), ('torch/profiler/profiler.py(852): _transit_action', 111975.98), ('torch/profiler/profiler.py(199): start_trace', 111974.883), ('<built-in function hasattr>', 111880.228), ('torch/__init__.py(2665): __getattr__', 111876.667), ('importlib/__init__.py(108): import_module', 111867.698), ('<frozen importlib._bootstrap>(1038): _gcd_import', 111860.731), ('<frozen importlib._bootstrap>(1022): _find_and_load', 111830.151)]
+
+INTENTIONAL NONZERO REMOTE SCRIPT
+A3 transfer probe: exit status 17 is intentional.
+REMOTE_PROBE_EXIT=17

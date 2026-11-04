@@ -1,0 +1,22 @@
+{
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "os_release": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 24.04.2 LTS",
+    "VERSION_ID": "24.04",
+    "VERSION": "24.04.2 LTS (Noble Numbat)",
+    "VERSION_CODENAME": "noble",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "noble",
+    "LOGO": "ubuntu-logo"
+  },
+  "python": "3.12.3",
+  "pdf_sha256": "546edfed40e024ae4401af617628dbeadc404033f25e87ba097a1679d594db41",
+  "pdf_pages": 6,
+  "pdf_read": "Full pdftotext and six rendered pages inspected, including Algorithm 3 image."
+}

@@ -1,0 +1,25 @@
+"AVG(dur) / 1e9"
+0.000010
+
+"category","event_count","duration_ns"
+"[NULL]",2,0
+"Trace",1,959699
+"cpu_op",23,206498
+"python_function",237,6172560
+"user_annotation",1,560807
+
+"name","ts","dur"
+
+"launch_name","kernel_name","launch_ts_ns","kernel_ts_ns","kernel_dur_ns"
+
+"leaf_id","level","name","category"
+182,0,"aten::exp","cpu_op"
+182,1,"<built-in method exp of type object at 0x7c23ce590ec0>","python_function"
+182,2,"preflight_smoke.py(13): naive_softmax","python_function"
+182,3,"preflight_smoke.py(138): <lambda>","python_function"
+182,4,"preflight_smoke.py(63): profile_once","python_function"
+182,5,"preflight_smoke.py(138): main","python_function"
+182,6,"preflight_smoke.py(217): <module>","python_function"
+
+"name","value","severity"
+"slice_spill_overlapping_complete_event",1,"error"

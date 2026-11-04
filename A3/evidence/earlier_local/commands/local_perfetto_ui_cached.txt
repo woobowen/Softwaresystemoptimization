@@ -1,0 +1,110 @@
+navigation complete
+failed resource http://127.0.0.1:9001/status { errorText: 'net::ERR_CONNECTION_REFUSED' }
+open trace control ready
+failed resource http://127.0.0.1:9001/status { errorText: 'net::ERR_CONNECTION_REFUSED' }
+Cached official WASM https://ui.perfetto.dev/v59.1-79997ada9/trace_processor_memory64.wasm
+failed resource https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://storage.cloud.google.com/perfetto-ui-internal/internal-data-v1/amalgamated.js&followup=https://storage.cloud.google.com/perfetto-ui-internal/internal-data-v1/amalgamated.js { errorText: 'net::ERR_BLOCKED_BY_ORB' }
+failed resource https://perfetto-gae-internal.googleplex.com/extension_server_assets/manifest { errorText: 'net::ERR_FAILED' }
+failed resource https://www.google-analytics.com/g/collect?v=2&tid=G-BD89KT2P3C&gtm=45je6b21v9123610888za200zd9123610888xf1&_p=1793789483485&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=EA&_geo=1&_rdi=1&are=1&cid=1668046108.1793789488&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=19&ul=en-us&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034~123691370~123692836~123814946&dl=https%3A%2F%2Fui.perfetto.dev%2F&dr=&dt=no-page-title&dp=https%3A%2F%2Fui.perfetto.dev%2F&sid=1793789488&sct=1&seg=0&_tu=AAg&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.anonymize_ip=true&ep.perfetto_version=v59.1-79997ada9&ep.perfetto_channel=stable&ep.perfetto_referrer_override=&ep.perfetto_is_internal_user=0&tfd=14054 { errorText: 'net::ERR_ABORTED' }
+menu
+CURRENT TRACE
+cpu_naive.trace.json (2 MB)
+line_style
+Timeline
+info
+Overview
+data_exploration
+Data Explorer
+database
+Query (SQL)
+speed
+Metrics
+file_download
+Download
+NEW TRACE
+folder_open
+Open trace file
+library_books
+Open multiple trace files
+fiber_smart_record
+Record new trace
+memory
+Memscope
+PREVIEW
+android
+Open Android example
+language
+Open Chrome example
+SETTINGS
+settings
+Settings
+emoji_flags
+Flags
+extension
+Plugins
+SUPPORT
+Documentation & Bugs
+CONVERT TRACE
+Convert to other formats
+WSM
+0
+SW
+N/A
+v59.1-79997ada9
+unfold_more
+unfold_less
+keep_off
+filter_alt
+workspacesDefault Workspace
+Unnamed SliceTrack
+expand_more
+python 17388
+expand_more
+Spans 56926
+more_vert
+Current Selection
+vertical_align_top
+keyboard_arrow_up
+inbox
+Nothing selected
+This site uses cookies from Google to deliver its services and to analyze traffic.
+More details
+OK
+Oops, something went wrong. Please file a bug.
+close
+UI: https://ui.perfetto.dev/v59.1-79997ada9
+
+TypeError: Cannot read properties of undefined (reading 'installing')
+ -  (../../src/frontend/service_worker_controller.ts:135:6)
+
+Trace: not available (FILE). Provide repro steps.
+UA: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.0.0 Safari/537.36
+Referrer: 
+
+Please provide any additional details describing how the crash occurred:
+File a bug (Googlers only)
+syncTimeline Sync
+text inputs [
+  {
+    tag: 'INPUT',
+    type: 'text',
+    placeholder: "Search or type '>' for commands, ':' for SQL query",
+    class: ''
+  },
+  { tag: 'INPUT', type: 'checkbox', placeholder: '', class: '' },
+  { tag: 'INPUT', type: 'radio', placeholder: '', class: '' },
+  { tag: 'INPUT', type: 'radio', placeholder: '', class: '' },
+  {
+    tag: 'TEXTAREA',
+    type: 'textarea',
+    placeholder: '',
+    class: 'pf-modal-textarea'
+  },
+  { tag: 'INPUT', type: 'file', placeholder: '', class: 'trace_file' },
+  {
+    tag: 'INPUT',
+    type: 'file',
+    placeholder: '',
+    class: 'pinned_tracks_import_selector'
+  }
+]

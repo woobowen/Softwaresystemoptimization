@@ -1,0 +1,20 @@
+navigation complete
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/frontend.css { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/frontend_bundle.js { errorText: 'net::ERR_NETWORK_CHANGED' }
+failed resource https://ui.perfetto.dev/v59.1-79997ada9/assets/MaterialSymbolsOutlined.woff2 { errorText: 'net::ERR_NETWORK_CHANGED' }
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+locator.waitFor: Timeout 60000ms exceeded.
+Call log:
+[2m  - waiting for getByText('Open trace file').first() to be visible[22m
+
+    at /tmp/a3-perfetto-load.cjs:8:100 {
+  log: [
+    "  - waiting for getByText('Open trace file').first() to be visible"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.22.0

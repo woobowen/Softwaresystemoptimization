@@ -1,0 +1,166 @@
+[
+  {
+    "trace": "A3/evidence/remote_preflight/remote/traces/attention.trace.json",
+    "bytes": 101994,
+    "sha256": "49d24c8cfa4ef67939b9397d3064713dff2b55dc988cc6194ccc944be9c3685e",
+    "perfetto": {
+      "cpu_ops": 10,
+      "python_frames": 322,
+      "gpu_kernels": 4,
+      "kernel_duration_ns": 6368,
+      "bad_kernels": 0,
+      "kernel_flows": 4,
+      "kernels_with_python_parent": 4,
+      "exp_calls": 0,
+      "exp_total_ns": null,
+      "spill_count": 1,
+      "other_import_errors": 0
+    },
+    "overlaps": [
+      {
+        "first": "<built-in method _record_function_enter_new of PyCapsule object at 0x7648ecad49f0>",
+        "second": "preflight::attention"
+      },
+      {
+        "first": "preflight::attention",
+        "second": "torch/autograd/profiler.py(757): __exit__"
+      }
+    ],
+    "warning": "Custom record_function scope overlaps its Python enter/exit frames; Perfetto retains the event on an overflow track. No ATen/kernel data lost.",
+    "result": "PASS_WITH_WARNING",
+    "argv": [
+      "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell",
+      "query",
+      "--quiet",
+      "--format",
+      "csv",
+      "A3/evidence/remote_preflight/remote/traces/attention.trace.json",
+      "\n    WITH RECURSIVE ancestors(kernel_id, id, parent_id, name) AS (\n      SELECT k.id, launch.id, launch.parent_id, launch.name\n      FROM flow f JOIN slice k ON k.id=f.slice_in\n      JOIN slice launch ON launch.id=f.slice_out\n      WHERE k.category='kernel'\n      UNION ALL\n      SELECT a.kernel_id, p.id, p.parent_id, p.name\n      FROM ancestors a JOIN slice p ON p.id=a.parent_id\n    )\n    SELECT\n      (SELECT COUNT(*) FROM slice WHERE category='cpu_op') AS cpu_ops,\n      (SELECT COUNT(*) FROM slice WHERE category='python_function') AS python_frames,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel') AS gpu_kernels,\n      (SELECT SUM(dur) FROM slice WHERE category='kernel') AS kernel_duration_ns,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel' AND (dur<=0 OR ts IS NULL)) AS bad_kernels,\n      (SELECT COUNT(*) FROM flow f JOIN slice k ON k.id=f.slice_in WHERE k.category='kernel') AS kernel_flows,\n      (SELECT COUNT(DISTINCT kernel_id) FROM ancestors WHERE name LIKE '%preflight_smoke.py%attention%') AS kernels_with_python_parent,\n      (SELECT COUNT(*) FROM slice WHERE name='aten::exp') AS exp_calls,\n      (SELECT SUM(dur) FROM slice WHERE name='aten::exp') AS exp_total_ns,\n      (SELECT SUM(value) FROM stats WHERE name='slice_spill_overlapping_complete_event') AS spill_count,\n      (SELECT COALESCE(SUM(value),0) FROM stats WHERE severity IN ('error','data_loss')\n         AND name!='slice_spill_overlapping_complete_event') AS other_import_errors;\n    "
+    ],
+    "sql_stdout": "\"cpu_ops\",\"python_frames\",\"gpu_kernels\",\"kernel_duration_ns\",\"bad_kernels\",\"kernel_flows\",\"kernels_with_python_parent\",\"exp_calls\",\"exp_total_ns\",\"spill_count\",\"other_import_errors\"\n10,322,4,6368,0,4,4,0,\"[NULL]\",1,0\n",
+    "sql_stderr": "\n\nTrace health issues:\n\n  Import errors\n    slice_spill_overlapping_complete_event: 1 | A complete slice (typically a JSON 'X' event) partially overlaps another slice on the same thread track, so it cannot nest there. Instead of dropping it, Perfetto moved it onto a separate overflow track that is merged back onto the thread at display time. No data is lost, but because overlapping duration events are inherently ambiguous (nothing in the trace says how they should nest), the resulting layout might not match what you intended when you emitted these events. See https://github.com/google/perf\n\n"
+  },
+  {
+    "trace": "A3/evidence/remote_preflight/remote/traces/cpu_naive.trace.json",
+    "bytes": 72009,
+    "sha256": "a8afca1a5436449571d156c74309bd1ecef2ed16d6d8cdbda49bbbed38338ccb",
+    "perfetto": {
+      "cpu_ops": 23,
+      "python_frames": 237,
+      "gpu_kernels": 0,
+      "kernel_duration_ns": null,
+      "bad_kernels": 0,
+      "kernel_flows": 0,
+      "kernels_with_python_parent": 0,
+      "exp_calls": 1,
+      "exp_total_ns": 9736,
+      "spill_count": 1,
+      "other_import_errors": 0
+    },
+    "overlaps": [
+      {
+        "first": "<built-in method _record_function_enter_new of PyCapsule object at 0x7c230e5d89f0>",
+        "second": "preflight::cpu_naive"
+      },
+      {
+        "first": "preflight::cpu_naive",
+        "second": "torch/autograd/profiler.py(757): __exit__"
+      }
+    ],
+    "warning": "Custom record_function scope overlaps its Python enter/exit frames; Perfetto retains the event on an overflow track. No ATen/kernel data lost.",
+    "result": "PASS_WITH_WARNING",
+    "argv": [
+      "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell",
+      "query",
+      "--quiet",
+      "--format",
+      "csv",
+      "A3/evidence/remote_preflight/remote/traces/cpu_naive.trace.json",
+      "\n    WITH RECURSIVE ancestors(kernel_id, id, parent_id, name) AS (\n      SELECT k.id, launch.id, launch.parent_id, launch.name\n      FROM flow f JOIN slice k ON k.id=f.slice_in\n      JOIN slice launch ON launch.id=f.slice_out\n      WHERE k.category='kernel'\n      UNION ALL\n      SELECT a.kernel_id, p.id, p.parent_id, p.name\n      FROM ancestors a JOIN slice p ON p.id=a.parent_id\n    )\n    SELECT\n      (SELECT COUNT(*) FROM slice WHERE category='cpu_op') AS cpu_ops,\n      (SELECT COUNT(*) FROM slice WHERE category='python_function') AS python_frames,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel') AS gpu_kernels,\n      (SELECT SUM(dur) FROM slice WHERE category='kernel') AS kernel_duration_ns,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel' AND (dur<=0 OR ts IS NULL)) AS bad_kernels,\n      (SELECT COUNT(*) FROM flow f JOIN slice k ON k.id=f.slice_in WHERE k.category='kernel') AS kernel_flows,\n      (SELECT COUNT(DISTINCT kernel_id) FROM ancestors WHERE name LIKE '%preflight_smoke.py%naive_softmax%') AS kernels_with_python_parent,\n      (SELECT COUNT(*) FROM slice WHERE name='aten::exp') AS exp_calls,\n      (SELECT SUM(dur) FROM slice WHERE name='aten::exp') AS exp_total_ns,\n      (SELECT SUM(value) FROM stats WHERE name='slice_spill_overlapping_complete_event') AS spill_count,\n      (SELECT COALESCE(SUM(value),0) FROM stats WHERE severity IN ('error','data_loss')\n         AND name!='slice_spill_overlapping_complete_event') AS other_import_errors;\n    "
+    ],
+    "sql_stdout": "\"cpu_ops\",\"python_frames\",\"gpu_kernels\",\"kernel_duration_ns\",\"bad_kernels\",\"kernel_flows\",\"kernels_with_python_parent\",\"exp_calls\",\"exp_total_ns\",\"spill_count\",\"other_import_errors\"\n23,237,0,\"[NULL]\",0,0,0,1,9736,1,0\n",
+    "sql_stderr": "\n\nTrace health issues:\n\n  Import errors\n    slice_spill_overlapping_complete_event: 1 | A complete slice (typically a JSON 'X' event) partially overlaps another slice on the same thread track, so it cannot nest there. Instead of dropping it, Perfetto moved it onto a separate overflow track that is merged back onto the thread at display time. No data is lost, but because overlapping duration events are inherently ambiguous (nothing in the trace says how they should nest), the resulting layout might not match what you intended when you emitted these events. See https://github.com/google/perf\n\n"
+  },
+  {
+    "trace": "A3/evidence/remote_preflight/remote/traces/cuda_naive.trace.json",
+    "bytes": 106890,
+    "sha256": "4341d0bd35c1bfa55b81fcf0e08723092438cc73eb95fdd65e7e9b0ff327aed9",
+    "perfetto": {
+      "cpu_ops": 16,
+      "python_frames": 324,
+      "gpu_kernels": 5,
+      "kernel_duration_ns": 9855,
+      "bad_kernels": 0,
+      "kernel_flows": 5,
+      "kernels_with_python_parent": 5,
+      "exp_calls": 1,
+      "exp_total_ns": 36850,
+      "spill_count": 1,
+      "other_import_errors": 0
+    },
+    "overlaps": [
+      {
+        "first": "<built-in method _record_function_enter_new of PyCapsule object at 0x751770ad89f0>",
+        "second": "preflight::cuda_naive"
+      },
+      {
+        "first": "preflight::cuda_naive",
+        "second": "torch/autograd/profiler.py(757): __exit__"
+      }
+    ],
+    "warning": "Custom record_function scope overlaps its Python enter/exit frames; Perfetto retains the event on an overflow track. No ATen/kernel data lost.",
+    "result": "PASS_WITH_WARNING",
+    "argv": [
+      "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell",
+      "query",
+      "--quiet",
+      "--format",
+      "csv",
+      "A3/evidence/remote_preflight/remote/traces/cuda_naive.trace.json",
+      "\n    WITH RECURSIVE ancestors(kernel_id, id, parent_id, name) AS (\n      SELECT k.id, launch.id, launch.parent_id, launch.name\n      FROM flow f JOIN slice k ON k.id=f.slice_in\n      JOIN slice launch ON launch.id=f.slice_out\n      WHERE k.category='kernel'\n      UNION ALL\n      SELECT a.kernel_id, p.id, p.parent_id, p.name\n      FROM ancestors a JOIN slice p ON p.id=a.parent_id\n    )\n    SELECT\n      (SELECT COUNT(*) FROM slice WHERE category='cpu_op') AS cpu_ops,\n      (SELECT COUNT(*) FROM slice WHERE category='python_function') AS python_frames,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel') AS gpu_kernels,\n      (SELECT SUM(dur) FROM slice WHERE category='kernel') AS kernel_duration_ns,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel' AND (dur<=0 OR ts IS NULL)) AS bad_kernels,\n      (SELECT COUNT(*) FROM flow f JOIN slice k ON k.id=f.slice_in WHERE k.category='kernel') AS kernel_flows,\n      (SELECT COUNT(DISTINCT kernel_id) FROM ancestors WHERE name LIKE '%preflight_smoke.py%naive_softmax%') AS kernels_with_python_parent,\n      (SELECT COUNT(*) FROM slice WHERE name='aten::exp') AS exp_calls,\n      (SELECT SUM(dur) FROM slice WHERE name='aten::exp') AS exp_total_ns,\n      (SELECT SUM(value) FROM stats WHERE name='slice_spill_overlapping_complete_event') AS spill_count,\n      (SELECT COALESCE(SUM(value),0) FROM stats WHERE severity IN ('error','data_loss')\n         AND name!='slice_spill_overlapping_complete_event') AS other_import_errors;\n    "
+    ],
+    "sql_stdout": "\"cpu_ops\",\"python_frames\",\"gpu_kernels\",\"kernel_duration_ns\",\"bad_kernels\",\"kernel_flows\",\"kernels_with_python_parent\",\"exp_calls\",\"exp_total_ns\",\"spill_count\",\"other_import_errors\"\n16,324,5,9855,0,5,5,1,36850,1,0\n",
+    "sql_stderr": "\n\nTrace health issues:\n\n  Import errors\n    slice_spill_overlapping_complete_event: 1 | A complete slice (typically a JSON 'X' event) partially overlaps another slice on the same thread track, so it cannot nest there. Instead of dropping it, Perfetto moved it onto a separate overflow track that is merged back onto the thread at display time. No data is lost, but because overlapping duration events are inherently ambiguous (nothing in the trace says how they should nest), the resulting layout might not match what you intended when you emitted these events. See https://github.com/google/perf\n\n"
+  },
+  {
+    "trace": "A3/evidence/remote_preflight/remote/traces/triton.trace.json",
+    "bytes": 168869,
+    "sha256": "01a2d56112fe74cdf9a5b07983d35ceeb0ed072d65c305449023d1a0052e8115",
+    "perfetto": {
+      "cpu_ops": 2,
+      "python_frames": 606,
+      "gpu_kernels": 1,
+      "kernel_duration_ns": 1504,
+      "bad_kernels": 0,
+      "kernel_flows": 1,
+      "kernels_with_python_parent": 1,
+      "exp_calls": 0,
+      "exp_total_ns": null,
+      "spill_count": 1,
+      "other_import_errors": 0
+    },
+    "overlaps": [
+      {
+        "first": "<built-in method _record_function_enter_new of PyCapsule object at 0x756d8e7cca20>",
+        "second": "preflight::triton"
+      },
+      {
+        "first": "preflight::triton",
+        "second": "torch/autograd/profiler.py(757): __exit__"
+      }
+    ],
+    "warning": "Custom record_function scope overlaps its Python enter/exit frames; Perfetto retains the event on an overflow track. No ATen/kernel data lost.",
+    "result": "PASS_WITH_WARNING",
+    "argv": [
+      "/home/addaswsw/lab/Software_system_optimization/.cache/a3-remote-preflight-tools/trace_processor_shell",
+      "query",
+      "--quiet",
+      "--format",
+      "csv",
+      "A3/evidence/remote_preflight/remote/traces/triton.trace.json",
+      "\n    WITH RECURSIVE ancestors(kernel_id, id, parent_id, name) AS (\n      SELECT k.id, launch.id, launch.parent_id, launch.name\n      FROM flow f JOIN slice k ON k.id=f.slice_in\n      JOIN slice launch ON launch.id=f.slice_out\n      WHERE k.category='kernel'\n      UNION ALL\n      SELECT a.kernel_id, p.id, p.parent_id, p.name\n      FROM ancestors a JOIN slice p ON p.id=a.parent_id\n    )\n    SELECT\n      (SELECT COUNT(*) FROM slice WHERE category='cpu_op') AS cpu_ops,\n      (SELECT COUNT(*) FROM slice WHERE category='python_function') AS python_frames,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel') AS gpu_kernels,\n      (SELECT SUM(dur) FROM slice WHERE category='kernel') AS kernel_duration_ns,\n      (SELECT COUNT(*) FROM slice WHERE category='kernel' AND (dur<=0 OR ts IS NULL)) AS bad_kernels,\n      (SELECT COUNT(*) FROM flow f JOIN slice k ON k.id=f.slice_in WHERE k.category='kernel') AS kernel_flows,\n      (SELECT COUNT(DISTINCT kernel_id) FROM ancestors WHERE name LIKE '%teacher_softmax_preflight.py%softmax%') AS kernels_with_python_parent,\n      (SELECT COUNT(*) FROM slice WHERE name='aten::exp') AS exp_calls,\n      (SELECT SUM(dur) FROM slice WHERE name='aten::exp') AS exp_total_ns,\n      (SELECT SUM(value) FROM stats WHERE name='slice_spill_overlapping_complete_event') AS spill_count,\n      (SELECT COALESCE(SUM(value),0) FROM stats WHERE severity IN ('error','data_loss')\n         AND name!='slice_spill_overlapping_complete_event') AS other_import_errors;\n    "
+    ],
+    "sql_stdout": "\"cpu_ops\",\"python_frames\",\"gpu_kernels\",\"kernel_duration_ns\",\"bad_kernels\",\"kernel_flows\",\"kernels_with_python_parent\",\"exp_calls\",\"exp_total_ns\",\"spill_count\",\"other_import_errors\"\n2,606,1,1504,0,1,1,0,\"[NULL]\",1,0\n",
+    "sql_stderr": "\n\nTrace health issues:\n\n  Import errors\n    slice_spill_overlapping_complete_event: 1 | A complete slice (typically a JSON 'X' event) partially overlaps another slice on the same thread track, so it cannot nest there. Instead of dropping it, Perfetto moved it onto a separate overflow track that is merged back onto the thread at display time. No data is lost, but because overlapping duration events are inherently ambiguous (nothing in the trace says how they should nest), the resulting layout might not match what you intended when you emitted these events. See https://github.com/google/perf\n\n"
+  }
+]

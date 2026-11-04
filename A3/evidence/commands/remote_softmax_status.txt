@@ -1,0 +1,16 @@
+0
+]
+Filtered GPU top3: [
+  {
+    "name": "softmax_kernel",
+    "count": 200,
+    "cpu_total_us": 0,
+    "self_cpu_us": 0,
+    "cpu_avg_us": 0.0,
+    "device_total_us": 781.1260000000207,
+    "self_device_us": 781.1260000000207,
+    "device_type": "DeviceType.CUDA"
+  }
+]
+GPU kernel us / complete call: 3.905629999999997
+END UTC: 2026-11-04T18:22:57+00:00

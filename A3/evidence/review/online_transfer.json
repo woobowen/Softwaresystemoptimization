@@ -1,0 +1,85 @@
+{
+  "archive_sha256": "cdb1ed54027fb3e620e2faab955e5e3e5e4aeb1ab3052d665ca393161b0e8d75",
+  "files": [
+    {
+      "path": "A3/evidence/online/online.trace.json",
+      "sha256": "2ad3992637c6d0734d344ef27fd45265a300aac579869f47e61d805b214bfb40",
+      "bytes": 59828254
+    },
+    {
+      "path": "A3/evidence/online/online_naive.trace.json",
+      "sha256": "d9124e238268c8ebe729fcb122f257c5bfe6119ff476a88b1c802bab1005aaeb",
+      "bytes": 20423
+    },
+    {
+      "path": "A3/evidence/online/online_naive.device_table.txt",
+      "sha256": "38528447b5afcd3e0087c1a8d2af9bb4180c0a69f6741405650e7cc5e35a0a00",
+      "bytes": 3824
+    },
+    {
+      "path": "A3/evidence/online/online.device_table.txt",
+      "sha256": "01ef4f57676eef83406d8dd971baac63f1670a1f3b111e63eb8ae178844be122",
+      "bytes": 5806
+    },
+    {
+      "path": "A3/evidence/online/online_naive.statistics.json",
+      "sha256": "bbc4b461079fcd37dd72cbc121490aa86878058c2b906fb360d6cc1ab9bc7766",
+      "bytes": 10243
+    },
+    {
+      "path": "A3/evidence/online/online_naive.metadata.json",
+      "sha256": "b281bee40eed4a0ffe572922e439f21f8bab3ad762282de37dcfb1bbec06ad5f",
+      "bytes": 2213
+    },
+    {
+      "path": "A3/evidence/online/online.metadata.json",
+      "sha256": "7b87e9cf8e1804f51d70fc9b91279ba093d2503cd2e26bf28c8f92a195f61b98",
+      "bytes": 2222
+    },
+    {
+      "path": "A3/evidence/online/online.cpu_table.txt",
+      "sha256": "31ed9ed5e9926202dffc022ff39bb0741219d6e8b21fb6af5485fad64f62ca46",
+      "bytes": 5806
+    },
+    {
+      "path": "A3/evidence/online/online.statistics.json",
+      "sha256": "f011c6590962a6bd069f990b4723495913faa0e6b19d72538550829fc8999f9c",
+      "bytes": 15489
+    },
+    {
+      "path": "A3/evidence/online/online_naive.cpu_table.txt",
+      "sha256": "1d1c8828c0a4ba17ac20694bad38adc7181dc2b34bdcf181aede9811fa4fb1bd",
+      "bytes": 3824
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_online-naive.txt",
+      "sha256": "5962ed365de73d8acbf4080790bf02d85cc5b3b747e99102e684927c07120def",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_online.txt",
+      "sha256": "e33ddee92f33661a78f9f3b16411730ef766ef898a6b05d7e4ded1eade860e27",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/school_online-naive.txt",
+      "sha256": "64f68baa07b0ac667f1f9cd8f15cda29e2c2632d6b7162538e926faa9a93125c",
+      "bytes": 11652
+    },
+    {
+      "path": "A3/evidence/commands/school_online.txt",
+      "sha256": "149021e33f0b3f1b7a44ebdc4389281d4d6a36160fa4a8d07201440afcea7681",
+      "bytes": 15780
+    },
+    {
+      "path": "A3/evidence/commands/jobs/online.log",
+      "sha256": "01bebabdc29b1e332b8447827b7600ab237561968d74bc38170cae2019f5e86a",
+      "bytes": 28562
+    },
+    {
+      "path": "A3/evidence/commands/jobs/online.exitcode",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    }
+  ]
+}

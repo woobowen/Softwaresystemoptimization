@@ -1,0 +1,3 @@
+PASS: source/shell syntax; 58 correctness records; 8 complete lossless traces;
+13 screenshot hashes; README links; source transfer identity; file/credential checks.
+Result: evidence/review/final_validation.json

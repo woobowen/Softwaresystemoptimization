@@ -1,0 +1,18 @@
+"AVG(dur) / 1e9"
+0.000249
+
+"category","track_id","slices","sum_ms"
+"cpu_op",2,4600,268.688914
+"python_function",2,1033,1286.788439
+"[NULL]",1,2,0.000000
+"Trace",0,1,278.057479
+
+"id","name","category","track_id","depth","parent_id","parent_name","parent_category","dur"
+42,"aten::exp","cpu_op",2,5,41,"<built-in method exp of type object at 0x7b9ab7990ec0>","python_function",266674
+70,"aten::exp","cpu_op",2,5,69,"<built-in method exp of type object at 0x7b9ab7990ec0>","python_function",249456
+98,"aten::exp","cpu_op",2,5,97,"<built-in method exp of type object at 0x7b9ab7990ec0>","python_function",256243
+126,"aten::exp","cpu_op",2,5,125,"<built-in method exp of type object at 0x7b9ab7990ec0>","python_function",243387
+154,"aten::exp","cpu_op",2,5,153,"<built-in method exp of type object at 0x7b9ab7990ec0>","python_function",244678
+
+"calls","exp_total_ms","exp_avg_us","all_self_cpu_ms","exp_cpu_total_pct"
+200,49.893072,249.465360,264.485312,18.864213

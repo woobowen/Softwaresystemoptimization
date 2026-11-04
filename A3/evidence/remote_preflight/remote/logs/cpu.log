@@ -1,0 +1,115 @@
+ERROR:2026-11-04 17:32:33 2762175:2762175 DeviceProperties.cpp:47] gpuGetDeviceCount failed with code 100
+------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                    Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+    preflight::cpu_naive        73.62%     412.880us       100.00%     560.807us     560.807us             1  
+               aten::max         5.47%      30.700us        11.05%      61.995us      61.995us             1  
+               aten::sum         2.32%      13.005us         4.88%      27.381us      27.381us             1  
+        aten::unsqueeze_         3.34%      18.713us         4.73%      26.544us      13.272us             2  
+             aten::slice         2.58%      14.466us         3.07%      17.238us       8.619us             2  
+        aten::as_strided         2.79%      15.637us         2.79%      15.637us       3.127us             5  
+               aten::div         2.26%      12.683us         2.26%      12.683us      12.683us             1  
+         aten::unsqueeze         1.60%       8.982us         1.80%      10.117us       5.059us             2  
+               aten::exp         1.74%       9.736us         1.74%       9.736us       9.736us             1  
+       aten::as_strided_         1.60%       8.993us         1.60%       8.993us       2.248us             4  
+               aten::sub         1.57%       8.777us         1.57%       8.777us       8.777us             1  
+          aten::squeeze_         0.64%       3.589us         0.85%       4.751us       2.376us             2  
+             aten::fill_         0.47%       2.646us         0.47%       2.646us       2.646us             1  
+------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 560.807us
+
+{
+  "profiled_calls": 1,
+  "with_stack": true,
+  "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/cpu_naive.trace.json",
+  "trace_bytes": 72009,
+  "aten_events": [
+    "aten::as_strided",
+    "aten::as_strided_",
+    "aten::div",
+    "aten::exp",
+    "aten::fill_",
+    "aten::max",
+    "aten::slice",
+    "aten::squeeze_",
+    "aten::sub",
+    "aten::sum",
+    "aten::unsqueeze",
+    "aten::unsqueeze_"
+  ],
+  "profiler_cuda_events": 0,
+  "profiler_cuda_duration_us": 0,
+  "trace_kernel_events": 0,
+  "trace_kernel_duration_us": 0,
+  "kernel_names": [],
+  "events_with_stack": 0,
+  "stack_example": [],
+  "python_function_events": 237,
+  "python_function_examples": [
+    "preflight_smoke.py(13): naive_softmax"
+  ],
+  "categories": {
+    "user_annotation": 1,
+    "cpu_op": 23,
+    "python_function": 237,
+    "": 10,
+    "Trace": 1
+  }
+}
+{
+  "stage": "cpu",
+  "utc": "2026-11-04T17:32:33.038742+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "correctness": {
+    "shape": [
+      4,
+      127
+    ],
+    "dtype": "torch.float32",
+    "max_abs_error": 3.725290298461914e-09,
+    "finite": true,
+    "row_sum_max_abs_error": 1.1920928955078125e-07
+  },
+  "profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/cpu_naive.trace.json",
+    "trace_bytes": 72009,
+    "aten_events": [
+      "aten::as_strided",
+      "aten::as_strided_",
+      "aten::div",
+      "aten::exp",
+      "aten::fill_",
+      "aten::max",
+      "aten::slice",
+      "aten::squeeze_",
+      "aten::sub",
+      "aten::sum",
+      "aten::unsqueeze",
+      "aten::unsqueeze_"
+    ],
+    "profiler_cuda_events": 0,
+    "profiler_cuda_duration_us": 0,
+    "trace_kernel_events": 0,
+    "trace_kernel_duration_us": 0,
+    "kernel_names": [],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 237,
+    "python_function_examples": [
+      "preflight_smoke.py(13): naive_softmax"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 23,
+      "python_function": 237,
+      "": 10,
+      "Trace": 1
+    }
+  },
+  "result": "PASS"
+}

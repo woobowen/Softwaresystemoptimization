@@ -1,0 +1,38 @@
+SETUPTOOLS_USE_DISTUTILS=unset
+
+IMPORT PROBE: import triton; import triton.language; print(triton.__version__)
+3.2.0
+PROBE_EXIT=0
+
+IMPORT PROBE: import importlib.metadata; import triton; print(triton.__version__)
+3.2.0
+PROBE_EXIT=0
+
+IMPORT PROBE: import torch; import triton; import triton.language; print(torch.__version__,triton.__version__)
+2.6.0+cu124 3.2.0
+PROBE_EXIT=0
+
+DEPENDENCY METADATA (separate interpreter)
+{
+  "venv": true,
+  "versions": {
+    "torch": "2.6.0",
+    "triton": "3.2.0",
+    "pip": "26.2.1",
+    "setuptools": "83.0.0",
+    "numpy": "2.0.2",
+    "nvidia-cuda-runtime-cu12": "12.4.127",
+    "nvidia-cuda-cupti-cu12": "12.4.127",
+    "nvidia-cuda-nvrtc-cu12": "12.4.127",
+    "nvidia-cublas-cu12": "12.4.5.8"
+  }
+}
+
+GPU DEVICE PERMISSIONS
+crw-rw-rw- 1 root root 507,   0 Sep 14 14:04 /dev/nvidia-uvm
+crw-rw-rw- 1 root root 195,   0 Sep 14 14:04 /dev/nvidia0
+crw-rw-rw- 1 root root 195,   1 Sep 14 14:04 /dev/nvidia1
+crw-rw-rw- 1 root root 195, 255 Sep 14 14:04 /dev/nvidiactl
+
+WORKSPACE DISK
+11M	/home/bwwu/lab/SSO_A3_preflight

@@ -1,0 +1,90 @@
+[
+  {
+    "from": "A3/evidence/review_code.md",
+    "to": "A3/evidence/earlier_local/review_code.md"
+  },
+  {
+    "from": "A3/evidence/attention_model.md",
+    "to": "A3/evidence/earlier_local/attention_model.md"
+  },
+  {
+    "from": "A3/evidence/performance/logical_models.json",
+    "to": "A3/evidence/earlier_local/performance/logical_models.json"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_cached_assets.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_cached_assets.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_environment.txt",
+    "to": "A3/evidence/earlier_local/commands/local_environment.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_inspect.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_inspect.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_profile_cpu.txt",
+    "to": "A3/evidence/earlier_local/commands/local_profile_cpu.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_ui_cached.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_ui_cached.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_ui_debug.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_ui_debug.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_check_softmax.txt",
+    "to": "A3/evidence/earlier_local/commands/local_check_softmax.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_sql_ui.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_sql_ui.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_check_attention.txt",
+    "to": "A3/evidence/earlier_local/commands/local_check_attention.txt"
+  },
+  {
+    "from": "A3/evidence/commands/local_perfetto_ui_ready.txt",
+    "to": "A3/evidence/earlier_local/commands/local_perfetto_ui_ready.txt"
+  },
+  {
+    "from": "A3/evidence/correctness/local_softmax_cpu.json",
+    "to": "A3/evidence/earlier_local/correctness/local_softmax_cpu.json"
+  },
+  {
+    "from": "A3/evidence/correctness/local_attention_cpu.json",
+    "to": "A3/evidence/earlier_local/correctness/local_attention_cpu.json"
+  },
+  {
+    "from": "A3/evidence/environment/local_cpu.json",
+    "to": "A3/evidence/earlier_local/environment/local_cpu.json"
+  },
+  {
+    "from": "A3/evidence/environment/local_venv_install.txt",
+    "to": "A3/evidence/earlier_local/environment/local_venv_install.txt"
+  },
+  {
+    "from": "A3/evidence/environment/cloud_input_manifest.json",
+    "to": "A3/evidence/earlier_local/environment/cloud_input_manifest.json"
+  },
+  {
+    "from": "A3/evidence/environment/browser_connection.md",
+    "to": "A3/evidence/earlier_local/environment/browser_connection.md"
+  },
+  {
+    "from": "A3/evidence/debug/local_perfetto_sql.png",
+    "to": "A3/evidence/earlier_local/debug/local_perfetto_sql.png"
+  },
+  {
+    "from": "A3/evidence/performance/local_cpu_debug",
+    "to": "A3/evidence/earlier_local/performance/local_cpu_debug"
+  },
+  {
+    "from": "A3/scripts/export_results.py",
+    "to": "A3/evidence/earlier_local/scripts/export_results.py"
+  }
+]

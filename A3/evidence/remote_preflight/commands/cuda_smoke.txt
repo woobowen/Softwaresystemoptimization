@@ -1,0 +1,175 @@
+preflight_smoke.py: OK
+f455b6721fe888d6c3ead4731292ecae0391f53c88a13d303e4baf5688a062e7  preflight_smoke.py
+UTC: 2026-11-04T17:30:55+00:00
+Physical GPU 0 GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae: 0, 1
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                  preflight::cuda_naive        15.94%     692.875us        99.76%       4.336ms       4.336ms       0.000us         0.00%       9.855us       9.855us             1  
+                                              aten::max        78.29%       3.403ms        79.32%       3.448ms       3.448ms       2.816us        28.57%       2.816us       2.816us             1  
+                                       cudaLaunchKernel         2.45%     106.527us         2.45%     106.527us      21.305us       0.000us         0.00%       0.000us       0.000us             5  
+                                              aten::sub         0.54%      23.646us         0.96%      41.901us      41.901us       1.727us        17.52%       1.727us       1.727us             1  
+                                              aten::sum         0.57%      24.631us         0.91%      39.694us      39.694us       2.496us        25.33%       2.496us       2.496us             1  
+                                              aten::div         0.52%      22.629us         0.91%      39.599us      39.599us       1.568us        15.91%       1.568us       1.568us             1  
+                                              aten::exp         0.45%      19.739us         0.85%      36.850us      36.850us       1.248us        12.66%       1.248us       1.248us             1  
+                                            aten::slice         0.48%      20.747us         0.53%      22.869us      11.434us       0.000us         0.00%       0.000us       0.000us             2  
+                                        aten::unsqueeze         0.32%      13.961us         0.34%      14.847us       7.423us       0.000us         0.00%       0.000us       0.000us             2  
+                                  cudaDeviceSynchronize         0.24%      10.457us         0.24%      10.457us       5.229us       0.000us         0.00%       0.000us       0.000us             2  
+                                       aten::as_strided         0.20%       8.578us         0.20%       8.578us       1.225us       0.000us         0.00%       0.000us       0.000us             7  
+                                  preflight::cuda_naive         0.00%       0.000us         0.00%       0.000us       0.000us     347.745us      3528.61%     347.745us     347.745us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us       2.816us        28.57%       2.816us       2.816us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       1.727us        17.52%       1.727us       1.727us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       1.248us        12.66%       1.248us       1.248us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.347ms
+Self CUDA time total: 9.855us
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                  preflight::cuda_naive         0.00%       0.000us         0.00%       0.000us       0.000us     347.745us      3528.61%     347.745us     347.745us             1  
+                                  preflight::cuda_naive        15.94%     692.875us        99.76%       4.336ms       4.336ms       0.000us         0.00%       9.855us       9.855us             1  
+                                              aten::max        78.29%       3.403ms        79.32%       3.448ms       3.448ms       2.816us        28.57%       2.816us       2.816us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us       2.816us        28.57%       2.816us       2.816us             1  
+                                              aten::sum         0.57%      24.631us         0.91%      39.694us      39.694us       2.496us        25.33%       2.496us       2.496us             1  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us       2.496us        25.33%       2.496us       2.496us             1  
+                                              aten::sub         0.54%      23.646us         0.96%      41.901us      41.901us       1.727us        17.52%       1.727us       1.727us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       1.727us        17.52%       1.727us       1.727us             1  
+                                              aten::div         0.52%      22.629us         0.91%      39.599us      39.599us       1.568us        15.91%       1.568us       1.568us             1  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       1.568us        15.91%       1.568us       1.568us             1  
+                                              aten::exp         0.45%      19.739us         0.85%      36.850us      36.850us       1.248us        12.66%       1.248us       1.248us             1  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       1.248us        12.66%       1.248us       1.248us             1  
+                                       aten::as_strided         0.20%       8.578us         0.20%       8.578us       1.225us       0.000us         0.00%       0.000us       0.000us             7  
+                                       cudaLaunchKernel         2.45%     106.527us         2.45%     106.527us      21.305us       0.000us         0.00%       0.000us       0.000us             5  
+                                            aten::slice         0.48%      20.747us         0.53%      22.869us      11.434us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.347ms
+Self CUDA time total: 9.855us
+
+{
+  "profiled_calls": 1,
+  "with_stack": true,
+  "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/cuda_naive.trace.json",
+  "trace_bytes": 106890,
+  "aten_events": [
+    "aten::as_strided",
+    "aten::div",
+    "aten::exp",
+    "aten::max",
+    "aten::slice",
+    "aten::sub",
+    "aten::sum",
+    "aten::unsqueeze"
+  ],
+  "profiler_cuda_events": 6,
+  "profiler_cuda_duration_us": 357.59999999999945,
+  "trace_kernel_events": 5,
+  "trace_kernel_duration_us": 9.855,
+  "kernel_names": [
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",
+    "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)"
+  ],
+  "events_with_stack": 0,
+  "stack_example": [],
+  "python_function_events": 324,
+  "python_function_examples": [
+    "preflight_smoke.py(13): naive_softmax"
+  ],
+  "categories": {
+    "user_annotation": 1,
+    "cpu_op": 16,
+    "python_function": 324,
+    "kernel": 5,
+    "ac2g": 12,
+    "cuda_runtime": 7,
+    "gpu_user_annotation": 1,
+    "": 60,
+    "Trace": 1
+  }
+}
+{
+  "stage": "cuda",
+  "utc": "2026-11-04T17:30:57.480922+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "device": {
+    "logical_device": 0,
+    "visible_device_count": 1,
+    "name": "NVIDIA GeForce RTX 4090",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_memory_bytes": 25252724736
+  },
+  "correctness": {
+    "shape": [
+      4,
+      127
+    ],
+    "dtype": "torch.float32",
+    "max_abs_error": 1.4901161193847656e-08,
+    "finite": true,
+    "row_sum_max_abs_error": 0.0
+  },
+  "profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/cuda_naive.trace.json",
+    "trace_bytes": 106890,
+    "aten_events": [
+      "aten::as_strided",
+      "aten::div",
+      "aten::exp",
+      "aten::max",
+      "aten::slice",
+      "aten::sub",
+      "aten::sum",
+      "aten::unsqueeze"
+    ],
+    "profiler_cuda_events": 6,
+    "profiler_cuda_duration_us": 357.59999999999945,
+    "trace_kernel_events": 5,
+    "trace_kernel_duration_us": 9.855,
+    "kernel_names": [
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",
+      "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)"
+    ],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 324,
+    "python_function_examples": [
+      "preflight_smoke.py(13): naive_softmax"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 16,
+      "python_function": 324,
+      "kernel": 5,
+      "ac2g": 12,
+      "cuda_runtime": 7,
+      "gpu_user_annotation": 1,
+      "": 60,
+      "Trace": 1
+    }
+  },
+  "peak_tensor_allocated_bytes": 14336,
+  "peak_allocator_reserved_bytes": 2097152,
+  "gpu_process_snapshot": "gpu_uuid, pid, used_gpu_memory [MiB]\nGPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, 2761952, 462 MiB\n",
+  "loaded_cuda_libraries": [
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_cupti/lib/libcupti.so.12",
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.595.91.07"
+  ],
+  "result": "PASS"
+}
+
+REMOTE_STAGE_EXIT_CODE=0

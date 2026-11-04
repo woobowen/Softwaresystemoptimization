@@ -1,0 +1,75 @@
+{
+  "archive_sha256": "36724b5aca669ff30e4cf0998420ee8157210e7351c8c982062242a333e64156",
+  "files": [
+    {
+      "path": "A3/evidence/environment/school_cpu.json",
+      "sha256": "2c45fb15a7380dd364f39e21c6ab147c34dd9abd8109e72ba2e503bc13a3bc44",
+      "bytes": 7537
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_softmax_correctness.txt",
+      "sha256": "bd19b65126921c8e585136138923e84937e4656a0472fd7d8094ab831b1e6032",
+      "bytes": 1499
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_attention_correctness.txt",
+      "sha256": "aa14e92aa5c4ca068d89fb6f28e03a79bf9061528430943843d67a909e2ed12c",
+      "bytes": 5040
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_environment.txt",
+      "sha256": "aa2bdee298c6f9bf4f020c3a0a974a526d10b6b184166d4d36603b0fe170aaeb",
+      "bytes": 7687
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_naive.txt",
+      "sha256": "9d5df19a16d8994d1c5d311621537888c1ae8f7f47254e67e513986aec572c32",
+      "bytes": 4897
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.cpu_table.txt",
+      "sha256": "0a84c825aa296aa5904da7d26d34d5fa20124f146b3d1aff704fa1d270fb1a58",
+      "bytes": 1760
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.metadata.json",
+      "sha256": "0d49008d7640c91b3e2b35474a38a7a130f593f975d825f4e8e4439d0c146dbd",
+      "bytes": 2076
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.statistics.json",
+      "sha256": "ac48634ac12b2957b50c03002c4b33d376d5c689e15da8b460f820fed810d846",
+      "bytes": 4553
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.trace.json",
+      "sha256": "574a0f1d541567265eced80464250d1018e6be458fa324b52d8e0e986445581b",
+      "bytes": 1326614
+    },
+    {
+      "path": "A3/evidence/correctness/school_softmax_cpu.json",
+      "sha256": "241706cbdc25374f382b5f47e7746f38ef18a075d33777df0b69e89161b57e00",
+      "bytes": 8171
+    },
+    {
+      "path": "A3/evidence/correctness/school_attention_cpu.json",
+      "sha256": "1b39b26f98e617c0783673fbdb774e4bdf982368f822c9c70d3a572f70e70c7c",
+      "bytes": 4895
+    },
+    {
+      "path": "A3/evidence/commands/jobs/cpu.log",
+      "sha256": "207dfab45421f3937e1eb9d85156ca2b27a61ac97bed5eddf80f40bcb2754129",
+      "bytes": 19195
+    },
+    {
+      "path": "A3/evidence/commands/jobs/cpu.exitcode",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "A3/evidence/commands/jobs/worker.sh",
+      "sha256": "38088d173358b61ae1e25f494d61c03473b85eae100130d91f4991c1612481ae",
+      "bytes": 763
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+"AVG(dur) / 1e9"
+"[NULL]"
+
+"category","event_count","duration_ns"
+"[NULL]",2,0
+"Trace",1,5001666
+"cpu_op",2,6050530
+"cuda_driver",1,34199
+"cuda_runtime",2,9489
+"gpu_user_annotation",1,1506
+"kernel",1,1504
+"python_function",606,32640443
+"user_annotation",1,4363697
+
+"name","ts","dur"
+"softmax_kernel",2956477617223928,1504
+
+"launch_name","kernel_name","launch_ts_ns","kernel_ts_ns","kernel_dur_ns"
+"cuLaunchKernel","softmax_kernel",2956477617192891,2956477617223928,1504
+
+"leaf_id","level","name","category"
+453,0,"cuLaunchKernel","cuda_driver"
+453,1,"<built-in function launch>","python_function"
+453,2,"triton/backends/nvidia/driver.py(443): __call__","python_function"
+453,3,"triton/runtime/jit.py(563): run","python_function"
+453,4,"triton/runtime/jit.py(330): <lambda>","python_function"
+453,5,"teacher_softmax_preflight.py(45): softmax","python_function"
+453,6,"preflight_smoke.py(180): <lambda>","python_function"
+453,7,"preflight_smoke.py(63): profile_once","python_function"
+453,8,"preflight_smoke.py(180): main","python_function"
+453,9,"preflight_smoke.py(217): <module>","python_function"
+
+"name","value","severity"
+"slice_spill_overlapping_complete_event",1,"error"

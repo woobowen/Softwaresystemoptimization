@@ -1,0 +1,128 @@
+{
+  "stage": "triton",
+  "utc": "2026-11-04T17:31:38.216365+00:00",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "cpu_threads": 1,
+  "device": {
+    "logical_device": 0,
+    "visible_device_count": 1,
+    "name": "NVIDIA GeForce RTX 4090",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_memory_bytes": 25252724736
+  },
+  "triton_version": "3.2.0",
+  "target": "GPUTarget(backend='cuda', arch=89, warp_size=32)",
+  "properties": {
+    "max_shared_mem": 101376,
+    "max_num_regs": 65536,
+    "multiprocessor_count": 128,
+    "warpSize": 32,
+    "sm_clock_rate": 2520000,
+    "mem_clock_rate": 10501000,
+    "mem_bus_width": 384
+  },
+  "bundled_ptxas": "/data/bwwu/envs/tiger/lib/python3.10/site-packages/triton/backends/nvidia/bin/ptxas",
+  "ptxas_version": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Tue_Feb_27_16:15:50_PST_2024\nCuda compilation tools, release 12.4, V12.4.99\nBuild cuda_12.4.r12.4/compiler.33961263_0\n",
+  "compiled_specializations": [
+    {
+      "shape": [
+        4,
+        127
+      ],
+      "BLOCK_SIZE": 128,
+      "num_warps": 8,
+      "num_stages": 2,
+      "n_regs": 24,
+      "shared_bytes": 528,
+      "occupancy": 10,
+      "persistent_programs": 4,
+      "correctness": {
+        "shape": [
+          4,
+          127
+        ],
+        "dtype": "torch.float32",
+        "max_abs_error": 1.4901161193847656e-08,
+        "finite": true,
+        "row_sum_max_abs_error": 1.1920928955078125e-07
+      }
+    },
+    {
+      "shape": [
+        100,
+        5000
+      ],
+      "BLOCK_SIZE": 8192,
+      "num_warps": 8,
+      "num_stages": 2,
+      "n_regs": 80,
+      "shared_bytes": 32800,
+      "occupancy": 3,
+      "persistent_programs": 100,
+      "correctness": {
+        "shape": [
+          100,
+          5000
+        ],
+        "dtype": "torch.float32",
+        "max_abs_error": 9.313225746154785e-10,
+        "finite": true,
+        "row_sum_max_abs_error": 2.384185791015625e-07
+      }
+    }
+  ],
+  "profile": {
+    "profiled_calls": 1,
+    "with_stack": true,
+    "trace": "/home/bwwu/lab/SSO_A3_preflight/traces/triton.trace.json",
+    "trace_bytes": 168869,
+    "aten_events": [
+      "aten::empty_like",
+      "aten::empty_strided"
+    ],
+    "profiler_cuda_events": 2,
+    "profiler_cuda_duration_us": 3.007999999999811,
+    "trace_kernel_events": 1,
+    "trace_kernel_duration_us": 1.504,
+    "kernel_names": [
+      "softmax_kernel"
+    ],
+    "events_with_stack": 0,
+    "stack_example": [],
+    "python_function_events": 606,
+    "python_function_examples": [
+      "teacher_softmax_preflight.py(45): softmax"
+    ],
+    "categories": {
+      "user_annotation": 1,
+      "cpu_op": 2,
+      "python_function": 606,
+      "kernel": 1,
+      "ac2g": 4,
+      "cuda_driver": 1,
+      "cuda_runtime": 2,
+      "gpu_user_annotation": 1,
+      "": 60,
+      "Trace": 1
+    }
+  },
+  "teacher_softmax_launches": {
+    "4x127": 2,
+    "100x5000": 1
+  },
+  "cache_directory": "/home/bwwu/lab/SSO_A3_preflight/cache/triton",
+  "peak_tensor_allocated_bytes": 14007296,
+  "peak_allocator_reserved_bytes": 23068672,
+  "gpu_process_snapshot": "gpu_uuid, pid, used_gpu_memory [MiB]\nGPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae, 2762017, 482 MiB\n",
+  "loaded_cuda_libraries": [
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_cupti/lib/libcupti.so.12",
+    "/data/bwwu/envs/tiger/lib/python3.10/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.595.91.07"
+  ],
+  "result": "PASS"
+}

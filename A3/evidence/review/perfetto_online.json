@@ -1,0 +1,76 @@
+{
+  "trace": "/home/addaswsw/lab/Software_system_optimization/A3/evidence/online/online.trace.json",
+  "trace_sha256": "2ad3992637c6d0734d344ef27fd45265a300aac579869f47e61d805b214bfb40",
+  "ui_url": "https://ui.perfetto.dev/#!/viewer?local_cache_key=00000000-0000-0000-9444-75a548097993",
+  "browser": "149.0.7827.22",
+  "viewport": {
+    "width": 1800,
+    "height": 1200
+  },
+  "selected": [
+    {
+      "id": "62512",
+      "ts": "2959650561565035",
+      "dur": "1056",
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)"
+    }
+  ],
+  "launch": [
+    {
+      "id": "62511",
+      "ts": "2959650561558975",
+      "dur": "5433",
+      "name": "cudaLaunchKernel"
+    }
+  ],
+  "ancestors": [],
+  "bounds": {
+    "start": "2959650561547035",
+    "end": "2959650561727035"
+  },
+  "cached_official_urls": [
+    "https://ui.perfetto.dev/",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend.css",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/MaterialSymbolsOutlined.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/Roboto.woff2",
+    "https://ui.perfetto.dev/v59.1-79997ada9/frontend_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/stdlib_docs.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/brand.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/logo-3d.png",
+    "https://ui.perfetto.dev/v59.1-79997ada9/engine_bundle.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/trace_processor_memory64.wasm",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/RobotoMono-Regular.woff2",
+    "https://ui.perfetto.dev/service_worker.js?v=v59.1-79997ada9",
+    "https://ui.perfetto.dev/v59.1-79997ada9/manifest.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.html",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/catapult_trace_viewer.js",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/base-page.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/joins_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/slices_example.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/examples/time_learning.json",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/add_columns.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/aggregation.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/counter_to_intervals.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/create_slices.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/dashboard.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_during.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/filter_in.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/interval_intersect.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/data_explorer/node_info/join.md",
+    "https://ui.perfetto.dev/v59.1-79997ada9/assets/favicon.png"
+  ],
+  "errors": [],
+  "timeline_body": "menu\nCURRENT TRACE\nonline.trace.json (60 MB)\nline_style\nTimeline\ninfo\nOverview\ndata_exploration\nData Explorer\ndatabase\nQuery (SQL)\nspeed\nMetrics\nfile_download\nDownload\nNEW TRACE\nfolder_open\nOpen trace file\nlibrary_books\nOpen multiple trace files\nfiber_smart_record\nRecord new trace\nmemory\nMemscope\nPREVIEW\nandroid\nOpen Android example\nlanguage\nOpen Chrome example\nSETTINGS\nsettings\nSettings\nemoji_flags\nFlags\nextension\nPlugins\nSUPPORT\nDocumentation & Bugs\nCONVERT TRACE\nConvert to other formats\nWSM\n0\nSW\nUPD\nv59.1-79997ada9\nunfold_more\nunfold_less\nkeep_off\nfilter_alt\nworkspacesDefault Workspace\nUnnamed SliceTrack\nexpand_less\npython 2765603\nthread 2765603 (python) 2765603\nmain thread\nexpand_less\npython 0\nThread 0\nmain thread\nstream 7 7\nexpand_less\nSpans 58156\nPyTorch Profiler 58166\nmore_vert\nCurrent Selection\nvertical_align_top\nkeyboard_arrow_down\nSlice\nvoid at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)\nContextual Optionsarrow_drop_down\nDetails\nName\nvoid at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)\nCategory\nkernel\nStart time\n00:00:00.351648607\nDuration\n1\u00b5s 56ns\nThread\nstream 7  [7]\nProcess\npython [0]\nSQL ID\nslice[62512]arrow_drop_down\nPreceding Flows\nSlice\nDelay\nThread\ncudaLaunchKernelcall_made\n627ns\nthread 2765603 (python) 2765603 (python 2765603)\nArguments\nargs\nExternal idarrow_drop_down\n27506\nqueuedarrow_drop_down\n0\ndevicearrow_drop_down\n0\ncontextarrow_drop_down\n1\nstreamarrow_drop_down\n7\ncorrelationarrow_drop_down\n182522\nregisters per threadarrow_drop_down\n20\nshared memoryarrow_drop_down\n0\nblocks per SMarrow_drop_down\n0.007812\nwarps per SMarrow_drop_down\n0.03125\ngrid\n[0]arrow_drop_down\n1\n[1]arrow_drop_down\n1\n[2]arrow_drop_down\n1\nblock\n[0]arrow_drop_down\n128\n[1]arrow_drop_down\n1\n[2]arrow_drop_down\n1\nest. achieved occupancy %arrow_drop_down\n0\nHistogram for 'void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)'\nhelp_outline\nScope:\nhelp_outline\nThis trackarrow_drop_down\nCount\n-\nTotal\n-\nMin\n-\nMean\n-\nMax\n-\np50\n-\np75\n-\np95\n-\np99\n-\np99.9\n-\nLoad distribution\nsyncTimeline Sync",
+  "import_statistics": [],
+  "sql": [],
+  "images": [
+    {
+      "file": "/home/addaswsw/lab/Software_system_optimization/A3/images/09-online-timeline.png",
+      "sha256": "cb2569570c723f813a14702a84e6ed41524a59e36cff65b2ae3c72726cc425f6"
+    }
+  ],
+  "image_hashes_recorded_after_capture": true,
+  "playwright_version": "1.61.0-alpha-1781023400000"
+}

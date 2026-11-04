@@ -1,0 +1,4 @@
+Verified 8 complete traces; same Softmax input and GPU; kernel launch associations complete.
+GPU kernel speedup: 7.811326213696638
+Online synchronized latency slowdown: 3745.545849180432
+Derived results: evidence/review/derived_results.json

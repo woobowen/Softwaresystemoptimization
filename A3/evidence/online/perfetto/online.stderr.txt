@@ -1,0 +1,2 @@
+Trace loaded: 59.83 MB in 0.36s (166.2 MB/s)
+Query executed in 19 ms

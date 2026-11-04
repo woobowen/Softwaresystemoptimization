@@ -1,0 +1,16 @@
+"category","slices","total_us"
+"cpu_op",3200,24357.684000
+"python_function",1120,147181.429000
+"cuda_runtime",1002,6869.812000
+"kernel",1000,6101.630000
+"[NULL]",2,0.000000
+"Trace",1,32570.503000
+
+"kernel_count","kernel_total_us","avg_one_kernel_us"
+1000,6101.630000,6.101630
+
+"kernels_with_launch"
+1000
+
+"cpu_aten_calls"
+3200

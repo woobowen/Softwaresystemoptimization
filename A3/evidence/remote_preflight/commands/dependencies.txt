@@ -1,0 +1,2 @@
+ENVIRONMENT TOOLS / CUPTI / PERMISSIONS
+pip 26.2.1 from /data/bwwu/envs/tiger/lib/python3.10/site-packages/pip (python 3.10)

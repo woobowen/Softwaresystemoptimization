@@ -1,0 +1,200 @@
+/data/bwwu/envs/tiger/bin/python -B scripts/profile_workload.py gpu-triton --threads 1 --output-dir evidence/gpu 
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+         aten::empty_like         6.21%     417.688us        71.59%       4.816ms      24.080us       0.000us         0.00%       0.000us       0.000us           200  
+      aten::empty_strided        65.38%       4.398ms        65.38%       4.398ms      21.992us       0.000us         0.00%       0.000us       0.000us           200  
+           cuLaunchKernel        28.28%       1.902ms        28.28%       1.902ms       9.511us       0.000us         0.00%       0.000us       0.000us           200  
+    cudaDeviceSynchronize         0.13%       8.870us         0.13%       8.870us       4.435us       0.000us         0.00%       0.000us       0.000us             2  
+           softmax_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     781.126us       100.00%     781.126us       3.906us           200  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 6.727ms
+Self CUDA time total: 781.126us
+
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+           softmax_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     781.126us       100.00%     781.126us       3.906us           200  
+         aten::empty_like         6.21%     417.688us        71.59%       4.816ms      24.080us       0.000us         0.00%       0.000us       0.000us           200  
+      aten::empty_strided        65.38%       4.398ms        65.38%       4.398ms      21.992us       0.000us         0.00%       0.000us       0.000us           200  
+           cuLaunchKernel        28.28%       1.902ms        28.28%       1.902ms       9.511us       0.000us         0.00%       0.000us       0.000us           200  
+    cudaDeviceSynchronize         0.13%       8.870us         0.13%       8.870us       4.435us       0.000us         0.00%       0.000us       0.000us             2  
+-------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 6.727ms
+Self CUDA time total: 781.126us
+
+{
+  "recorded_utc": "2026-11-04T18:22:53.776824+00:00",
+  "experiment": "gpu-triton",
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/bwwu/lab/SSO_A3",
+  "torch": "2.6.0+cu124",
+  "cpu_threads": 1,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "float32_matmul_precision": "highest",
+  "cuda_matmul_allow_tf32": false,
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+  "cuda_runtime": "12.4",
+  "shapes": [
+    [
+      100,
+      5000
+    ]
+  ],
+  "reference": "torch.softmax(x, dim=1)",
+  "input_sha256": [
+    "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+  ],
+  "calls": 200,
+  "preflight_complete_call_ms": 1485.055611,
+  "max_abs_error": 1.3969838619232178e-09,
+  "max_relative_error_floor_1e_6": 6.026256399131014e-07,
+  "max_row_sum_error": 1.7881393432617188e-07,
+  "with_stack": true,
+  "synchronized_complete_call_ms": [
+    0.437074,
+    0.153361,
+    0.131088,
+    0.127075,
+    0.123233
+  ],
+  "synchronized_complete_call_median_ms": 0.131088,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}
+Filtered CPU top3: [
+  {
+    "name": "aten::empty_like",
+    "count": 200,
+    "cpu_total_us": 4816.067999999941,
+    "self_cpu_us": 417.68799999996963,
+    "cpu_avg_us": 24.080339999999705,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::empty_strided",
+    "count": 200,
+    "cpu_total_us": 4398.379999999971,
+    "self_cpu_us": 4398.379999999971,
+    "cpu_avg_us": 21.991899999999855,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "softmax_kernel",
+    "count": 200,
+    "cpu_total_us": 0,
+    "self_cpu_us": 0,
+    "cpu_avg_us": 0.0,
+    "device_total_us": 781.1260000000207,
+    "self_device_us": 781.1260000000207,
+    "device_type": "DeviceType.CUDA"
+  }
+]
+Filtered GPU top3: [
+  {
+    "name": "softmax_kernel",
+    "count": 200,
+    "cpu_total_us": 0,
+    "self_cpu_us": 0,
+    "cpu_avg_us": 0.0,
+    "device_total_us": 781.1260000000207,
+    "self_device_us": 781.1260000000207,
+    "device_type": "DeviceType.CUDA"
+  }
+]
+GPU kernel us / complete call: 3.905629999999997

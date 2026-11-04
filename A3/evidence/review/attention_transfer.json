@@ -1,0 +1,120 @@
+{
+  "archive_sha256": "66db3881d805585044709e80bcafa9ec3e99c7139404208608d884035d35d3ac",
+  "files": [
+    {
+      "path": "A3/evidence/attention/attention_l2048.cpu_table.txt",
+      "sha256": "f6e953a2c8122d6e669bea0c61c949b05a9240bfe6658e109a2fce1a6ec8b54f",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.device_table.txt",
+      "sha256": "e25e25e9a9f94ae7e3cc80ce15d9305cd9e580168042c6df964ead28e872b26f",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.device_table.txt",
+      "sha256": "70791fc4fe19c9c71f25b4da6ba681f7804374d68782e71404895ff240073d24",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.metadata.json",
+      "sha256": "1238baa1c442614471f32e8d48eb5e3cf3e8b16c6cd365eb96eb0ec1434491df",
+      "bytes": 2404
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.trace.json",
+      "sha256": "b414957be7b7c047155f4324c4cca0d113d77c14a8c51b0e2053bed8a6f98e2b",
+      "bytes": 132148
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.device_table.txt",
+      "sha256": "e72c249189777b0bc43b6c23fc4fb8a4d7a0817db766f6c629379ba0d9619283",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.cpu_table.txt",
+      "sha256": "d89672870d503160b06c669e460da6e2470d4a3fa123f7d1e284deb3e1625413",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.trace.json",
+      "sha256": "2e6adf72f3cd7677948ef2ea7d455918d6d04642676dfde5c614c96d87055dd4",
+      "bytes": 132597
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.statistics.json",
+      "sha256": "dc4bcf339a2d90d39f064fff2c98f5fe8d513e21ada85bf13cc359bfb677a58d",
+      "bytes": 8302
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.trace.json",
+      "sha256": "e50da366d338bac0194a5127211be0c8a32636457f38fb658fd3cfde38549213",
+      "bytes": 147982
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.cpu_table.txt",
+      "sha256": "86439116ea860ff425a37c32ee429c4096d1cd18c9ec75be7bf5e502368274a8",
+      "bytes": 4023
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.metadata.json",
+      "sha256": "998c8e4d2fec7787c3f708b5def0827112f79610710cccb1d06dbbebd91c3f5f",
+      "bytes": 2399
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.statistics.json",
+      "sha256": "5317ac32256ee24e411dd8a555dd92e547bbb861c3478117944e3c40f4691f88",
+      "bytes": 8376
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.metadata.json",
+      "sha256": "fd187d454fc6ca5704612fc1287d283bcefa30113076808a2ab97637b4bf61a3",
+      "bytes": 2404
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.statistics.json",
+      "sha256": "60befe04d6ea0f4e4951d1e787a59afb49152f34e0066e6383a03782d2760667",
+      "bytes": 8357
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_128.txt",
+      "sha256": "bca71a5e397267c5583f39192f9cfd3961ecf0723eb8537140fcc5978e6a4122",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_2048.txt",
+      "sha256": "cacc680d44cfdfdf392aced88b1863562ec53467f9cfd5a1c218d00d0d3e2334",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_512.txt",
+      "sha256": "eda15c7ae46cc2966426ddaa97b6da42d01f33cefcc8c87f2f0f373bbe8cb437",
+      "bytes": 529
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_128.txt",
+      "sha256": "6a171afda4748fa0bb94e8b0d8be160fee8d4717a3ebfeb8dd5638108cdad544",
+      "bytes": 12320
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_2048.txt",
+      "sha256": "5525e80dda03f09549f580a3988500758edeed26a42b0525fa73862297563b19",
+      "bytes": 12341
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_512.txt",
+      "sha256": "8bebaff72231f79e52377986c4177e0533f3d2fc473c9d23a7209c581837da1b",
+      "bytes": 12356
+    },
+    {
+      "path": "A3/evidence/commands/jobs/attention.log",
+      "sha256": "a564dc7cefb5d0ca675f07346aed51f66e125addeb9760fc4f024cf506a7a405",
+      "bytes": 38676
+    },
+    {
+      "path": "A3/evidence/commands/jobs/attention.exitcode",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    }
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "access_model": {
+    "read_elements": 2500200,
+    "write_elements": 1500200,
+    "naive_bytes": 16001600,
+    "triton_bytes": 4000000,
+    "peak_GBps": 1008
+  },
+  "profiles": {
+    "cpu_naive": {
+      "calls": 200,
+      "trace_sha256": "574a0f1d541567265eced80464250d1018e6be458fa324b52d8e0e986445581b",
+      "kernel_count": 0,
+      "kernel_total_us": 0,
+      "kernel_us_per_call": 0.0,
+      "input_sha256": [
+        "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+      ],
+      "cuda_visible_devices": null,
+      "shape": [
+        [
+          100,
+          5000
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::max",
+          "count": 200,
+          "cpu_total_us": 98112.15500000014,
+          "self_cpu_us": 96079.33500000022,
+          "cpu_avg_us": 490.5607750000007,
+          "device_total_us": 0,
+          "self_device_us": 0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::exp",
+          "count": 200,
+          "cpu_total_us": 49893.072000000044,
+          "self_cpu_us": 49893.072000000044,
+          "cpu_avg_us": 249.46536000000023,
+          "device_total_us": 0,
+          "self_device_us": 0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::div",
+          "count": 200,
+          "cpu_total_us": 48902.56600000011,
+          "self_cpu_us": 48902.56600000011,
+          "cpu_avg_us": 244.51283000000055,
+          "device_total_us": 0,
+          "self_device_us": 0,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [],
+      "profiler_self_cpu_total_us": 264485.3120000001,
+      "synchronized_call_median_ms": 1.370675,
+      "max_abs_error": 1.862645149230957e-09,
+      "max_relative_error_floor_1e_6": 4.021608504656369e-07
+    },
+    "gpu_naive": {
+      "calls": 200,
+      "trace_sha256": "c03f3057754cbe0d9747dd56fc3f56cf435f4e7353cc2f60932aad406bc19040",
+      "kernel_count": 1000,
+      "kernel_total_us": 6101.63,
+      "kernel_us_per_call": 30.50815,
+      "input_sha256": [
+        "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          100,
+          5000
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::max",
+          "count": 200,
+          "cpu_total_us": 7919.942999999997,
+          "self_cpu_us": 6315.123999999979,
+          "cpu_avg_us": 39.59971499999998,
+          "device_total_us": 3032.293000000009,
+          "self_device_us": 3032.293000000009,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sum",
+          "count": 200,
+          "cpu_total_us": 4094.350000000003,
+          "self_cpu_us": 2636.046000000005,
+          "cpu_avg_us": 20.471750000000014,
+          "device_total_us": 1566.3470000000038,
+          "self_device_us": 1566.3470000000038,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sub",
+          "count": 200,
+          "cpu_total_us": 3421.7129999999975,
+          "self_cpu_us": 2004.2120000000036,
+          "cpu_avg_us": 17.108564999999988,
+          "device_total_us": 543.7860000000437,
+          "self_device_us": 543.7860000000437,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::max",
+          "count": 200,
+          "cpu_total_us": 7919.942999999997,
+          "self_cpu_us": 6315.123999999979,
+          "cpu_avg_us": 39.59971499999998,
+          "device_total_us": 3032.293000000009,
+          "self_device_us": 3032.293000000009,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sum",
+          "count": 200,
+          "cpu_total_us": 4094.350000000003,
+          "self_cpu_us": 2636.046000000005,
+          "cpu_avg_us": 20.471750000000014,
+          "device_total_us": 1566.3470000000038,
+          "self_device_us": 1566.3470000000038,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::div",
+          "count": 200,
+          "cpu_total_us": 3301.4740000000193,
+          "self_cpu_us": 1908.1050000000182,
+          "cpu_avg_us": 16.507370000000098,
+          "device_total_us": 556.634999999977,
+          "self_device_us": 556.634999999977,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 23760.552999999996,
+      "synchronized_call_median_ms": 0.133998,
+      "max_abs_error": 9.313225746154785e-10,
+      "max_relative_error_floor_1e_6": 2.9510677553352356e-07,
+      "effective_GBps": 524.5024690123786,
+      "percent_of_peak": 52.03397510043438
+    },
+    "gpu_triton": {
+      "calls": 200,
+      "trace_sha256": "56568915a3cff1e0ed0ac4057bdc83a4c3e18167cfc734501d1d8c67fb5bd066",
+      "kernel_count": 200,
+      "kernel_total_us": 781.126,
+      "kernel_us_per_call": 3.90563,
+      "input_sha256": [
+        "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          100,
+          5000
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::empty_like",
+          "count": 200,
+          "cpu_total_us": 4816.067999999941,
+          "self_cpu_us": 417.68799999996963,
+          "cpu_avg_us": 24.080339999999705,
+          "device_total_us": 0,
+          "self_device_us": 0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::empty_strided",
+          "count": 200,
+          "cpu_total_us": 4398.379999999971,
+          "self_cpu_us": 4398.379999999971,
+          "cpu_avg_us": 21.991899999999855,
+          "device_total_us": 0,
+          "self_device_us": 0,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "softmax_kernel",
+          "count": 200,
+          "cpu_total_us": 0,
+          "self_cpu_us": 0,
+          "cpu_avg_us": 0.0,
+          "device_total_us": 781.1260000000207,
+          "self_device_us": 781.1260000000207,
+          "device_type": "DeviceType.CUDA"
+        }
+      ],
+      "profiler_self_cpu_total_us": 6727.15099999996,
+      "synchronized_call_median_ms": 0.131088,
+      "max_abs_error": 1.3969838619232178e-09,
+      "max_relative_error_floor_1e_6": 6.026256399131014e-07,
+      "effective_GBps": 1024.1625550807423,
+      "percent_of_peak": 101.60342808340698
+    },
+    "online_naive": {
+      "calls": 1,
+      "trace_sha256": "d9124e238268c8ebe729fcb122f257c5bfe6119ff476a88b1c802bab1005aaeb",
+      "kernel_count": 5,
+      "kernel_total_us": 30.817,
+      "kernel_us_per_call": 30.817,
+      "input_sha256": [
+        "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          100,
+          5000
+        ]
+      ],
+      "with_stack": false,
+      "cpu_top3": [
+        {
+          "name": "aten::max",
+          "count": 1,
+          "cpu_total_us": 2989.331,
+          "self_cpu_us": 2956.607,
+          "cpu_avg_us": 2989.331,
+          "device_total_us": 15.10400000000027,
+          "self_device_us": 15.10400000000027,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sum",
+          "count": 1,
+          "cpu_total_us": 50.2829999999999,
+          "self_cpu_us": 39.82600000000002,
+          "cpu_avg_us": 50.2829999999999,
+          "device_total_us": 8.0,
+          "self_device_us": 8.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sub",
+          "count": 1,
+          "cpu_total_us": 34.564000000000306,
+          "self_cpu_us": 21.488000000000284,
+          "cpu_avg_us": 34.564000000000306,
+          "device_total_us": 2.880000000000109,
+          "self_device_us": 2.880000000000109,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::max",
+          "count": 1,
+          "cpu_total_us": 2989.331,
+          "self_cpu_us": 2956.607,
+          "cpu_avg_us": 2989.331,
+          "device_total_us": 15.10400000000027,
+          "self_device_us": 15.10400000000027,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sum",
+          "count": 1,
+          "cpu_total_us": 50.2829999999999,
+          "self_cpu_us": 39.82600000000002,
+          "cpu_avg_us": 50.2829999999999,
+          "device_total_us": 8.0,
+          "self_device_us": 8.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::sub",
+          "count": 1,
+          "cpu_total_us": 34.564000000000306,
+          "self_cpu_us": 21.488000000000284,
+          "cpu_avg_us": 34.564000000000306,
+          "device_total_us": 2.880000000000109,
+          "self_device_us": 2.880000000000109,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 3157.3490000000006,
+      "synchronized_call_median_ms": 0.126469,
+      "max_abs_error": 9.313225746154785e-10,
+      "max_relative_error_floor_1e_6": 2.9510677553352356e-07
+    },
+    "online": {
+      "calls": 1,
+      "trace_sha256": "2ad3992637c6d0734d344ef27fd45265a300aac579869f47e61d805b214bfb40",
+      "kernel_count": 35005,
+      "kernel_total_us": 39184.88,
+      "kernel_us_per_call": 39184.88,
+      "input_sha256": [
+        "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          100,
+          5000
+        ]
+      ],
+      "with_stack": false,
+      "cpu_top3": [
+        {
+          "name": "aten::sub",
+          "count": 10001,
+          "cpu_total_us": 144727.2900000035,
+          "self_cpu_us": 82965.03700000617,
+          "cpu_avg_us": 14.471281871813169,
+          "device_total_us": 11442.446000004478,
+          "self_device_us": 11441.16600000445,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::exp",
+          "count": 10001,
+          "cpu_total_us": 131863.3900000024,
+          "self_cpu_us": 75641.57400000439,
+          "cpu_avg_us": 13.185020497950445,
+          "device_total_us": 10634.145999995264,
+          "self_device_us": 10634.145999995264,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::maximum",
+          "count": 5000,
+          "cpu_total_us": 84432.34600000117,
+          "self_cpu_us": 49299.34700000396,
+          "cpu_avg_us": 16.886469200000235,
+          "device_total_us": 7088.191000000672,
+          "self_device_us": 7086.783000000618,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::sub",
+          "count": 10001,
+          "cpu_total_us": 144727.2900000035,
+          "self_cpu_us": 82965.03700000617,
+          "cpu_avg_us": 14.471281871813169,
+          "device_total_us": 11442.446000004478,
+          "self_device_us": 11441.16600000445,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::exp",
+          "count": 10001,
+          "cpu_total_us": 131863.3900000024,
+          "self_cpu_us": 75641.57400000439,
+          "cpu_avg_us": 13.185020497950445,
+          "device_total_us": 10634.145999995264,
+          "self_device_us": 10634.145999995264,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::maximum",
+          "count": 5000,
+          "cpu_total_us": 84432.34600000117,
+          "self_cpu_us": 49299.34700000396,
+          "cpu_avg_us": 16.886469200000235,
+          "device_total_us": 7088.191000000672,
+          "self_device_us": 7086.783000000618,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 536440.1440000029,
+      "synchronized_call_median_ms": 473.695438,
+      "max_abs_error": 2.2351741790771484e-08,
+      "max_relative_error_floor_1e_6": 2.6749862616194714e-06
+    },
+    "attention_l128": {
+      "calls": 10,
+      "trace_sha256": "e50da366d338bac0194a5127211be0c8a32636457f38fb658fd3cfde38549213",
+      "kernel_count": 60,
+      "kernel_total_us": 129.893,
+      "kernel_us_per_call": 12.9893,
+      "input_sha256": [
+        "c614a41a2cb131ab39e72b90393e777a8074a89e00e8a6f761b197c47b3e905f",
+        "0bd4398c7efd158341d9fdcfee7ca4320d22aa6d08b5afdc66ab05c7fd9d5e45",
+        "5ef64b45636f91b42b280f8b13662fcd6006e3e4b4b67ca0d989dcf8afae4a2d"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          128,
+          64
+        ],
+        [
+          128,
+          64
+        ],
+        [
+          128,
+          64
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 3684.1499999999996,
+          "self_cpu_us": 36.43799999999965,
+          "cpu_avg_us": 184.20749999999998,
+          "device_total_us": 103.2330000000029,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 3647.712,
+          "self_cpu_us": 3361.970999999998,
+          "cpu_avg_us": 182.3856,
+          "device_total_us": 103.2330000000029,
+          "self_device_us": 103.2330000000029,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::div",
+          "count": 10,
+          "cpu_total_us": 211.02700000000004,
+          "self_cpu_us": 136.11299999999983,
+          "cpu_avg_us": 21.102700000000006,
+          "device_total_us": 10.114999999999327,
+          "self_device_us": 10.114999999999327,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 3684.1499999999996,
+          "self_cpu_us": 36.43799999999965,
+          "cpu_avg_us": 184.20749999999998,
+          "device_total_us": 103.2330000000029,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 3647.712,
+          "self_cpu_us": 3361.970999999998,
+          "cpu_avg_us": 182.3856,
+          "device_total_us": 103.2330000000029,
+          "self_device_us": 103.2330000000029,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::softmax",
+          "count": 10,
+          "cpu_total_us": 182.6510000000003,
+          "self_cpu_us": 23.69200000000228,
+          "cpu_avg_us": 18.26510000000003,
+          "device_total_us": 16.545000000000073,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 4157.975000000002,
+      "synchronized_call_median_ms": 0.128631,
+      "max_abs_error": 1.6836359340022256e-07,
+      "max_relative_error_floor_1e_6": 0.00031593078254487023,
+      "stages": {
+        "QK_transpose": {
+          "total_us": 50.72100000000001,
+          "us_per_call": 5.072100000000001,
+          "kernel_count": 20,
+          "percent": 39.048293595497846
+        },
+        "scale": {
+          "total_us": 10.115,
+          "us_per_call": 1.0115,
+          "kernel_count": 10,
+          "percent": 7.7871786778348335
+        },
+        "softmax": {
+          "total_us": 16.545,
+          "us_per_call": 1.6545,
+          "kernel_count": 10,
+          "percent": 12.737406942637403
+        },
+        "PV": {
+          "total_us": 52.512000000000015,
+          "us_per_call": 5.251200000000002,
+          "kernel_count": 20,
+          "percent": 40.427120784029945
+        }
+      },
+      "model": {
+        "matmul_FLOPs": 4194304,
+        "logical_bytes": 524288,
+        "one_attention_matrix_bytes": 65536,
+        "FLOP_per_byte": 8.0
+      }
+    },
+    "attention_l512": {
+      "calls": 10,
+      "trace_sha256": "b414957be7b7c047155f4324c4cca0d113d77c14a8c51b0e2053bed8a6f98e2b",
+      "kernel_count": 50,
+      "kernel_total_us": 136.767,
+      "kernel_us_per_call": 13.6767,
+      "input_sha256": [
+        "287df8aa5daea39930d2662c904f283c01579084b6b734ab351d2f13e31333ba",
+        "20ce55de7bd95343bbe69b30dcd0b88b10ba0f1cd212c1e0e00d6a2043c66fb5",
+        "8caf8d96f30d894c61536d6dfdfc28f88b35dde9419bf5fcb5f5acf17e1442b5"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          512,
+          64
+        ],
+        [
+          512,
+          64
+        ],
+        [
+          512,
+          64
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 3536.4489999999996,
+          "self_cpu_us": 36.38900000000103,
+          "cpu_avg_us": 176.82244999999998,
+          "device_total_us": 99.29599999999982,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 3500.0599999999986,
+          "self_cpu_us": 3280.961999999999,
+          "cpu_avg_us": 175.00299999999993,
+          "device_total_us": 99.29599999999982,
+          "self_device_us": 99.29599999999982,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::div",
+          "count": 10,
+          "cpu_total_us": 218.36599999999999,
+          "self_cpu_us": 142.5069999999978,
+          "cpu_avg_us": 21.836599999999997,
+          "device_total_us": 13.822000000000571,
+          "self_device_us": 13.822000000000571,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 3536.4489999999996,
+          "self_cpu_us": 36.38900000000103,
+          "cpu_avg_us": 176.82244999999998,
+          "device_total_us": 99.29599999999982,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 3500.0599999999986,
+          "self_cpu_us": 3280.961999999999,
+          "cpu_avg_us": 175.00299999999993,
+          "device_total_us": 99.29599999999982,
+          "self_device_us": 99.29599999999982,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::softmax",
+          "count": 10,
+          "cpu_total_us": 180.49999999999955,
+          "self_cpu_us": 23.82699999999886,
+          "cpu_avg_us": 18.049999999999955,
+          "device_total_us": 23.648999999999887,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 4015.285,
+      "synchronized_call_median_ms": 0.114408,
+      "max_abs_error": 9.548104901169197e-08,
+      "max_relative_error_floor_1e_6": 0.001226238632610624,
+      "stages": {
+        "QK_transpose": {
+          "total_us": 42.401,
+          "us_per_call": 4.2401,
+          "kernel_count": 10,
+          "percent": 31.00236168081482
+        },
+        "scale": {
+          "total_us": 13.822,
+          "us_per_call": 1.3821999999999999,
+          "kernel_count": 10,
+          "percent": 10.106239078140193
+        },
+        "softmax": {
+          "total_us": 23.648999999999997,
+          "us_per_call": 2.3648999999999996,
+          "kernel_count": 10,
+          "percent": 17.291451885323212
+        },
+        "PV": {
+          "total_us": 56.895,
+          "us_per_call": 5.689500000000001,
+          "kernel_count": 20,
+          "percent": 41.599947355721774
+        }
+      },
+      "model": {
+        "matmul_FLOPs": 67108864,
+        "logical_bytes": 6815744,
+        "one_attention_matrix_bytes": 1048576,
+        "FLOP_per_byte": 9.846153846153847
+      }
+    },
+    "attention_l2048": {
+      "calls": 10,
+      "trace_sha256": "2e6adf72f3cd7677948ef2ea7d455918d6d04642676dfde5c614c96d87055dd4",
+      "kernel_count": 50,
+      "kernel_total_us": 841.538,
+      "kernel_us_per_call": 84.1538,
+      "input_sha256": [
+        "948a398bb606035be7b074f008ed944b296c3e9e49d4aebca55f04489ff2f802",
+        "97a655fbf694fa21d8da0e777c92604034d5dc2ce99d108827156f2c46c9d072",
+        "fdeb1a968e0bfe1efa95a107154d662fc27298e64c100a7447ae4a007c21d718"
+      ],
+      "cuda_visible_devices": "GPU-dfff0e95-1db6-e2f4-3431-55bb852fa0ae",
+      "shape": [
+        [
+          2048,
+          64
+        ],
+        [
+          2048,
+          64
+        ],
+        [
+          2048,
+          64
+        ]
+      ],
+      "with_stack": true,
+      "cpu_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 4776.279000000001,
+          "self_cpu_us": 50.39200000000119,
+          "cpu_avg_us": 238.81395000000006,
+          "device_total_us": 488.83500000000095,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 4725.887,
+          "self_cpu_us": 4352.786000000001,
+          "cpu_avg_us": 236.29434999999998,
+          "device_total_us": 488.83500000000095,
+          "self_device_us": 488.83500000000095,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::div",
+          "count": 10,
+          "cpu_total_us": 288.40700000000106,
+          "self_cpu_us": 181.38500000000113,
+          "cpu_avg_us": 28.840700000000105,
+          "device_total_us": 93.95099999999911,
+          "self_device_us": 93.95099999999911,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "device_top3": [
+        {
+          "name": "aten::matmul",
+          "count": 20,
+          "cpu_total_us": 4776.279000000001,
+          "self_cpu_us": 50.39200000000119,
+          "cpu_avg_us": 238.81395000000006,
+          "device_total_us": 488.83500000000095,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::mm",
+          "count": 20,
+          "cpu_total_us": 4725.887,
+          "self_cpu_us": 4352.786000000001,
+          "cpu_avg_us": 236.29434999999998,
+          "device_total_us": 488.83500000000095,
+          "self_device_us": 488.83500000000095,
+          "device_type": "DeviceType.CPU"
+        },
+        {
+          "name": "aten::softmax",
+          "count": 10,
+          "cpu_total_us": 252.4449999999997,
+          "self_cpu_us": 44.03600000000097,
+          "cpu_avg_us": 25.24449999999997,
+          "device_total_us": 258.7519999999986,
+          "self_device_us": 0.0,
+          "device_type": "DeviceType.CPU"
+        }
+      ],
+      "profiler_self_cpu_total_us": 5419.9050000000025,
+      "synchronized_call_median_ms": 0.154027,
+      "max_abs_error": 1.7171422851680607e-07,
+      "max_relative_error_floor_1e_6": 0.011622388469711354,
+      "stages": {
+        "QK_transpose": {
+          "total_us": 245.05700000000002,
+          "us_per_call": 24.5057,
+          "kernel_count": 10,
+          "percent": 29.120134800805193
+        },
+        "scale": {
+          "total_us": 93.951,
+          "us_per_call": 9.3951,
+          "kernel_count": 10,
+          "percent": 11.164201735394004
+        },
+        "softmax": {
+          "total_us": 258.752,
+          "us_per_call": 25.8752,
+          "kernel_count": 10,
+          "percent": 30.747512292968352
+        },
+        "PV": {
+          "total_us": 243.778,
+          "us_per_call": 24.3778,
+          "kernel_count": 20,
+          "percent": 28.96815117083245
+        }
+      },
+      "model": {
+        "matmul_FLOPs": 1073741824,
+        "logical_bytes": 102760448,
+        "one_attention_matrix_bytes": 16777216,
+        "FLOP_per_byte": 10.448979591836734
+      }
+    }
+  },
+  "gpu_kernel_speedup": 7.811326213696638,
+  "online_wall_slowdown": 3745.545849180432
+}

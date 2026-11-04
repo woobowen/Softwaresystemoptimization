@@ -1,0 +1,239 @@
+{
+  "calls": 1,
+  "device_time_field": "device_time_total",
+  "profiler_self_cpu_total_us": 3157.3490000000006,
+  "cpu_top3": [
+    {
+      "name": "aten::max",
+      "count": 1,
+      "cpu_total_us": 2989.331,
+      "self_cpu_us": 2956.607,
+      "cpu_avg_us": 2989.331,
+      "device_total_us": 15.10400000000027,
+      "self_device_us": 15.10400000000027,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sum",
+      "count": 1,
+      "cpu_total_us": 50.2829999999999,
+      "self_cpu_us": 39.82600000000002,
+      "cpu_avg_us": 50.2829999999999,
+      "device_total_us": 8.0,
+      "self_device_us": 8.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sub",
+      "count": 1,
+      "cpu_total_us": 34.564000000000306,
+      "self_cpu_us": 21.488000000000284,
+      "cpu_avg_us": 34.564000000000306,
+      "device_total_us": 2.880000000000109,
+      "self_device_us": 2.880000000000109,
+      "device_type": "DeviceType.CPU"
+    }
+  ],
+  "device_top3": [
+    {
+      "name": "aten::max",
+      "count": 1,
+      "cpu_total_us": 2989.331,
+      "self_cpu_us": 2956.607,
+      "cpu_avg_us": 2989.331,
+      "device_total_us": 15.10400000000027,
+      "self_device_us": 15.10400000000027,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sum",
+      "count": 1,
+      "cpu_total_us": 50.2829999999999,
+      "self_cpu_us": 39.82600000000002,
+      "cpu_avg_us": 50.2829999999999,
+      "device_total_us": 8.0,
+      "self_device_us": 8.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sub",
+      "count": 1,
+      "cpu_total_us": 34.564000000000306,
+      "self_cpu_us": 21.488000000000284,
+      "cpu_avg_us": 34.564000000000306,
+      "device_total_us": 2.880000000000109,
+      "self_device_us": 2.880000000000109,
+      "device_type": "DeviceType.CPU"
+    }
+  ],
+  "gpu_kernel_count": 5,
+  "gpu_kernel_names": {
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)": 1,
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})": 1,
+    "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)": 1,
+    "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)": 1,
+    "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})": 1
+  },
+  "gpu_kernel_total_us": 30.817,
+  "gpu_kernel_us_per_complete_call": 30.817,
+  "trace_categories": {
+    "cpu_op": 16,
+    "kernel": 5,
+    "ac2g": 12,
+    "cuda_runtime": 7,
+    "": 60,
+    "Trace": 1
+  },
+  "rows": [
+    {
+      "name": "aten::max",
+      "count": 1,
+      "cpu_total_us": 2989.331,
+      "self_cpu_us": 2956.607,
+      "cpu_avg_us": 2989.331,
+      "device_total_us": 15.10400000000027,
+      "self_device_us": 15.10400000000027,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::as_strided",
+      "count": 7,
+      "cpu_total_us": 7.617000000000189,
+      "self_cpu_us": 7.617000000000189,
+      "cpu_avg_us": 1.0881428571428842,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "cudaLaunchKernel",
+      "count": 5,
+      "cpu_total_us": 68.85600000000022,
+      "self_cpu_us": 68.85600000000022,
+      "cpu_avg_us": 13.771200000000045,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",
+      "count": 1,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 15.10400000000027,
+      "self_device_us": 15.10400000000027,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::slice",
+      "count": 2,
+      "cpu_total_us": 15.844000000000051,
+      "self_cpu_us": 14.094999999999345,
+      "cpu_avg_us": 7.9220000000000255,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::unsqueeze",
+      "count": 2,
+      "cpu_total_us": 10.001999999999953,
+      "self_cpu_us": 9.158000000000357,
+      "cpu_avg_us": 5.000999999999976,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sub",
+      "count": 1,
+      "cpu_total_us": 34.564000000000306,
+      "self_cpu_us": 21.488000000000284,
+      "cpu_avg_us": 34.564000000000306,
+      "device_total_us": 2.880000000000109,
+      "self_device_us": 2.880000000000109,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",
+      "count": 1,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 2.880000000000109,
+      "self_device_us": 2.880000000000109,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::exp",
+      "count": 1,
+      "cpu_total_us": 21.95400000000018,
+      "self_cpu_us": 13.594000000000051,
+      "cpu_avg_us": 21.95400000000018,
+      "device_total_us": 2.0160000000000764,
+      "self_device_us": 2.0160000000000764,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",
+      "count": 1,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 2.0160000000000764,
+      "self_device_us": 2.0160000000000764,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::sum",
+      "count": 1,
+      "cpu_total_us": 50.2829999999999,
+      "self_cpu_us": 39.82600000000002,
+      "cpu_avg_us": 50.2829999999999,
+      "device_total_us": 8.0,
+      "self_device_us": 8.0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",
+      "count": 1,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 8.0,
+      "self_device_us": 8.0,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "aten::div",
+      "count": 1,
+      "cpu_total_us": 28.480000000000018,
+      "self_cpu_us": 19.2170000000001,
+      "cpu_avg_us": 28.480000000000018,
+      "device_total_us": 2.8170000000000073,
+      "self_device_us": 2.8170000000000073,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",
+      "count": 1,
+      "cpu_total_us": 0,
+      "self_cpu_us": 0,
+      "cpu_avg_us": 0.0,
+      "device_total_us": 2.8170000000000073,
+      "self_device_us": 2.8170000000000073,
+      "device_type": "DeviceType.CUDA"
+    },
+    {
+      "name": "cudaDeviceSynchronize",
+      "count": 2,
+      "cpu_total_us": 6.891000000000076,
+      "self_cpu_us": 6.891000000000076,
+      "cpu_avg_us": 3.445500000000038,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    }
+  ]
+}

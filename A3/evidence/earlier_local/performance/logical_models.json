@@ -1,0 +1,61 @@
+{
+  "kind": "theoretical logical traffic; not hardware measurements",
+  "N": 100,
+  "M": 5000,
+  "softmax_rows": [
+    {
+      "operation": "max",
+      "read": 500000,
+      "write": 100
+    },
+    {
+      "operation": "sub",
+      "read": 500100,
+      "write": 500000
+    },
+    {
+      "operation": "exp",
+      "read": 500000,
+      "write": 500000
+    },
+    {
+      "operation": "sum",
+      "read": 500000,
+      "write": 100
+    },
+    {
+      "operation": "div",
+      "read": 500100,
+      "write": 500000
+    }
+  ],
+  "naive_total_elements": 4000400,
+  "naive_bytes": 16001600,
+  "triton_bytes": 4000000,
+  "attention": [
+    {
+      "L": 128,
+      "d": 64,
+      "matmul_flops": 4194304,
+      "logical_bytes": 524288,
+      "flop_per_byte": 8.0,
+      "single_score_bytes": 65536
+    },
+    {
+      "L": 512,
+      "d": 64,
+      "matmul_flops": 67108864,
+      "logical_bytes": 6815744,
+      "flop_per_byte": 9.846153846153847,
+      "single_score_bytes": 1048576
+    },
+    {
+      "L": 2048,
+      "d": 64,
+      "matmul_flops": 1073741824,
+      "logical_bytes": 102760448,
+      "flop_per_byte": 10.448979591836734,
+      "single_score_bytes": 16777216
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+USDT:2026-11-04 05:35:58 17388:17388 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-04 05:35:58 17388:17388 SyncActivityProfilerHandler.cpp:46] profiler_stop
+---------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                 Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+            aten::max        36.11%      66.763ms        37.09%      68.565ms     342.824us           200  
+            aten::exp        20.92%      38.675ms        20.92%      38.675ms     193.375us           200  
+            aten::div        18.05%      33.366ms        18.05%      33.366ms     166.831us           200  
+            aten::sub        15.20%      28.097ms        15.20%      28.097ms     140.486us           200  
+            aten::sum         7.49%      13.853ms         7.88%      14.566ms      72.830us           200  
+      aten::unsqueeze         0.70%       1.301ms         0.86%       1.595ms       3.988us           400  
+     aten::unsqueeze_         0.27%     502.544us         0.53%     983.439us       2.459us           400  
+       aten::squeeze_         0.31%     576.858us         0.44%     818.621us       2.047us           400  
+    aten::as_strided_         0.39%     722.658us         0.39%     722.658us       0.903us           800  
+     aten::as_strided         0.28%     510.646us         0.28%     510.646us       0.851us           600  
+          aten::fill_         0.27%     496.024us         0.27%     496.024us       2.480us           200  
+---------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 184.865ms
+
+{
+  "experiment": "cpu-naive",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "seed": 10245102410,
+  "cwd": "/home/addaswsw/lab/Software_system_optimization",
+  "torch": "2.15.0+cpu",
+  "cpu_threads": 1,
+  "float32_matmul_precision": "highest",
+  "input_generation": "CPU Generator then copy before warmup/profiling",
+  "warmup_calls": 5,
+  "timing_repetitions": 5,
+  "timing_method": "perf_counter_ns; synchronize before and after each complete call; profiler disabled",
+  "shapes": [
+    [
+      100,
+      5000
+    ]
+  ],
+  "reference": "torch.softmax(x, dim=1)",
+  "input_sha256": [
+    "1a57e00830072c20cb012d9f68059ef143773be3786574eaa11e128e130456ed"
+  ],
+  "calls": 200,
+  "preflight_complete_call_ms": 5.617277,
+  "max_abs_error": 2.3283064365386963e-09,
+  "with_stack": true,
+  "synchronized_complete_call_ms": [
+    3.402601,
+    1.083233,
+    0.930279,
+    0.926296,
+    1.293065
+  ],
+  "synchronized_complete_call_median_ms": 1.083233,
+  "source_sha256": {
+    "src/attention.py": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+    "src/softmax.py": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+    "src/triton_softmax.py": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea"
+  }
+}
+Filtered CPU top3: [
+  {
+    "name": "aten::max",
+    "count": 200,
+    "cpu_total_us": 68564.81600000008,
+    "self_cpu_us": 66762.75600000026,
+    "cpu_avg_us": 342.8240800000004,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::exp",
+    "count": 200,
+    "cpu_total_us": 38675.06399999984,
+    "self_cpu_us": 38675.06399999984,
+    "cpu_avg_us": 193.3753199999992,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  },
+  {
+    "name": "aten::div",
+    "count": 200,
+    "cpu_total_us": 33366.19599999997,
+    "self_cpu_us": 33366.19599999997,
+    "cpu_avg_us": 166.83097999999984,
+    "device_total_us": 0,
+    "self_device_us": 0,
+    "device_type": "DeviceType.CPU"
+  }
+]
+Filtered GPU top3: []
+GPU kernel us / complete call: 0.0

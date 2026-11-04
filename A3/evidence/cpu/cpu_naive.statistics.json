@@ -1,0 +1,170 @@
+{
+  "calls": 200,
+  "device_time_field": "device_time_total",
+  "profiler_self_cpu_total_us": 264485.3120000001,
+  "cpu_top3": [
+    {
+      "name": "aten::max",
+      "count": 200,
+      "cpu_total_us": 98112.15500000014,
+      "self_cpu_us": 96079.33500000022,
+      "cpu_avg_us": 490.5607750000007,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::exp",
+      "count": 200,
+      "cpu_total_us": 49893.072000000044,
+      "self_cpu_us": 49893.072000000044,
+      "cpu_avg_us": 249.46536000000023,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::div",
+      "count": 200,
+      "cpu_total_us": 48902.56600000011,
+      "self_cpu_us": 48902.56600000011,
+      "cpu_avg_us": 244.51283000000055,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    }
+  ],
+  "device_top3": [],
+  "gpu_kernel_count": 0,
+  "gpu_kernel_names": {},
+  "gpu_kernel_total_us": 0,
+  "gpu_kernel_us_per_complete_call": 0.0,
+  "trace_categories": {
+    "cpu_op": 4600,
+    "python_function": 1033,
+    "": 10,
+    "Trace": 1
+  },
+  "rows": [
+    {
+      "name": "aten::max",
+      "count": 200,
+      "cpu_total_us": 98112.15500000014,
+      "self_cpu_us": 96079.33500000022,
+      "cpu_avg_us": 490.5607750000007,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::unsqueeze_",
+      "count": 400,
+      "cpu_total_us": 1320.0670000002515,
+      "self_cpu_us": 538.0360000002784,
+      "cpu_avg_us": 3.3001675000006285,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::as_strided_",
+      "count": 800,
+      "cpu_total_us": 1026.7200000002656,
+      "self_cpu_us": 1026.7200000002656,
+      "cpu_avg_us": 1.283400000000332,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::squeeze_",
+      "count": 400,
+      "cpu_total_us": 712.7529999996742,
+      "self_cpu_us": 468.06399999938174,
+      "cpu_avg_us": 1.7818824999991856,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::slice",
+      "count": 400,
+      "cpu_total_us": 2067.435999999798,
+      "self_cpu_us": 1647.5739999998373,
+      "cpu_avg_us": 5.168589999999495,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::as_strided",
+      "count": 1000,
+      "cpu_total_us": 846.9730000000388,
+      "self_cpu_us": 846.9730000000388,
+      "cpu_avg_us": 0.8469730000000388,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::unsqueeze",
+      "count": 400,
+      "cpu_total_us": 1255.987999999914,
+      "self_cpu_us": 1068.7409999997135,
+      "cpu_avg_us": 3.1399699999997854,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sub",
+      "count": 200,
+      "cpu_total_us": 40379.29900000007,
+      "self_cpu_us": 40379.29900000007,
+      "cpu_avg_us": 201.89649500000036,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::exp",
+      "count": 200,
+      "cpu_total_us": 49893.072000000044,
+      "self_cpu_us": 49893.072000000044,
+      "cpu_avg_us": 249.46536000000023,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::sum",
+      "count": 200,
+      "cpu_total_us": 23874.795999999995,
+      "self_cpu_us": 23337.843000000204,
+      "cpu_avg_us": 119.37397999999997,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::fill_",
+      "count": 200,
+      "cpu_total_us": 297.0889999999115,
+      "self_cpu_us": 297.0889999999115,
+      "cpu_avg_us": 1.4854449999995574,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    },
+    {
+      "name": "aten::div",
+      "count": 200,
+      "cpu_total_us": 48902.56600000011,
+      "self_cpu_us": 48902.56600000011,
+      "cpu_avg_us": 244.51283000000055,
+      "device_total_us": 0,
+      "self_device_us": 0,
+      "device_type": "DeviceType.CPU"
+    }
+  ]
+}

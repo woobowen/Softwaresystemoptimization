@@ -1,0 +1,76 @@
+"AVG(dur) / 1e9"
+0.000037
+
+"category","event_count","duration_ns"
+"[NULL]",2,0
+"Trace",1,5036647
+"cpu_op",16,3651880
+"cuda_runtime",7,116984
+"gpu_user_annotation",1,347747
+"kernel",5,9855
+"python_function",324,31087037
+"user_annotation",1,4336177
+
+"name","ts","dur"
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",2956433198418530,2816
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",2956433198567811,1727
+"void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",2956433198633315,1248
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",2956433198694115,2496
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",2956433198764707,1568
+
+"launch_name","kernel_name","launch_ts_ns","kernel_ts_ns","kernel_dur_ns"
+"cudaLaunchKernel","void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, 4>)",2956433198384135,2956433198418530,2816
+"cudaLaunchKernel","void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",2956433198550569,2956433198567811,1727
+"cudaLaunchKernel","void at::native::vectorized_elementwise_kernel<4, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::exp_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",2956433198619327,2956433198633315,1248
+"cudaLaunchKernel","void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",2956433198683084,2956433198694115,2496
+"cudaLaunchKernel","void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::DivFunctor<float> > const&)::{lambda(int)#1})",2956433198751584,2956433198764707,1568
+
+"leaf_id","level","name","category"
+170,0,"cudaLaunchKernel","cuda_runtime"
+170,1,"aten::max","cpu_op"
+170,2,"<built-in method max of Tensor object at 0x75176f71cea0>","python_function"
+170,3,"preflight_smoke.py(13): naive_softmax","python_function"
+170,4,"preflight_smoke.py(138): <lambda>","python_function"
+170,5,"preflight_smoke.py(63): profile_once","python_function"
+170,6,"preflight_smoke.py(138): main","python_function"
+170,7,"preflight_smoke.py(217): <module>","python_function"
+178,0,"cudaLaunchKernel","cuda_runtime"
+178,1,"aten::sub","cpu_op"
+178,2,"preflight_smoke.py(13): naive_softmax","python_function"
+178,3,"preflight_smoke.py(138): <lambda>","python_function"
+178,4,"preflight_smoke.py(63): profile_once","python_function"
+178,5,"preflight_smoke.py(138): main","python_function"
+178,6,"preflight_smoke.py(217): <module>","python_function"
+181,0,"aten::exp","cpu_op"
+181,1,"<built-in method exp of type object at 0x751830990ec0>","python_function"
+181,2,"preflight_smoke.py(13): naive_softmax","python_function"
+181,3,"preflight_smoke.py(138): <lambda>","python_function"
+181,4,"preflight_smoke.py(63): profile_once","python_function"
+181,5,"preflight_smoke.py(138): main","python_function"
+181,6,"preflight_smoke.py(217): <module>","python_function"
+182,0,"cudaLaunchKernel","cuda_runtime"
+182,1,"aten::exp","cpu_op"
+182,2,"<built-in method exp of type object at 0x751830990ec0>","python_function"
+182,3,"preflight_smoke.py(13): naive_softmax","python_function"
+182,4,"preflight_smoke.py(138): <lambda>","python_function"
+182,5,"preflight_smoke.py(63): profile_once","python_function"
+182,6,"preflight_smoke.py(138): main","python_function"
+182,7,"preflight_smoke.py(217): <module>","python_function"
+187,0,"cudaLaunchKernel","cuda_runtime"
+187,1,"aten::sum","cpu_op"
+187,2,"<built-in method sum of Tensor object at 0x75176f71dfd0>","python_function"
+187,3,"preflight_smoke.py(13): naive_softmax","python_function"
+187,4,"preflight_smoke.py(138): <lambda>","python_function"
+187,5,"preflight_smoke.py(63): profile_once","python_function"
+187,6,"preflight_smoke.py(138): main","python_function"
+187,7,"preflight_smoke.py(217): <module>","python_function"
+194,0,"cudaLaunchKernel","cuda_runtime"
+194,1,"aten::div","cpu_op"
+194,2,"preflight_smoke.py(13): naive_softmax","python_function"
+194,3,"preflight_smoke.py(138): <lambda>","python_function"
+194,4,"preflight_smoke.py(63): profile_once","python_function"
+194,5,"preflight_smoke.py(138): main","python_function"
+194,6,"preflight_smoke.py(217): <module>","python_function"
+
+"name","value","severity"
+"slice_spill_overlapping_complete_event",1,"error"
