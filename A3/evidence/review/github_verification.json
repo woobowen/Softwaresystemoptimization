@@ -1,8 +1,1664 @@
 {
-  "state": "PENDING",
-  "reason": "The initial content commit must be pushed before remote files can be read. This record will be updated in an evidence-only follow-up commit after actual GitHub API verification.",
+  "state": "COMPLETE",
+  "recorded_utc": "2026-11-04T18:55:37.617727+00:00",
   "repository": "https://github.com/woobowen/Softwaresystemoptimization",
   "branch": "main",
-  "engineering_final_review": "PENDING",
+  "reviewed_content_commit_sha": "edba39528f6f3b3fe91c6d57ff53d228a675e610",
+  "local_head_at_readback": "edba39528f6f3b3fe91c6d57ff53d228a675e610",
+  "github_main_sha_at_readback": "edba39528f6f3b3fe91c6d57ff53d228a675e610",
+  "sha_match": true,
+  "a3_tree_sha": "13fe54b2b5d3cbc71e67ac92d8f2de903bdff990",
+  "all_372_blob_shas_match_local": true,
+  "remote_file_count": 372,
+  "readme_relative_links_valid": 17,
+  "formal_images_present": [
+    "A3/images/01-environment.png",
+    "A3/images/02-cpu-profiler.png",
+    "A3/images/03-cpu-perfetto.png",
+    "A3/images/04a-cpu-sql-average.png",
+    "A3/images/04b-cpu-sql-total.png",
+    "A3/images/05-gpu-profiler.png",
+    "A3/images/06-gpu-timeline.png",
+    "A3/images/07-triton-profiler.png",
+    "A3/images/08-triton-timeline.png",
+    "A3/images/09-online-timeline.png",
+    "A3/images/09a-online-profiler.png",
+    "A3/images/10-attention-profiler.png",
+    "A3/images/11-attention-timeline.png"
+  ],
+  "complete_formal_lossless_traces_present": 8,
+  "direct_file_byte_readbacks": [
+    {
+      "path": "A3/README.md",
+      "encoding": "utf-8",
+      "bytes": 16983,
+      "blob_sha": "e83248a5c11d9d68938b1daa161de73c74193e3c",
+      "sha256": "fbee6e08fd37b821330b8e4aca5dd60f15bd6d1b377af2025073313802edb42c",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/src/softmax.py",
+      "encoding": "utf-8",
+      "bytes": 816,
+      "blob_sha": "00fc8ae1d4d824f7f8e34b4e4f6038d78d45c4e8",
+      "sha256": "1854aab2de72596243c0f76948cfea38a75226d6e8a01c3dcace99d2a5e6f5f1",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/src/triton_softmax.py",
+      "encoding": "utf-8",
+      "bytes": 2404,
+      "blob_sha": "d6ef2d8b015b2909bf8ad6356372bc9e0b5c8af2",
+      "sha256": "5f532a1d0038012f4873a8190bb6c1d05ea6bac010bfc7261711febf9d702bea",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/src/attention.py",
+      "encoding": "utf-8",
+      "bytes": 266,
+      "blob_sha": "2b7708f3f61ec7bada2c98595d750a6909f1aadf",
+      "sha256": "44f02823b2a7599074ffb4d5a0b8ec151944fefe43b6640fea97dda04d0f9faa",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/profile_workload.py",
+      "encoding": "utf-8",
+      "bytes": 9250,
+      "blob_sha": "0cac44792495db774caedc75c3ee9958fc45c874",
+      "sha256": "94ac5c6826d3d058f9a00175da8d5345e2f1358e4f221edfdc05bc359d46dbc6",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/check_softmax.py",
+      "encoding": "utf-8",
+      "bytes": 4604,
+      "blob_sha": "74acbf59bff816ab2147cc7a7d1d825c3c37f906",
+      "sha256": "330ecab723fc5c4585c742561616e2d69006b88831693a412d8d66d6d5a374cb",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/check_attention.py",
+      "encoding": "utf-8",
+      "bytes": 5022,
+      "blob_sha": "a408dd654df80ab22e4551ae84d5cf95a74ccd07",
+      "sha256": "b6c017d2409dad02317713c6a37c004cb01415be402e71acebab96b55c5684f0",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/check_triton.py",
+      "encoding": "utf-8",
+      "bytes": 1317,
+      "blob_sha": "e7fbf4ddf65fffbadbbd874b76c260a9b5f047e3",
+      "sha256": "f5c78cf39cc6bf7e94aa5f44cde343c61ba953cb238fd86c97ab77752401381b",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/run_cpu.sh",
+      "encoding": "utf-8",
+      "bytes": 934,
+      "blob_sha": "260c6c6f6d1df4d25fbfa735ef5ecbbdbb3dcbdb",
+      "sha256": "fc2ec85264109c99657d766769b7bb41653ec6c7881b996c8da54b53504a8cd1",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/run_gpu.sh",
+      "encoding": "utf-8",
+      "bytes": 2338,
+      "blob_sha": "55cbfe25ac73e4e78706c4a30f8864f62f94ff3a",
+      "sha256": "cb8acb4b38cf676d9b6b0d92c05c7541bf82d6ad02b979f8e72884f79fe7130a",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/perfetto_queries.sql",
+      "encoding": "utf-8",
+      "bytes": 1723,
+      "blob_sha": "68fc812e8f6649b08de5fee163c40d2ff6715293",
+      "sha256": "d2cd3d9d490a4e073fe182f2350f01c64d62d463a42a19e8280e6cd8f2ae5a6f",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/scripts/perfetto_gpu.sql",
+      "encoding": "utf-8",
+      "bytes": 702,
+      "blob_sha": "3fc14f56eb885426dfca0da9f9f211a39c4d5b76",
+      "sha256": "b2c88a3605e1c5d43c7f8e2f75b0b632a12e35567884e2d5584f1ab091402268",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/evidence/review/trace_manifest.json",
+      "encoding": "utf-8",
+      "bytes": 3254,
+      "blob_sha": "883162b3ffba469afdd7836e8e971b4d0a56ec80",
+      "sha256": "e753d824839a8b96fd0906c0ac8a2d6f8ed80cb442baad05060d124f63cdca98",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/evidence/review/final_validation.json",
+      "encoding": "utf-8",
+      "bytes": 4471,
+      "blob_sha": "83a078d6dbc88604ea7100b21f6508e016139cd8",
+      "sha256": "9cba7a34478089df59e95616df34f98c61b7555ccabaf3174f6719eee9cf5170",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/evidence/review/derived_results.json",
+      "encoding": "utf-8",
+      "bytes": 24241,
+      "blob_sha": "fc13a1a36dcd21467d4debcc51fbb54f272d3343",
+      "sha256": "32737e1b5fa4edd336b05eef4b8b7b9611b4fd7a321dc30d83023ea0caed9a5d",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/images/06-gpu-timeline.png",
+      "encoding": "base64",
+      "bytes": 174631,
+      "blob_sha": "bb6a244c639e90017f11e81aa10f71418a8aad7c",
+      "sha256": "49df581fb3ea8cadb5c5de1e23418686efcda46c124908b4c410649ebc00144f",
+      "byte_identical": true
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.trace.json.gz",
+      "encoding": "base64",
+      "bytes": 100166,
+      "blob_sha": "4829a060bdd9cdafac3bce3c842c45039357e68f",
+      "sha256": "87355f36eae6114129779b5555258894f56b46be0c6a9898a9d5bbc62bb2f26c",
+      "byte_identical": true
+    }
+  ],
+  "tree_files": [
+    {
+      "path": "A3/.gitignore",
+      "sha": "bb99e0733c6c6b9c0e60fdb567b1eb94f535f57b"
+    },
+    {
+      "path": "A3/README.md",
+      "sha": "e83248a5c11d9d68938b1daa161de73c74193e3c"
+    },
+    {
+      "path": "A3/evidence/README.md",
+      "sha": "d7a9b1ef26f2416abaad83eb291f590460a02988"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.cpu_table.txt",
+      "sha": "9ec180b1bdeb626131dbc8a58f0fea58a0678c68"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.device_table.txt",
+      "sha": "ed99f0a53ce66bb09d4d86be03adb9b598fbf1fc"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.metadata.json",
+      "sha": "0dc666c9a812d0a904244cd8687622c694069fd7"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.statistics.json",
+      "sha": "448bc4414e6b132f10b7ced2a6d09a3b941c2330"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l128.trace.json.gz",
+      "sha": "4fbdbf8f48fc231a26af3b4c95d4d0dce7afbaaf"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.cpu_table.txt",
+      "sha": "585e5a1085797c7c4e9472acab99287ceb474136"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.device_table.txt",
+      "sha": "161220b96bfde803181d461727eaa8ccb3ff57a9"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.metadata.json",
+      "sha": "cad7f938fbbf819bc7fa3ae6a19af8e7b4ca718c"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.statistics.json",
+      "sha": "515b23c091c12a00e7599946b3d1fe971c493c08"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l2048.trace.json.gz",
+      "sha": "08767a3be0cba572a05f2981394503171ddbc02f"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.cpu_table.txt",
+      "sha": "051c6fe63e348050820339bc028bd799c038383e"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.device_table.txt",
+      "sha": "5d59e392431cc957c6e22b93ccdf872dc949ffaf"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.metadata.json",
+      "sha": "c4f85be5ad6cec321f60a2c009f5ea001d7e1d0a"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.statistics.json",
+      "sha": "d41679eef597a87e827d1157d59b5c40995e50ec"
+    },
+    {
+      "path": "A3/evidence/attention/attention_l512.trace.json.gz",
+      "sha": "8cf8dc64285a037ca73ce18282cb1be2e509a613"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l128.command.json",
+      "sha": "efd64edfcaa2a059538a699701653867fab43c7f"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l128.csv",
+      "sha": "4f85a0c8cb3003f50e689208eccb15ddef13b64d"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l128.stderr.txt",
+      "sha": "83b677a2761f95e52b188e74edd0bc9c18b58786"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l2048.command.json",
+      "sha": "62949c32392b31beee11bcee54116dea73af4056"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l2048.csv",
+      "sha": "bff593387d7e3b715942511bfeada9bc264d44da"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l2048.stderr.txt",
+      "sha": "0fc00251be073132ba1fa69e8b2292af2298ebd6"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l512.command.json",
+      "sha": "ebc4b5d3f8e9fce39ca8a5a074dfb55d8e35924f"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l512.csv",
+      "sha": "b980993ac553f9dd3da045143b3d5786014020bd"
+    },
+    {
+      "path": "A3/evidence/attention/perfetto/attention_l512.stderr.txt",
+      "sha": "6d94fdc7466745533a17f9167f9c3b3ddf9cd611"
+    },
+    {
+      "path": "A3/evidence/commands/commands.jsonl",
+      "sha": "c9897e81c010a3a8d602106b2188b9842ba3f91f"
+    },
+    {
+      "path": "A3/evidence/commands/download_attention_results.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/download_attention_results.txt",
+      "sha": "486c0d3d9b211abdd4c351725a8a3934dde7ad95"
+    },
+    {
+      "path": "A3/evidence/commands/download_cpu_results.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/download_cpu_results.txt",
+      "sha": "f82e80382cc645eaad3b78b8d753a658e69a8fbc"
+    },
+    {
+      "path": "A3/evidence/commands/download_online_results.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/download_online_results.txt",
+      "sha": "ebde66165be1d7b38b26dbfbc6f2a229e796e2d8"
+    },
+    {
+      "path": "A3/evidence/commands/download_softmax_results.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/download_softmax_results.txt",
+      "sha": "8e7db1ffa04780ee6eb4361acd2db33adbe08f2c"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_128.txt",
+      "sha": "5005c60865eaba09498f0fea2cdee3e644020f53"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_2048.txt",
+      "sha": "31c68a5f671d918ff083909891884cdc72aa9002"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_attention_512.txt",
+      "sha": "c21dfd48c1821ef88645d6e3805ae9f24599d8db"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_correctness.txt",
+      "sha": "2d00035b3db374044438e4b9f0493df53c987685"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_gpu-naive.txt",
+      "sha": "12abb8f21af07b66fff5631e08b80d4d4b21ea15"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_gpu-triton.txt",
+      "sha": "96d4bbf0f5ca54e44a98c31297fc14964f769703"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_online-naive.txt",
+      "sha": "df152018d7b458df9c8d5236bdc2d170618810b2"
+    },
+    {
+      "path": "A3/evidence/commands/gpu_before_online.txt",
+      "sha": "43e778ee007313e7e2a6b4a91c07183ac8313723"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/attention.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/attention.log",
+      "sha": "5f1b4dfc39a6155d519eef6256f9987fead00daf"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/correctness.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/correctness.log",
+      "sha": "899ef330e9a637f3636916e321ee164feef3d94f"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/cpu.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/cpu.log",
+      "sha": "5436e7a922a911b0eeb6c6a529f111e26bea900a"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/online.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/online.log",
+      "sha": "47b4f266255201c50d462ec10dce608e9340c28a"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/softmax.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/softmax.log",
+      "sha": "61a1ce74f014ff8dc3ff563404c2fd62f2e4fa09"
+    },
+    {
+      "path": "A3/evidence/commands/jobs/worker.sh",
+      "sha": "051280231b830aa4095ec5fb679809b59a3e8936"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_collect.sh",
+      "sha": "e1bffb66a213a875de469e113201ad7a36bb4b59"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_collect.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_collect.txt",
+      "sha": "42a462cf9aa009f5e71953bc15e830eb9b7527b0"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_start.sh",
+      "sha": "ea49ee6561622e43f11ec14b73ee7a8bb4cf13ff"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_start.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_attention_start.txt",
+      "sha": "1ad05af31339b26603c43809c2f9ff1842d13ee6"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_start.sh",
+      "sha": "563b4d89ec5bfdab6e1f11cee23580834430408f"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_start.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_start.txt",
+      "sha": "853b3168a8a34aa5055d42c38d99cb2d8b16dadb"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_status.sh",
+      "sha": "735defcb581800c60db0c9f380d53fd06b1995c4"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_status.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_correctness_status.txt",
+      "sha": "ae9c815747d81c03dcdaa04f53e68c6107ef6d15"
+    },
+    {
+      "path": "A3/evidence/commands/remote_cpu_status.sh",
+      "sha": "563bc3d1e2b09efe18e8891814fa78c175147db8"
+    },
+    {
+      "path": "A3/evidence/commands/remote_cpu_status.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_cpu_status.txt",
+      "sha": "365dc9d060239ea1e0944751d0fea21c729de4d8"
+    },
+    {
+      "path": "A3/evidence/commands/remote_create.sh",
+      "sha": "bf48ecb418e402ae418da8d6a20cc3df452dc418"
+    },
+    {
+      "path": "A3/evidence/commands/remote_create.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_create.txt",
+      "sha": "1bdd849c3d0e9bbf3a2e8e86679cb201474722cf"
+    },
+    {
+      "path": "A3/evidence/commands/remote_initial.sh",
+      "sha": "7fad1f1a9b7df71a0f043923a07234c06193a09c"
+    },
+    {
+      "path": "A3/evidence/commands/remote_initial.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_initial.txt",
+      "sha": "5e50e7cbd1196fc9caf217f87948241e69f4c1ef"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_collect.sh",
+      "sha": "29c5fd8af44828590a6d693c3a9df8e63a6eda3f"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_collect.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_collect.txt",
+      "sha": "5aab0dbdf81b8711006b6a3ea0608cf2c630a9fb"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_start.sh",
+      "sha": "dc6d769908795666eda7cbf164c4153fd178ef13"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_start.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_start.txt",
+      "sha": "84c98b8b6a7f913d155bc26430538fd4db582c19"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_status.sh",
+      "sha": "80597296e498ce05900474d6b477ad49d874cc01"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_status.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_online_status.txt",
+      "sha": "7a1f9096fc38d8d2e37bebd78423e072f9a42fdf"
+    },
+    {
+      "path": "A3/evidence/commands/remote_setup.sh",
+      "sha": "53759d2a5b6af8baf6c4e5b0c10663bf60b458b1"
+    },
+    {
+      "path": "A3/evidence/commands/remote_setup.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_setup.txt",
+      "sha": "51995df2f7302b6735f22e877e04e2420453978d"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_collect.sh",
+      "sha": "52fd588f486fdc38ee6978c173d79c30a408bfb9"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_collect.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_collect.txt",
+      "sha": "9624126593926e9967f54e99d34cf1a8c7fe36db"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_start.sh",
+      "sha": "8c4b656f944390025031d87217a60ae5f8f84a64"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_start.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_start.txt",
+      "sha": "27c4b58f4c4503884102cd3b82f80b7fb1e27c52"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_status.sh",
+      "sha": "9b58e1a3def7e4ad2966727fe9a6de41886bf427"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_status.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/remote_softmax_status.txt",
+      "sha": "dd40686adf8853b6e0551f233fd42287dc2f4658"
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_128.txt",
+      "sha": "9c8af630e3930b351af83014cace7da2f967be4d"
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_2048.txt",
+      "sha": "4b2cecedbaf64dc25bd7fc968d16d0bd07b7cab7"
+    },
+    {
+      "path": "A3/evidence/commands/school_attention_512.txt",
+      "sha": "4604424ec613439ccd83a1199527f975cb524561"
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_attention_correctness.txt",
+      "sha": "b9c33dd3f99c26c1a671a2c29c2147de92c1465d"
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_environment.txt",
+      "sha": "05d0f7730a40fed894acec5dcf7efcadcbed4c98"
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_naive.txt",
+      "sha": "e2e8979e1332592971580a4279b814c000a77188"
+    },
+    {
+      "path": "A3/evidence/commands/school_cpu_softmax_correctness.txt",
+      "sha": "437283e487efa5edd7d403e0a5bb91fd8729148e"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu-naive.txt",
+      "sha": "eb1ebc87c81a5468f004201c2af51f64f5e34715"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu-triton.txt",
+      "sha": "0c7be5f627904563983e69c76fc0627e1e370c3f"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_attention_correctness.txt",
+      "sha": "02add2cf2b48a0ea588eeb91053d546e7fe1b41d"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_environment.txt",
+      "sha": "5c51aabdb7fbeba54db57d250b8e1cb7a8a2c630"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_softmax_correctness.txt",
+      "sha": "e016b7c2d6e6ff8f42cf4a4c400a4ede5c9cf84f"
+    },
+    {
+      "path": "A3/evidence/commands/school_gpu_triton_correctness.txt",
+      "sha": "be590284473d3acad5362f3ee24d7f2378e3c5d7"
+    },
+    {
+      "path": "A3/evidence/commands/school_online-naive.txt",
+      "sha": "16fcd43c90b76a9153fb6e0c2d6fe5f26a1b6531"
+    },
+    {
+      "path": "A3/evidence/commands/school_online.txt",
+      "sha": "1db9fdba987a7dbba21cf58fb45ea4b36a31ea81"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots.jsonl",
+      "sha": "64b86b44c1e69af8f39f53fe15d3ac543d6c8765"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/01-environment.sh",
+      "sha": "86767785eb0e063093fb444b79a51c48238fb06c"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/02-cpu-profiler.sh",
+      "sha": "61deeb01d71eb58b7c48d65ee75100361a6e87e0"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/05-gpu-profiler.sh",
+      "sha": "87aeb018a48cad3838166377b284d9d221069980"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/07-triton-profiler.sh",
+      "sha": "6194f79059cef45cfa7549eddad815960dbc807a"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/09a-online-profiler.sh",
+      "sha": "05c5e7d3fec896da47cfd7f76a0cc122401c6ad2"
+    },
+    {
+      "path": "A3/evidence/commands/screenshots/10-attention-profiler.sh",
+      "sha": "2e72e4a47815952af82ff78120df330e93b66c2e"
+    },
+    {
+      "path": "A3/evidence/commands/upload_formal_source.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/commands/upload_formal_source.txt",
+      "sha": "31907a5879ec8c2c21726dee3219364151ca9b75"
+    },
+    {
+      "path": "A3/evidence/correctness/school_attention_cpu.json",
+      "sha": "17a28e9555c40873263cf5bc87f5d8a1155be27f"
+    },
+    {
+      "path": "A3/evidence/correctness/school_attention_cuda.json",
+      "sha": "d23114a29b3dbc36479bb0e15c63cb5038da1f08"
+    },
+    {
+      "path": "A3/evidence/correctness/school_softmax_cpu.json",
+      "sha": "93d92adf293a37fe27892bfbfbd0cee94d9cf086"
+    },
+    {
+      "path": "A3/evidence/correctness/school_softmax_cuda.json",
+      "sha": "f503fd02ad50c822fcdc8e4625f56d2b74342dd5"
+    },
+    {
+      "path": "A3/evidence/correctness/school_triton.json",
+      "sha": "7513f6091250ce2705844de19aa36f29839bf6a0"
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.cpu_table.txt",
+      "sha": "2b0481c750ea22f2ddb9d3f25ea2e6427cbdb809"
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.metadata.json",
+      "sha": "286214f4370a833193ad47b57dec3fff047a15e6"
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.statistics.json",
+      "sha": "d6be6b84b8f86c575c9380fdee1208eb852e167e"
+    },
+    {
+      "path": "A3/evidence/cpu/cpu_naive.trace.json.gz",
+      "sha": "4829a060bdd9cdafac3bce3c842c45039357e68f"
+    },
+    {
+      "path": "A3/evidence/cpu/perfetto/command.json",
+      "sha": "f00611213fe6d3c62a1b22095be1646c99f5d55c"
+    },
+    {
+      "path": "A3/evidence/cpu/perfetto/cpu_queries.csv",
+      "sha": "c3785ca0e7b94fb1fae5094eaef77d56aa2ab68f"
+    },
+    {
+      "path": "A3/evidence/cpu/perfetto/cpu_queries.stderr.txt",
+      "sha": "28581a182d9ce6e2017a305adac478e4f60b10c4"
+    },
+    {
+      "path": "A3/evidence/earlier_local/attention_model.md",
+      "sha": "874e06e52a8aaf8ca3bf9d98c9c8af65db86a6b4"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_check_attention.txt",
+      "sha": "5c1fb7c5aa74bbb710330987dc57d6fafa86cd56"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_check_softmax.txt",
+      "sha": "13d5fb2e5bbc6d3825e29b0cbba3615b6651c64e"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_environment.txt",
+      "sha": "2222d40af77a4d05bd65c26e5f403366d8a24ef7"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_cached_assets.txt",
+      "sha": "503f3aad5d8bb0d7ba595619c026293b10785c9c"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_inspect.txt",
+      "sha": "a29825554675df66a2653aac55550cd6ecf99e3b"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_sql_ui.txt",
+      "sha": "292da7016135a23d3225981f363d1adbc3cd1c3d"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_ui_cached.txt",
+      "sha": "19ab9cf2d19d51748719dc133a9a10cedab266e9"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_ui_debug.txt",
+      "sha": "76e338435ae80f9cac54c4418398c6041f9202f8"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_perfetto_ui_ready.txt",
+      "sha": "71cfb7d371311bc7bdce44206b1f2c1fecdac891"
+    },
+    {
+      "path": "A3/evidence/earlier_local/commands/local_profile_cpu.txt",
+      "sha": "03cf7fb692670e182c0ba1e7dfc30a4060a38f39"
+    },
+    {
+      "path": "A3/evidence/earlier_local/correctness/local_attention_cpu.json",
+      "sha": "5c1fb7c5aa74bbb710330987dc57d6fafa86cd56"
+    },
+    {
+      "path": "A3/evidence/earlier_local/correctness/local_softmax_cpu.json",
+      "sha": "f8550b52923479818a012047779b53d2fb6cf872"
+    },
+    {
+      "path": "A3/evidence/earlier_local/debug/local_perfetto_sql.png",
+      "sha": "97b4b4652cb1d672ba9d45ad34b75e948e5e73a4"
+    },
+    {
+      "path": "A3/evidence/earlier_local/environment/browser_connection.md",
+      "sha": "8f1c8592a98c1ae0617433d9d61836b6dcefbbf9"
+    },
+    {
+      "path": "A3/evidence/earlier_local/environment/cloud_input_manifest.json",
+      "sha": "f29f362531197d4c8b14f7db49f0821d300ee3a7"
+    },
+    {
+      "path": "A3/evidence/earlier_local/environment/local_cpu.json",
+      "sha": "2222d40af77a4d05bd65c26e5f403366d8a24ef7"
+    },
+    {
+      "path": "A3/evidence/earlier_local/environment/local_venv_install.txt",
+      "sha": "1a22d65903096f975b2be73293186a5a086cfc9f"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.cpu_table.txt",
+      "sha": "cfa387bac38ba03077ff584dd3506cc20a08a590"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.metadata.json",
+      "sha": "11a682eb176300035b5440ccfb54918ef47313fb"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.statistics.json",
+      "sha": "31c54a40445120d84a19101246e5125f50405f41"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/local_cpu_debug/cpu_naive.trace.json.gz",
+      "sha": "5e367013cf79ee3935ae2d04fd668ee06f021d98"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/local_cpu_debug/sql_results.json",
+      "sha": "24c42a98488b01a1e231df56b6f4f117d67848b3"
+    },
+    {
+      "path": "A3/evidence/earlier_local/performance/logical_models.json",
+      "sha": "21271274559bcee32c7a6c74182fa077b62aa8e7"
+    },
+    {
+      "path": "A3/evidence/earlier_local/review_code.md",
+      "sha": "20d276b503df068104f8168084aacf6f97ba9215"
+    },
+    {
+      "path": "A3/evidence/earlier_local/scripts/export_results.py",
+      "sha": "90e7b6264b92e2c662da384fc1cf8e83caa13d1d"
+    },
+    {
+      "path": "A3/evidence/environment/local_formal.json",
+      "sha": "e7ced3c6afab04323cb8d9640f024a4f6db1486d"
+    },
+    {
+      "path": "A3/evidence/environment/school_cpu.json",
+      "sha": "4b49f831604331c66db8c9a1a59836fd2c943a80"
+    },
+    {
+      "path": "A3/evidence/environment/school_gpu.json",
+      "sha": "c3fdef37f4f3a7a75a2f2cb394e2f6737788f0c6"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.cpu_table.txt",
+      "sha": "50b01a63855111b48e6ab05f240407da66de6e6f"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.device_table.txt",
+      "sha": "e067ed34cc84652e4a8775868ecd0f2e0541b6eb"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.metadata.json",
+      "sha": "a39fea92fc74af16494c75194e67ebe572ebef20"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.statistics.json",
+      "sha": "5417d3c4d0b2079d5c3a6fe0adfba1524e047ff6"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_naive.trace.json.gz",
+      "sha": "eae57944e181ee4e87fec97193d72fb44b64178b"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.cpu_table.txt",
+      "sha": "1f45efa8648d9bd8b1ccaf4efef1403b97ee6368"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.device_table.txt",
+      "sha": "706e69e6212faa9b89286f41b22d1a976f364515"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.metadata.json",
+      "sha": "d90a0d4379835c8d55e7d4681fdd155f33414ad7"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.statistics.json",
+      "sha": "d794b00387faeb87820ec6e5221345cd5629b163"
+    },
+    {
+      "path": "A3/evidence/gpu/gpu_triton.trace.json.gz",
+      "sha": "62d2c6f064894a0b539e7437e0a0170835610cb5"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_naive.command.json",
+      "sha": "a33a369f1b47d9b125a590d8a072b3f004537ec1"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_naive.csv",
+      "sha": "6dde7a5a6d58783abdd13fc08c5b22742e271c14"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_naive.stderr.txt",
+      "sha": "91a1610358f653ae3846397dc97b4b1ad3055816"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_triton.command.json",
+      "sha": "c726f50f73122b077266819f51bbfc399418749d"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_triton.csv",
+      "sha": "16e6cb3ce930871b1e3008ec8c4d81b509aa0e10"
+    },
+    {
+      "path": "A3/evidence/gpu/perfetto/gpu_triton.stderr.txt",
+      "sha": "aa56345d836db2993cb0a2f0fafbd256961ef29b"
+    },
+    {
+      "path": "A3/evidence/online/online.cpu_table.txt",
+      "sha": "1ea7eebddadf37220879e72c81936a9d7091dad0"
+    },
+    {
+      "path": "A3/evidence/online/online.device_table.txt",
+      "sha": "c3679e0a24788a40593bede8958c1e6367cef7e8"
+    },
+    {
+      "path": "A3/evidence/online/online.metadata.json",
+      "sha": "ee60e56bf6a2f965d94bf38012b602f86cc593ae"
+    },
+    {
+      "path": "A3/evidence/online/online.statistics.json",
+      "sha": "8daee6cdd0fa3a4e753aceb1601cb6aaae1583d1"
+    },
+    {
+      "path": "A3/evidence/online/online.trace.json.gz",
+      "sha": "d4039bb6a05785c79cd73f4b2bb9306d660d007c"
+    },
+    {
+      "path": "A3/evidence/online/online_naive.cpu_table.txt",
+      "sha": "e9377901760c2dab7c550eb5845176afd4a97aab"
+    },
+    {
+      "path": "A3/evidence/online/online_naive.device_table.txt",
+      "sha": "22fdd157e53c2f680ca3089c4a2500bb7e24eff5"
+    },
+    {
+      "path": "A3/evidence/online/online_naive.metadata.json",
+      "sha": "3806daeed9778fd8f695a8118471f0f3e5015862"
+    },
+    {
+      "path": "A3/evidence/online/online_naive.statistics.json",
+      "sha": "8268103d52def59b6aa72bd41c9fe1b2f5d55e2d"
+    },
+    {
+      "path": "A3/evidence/online/online_naive.trace.json.gz",
+      "sha": "18e91a077e328b2b3890e79b649ca5e602d6171b"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online.command.json",
+      "sha": "e35e24b050b98ee57dd5a7216bfc1ce7eedff2df"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online.csv",
+      "sha": "a2bfae012428f3c9ea96de0f65aed4cd5e1d9514"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online.stderr.txt",
+      "sha": "e8c42067325c7e5df1a229d88c6fe5283df03aa1"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online_naive.command.json",
+      "sha": "16c74307c7e6d7b063137351299d46fe4f93d6f2"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online_naive.csv",
+      "sha": "bcffe66a2dd56a782c0becac807ebae22c71e4ea"
+    },
+    {
+      "path": "A3/evidence/online/perfetto/online_naive.stderr.txt",
+      "sha": "d864161da97676257eb3402b94f509c47f75b717"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/checklist.md",
+      "sha": "be798add9d261234d8210349257342991d93ae8f"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/attention_online_smoke.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/attention_online_smoke.txt",
+      "sha": "36c9968d818d3b8c36e0fabee701f213bc6b8d03"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/collect.sh",
+      "sha": "3f74e8b8d9bf79e22c74180345bed617c2bb3ca9"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/collection.stderr.txt",
+      "sha": "73944e6e5309abbb21821cf41cd6a72afefff186"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/collection.txt",
+      "sha": "81b51e52699a0898751757e7515b768d1063c818"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/commands.jsonl",
+      "sha": "70eb5bc27560d4febfd90ff4de4b84d82ba0139b"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cpu_smoke.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cpu_smoke.txt",
+      "sha": "650b72de156fb999818bbdcf481e3d239beddfa9"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cpu_stage.sh",
+      "sha": "a7b1ad767c785b071e7c73c02c1e0efacdb2bfac"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cuda_smoke.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cuda_smoke.txt",
+      "sha": "722e61d85eb171f968d9a635368407ee48235004"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/cuda_stage.sh",
+      "sha": "2ac51c7dacc7963e6e2add3d29858646a1b35872"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies.stderr.txt",
+      "sha": "c0e74fcb1d0c9756447ea277fdc23a91512a591f"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies.txt",
+      "sha": "52eebe74190f5b761207038e16a3582f2f500479"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_diagnostic.sh",
+      "sha": "fe1059d2a966deee280ead8875309beaa4185b25"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_diagnostic.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_diagnostic.txt",
+      "sha": "edae61f94ef2f235823089037b64ead7f5ebeac7"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_discovery.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_discovery.txt",
+      "sha": "78915ce1f385cbea6100eff6bcdd9fcfe1dc1030"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/dependencies_final.sh",
+      "sha": "637446edd413e06cf05434c4f128f08cfa4111fb"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/discover.sh",
+      "sha": "7a4e2d6b64c9664db522971a01660266d2036801"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/download_results.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/download_results.txt",
+      "sha": "ead339251a45c2cdb9098714446eebbaa40f5287"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/download_transfer.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/download_transfer.txt",
+      "sha": "fa3aa9b2af8231f80d321cece2b6fac58d4ba9ae"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/extras_stage.sh",
+      "sha": "65ca5cb489a785b5769b6f48a8b40f89df465668"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/final_bridge_check.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/final_bridge_check.txt",
+      "sha": "733b72ab0cbbf3535c85fcfc4297c14ecf259b48"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/final_remote_state.sh",
+      "sha": "d8959ef89c9b8fa93afb4a3ddd98b27836806851"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/final_remote_state.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/final_remote_state.txt",
+      "sha": "4d22fde887fc2cf832975f642e4f89bd7c7c4fdb"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/inventory.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/inventory.txt",
+      "sha": "11776f1de5a4b46cf5067653dd190d5b41ded306"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/reconnect.sh",
+      "sha": "70394ec4cfc9b3c8f6e6cede58eaf8aa22f0603e"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/reconnect.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/reconnect.txt",
+      "sha": "2c4248a8323e30446498d0616c526c18cffe04ce"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/remote_setup.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/remote_setup.txt",
+      "sha": "64e37a55a25c141ca577cdcb4b1ecd9e5467a74c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/setup.sh",
+      "sha": "07acf4c1d9d2e0f5b6de01bc742fce8d825fc357"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/transfer_probe.roundtrip.sh",
+      "sha": "0a0d739d4b4a84e37fc85076fb1155d199c862f7"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/transfer_probe.sh",
+      "sha": "0a0d739d4b4a84e37fc85076fb1155d199c862f7"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/triton_smoke.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/triton_smoke.txt",
+      "sha": "9530d2dda5009fface70fcb9a0b13ab3ee20e113"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/triton_stage.sh",
+      "sha": "00aff15ff4511739fb844bd8580438822e635981"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_runner.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_runner.txt",
+      "sha": "7ea370e37453929fcc4539d98a6023c219ba4c29"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_smoke.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_smoke.txt",
+      "sha": "d193444eef6a015205f5dba1d2b7c0fdb764bd4c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_teacher.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_teacher.txt",
+      "sha": "4bf8b9669587575bac1ad62d0318a6e9c8bbf616"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_transfer.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/upload_transfer.txt",
+      "sha": "95d5b89345d72d66c4c6549d24354790cbe7f6fb"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/workflow_probe.sh",
+      "sha": "9ce3b32f6c02dd93c5313d841ad3ea857b1383a0"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/workflow_probe.stderr.txt",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/commands/workflow_probe.txt",
+      "sha": "454fa6faa3ca48ff26a228ae629c041642dec540"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/final_validation.json",
+      "sha": "01a15ae4dbbe93f85354f8481e082c134cb18a89"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/installation_log.json",
+      "sha": "cf51b5860bcb941f5647a7417488e30ac29b64d1"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/local_initial_state.json",
+      "sha": "fe04f2dfbdee3c6c499b7a918c652122f55babc5"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/pdf_alignment.json",
+      "sha": "df8c46075387ddf8e6fe6319b60ebb36c4f8f967"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_attention.csv",
+      "sha": "b7b1e295ac85f0ae759f9ee35dae20f6d7a0b4e5"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_attention.stderr.txt",
+      "sha": "3e2ca6f1b5c18df36fce90cc6fa732b90e547a37"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_cpu_naive.csv",
+      "sha": "78a0c9d664da1ed9ad3101b23e08d996331936ab"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_cpu_naive.stderr.txt",
+      "sha": "0598b82434ed736e0fec4dbe388393a2f626e4de"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_cuda_naive.csv",
+      "sha": "e442fc11a970932c2e68563bdb3945a05bf2c85c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_cuda_naive.stderr.txt",
+      "sha": "b70cc09afa150224bec7951afd2c3e73e95f3931"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_attention.csv",
+      "sha": "e7792ba46cf8736dc739c1c4e8da9c81be53342c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_attention.stderr.txt",
+      "sha": "94a839f078c1059331032a1e768eb7f2c8489c98"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_cpu_naive.csv",
+      "sha": "ab73a62d6f98bbd17c1bba5446b75f6318aeaf88"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_cpu_naive.stderr.txt",
+      "sha": "94a839f078c1059331032a1e768eb7f2c8489c98"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_cuda_naive.csv",
+      "sha": "e0150b226171c2472d2a7ffd72148e0a1a0e8c83"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_cuda_naive.stderr.txt",
+      "sha": "94a839f078c1059331032a1e768eb7f2c8489c98"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_triton.csv",
+      "sha": "d6d2a8e2ce08807b34685b70339df6579a9c7bec"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_diagnostic_triton.stderr.txt",
+      "sha": "94a839f078c1059331032a1e768eb7f2c8489c98"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_help.txt",
+      "sha": "a13983124339a08c522bdf3022d5044c1087c40e"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_triton.csv",
+      "sha": "c5289a6139396f8ca048d2927c725222608f018d"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_triton.stderr.txt",
+      "sha": "7026f0c8525db27a0f7b831897381c658ae32402"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/perfetto/perfetto_version.txt",
+      "sha": "769964435bebba7564e2e2295a7cab262335f409"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/preflight_summary.md",
+      "sha": "864d6a3adb75c5677b7bb38ae0f25ecb914afab2"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/profiler_initialization.patch",
+      "sha": "574ac598c7d397127f7e2c1d8b0df335ea52bc36"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu.json",
+      "sha": "d4747aea32b69868876860581d3a72bb13800693"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu.log",
+      "sha": "b9e7503e8507e9dd8d4f31da9e009bcccfc5b599"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu_initial.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu_initial.json",
+      "sha": "12a43cfff697f33bc8c2c790da2527c0f861ea82"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu_initial.log",
+      "sha": "227bbb8fba5ad8871d48466582a83d719e6706d4"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cpu_initial.trace.json.gz",
+      "sha": "e984d7e9343df0c3c28b8335ce0174904f672671"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cuda.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cuda.json",
+      "sha": "99714a43b563ad41687ea474f02f6ac3cae77930"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/cuda.log",
+      "sha": "f0f4a30ddfc03ac028e8ccdb3a1cdf088bacc296"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/detached.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/detached.log",
+      "sha": "9b4c3ea8b86246ec365e43055f2793778949ebd7"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/detached.pid",
+      "sha": "9a9ef1a1e1da3c8412e558ce4f24fbc6f53d4a1c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/extras.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/extras.json",
+      "sha": "5b43ee07fb2efe7c99aad88d1fcc925c6d8b8c4b"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/extras.log",
+      "sha": "178a360b1a30ce28d787eb0ce465890b262658a3"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/transfer_probe.log",
+      "sha": "9db439f89549d650b3641309c4638ba51a5df604"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/triton.exitcode",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/triton.json",
+      "sha": "9c138dcda128e237c5871aeb3271c6726b7070a6"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/logs/triton.log",
+      "sha": "c918a1fba98a06759850d840f5e9f31dc2327522"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/preflight_run.sh",
+      "sha": "f3f46d9247b3b1fcf29f5673ed32f2ddea011612"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/preflight_smoke.py",
+      "sha": "e13d6b843cf2942ff8ef05def980b81127e5a40c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/remote_marker.txt",
+      "sha": "52251a4fa64d8d356d20ff68ced8901ba78d52dd"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/remote_results.sha256",
+      "sha": "c30dee3a3960d9215baa0437b2b8b5881dd10210"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/teacher_softmax_preflight.py",
+      "sha": "3444821e620fb4ee526fa33fed7666381097d97c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/traces/attention.trace.json",
+      "sha": "777c81e1a05b671a68025dab3a35f8a9872a9675"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/traces/cpu_naive.trace.json",
+      "sha": "a0b4db95271db75d11bebe2dc6cd4c252ce8960b"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/traces/cuda_naive.trace.json",
+      "sha": "748180d75c7c9c54a572671997ae977d1bc33d1c"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/traces/triton.trace.json",
+      "sha": "3d22fc3ac0134de101c2ab9da4ca9cf8612f7ef9"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/remote/transfer_probe.sh",
+      "sha": "0a0d739d4b4a84e37fc85076fb1155d199c862f7"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/trace_check.json",
+      "sha": "9a6f07401961bc35855a88c92bc3ddd5c0603f82"
+    },
+    {
+      "path": "A3/evidence/remote_preflight/transfer_verification.json",
+      "sha": "40390edce69500638385ae278078fae4abb4fc54"
+    },
+    {
+      "path": "A3/evidence/requirements.md",
+      "sha": "713d29c75bd9c47f35f21d5486171de973952cde"
+    },
+    {
+      "path": "A3/evidence/review/attention_transfer.json",
+      "sha": "53b91237a050bc2ca0a9b0a1df88808a9499becc"
+    },
+    {
+      "path": "A3/evidence/review/browser_setup.md",
+      "sha": "8fa6bb6cbf109fed44853a460bd4516b3550bb7c"
+    },
+    {
+      "path": "A3/evidence/review/cpu_transfer.json",
+      "sha": "3820a70d2b8ff93f52c9fbb5af2b7cf7cb06cb46"
+    },
+    {
+      "path": "A3/evidence/review/derived_results.json",
+      "sha": "fc13a1a36dcd21467d4debcc51fbb54f272d3343"
+    },
+    {
+      "path": "A3/evidence/review/evidence_moves.json",
+      "sha": "edb1166a7361cc4553c7f484edeb03374e5ef2d5"
+    },
+    {
+      "path": "A3/evidence/review/external_references.md",
+      "sha": "1ebf192055cf84ae1f693b663931a83611526fc8"
+    },
+    {
+      "path": "A3/evidence/review/final_analysis.stdout.txt",
+      "sha": "8fe4d6e4678f521ba16029fb84c92a25bbb8b14c"
+    },
+    {
+      "path": "A3/evidence/review/final_validation.json",
+      "sha": "83a078d6dbc88604ea7100b21f6508e016139cd8"
+    },
+    {
+      "path": "A3/evidence/review/final_validation.stdout.txt",
+      "sha": "53a734f730be16ef78137329b6da94ff8d840449"
+    },
+    {
+      "path": "A3/evidence/review/git_integration.json",
+      "sha": "31bcdcc6cd43831424be334ce49e9db4b4a9ac07"
+    },
+    {
+      "path": "A3/evidence/review/github_verification.json",
+      "sha": "e82809b48678c28dc88d523b86108c59cdef5369"
+    },
+    {
+      "path": "A3/evidence/review/historical_trace_compression.json",
+      "sha": "8d2b4c708aa9d197f9c1f8900f32ca410bee7d7e"
+    },
+    {
+      "path": "A3/evidence/review/independent_code_math.md",
+      "sha": "2784bcaffd8feac35afc5e3f9ccd4a1c967659bf"
+    },
+    {
+      "path": "A3/evidence/review/independent_report.md",
+      "sha": "e66da205690a985c0d268d275bb3210952321d45"
+    },
+    {
+      "path": "A3/evidence/review/independent_statistics.md",
+      "sha": "e188afdb0d127f797d875216633f17f5bfd835ed"
+    },
+    {
+      "path": "A3/evidence/review/initial_state.json",
+      "sha": "13dd74487a92c491f8df540b510e0a66caf07157"
+    },
+    {
+      "path": "A3/evidence/review/installation_log.json",
+      "sha": "9ccde2995836bdcefbb23a6b6a5e675c81563b78"
+    },
+    {
+      "path": "A3/evidence/review/measurement_protocol.md",
+      "sha": "698b18d21b7696cf137092067fc8fd4192ecb48d"
+    },
+    {
+      "path": "A3/evidence/review/online_transfer.json",
+      "sha": "0f219ffb93d636606235def7eadc105977d2f238"
+    },
+    {
+      "path": "A3/evidence/review/perfetto_attention.json",
+      "sha": "2c173f1c1b7cfb94c04524f49de0d67fa4bdc279"
+    },
+    {
+      "path": "A3/evidence/review/perfetto_cpu.json",
+      "sha": "7c73950a594b707a8ec4c8e3903bacdfa76d7e33"
+    },
+    {
+      "path": "A3/evidence/review/perfetto_gpu_naive.json",
+      "sha": "a59f62de143f819010b4ef58b766b09fceea1878"
+    },
+    {
+      "path": "A3/evidence/review/perfetto_online.json",
+      "sha": "56571ff10b26798439289acf40f92b53c0642484"
+    },
+    {
+      "path": "A3/evidence/review/perfetto_triton.json",
+      "sha": "b3c22f920e1fd9d6ec87fad20799449f57b562eb"
+    },
+    {
+      "path": "A3/evidence/review/remote_source_manifest.json",
+      "sha": "61765d27a8579cbdfb16a41790421e504ad3d71d"
+    },
+    {
+      "path": "A3/evidence/review/self_review.md",
+      "sha": "fa6194fddb2f3302c7c9cb2fe1d38f2655ad7ede"
+    },
+    {
+      "path": "A3/evidence/review/softmax_transfer.json",
+      "sha": "5d943f9eb3ef720f718299dda61adae649fab141"
+    },
+    {
+      "path": "A3/evidence/review/trace_manifest.json",
+      "sha": "883162b3ffba469afdd7836e8e971b4d0a56ec80"
+    },
+    {
+      "path": "A3/images/01-environment.png",
+      "sha": "204a72756b6603d789dd56dc909712cd4694f92f"
+    },
+    {
+      "path": "A3/images/02-cpu-profiler.png",
+      "sha": "381d60b55f2f52938ba38cb85ddefce5bdf1dd9d"
+    },
+    {
+      "path": "A3/images/03-cpu-perfetto.png",
+      "sha": "d85cb237ad9b842c123ad23fc51b481a8c211b97"
+    },
+    {
+      "path": "A3/images/04a-cpu-sql-average.png",
+      "sha": "2571fcd2feb325aa944d0e7b032c73dd9835d5bb"
+    },
+    {
+      "path": "A3/images/04b-cpu-sql-total.png",
+      "sha": "7920c87bb2bfda50f8e8f8fb6c9e1b5901ecedb0"
+    },
+    {
+      "path": "A3/images/05-gpu-profiler.png",
+      "sha": "1a7726b5e9df8d6515fefdbba47b15f2f11315a6"
+    },
+    {
+      "path": "A3/images/06-gpu-timeline.png",
+      "sha": "bb6a244c639e90017f11e81aa10f71418a8aad7c"
+    },
+    {
+      "path": "A3/images/07-triton-profiler.png",
+      "sha": "08e36f57713fc4d33ef5494111533ce6fba0aaa3"
+    },
+    {
+      "path": "A3/images/08-triton-timeline.png",
+      "sha": "297a547ff9e2cbbb8fb15af0cd0ced128caaf601"
+    },
+    {
+      "path": "A3/images/09-online-timeline.png",
+      "sha": "5252d470249c1b55f43b1c0336c2cc52f754c303"
+    },
+    {
+      "path": "A3/images/09a-online-profiler.png",
+      "sha": "3a7b6c72ab05113232d804e40e06447238f5d5f5"
+    },
+    {
+      "path": "A3/images/10-attention-profiler.png",
+      "sha": "ca19f226ebfc0562af1a109b54367b6d261469a4"
+    },
+    {
+      "path": "A3/images/11-attention-timeline.png",
+      "sha": "72b634eab7cb24dff5efe889209a5e3fa5d84497"
+    },
+    {
+      "path": "A3/scripts/analyze_results.py",
+      "sha": "1cf9cdbb66733ff509121230ac038b5c1351df99"
+    },
+    {
+      "path": "A3/scripts/capture_perfetto.py",
+      "sha": "f3fb11723dd92a56485ba4b87b9392926f385bef"
+    },
+    {
+      "path": "A3/scripts/capture_terminal.py",
+      "sha": "35b741ee9f0518b09200639df6fe882366fc61c2"
+    },
+    {
+      "path": "A3/scripts/check_attention.py",
+      "sha": "a408dd654df80ab22e4551ae84d5cf95a74ccd07"
+    },
+    {
+      "path": "A3/scripts/check_softmax.py",
+      "sha": "74acbf59bff816ab2147cc7a7d1d825c3c37f906"
+    },
+    {
+      "path": "A3/scripts/check_triton.py",
+      "sha": "e7fbf4ddf65fffbadbbd874b76c260a9b5f047e3"
+    },
+    {
+      "path": "A3/scripts/environment.py",
+      "sha": "0de5ba9af9091a752d88a6cc28d8925bb16d52bc"
+    },
+    {
+      "path": "A3/scripts/gpu_status.py",
+      "sha": "ca2382bd44094254bf9651d050e736190a5fd20f"
+    },
+    {
+      "path": "A3/scripts/perfetto_gpu.sql",
+      "sha": "3fc14f56eb885426dfca0da9f9f211a39c4d5b76"
+    },
+    {
+      "path": "A3/scripts/perfetto_queries.sql",
+      "sha": "68fc812e8f6649b08de5fee163c40d2ff6715293"
+    },
+    {
+      "path": "A3/scripts/preflight_inventory.sh",
+      "sha": "b9366abf6378ada039f8d7748c7ba576545fb280"
+    },
+    {
+      "path": "A3/scripts/preflight_perfetto.sql",
+      "sha": "6f4da5d2a3e877c3c31e71b2cdc6b35ace6f568d"
+    },
+    {
+      "path": "A3/scripts/preflight_run.sh",
+      "sha": "f3f46d9247b3b1fcf29f5673ed32f2ddea011612"
+    },
+    {
+      "path": "A3/scripts/preflight_smoke.py",
+      "sha": "e13d6b843cf2942ff8ef05def980b81127e5a40c"
+    },
+    {
+      "path": "A3/scripts/preflight_ssh.py",
+      "sha": "b43ec37f5eb9961f147309e2876f72a0ad311a38"
+    },
+    {
+      "path": "A3/scripts/preflight_trace_check.py",
+      "sha": "bac1e548c181d12bf134435212b9850591b5c497"
+    },
+    {
+      "path": "A3/scripts/profile_workload.py",
+      "sha": "0cac44792495db774caedc75c3ee9958fc45c874"
+    },
+    {
+      "path": "A3/scripts/run_cpu.sh",
+      "sha": "260c6c6f6d1df4d25fbfa735ef5ecbbdbb3dcbdb"
+    },
+    {
+      "path": "A3/scripts/run_gpu.sh",
+      "sha": "55cbfe25ac73e4e78706c4a30f8864f62f94ff3a"
+    },
+    {
+      "path": "A3/scripts/teacher_softmax_preflight.py",
+      "sha": "3444821e620fb4ee526fa33fed7666381097d97c"
+    },
+    {
+      "path": "A3/scripts/validate_artifacts.py",
+      "sha": "425ad30af430f8fdcfaf6e0e93a73d22c0c7168e"
+    },
+    {
+      "path": "A3/src/attention.py",
+      "sha": "2b7708f3f61ec7bada2c98595d750a6909f1aadf"
+    },
+    {
+      "path": "A3/src/softmax.py",
+      "sha": "00fc8ae1d4d824f7f8e34b4e4f6038d78d45c4e8"
+    },
+    {
+      "path": "A3/src/triton_softmax.py",
+      "sha": "d6ef2d8b015b2909bf8ad6356372bc9e0b5c8af2"
+    }
+  ],
+  "full_tree_unwanted_artifacts": "Checked against the locally reviewed tree; no official PDF, environments, compiled objects/caches or unrelated assignments in A3 commit. Historical preflight/local evidence is labelled separately.",
+  "verification_method": "Connected GitHub REST ref, Contents and recursive Git tree APIs; direct fetch_file readback of README, all 3 core source files, profiling/correctness/runners/SQL, derived validation evidence, one real PNG and one gzip trace. All remote Git blob SHAs equal local committed objects.",
+  "publication_record_note": "This record is saved in an evidence-only follow-up commit. Its own final commit SHA cannot be embedded recursively. Final HEAD/main and the entire final A3 tree are checked again after publishing the record; that final SHA is returned in the final response and local final readback snapshot.",
+  "engineering_status": "FINAL_REVIEW",
+  "chatgpt_final_review": "PENDING",
   "shuishan_submission": "NOT_READY"
 }

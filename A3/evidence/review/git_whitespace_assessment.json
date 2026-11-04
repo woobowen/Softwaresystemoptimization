@@ -1,0 +1,7 @@
+{
+  "full_check_exit_code": 2,
+  "full_diagnostic": ".cache/a3-formal-transfer/git-whitespace-full.txt",
+  "diagnostic_lines": 2437,
+  "authored_source_check_exit_code": 0,
+  "interpretation": "Raw Profiler tables/logs retain their original padding; README student-ID line uses an intentional Markdown hard break. Original evidence is not whitespace-normalized. Executable source/scripts separately pass git diff --check."
+}

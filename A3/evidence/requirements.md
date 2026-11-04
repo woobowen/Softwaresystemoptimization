@@ -28,7 +28,7 @@
 | 逐题报告 | 教师编号、身份、全部回答、自然简洁 | README.md | review/independent_report.md；review/self_review.md | 全文 | 完整连续通读、修正三处实际问题；最终措辞判断仍待外部审核 |
 | 真实图片 | 13张来自真实xterm/Perfetto，最终数据一致 | scripts/capture_terminal.py；scripts/capture_perfetto.py | commands/screenshots.jsonl；review/perfetto_*.json；review/final_validation.json | 对应题目 | 完成：13/13链接与哈希正确；未使用预检查图冒充 |
 | 原始证据 | 全部正式trace/日志/SQL可复算 | scripts/analyze_results.py | review/trace_manifest.json；commands/；cpu/；gpu/；online/；attention/ | 按题引用 | 完成：8份完整trace无损压缩，解压前后SHA核对 |
-| GitHub发布/回读 | 仅A3正常提交main、不force、核对远端所有文件 | Git | review/github_verification.json（发布后） | 不在正式报告写审核流程 | 正在进行，最终状态以远端回读记录与最终回复为准 |
+| GitHub发布/回读 | 仅A3正常提交main、不force、核对远端所有文件 | Git | review/github_verification.json | 不在正式报告写审核流程 | 已完成内容提交edba395的GitHub API回读：372文件blob全部一致，17份直接字节回读一致；回读记录随证据提交发布，最终HEAD/main再核对并在最终回复报告 |
 | 最终审核/提交 | 外部审核与水杉边界 | 无水杉操作 | review/self_review.md | 不写入报告 | Engineering等待ChatGPT；Submission NOT_READY；未猜分支/提交水杉 |
 
 ## 限制

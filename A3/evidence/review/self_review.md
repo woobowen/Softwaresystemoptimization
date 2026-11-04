@@ -51,4 +51,8 @@ README按教师原顺序覆盖Step1、2.1–2.6及Attention四问。主代理与
 - 本地P2/evidence/final/manifest.sha256仍保留用户原差异，其他已有未跟踪文件未动；它们不进入A3提交。
 - 不提交水杉、不猜A3水杉分支，不自行宣布Engineering PASS。
 
-GitHub发布与实际内容回读将在独立github_verification.json及最终回复报告。此文件的自审完成不等于外部最终审核完成。
+内容提交edba39528f6f3b3fe91c6d57ff53d228a675e610已推送GitHub main。通过连接的GitHub REST ref/Contents/tree API核对372文件全部blob SHA一致；直接fetch_file回读17份文件（README、全部核心源码、执行/正确性/SQL、关键数据、一张PNG、一份gzip）字节完全一致，13图及17个README相对链接存在。回读记录保存github_verification.json，并随仅证据的后续提交发布；最终HEAD/main与完整树会在后续提交后再次核对，最终SHA见最终回复。
+
+完整git diff --check因原始Profiler表/终端日志的行尾填充，以及README学号行的Markdown硬换行返回2，未将其伪称通过，也未改写原始证据。对src/scripts/.gitignore的源码空白检查返回0，完整分类见git_whitespace_assessment.json。这是原始输出格式的检查范围差异，无编译/数值/运行失败。
+
+此文件的自审完成不等于外部最终审核完成。
