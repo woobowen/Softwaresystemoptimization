@@ -11,4 +11,4 @@
 | gdb-multiarch | Write-up 7 | images/01-tools.png | Complete |
 | Source-level debugging | Write-up 8 | debug/gdb-clean.txt; images/08-gdb.png; scripts/debug.gdb | Complete |
 | Five ELF and two source files | Write-up 3–8 | loop/; preflight/frozen-sha256.txt | Complete |
-| GitHub and teacher submissions and final review archive | N/A | publication evidence | Pending |
+| GitHub and teacher submissions | N/A | publication/remotes.md and formal-manifest.tsv | Remote readback complete; final GitHub evidence commit and review archive pending |
