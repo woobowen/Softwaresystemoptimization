@@ -1,0 +1,2 @@
+rm -f loop_fusion *.o
+g++ -std=c++14 -I. -O1 -o loop_fusion loop_fusion.cpp -lm

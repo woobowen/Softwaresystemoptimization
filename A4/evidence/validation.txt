@@ -1,0 +1,9 @@
+gcc-O0 3 reports, 144 rows, 30 groups, build and size agree; median 18.191214
+gcc-O1 3 reports, 144 rows, 30 groups, build and size agree; median 10.515528
+gcc-O2 3 reports, 144 rows, 30 groups, build and size agree; median 8.863317
+gcc-O3 3 reports, 144 rows, 30 groups, build and size agree; median 9.9621
+clang-O0 3 reports, 144 rows, 30 groups, build and size agree; median 18.786394
+clang-O1 3 reports, 144 rows, 30 groups, build and size agree; median 9.49454
+clang-O2 3 reports, 144 rows, 30 groups, build and size agree; median 9.057937
+clang-O3 3 reports, 144 rows, 30 groups, build and size agree; median 8.110301
+24 distinct report hashes; README local links exist

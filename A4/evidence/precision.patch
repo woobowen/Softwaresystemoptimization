@@ -1,0 +1,29 @@
+--- /tmp/a4-cppbench-20261117/benchmark_results.h	2026-11-17 23:30:37.101354225 -0500
++++ A4/source/benchmark_results.h	2026-11-17 23:31:04.648483482 -0500
+@@ -120,7 +120,7 @@
+         } else
+             speed = millions/results[i].time;
+         
+-        printf("%2i %*s\"%s\"  %5.2f sec   %5.2f M     %.2f\n",
++        printf("%2i %*s\"%s\"  %9.6f sec   %5.2f M     %.2f\n",
+                 i,
+                 (int)(longest_label_len - strlen(results[i].label)),
+                 "",
+@@ -136,7 +136,7 @@
+     }
+ 
+     // report total time
+-    printf("\nTotal absolute time for %s: %.2f sec\n", name, total_absolute_times);
++    printf("\nTotal absolute time for %s: %.6f sec\n", name, total_absolute_times);
+ 
+     if ( current_test > 1 && show_penalty ) {
+     
+@@ -188,7 +188,7 @@
+     }
+ 
+     // report total time
+-    fprintf(output,"\nTotal absolute time for %s: %.2f sec\n", name, total_absolute_times);
++    fprintf(output,"\nTotal absolute time for %s: %.6f sec\n", name, total_absolute_times);
+ 
+     // reset the test counter so we can run more tests
+     current_test = 0;

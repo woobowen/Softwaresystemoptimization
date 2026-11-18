@@ -1,0 +1,328 @@
+##Compiler: clang clang++
+##CFlags: -I. -O3
+##CPPFlags: -std=c++14 -I. -O3
+./loop_fusion 3 
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "uint8_t loop fusion 2way indep optimal"   0.006008 sec   3994.67 M     1.00
+ 1 "uint8_t for loop fusion 2way indep blocked"   0.006620 sec   3625.38 M     1.10
+ 2         "uint8_t for loop fusion 2way indep"   0.009803 sec   2448.23 M     1.63
+
+Total absolute time for uint8_t loop fusion 2way indep: 0.022431 sec
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "uint8_t loop fusion 3way indep optimal"   0.007647 sec   3138.49 M     1.00
+ 1 "uint8_t for loop fusion 3way indep blocked"   0.009451 sec   2539.41 M     1.24
+ 2         "uint8_t for loop fusion 3way indep"   0.010222 sec   2347.88 M     1.34
+
+Total absolute time for uint8_t loop fusion 3way indep: 0.027320 sec
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "uint8_t loop fusion 4way indep optimal"   0.005317 sec   4513.82 M     1.00
+ 1 "uint8_t for loop fusion 4way indep blocked"   0.007020 sec   3418.80 M     1.32
+ 2         "uint8_t for loop fusion 4way indep"   0.008146 sec   2946.23 M     1.53
+
+Total absolute time for uint8_t loop fusion 4way indep: 0.020483 sec
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "int32_t loop fusion 2way indep optimal"   0.016431 sec   1460.65 M     1.00
+ 1 "int32_t for loop fusion 2way indep blocked"   0.010580 sec   2268.43 M     0.64
+ 2         "int32_t for loop fusion 2way indep"   0.018742 sec   1280.55 M     1.14
+
+Total absolute time for int32_t loop fusion 2way indep: 0.045753 sec
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "int32_t loop fusion 3way indep optimal"   0.010465 sec   2293.36 M     1.00
+ 1 "int32_t for loop fusion 3way indep blocked"   0.011152 sec   2152.08 M     1.07
+ 2         "int32_t for loop fusion 3way indep"   0.025687 sec   934.32 M     2.45
+
+Total absolute time for int32_t loop fusion 3way indep: 0.047304 sec
+
+test                                description   absolute   operations   ratio with
+number                                            time       per second   test0
+
+ 0     "int32_t loop fusion 4way indep optimal"   0.009185 sec   2612.96 M     1.00
+ 1 "int32_t for loop fusion 4way indep blocked"   0.010253 sec   2340.78 M     1.12
+ 2         "int32_t for loop fusion 4way indep"   0.033070 sec   725.73 M     3.60
+
+Total absolute time for int32_t loop fusion 4way indep: 0.052508 sec
+
+test                               description   absolute   operations   ratio with
+number                                           time       per second   test0
+
+ 0     "double loop fusion 2way indep optimal"   0.033803 sec   710.00 M     1.00
+ 1 "double for loop fusion 2way indep blocked"   0.019552 sec   1227.50 M     0.58
+ 2         "double for loop fusion 2way indep"   0.031542 sec   760.89 M     0.93
+
+Total absolute time for double loop fusion 2way indep: 0.084897 sec
+
+test                               description   absolute   operations   ratio with
+number                                           time       per second   test0
+
+ 0     "double loop fusion 3way indep optimal"   0.016820 sec   1426.87 M     1.00
+ 1 "double for loop fusion 3way indep blocked"   0.019722 sec   1216.92 M     1.17
+ 2         "double for loop fusion 3way indep"   0.047221 sec   508.25 M     2.81
+
+Total absolute time for double loop fusion 3way indep: 0.083763 sec
+
+test                               description   absolute   operations   ratio with
+number                                           time       per second   test0
+
+ 0     "double loop fusion 4way indep optimal"   0.017474 sec   1373.47 M     1.00
+ 1 "double for loop fusion 4way indep blocked"   0.021025 sec   1141.50 M     1.20
+ 2         "double for loop fusion 4way indep"   0.058848 sec   407.83 M     3.37
+
+Total absolute time for double loop fusion 4way indep: 0.097347 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "uint8_t loop fusion 2way overwrite optimal"   0.003082 sec   7787.15 M     1.00
+ 1 "uint8_t for loop fusion 2way overwrite blocked"   0.003780 sec   6349.21 M     1.23
+ 2   "uint8_t for loop fusion 2way overwrite bzero"   0.004643 sec   5169.07 M     1.51
+ 3  "uint8_t for loop fusion 2way overwrite memset"   0.004305 sec   5574.91 M     1.40
+ 4         "uint8_t for loop fusion 2way overwrite"   0.003697 sec   6491.75 M     1.20
+
+Total absolute time for uint8_t loop fusion 2way overwrite: 0.019507 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "uint8_t loop fusion 3way overwrite optimal"   0.005306 sec   4523.18 M     1.00
+ 1 "uint8_t for loop fusion 3way overwrite blocked"   0.005353 sec   4483.47 M     1.01
+ 2   "uint8_t for loop fusion 3way overwrite bzero"   0.005077 sec   4727.20 M     0.96
+ 3  "uint8_t for loop fusion 3way overwrite memset"   0.004737 sec   5066.50 M     0.89
+ 4         "uint8_t for loop fusion 3way overwrite"   0.004380 sec   5479.45 M     0.83
+
+Total absolute time for uint8_t loop fusion 3way overwrite: 0.024853 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "uint8_t loop fusion 4way overwrite optimal"   0.003052 sec   7863.70 M     1.00
+ 1 "uint8_t for loop fusion 4way overwrite blocked"   0.003840 sec   6250.00 M     1.26
+ 2   "uint8_t for loop fusion 4way overwrite bzero"   0.004506 sec   5326.23 M     1.48
+ 3  "uint8_t for loop fusion 4way overwrite memset"   0.005037 sec   4764.74 M     1.65
+ 4         "uint8_t for loop fusion 4way overwrite"   0.004858 sec   4940.30 M     1.59
+
+Total absolute time for uint8_t loop fusion 4way overwrite: 0.021293 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "int32_t loop fusion 2way overwrite optimal"   0.010146 sec   2365.46 M     1.00
+ 1 "int32_t for loop fusion 2way overwrite blocked"   0.009401 sec   2552.92 M     0.93
+ 2   "int32_t for loop fusion 2way overwrite bzero"   0.017666 sec   1358.54 M     1.74
+ 3  "int32_t for loop fusion 2way overwrite memset"   0.017368 sec   1381.85 M     1.71
+ 4         "int32_t for loop fusion 2way overwrite"   0.019128 sec   1254.71 M     1.89
+
+Total absolute time for int32_t loop fusion 2way overwrite: 0.073709 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "int32_t loop fusion 3way overwrite optimal"   0.010030 sec   2392.82 M     1.00
+ 1 "int32_t for loop fusion 3way overwrite blocked"   0.011530 sec   2081.53 M     1.15
+ 2   "int32_t for loop fusion 3way overwrite bzero"   0.025473 sec   942.17 M     2.54
+ 3  "int32_t for loop fusion 3way overwrite memset"   0.025320 sec   947.87 M     2.52
+ 4         "int32_t for loop fusion 3way overwrite"   0.024001 sec   999.96 M     2.39
+
+Total absolute time for int32_t loop fusion 3way overwrite: 0.096354 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0     "int32_t loop fusion 4way overwrite optimal"   0.008797 sec   2728.20 M     1.00
+ 1 "int32_t for loop fusion 4way overwrite blocked"   0.011007 sec   2180.43 M     1.25
+ 2   "int32_t for loop fusion 4way overwrite bzero"   0.031161 sec   770.19 M     3.54
+ 3  "int32_t for loop fusion 4way overwrite memset"   0.034189 sec   701.98 M     3.89
+ 4         "int32_t for loop fusion 4way overwrite"   0.031098 sec   771.75 M     3.54
+
+Total absolute time for int32_t loop fusion 4way overwrite: 0.116252 sec
+
+test                                   description   absolute   operations   ratio with
+number                                               time       per second   test0
+
+ 0     "double loop fusion 2way overwrite optimal"   0.016503 sec   1454.28 M     1.00
+ 1 "double for loop fusion 2way overwrite blocked"   0.018257 sec   1314.56 M     1.11
+ 2   "double for loop fusion 2way overwrite bzero"   0.032268 sec   743.77 M     1.96
+ 3  "double for loop fusion 2way overwrite memset"   0.031719 sec   756.64 M     1.92
+ 4         "double for loop fusion 2way overwrite"   0.032296 sec   743.13 M     1.96
+
+Total absolute time for double loop fusion 2way overwrite: 0.131043 sec
+
+test                                   description   absolute   operations   ratio with
+number                                               time       per second   test0
+
+ 0     "double loop fusion 3way overwrite optimal"   0.015910 sec   1508.49 M     1.00
+ 1 "double for loop fusion 3way overwrite blocked"   0.019011 sec   1262.43 M     1.19
+ 2   "double for loop fusion 3way overwrite bzero"   0.045976 sec   522.01 M     2.89
+ 3  "double for loop fusion 3way overwrite memset"   0.046594 sec   515.09 M     2.93
+ 4         "double for loop fusion 3way overwrite"   0.048458 sec   495.27 M     3.05
+
+Total absolute time for double loop fusion 3way overwrite: 0.175949 sec
+
+test                                   description   absolute   operations   ratio with
+number                                               time       per second   test0
+
+ 0     "double loop fusion 4way overwrite optimal"   0.019363 sec   1239.48 M     1.00
+ 1 "double for loop fusion 4way overwrite blocked"   0.018732 sec   1281.23 M     0.97
+ 2   "double for loop fusion 4way overwrite bzero"   0.061268 sec   391.72 M     3.16
+ 3  "double for loop fusion 4way overwrite memset"   0.060252 sec   398.33 M     3.11
+ 4         "double for loop fusion 4way overwrite"   0.060856 sec   394.37 M     3.14
+
+Total absolute time for double loop fusion 4way overwrite: 0.220471 sec
+
+test                                  description   absolute   operations   ratio with
+number                                              time       per second   test0
+
+ 0          "uint8_t loop fusion replace optimal"   0.002723 sec   8813.81 M     1.00
+ 1 "uint8_t for loop fusion 2way replace blocked"   0.002473 sec   9704.81 M     0.91
+ 2 "uint8_t for loop fusion 3way replace blocked"   0.002887 sec   8313.13 M     1.06
+ 3 "uint8_t for loop fusion 4way replace blocked"   0.002443 sec   9823.99 M     0.90
+ 4   "uint8_t for loop fusion 2way replace bzero"   0.002767 sec   8673.65 M     1.02
+ 5  "uint8_t for loop fusion 2way replace memset"   0.002469 sec   9720.53 M     0.91
+ 6         "uint8_t for loop fusion 2way replace"   0.002713 sec   8846.30 M     1.00
+ 7   "uint8_t for loop fusion 3way replace bzero"   0.003238 sec   7411.98 M     1.19
+ 8  "uint8_t for loop fusion 3way replace memset"   0.002883 sec   8324.66 M     1.06
+ 9         "uint8_t for loop fusion 3way replace"   0.002298 sec   10443.86 M     0.84
+10   "uint8_t for loop fusion 4way replace bzero"   0.003133 sec   7660.39 M     1.15
+11  "uint8_t for loop fusion 4way replace memset"   0.002919 sec   8221.99 M     1.07
+12         "uint8_t for loop fusion 4way replace"   0.002238 sec   10723.86 M     0.82
+
+Total absolute time for uint8_t loop fusion replace: 0.035184 sec
+
+test                                  description   absolute   operations   ratio with
+number                                              time       per second   test0
+
+ 0          "int32_t loop fusion replace optimal"   0.009355 sec   2565.47 M     1.00
+ 1 "int32_t for loop fusion 2way replace blocked"   0.009636 sec   2490.66 M     1.03
+ 2 "int32_t for loop fusion 3way replace blocked"   0.009717 sec   2469.90 M     1.04
+ 3 "int32_t for loop fusion 4way replace blocked"   0.010092 sec   2378.12 M     1.08
+ 4   "int32_t for loop fusion 2way replace bzero"   0.014904 sec   1610.31 M     1.59
+ 5  "int32_t for loop fusion 2way replace memset"   0.015852 sec   1514.00 M     1.69
+ 6         "int32_t for loop fusion 2way replace"   0.015633 sec   1535.21 M     1.67
+ 7   "int32_t for loop fusion 3way replace bzero"   0.022770 sec   1054.02 M     2.43
+ 8  "int32_t for loop fusion 3way replace memset"   0.025961 sec   924.46 M     2.78
+ 9         "int32_t for loop fusion 3way replace"   0.023822 sec   1007.47 M     2.55
+10   "int32_t for loop fusion 4way replace bzero"   0.032669 sec   734.64 M     3.49
+11  "int32_t for loop fusion 4way replace memset"   0.031946 sec   751.27 M     3.41
+12         "int32_t for loop fusion 4way replace"   0.040306 sec   595.44 M     4.31
+
+Total absolute time for int32_t loop fusion replace: 0.262663 sec
+
+test                                 description   absolute   operations   ratio with
+number                                             time       per second   test0
+
+ 0          "double loop fusion replace optimal"   0.022014 sec   1090.22 M     1.00
+ 1 "double for loop fusion 2way replace blocked"   0.022675 sec   1058.43 M     1.03
+ 2 "double for loop fusion 3way replace blocked"   0.019914 sec   1205.18 M     0.90
+ 3 "double for loop fusion 4way replace blocked"   0.020280 sec   1183.43 M     0.92
+ 4   "double for loop fusion 2way replace bzero"   0.033611 sec   714.05 M     1.53
+ 5  "double for loop fusion 2way replace memset"   0.034610 sec   693.44 M     1.57
+ 6         "double for loop fusion 2way replace"   0.034109 sec   703.63 M     1.55
+ 7   "double for loop fusion 3way replace bzero"   0.050063 sec   479.40 M     2.27
+ 8  "double for loop fusion 3way replace memset"   0.051237 sec   468.41 M     2.33
+ 9         "double for loop fusion 3way replace"   0.047327 sec   507.11 M     2.15
+10   "double for loop fusion 4way replace bzero"   0.065810 sec   364.69 M     2.99
+11  "double for loop fusion 4way replace memset"   0.062687 sec   382.85 M     2.85
+12         "double for loop fusion 4way replace"   0.062294 sec   385.27 M     2.83
+
+Total absolute time for double loop fusion replace: 0.526631 sec
+
+test                                     description   absolute   operations   ratio with
+number                                                 time       per second   test0
+
+ 0    "uint8_t loop fusion partial2 replace optimal"   0.002327 sec   10313.71 M     1.00
+ 1  "uint8_t for loop fusion partial2 replace bzero"   0.002044 sec   11741.68 M     0.88
+ 2 "uint8_t for loop fusion partial2 replace memset"   0.002173 sec   11044.64 M     0.93
+ 3        "uint8_t for loop fusion partial2 replace"   0.001878 sec   12779.55 M     0.81
+
+Total absolute time for uint8_t loop fusion partial2 replace: 0.008422 sec
+
+test                                     description   absolute   operations   ratio with
+number                                                 time       per second   test0
+
+ 0    "uint8_t loop fusion partial4 replace optimal"   0.001513 sec   15862.52 M     1.00
+ 1  "uint8_t for loop fusion partial4 replace bzero"   0.001881 sec   12759.17 M     1.24
+ 2 "uint8_t for loop fusion partial4 replace memset"   0.002994 sec   8016.03 M     1.98
+ 3        "uint8_t for loop fusion partial4 replace"   0.002274 sec   10554.09 M     1.50
+ 4       "uint8_t for loop fusion partial4 replaceA"   0.004142 sec   5794.30 M     2.74
+
+Total absolute time for uint8_t loop fusion partial4 replace: 0.012804 sec
+
+test                                     description   absolute   operations   ratio with
+number                                                 time       per second   test0
+
+ 0    "int32_t loop fusion partial2 replace optimal"   0.008598 sec   2791.35 M     1.00
+ 1  "int32_t for loop fusion partial2 replace bzero"   0.010726 sec   2237.55 M     1.25
+ 2 "int32_t for loop fusion partial2 replace memset"   0.010595 sec   2265.22 M     1.23
+ 3        "int32_t for loop fusion partial2 replace"   0.009941 sec   2414.24 M     1.16
+
+Total absolute time for int32_t loop fusion partial2 replace: 0.039860 sec
+
+test                                     description   absolute   operations   ratio with
+number                                                 time       per second   test0
+
+ 0    "int32_t loop fusion partial4 replace optimal"   0.008091 sec   2966.26 M     1.00
+ 1  "int32_t for loop fusion partial4 replace bzero"   0.012515 sec   1917.70 M     1.55
+ 2 "int32_t for loop fusion partial4 replace memset"   0.012364 sec   1941.12 M     1.53
+ 3        "int32_t for loop fusion partial4 replace"   0.013131 sec   1827.74 M     1.62
+ 4       "int32_t for loop fusion partial4 replaceA"   0.015890 sec   1510.38 M     1.96
+
+Total absolute time for int32_t loop fusion partial4 replace: 0.061991 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0    "double loop fusion partial2 replace optimal"   0.015624 sec   1536.10 M     1.00
+ 1  "double for loop fusion partial2 replace bzero"   0.024521 sec   978.75 M     1.57
+ 2 "double for loop fusion partial2 replace memset"   0.022900 sec   1048.03 M     1.47
+ 3        "double for loop fusion partial2 replace"   0.024506 sec   979.35 M     1.57
+
+Total absolute time for double loop fusion partial2 replace: 0.087551 sec
+
+test                                    description   absolute   operations   ratio with
+number                                                time       per second   test0
+
+ 0    "double loop fusion partial4 replace optimal"   0.015954 sec   1504.32 M     1.00
+ 1  "double for loop fusion partial4 replace bzero"   0.027405 sec   875.75 M     1.72
+ 2 "double for loop fusion partial4 replace memset"   0.027717 sec   865.89 M     1.74
+ 3        "double for loop fusion partial4 replace"   0.026921 sec   891.50 M     1.69
+ 4       "double for loop fusion partial4 replaceA"   0.040755 sec   588.88 M     2.55
+
+Total absolute time for double loop fusion partial4 replace: 0.138752 sec
+
+test                         description   absolute   operations   ratio with
+number                                     time       per second   test0
+
+ 0 "uint8_t loop fusion 2way offset opt"   0.000560 sec   21428.57 M     1.00
+ 1     "uint8_t loop fusion 2way offset"   0.000821 sec   14616.32 M     1.47
+
+Total absolute time for uint8_t loop fusion 2way offset: 0.001381 sec
+
+test                         description   absolute   operations   ratio with
+number                                     time       per second   test0
+
+ 0 "int32_t loop fusion 2way offset opt"   0.005690 sec   2108.96 M     1.00
+ 1     "int32_t loop fusion 2way offset"   0.008023 sec   1495.70 M     1.41
+
+Total absolute time for int32_t loop fusion 2way offset: 0.013713 sec
+
+test                        description   absolute   operations   ratio with
+number                                    time       per second   test0
+
+ 0 "double loop fusion 2way offset opt"   0.010995 sec   1091.41 M     1.00
+ 1     "double loop fusion 2way offset"   0.010033 sec   1196.05 M     0.91
+
+Total absolute time for double loop fusion 2way offset: 0.021028 sec
