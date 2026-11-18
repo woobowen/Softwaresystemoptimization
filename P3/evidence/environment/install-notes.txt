@@ -1,0 +1,11 @@
+System packages were not installed: sudo -n true returned 'a password is required'. Existing clang, clang++, gcc and gdb-multiarch were reused. Packages downloaded from configured Ubuntu repositories using apt-get download, then extracted without dpkg installation under /tmp/p3-toolchain-root. No global configuration changed.
+
+Actual commands:
+mkdir -p /tmp/p3-toolchain-pkgs /tmp/p3-toolchain-root
+cd /tmp/p3-toolchain-pkgs
+apt-get download qemu-user gcc-aarch64-linux-gnu gcc-13-aarch64-linux-gnu gcc-13-aarch64-linux-gnu-base cpp-13-aarch64-linux-gnu cpp-aarch64-linux-gnu binutils-aarch64-linux-gnu libgcc-13-dev-arm64-cross libc6-dev-arm64-cross libc6-arm64-cross linux-libc-dev-arm64-cross libgcc-s1-arm64-cross libgomp1-arm64-cross libatomic1-arm64-cross libasan8-arm64-cross liblsan0-arm64-cross libtsan2-arm64-cross libubsan1-arm64-cross libhwasan0-arm64-cross
+for package in /tmp/p3-toolchain-pkgs/*.deb; do dpkg-deb -x "$package" /tmp/p3-toolchain-root; done
+apt-get download xterm
+for package in xterm*.deb; do dpkg-deb -x "$package" /tmp/p3-toolchain-root; done
+
+First cross build failed because relocated binutils could not find libopcodes/libbfd; setting LD_LIBRARY_PATH=/tmp/p3-toolchain-root/usr/lib/x86_64-linux-gnu fixed the subsequent build. Initial zutty screenshot failed due to missing font; xterm on Xvfb was verified instead.

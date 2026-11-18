@@ -1,0 +1,8 @@
+Executed in P3/loop after the initial shared-library failure:
+export PATH=/tmp/p3-toolchain-root/usr/bin:$PATH
+export LD_LIBRARY_PATH=/tmp/p3-toolchain-root/usr/lib/x86_64-linux-gnu
+aarch64-linux-gnu-gcc -O2 -static loop.c -o loop.aarch64.gcc
+clang --target=aarch64-linux-gnu --gcc-toolchain=/tmp/p3-toolchain-root/usr -O2 -static loop.c -o loop.aarch64.clang
+gcc -O2 loop.c -o loop.x64.gcc
+clang -O2 loop.c -o loop.x64.clang
+aarch64-linux-gnu-gcc -O0 -g -static loop.c -o loop.aarch64.gcc.debug

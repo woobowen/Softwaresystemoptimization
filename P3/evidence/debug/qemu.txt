@@ -1,0 +1,2 @@
+bind: Permission denied
+qemu: could not open gdbserver on 127.0.0.1:23457

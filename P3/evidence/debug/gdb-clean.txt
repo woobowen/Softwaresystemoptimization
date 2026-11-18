@@ -1,0 +1,21 @@
++file loop/loop.aarch64.gcc.debug
++target remote /tmp/p3-qemu-gdb3.sock
+warning: BFD: warning: system-supplied DSO at 0x400000810000 has a corrupt string table index
+0x0000000000400640 in _start ()
++show architecture
+The target architecture is set to "auto" (currently "aarch64").
++break loop.c:60
+Breakpoint 1 at 0x400904: file loop.c, line 60.
++continue
+
+Breakpoint 1, main (argc=2, argv=0x4000007fec18) at loop.c:60
+60	    IterMul = atoi(argv[1]);
++next
+61	    assert(IterMul > 0 && IterMul <=100);
++print IterMul
+$1 = 1
++backtrace
+#0  main (argc=2, argv=0x4000007fec18) at loop.c:61
++continue
+[Inferior 1 (process 62407) exited normally]
++quit

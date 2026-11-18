@@ -1,0 +1,5 @@
+path,argument,samples_seconds,median_seconds,min_seconds,max_seconds
+arm-gcc,1,0.174127,0.174127,0.174127,0.174127
+arm-clang,1,0.090179,0.090179,0.090179,0.090179
+native-gcc,1,0.002917,0.002917,0.002917,0.002917
+native-clang,1,0.004621,0.004621,0.004621,0.004621
